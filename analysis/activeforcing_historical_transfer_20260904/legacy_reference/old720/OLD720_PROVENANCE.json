@@ -1,0 +1,62 @@
+{
+  "audit_date": "2026-09-04",
+  "checkpoint_manifest": "/home/exouser/FORTE/gnp_style_continuous_20260830_125107/GNP_STYLE_CHECKPOINT_MANIFEST.json",
+  "checkpoint_manifest_sha256": "22ddbd5444df067695ca314f0da0852979de9ad2896989a539b53e16b44e4982",
+  "collection_facts": {
+    "corrected_true_force_branches": 720,
+    "expected": 720,
+    "failures": 145,
+    "successes": 575,
+    "unique_force_cells": 360,
+    "valid": 720
+  },
+  "dataset_path": "/home/exouser/FORTE/gnp_style_continuous_20260830_125107/CONTINUOUS_TRAIN_SUCCESS_DATA.csv",
+  "dataset_sha256": "80bb811e79796a9c292517ae37d2e224710a228ab8afd1e5be38ab9c2e5857c9",
+  "feasibility_checkpoints": [
+    "/home/exouser/FORTE/gnp_style_continuous_20260830_125107/GNP_STYLE_CONTINUOUS_FEAS_seed0.pt",
+    "/home/exouser/FORTE/gnp_style_continuous_20260830_125107/GNP_STYLE_CONTINUOUS_FEAS_seed1.pt",
+    "/home/exouser/FORTE/gnp_style_continuous_20260830_125107/GNP_STYLE_CONTINUOUS_FEAS_seed2.pt"
+  ],
+  "generation_script": "/home/exouser/FORTE/gnp_style_continuous_collect.py",
+  "historical_related_but_not_old720": {
+    "e5": "60 tuples / 300 fresh rollouts is a separate 2026-09 E5 reset-to-end campaign, not this 720-row GNP archive",
+    "main_paired_benchmark": "/home/exouser/FORTE/activeforcing_full_claim_closure_20260902_062809/DIRECT_ONLY_PROVENANCE/MAIN_PAIRED_BENCHMARK_RESULTS.json"
+  },
+  "manifest": "/home/exouser/FORTE/gnp_style_continuous_20260830_125107/CONTINUOUS_TRAIN_COLLECTION_RUN_MANIFEST.json",
+  "manifest_sha256": "ca009039ff61e3a259deb905d4ac0c2ebe0d1f4411dde29add4f8ba72a5e4353",
+  "old720_definition": "CONTINUOUS_TRAIN_SUCCESS_DATA.csv",
+  "old_gnp_training_population": {
+    "adjacent_ie_pairs": 576,
+    "coarse_branches": 288,
+    "continuous_720_branches": 720,
+    "evidence": "/home/exouser/FORTE/gnp_style_continuous.py",
+    "joint_physical_branches": 720,
+    "total_feasibility_outcomes": 1008
+  },
+  "rows": 720,
+  "source_hashes": {
+    "/home/exouser/FORTE/activeforcing_full_claim_closure_20260902_062809/DIRECT_ONLY_PROVENANCE/ACTIVEFORCING_FINAL_PROTOCOL.json": "a0b368770b6926e61210b32b9eb58a8f2e3c63f96b834eaabc294618d510b6a7",
+    "/home/exouser/FORTE/activeforcing_full_claim_closure_20260902_062809/DIRECT_ONLY_PROVENANCE/ACTIVEFORCING_FINAL_SPLIT_MANIFEST.json": "90439f3dc9f7a17ee297a3f68b3c7fbd16a05888557f8023c5a4c4226466176e",
+    "/home/exouser/FORTE/activeforcing_full_claim_closure_20260902_062809/DIRECT_ONLY_PROVENANCE/MAIN_PAIRED_BENCHMARK_REPORT.md": "e0a0943299bd146051447824dc36e5df1e5c2d4bea28cd9ca302e65d84ab8de1",
+    "/home/exouser/FORTE/activeforcing_full_claim_closure_20260902_062809/DIRECT_ONLY_PROVENANCE/MAIN_PAIRED_BENCHMARK_RESULTS.json": "4d45c6834c64ff9296ea983792f9d3df6037013fa7a4f327253baa27c9be54a9",
+    "/home/exouser/FORTE/gnp_style_continuous.py": "0c919156a9a0dfad5f9b92c0499c17a59e93e2c3dd93acbf19963842d7031259",
+    "/home/exouser/FORTE/gnp_style_continuous_20260830_125107/CONTINUOUS_TRAIN_COLLECTION_RUN_MANIFEST.json": "ca009039ff61e3a259deb905d4ac0c2ebe0d1f4411dde29add4f8ba72a5e4353",
+    "/home/exouser/FORTE/gnp_style_continuous_20260830_125107/CONTINUOUS_TRAIN_CONTEXT_AUDIT.json": "c77f4cd53e57c1bf43b1f31345c20261a484b31ba4b12f4f329cef4bff0c4b32",
+    "/home/exouser/FORTE/gnp_style_continuous_20260830_125107/CONTINUOUS_TRAIN_SUCCESS_DATA.csv": "80bb811e79796a9c292517ae37d2e224710a228ab8afd1e5be38ab9c2e5857c9",
+    "/home/exouser/FORTE/gnp_style_continuous_20260830_125107/CONTINUOUS_TRAIN_TELEMETRY_AUDIT.json": "d4a1ad3e7b2743d8eff120b050493ea6cbfe27ceaeeb8d6424aaccadddeef4ce",
+    "/home/exouser/FORTE/gnp_style_continuous_20260830_125107/GNP_STYLE_CHECKPOINT_MANIFEST.json": "22ddbd5444df067695ca314f0da0852979de9ad2896989a539b53e16b44e4982",
+    "/home/exouser/FORTE/gnp_style_continuous_20260830_125107/GNP_STYLE_CONTINUOUS_TRAINING_PROTOCOL.json": "8931fba64eb4bbc417ea01b7ff2bf4ee972047853217c24537f41c2ced1c818c",
+    "/home/exouser/FORTE/gnp_style_continuous_collect.py": "176a09431eff6df428401da689d4442901c2fb4b040c13607a04ceb807cb7103",
+    "/home/exouser/FORTE/pooled_original_taskwise_eval.py": "b058a2b637e872cfd2069784daff6792614708e0b32a8a5ab589289d39839e80",
+    "/home/exouser/FORTE/run_frozen_direct_dev_scorer.py": "8e3c53e58efcd8177365617983833182a2310f55e29b4d86410bbd05b6c659fc",
+    "/home/exouser/FORTE/run_residual_utility.py": "6da4acaa935de7a9a938ac92b56d88b07e34bf93e9614d8458467383e9f28929",
+    "/home/exouser/Tabero/analysis/results/p5s0c_paired_boundary_probe_value_20260824_000542/P5S0C_BRANCH_MANIFEST.csv": "778190f29b9414c7590141c6b07ba1bf29e625a8fd8ccea20559d466480c778a"
+  },
+  "split_config_candidates": [
+    "/home/exouser/FORTE/activeforcing_full_claim_closure_20260902_062809/DIRECT_ONLY_PROVENANCE/ACTIVEFORCING_FINAL_SPLIT_MANIFEST.json",
+    "/home/exouser/FORTE/gnp_style_continuous_20260830_125107/GNP_STYLE_CONTINUOUS_TRAINING_PROTOCOL.json",
+    "/home/exouser/FORTE/activeforcing_full_claim_closure_20260902_062809/DIRECT_ONLY_PROVENANCE/ACTIVEFORCING_FINAL_PROTOCOL.json"
+  ],
+  "status": "COMPLETE_READ_ONLY_FORENSIC_AUDIT",
+  "training_script": "/home/exouser/FORTE/gnp_style_continuous.py"
+}

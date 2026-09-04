@@ -1,0 +1,11 @@
+{
+  "collection": "/home/exouser/FORTE/gnp_style_continuous_20260830_125107/collection_long2",
+  "collector_run_manifest": "/home/exouser/FORTE/gnp_style_continuous_20260830_125107/collection_long2/CONTINUOUS_COLLECTION_RUN_MANIFEST.json",
+  "collector_run_manifest_sha256": "622847815d85c60cd103c8f6cec4a10fef41cd7ffc4d983dc4eafe60003e3674",
+  "expected": 720,
+  "failures": 145,
+  "protocol_sha256": "8931fba64eb4bbc417ea01b7ff2bf4ee972047853217c24537f41c2ced1c818c",
+  "status": "PASS",
+  "successes": 575,
+  "valid": 720
+}

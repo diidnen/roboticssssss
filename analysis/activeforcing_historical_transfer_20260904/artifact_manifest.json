@@ -1,0 +1,637 @@
+{
+  "bundle": "activeforcing_historical_transfer_20260904",
+  "purpose": "curated historical P4-B -> 46-D evidence -> FRICTION_GRU artifact transfer",
+  "generated_scope": "read/audit/copy/hash/document only; no rollout or training",
+  "assets": [
+    {
+      "name": "ACTIVEFORCING_TRANSFER_DECLARATION.md",
+      "source_absolute_path": "generated in transfer bundle from audited historical sources",
+      "bundle_relative_path": "ACTIVEFORCING_TRANSFER_DECLARATION.md",
+      "semantic_role": "transfer scope and semantic declaration",
+      "required_for_new_pipeline": false,
+      "historical_only": false,
+      "size_bytes": 4351,
+      "sha256": "7b669eae18a62c16f4ae08a430ab917a76e5bf4085db420168bc9783578a9c08"
+    },
+    {
+      "name": "DATA_AUDIT.json",
+      "source_absolute_path": "/media/volume/newdata/exouser/ACTIVEFORCING_DISK_ARCHIVE_20260902/Tabero/analysis/results/active_friction_imagination_20260828_211106/DATA_AUDIT.json",
+      "bundle_relative_path": "legacy_reference/afi/DATA_AUDIT.json",
+      "semantic_role": "curated historical reference",
+      "required_for_new_pipeline": false,
+      "historical_only": true,
+      "size_bytes": 1631,
+      "sha256": "1a1f5eba5e9cb4975991aa7b2fa3edd75b49c03d4128d125bbd1a1649166f711"
+    },
+    {
+      "name": "FRICTION_ESTIMATION_METRICS.json",
+      "source_absolute_path": "/media/volume/newdata/exouser/ACTIVEFORCING_DISK_ARCHIVE_20260902/Tabero/analysis/results/active_friction_imagination_20260828_211106/FRICTION_ESTIMATION_METRICS.json",
+      "bundle_relative_path": "legacy_reference/afi/FRICTION_ESTIMATION_METRICS.json",
+      "semantic_role": "curated historical reference",
+      "required_for_new_pipeline": false,
+      "historical_only": true,
+      "size_bytes": 1092,
+      "sha256": "462cd9f624dc54ae540c0da23892e6cfc04a1622f0941d9d4b4bc20fb500c316"
+    },
+    {
+      "name": "FRICTION_PREDICTIONS.csv",
+      "source_absolute_path": "/media/volume/newdata/exouser/ACTIVEFORCING_DISK_ARCHIVE_20260902/Tabero/analysis/results/active_friction_imagination_20260828_211106/FRICTION_PREDICTIONS.csv",
+      "bundle_relative_path": "legacy_reference/afi/FRICTION_PREDICTIONS.csv",
+      "semantic_role": "curated historical reference",
+      "required_for_new_pipeline": false,
+      "historical_only": true,
+      "size_bytes": 28563,
+      "sha256": "d4cc08371371e9be28651ee8839f2e1a6c55c4e6a87696bb04917f5ced14f9fb"
+    },
+    {
+      "name": "OFFLINE_IMAGINATION_DECISION_AUDIT.csv",
+      "source_absolute_path": "/media/volume/newdata/exouser/ACTIVEFORCING_DISK_ARCHIVE_20260902/Tabero/analysis/results/active_friction_imagination_20260828_211106/OFFLINE_IMAGINATION_DECISION_AUDIT.csv",
+      "bundle_relative_path": "legacy_reference/afi/OFFLINE_IMAGINATION_DECISION_AUDIT.csv",
+      "semantic_role": "curated historical reference",
+      "required_for_new_pipeline": false,
+      "historical_only": true,
+      "size_bytes": 18904,
+      "sha256": "1cd3e36049b89bc162fec77198b19e132b91e1179a0f750cb86e2f732c09aeba"
+    },
+    {
+      "name": "PROTOCOL.json",
+      "source_absolute_path": "/media/volume/newdata/exouser/ACTIVEFORCING_DISK_ARCHIVE_20260902/Tabero/analysis/results/active_friction_imagination_20260828_211106/PROTOCOL.json",
+      "bundle_relative_path": "legacy_reference/afi/PROTOCOL.json",
+      "semantic_role": "curated historical reference",
+      "required_for_new_pipeline": false,
+      "historical_only": true,
+      "size_bytes": 1394,
+      "sha256": "b7e4bed5febd89a3e52ec9daa174d834ad4627087c2bf53cefc465a88c01d86b"
+    },
+    {
+      "name": "REPORT.md",
+      "source_absolute_path": "/media/volume/newdata/exouser/ACTIVEFORCING_DISK_ARCHIVE_20260902/Tabero/analysis/results/active_friction_imagination_20260828_211106/REPORT.md",
+      "bundle_relative_path": "legacy_reference/afi/REPORT.md",
+      "semantic_role": "curated historical reference",
+      "required_for_new_pipeline": false,
+      "historical_only": true,
+      "size_bytes": 895,
+      "sha256": "c6d7ae1e709f636c2a1fc3da94b28e3e6e958fdbf4751cada96088fe06dac3dc"
+    },
+    {
+      "name": "REUSE_MAP.json",
+      "source_absolute_path": "/media/volume/newdata/exouser/ACTIVEFORCING_DISK_ARCHIVE_20260902/Tabero/analysis/results/active_friction_imagination_20260828_211106/REUSE_MAP.json",
+      "bundle_relative_path": "legacy_reference/afi/REUSE_MAP.json",
+      "semantic_role": "curated historical reference",
+      "required_for_new_pipeline": false,
+      "historical_only": true,
+      "size_bytes": 1896,
+      "sha256": "20e9b09f926fd2c8afd84727ac82384987acfa60eaab8aab87c4edb36a5b2873"
+    },
+    {
+      "name": "PHYSICAL_BELIEF_MANIFEST.json",
+      "source_absolute_path": "/home/exouser/FORTE/activeforcing_full_claim_closure_20260902_134732/E6_E7/PHYSICAL_BELIEF_MANIFEST.json",
+      "bundle_relative_path": "legacy_reference/e6/PHYSICAL_BELIEF_MANIFEST.json",
+      "semantic_role": "later E6 physical-belief reference",
+      "required_for_new_pipeline": false,
+      "historical_only": true,
+      "size_bytes": 2802,
+      "sha256": "6c4b89d39428a2f2b4dd89bc03ca220853abdea46df3be732dbab40454cb66de"
+    },
+    {
+      "name": "README.md",
+      "source_absolute_path": "generated in transfer bundle from audited historical sources",
+      "bundle_relative_path": "legacy_reference/e6/README.md",
+      "semantic_role": "later E6 physical-belief reference",
+      "required_for_new_pipeline": false,
+      "historical_only": true,
+      "size_bytes": 238,
+      "sha256": "0b34dc0e57604230af3932d4e625d5fe7199e0f314abecfe71e533012c15ee1e"
+    },
+    {
+      "name": "CONTINUOUS_FORCE_SAMPLE_MANIFEST.csv",
+      "source_absolute_path": "generated in transfer bundle from audited historical sources",
+      "bundle_relative_path": "legacy_reference/old720/CONTINUOUS_FORCE_SAMPLE_MANIFEST.csv",
+      "semantic_role": "later 720-row continuous-force legacy reference",
+      "required_for_new_pipeline": false,
+      "historical_only": true,
+      "size_bytes": 51708,
+      "sha256": "8a8b97fcde79d0fa31afaaf812fedd2aa116c98e81c17323f4cb40292028625e"
+    },
+    {
+      "name": "CONTINUOUS_TRAIN_COLLECTION_RUN_MANIFEST.csv",
+      "source_absolute_path": "generated in transfer bundle from audited historical sources",
+      "bundle_relative_path": "legacy_reference/old720/CONTINUOUS_TRAIN_COLLECTION_RUN_MANIFEST.csv",
+      "semantic_role": "later 720-row continuous-force legacy reference",
+      "required_for_new_pipeline": false,
+      "historical_only": true,
+      "size_bytes": 445818,
+      "sha256": "2a27bd5898996202dbe3f0e4472387030a7ed190d1525fb5d58ef2348c590b23"
+    },
+    {
+      "name": "CONTINUOUS_TRAIN_COLLECTION_RUN_MANIFEST.json",
+      "source_absolute_path": "generated in transfer bundle from audited historical sources",
+      "bundle_relative_path": "legacy_reference/old720/CONTINUOUS_TRAIN_COLLECTION_RUN_MANIFEST.json",
+      "semantic_role": "later 720-row continuous-force legacy reference",
+      "required_for_new_pipeline": false,
+      "historical_only": true,
+      "size_bytes": 527,
+      "sha256": "ca009039ff61e3a259deb905d4ac0c2ebe0d1f4411dde29add4f8ba72a5e4353"
+    },
+    {
+      "name": "CONTINUOUS_TRAIN_SUCCESS_DATA.csv",
+      "source_absolute_path": "/media/volume/newdata/exouser/ACTIVEFORCING_DISK_ARCHIVE_20260902/gnp_style_continuous_20260830_125107/CONTINUOUS_TRAIN_SUCCESS_DATA.csv",
+      "bundle_relative_path": "legacy_reference/old720/CONTINUOUS_TRAIN_SUCCESS_DATA.csv",
+      "semantic_role": "later 720-row continuous-force legacy reference",
+      "required_for_new_pipeline": false,
+      "historical_only": true,
+      "size_bytes": 445818,
+      "sha256": "2a27bd5898996202dbe3f0e4472387030a7ed190d1525fb5d58ef2348c590b23"
+    },
+    {
+      "name": "GNP_STYLE_CHECKPOINT_MANIFEST.json",
+      "source_absolute_path": "generated in transfer bundle from audited historical sources",
+      "bundle_relative_path": "legacy_reference/old720/GNP_STYLE_CHECKPOINT_MANIFEST.json",
+      "semantic_role": "later 720-row continuous-force legacy reference",
+      "required_for_new_pipeline": false,
+      "historical_only": true,
+      "size_bytes": 3349,
+      "sha256": "22ddbd5444df067695ca314f0da0852979de9ad2896989a539b53e16b44e4982"
+    },
+    {
+      "name": "OLD720_AUDIT_REPORT.md",
+      "source_absolute_path": "generated in transfer bundle from audited historical sources",
+      "bundle_relative_path": "legacy_reference/old720/OLD720_AUDIT_REPORT.md",
+      "semantic_role": "later 720-row continuous-force legacy reference",
+      "required_for_new_pipeline": false,
+      "historical_only": true,
+      "size_bytes": 6280,
+      "sha256": "08af591fa0301184c500151cad8922a07dfb7a2537e077d5ec6adc9cd890a50b"
+    },
+    {
+      "name": "OLD720_CONTEXT_BREAKDOWN.csv",
+      "source_absolute_path": "generated in transfer bundle from audited historical sources",
+      "bundle_relative_path": "legacy_reference/old720/OLD720_CONTEXT_BREAKDOWN.csv",
+      "semantic_role": "later 720-row continuous-force legacy reference",
+      "required_for_new_pipeline": false,
+      "historical_only": true,
+      "size_bytes": 25855,
+      "sha256": "4798eb78485b3ab340f173c02fe44d7114f16b811aeb373a6c0abce8de465084"
+    },
+    {
+      "name": "OLD720_PROVENANCE.json",
+      "source_absolute_path": "generated in transfer bundle from audited historical sources",
+      "bundle_relative_path": "legacy_reference/old720/OLD720_PROVENANCE.json",
+      "semantic_role": "later 720-row continuous-force legacy reference",
+      "required_for_new_pipeline": false,
+      "historical_only": true,
+      "size_bytes": 5127,
+      "sha256": "85772c692bc471627e4ce8dc8a458f5587dc0fba8bb1be5c65fa5eb252722bb8"
+    },
+    {
+      "name": "OLD720_TASK_BREAKDOWN.json",
+      "source_absolute_path": "generated in transfer bundle from audited historical sources",
+      "bundle_relative_path": "legacy_reference/old720/OLD720_TASK_BREAKDOWN.json",
+      "semantic_role": "later 720-row continuous-force legacy reference",
+      "required_for_new_pipeline": false,
+      "historical_only": true,
+      "size_bytes": 2307,
+      "sha256": "660952e646b780bec637125a46a70bfa6b23dd91f779cf6cd19413ee0066af09"
+    },
+    {
+      "name": "OLD_EVALUATION_PROTOCOL.json",
+      "source_absolute_path": "generated in transfer bundle from audited historical sources",
+      "bundle_relative_path": "legacy_reference/old720/OLD_EVALUATION_PROTOCOL.json",
+      "semantic_role": "later 720-row continuous-force legacy reference",
+      "required_for_new_pipeline": false,
+      "historical_only": true,
+      "size_bytes": 1963,
+      "sha256": "8afdbbef45fc130a87ab8d0052c6272013cfef11ab37279ba674b8e372036f1d"
+    },
+    {
+      "name": "OLD_TRAIN_DEV_TEST_SPLIT.json",
+      "source_absolute_path": "generated in transfer bundle from audited historical sources",
+      "bundle_relative_path": "legacy_reference/old720/OLD_TRAIN_DEV_TEST_SPLIT.json",
+      "semantic_role": "later 720-row continuous-force legacy reference",
+      "required_for_new_pipeline": false,
+      "historical_only": true,
+      "size_bytes": 3100,
+      "sha256": "91182294dcab37d3d8009e64a9ada2261e7b57c685a516576316af21bee6726a"
+    },
+    {
+      "name": "README.md",
+      "source_absolute_path": "generated in transfer bundle from audited historical sources",
+      "bundle_relative_path": "legacy_reference/old720/README.md",
+      "semantic_role": "later 720-row continuous-force legacy reference",
+      "required_for_new_pipeline": false,
+      "historical_only": true,
+      "size_bytes": 475,
+      "sha256": "16559800ce8fbc36fa85571156b1f985e7dde975dd0a8fdfa50a01a47ce49f86"
+    },
+    {
+      "name": "gnp_style_continuous.py",
+      "source_absolute_path": "/home/exouser/FORTE/gnp_style_continuous.py",
+      "bundle_relative_path": "legacy_reference/old720/gnp_style_continuous.py",
+      "semantic_role": "later 720-row continuous-force legacy reference",
+      "required_for_new_pipeline": false,
+      "historical_only": true,
+      "size_bytes": 77772,
+      "sha256": "0c919156a9a0dfad5f9b92c0499c17a59e93e2c3dd93acbf19963842d7031259"
+    },
+    {
+      "name": "gnp_style_continuous_collect.py",
+      "source_absolute_path": "/home/exouser/FORTE/gnp_style_continuous_collect.py",
+      "bundle_relative_path": "legacy_reference/old720/gnp_style_continuous_collect.py",
+      "semantic_role": "later 720-row continuous-force legacy reference",
+      "required_for_new_pipeline": false,
+      "historical_only": true,
+      "size_bytes": 14218,
+      "sha256": "176a09431eff6df428401da689d4442901c2fb4b040c13607a04ceb807cb7103"
+    },
+    {
+      "name": "P5S0C_ALL_FORCE_RESULTS.csv",
+      "source_absolute_path": "generated in transfer bundle from audited historical sources",
+      "bundle_relative_path": "legacy_reference/p5s0c/P5S0C_ALL_FORCE_RESULTS.csv",
+      "semantic_role": "Q2F force-success legacy reference",
+      "required_for_new_pipeline": false,
+      "historical_only": true,
+      "size_bytes": 30113,
+      "sha256": "32e43fe0d37af8c84193b57da8918e826e4bfe9bf710c290135cbf5555ab1f0f"
+    },
+    {
+      "name": "P5S0C_CODE_HASH.txt",
+      "source_absolute_path": "generated in transfer bundle from audited historical sources",
+      "bundle_relative_path": "legacy_reference/p5s0c/P5S0C_CODE_HASH.txt",
+      "semantic_role": "Q2F force-success legacy reference",
+      "required_for_new_pipeline": false,
+      "historical_only": true,
+      "size_bytes": 242,
+      "sha256": "c8ee5f21af2f820dc61d2569f73afa0969c2ab7cbe64255ccc5e76b0ffeaa57f"
+    },
+    {
+      "name": "P5S0C_CONTEXT_MANIFEST.csv",
+      "source_absolute_path": "generated in transfer bundle from audited historical sources",
+      "bundle_relative_path": "legacy_reference/p5s0c/P5S0C_CONTEXT_MANIFEST.csv",
+      "semantic_role": "Q2F force-success legacy reference",
+      "required_for_new_pipeline": false,
+      "historical_only": true,
+      "size_bytes": 92104,
+      "sha256": "89003a5609f0b57faac14eca63846d301e3eddd77a748731085930df1d1582bc"
+    },
+    {
+      "name": "P5S0C_FINAL_REPORT.md",
+      "source_absolute_path": "generated in transfer bundle from audited historical sources",
+      "bundle_relative_path": "legacy_reference/p5s0c/P5S0C_FINAL_REPORT.md",
+      "semantic_role": "Q2F force-success legacy reference",
+      "required_for_new_pipeline": false,
+      "historical_only": true,
+      "size_bytes": 3072,
+      "sha256": "97eb05a5e7436c4538bdc25fa44175890309f4f8580b7a8a2e6622c430abe5ed"
+    },
+    {
+      "name": "P5S0C_FORCE_MANIFEST.json",
+      "source_absolute_path": "generated in transfer bundle from audited historical sources",
+      "bundle_relative_path": "legacy_reference/p5s0c/P5S0C_FORCE_MANIFEST.json",
+      "semantic_role": "Q2F force-success legacy reference",
+      "required_for_new_pipeline": false,
+      "historical_only": true,
+      "size_bytes": 652,
+      "sha256": "d2a4bd82685f7dcce3c1adb089f8766c4d3d4f81fca06de624e77ac16c7e8f3d"
+    },
+    {
+      "name": "P5S0C_FRICTION_MANIFEST.json",
+      "source_absolute_path": "generated in transfer bundle from audited historical sources",
+      "bundle_relative_path": "legacy_reference/p5s0c/P5S0C_FRICTION_MANIFEST.json",
+      "semantic_role": "Q2F force-success legacy reference",
+      "required_for_new_pipeline": false,
+      "historical_only": true,
+      "size_bytes": 12788,
+      "sha256": "0cc125e0cf54efaf6120a53b29f972b02b9de1ad105c9c06b2f62184ea4b45fd"
+    },
+    {
+      "name": "P5S0C_PROTOCOL.json",
+      "source_absolute_path": "generated in transfer bundle from audited historical sources",
+      "bundle_relative_path": "legacy_reference/p5s0c/P5S0C_PROTOCOL.json",
+      "semantic_role": "Q2F force-success legacy reference",
+      "required_for_new_pipeline": false,
+      "historical_only": true,
+      "size_bytes": 1228,
+      "sha256": "a3ac09b754c63b967a20a4721dd0278859f5c9262579e81e6c707c6ea508f382"
+    },
+    {
+      "name": "P5S0C_ROOT_MANIFEST.json",
+      "source_absolute_path": "generated in transfer bundle from audited historical sources",
+      "bundle_relative_path": "legacy_reference/p5s0c/P5S0C_ROOT_MANIFEST.json",
+      "semantic_role": "Q2F force-success legacy reference",
+      "required_for_new_pipeline": false,
+      "historical_only": true,
+      "size_bytes": 13660,
+      "sha256": "717cdbc48abdbc9117e395a5e1c03f901fe767567a42192e4d4fa5e846e38234"
+    },
+    {
+      "name": "P5S0C_SPLIT_MANIFEST.json",
+      "source_absolute_path": "generated in transfer bundle from audited historical sources",
+      "bundle_relative_path": "legacy_reference/p5s0c/P5S0C_SPLIT_MANIFEST.json",
+      "semantic_role": "Q2F force-success legacy reference",
+      "required_for_new_pipeline": false,
+      "historical_only": true,
+      "size_bytes": 13716,
+      "sha256": "bd1da97d866bea5651dad2a76a75e2a92902b14ad8d5b46163c93d194e9ffa7f"
+    },
+    {
+      "name": "README.md",
+      "source_absolute_path": "generated in transfer bundle from audited historical sources",
+      "bundle_relative_path": "legacy_reference/p5s0c/README.md",
+      "semantic_role": "Q2F force-success legacy reference",
+      "required_for_new_pipeline": false,
+      "historical_only": true,
+      "size_bytes": 564,
+      "sha256": "d1e1566cfbd52125fabe499cc8a9aa77a5220b9ba3dd71170d672bf1981f6fb4"
+    },
+    {
+      "name": "p5s0c_paired_boundary_probe_value.py",
+      "source_absolute_path": "/home/exouser/Tabero/analysis/p5s0c_paired_boundary_probe_value.py",
+      "bundle_relative_path": "legacy_reference/p5s0c/p5s0c_paired_boundary_probe_value.py",
+      "semantic_role": "Q2F force-success legacy reference",
+      "required_for_new_pipeline": false,
+      "historical_only": true,
+      "size_bytes": 110890,
+      "sha256": "7396b899429be3e3c298217dfab29c01afee03594e6ed8b909b4df04554353a2"
+    },
+    {
+      "name": "DEPENDENCY_AUDIT.md",
+      "source_absolute_path": "generated in transfer bundle from audited historical sources",
+      "bundle_relative_path": "p4b_probe/DEPENDENCY_AUDIT.md",
+      "semantic_role": "static dependency and semantics audit",
+      "required_for_new_pipeline": false,
+      "historical_only": false,
+      "size_bytes": 1497,
+      "sha256": "61e31cf4d91ed0324f71ccc3355778c80b52c80263e44e6e82bc7d7d28d99a38"
+    },
+    {
+      "name": "p4_collect_probe.py",
+      "source_absolute_path": "/home/exouser/Tabero/analysis/results/p4_contact_conditioned_probe_20260822_184213/scripts/p4_collect_probe.py",
+      "bundle_relative_path": "p4b_probe/p4_collect_probe.py",
+      "semantic_role": "executed P4-B probe and friction setter",
+      "required_for_new_pipeline": true,
+      "historical_only": false,
+      "size_bytes": 30181,
+      "sha256": "a1566334f9f79ad9d8491612f10d086386049295314f6d1fd62512be1867bca9"
+    },
+    {
+      "name": "FEATURE_SCHEMA_46D.json",
+      "source_absolute_path": "generated in transfer bundle from audited historical sources",
+      "bundle_relative_path": "posterior/FEATURE_SCHEMA_46D.json",
+      "semantic_role": "exact 46-D model input order",
+      "required_for_new_pipeline": true,
+      "historical_only": false,
+      "size_bytes": 1524,
+      "sha256": "b3f7f3df5e424e5b8ea4e2369b90647400d73ce2373c27a7fea60ffa587d2aa6"
+    },
+    {
+      "name": "FRICTION_GRU.pt",
+      "source_absolute_path": "/home/exouser/Tabero/analysis/results/active_friction_imagination_20260828_211106/FRICTION_GRU.pt",
+      "bundle_relative_path": "posterior/FRICTION_GRU.pt",
+      "semantic_role": "historical friction-belief checkpoint",
+      "required_for_new_pipeline": true,
+      "historical_only": false,
+      "size_bytes": 13522,
+      "sha256": "a6c9d59bfa11c2481b7dca5fec1e41e0b625bbd463ed3fad9e3e4a1cb3eeb6af"
+    },
+    {
+      "name": "NORMALIZATION_46D.json",
+      "source_absolute_path": "/media/volume/newdata/exouser/ACTIVEFORCING_DISK_ARCHIVE_20260902/Tabero/analysis/results/p5s0c_paired_boundary_probe_value_20260824_000542/P5S0C_NORMALIZATION.json",
+      "bundle_relative_path": "posterior/NORMALIZATION_46D.json",
+      "semantic_role": "P5-S0-C TRAIN-only normalization",
+      "required_for_new_pipeline": true,
+      "historical_only": false,
+      "size_bytes": 6808,
+      "sha256": "5743bbbb6495c8c052a663a6dbf1ccf7fb974dc1bbe5c96236220ec4b90ecbd2"
+    },
+    {
+      "name": "P5S0C_DATASET_SCHEMA.md",
+      "source_absolute_path": "generated in transfer bundle from audited historical sources",
+      "bundle_relative_path": "posterior/P5S0C_DATASET_SCHEMA.md",
+      "semantic_role": "curated historical reference",
+      "required_for_new_pipeline": false,
+      "historical_only": true,
+      "size_bytes": 572,
+      "sha256": "b03f29fb1fd97526af296d1a1709d670cadffd930c671c9014ffac8dce3c9523"
+    },
+    {
+      "name": "P5S0C_FEATURE_MANIFEST.json",
+      "source_absolute_path": "/media/volume/newdata/exouser/ACTIVEFORCING_DISK_ARCHIVE_20260902/Tabero/analysis/results/p5s0c_paired_boundary_probe_value_20260824_000542/P5S0C_FEATURE_MANIFEST.json",
+      "bundle_relative_path": "posterior/P5S0C_FEATURE_MANIFEST.json",
+      "semantic_role": "curated historical reference",
+      "required_for_new_pipeline": false,
+      "historical_only": true,
+      "size_bytes": 2816,
+      "sha256": "4a35c41efa5c89115db9e8c0c094a284a3f039eaae872e1b5e527e0ae4f4bc81"
+    },
+    {
+      "name": "P5S0C_FROZEN_PROBE.json",
+      "source_absolute_path": "/media/volume/newdata/exouser/ACTIVEFORCING_DISK_ARCHIVE_20260902/Tabero/analysis/results/p5s0c_paired_boundary_probe_value_20260824_000542/P5S0C_FROZEN_PROBE.json",
+      "bundle_relative_path": "posterior/P5S0C_FROZEN_PROBE.json",
+      "semantic_role": "curated historical reference",
+      "required_for_new_pipeline": false,
+      "historical_only": true,
+      "size_bytes": 337,
+      "sha256": "16906d0053594911c191f7dab2d30de6d8251273f5e0c2a6330e462cc314df37"
+    },
+    {
+      "name": "P5S0C_MODEL_CONFIGS.json",
+      "source_absolute_path": "generated in transfer bundle from audited historical sources",
+      "bundle_relative_path": "posterior/P5S0C_MODEL_CONFIGS.json",
+      "semantic_role": "curated historical reference",
+      "required_for_new_pipeline": false,
+      "historical_only": true,
+      "size_bytes": 585,
+      "sha256": "10eed0bc00115b9d56dd0046c763d3e1e9d4254cffcff9c0495cdd3a1f79ca0a"
+    },
+    {
+      "name": "active_friction_imagination.py",
+      "source_absolute_path": "/home/exouser/Tabero/analysis/active_friction_imagination.py",
+      "bundle_relative_path": "posterior/active_friction_imagination.py",
+      "semantic_role": "historical estimator/model definition",
+      "required_for_new_pipeline": false,
+      "historical_only": false,
+      "size_bytes": 18501,
+      "sha256": "c06e09b34a27b1c3a1111d60a3be012edf6e9d604008eeb2ef0858a65d532918"
+    },
+    {
+      "name": "active_friction_imagination_e2e.py",
+      "source_absolute_path": "/home/exouser/Tabero/analysis/active_friction_imagination_e2e.py",
+      "bundle_relative_path": "posterior/active_friction_imagination_e2e.py",
+      "semantic_role": "historical GRU inference and legacy selector",
+      "required_for_new_pipeline": true,
+      "historical_only": false,
+      "size_bytes": 14061,
+      "sha256": "b510af7aaadba91316d91cc219f8a0744824c8ad4babf38ad33a3086c97248ec"
+    },
+    {
+      "name": "evidence_46d.py",
+      "source_absolute_path": "/home/exouser/Tabero/analysis/p5s0d_fresh_e2e_q2f.py::OnlineInference.sequence_array",
+      "bundle_relative_path": "posterior/evidence_46d.py",
+      "semantic_role": "self-contained exact 46-D offline feature adapter",
+      "required_for_new_pipeline": true,
+      "historical_only": false,
+      "size_bytes": 3848,
+      "sha256": "b3d1ac8ca1080ce9bfac23f14d0f06952cf83d08296f371ae761bdf3d2d3e5ec"
+    },
+    {
+      "name": "p5s0c_model_adjudication.py",
+      "source_absolute_path": "/home/exouser/Tabero/analysis/p5s0c_model_adjudication.py",
+      "bundle_relative_path": "posterior/p5s0c_model_adjudication.py",
+      "semantic_role": "historical feature and normalization reference",
+      "required_for_new_pipeline": false,
+      "historical_only": false,
+      "size_bytes": 48515,
+      "sha256": "ecf5a57c9bffb313fd3df94bef26d1579754836f26fa154538bff7acf6e7ea9f"
+    },
+    {
+      "name": "p5s0d_fresh_e2e_q2f.py",
+      "source_absolute_path": "/home/exouser/Tabero/analysis/p5s0d_fresh_e2e_q2f.py",
+      "bundle_relative_path": "posterior/p5s0d_fresh_e2e_q2f.py",
+      "semantic_role": "historical 46-D online feature builder and query wrapper",
+      "required_for_new_pipeline": true,
+      "historical_only": false,
+      "size_bytes": 55383,
+      "sha256": "0c291fc207da91800d9f580c80d7c76ff0acbbc6b24fc3073e87960b6d9cacc5"
+    },
+    {
+      "name": "HISTORICAL_PROBE_SEARCH_REPORT.md",
+      "source_absolute_path": "/home/exouser/FORTE/hidden_friction_baseline_20260831/HISTORICAL_PROBE_SEARCH_REPORT.md",
+      "bundle_relative_path": "provenance/HISTORICAL_PROBE_SEARCH_REPORT.md",
+      "semantic_role": "historical provenance/audit report",
+      "required_for_new_pipeline": false,
+      "historical_only": true,
+      "size_bytes": 7098,
+      "sha256": "bff4b3ff706d287c3925e78b5b39b9493c90e673329cbdc6f08cbe818aea484f"
+    },
+    {
+      "name": "PREVIOUS_WORKING_PROBE_EXECUTION_PATH.md",
+      "source_absolute_path": "/home/exouser/FORTE/hidden_friction_baseline_20260831/PREVIOUS_WORKING_PROBE_EXECUTION_PATH.md",
+      "bundle_relative_path": "provenance/PREVIOUS_WORKING_PROBE_EXECUTION_PATH.md",
+      "semantic_role": "historical provenance/audit report",
+      "required_for_new_pipeline": false,
+      "historical_only": true,
+      "size_bytes": 3747,
+      "sha256": "46776916b41e7b4dd4105c81681984748f23c4c96748922f94de2fc5f19e5d8e"
+    },
+    {
+      "name": "RECOVERED_PROBE_DEV_REPRODUCTION.md",
+      "source_absolute_path": "/home/exouser/FORTE/hidden_friction_baseline_20260831/RECOVERED_PROBE_DEV_REPRODUCTION.md",
+      "bundle_relative_path": "provenance/RECOVERED_PROBE_DEV_REPRODUCTION.md",
+      "semantic_role": "historical provenance/audit report",
+      "required_for_new_pipeline": false,
+      "historical_only": true,
+      "size_bytes": 1781,
+      "sha256": "f710a860197dcfb3a865ed5471b98670eeb40b84fd6b162f89804b9005b8e44d"
+    },
+    {
+      "name": "QUERY_RESULTS.csv",
+      "source_absolute_path": "/media/volume/newdata/exouser/ACTIVEFORCING_DISK_ARCHIVE_20260902/Tabero/analysis/results/active_friction_imagination_e2e_20260828_211434/QUERY_RESULTS.csv",
+      "bundle_relative_path": "reference_parity/QUERY_RESULTS.csv",
+      "semantic_role": "historical offline parity evidence",
+      "required_for_new_pipeline": true,
+      "historical_only": false,
+      "size_bytes": 1520,
+      "sha256": "9c8df73bca51690bf6ebda84d225719e8760715e98660bc76e8dbef49c6b9f8a"
+    },
+    {
+      "name": "README.md",
+      "source_absolute_path": "generated in transfer bundle from audited historical sources",
+      "bundle_relative_path": "reference_parity/README.md",
+      "semantic_role": "historical offline parity evidence",
+      "required_for_new_pipeline": false,
+      "historical_only": false,
+      "size_bytes": 1334,
+      "sha256": "2e724bda665cc8c17ad5e458dd0b0da2657c4540f526483e8ece29e18ec9f0cd"
+    },
+    {
+      "name": "context.json",
+      "source_absolute_path": "/media/volume/newdata/exouser/ACTIVEFORCING_DISK_ARCHIVE_20260902/Tabero/analysis/results/active_friction_imagination_e2e_20260828_211434/PROBE_TELEMETRY/afi_pilot_t0_root00_s8100_low.csv",
+      "bundle_relative_path": "reference_parity/case_001/context.json",
+      "semantic_role": "historical offline parity evidence",
+      "required_for_new_pipeline": false,
+      "historical_only": false,
+      "size_bytes": 437,
+      "sha256": "64d7a7bc5d595acaa61b0024a7767381978de28c70d478a2f755a1a687f63972"
+    },
+    {
+      "name": "expected_output.json",
+      "source_absolute_path": "/media/volume/newdata/exouser/ACTIVEFORCING_DISK_ARCHIVE_20260902/Tabero/analysis/results/active_friction_imagination_e2e_20260828_211434/PROBE_TELEMETRY/afi_pilot_t0_root00_s8100_low.csv",
+      "bundle_relative_path": "reference_parity/case_001/expected_output.json",
+      "semantic_role": "historical offline parity evidence",
+      "required_for_new_pipeline": false,
+      "historical_only": false,
+      "size_bytes": 310,
+      "sha256": "be454ed0b50474ffe317dd56c6a74b4d3ba964e5cbd7ca89849b1b98e6975702"
+    },
+    {
+      "name": "probe_telemetry.csv",
+      "source_absolute_path": "/media/volume/newdata/exouser/ACTIVEFORCING_DISK_ARCHIVE_20260902/Tabero/analysis/results/active_friction_imagination_e2e_20260828_211434/PROBE_TELEMETRY/afi_pilot_t0_root00_s8100_low.csv",
+      "bundle_relative_path": "reference_parity/case_001/probe_telemetry.csv",
+      "semantic_role": "historical offline parity evidence",
+      "required_for_new_pipeline": false,
+      "historical_only": false,
+      "size_bytes": 147089,
+      "sha256": "d94b187e4158812cbf062864b239df467a6aa743627bef766c9b0211a0472fcb"
+    },
+    {
+      "name": "context.json",
+      "source_absolute_path": "/media/volume/newdata/exouser/ACTIVEFORCING_DISK_ARCHIVE_20260902/Tabero/analysis/results/active_friction_imagination_e2e_20260828_211434/PROBE_TELEMETRY/afi_pilot_t0_root00_s8100_mid.csv",
+      "bundle_relative_path": "reference_parity/case_002/context.json",
+      "semantic_role": "historical offline parity evidence",
+      "required_for_new_pipeline": false,
+      "historical_only": false,
+      "size_bytes": 436,
+      "sha256": "30a6b01919d12c5aa48777e6c4548b85dfdce6e15f57b55a7510596e0ef9947a"
+    },
+    {
+      "name": "expected_output.json",
+      "source_absolute_path": "/media/volume/newdata/exouser/ACTIVEFORCING_DISK_ARCHIVE_20260902/Tabero/analysis/results/active_friction_imagination_e2e_20260828_211434/PROBE_TELEMETRY/afi_pilot_t0_root00_s8100_mid.csv",
+      "bundle_relative_path": "reference_parity/case_002/expected_output.json",
+      "semantic_role": "historical offline parity evidence",
+      "required_for_new_pipeline": false,
+      "historical_only": false,
+      "size_bytes": 309,
+      "sha256": "09fb5da9fa27c85dcdd8a5fb4109dc08be74bee93b5fea1c89f1a21ad469ba76"
+    },
+    {
+      "name": "probe_telemetry.csv",
+      "source_absolute_path": "/media/volume/newdata/exouser/ACTIVEFORCING_DISK_ARCHIVE_20260902/Tabero/analysis/results/active_friction_imagination_e2e_20260828_211434/PROBE_TELEMETRY/afi_pilot_t0_root00_s8100_mid.csv",
+      "bundle_relative_path": "reference_parity/case_002/probe_telemetry.csv",
+      "semantic_role": "historical offline parity evidence",
+      "required_for_new_pipeline": false,
+      "historical_only": false,
+      "size_bytes": 148739,
+      "sha256": "c8f77753e6474ea760171ccc51e34be23fb4abbad4b790772d095b4d0dc7e483"
+    },
+    {
+      "name": "context.json",
+      "source_absolute_path": "/media/volume/newdata/exouser/ACTIVEFORCING_DISK_ARCHIVE_20260902/Tabero/analysis/results/active_friction_imagination_e2e_20260828_211434/PROBE_TELEMETRY/afi_pilot_t0_root00_s8100_high.csv",
+      "bundle_relative_path": "reference_parity/case_003/context.json",
+      "semantic_role": "historical offline parity evidence",
+      "required_for_new_pipeline": false,
+      "historical_only": false,
+      "size_bytes": 439,
+      "sha256": "71fb76bf2fe57d71e7f33c14740787cb786c40aa748e9d7fd5c6bbe6ec9fd1c6"
+    },
+    {
+      "name": "expected_output.json",
+      "source_absolute_path": "/media/volume/newdata/exouser/ACTIVEFORCING_DISK_ARCHIVE_20260902/Tabero/analysis/results/active_friction_imagination_e2e_20260828_211434/PROBE_TELEMETRY/afi_pilot_t0_root00_s8100_high.csv",
+      "bundle_relative_path": "reference_parity/case_003/expected_output.json",
+      "semantic_role": "historical offline parity evidence",
+      "required_for_new_pipeline": false,
+      "historical_only": false,
+      "size_bytes": 292,
+      "sha256": "e7600622db2f232b8cf313f70536a2075b0937349f9e227184ff80d1c9950a09"
+    },
+    {
+      "name": "probe_telemetry.csv",
+      "source_absolute_path": "/media/volume/newdata/exouser/ACTIVEFORCING_DISK_ARCHIVE_20260902/Tabero/analysis/results/active_friction_imagination_e2e_20260828_211434/PROBE_TELEMETRY/afi_pilot_t0_root00_s8100_high.csv",
+      "bundle_relative_path": "reference_parity/case_003/probe_telemetry.csv",
+      "semantic_role": "historical offline parity evidence",
+      "required_for_new_pipeline": false,
+      "historical_only": false,
+      "size_bytes": 148970,
+      "sha256": "96edc65aba06d5f411dd9964e026dc97190b61477b6c27bfcc533d4b99ccc496"
+    }
+  ]
+}

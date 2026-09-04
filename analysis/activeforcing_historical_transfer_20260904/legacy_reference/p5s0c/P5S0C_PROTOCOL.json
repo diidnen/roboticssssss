@@ -1,0 +1,76 @@
+{
+  "fresh_worker_per_task": true,
+  "friction_bands": {
+    "HIGH": [
+      0.9,
+      1.0
+    ],
+    "LOW": [
+      0.2,
+      0.3
+    ],
+    "MID": [
+      0.45,
+      0.6
+    ]
+  },
+  "method_change": "NONE",
+  "name": "P5-S0-C Paired Hidden-Physics Boundary Probe-Value Adjudication",
+  "planned_contexts": 144,
+  "planned_primary_branches": 576,
+  "primary_ambiguity_force_N": {
+    "0": 4.0,
+    "1": 5.0,
+    "5": 4.0,
+    "6": 3.0
+  },
+  "probe": "P4-B common contact-frame shear",
+  "protocol_change": "PAIRED_HIDDEN_PHYSICS_BOUNDARY_DATA_AND_PROBE_VALUE_ADJUDICATION",
+  "root_split_per_task": {
+    "DEV": 2,
+    "TEST": 4,
+    "TRAIN": 6
+  },
+  "roots_per_task": 12,
+  "state_hash": "env.scene.get_state(is_relative=True)",
+  "task2_used": false,
+  "task_force_values_N": {
+    "0": [
+      3.0,
+      4.0,
+      4.5,
+      5.0
+    ],
+    "1": [
+      4.0,
+      4.5,
+      5.0,
+      5.5,
+      6.0
+    ],
+    "5": [
+      3.0,
+      4.0,
+      4.5,
+      5.0
+    ],
+    "6": [
+      3.0,
+      3.5,
+      4.0
+    ]
+  },
+  "tasks": [
+    0,
+    1,
+    5,
+    6
+  ],
+  "timeouts_s": {
+    "branch_restore": 20.0,
+    "full_task_rollout": 600.0,
+    "probe": 180.0,
+    "snapshot": 20.0,
+    "worker": 18000.0
+  }
+}

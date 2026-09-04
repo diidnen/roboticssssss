@@ -1,0 +1,10 @@
+{
+  "case_id": "case_001",
+  "context_id": "afi_pilot_t0_root00_s8100_low",
+  "probe_rows": 215,
+  "feature_dimension": 46,
+  "mu_hat": 0.3244166374206543,
+  "sigma_mu": 0.048241499811410904,
+  "mu_hypotheses": [0.24505937023088337, 0.3244166374206543, 0.4037739046104252],
+  "historical_exact_replay": true
+}

@@ -1,0 +1,45 @@
+{
+  "candidate_forces_N": [
+    3.0,
+    3.5,
+    4.0,
+    4.5,
+    5.0,
+    5.5,
+    6.0
+  ],
+  "estimator": {
+    "gru_hidden_dim": 16,
+    "outputs": [
+      "mu_hat",
+      "sigma_mu"
+    ],
+    "projection_dim": 16
+  },
+  "friction_bands": {
+    "HIGH": [
+      0.9,
+      1.0
+    ],
+    "LOW": [
+      0.2,
+      0.3
+    ],
+    "MID": [
+      0.45,
+      0.6
+    ]
+  },
+  "hidden_randomized_property": "friction only",
+  "method_change": "explicit friction estimate plus deterministic runtime imagination",
+  "name": "Active friction imagination successor v1",
+  "pi0": "Pi0Config (pi0, not pi0.5), semantic task context only",
+  "probe": "reused P4-B common contact-frame shear",
+  "root_split": "TRAIN/DEV/TEST by root_id, never random frames",
+  "runtime_imagination": "new snapshot-branch pilot; existing deterministic downstream_branch reused",
+  "source_hashes": {
+    "/home/exouser/Tabero/analysis/p5s0c_model_adjudication.py": "ecf5a57c9bffb313fd3df94bef26d1579754836f26fa154538bff7acf6e7ea9f",
+    "/home/exouser/Tabero/analysis/results/p5s0c_paired_boundary_probe_value_20260824_000542/P5S0C_FEATURE_MANIFEST.json": "4a35c41efa5c89115db9e8c0c094a284a3f039eaae872e1b5e527e0ae4f4bc81",
+    "/home/exouser/Tabero/analysis/results/p5s0c_paired_boundary_probe_value_20260824_000542/P5S0C_NORMALIZATION.json": "5743bbbb6495c8c052a663a6dbf1ccf7fb974dc1bbe5c96236220ec4b90ecbd2"
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "archive_direct_oof_evaluation": {
+    "contexts": 72,
+    "dev_tasks": [
+      0,
+      1,
+      5,
+      6
+    ],
+    "evidence": "/home/exouser/FORTE/activeforcing_full_claim_closure_20260902_062809/DIRECT_ONLY_PROVENANCE/ACTIVEFORCING_FINAL_SPLIT_MANIFEST.json",
+    "fold_rule": "root_seed % 3",
+    "folds": {
+      "0": [
+        "p5s0c_train_t0_root00_s5100",
+        "p5s0c_train_t0_root03_s5103",
+        "p5s0c_train_t1_root00_s5100",
+        "p5s0c_train_t1_root03_s5103",
+        "p5s0c_train_t5_root00_s5100",
+        "p5s0c_train_t5_root03_s5103",
+        "p5s0c_train_t6_root00_s5100",
+        "p5s0c_train_t6_root03_s5103"
+      ],
+      "1": [
+        "p5s0c_train_t0_root01_s5101",
+        "p5s0c_train_t0_root04_s5104",
+        "p5s0c_train_t1_root01_s5101",
+        "p5s0c_train_t1_root04_s5104",
+        "p5s0c_train_t5_root01_s5101",
+        "p5s0c_train_t5_root04_s5104",
+        "p5s0c_train_t6_root01_s5101",
+        "p5s0c_train_t6_root04_s5104"
+      ],
+      "2": [
+        "p5s0c_train_t0_root02_s5102",
+        "p5s0c_train_t0_root05_s5105",
+        "p5s0c_train_t1_root02_s5102",
+        "p5s0c_train_t1_root05_s5105",
+        "p5s0c_train_t5_root02_s5102",
+        "p5s0c_train_t5_root05_s5105",
+        "p5s0c_train_t6_root02_s5102",
+        "p5s0c_train_t6_root05_s5105"
+      ]
+    },
+    "root_families": 24,
+    "same_root_context_force_repeat_kept_together": true,
+    "split_unit": "task-specific root family",
+    "test_rows_are_held_out_roots": true,
+    "test_tasks": [
+      0,
+      1,
+      5,
+      6
+    ],
+    "train_tasks": [
+      0,
+      1,
+      5,
+      6
+    ],
+    "unit": "root-held-out grouped OOF",
+    "untouched_original_test_loaded": false
+  },
+  "classification": "B_ROOT_HELD_OUT_WITHIN_SEEN_TASKS for the archive Direct OOF; the original GNP 720 training/checkpoint phase itself was TRAIN-only with a post-freeze DEV touch",
+  "old_gnp_dev_touch": {
+    "branches": 135,
+    "contexts": 9,
+    "evidence": "/home/exouser/FORTE/gnp_style_continuous_20260830_125107/CONTINUOUS_DEV_PROBABILITY_METRICS.csv",
+    "loaded_after_all_six_checkpoints": true,
+    "probability_cells": 27,
+    "roots": 7,
+    "split_unit": "separate repeated DEV contexts",
+    "tasks": [
+      0,
+      1,
+      5,
+      6
+    ]
+  },
+  "old_gnp_training": {
+    "additional_coarse_train_branches": 288,
+    "dev_contexts": 0,
+    "dev_outcomes_loaded": false,
+    "evidence": [
+      "/home/exouser/FORTE/gnp_style_continuous_20260830_125107/GNP_STYLE_CHECKPOINT_MANIFEST.json",
+      "/home/exouser/FORTE/gnp_style_continuous_20260830_125107/CONTINUOUS_TRAIN_CONTEXT_AUDIT.json",
+      "/home/exouser/FORTE/gnp_style_continuous_20260830_125107/GNP_STYLE_CONTINUOUS_TRAINING_PROTOCOL.json"
+    ],
+    "split_unit": "TRAIN population only",
+    "test_contexts": 0,
+    "test_loaded": false,
+    "train_contexts": 72,
+    "train_roots": 24,
+    "train_samples_continuous_720": 720,
+    "train_tasks": [
+      0,
+      1,
+      5,
+      6
+    ]
+  },
+  "seen_task_heldout_context_or_root": true,
+  "status": "RECOVERED_WITH_TWO_LAYERS",
+  "task_ood": false
+}

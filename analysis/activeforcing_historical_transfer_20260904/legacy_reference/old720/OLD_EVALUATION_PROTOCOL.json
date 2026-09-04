@@ -1,0 +1,40 @@
+{
+  "archive_direct_posterior_eval": {
+    "candidate_grid_N": [
+      3.0,
+      3.25,
+      3.5,
+      3.75,
+      4.0,
+      4.25,
+      4.5,
+      4.75,
+      5.0
+    ],
+    "evaluation": "72 contexts x 2 selected-force repeats = 144 paired episodes",
+    "evidence": [
+      "/home/exouser/FORTE/activeforcing_full_claim_closure_20260902_062809/DIRECT_ONLY_PROVENANCE/MAIN_PAIRED_BENCHMARK_RESULTS.json",
+      "/home/exouser/FORTE/activeforcing_full_claim_closure_20260902_062809/DIRECT_ONLY_PROVENANCE/MAIN_PAIRED_BENCHMARK_REPORT.md",
+      "/home/exouser/FORTE/activeforcing_full_claim_closure_20260902_062809/DIRECT_ONLY_PROVENANCE/ACTIVEFORCING_FINAL_PROTOCOL.json"
+    ],
+    "force_cost": "failure reward -1; success reward (Fmax-F)/Fmax",
+    "formula": "U(F|x)=p_success(F|x)*(Fmax-F)/Fmax + (1-p_success(F|x))*(-1)",
+    "input": "held-out root/context + candidate force",
+    "output": "P(success|x,F), selected force and realized outcome",
+    "selector": "Expected Utility with lower-force tie break",
+    "task_Fmax_N": "task/archive maximum; frozen Direct runtime uses candidate-grid max"
+  },
+  "classification": "B_ROOT_HELD_OUT_WITHIN_SEEN_TASKS (later archive Direct OOF); GNP training phase TRAIN-only plus separate DEV diagnostic",
+  "historical_original_test": "not loaded/used in the cited closure artifacts",
+  "not_task_ood": true,
+  "old_gnp_posterior_eval": {
+    "dev": "9 contexts, 27 real force cells, 135 repeated branches; read once after six checkpoints",
+    "input": "context sequence + candidate force condition",
+    "output": "ensemble mean sigmoid feasibility probability",
+    "primary_calibration": "raw ensemble mean",
+    "rho": 0.8,
+    "secondary": "TRAIN-only isotonic diagnostic",
+    "selector": "minimum continuous 0.05N grid force with raw p >= rho in GNP DEV analysis; Expected Utility was not reached in that GNP run",
+    "success_criterion": "full_task_success_y from historical full-task runner"
+  }
+}

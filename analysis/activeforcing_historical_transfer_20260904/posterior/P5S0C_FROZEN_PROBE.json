@@ -1,0 +1,7 @@
+{
+  "code_hash": "a1566334f9f79ad9d8491612f10d086386049295314f6d1fd62512be1867bca9",
+  "implementation": "P4-B common contact-frame shear",
+  "implementation_path": "/home/exouser/Tabero/analysis/results/p4_contact_conditioned_probe_20260822_184213/scripts/p4_collect_probe.py",
+  "task_specific_parameters": false,
+  "variant": "P4B"
+}

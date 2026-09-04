@@ -1,0 +1,52 @@
+{
+  "integer_force_values_N": [
+    3.0,
+    4.0,
+    5.0,
+    6.0
+  ],
+  "offgrid_force_values_N": [
+    3.5,
+    4.5,
+    5.5
+  ],
+  "offgrid_is_secondary_development_only": true,
+  "primary_ambiguity_force_N": {
+    "0": 4.0,
+    "1": 5.0,
+    "5": 4.0,
+    "6": 3.0
+  },
+  "same_force_replay_force_N_by_task": {
+    "0": 4.0,
+    "1": 5.0,
+    "5": 4.0,
+    "6": 3.0
+  },
+  "task_force_values_N": {
+    "0": [
+      3.0,
+      4.0,
+      4.5,
+      5.0
+    ],
+    "1": [
+      4.0,
+      4.5,
+      5.0,
+      5.5,
+      6.0
+    ],
+    "5": [
+      3.0,
+      4.0,
+      4.5,
+      5.0
+    ],
+    "6": [
+      3.0,
+      3.5,
+      4.0
+    ]
+  }
+}

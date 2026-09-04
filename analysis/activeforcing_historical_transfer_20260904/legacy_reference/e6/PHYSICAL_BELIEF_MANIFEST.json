@@ -1,0 +1,101 @@
+{
+  "architecture": "projection(16)->GRU(16)->mu/log_sigma heads",
+  "construction": "matched architecture; deterministic seeds; root bootstrap training resampling",
+  "dev_contexts": 24,
+  "interval_scale": 0.8347769328436533,
+  "interval_scale_fit_split": "TRAIN",
+  "member_count": 3,
+  "members": [
+    {
+      "checkpoint": "/home/exouser/FORTE_e6e7/activeforcing_e6e7_closure_20260902_052500/PHYSICAL_BELIEF_member_0.pt",
+      "checkpoint_sha256": "f1f66a6e8c4d6289b5570db0275f67eb0c0d41abaadb103bfa037fa0afb35cc7",
+      "history": [
+        {
+          "epoch": 1,
+          "train_loss": 0.0026428457349538803
+        },
+        {
+          "epoch": 20,
+          "train_loss": -0.49871161580085754
+        },
+        {
+          "epoch": 40,
+          "train_loss": -0.7860317230224609
+        },
+        {
+          "epoch": 60,
+          "train_loss": -0.9688965082168579
+        },
+        {
+          "epoch": 80,
+          "train_loss": -1.2322288751602173
+        }
+      ],
+      "member": "member_0",
+      "seed": 2026090201
+    },
+    {
+      "checkpoint": "/home/exouser/FORTE_e6e7/activeforcing_e6e7_closure_20260902_052500/PHYSICAL_BELIEF_member_1.pt",
+      "checkpoint_sha256": "aa8783aa232797cc3fdc085fae3c6f71f9a249d3f4a83850958d50425b578076",
+      "history": [
+        {
+          "epoch": 1,
+          "train_loss": 0.037738874554634094
+        },
+        {
+          "epoch": 20,
+          "train_loss": -0.5236515402793884
+        },
+        {
+          "epoch": 40,
+          "train_loss": -0.860736072063446
+        },
+        {
+          "epoch": 60,
+          "train_loss": -0.9718448519706726
+        },
+        {
+          "epoch": 80,
+          "train_loss": -1.247127890586853
+        }
+      ],
+      "member": "member_1",
+      "seed": 2026090202
+    },
+    {
+      "checkpoint": "/home/exouser/FORTE_e6e7/activeforcing_e6e7_closure_20260902_052500/PHYSICAL_BELIEF_member_2.pt",
+      "checkpoint_sha256": "06afa2951842b7a16464a8cf65d650d01692e994a152b71f615de70c7555060f",
+      "history": [
+        {
+          "epoch": 1,
+          "train_loss": 0.04619824141263962
+        },
+        {
+          "epoch": 20,
+          "train_loss": -0.5416393280029297
+        },
+        {
+          "epoch": 40,
+          "train_loss": -0.8241406679153442
+        },
+        {
+          "epoch": 60,
+          "train_loss": -1.0570623874664307
+        },
+        {
+          "epoch": 80,
+          "train_loss": -1.264762043952942
+        }
+      ],
+      "member": "member_2",
+      "seed": 2026090203
+    }
+  ],
+  "test_contexts_loaded": 0,
+  "train_contexts": 72,
+  "uncertainty_semantics": {
+    "aleatoric": "mean member sigma^2",
+    "epistemic": "sample variance of member mu",
+    "total": "epistemic + aleatoric, TRAIN-fitted scalar interval calibration"
+  }
+}

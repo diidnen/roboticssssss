@@ -1,0 +1,11 @@
+{
+  "case_id": "case_002",
+  "context_id": "afi_pilot_t0_root00_s8100_mid",
+  "task": 0,
+  "root_seed": 8100,
+  "root_id": "afi_pilot_t0_root00_s8100",
+  "friction_band": "MID",
+  "true_friction": 0.5265899957280025,
+  "true_friction_is_privileged_analysis_only": true,
+  "source_absolute_path": "/home/exouser/Tabero/analysis/results/active_friction_imagination_e2e_20260828_211434/PROBE_TELEMETRY/afi_pilot_t0_root00_s8100_mid.csv"
+}

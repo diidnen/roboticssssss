@@ -1,0 +1,51 @@
+[
+  {
+    "action": "reuse",
+    "component": "fixed active probe",
+    "file": "/home/exouser/Tabero/analysis/results/p5s0c_paired_boundary_probe_value_20260824_000542/P5S0C_FROZEN_PROBE.json",
+    "implementation": "P4-B common contact-frame shear",
+    "status": "qualified/reused"
+  },
+  {
+    "action": "reuse",
+    "component": "probe feature adapter",
+    "file": "/home/exouser/Tabero/analysis/p5s0c_model_adjudication.py",
+    "implementation": "sequence_dataframe/load_features",
+    "status": "exact frozen feature order"
+  },
+  {
+    "action": "reuse",
+    "component": "probe normalization",
+    "file": "/home/exouser/Tabero/analysis/results/p5s0c_paired_boundary_probe_value_20260824_000542/P5S0C_NORMALIZATION.json",
+    "implementation": "P5S0C TRAIN-only means/stds",
+    "status": "verified"
+  },
+  {
+    "action": "reuse as validation/reference",
+    "component": "matched force branches",
+    "file": "/home/exouser/Tabero/analysis/p5s0c_paired_boundary_probe_value.py",
+    "implementation": "deterministic downstream_branch",
+    "status": "576 real branch outcomes"
+  },
+  {
+    "action": "reuse contract",
+    "component": "semantic policy",
+    "file": "/home/exouser/Tabero/analysis/p6g1r1_controller_grasp_vla_handoff.py",
+    "implementation": "Pi0Config frozen VLA",
+    "status": "Pi0, not Pi0.5; semantic context only"
+  },
+  {
+    "action": "new method",
+    "component": "explicit friction estimator",
+    "file": "/home/exouser/Tabero/analysis/active_friction_imagination.py",
+    "implementation": "projection(16) -> GRU(16) -> mu/sigma heads",
+    "status": "new"
+  },
+  {
+    "action": "minimally adapt",
+    "component": "runtime imagination",
+    "file": "/home/exouser/Tabero/analysis/p5s0c_paired_boundary_probe_value.py",
+    "implementation": "snapshot branch around deterministic downstream controller",
+    "status": "new pilot still required"
+  }
+]

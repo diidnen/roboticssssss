@@ -1,0 +1,94 @@
+{
+  "all_tasks": [
+    0,
+    1,
+    5,
+    6
+  ],
+  "contexts_per_root": {
+    "3": 24
+  },
+  "sample_grain": "one physical branch at (task, root_id, context_id, requested_force_N, repeat)",
+  "samples_per_context": {
+    "10": 72
+  },
+  "tasks": [
+    {
+      "force_max_N": 4.9913273990690445,
+      "force_min_N": 3.067545649434074,
+      "force_support_from_protocol_N": [
+        3.0,
+        5.0
+      ],
+      "old_failure": 42,
+      "old_success": 138,
+      "recomputed_final_failure": 6,
+      "recomputed_final_success": 174,
+      "samples": 180,
+      "task": 0,
+      "unique_contexts": 18,
+      "unique_force_candidates": 90,
+      "unique_roots": 6,
+      "unique_tuples": 18
+    },
+    {
+      "force_max_N": 5.984855347684767,
+      "force_min_N": 4.022641498213649,
+      "force_support_from_protocol_N": [
+        4.0,
+        6.0
+      ],
+      "old_failure": 59,
+      "old_success": 121,
+      "recomputed_final_failure": 40,
+      "recomputed_final_success": 140,
+      "samples": 180,
+      "task": 1,
+      "unique_contexts": 18,
+      "unique_force_candidates": 90,
+      "unique_roots": 6,
+      "unique_tuples": 18
+    },
+    {
+      "force_max_N": 4.993325242802623,
+      "force_min_N": 3.0062501232194427,
+      "force_support_from_protocol_N": [
+        3.0,
+        5.0
+      ],
+      "old_failure": 38,
+      "old_success": 142,
+      "recomputed_final_failure": 0,
+      "recomputed_final_success": 180,
+      "samples": 180,
+      "task": 5,
+      "unique_contexts": 18,
+      "unique_force_candidates": 90,
+      "unique_roots": 6,
+      "unique_tuples": 18
+    },
+    {
+      "force_max_N": 3.9951533437943336,
+      "force_min_N": 3.001736578401635,
+      "force_support_from_protocol_N": [
+        3.0,
+        4.0
+      ],
+      "old_failure": 6,
+      "old_success": 174,
+      "recomputed_final_failure": 4,
+      "recomputed_final_success": 176,
+      "samples": 180,
+      "task": 6,
+      "unique_contexts": 18,
+      "unique_force_candidates": 90,
+      "unique_roots": 6,
+      "unique_tuples": 18
+    }
+  ],
+  "total_samples": 720,
+  "tuple_definition": "(task, root_id, context_id); one tuple per friction-conditioned context; root-family count is reported separately",
+  "unique_contexts": 72,
+  "unique_roots": 24,
+  "unique_tuples_operational": 72
+}
