@@ -1,0 +1,13 @@
+{
+  "approach_grasp_probe_rerun": false,
+  "continuation": "same frozen VLA action sequence, cursor, phase semantics",
+  "forces_N": [
+    6.0
+  ],
+  "only_change": "F_des",
+  "protocol": "RUN SAME-STATE 2N / 4N / 6N POST-GRASP FORCE FRONTIER",
+  "pure_vertical": false,
+  "root": 5100,
+  "snapshot": "p5s0c_train_t0_r00_s5100_low_mu0.293710_true_force_snapshot",
+  "task": "Task0"
+}

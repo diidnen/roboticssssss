@@ -1,0 +1,56 @@
+{
+  "architecture": "input projection -> single-layer GRU(64) -> 13 residual continuous + 3 event logits",
+  "authoritative_source": "/home/exouser/Tabero/analysis/results/direct_contact_boundary_dataset_20260829_001409",
+  "contact_threshold_selection": "DEV macro contact F1 with prevalence-gap penalty",
+  "created_before_training_utc": "2026-08-29T05:56:37.529796+00:00",
+  "curriculum": [
+    {
+      "epochs": "1-8",
+      "horizon": 1
+    },
+    {
+      "epochs": "9-18",
+      "horizon": 5
+    },
+    {
+      "epochs": "19-35",
+      "horizon": 10
+    },
+    {
+      "epochs": "36+",
+      "horizon": 20
+    }
+  ],
+  "direct_only": true,
+  "epochs_max": 60,
+  "evaluator_calibration": "DEV-only physical grid; full-task outcome used only to validate evaluator, never world model",
+  "gate_3_unchanged": {
+    "dev_frontier_exact_min": 0.8,
+    "dev_slip_f1_min": 0.7,
+    "dev_under_force_max": 0.1,
+    "nondegenerate_sufficient_set": true
+  },
+  "gate_b": {
+    "dev_balanced_accuracy_min": 0.8,
+    "nondegenerate_prediction_required": true
+  },
+  "gate_c": {
+    "contact_f1_improves_v2_required": true,
+    "direct_slip_f1_required": true,
+    "free_rollout_finite_required": true
+  },
+  "historical_pretraining": false,
+  "loss": "SmoothL1 residual state + 2x local-force channels + class-balanced direct-contact BCE + 0.35 multistep; slip masked",
+  "model_selection": "minimum deterministic DEV 20-step physical/contact objective; then best seed by same DEV objective",
+  "optimizer": "AdamW(lr=8e-4,wd=1e-4)",
+  "patience": 12,
+  "seeds": [
+    2026082901,
+    2026082902,
+    2026082903,
+    2026082904,
+    2026082905
+  ],
+  "sha256": "388f8147da3533e23992ef5d58bcd7debe74eed6769dbb48ab9aa9ccee26fdd8",
+  "test_policy": "evaluate exactly once after all choices frozen; do not enter Gate 3 if Gate C fails"
+}

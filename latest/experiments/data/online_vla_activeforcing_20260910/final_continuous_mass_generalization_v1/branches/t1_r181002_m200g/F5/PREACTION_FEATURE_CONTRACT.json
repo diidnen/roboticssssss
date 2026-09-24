@@ -1,0 +1,23 @@
+{
+  "shape": [
+    8,
+    71
+  ],
+  "sequence_dim": 17,
+  "condition_dim": 54,
+  "source": "reference probe + decision snapshot; first8 planned branch_hold commands",
+  "candidate_force_column": 17,
+  "force_normalization": "F / 8",
+  "mu_column": 18,
+  "placeholder_values": {
+    "force": 0.0,
+    "mu": 0.0
+  },
+  "placeholder_not_valid_inference": true,
+  "ground_truth_friction_in_feature": false,
+  "reference_snapshot": "/home/exouser/FORTE/online_vla_restore_20260907/final_continuous_mass_generalization_v1/references/t1_r181002_m200g/DECISION_STATE.pt",
+  "reference_snapshot_sha256": "5e95ff54f3aeb6a965154a06cc6f1288f2329bf012d0f392c8a28cb0f61bcf50",
+  "same_state_all_candidates": true,
+  "candidate_actions_executed_at_extraction": 0,
+  "schema_sha256": "fdbf8869f66b49b56adec1ca65a7f420db6c9b38ad6f437a9c221b8b75720795"
+}

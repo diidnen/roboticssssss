@@ -1,0 +1,149 @@
+{
+  "analysis_only_grasp_labels": [
+    "G0",
+    "G1",
+    "G2",
+    "OTHER",
+    "NO_VALID_GRASP"
+  ],
+  "arm_A_raw_frozen_vla": {
+    "retry": false,
+    "sequence": [
+      "task reset/root restore",
+      "frozen VLA full task",
+      "fixed 8N force wrapper"
+    ],
+    "staging": false,
+    "target_grasp_conditioning": false
+  },
+  "arm_B_fixed_verified_recipe": {
+    "recipe_search": false,
+    "recipes": {
+      "1": {
+        "approach_axis_offset_m": "0.0",
+        "is_original_p6g1": "True",
+        "max_vla_chunks": "22",
+        "mode_axis_lateral_offset_m": "0.0",
+        "object": "cream_cheese_1",
+        "policy_context_mode": "COLD",
+        "recipe_id": "t1_G2_R23_ORIGINAL_P6G1",
+        "source_grasp_label": "g_plus",
+        "stabilization_observations": "4",
+        "staging_basis": "approach=[0,0,-1], mode=lateral closing axis, vertical=[0,1,0], all object-relative",
+        "staging_deviation_norm": "0.0",
+        "target_mode": "G2",
+        "task": "1",
+        "vertical_offset_m": "0.0",
+        "wrist_roll_deg": "0.0"
+      },
+      "6": {
+        "approach_axis_offset_m": "-0.0075",
+        "is_original_p6g1": "",
+        "max_vla_chunks": "4",
+        "mode_axis_lateral_offset_m": "-0.012",
+        "object": "butter_1",
+        "policy_context_mode": "COLD",
+        "recipe_id": "t6_G0_R09",
+        "source_grasp_label": "g_minus",
+        "stabilization_observations": "3",
+        "staging_basis": "approach=[0,0,-1], mode=lateral closing axis, vertical=[0,1,0], all object-relative",
+        "staging_deviation_norm": "1.5",
+        "target_mode": "G0",
+        "task": "6",
+        "vertical_offset_m": "0.008",
+        "wrist_roll_deg": "0.0"
+      }
+    },
+    "retry": false,
+    "sequence": [
+      "analytic/IK staging",
+      "frozen R2 qualified invocation",
+      "frozen VLA full task",
+      "fixed 8N force wrapper"
+    ]
+  },
+  "cluster_definitions": "/home/exouser/Tabero/analysis/results/p6g1_primitive_ik_vla_grasp_realization_20260825_103146/P6G1_REFERENCE_GRASP_CLUSTERS.csv",
+  "created_at_utc": "2026-08-26T12:37:35Z",
+  "decision_criteria": {
+    "removal": {
+      "fixed_variability_reduction_max": 0.3,
+      "full_task_abs_gap_max": 0.1,
+      "raw_dominant_fraction_each_task_min": 0.75,
+      "stable_lift_abs_gap_max": 0.1
+    },
+    "retention": {
+      "consistency_fraction": 0.7,
+      "or_variability_reduction_min": 0.3,
+      "stable_lift_or_full_task_improvement_min": 0.1
+    }
+  },
+  "fresh_roots_per_task": [
+    9800,
+    9801,
+    9802,
+    9803,
+    9804,
+    9805,
+    9806,
+    9807,
+    9808,
+    9809
+  ],
+  "frozen_policy": {
+    "checkpoint": "/media/volume/newdata/exouser/tabero/models/pi0_lora_tacfield_tabero/checkpoints/pi0_lora_tacfield_tabero/pi0_lora_tacfield_tabero/49999",
+    "checkpoint_hash_sha256": "0598a390733235fde0bf5633b1543d91176d31bb5012d4d26f9373a90642fe17",
+    "config": "pi0_lora_tacfield_tabero",
+    "expected_hash_sha256": "0598a390733235fde0bf5633b1543d91176d31bb5012d4d26f9373a90642fe17",
+    "server_wrapper": "/home/exouser/Tabero/analysis/results/b5_tabero_neutral_20260822_040652/scripts/b5_serve_policy_with_explicit_norm_stats.py"
+  },
+  "matched_root_protocol": "one settled initial state per root, independently restored before Raw and Fixed arms",
+  "method_change": "NONE",
+  "name": "P6-G1-R3 Raw Frozen VLA vs Fixed Verified Recipe",
+  "object_by_task": {
+    "1": "cream_cheese_1",
+    "6": "butter_1"
+  },
+  "output_directory": "/home/exouser/Tabero/analysis/results/p6g1r3_raw_vla_vs_fixed_recipe_20260826_123552",
+  "physics": {
+    "center_of_mass": "centered/default",
+    "force_target_N": 8.0,
+    "friction": "nominal"
+  },
+  "policy_seeds": [
+    0,
+    1
+  ],
+  "prohibited": [
+    "training",
+    "new recipe search",
+    "GNP",
+    "physical query",
+    "DreamTrajectory",
+    "online force change",
+    "changed grasp candidates",
+    "retry"
+  ],
+  "question": "Whether one fixed verified invocation recipe materially improves execution reliability over raw frozen VLA when grasp position is not a runtime variable.",
+  "root_audit": {
+    "collisions": [],
+    "disjoint": true,
+    "prior_artifact_glob": "p6g0*/p6g1*",
+    "roots": [
+      9800,
+      9801,
+      9802,
+      9803,
+      9804,
+      9805,
+      9806,
+      9807,
+      9808,
+      9809
+    ]
+  },
+  "tasks": [
+    1,
+    6
+  ],
+  "total_rollouts": 80
+}

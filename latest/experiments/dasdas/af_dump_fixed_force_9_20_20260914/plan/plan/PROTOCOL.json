@@ -1,0 +1,160 @@
+{
+  "claim_boundary": "same-root upward commanded-force fill on existing contexts; commanded != realized load",
+  "created_utc": "2026-09-14T11:29:46.467466+00:00",
+  "engineering_admission_rule": "smoke 16/20 N; raw audits pass; 20 N >=100 target-contact steps; aperture in [0,0.04]; max squeeze <=400 N",
+  "eta_note": "approx 2.5-3.5 h based on prior ~2.3 min/force",
+  "force_order_rule": "left rotation by context index modulo three",
+  "forces_N": [
+    16.0,
+    18.0,
+    20.0
+  ],
+  "main_contexts": 24,
+  "main_rollouts": 72,
+  "main_stop_rule": "retain and run all 24 contexts; stop only on engineering/audit failure",
+  "no_feasibility_or_utility_used": true,
+  "no_new_roots": true,
+  "paired_analysis": "join prior FINAL_RESULTS 10/12/15 with new 16/18/20; report interval nondecreasing fractions",
+  "physical_root": 200002,
+  "population": [
+    {
+      "friction": 0.425,
+      "policy_seed": 80200002
+    },
+    {
+      "friction": 0.575,
+      "policy_seed": 80200002
+    },
+    {
+      "friction": 0.85,
+      "policy_seed": 80200002
+    },
+    {
+      "friction": 0.425,
+      "policy_seed": 80200003
+    },
+    {
+      "friction": 0.575,
+      "policy_seed": 80200003
+    },
+    {
+      "friction": 0.85,
+      "policy_seed": 80200003
+    },
+    {
+      "friction": 0.425,
+      "policy_seed": 80200004
+    },
+    {
+      "friction": 0.575,
+      "policy_seed": 80200004
+    },
+    {
+      "friction": 0.85,
+      "policy_seed": 80200004
+    },
+    {
+      "friction": 0.425,
+      "policy_seed": 80200005
+    },
+    {
+      "friction": 0.575,
+      "policy_seed": 80200005
+    },
+    {
+      "friction": 0.85,
+      "policy_seed": 80200005
+    },
+    {
+      "friction": 0.425,
+      "policy_seed": 80200006
+    },
+    {
+      "friction": 0.575,
+      "policy_seed": 80200006
+    },
+    {
+      "friction": 0.85,
+      "policy_seed": 80200006
+    },
+    {
+      "friction": 0.425,
+      "policy_seed": 80200007
+    },
+    {
+      "friction": 0.575,
+      "policy_seed": 80200007
+    },
+    {
+      "friction": 0.85,
+      "policy_seed": 80200007
+    },
+    {
+      "friction": 0.425,
+      "policy_seed": 80200008
+    },
+    {
+      "friction": 0.575,
+      "policy_seed": 80200008
+    },
+    {
+      "friction": 0.85,
+      "policy_seed": 80200008
+    },
+    {
+      "friction": 0.425,
+      "policy_seed": 80200009
+    },
+    {
+      "friction": 0.575,
+      "policy_seed": 80200009
+    },
+    {
+      "friction": 0.85,
+      "policy_seed": 80200009
+    }
+  ],
+  "population_source": "same 24 contexts as prior fixed 5/8/10/12/15 sweep",
+  "primary_endpoint": "official full-task success at commanded 16/18/20 N",
+  "prior_forces_N_already_collected": [
+    5.0,
+    8.0,
+    10.0,
+    12.0,
+    15.0
+  ],
+  "reuses_prior_5_15_sweep": "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_fixed_force_5_15_20260914_v3/FINAL_RESULTS.json",
+  "runtime_manifest": "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_maxf8_20260913/additional_data_v1/RUNTIME_MANIFEST.json",
+  "runtime_manifest_sha256": "01d0289b14b812a4a12455e826a0b213ef4bf4fcdb27717892289b7e137b5034",
+  "secondary_endpoints": [
+    "target-contact fraction",
+    "target-contact realized squeeze / command",
+    "joined monotonicity with prior 10/12/15 on same context_id"
+  ],
+  "smoke_forces_N": [
+    16.0,
+    20.0
+  ],
+  "smoke_gate": {
+    "20N_max_squeeze_N": 400.0,
+    "20N_target_contact_steps_min": 100,
+    "aperture_max_m": 0.04
+  },
+  "smoke_rollouts": 2,
+  "source_hashes": {
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_fixed_force_5_15_20260914_v3/FINAL_RESULTS.json": "1d129368dc6d171c12b44b3e38426715c37e2c7894b6af9e193fe04926709b15",
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_fixed_force_9_20_20260914/EXPERIMENT_CARD.md": "2a15e8e6b729a811c6c82b0b5b9bd2fb704838ecf528f4f59a8838932f669ec0",
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_fixed_force_9_20_20260914/audit_fixed_sweep.py": "fc0a10826a1bf7ad22d1a57ecd1362c2108ec6d04beb0c7ffce078adc4babe38",
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_fixed_force_9_20_20260914/freeze_fixed_sweep.py": "c945776e63ade69fd4950fa8c337e108f54f7bb4c5235c81b75baca13b5c3461",
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_fixed_force_9_20_20260914/infer_fixed_sweep_context.py": "a0cb9b401cadb49c9a15d7e35c4c901df3f44a42ef916cf190890ca6c4cd2b2d",
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_fixed_force_9_20_20260914/original_arbitration_binding.py": "89e54a5c9868033987312afe825358ad484e437a1ca09afd54b2e1fe4fbb120b",
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_fixed_force_9_20_20260914/run_fixed_sweep_queue.py": "ef5b0d9b6a9c7d89f0c9e251e3e4369019d0182b4cecaf483f3355f57d6e84f7",
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_original_restore_20260912/native_original_force_controller.py": "d6e27fcd83f2bc9415a86632e37025f707a2ec22424bf120dae6af84ba229518",
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_original_restore_20260912/original_squeeze_inner.py": "4814f6ab0fcac0b7966e6789518decbd722eb38a89ecea03dbafb2cbef9896fc",
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_original_restore_20260912/qualify_original_online_forks.py": "da2c673047569bf88359e09cbedb440f43bd497b4f23dc1683369a00482cf264",
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_original_restore_20260912/qualify_original_p4_native.py": "3c20c733bdedf4f46145b17292873b4fa0b6e03b66384a9104bd6595cadfbbad"
+  },
+  "storage_root": "/media/volume/dasdas/exouser/af_dump_fixed_force_9_20_20260914",
+  "task": "dump_bin_bigbin",
+  "version": "AF_DUMP_FIXED_FORCE_16_18_20_UPWARD_FILL_V1"
+}

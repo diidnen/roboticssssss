@@ -1,0 +1,21 @@
+{
+  "activeforcing_used": false,
+  "commanded_force_N": null,
+  "comparison_note": "same root/task/friction strata as Table II; not post-probe state-paired",
+  "execution": "natural reset, 20 open-hold settling steps, then byte-identical postprocessed pi0 actions",
+  "force_or_gripper_override_used": false,
+  "method": "NOMINAL_VLA",
+  "metric_contract": "ONLINE_VLA_350STEP_WHOLE_MESH_RELEASE_SUPPORT_V1 plus contact-conditioned bilateral squeeze",
+  "plan": {
+    "band": "HIGH",
+    "id": "t5_r170040_high__NOMINAL_VLA",
+    "mu": 0.9450036831015114,
+    "object": "tomato_sauce_1",
+    "root": 170040,
+    "target": "basket_1",
+    "task": 5
+  },
+  "probe_used": false,
+  "prompt": "pick up the tomato sauce and place it in the basket",
+  "runner_sha256": "2033cc2191076b151f6f243f3be674727352aa12a5c9f8ecb80d84f4dd4b5a40"
+}

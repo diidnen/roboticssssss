@@ -1,0 +1,209 @@
+{
+  "authoritative_population": {
+    "archived_branches_per_task": 180,
+    "archived_branches_total": 720,
+    "friction_contexts": 72,
+    "historical_coarse_outcomes_included": false,
+    "root_families": 24,
+    "root_scaling_included": false,
+    "source": "/home/exouser/FORTE/activeforcing_probe_conditioned_wm_20260901_064627",
+    "tasks": [
+      0,
+      1,
+      5,
+      6
+    ],
+    "untouched_TEST_included": false
+  },
+  "budget_definitions": {
+    "full_train_per_outer_fold_per_task": 120,
+    "population_per_task": 180,
+    "sparse_fraction_of_full_train": 0.5,
+    "sparse_train_per_outer_fold_per_task": 60
+  },
+  "classification_thresholds_frozen_before_sparse_results": {
+    "material_sr_change_pp": 1.0,
+    "material_underforce_worsening_pp": 1.0,
+    "near_full_sr_gap_pp": 1.0,
+    "stable_gain_requires_positive_sr_gain_in_at_least_seeds": 2,
+    "utility_non_decrease_tolerance": 1e-12
+  },
+  "frozen_models": {
+    "direct": "same architecture, BCE terminal outcome, optimizer, epochs, utility, candidate search",
+    "nested_residual": true,
+    "outer_validation_used_in_training": false,
+    "point_wm": "same H8/13-channel trajectory architecture, nominal VLA motion input, PhysicsOnly+IE target, residual 52+1 features, MSE, optimizer, epochs, utility, candidate search",
+    "probe": "same prior nested root-heldout scalar mu_hat recipe; no rich trace/latent/sigma/GT friction controller input"
+  },
+  "outer_split": {
+    "folds": [
+      {
+        "full_train_branches": 480,
+        "heldout_branches": 240,
+        "heldout_root_pairs": [
+          {
+            "root_id": "pv_train_t0_root00_s5100",
+            "task": 0
+          },
+          {
+            "root_id": "pv_train_t0_root03_s5103",
+            "task": 0
+          },
+          {
+            "root_id": "pv_train_t1_root00_s5100",
+            "task": 1
+          },
+          {
+            "root_id": "pv_train_t1_root03_s5103",
+            "task": 1
+          },
+          {
+            "root_id": "pv_train_t5_root00_s5100",
+            "task": 5
+          },
+          {
+            "root_id": "pv_train_t5_root03_s5103",
+            "task": 5
+          },
+          {
+            "root_id": "pv_train_t6_root00_s5100",
+            "task": 6
+          },
+          {
+            "root_id": "pv_train_t6_root03_s5103",
+            "task": 6
+          }
+        ],
+        "outer_fold": 0,
+        "sparse_train_branches": 240,
+        "train_roots": 16,
+        "validation_roots": 8
+      },
+      {
+        "full_train_branches": 480,
+        "heldout_branches": 240,
+        "heldout_root_pairs": [
+          {
+            "root_id": "pv_train_t0_root01_s5101",
+            "task": 0
+          },
+          {
+            "root_id": "pv_train_t0_root04_s5104",
+            "task": 0
+          },
+          {
+            "root_id": "pv_train_t1_root01_s5101",
+            "task": 1
+          },
+          {
+            "root_id": "pv_train_t1_root04_s5104",
+            "task": 1
+          },
+          {
+            "root_id": "pv_train_t5_root01_s5101",
+            "task": 5
+          },
+          {
+            "root_id": "pv_train_t5_root04_s5104",
+            "task": 5
+          },
+          {
+            "root_id": "pv_train_t6_root01_s5101",
+            "task": 6
+          },
+          {
+            "root_id": "pv_train_t6_root04_s5104",
+            "task": 6
+          }
+        ],
+        "outer_fold": 1,
+        "sparse_train_branches": 240,
+        "train_roots": 16,
+        "validation_roots": 8
+      },
+      {
+        "full_train_branches": 480,
+        "heldout_branches": 240,
+        "heldout_root_pairs": [
+          {
+            "root_id": "pv_train_t0_root02_s5102",
+            "task": 0
+          },
+          {
+            "root_id": "pv_train_t0_root05_s5105",
+            "task": 0
+          },
+          {
+            "root_id": "pv_train_t1_root02_s5102",
+            "task": 1
+          },
+          {
+            "root_id": "pv_train_t1_root05_s5105",
+            "task": 1
+          },
+          {
+            "root_id": "pv_train_t5_root02_s5102",
+            "task": 5
+          },
+          {
+            "root_id": "pv_train_t5_root05_s5105",
+            "task": 5
+          },
+          {
+            "root_id": "pv_train_t6_root02_s5102",
+            "task": 6
+          },
+          {
+            "root_id": "pv_train_t6_root05_s5105",
+            "task": 6
+          }
+        ],
+        "outer_fold": 2,
+        "sparse_train_branches": 240,
+        "train_roots": 16,
+        "validation_roots": 8
+      }
+    ],
+    "group_key": [
+      "task",
+      "root_id"
+    ],
+    "rerandomized": false,
+    "source_definition": "exact ppv.root_folds used by the prior Point-WM experiment",
+    "train_roots_per_task": 4,
+    "validation_roots_per_task": 2
+  },
+  "scientific_question": "Does trajectory-level physical supervision extract more learning signal than terminal success/failure from the same 60 force-conditioned rollouts per task?",
+  "selection": {
+    "canonical_repeat_selected": 1,
+    "group_key": [
+      "outer_fold",
+      "task",
+      "root_id",
+      "context_id",
+      "force_N"
+    ],
+    "note": "Archive labels repeats as 1/2, not 0/1; deterministic first-repeat fallback therefore selects repeat 1.",
+    "observed_repeat_ids": [
+      1,
+      2
+    ],
+    "ordering": [
+      "numeric repeat ascending",
+      "branch_id lexicographic ascending"
+    ],
+    "outcome_columns_read_for_selection": [],
+    "performance_or_model_columns_read_for_selection": [],
+    "rule": "keep the first archived repeat in every friction x force cell",
+    "selected_csv": "SPARSE60_SELECTED_BRANCHES.csv",
+    "selected_csv_sha256": "6c2efb90811a18635ee8f09c9eff873723e4efcfe7f8c2ac0231e4ad8ca22eb8"
+  },
+  "source_hashes": {
+    "prior_prepared_npz": "5f506a774ecec5d9e7c61e40c9eb9b4736d6aee06971d4fcd635debb32d5a98f",
+    "prior_probe_predictions": "e31ff91293f37c3323e268eb8a198f6323c5b1a1c44a42941543219a5e734a68",
+    "prior_shards_sha256_manifest": "992e3b7902726cd43b0ff4b336ae9dbe7e7c0eee0482d76a6991a7ee57065185",
+    "runner": "07968c2e06333270e3cb205243cab9c59e96f18c12f26e4fe62210f3e293cf05"
+  },
+  "status": "HASH_FROZEN_BEFORE_SPARSE60_MODEL_TRAINING",
+  "task1_label_caveat": "MATERIAL_RECONSTRUCTED_LABEL_CAVEAT"
+}

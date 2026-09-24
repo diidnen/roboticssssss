@@ -1,0 +1,74 @@
+{
+  "FINAL_METHOD_VERSION": "ACTIVEFORCING_FULL_CLAIM_V2_UTILITY",
+  "status": "AUTHORITATIVE",
+  "frozen_utc": "2026-09-02T04:50:06Z",
+  "git_baselines": {
+    "FORTE": "7f88d0184c1617ed95e67502da96e60be07b3689",
+    "Tabero": "80ab3be09ce884f86cfc2037d3af30bc28061426"
+  },
+  "flags": {
+    "FINAL_FORCE_SELECTOR": "EXPECTED_UTILITY",
+    "HARD_RHO_RUNTIME_SELECTOR": "DEPRECATED",
+    "MASS": "REQUIRED",
+    "JOINT_FRICTION_MASS": "REQUIRED",
+    "DECISION_AWARE_REQUERY": "REQUIRED",
+    "POSTERIOR_CONTINUOUS_PLANNING": "REQUIRED",
+    "OLD_JOINT_NEURAL_ARCHITECTURE": "REJECTED"
+  },
+  "pi0_backend_rule": "Frozen authoritative pi0 supplies nominal task execution; selected force is passed only as a low-level setpoint",
+  "query": {
+    "primitive": "P4-B",
+    "semantics": "short active physical query",
+    "information_control": "QUERY-IGNORED and ACTIVE QUERY share initial state, P4-B action, duration, and physical transition; only evidence availability differs"
+  },
+  "belief": {
+    "form": "probabilistic b_phi(z|Dq)",
+    "allowed_hidden_physics": ["friction", "mass", "friction_x_mass"],
+    "posterior_required_for_final_ablation": true
+  },
+  "direct": {
+    "semantics": "Shared Direct full-task feasibility p_D(y_task=1|x,z,F)",
+    "local_lift_is_not_primary": true
+  },
+  "utility": {
+    "equation": "U(F|z,x)=p_D(success|x,z,F)*R_succ(F)+(1-p_D(success|x,z,F))*R_fail",
+    "R_succ": "(Fmax_task-F)/Fmax_task",
+    "R_fail": -1.0,
+    "task_Fmax_N": {"0": 5.0, "1": 6.0, "5": 5.0, "6": 4.0},
+    "point_rule": "argmax_F U(F|z_hat,x)",
+    "posterior_rule": "argmax_F E_{z~b_phi(z|Dq)}[U(F|z,x)]",
+    "tie_break": "lower_force",
+    "authoritative_config_source": "/home/exouser/FORTE/activeforcing_residual_utility_20260901_055605/RESIDUAL_UTILITY_DEVELOPMENT_PROTOCOL.json",
+    "authoritative_config_sha256": "f697eaa902559fffabaf77a7aa8cb2e8c319007162896a9b5b6a67b22c3857d7",
+    "implementation_source": "/home/exouser/FORTE/run_residual_utility.py",
+    "implementation_sha256": "6da4acaa935de7a9a938ac92b56d88b07e34bf93e9614d8458467383e9f28929"
+  },
+  "requery": {
+    "rule": "ensemble disagreement over induced utility-optimal forces",
+    "required_arms": ["ONE_QUERY", "ALWAYS_TWO_QUERIES", "RAW_UNCERTAINTY_THRESHOLD", "DECISION_AWARE_UTILITY_CONSENSUS", "ORACLE_REQUERY_DIAGNOSTIC"]
+  },
+  "continuous_planning": {
+    "objective": "argmax_F E_z[U(F|z)]",
+    "candidate_generators": ["FROZEN_GRID", "DENSE_DETERMINISTIC_REFERENCE", "UNIFORM_CONTINUOUS", "STRATIFIED_CONTINUOUS", "PROPOSAL_GUIDED_POSTERIOR_AWARE_CONTINUOUS"],
+    "matched_candidate_budget_K": true,
+    "actual_off_grid_execution_required": true,
+    "nearest_grid_replay": "FORBIDDEN"
+  },
+  "evaluation_frontier": {
+    "runtime_input": false,
+    "allowed_uses": ["under_force", "excess_force", "empirical_frontier", "frontier_regret"]
+  },
+  "split_discipline": {
+    "TRAIN": "fit only",
+    "DEV": "selection, calibration, gates, and repair only",
+    "LOCKED_TEST": "single-pass evaluation after complete freeze",
+    "observed_not_fresh": ["root_scaling task0 roots 5174-5183; 450 TEST branches"]
+  },
+  "deprecated_rules": [
+    "min F subject to predicted success >= rho_sel as final runtime selector",
+    "hard reliability threshold inside final decision-aware re-query",
+    "nearest-grid replay of off-grid proposals",
+    "absolute minimum feasible force guarantee"
+  ],
+  "required_ablations": ["FIXED_MAX", "SUCCESS_ONLY_DIRECT", "FULL_EXPECTED_UTILITY_DIRECT", "POINT_VS_POSTERIOR_UTILITY", "QUERY_IGNORED_VS_ACTIVE_QUERY"]
+}

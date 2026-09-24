@@ -1,0 +1,31 @@
+{
+  "status": "COMPLETED",
+  "task": 0,
+  "object": "alphabet_soup_1",
+  "query": "P4B_frozen_contact_conditioned_shear",
+  "friction": 0.5,
+  "mass_bands_kg": {
+    "LOW": 0.05,
+    "MID": 0.1,
+    "HIGH": 0.2
+  },
+  "development_roots": [
+    6100,
+    6101,
+    6102,
+    6103,
+    6104,
+    6105
+  ],
+  "heldout_roots": [
+    6200,
+    6201
+  ],
+  "downstream_outcomes_read": false,
+  "mass_setting": "absolute mass with inertia scaled by same ratio after reset",
+  "completed_trials": 24,
+  "dt_s": 0.05,
+  "nominal_mass_kg": 0.10000000149011612,
+  "episode_rows": 24,
+  "timestep_rows": 4944
+}

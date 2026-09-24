@@ -1,0 +1,92 @@
+{
+  "audit_reference_summary": {},
+  "created_at_utc": "2026-08-28T16:17:59.215866+00:00",
+  "execution_order": [
+    10100,
+    10112,
+    10116,
+    10103,
+    10111,
+    10113,
+    10117,
+    10104,
+    10114,
+    10118,
+    10105,
+    10115,
+    10119,
+    10106,
+    10101,
+    10107,
+    10108,
+    10102,
+    10109,
+    10110
+  ],
+  "friction_stratum": 2,
+  "frozen_inputs": {
+    "audit_protocol": "/home/exouser/Tabero/analysis/results/p7b_root_interleaved_availability_audit_20260828_050000/IMMUTABLE_AUDIT_PROTOCOL_IMMUTABLE_COPY.json",
+    "audit_protocol_sha256": "5294bd483e54c557b71925417490e08a69a4855af732986e953ace236cdb1830",
+    "collector": "/home/exouser/Tabero/analysis/p7b_gnp_physical_belief_force_planning.py",
+    "collector_sha256": "2ef853b3d3a4ad4d1642332841dc5deb3daed71a7ca2ae8cb8d588668ec28337",
+    "p7b_protocol": "/home/exouser/Tabero/analysis/results/p7b_scientific_main_20260827_234017/P7B_PROTOCOL_IMMUTABLE_COPY.json",
+    "p7b_protocol_sha256": "7cbdd36a600204e06ddc635f68563731445756e2e24cd5e14712036a39a3941a"
+  },
+  "gate_criteria": {
+    "bilateral_contact": 1,
+    "dropped": 0,
+    "physical_response_recorded": 1,
+    "preprobe_normalization_valid": 1,
+    "probe_completed": 1,
+    "probe_entered": 1,
+    "return_valid": 1
+  },
+  "normalization": {
+    "commands_or_probe_excitation": "none",
+    "operations": [
+      "env.sim.forward()",
+      "TerminationManager.reset(env_ids)",
+      "clear only cached _term_dones/_terminated_buf/_truncated_buf for env_ids",
+      "recompute all configured termination terms",
+      "verify live object root height >= -0.05 m and cached object_1_dropped is false"
+    ],
+    "outcome_or_root_specific_tuning": "none",
+    "version": "successor_preprobe_manager_refresh_v1",
+    "where": "after fixed staging, immediately before frozen P4-B query entry"
+  },
+  "object": "cream_cheese_1",
+  "root_classes": {
+    "dev": [
+      10112,
+      10113,
+      10114,
+      10115
+    ],
+    "partial_train": [
+      10103,
+      10104,
+      10105,
+      10106,
+      10107,
+      10108,
+      10109
+    ],
+    "strong_train": [
+      10100
+    ],
+    "test": [
+      10116,
+      10117,
+      10118,
+      10119
+    ],
+    "zero_success_train": [
+      10110,
+      10111
+    ]
+  },
+  "root_split_rule": "10100-10111 TRAIN; 10112-10115 DEV; 10116-10119 TEST",
+  "scientific_parent": "P7-B frozen result; read-only",
+  "status": "FROZEN_SUCCESSOR_GATE_1_2_PROTOCOL",
+  "task": 1
+}

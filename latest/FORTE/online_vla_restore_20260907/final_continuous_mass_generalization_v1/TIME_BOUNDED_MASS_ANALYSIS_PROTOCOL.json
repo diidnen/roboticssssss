@@ -1,0 +1,47 @@
+{
+  "schema": "TIME_BOUNDED_MASS_ANALYSIS_PROTOCOL_V1",
+  "status": "FROZEN_BEFORE_MODEL_TRAINING_OR_HELDOUT_OUTCOME_ACCESS",
+  "primary_denominator": "Exactly the 216 jobs in TIME_BOUNDED_MASS_SUBSET_V1.json",
+  "auxiliary_intermediate_forces": "Preserved but excluded from all primary metrics and claim decisions",
+  "metrics": [
+    "NLL",
+    "Brier",
+    "AUROC",
+    "AUPRC",
+    "ECE_10bin",
+    "full-task success rate by task, mass, and force",
+    "posterior predicted p_success by task, mass, and force",
+    "mean predicted p_success(5N)-p_success(3N)"
+  ],
+  "checkpoint_selection": "Minimum VAL posterior NLL per frozen seed; TRAIN and VAL only",
+  "preheldout_validation_gate": {
+    "VAL_NLL_better_than_VAL_prevalence": true,
+    "VAL_AUROC_min_if_defined": 0.6,
+    "mean_predicted_p5_minus_p3_min": 0.0,
+    "known_label_fraction": 1.0
+  },
+  "heldout_qualification_gate": {
+    "HELDOUT_NLL_better_than_HELDOUT_prevalence": true,
+    "HELDOUT_AUROC_min_if_defined": 0.6,
+    "mean_predicted_p5_minus_p3_min": 0.0,
+    "known_label_fraction": 1.0
+  },
+  "claim_status_vocabulary": [
+    "SUPPORTED",
+    "MIXED",
+    "NOT_SUPPORTED",
+    "NOT_TESTED",
+    "LIMITED_BY_COARSE_GRID"
+  ],
+  "claim_rules": {
+    "COARSE_MASS_CONDITIONED_FEASIBILITY": "SUPPORTED only if frozen model qualification passes and heldout predictions or outcomes vary informatively with mass; MIXED for inconsistent task cuts; NOT_SUPPORTED if qualification fails.",
+    "COARSE_ADAPTIVE_FORCE_ALLOCATION": "SUPPORTED only if heldout mean predicted p5-p3 is nonnegative and model qualification passes; MIXED if aggregate sign passes but task cuts conflict.",
+    "FINE_FORCE_CALIBRATION": "NOT_TESTED",
+    "CONTINUOUS_FORCE_RESPONSE": "LIMITED_BY_COARSE_GRID",
+    "ARBITRARY_CONTINUOUS_MASS_GENERALIZATION": "NOT_TESTED",
+    "ONLINE_VLA_TRANSFER": "NOT_TESTED unless a separate development-only online qualification is completed under this reduced checkpoint."
+  },
+  "heldout_access": "Exactly once after checkpoint selection lock and evaluator hash freeze",
+  "result_driven_reruns": 0,
+  "automatic_expansion_to_648": false
+}

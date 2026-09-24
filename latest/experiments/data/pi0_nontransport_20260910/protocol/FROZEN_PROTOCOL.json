@@ -1,0 +1,23 @@
+{
+  "frozen_utc": "2026-09-10T10:16:00Z",
+  "purpose": "Small same-init physics robustness/contact-demand smoke after archived-contact audit; it is not ActiveForcing adaptation evidence.",
+  "checkpoint": {
+    "config": "pi0_libero",
+    "path": "/media/volume/newdata/exouser/pi0_libero_activeforcing_20260910/pi0_libero",
+    "tree_sha256": "92b4ac0c5ed929c81677b750fd13b93aa1d30d1fed50fef06a3143dfda9df103",
+    "policy": "online frozen websocket pi0_libero, no training, tuning, scripted action, replay, or gripper override"
+  },
+  "accounting": {"already_launched": 3, "new_policy_rollouts": 3, "planned_total": 6, "cap": 24, "sequential": true, "latest_launch_utc": "2026-09-10T15:00:00Z"},
+  "matched_baselines": [
+    {"task_id": 0, "init_index": 0, "receipt": "/home/exouser/Tabero/analysis/results/pi0_nontransport_20260910/rollouts/task0_init0_native_pi0_libero/receipt.json"},
+    {"task_id": 5, "init_index": 0, "receipt": "/home/exouser/Tabero/analysis/results/pi0_nontransport_20260910/rollouts/task5_init0_native_pi0_libero/receipt.json"},
+    {"task_id": 7, "init_index": 0, "receipt": "/home/exouser/Tabero/analysis/results/pi0_nontransport_20260910/rollouts/task7_init0_native_pi0_libero/receipt.json"}
+  ],
+  "interventions": [
+    {"task_id": 0, "init_index": 0, "property": "model.geom_friction[wooden_cabinet_1_g22]", "before": [0.95,0.3,0.1], "after": [0.2,0.3,0.1], "rationale": "observed middle-drawer handle/body contact; no squeeze intervention because gripper command is not interceptable as a measured force interface."},
+    {"task_id": 5, "init_index": 0, "property": "model.geom_friction[table_collision]", "before": [1.0,0.005,0.0001], "after": [2.0,0.005,0.0001], "rationale": "single table-side friction property affecting observed plate/table sliding; robustness/contact-demand smoke only."},
+    {"task_id": 7, "init_index": 0, "property": "model.dof_damping[flat_stove_1_button]", "before": 1.0, "after": 5.0, "rationale": "single constrained-knob hinge damping property; no torque/contact-force interface exists."}
+  ],
+  "native_success": "env.step done flag plus final env.check_success()",
+  "claim_boundary": "A changed-physics rollout cannot establish generalized contact-force adaptation."
+}

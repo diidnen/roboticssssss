@@ -1,0 +1,41 @@
+{
+  "gate": "A3_ONLINE_PAIR",
+  "version": "v1_frozen_before_outcomes",
+  "suite": "libero_goal",
+  "task_id": 5,
+  "root": 0,
+  "table_slide_friction": 1.2,
+  "table_torsional_friction": 0.005,
+  "table_rolling_friction": 0.0001,
+  "policy_seed": 1000,
+  "policy_port": 8015,
+  "policy_chunk_execution_length": 5,
+  "stabilization_steps": 10,
+  "maximum_steps": 310,
+  "hybrid_target_n": 20.5,
+  "direction_rule": "fresh pi0 chunk at third consecutive pre-step robot-plate contact; median XY of first 15 actions with XY norm >= 0.01",
+  "causal_rule": "direction-establishing action is untouched; intervention at k uses only completed post-step k-1 contact force",
+  "controller": {
+    "ema_alpha": 0.5,
+    "kp": 0.5,
+    "ki": 0.05,
+    "ramp_n": 2.0,
+    "integral_cap": 10.0,
+    "axis_command_limits_n": [10.0, 30.0]
+  },
+  "branches": ["untouched", "hybrid"],
+  "pairing_gate": {
+    "compare_through_hybrid_first_intervention_pre_state": true,
+    "qpos_qvel_max_abs_tolerance": 1e-10,
+    "nominal_action_max_abs_tolerance": 1e-8,
+    "image_hash_mismatch_is_diagnostic_not_automatic_failure": true
+  },
+  "pass_gate": {
+    "hybrid_native_success_required": true,
+    "minimum_hybrid_intervention_steps": 3,
+    "finite_torque_required": true,
+    "zero_actuator_clips_required": true,
+    "baseline_outcome_is_descriptive": true
+  },
+  "no_tuning_after_execution": true
+}

@@ -1,0 +1,60 @@
+{
+  "version": "MAXF8_ADDITIONAL_DATA_V1",
+  "created_utc": "2026-09-13T03:59:09.531581+00:00",
+  "root_scope": [
+    200002
+  ],
+  "task": "dump_bin_bigbin",
+  "force_support_N": [
+    0.5,
+    8.0
+  ],
+  "forces_N": [
+    0.5,
+    2.0,
+    4.0,
+    5.0,
+    6.0,
+    6.5,
+    7.0,
+    8.0
+  ],
+  "utility_normalization_N": 8.0,
+  "utility_definition": "p*(maxF-F)/maxF-(1-p)",
+  "reused_formal_data": "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_original_restore_20260912/original_rootlocal_dataset_v3_rim20",
+  "reused_labels": 128,
+  "new_full_groups": 8,
+  "new_downstream_labels": 64,
+  "new_query_only_groups": 16,
+  "query_only_labels_not_counted_as_downstream": true,
+  "query_feature_duplicates": "deduplicate within split for belief; preserve every rollout for feasibility",
+  "split_unit": "friction/query setting; all policy seeds and forces retained in same split",
+  "no_hidden_mu_in_belief_inputs": true,
+  "no_outcome_based_resampling": true,
+  "confirmation": {
+    "root": 200002,
+    "frictions": [
+      0.375,
+      0.525,
+      0.675,
+      0.825
+    ],
+    "new_policy_seeds": [
+      50200002,
+      60200002
+    ],
+    "methods": [
+      "ActiveForcing",
+      "Fixed-1N",
+      "Fixed-3N",
+      "Fixed-5N",
+      "Fixed-6N",
+      "Fixed-8N"
+    ],
+    "rollouts": 48,
+    "new_rollouts_after_training_locks_only": true,
+    "prior_TEST_not_claimed_untouched": true
+  },
+  "runtime_manifest_path": "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_maxf8_20260913/additional_data_v1/RUNTIME_MANIFEST.json",
+  "runtime_manifest_sha256": "01d0289b14b812a4a12455e826a0b213ef4bf4fcdb27717892289b7e137b5034"
+}

@@ -1,0 +1,83 @@
+{
+  "controller": {
+    "deployment_variant": "ActiveForcing-Verifier-MaxFallback executes Fmax after NO_VALID_FORCE but does not call it verifier-safe",
+    "proposal": "ActiveForcing-Direct utility argmax, C_fail=task Fmax",
+    "search": "proposal and ascending higher candidates only; never lower",
+    "strict_exhaustion": "NO_VALID_FORCE",
+    "verifier_interface": "SUCCESS iff logit>0; no probability threshold exposed"
+  },
+  "cv": {
+    "assignment": "within each task, lexicographic root index modulo 4",
+    "folds": 4,
+    "group": "root_id",
+    "same_root_all_branches_repeats_one_fold": true
+  },
+  "ensemble": {
+    "conservative": "3/3 Boolean SUCCESS",
+    "majority": "at least 2/3 Boolean SUCCESS",
+    "sigmoid_averaging": false,
+    "single": "each seed separately then macro mean"
+  },
+  "forbidden_namespaces": [
+    "root_scaling_20260831",
+    "task0_context_sample_complexity_20260831 TEST artifacts"
+  ],
+  "physics_only": {
+    "architecture_inputs_horizon_targets": "same as current",
+    "epochs_seeds_optimizer": "identical current protocol",
+    "forbidden_gradient": "no outcome/full-task success loss",
+    "objective": "Lphysics + 1.0*LIE only"
+  },
+  "population": {
+    "branches": 480,
+    "contexts": 48,
+    "force_cells_per_context": 5,
+    "independent_roots": 22,
+    "repeats_per_cell": 2
+  },
+  "receding_guardrail": "offline data may measure later real-state detection only; full controller SR is NA unless a real mid-episode force-switch execution exists",
+  "scope": "existing pooled fixed-scene TRAIN population with grouped root-heldout CV; old viewed DEV retrospective only; untouched TEST prohibited",
+  "selection": "CV safety-first lexicographic: lowest branch FPR, lowest controller under-force, highest unconditional full-task SR, lowest FNR, lowest mean force; no best-seed selection",
+  "source_hashes": {
+    "/home/exouser/FORTE/fixed_scene_reframing_20260831_174144/FIXED_SCENE_COMMON_DATASET_AUDIT.csv": "e0d994900a38aa93d51675621926650d1beac749998b9233b7e3c39773ad8358",
+    "/home/exouser/FORTE/fixed_scene_reframing_20260831_174144/FIXED_SCENE_DEV_MANIFEST.csv": "72cca84f987c60474d13415de76b3da3c64006fd16dc533c4f1f72fdd0cad996",
+    "/home/exouser/FORTE/fixed_scene_reframing_20260831_174144/FIXED_SCENE_DIRECT_seed0.pt": "2527abd20c8a83d9eb33192be58560bdd80f975ea8f120b3341e52b81efa7d87",
+    "/home/exouser/FORTE/fixed_scene_reframing_20260831_174144/FIXED_SCENE_DIRECT_seed1.pt": "40769c819cef821a72856632382043be00c59653b12eefa0cab969057d49dcea",
+    "/home/exouser/FORTE/fixed_scene_reframing_20260831_174144/FIXED_SCENE_DIRECT_seed2.pt": "24e569e4c68daa5a3fd6f96ed2b3c1a0cbd6859865ff11b3f90e63ee2eb4742d",
+    "/home/exouser/FORTE/fixed_scene_reframing_20260831_174144/FIXED_SCENE_JOINT_seed0.pt": "c6eba1bbffce612a39e532c56cb88a290917e2cbe63587f61f8b091dbd731cd6",
+    "/home/exouser/FORTE/fixed_scene_reframing_20260831_174144/FIXED_SCENE_JOINT_seed1.pt": "e68d9368d735f32ac6c96fe3435d5088ec2eb11dfec36d66d7e773fe68e26a67",
+    "/home/exouser/FORTE/fixed_scene_reframing_20260831_174144/FIXED_SCENE_JOINT_seed2.pt": "4bfc5c5514c2c4349ce565e49dd0d9f5722028bd951c3eaadcf27eb5bfd2a1a6",
+    "/home/exouser/FORTE/fixed_scene_reframing_20260831_174144/FIXED_SCENE_TRAIN_MANIFEST.csv": "481fe0bff5f1748f50e3245f3a6f0c41b79503f2ba66a62cf2d72815eac692af",
+    "/home/exouser/FORTE/gnp_style_continuous.py": "0c919156a9a0dfad5f9b92c0499c17a59e93e2c3dd93acbf19963842d7031259",
+    "/home/exouser/FORTE/train_fixed_scene_exact.py": "a8d3db6cbba8028f040f7cbfb70522831bc99ba7c6e65015ddda81d1ca1cb15c",
+    "/home/exouser/Tabero/analysis/counterfactual_force_world_model.py": "c088369626b2cd783f45f5130d932fd7aba6dcc9e54b3504c1a81b4e4317d560",
+    "/home/exouser/Tabero/analysis/full_task_feasibility_decoder.py": "bf002ca6a5e190f0eff4e0429bd3340f9acfdb4a694dde2528a98581ce8ff83d",
+    "/home/exouser/Tabero/analysis/trajectory_physical_imagination.py": "429761e395e5d6c4f658326e4f5642629eeaaf6498c2217f8f4829695340c2ff"
+  },
+  "status": "FROZEN_BEFORE_VERIFIER_TRAINING",
+  "training": {
+    "batch": 64,
+    "checkpoint": "final epoch",
+    "domain": "predicted trajectory",
+    "epochs": 80,
+    "loss": "unweighted BCEWithLogits",
+    "lr": 0.0008,
+    "optimizer": "AdamW",
+    "probability_calibration": false,
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "target": "real final full-task outcome",
+    "threshold_tuning": false,
+    "weight_decay": 0.0001
+  },
+  "verifiers": {
+    "V0_LINEAR": "summary concat(final,mean,std,max)=52 -> Linear -> logit",
+    "V1_SMALL_MLP": "flatten H8x13=104 -> Linear(104,32) -> GELU -> Linear(32,1)",
+    "V2_TEMPORAL_GRU": "H8x13 -> GRU(hidden=32) -> Linear -> logit",
+    "V3_GRU_CONTEXT": "V2 final hidden + raw candidate force + raw mu + frozen normalized legal nonvisual condition[2:]=52 -> Linear -> logit"
+  },
+  "world_current": "frozen FIXED_SCENE_JOINT physics_state_dict, paired seed"
+}

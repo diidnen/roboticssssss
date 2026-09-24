@@ -1,0 +1,62 @@
+{
+  "architecture_tuning": false,
+  "challenge_evaluation_lock": "no model may query challenge until FORCE_CRITICAL_CHALLENGE_QA.status=PASS_MEMBERSHIP_FROZEN",
+  "control": {
+    "Direct_proposal": "frozen expected-utility argmax; C_fail=task Fmax",
+    "exhaustion": "NO_VALID_FORCE",
+    "fallback_semantics": "execute Fmax; does not call it verifier-safe",
+    "search": "upward-only",
+    "verifier": "SUCCESS iff logit>0"
+  },
+  "definition_sha256": "cabec81a1d099e75bd562d7d42b11b5d96b3b00c0101190ba9c63a7d49c59ba0",
+  "force_grid_tuning": false,
+  "manifest_sha256": "3ee2634d2d5a37522e755428d9364d476c5287f2ddfac5d0ca5abc8fb546e4c0",
+  "method_names": {
+    "extension": "ActiveForcing-PredictiveVerifier",
+    "fallback": "ActiveForcing-Verifier-MaxFallback",
+    "main": "ActiveForcing-Direct"
+  },
+  "methods": [
+    "pi0-Default",
+    "Tabero-Neutral",
+    "Tabero-Oracle-Language [PRIVILEGED ORACLE LANGUAGE]",
+    "FORTE-Reactive [frozen surrogate]",
+    "Fixed-Max",
+    "ActiveForcing-NoProbe",
+    "ActiveForcing-Direct",
+    "ActiveForcing-Direct-GT",
+    "ActiveForcing-PredictiveVerifier",
+    "ActiveForcing-Verifier-MaxFallback"
+  ],
+  "model_tuning": false,
+  "normal_benchmark": "existing authoritative pooled TRAIN population with fully OOF grouped-root shared models for model-backed rows; new matched real rollouts required for pi0/Tabero/FORTE rows",
+  "physics_sources": {
+    "GT": "mu_GT oracle",
+    "NoProbe": [
+      0.3,
+      0.56,
+      0.92
+    ],
+    "Probe": "frozen FRICTION_GRU point estimate"
+  },
+  "probability_threshold_tuning": false,
+  "probe_tuning": false,
+  "source_hashes": {
+    "/home/exouser/FORTE/joint_mechanism_20260831/pooled_matched/POOLED_BASE_seed0.pt": "353e25971646141a0b14ce826f6c771d8fe43fb89a6ef9a0074c62f2e6bb243a",
+    "/home/exouser/FORTE/joint_mechanism_20260831/pooled_matched/POOLED_BASE_seed1.pt": "57f7314172f28ae3c2901f0168d38015b2863a5c162c22fa5cbe2e475dd545c7",
+    "/home/exouser/FORTE/joint_mechanism_20260831/pooled_matched/POOLED_BASE_seed2.pt": "7555268cb0192694b47eca560f103b7e41e888b49b8461a50bdba4e61843a078",
+    "/home/exouser/FORTE/joint_mechanism_20260831/pooled_matched/POOLED_JOINT_NOVISUAL_seed0.pt": "1ad37883026fec86b8e11e7a9c2b6a5b969aa6120fca27d416718f20749f6d97",
+    "/home/exouser/FORTE/joint_mechanism_20260831/pooled_matched/POOLED_JOINT_NOVISUAL_seed1.pt": "19f1aefabf4faca920b0d32db6e1a852643b928f0baceb3e8e0cbd4d43c408f9",
+    "/home/exouser/FORTE/joint_mechanism_20260831/pooled_matched/POOLED_JOINT_NOVISUAL_seed2.pt": "b10c788eaa209c120e8738f2fb8c97b01906f26c3a9ebc9b442c2471b2c5c06a",
+    "/home/exouser/FORTE/pooled_predictive_verifier_20260901_033804/ACTIVEFORCING_POOLED_VERIFIER_FREEZE.json": "bc0f40b6961311feac5c4e69ea1b6ae0dc7e6ae8c92100f73c490725d3e7cb36",
+    "/home/exouser/FORTE/prospective_visual_context_collect.py": "567a34bdae3bca92df7009b39e70a13877652c4a96687dce39708436d3d5e861",
+    "/home/exouser/FORTE/run_pooled_predictive_verifier.py": "eea0784a63c3aa072e9950c9a3739ec950e287ff9f0587b80ea6136cb35c4bb6",
+    "/home/exouser/Tabero/analysis/p5s0c_paired_boundary_probe_value.py": "0c029e02544e7d22fbba6f253e29584db6cf796dfabf471e66f157ac66b283b2",
+    "/home/exouser/Tabero/analysis/results/active_friction_imagination_20260828_211106/FRICTION_GRU.pt": "a6c9d59bfa11c2481b7dca5fec1e41e0b625bbd463ed3fad9e3e4a1cb3eeb6af",
+    "/home/exouser/Tabero/analysis/results/p5s0c_paired_boundary_probe_value_20260824_000542/P5S0C_NORMALIZATION.json": "5743bbbb6495c8c052a663a6dbf1ccf7fb974dc1bbe5c96236220ec4b90ecbd2"
+  },
+  "status": "FROZEN_BEFORE_NEW_CHALLENGE_OUTCOMES",
+  "task_split_tuning": false,
+  "untouched_TEST_read": false,
+  "verifier_threshold_tuning": false
+}

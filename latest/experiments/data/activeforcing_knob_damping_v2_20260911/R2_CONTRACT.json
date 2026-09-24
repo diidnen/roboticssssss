@@ -1,0 +1,16 @@
+{
+  "gate": "KNOB_R2_ROBOT_SIDE_YAW_TORQUE",
+  "source_damping": 256.0,
+  "source_step": 90,
+  "minimum_yaw_torque_grid_nm": [0.0, 2.0, 4.0, 6.0, 8.0, 12.0],
+  "requirements": {
+    "untouched_disabled_exact_parity": true,
+    "knob_qvel_response_nondecreasing": true,
+    "at_least_two_strict_positive_adjacent_responses": true,
+    "finite_torque": true,
+    "zero_actuator_clips": true,
+    "stock_yaw_torque_never_reduced": true
+  },
+  "torque_margin": 0.05,
+  "no_tuning_after_execution": true
+}

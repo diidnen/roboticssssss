@@ -1,0 +1,317 @@
+{
+  "backends": {
+    "FEASIBILITY_ONLY": {
+      "architecture": "authoritative strict preprobe FeasibilityOnly",
+      "checkpoints": [
+        "/home/exouser/Tabero/analysis/results/preprobe_full_task_feasibility_20260830_071139/PREPROBE_FEASIBILITY_seed0.pt",
+        "/home/exouser/Tabero/analysis/results/preprobe_full_task_feasibility_20260830_071139/PREPROBE_FEASIBILITY_seed1.pt",
+        "/home/exouser/Tabero/analysis/results/preprobe_full_task_feasibility_20260830_071139/PREPROBE_FEASIBILITY_seed2.pt"
+      ]
+    },
+    "JOINT": {
+      "alignment_only": true,
+      "architecture": "authoritative L_traj + 1.0 L_IE + 0.3 L_feas, H8",
+      "checkpoints": [
+        "/home/exouser/FORTE/continuous_probe_joint_20260830_110712/STRICT_PREPROBE_JOINT_seed0.pt",
+        "/home/exouser/FORTE/continuous_probe_joint_20260830_110712/STRICT_PREPROBE_JOINT_seed1.pt",
+        "/home/exouser/FORTE/continuous_probe_joint_20260830_110712/STRICT_PREPROBE_JOINT_seed2.pt"
+      ]
+    }
+  },
+  "bootstrap": {
+    "ci": 0.95,
+    "paired_context_samples": 10000,
+    "root_cluster_samples": 10000,
+    "seed": 2026083011
+  },
+  "calibration": {
+    "ensemble": "mean per-seed calibrated probability",
+    "method": "per-seed TRAIN-only isotonic",
+    "threshold": 0.5
+  },
+  "claim_boundary": {
+    "cross_object_generalization": false,
+    "current_object_task_context_conditioned": true,
+    "universal_physics_transfer": false,
+    "unseen_task_generalization": false
+  },
+  "continuous_search": {
+    "dense_0.05N_search": false,
+    "extrapolation": false,
+    "per_context_candidates": "fixed bracket endpoints plus unique 0.25N midpoint",
+    "support_N": [
+      3.0,
+      6.0
+    ]
+  },
+  "created_utc": "2026-08-30T11:19:48.785151+00:00",
+  "dev_context_population": [
+    {
+      "context_id": "p5s0c_dev_t0_r06_s5106_low_mu0.288234",
+      "friction": 0.2882343327859944,
+      "friction_band": "LOW",
+      "historical_F_prev_N": 4.0,
+      "historical_F_star_anchor_N": 4.5,
+      "offgrid_midpoint_N": 4.25,
+      "real_force_grid_N": [
+        4.0,
+        4.25,
+        4.5
+      ],
+      "root_id": "p5s0c_dev_t0_root06_s5106",
+      "seed": 5106,
+      "split": "DEV",
+      "task": 0
+    },
+    {
+      "context_id": "p5s0c_dev_t0_r07_s5107_low_mu0.294781",
+      "friction": 0.2947813460786453,
+      "friction_band": "LOW",
+      "historical_F_prev_N": 4.0,
+      "historical_F_star_anchor_N": 4.5,
+      "offgrid_midpoint_N": 4.25,
+      "real_force_grid_N": [
+        4.0,
+        4.25,
+        4.5
+      ],
+      "root_id": "p5s0c_dev_t0_root07_s5107",
+      "seed": 5107,
+      "split": "DEV",
+      "task": 0
+    },
+    {
+      "context_id": "p5s0c_dev_t1_r06_s5106_low_mu0.262418",
+      "friction": 0.2624184362235552,
+      "friction_band": "LOW",
+      "historical_F_prev_N": 5.0,
+      "historical_F_star_anchor_N": 5.5,
+      "offgrid_midpoint_N": 5.25,
+      "real_force_grid_N": [
+        5.0,
+        5.25,
+        5.5
+      ],
+      "root_id": "p5s0c_dev_t1_root06_s5106",
+      "seed": 5106,
+      "split": "DEV",
+      "task": 1
+    },
+    {
+      "context_id": "p5s0c_dev_t1_r06_s5106_mid_mu0.515227",
+      "friction": 0.5152267522480724,
+      "friction_band": "MID",
+      "historical_F_prev_N": 4.0,
+      "historical_F_star_anchor_N": 4.5,
+      "offgrid_midpoint_N": 4.25,
+      "real_force_grid_N": [
+        4.0,
+        4.25,
+        4.5
+      ],
+      "root_id": "p5s0c_dev_t1_root06_s5106",
+      "seed": 5106,
+      "split": "DEV",
+      "task": 1
+    },
+    {
+      "context_id": "p5s0c_dev_t1_r07_s5107_low_mu0.225573",
+      "friction": 0.2255725764990141,
+      "friction_band": "LOW",
+      "historical_F_prev_N": 5.5,
+      "historical_F_star_anchor_N": 6.0,
+      "offgrid_midpoint_N": 5.75,
+      "real_force_grid_N": [
+        5.5,
+        5.75,
+        6.0
+      ],
+      "root_id": "p5s0c_dev_t1_root07_s5107",
+      "seed": 5107,
+      "split": "DEV",
+      "task": 1
+    },
+    {
+      "context_id": "p5s0c_dev_t1_r07_s5107_mid_mu0.500836",
+      "friction": 0.500835695412869,
+      "friction_band": "MID",
+      "historical_F_prev_N": 4.0,
+      "historical_F_star_anchor_N": 4.5,
+      "offgrid_midpoint_N": 4.25,
+      "real_force_grid_N": [
+        4.0,
+        4.25,
+        4.5
+      ],
+      "root_id": "p5s0c_dev_t1_root07_s5107",
+      "seed": 5107,
+      "split": "DEV",
+      "task": 1
+    },
+    {
+      "context_id": "p5s0c_dev_t5_r06_s5106_low_mu0.283428",
+      "friction": 0.2834278244355604,
+      "friction_band": "LOW",
+      "historical_F_prev_N": 4.0,
+      "historical_F_star_anchor_N": 4.5,
+      "offgrid_midpoint_N": 4.25,
+      "real_force_grid_N": [
+        4.0,
+        4.25,
+        4.5
+      ],
+      "root_id": "p5s0c_dev_t5_root06_s5106",
+      "seed": 5106,
+      "split": "DEV",
+      "task": 5
+    },
+    {
+      "context_id": "p5s0c_dev_t5_r07_s5107_low_mu0.210709",
+      "friction": 0.2107091015129449,
+      "friction_band": "LOW",
+      "historical_F_prev_N": 4.5,
+      "historical_F_star_anchor_N": 5.0,
+      "offgrid_midpoint_N": 4.75,
+      "real_force_grid_N": [
+        4.5,
+        4.75,
+        5.0
+      ],
+      "root_id": "p5s0c_dev_t5_root07_s5107",
+      "seed": 5107,
+      "split": "DEV",
+      "task": 5
+    },
+    {
+      "context_id": "p5s0c_dev_t6_r07_s5107_low_mu0.233902",
+      "friction": 0.2339024543861059,
+      "friction_band": "LOW",
+      "historical_F_prev_N": 3.0,
+      "historical_F_star_anchor_N": 3.5,
+      "offgrid_midpoint_N": 3.25,
+      "real_force_grid_N": [
+        3.0,
+        3.25,
+        3.5
+      ],
+      "root_id": "p5s0c_dev_t6_root07_s5107",
+      "seed": 5107,
+      "split": "DEV",
+      "task": 6
+    }
+  ],
+  "forbidden": [
+    "original TEST",
+    "fresh roots",
+    "fresh final E2E",
+    "when-to-probe",
+    "new world-model architecture",
+    "Q2F retraining",
+    "pi0 modification",
+    "cross-object claim"
+  ],
+  "gt_continuous_gate": {
+    "frontier_mae_max_N": 0.25,
+    "offgrid_probability_mae_max": 0.15,
+    "systematic_nonmonotonic_context_rate_max": 0.1,
+    "under_force_max": 0.1,
+    "valid_frontier_coverage_min": 0.8
+  },
+  "joint_advantage_gate": {
+    "frontier_mae_absolute_improvement_min_N": 0.1,
+    "offgrid_mae_relative_improvement_min": 0.15,
+    "paired_bootstrap_observed_direction_positive": true,
+    "systematic_nonmonotonic_context_rate_max": 0.1,
+    "under_force_not_worse": true
+  },
+  "metrics": [
+    "offgrid probability MAE",
+    "Brier",
+    "force ranking",
+    "local monotonicity",
+    "F*_rho MAE",
+    "under-force",
+    "mean excess force"
+  ],
+  "no_probe_prior": {
+    "aggregation": "mean of frozen per-seed TRAIN-isotonic-calibrated feasibility probabilities over prior mus",
+    "decision_threshold": 0.5,
+    "fit_or_selection_on_current_DEV": false,
+    "source": "/home/exouser/Tabero/analysis/results/probe_informed_imagination_20260829_121500/PROBE_INFORMED_IMAGINATION_PROTOCOL.json",
+    "source_sha256": "20bb24229c4335547873bd4609d983dbfc440c012c34f60eeed29d34c3370899",
+    "values": [
+      0.3,
+      0.56,
+      0.92
+    ]
+  },
+  "probe_estimator": {
+    "path": "/home/exouser/Tabero/analysis/results/active_friction_imagination_20260828_211106/FRICTION_GRU.pt",
+    "retraining": false,
+    "sha256": "a6c9d59bfa11c2481b7dca5fec1e41e0b625bbd463ed3fad9e3e4a1cb3eeb6af"
+  },
+  "probe_gate": {
+    "adaptive_pair_success_not_worse": true,
+    "context_cluster_bootstrap_observed_direction_positive": true,
+    "frontier_mae_improvement_min_N": 0.05,
+    "under_force_not_worse": true
+  },
+  "protocol_name": "CONTINUOUS_PROBE_JOINT_PROTOCOL",
+  "repeated_real_frontier": {
+    "F_star_rho": "lowest tested force with >=4/5 successes",
+    "authoritative_search_conclusion": "No executed, complete repeated-frontier aggregation rule existed; later DEV forensic explicitly recorded none.",
+    "empirically_reliable_success_count_min": 4,
+    "engineering_retry_allowlist": [
+      "simulator crash",
+      "corrupted output",
+      "invalid restore",
+      "infrastructure error"
+    ],
+    "historical_rollouts_reused": 0,
+    "prior_unexecuted_midpoint_rule": "3/3 safe and 0/3 unsafe applied only to one midpoint; not a complete F*_rho rule",
+    "reason_not_reused": "historical branches used post-probe snapshots or a different corrected execution context",
+    "rho": 0.8,
+    "scientific_failures_retried": false,
+    "unstable_rule": "REAL_FRONTIER_UNSTABLE if no tested force is reliable or if a lower force is reliable and a higher force is not reliable",
+    "valid_repeats_per_force": 5
+  },
+  "single_scientific_goal": "validate repeated fine real force frontiers, compare strict-preprobe Feasibility-only versus Joint under GT friction, and conditionally compare frozen Probe versus strict No-Probe",
+  "source_hashes": {
+    "/home/exouser/FORTE/continuous_probe_joint_20260830_110712/STRICT_PREPROBE_JOINT_AUDIT.json": "7a424116b04a93ce722532d9589f2e376731a9eb3c9b129596acb949344e857d",
+    "/home/exouser/FORTE/continuous_probe_joint_20260830_110712/STRICT_PREPROBE_JOINT_CALIBRATION_seed0.json": "43bf88215af15ea5f452f1888b98f6edc8243ac8bbb93f2bb2c3466e819073bd",
+    "/home/exouser/FORTE/continuous_probe_joint_20260830_110712/STRICT_PREPROBE_JOINT_CALIBRATION_seed1.json": "aa64f7030d2a35c44bf1084c18082b82a6659efc1957ace7dd5cb32233e9a58c",
+    "/home/exouser/FORTE/continuous_probe_joint_20260830_110712/STRICT_PREPROBE_JOINT_CALIBRATION_seed2.json": "a49e1df6f9df2ae827d3f8c290ae8ff7a5bdf338b64fda2aeead0a403bcd57fd",
+    "/home/exouser/FORTE/continuous_probe_joint_20260830_110712/STRICT_PREPROBE_JOINT_seed0.pt": "2760745364b1a6d37c7d039debfc47e47a933170afdbbe0f55bb64553b054b0c",
+    "/home/exouser/FORTE/continuous_probe_joint_20260830_110712/STRICT_PREPROBE_JOINT_seed1.pt": "1eb1c7985792aa766009922866dc3e6732493d8099d0e655b2362ae07988e2b8",
+    "/home/exouser/FORTE/continuous_probe_joint_20260830_110712/STRICT_PREPROBE_JOINT_seed2.pt": "dd0bc4226b3e14110101d2ef99092e945f23023b518382b23a248c0ed5fbc7f9",
+    "/home/exouser/Tabero/analysis/full_task_feasibility_decoder.py": "bf002ca6a5e190f0eff4e0429bd3340f9acfdb4a694dde2528a98581ce8ff83d",
+    "/home/exouser/Tabero/analysis/preprobe_full_task_feasibility.py": "12b34cee3c704088e511db1f797eaf17482e425bfe2691454ad7bd5441b5cfdb",
+    "/home/exouser/Tabero/analysis/results/active_friction_imagination_20260828_211106/FRICTION_GRU.pt": "a6c9d59bfa11c2481b7dca5fec1e41e0b625bbd463ed3fad9e3e4a1cb3eeb6af",
+    "/home/exouser/Tabero/analysis/results/active_friction_imagination_20260828_211106/FRICTION_PREDICTIONS.csv": "963f57d41d8c892c879ad88617d70f6731cd5dcb92f8577bfca08749ddcf2c00",
+    "/home/exouser/Tabero/analysis/results/active_probe_necessity_20260830_063435/ACTIVE_PROBE_NECESSITY_PROTOCOL.json": "45ca0f7ba32e824b0a597d5f78a3d74d506b76b51aa195fa5d00893756872d63",
+    "/home/exouser/Tabero/analysis/results/active_probe_necessity_20260830_063435/NO_PROBE_PHYSICS_PRIOR.json": "252a184908da2246849e6100c5ca825fc0995df7e4a6aa99c83e12039b64e51e",
+    "/home/exouser/Tabero/analysis/results/continuous_physics_imagination_20260829_141924/CONTINUOUS_PHYSICS_IMAGINATION_PROTOCOL.json": "6c00dba00d8c9ebfbcb5f0fb5cd331b668cfe594e93cc1626ba56462312caa91",
+    "/home/exouser/Tabero/analysis/results/discrete_boundary_forensic_20260830_072855/FINAL_REPORT.md": "9b6c250bec5fa15638e52e7347700b6bde287e73cfb97a89f5933be8d8ffc5a1",
+    "/home/exouser/Tabero/analysis/results/full_task_feasibility_20260830_012830/FULL_TASK_FEASIBILITY_PROTOCOL.json": "63ba2e0756d4945a3da27a4510957111b2cfe15610577e12b68637a201bc8b1e",
+    "/home/exouser/Tabero/analysis/results/preprobe_full_task_feasibility_20260830_071139/PREPROBE_CALIBRATION_seed0.json": "30c97bd7b3a603aaa9efc14969213844d33c02b199b20af02330edcf70cf394f",
+    "/home/exouser/Tabero/analysis/results/preprobe_full_task_feasibility_20260830_071139/PREPROBE_CALIBRATION_seed1.json": "463d1961b790d47db2b4c54ffca380d46cce8fc061de869f5249f24e848bb9e3",
+    "/home/exouser/Tabero/analysis/results/preprobe_full_task_feasibility_20260830_071139/PREPROBE_CALIBRATION_seed2.json": "cbed4e230f8dd25226d617a4018ada3bec6058e57635ed5ac2ca38a50b42efee",
+    "/home/exouser/Tabero/analysis/results/preprobe_full_task_feasibility_20260830_071139/PREPROBE_FEASIBILITY_seed0.pt": "926eb051eef876bee034c58bc35f93b0bfc9bee79407aacb262ccba1866a220f",
+    "/home/exouser/Tabero/analysis/results/preprobe_full_task_feasibility_20260830_071139/PREPROBE_FEASIBILITY_seed1.pt": "378ac1332734ccf5fcf805be6ab633048f0eb04c76a4da99aec078afa14e2507",
+    "/home/exouser/Tabero/analysis/results/preprobe_full_task_feasibility_20260830_071139/PREPROBE_FEASIBILITY_seed2.pt": "e24f57e98ff46ae6d3c1a07624b93833aef1475732c94ab4f5b133d7ecba6690",
+    "/home/exouser/Tabero/analysis/results/preprobe_full_task_feasibility_20260830_071139/PREPROBE_FULL_TASK_FEASIBILITY_PROTOCOL.json": "a2e1953fca2e3734dfa657d8648947a2af06a6ee060f3bcfeab5fedd62c373fd",
+    "continuous_preprobe_collect.py": "bac5260d86534ec69cf5285f5f06e8809767010f7f5a83fcd9f3c8c35b421d6f"
+  },
+  "status": "FROZEN_BEFORE_NEW_SIMULATOR_OUTCOMES",
+  "stop_rules": [
+    "valid real frontier coverage below 80% => REAL_FINE_FRONTIER_TOO_STOCHASTIC",
+    "GT selected backend gate fail => CONTINUOUS_FEASIBILITY_NOT_YET_VALIDATED",
+    "genuine infrastructure blocker"
+  ],
+  "strict_preprobe_interface": {
+    "branch_collection": "execute frozen probe only to obtain trace, then restore captured strict preprobe snapshot before every nominal branch",
+    "postprobe_state_visible": false,
+    "state": "last stable P4-B hold immediately before probe_out"
+  },
+  "vla_role": "Frozen pi0 supplies task understanding, staging, and nominal H8 motion; it predicts neither friction nor grip force."
+}

@@ -1,0 +1,23 @@
+{
+  "root": 200002,
+  "friction": 0.6,
+  "policy_seed": 30200002,
+  "forces_N": [
+    3.0,
+    3.0,
+    8.0
+  ],
+  "purpose": "preparation-to-original-query-to-frozen-pi0 handoff and paired duplicate3N replay",
+  "source_hashes": {
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_original_restore_20260912/qualify_canonical_ready_online.py": "b40b700007e411a3fe7695c92b9c67dbcb6506fb1e28d01689844410b1ed1cb8",
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_original_restore_20260912/canonical_open_ready_query.py": "a24c5144dc73badd408d99c860ca61c96000a8c58def572417a91ad0c1e84384",
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_original_restore_20260912/trace_original_query_contact.py": "2f99e7ed5a200a92781be85141a63cb7e425bab79e198b344c718fea665aa2dd",
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_original_restore_20260912/run_canonical_ready_online_gate.py": "4c0660803463aec51839288a0d399d1ac18fbb97cdef99f0d408a490583feb2e"
+  },
+  "initialization_evidence_sha256": "dbbffb08280a4f1d87d6ab7c613bbe9b927ec2bd657a2cb0851f135198bacc27",
+  "formal_data_admission": false,
+  "fixed_branch_count": 3,
+  "success_not_required_to_accept_a_valid_negative_outcome": true,
+  "requires_all_terminal_and_duplicate_full_trace_exact": true,
+  "started_utc": "2026-09-12T18:59:16.463099+00:00"
+}

@@ -1,0 +1,29 @@
+{
+  "contexts_per_task": 1,
+  "force_branches_per_context": 2,
+  "forces_N": [
+    3.0,
+    6.0
+  ],
+  "hidden_friction_analysis_only": 0.6443245385975112,
+  "method_change": "NONE",
+  "name": "P5-S0-R1 Four-Task Strict Matched Branching Gate",
+  "no_model_training": true,
+  "probe": "P4-B common contact-frame shear",
+  "process_isolation_fix": "one Isaac worker process per task",
+  "seed": 3000,
+  "task2_used": false,
+  "tasks": [
+    0,
+    1,
+    5,
+    6
+  ],
+  "timeouts_s": {
+    "branch_restore": 20.0,
+    "full_task_rollout": 120.0,
+    "probe": 180.0,
+    "snapshot": 20.0,
+    "worker": 480.0
+  }
+}

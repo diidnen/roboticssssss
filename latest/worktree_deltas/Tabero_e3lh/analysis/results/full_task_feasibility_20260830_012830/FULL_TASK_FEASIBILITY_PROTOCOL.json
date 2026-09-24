@@ -1,0 +1,191 @@
+{
+  "authoritative_inputs_sha256": {
+    "/home/exouser/Tabero/analysis/counterfactual_force_world_model.py": "c088369626b2cd783f45f5130d932fd7aba6dcc9e54b3504c1a81b4e4317d560",
+    "/home/exouser/Tabero/analysis/results/counterfactual_force_world_model_20260829_160000/COUNTERFACTUAL_FORCE_PAIR_AUDIT.json": "89a7641b6e47a3c328d645f75ac7b37b90134f6ff9f1fd9f7328b76790319fe8",
+    "/home/exouser/Tabero/analysis/results/counterfactual_force_world_model_20260829_160000/COUNTERFACTUAL_FORCE_WORLD_MODEL_PROTOCOL.json": "d10d91e95618f42432b39a292ace62115df6189ed0c7577f2b8165ec165f7d09",
+    "/home/exouser/Tabero/analysis/results/counterfactual_force_world_model_20260829_160000/DEV_FAILURE_PRESERVATION.csv": "cd16605dfce05bfe6bf0004e80f9bd5da587587203acae7a53c32ccec57e60cf",
+    "/home/exouser/Tabero/analysis/results/counterfactual_force_world_model_20260829_160000/DEV_SELECTION.json": "dc965f2d05b0924bc1ec504ed9b7fd50fa203913e81af7f51854be24a198eeaa",
+    "/home/exouser/Tabero/analysis/results/counterfactual_force_world_model_20260829_160000/PHYSICS_GRU_FORCE_IE_lambda1.0_seed0.pt": "e6fa4c64317c81db906d9a55ca7168a79cdf37c98b3af4cd2c2980d04f278f2a",
+    "/home/exouser/Tabero/analysis/results/counterfactual_force_world_model_20260829_160000/PHYSICS_GRU_FORCE_IE_lambda1.0_seed1.pt": "ded1b7068e1e7e9db6a41e19ada8a7f3aef65f048fef2ddcf05f21909f91df2b",
+    "/home/exouser/Tabero/analysis/results/counterfactual_force_world_model_20260829_160000/PHYSICS_GRU_FORCE_IE_lambda1.0_seed2.pt": "85d058b3fcda884db1625d280701c6127509627be27ebe760469844fa6a2a94e",
+    "/home/exouser/Tabero/analysis/results/failure_preservation_forensic_20260829_170000/FAILURE_PRESERVATION_FORENSIC_PROTOCOL.json": "367b704c435f82ee40f52bf2a1c2432136c53409f43c664437359e62c4f2d883",
+    "/home/exouser/Tabero/analysis/results/p5s0c_paired_boundary_probe_value_20260824_000542/P5S0C_BRANCH_MANIFEST.csv": "778190f29b9414c7590141c6b07ba1bf29e625a8fd8ccea20559d466480c778a",
+    "/home/exouser/Tabero/analysis/results/p5s0c_paired_boundary_probe_value_20260824_000542/P5S0C_FORCE_MANIFEST.json": "d2a4bd82685f7dcce3c1adb089f8766c4d3d4f81fca06de624e77ac16c7e8f3d",
+    "/home/exouser/Tabero/analysis/results/p5s0c_paired_boundary_probe_value_20260824_000542/P5S0C_SPLIT_MANIFEST.json": "bd1da97d866bea5651dad2a76a75e2a92902b14ad8d5b46163c93d194e9ffa7f",
+    "/home/exouser/Tabero/analysis/results/targeted_direct_event_collection_20260829_193500/DEV_EVENT_GATE.json": "53377bae2b87ef24c4a952df6438c1f8c591afb5cb5db6c77e8d516165b95224",
+    "/home/exouser/Tabero/analysis/results/targeted_direct_event_collection_20260829_193500/DIRECT_EVENT_WORLD_MODEL_PROTOCOL.json": "a72b1e20fa0fbcea725e20413320ed0ea9d1964289bc7716656498eb22ee02d2",
+    "/home/exouser/Tabero/analysis/results/targeted_direct_event_collection_20260829_193500/FINAL_REPORT.md": "c15d37d7523a9f752525a03b6527e92aedc2e1b62f0ddead01d3e17f526a9453",
+    "/home/exouser/Tabero/analysis/trajectory_physical_imagination.py": "429761e395e5d6c4f658326e4f5642629eeaaf6498c2217f8f4829695340c2ff"
+  },
+  "calibration": "independent TRAIN-only isotonic calibration over raw feasibility logits; raw and calibrated DEV both reported",
+  "controller_rule": "minimum tested candidate with calibrated p_success>=0.5; no-valid-force is a decision failure and counted under-force when a real feasible candidate exists",
+  "created_before_new_training_or_dev_results": true,
+  "decision_threshold": 0.5,
+  "dev_gates": {
+    "boundary_exact_min": 0.8,
+    "boundary_ranking_min": 0.8,
+    "dev_auroc_min": 0.8,
+    "fprev_false_safe_max": 0.2,
+    "frontier_exact_min": 0.8,
+    "under_force_max": 0.1
+  },
+  "forbidden": [
+    "TEST",
+    "Probe",
+    "No-physics",
+    "continuous force",
+    "0.25N rollout",
+    "fresh simulator collection",
+    "E2E",
+    "Pi0 modification",
+    "friction-estimator modification"
+  ],
+  "frozen_ie_representation": "final GRU hidden state after H=8 input; chosen before DEV",
+  "ie_retention": {
+    "comparison": "same-seed initialized lambda_IE=1.0 checkpoint on same DEV historical pairs",
+    "max_relative_regression": 0.25
+  },
+  "input_schema": {
+    "condition_dim_54": "force/8, GT mu, current state13, mask13, initial state13, initial mask13",
+    "future_motion": "first H=8 authoritative Cartesian Pi0/controller command sequence",
+    "step_dim_17": "relative command xyz, command delta xyz, 7 phase one-hot, 4 task one-hot over H=8",
+    "terminal_or_future_real_state_input": false
+  },
+  "joint_lambda_selection": "lexicographic DEV priority: minimize F_prev false-safe, maximize boundary ranking, maximize boundary exact, maximize AUROC, minimize trajectory error",
+  "lambda_feas_candidates": [
+    0.1,
+    0.3,
+    1.0
+  ],
+  "meaningful_independent_gain_absolute": 0.05,
+  "new_simulator_rollouts": 0,
+  "optimizer": {
+    "batch_size": 64,
+    "early_stopping": false,
+    "epochs": 80,
+    "fixed_budget": true,
+    "gradient_clip": 1.0,
+    "learning_rate": 0.0008,
+    "name": "AdamW",
+    "weight_decay": 0.0001
+  },
+  "population": {
+    "DEV": {
+      "boundary_fprev_contexts": 13,
+      "boundary_fstar_contexts": 24,
+      "contexts": 24,
+      "failed_branches": 23,
+      "forces_N": [
+        3.0,
+        3.5,
+        4.0,
+        4.5,
+        5.0,
+        5.5,
+        6.0
+      ],
+      "friction_bands": [
+        "HIGH",
+        "LOW",
+        "MID"
+      ],
+      "friction_max": 0.9730036338301252,
+      "friction_min": 0.210448504464096,
+      "root_count": 8,
+      "roots": [
+        "p5s0c_dev_t0_root06_s5106",
+        "p5s0c_dev_t0_root07_s5107",
+        "p5s0c_dev_t1_root06_s5106",
+        "p5s0c_dev_t1_root07_s5107",
+        "p5s0c_dev_t5_root06_s5106",
+        "p5s0c_dev_t5_root07_s5107",
+        "p5s0c_dev_t6_root06_s5106",
+        "p5s0c_dev_t6_root07_s5107"
+      ],
+      "successful_branches": 73,
+      "task_count": 4,
+      "tasks": [
+        0,
+        1,
+        5,
+        6
+      ],
+      "total_branches": 96
+    },
+    "TEST": "forbidden; metadata-only provenance",
+    "TRAIN": {
+      "boundary_fprev_contexts": 40,
+      "boundary_fstar_contexts": 71,
+      "contexts": 72,
+      "failed_branches": 72,
+      "forces_N": [
+        3.0,
+        3.5,
+        4.0,
+        4.5,
+        5.0,
+        5.5,
+        6.0
+      ],
+      "friction_bands": [
+        "HIGH",
+        "LOW",
+        "MID"
+      ],
+      "friction_max": 0.9942547016813208,
+      "friction_min": 0.2115097508855512,
+      "root_count": 24,
+      "roots": [
+        "p5s0c_train_t0_root00_s5100",
+        "p5s0c_train_t0_root01_s5101",
+        "p5s0c_train_t0_root02_s5102",
+        "p5s0c_train_t0_root03_s5103",
+        "p5s0c_train_t0_root04_s5104",
+        "p5s0c_train_t0_root05_s5105",
+        "p5s0c_train_t1_root00_s5100",
+        "p5s0c_train_t1_root01_s5101",
+        "p5s0c_train_t1_root02_s5102",
+        "p5s0c_train_t1_root03_s5103",
+        "p5s0c_train_t1_root04_s5104",
+        "p5s0c_train_t1_root05_s5105",
+        "p5s0c_train_t5_root00_s5100",
+        "p5s0c_train_t5_root01_s5101",
+        "p5s0c_train_t5_root02_s5102",
+        "p5s0c_train_t5_root03_s5103",
+        "p5s0c_train_t5_root04_s5104",
+        "p5s0c_train_t5_root05_s5105",
+        "p5s0c_train_t6_root00_s5100",
+        "p5s0c_train_t6_root01_s5101",
+        "p5s0c_train_t6_root02_s5102",
+        "p5s0c_train_t6_root03_s5103",
+        "p5s0c_train_t6_root04_s5104",
+        "p5s0c_train_t6_root05_s5105"
+      ],
+      "successful_branches": 216,
+      "task_count": 4,
+      "tasks": [
+        0,
+        1,
+        5,
+        6
+      ],
+      "total_branches": 288
+    },
+    "same_branch_population_all_variants": true
+  },
+  "protocol_name": "FULL_TASK_FEASIBILITY_PROTOCOL",
+  "sampling": "TRAIN-only inverse-frequency sampling over task x friction-band x outcome x exact-boundary-role; F_prev/F_star identity never enters model",
+  "scientific_goal": "compare direct full-task feasibility, frozen IE representation plus feasibility head, and joint IE plus full-task feasibility",
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "source_code": "/home/exouser/Tabero/analysis/full_task_feasibility_decoder.py",
+  "status": "FROZEN_BEFORE_NEW_TRAINING_OR_DEV_PREDICTION",
+  "variants": {
+    "FROZEN_IE_FEAS_HEAD": "authoritative lambda_IE=1.0 Physics-GRU GRU final hidden state; trunk frozen; train MLP feasibility head only",
+    "FULL_TASK_FEAS_ONLY": "GRU(64) command encoder + MLP condition encoder + small MLP feasibility logit; no Physics-GRU rollout",
+    "PHYSICS_GRU_IE_FEAS": "initialize authoritative lambda_IE=1.0 checkpoint; shared GRU(64), H8 trajectory head and feasibility head; L_traj + 1.0 L_IE + lambda_feas L_feas"
+  }
+}

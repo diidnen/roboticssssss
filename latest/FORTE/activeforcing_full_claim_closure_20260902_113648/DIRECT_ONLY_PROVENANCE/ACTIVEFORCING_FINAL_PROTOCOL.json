@@ -1,0 +1,105 @@
+{
+  "additional_task_policy": "recover existing benchmark tasks first; mass/multi-property is optional and not required for core closure",
+  "archive": {
+    "contexts": 72,
+    "root_families": 24,
+    "rows": 720,
+    "sha256": "80bb811e79796a9c292517ae37d2e224710a228ab8afd1e5be38ab9c2e5857c9",
+    "source": "/home/exouser/FORTE/gnp_style_continuous_20260830_125107/CONTINUOUS_TRAIN_SUCCESS_DATA.csv"
+  },
+  "baselines": [
+    "Frozen VLA Default",
+    "Fixed-Max/Fixed-Robust",
+    "Query-Ignored/No-Physical-Information",
+    "ActiveForcing-Direct",
+    "GT-Physics + same Direct + same utility",
+    "Hindsight Grid Oracle (diagnostic only)"
+  ],
+  "core_method": "ACTIVEFORCING_DIRECT",
+  "data_gap_reference": "ACTIVEFORCING_FINAL_DATA_GAPS.json",
+  "direct": {
+    "architecture": "Shared Direct full-task feasibility model; 17-step command + 54D condition",
+    "candidate_grid_N": [
+      3.0,
+      3.25,
+      3.5,
+      3.75,
+      4.0,
+      4.25,
+      4.5,
+      4.75,
+      5.0
+    ],
+    "controller": "selected force only as low-level setpoint; unchanged frozen controller law",
+    "decision": "minimum candidate with ensemble mean p_success >= 0.5",
+    "fallback": "5.00 N when no candidate passes"
+  },
+  "identifier": {
+    "no_ensemble_claim": true,
+    "source": "frozen FRICTION_GRU",
+    "type": "point_estimate",
+    "uncertainty": "diagnostic sigma only"
+  },
+  "labels": {
+    "delayed_failure": "lift_success=1 AND full_task_success=0 AND downstream grip-related failure",
+    "local_lift": "recovered from trajectory phase reaching post-lift transit/placement when available",
+    "primary": "full_task_success_y",
+    "task1": "140/180 reconstructed terminal labels retained and flagged"
+  },
+  "metrics": [
+    "full_task_success_rate",
+    "selected_force_N",
+    "realized_force_N",
+    "under_force_rate",
+    "excess_force_N",
+    "delayed_failure_rate",
+    "failure_stage",
+    "query_count/cost only when semantically valid",
+    "utility/regret diagnostic"
+  ],
+  "query": {
+    "count": 1,
+    "fixed_before_branching": true,
+    "name": "P4-B",
+    "sequence_shape": [
+      215,
+      46
+    ]
+  },
+  "source_freezes": {
+    "pretest_freeze": "/home/exouser/FORTE/hidden_friction_baseline_20260831/ACTIVEFORCING_DIRECT_PRETEST_FREEZE.md",
+    "pretest_freeze_sha256": "e91551ad7ab8ba0054d63d6720a1e256e178fe71cf5796ecf2c36bcce87bfe60",
+    "selector_contract": "/home/exouser/FORTE/hidden_friction_baseline_20260831/ACTIVEFORCING_DIRECT_SELECTOR_CONTRACT.md",
+    "selector_contract_sha256": "286888e807a37df4f8c3e978d77d086d2051ccfc5394d3753385b5629eb7488c"
+  },
+  "split": {
+    "folds": 3,
+    "group": "task-specific root family",
+    "manifest": "ACTIVEFORCING_FINAL_SPLIT_MANIFEST.json",
+    "name": "ROOT_HELDOUT"
+  },
+  "statistics": {
+    "ci": "95% cluster bootstrap",
+    "cluster_unit": "physical root family",
+    "model_selection": "train-only / grouped OOF; no test tuning",
+    "paired_comparison": "same task/root/friction/repeat/initial condition",
+    "seeds": [
+      0,
+      1,
+      2
+    ]
+  },
+  "status": "FROZEN_FOR_CLOSURE",
+  "tasks": [
+    0,
+    1,
+    5,
+    6
+  ],
+  "utility": {
+    "Fmax": "task/archive maximum; frozen Direct runtime uses candidate-grid max",
+    "equation": "U(F|x)=p_success(F|x)*(Fmax-F)/Fmax + (1-p_success(F|x))*(-1)",
+    "future_outcome_access": false,
+    "tie_break": "lower force"
+  }
+}

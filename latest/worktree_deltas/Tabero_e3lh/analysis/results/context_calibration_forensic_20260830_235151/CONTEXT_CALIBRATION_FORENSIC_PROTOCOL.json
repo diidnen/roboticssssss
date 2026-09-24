@@ -1,0 +1,207 @@
+{
+  "authoritative_diagnosis": "MODEL_ERROR_DOMINATES",
+  "authoritative_input_hashes": {
+    "old_normalization": "24d8079a56c02f0b7681ed2c0dad8b21b9d55906885733da032343fe6dfafcd6",
+    "old_predictions": "2218badedc6481a1616339f02316cb230f6ff8e80ca35c71bfcd9222bdb3393c",
+    "old_train_outcomes": "80bb811e79796a9c292517ae37d2e224710a228ab8afd1e5be38ab9c2e5857c9",
+    "previous_forensic": "7d3c48e537b29b402e6ee572b671c35db001f35d944b53d1cbecc514dc2e0dcd"
+  },
+  "calibration": {
+    "application": "frozen map applied to all real benchmark points and every 0.05N dense-grid query before rho threshold",
+    "ensemble_base": "mean over 3 seed sigmoid(logit); clipped then transformed to ensemble log-odds",
+    "families": {
+      "ISOTONIC": "monotone piecewise-constant map of raw ensemble probability; TRAIN only",
+      "PLATT": "sigmoid(a * ensemble_logodds + b), unconstrained a,b; TRAIN BCE",
+      "RAW": "identity",
+      "TEMPERATURE": "sigmoid(ensemble_logodds / T), T>0; TRAIN BCE"
+    },
+    "selection_if_multiple_pass": [
+      "minimum under-force",
+      "minimum frontier MAE",
+      "minimum probability MAE",
+      "minimum excess force",
+      "minimum NLL",
+      "simpler mapping RAW>TEMPERATURE>PLATT>ISOTONIC"
+    ],
+    "training_source": "all 1008 TRAIN Bernoulli branches only"
+  },
+  "claim_boundary": [
+    "current object/task distribution only",
+    "no cross-object claim",
+    "no unseen-task claim"
+  ],
+  "conditional_context_models": {
+    "common_added_representation": "PREPROBE_GRASP_CONTEXT_4D",
+    "epochs": 80,
+    "joint_only_extra_training_signal": "authoritative corrected physical telemetry/objectives",
+    "models": [
+      "CONTEXT_CONTINUOUS_FEAS",
+      "CONTEXT_CONTINUOUS_JOINT"
+    ],
+    "no_new_loss_or_lambda_sweep": true,
+    "run_only_if_oracle_supports": true,
+    "same_train_branches_labels_forces": true,
+    "seeds": [
+      0,
+      1,
+      2
+    ]
+  },
+  "context_forensic": {
+    "oracle": {
+      "architecture": "same FeasibilityOnly hidden sizes; condition input widened only for family one-hot",
+      "dev_mapping": "nearest TRAIN centroid within same task; never uses DEV outcome or DEV/root index as feature",
+      "epochs": 80,
+      "family_definition": "task-specific nearest TRAIN grasp-context centroid; centroids are one per TRAIN (task, root) family computed from preprobe [eef_x,y,z,opening] without labels",
+      "input": "current features plus one-hot family ID",
+      "name": "CONTEXT_ID_ORACLE_DIAGNOSTIC",
+      "seeds": [
+        0,
+        1,
+        2
+      ],
+      "support_threshold": "probability MAE relative reduction >=30% AND frontier/under-force materially improve"
+    },
+    "residual_groups": [
+      "task",
+      "context",
+      "friction_band",
+      "force_region",
+      "preprobe_eef_xyz",
+      "gripper_opening",
+      "nominal_motion_summary"
+    ],
+    "same_mu_force_tolerances": {
+      "force_N_abs": 0.06,
+      "mu_abs": 0.03
+    }
+  },
+  "context_value_test": {
+    "frontier_must_improve": true,
+    "leave_one_context_out_influence_required": true,
+    "probability_mae_relative_improvement_min": 0.2,
+    "under_force_must_not_worsen": true
+  },
+  "created_utc": "2026-08-30T23:53:29.787154+00:00",
+  "current_input_audit_sha256": "70fbfe4f1b0614ab6c0e52ee79680efb5d19ea50c7fa88b9518c05be0ce70b64",
+  "deployment_feature_audit_sha256": "2547176f0e19e6163e083a42b89e6658eeeb2a5f5a04fac7f1c5f7c67eb195fe",
+  "forbidden": [
+    "new force data",
+    "new repeats",
+    "TEST",
+    "fresh E2E",
+    "architecture search",
+    "DEV-fitted calibration",
+    "root/split-ID input"
+  ],
+  "frozen_checkpoints": {
+    "FEASIBILITY_ONLY": [
+      {
+        "path": "/home/exouser/Tabero/analysis/results/gnp_style_continuous_20260830_125107/GNP_STYLE_CONTINUOUS_FEAS_seed0.pt",
+        "seed": 0,
+        "sha256": "920bc6308e997355e39c196afdea9fa65202732c7fc68ea25b2696a48a223b71"
+      },
+      {
+        "path": "/home/exouser/Tabero/analysis/results/gnp_style_continuous_20260830_125107/GNP_STYLE_CONTINUOUS_FEAS_seed1.pt",
+        "seed": 1,
+        "sha256": "5eeaccbf4e9b83019986c55b5c4d48e61d56c4c3744b60e2682d9b20bafb093d"
+      },
+      {
+        "path": "/home/exouser/Tabero/analysis/results/gnp_style_continuous_20260830_125107/GNP_STYLE_CONTINUOUS_FEAS_seed2.pt",
+        "seed": 2,
+        "sha256": "41cf4bdcef697694d046c3ebf1671755c16e4f1d3cc2a44bc633421dc094943f"
+      }
+    ],
+    "JOINT": [
+      {
+        "path": "/home/exouser/Tabero/analysis/results/gnp_style_continuous_20260830_125107/GNP_STYLE_CONTINUOUS_JOINT_seed0.pt",
+        "seed": 0,
+        "sha256": "c0b027badec39251b4ef667b3d5c020ce43db71d007d31406d543e2aa29e7081"
+      },
+      {
+        "path": "/home/exouser/Tabero/analysis/results/gnp_style_continuous_20260830_125107/GNP_STYLE_CONTINUOUS_JOINT_seed1.pt",
+        "seed": 1,
+        "sha256": "8d5173f51acb2f22d70507b477f5c483a8e94619059a99883d722289959cd95f"
+      },
+      {
+        "path": "/home/exouser/Tabero/analysis/results/gnp_style_continuous_20260830_125107/GNP_STYLE_CONTINUOUS_JOINT_seed2.pt",
+        "seed": 2,
+        "sha256": "8e4435ceeb799f5d69e84e26ad2db8495d249485aa7edd41d1e6c6d2cb57f100"
+      }
+    ]
+  },
+  "frozen_dev_benchmark": {
+    "contexts": 9,
+    "files": {
+      "REAL_CONTINUOUS_REPEAT_MANIFEST.csv": {
+        "path": "/home/exouser/Tabero/analysis/results/continuous_probe_joint_20260830_110712/REAL_CONTINUOUS_REPEAT_MANIFEST.csv",
+        "sha256": "507d9e41e3f78bd35e63754aecd3b4f0d306a7d9ee06739d13f7ef6850a79d25"
+      },
+      "REAL_CONTINUOUS_SUCCESS_CURVES.csv": {
+        "path": "/home/exouser/Tabero/analysis/results/continuous_probe_joint_20260830_110712/REAL_CONTINUOUS_SUCCESS_CURVES.csv",
+        "sha256": "5df7447e9aaf96e2b40c17a746e1778c00346904fff5b774f9c5f04a6e10ee7b"
+      },
+      "REAL_FINE_FRONTIER_SUMMARY.csv": {
+        "path": "/home/exouser/Tabero/analysis/results/continuous_probe_joint_20260830_110712/REAL_FINE_FRONTIER_SUMMARY.csv",
+        "sha256": "805892167c452ddb7b216cd836746c6adae466dec3be0f4007a93aaf70e3af0b"
+      }
+    },
+    "real_cells": 27,
+    "repeats_per_cell": 5,
+    "valid_frontiers": 8
+  },
+  "global_calibration_pass": {
+    "finite_decision_coverage_min": 0.8,
+    "frontier_mae_N_max": 0.2,
+    "probability_mae_max": 0.2,
+    "systematic_nonmonotonicity_allowed": false,
+    "under_force_rate_max": 0.1
+  },
+  "gt_gate": {
+    "finite_decision_coverage_min": 0.8,
+    "frontier_mae_N_max": 0.2,
+    "probability_mae_max": 0.2,
+    "query_grid_N": 0.05,
+    "rho": 0.8,
+    "systematic_nonmonotonicity_allowed": false,
+    "under_force_rate_max": 0.1
+  },
+  "joint_value_test": {
+    "frontier_mae_gain_N_min": 0.05,
+    "monotonicity_must_be_acceptable": true,
+    "probability_mae_relative_gain_min": 0.1,
+    "under_force_lower_or_nonworse": true
+  },
+  "probe_gate": {
+    "no_probe": "frozen TRAIN-only friction prior",
+    "no_retraining": true,
+    "probe": "frozen P4-B mu_hat",
+    "run_only_if_gt_passes": true,
+    "same_backend_state_context_grid": true
+  },
+  "protocol_name": "CONTEXT_CALIBRATION_FORENSIC_PROTOCOL",
+  "single_scientific_goal": "Distinguish global probability-scale error from missing deployment-observable context, then conditionally test matched context Feas/Joint and the frozen GT/probe gates.",
+  "source_hashes": {
+    "feas_architecture": {
+      "path": "/home/exouser/Tabero/analysis/full_task_feasibility_decoder.py",
+      "sha256": "bf002ca6a5e190f0eff4e0429bd3340f9acfdb4a694dde2528a98581ce8ff83d"
+    },
+    "gnp_runner": {
+      "path": "/home/exouser/FORTE/gnp_style_continuous.py",
+      "sha256": "0c919156a9a0dfad5f9b92c0499c17a59e93e2c3dd93acbf19963842d7031259"
+    },
+    "segment_builder": {
+      "path": "/home/exouser/Tabero/analysis/counterfactual_force_world_model.py",
+      "sha256": "c088369626b2cd783f45f5130d932fd7aba6dcc9e54b3504c1a81b4e4317d560"
+    },
+    "strict_interface": {
+      "path": "/home/exouser/Tabero/analysis/preprobe_full_task_feasibility.py",
+      "sha256": "12b34cee3c704088e511db1f797eaf17482e425bfe2691454ad7bd5441b5cfdb"
+    },
+    "trajectory_features": {
+      "path": "/home/exouser/Tabero/analysis/trajectory_physical_imagination.py",
+      "sha256": "429761e395e5d6c4f658326e4f5642629eeaaf6498c2217f8f4829695340c2ff"
+    }
+  },
+  "status": "FROZEN_BEFORE_CELL_LEVEL_RESIDUAL_INSPECTION"
+}

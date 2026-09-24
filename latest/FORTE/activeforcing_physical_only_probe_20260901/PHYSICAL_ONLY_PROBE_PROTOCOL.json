@@ -1,0 +1,163 @@
+{
+  "architecture": {
+    "epochs": 80,
+    "gru": "GRU(16,16)",
+    "heads": [
+      "mu",
+      "logvar"
+    ],
+    "learning_rate": 0.001,
+    "logvar_clamp": [
+      -5.0,
+      1.5
+    ],
+    "loss": "0.5*exp(-s)*(y-mu)^2 + 0.5*s",
+    "optimizer": "AdamW",
+    "projection": "Linear(input_dim,16)+ReLU",
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "weight_decay": 0.0001
+  },
+  "authoritative_population": {
+    "current_common_population": 72,
+    "current_common_root_families": 24,
+    "current_tasks": [
+      0,
+      1,
+      5,
+      6
+    ],
+    "historical_complete_probe_sequences": 144,
+    "historical_root_families": 48,
+    "sequence_shape": [
+      215,
+      46
+    ],
+    "visual_shape": [
+      4096
+    ]
+  },
+  "matched_vision_physical_protocol": {
+    "name": "VisionPhysical-Probe",
+    "physical_dim": 40,
+    "visual_dim": 4096,
+    "visual_normalization": "fit on training contexts only",
+    "visual_repeated_each_timestep": true
+  },
+  "physical_only_protocol": {
+    "channels": [
+      "t_s",
+      "force_target",
+      "measured_squeeze",
+      "target_normal_force",
+      "measured_fn",
+      "measured_ft",
+      "ft_over_fn",
+      "left_fx",
+      "left_fy",
+      "left_fz",
+      "right_fx",
+      "right_fy",
+      "right_fz",
+      "force_imbalance",
+      "force_imbalance_ratio",
+      "gripper_opening",
+      "commanded_tangent_increment_mm",
+      "accumulated_displacement_mm",
+      "marker_motion",
+      "marker_tangential",
+      "marker_velocity",
+      "marker_loading_unloading",
+      "contact_left",
+      "contact_right",
+      "tactile_ok",
+      "eef_dx",
+      "eef_dy",
+      "eef_dz",
+      "phase=approach",
+      "phase=close",
+      "phase=descend",
+      "phase=hold",
+      "phase=probe_back",
+      "phase=probe_hold",
+      "phase=probe_out",
+      "contact_state=bilateral",
+      "contact_state=none",
+      "contact_state=unilateral",
+      "probe_phase_unknown",
+      "contact_state_unknown"
+    ],
+    "deployability_note": "main model includes only channels emitted in the live fixed-probe telemetry interface; hardware sensor parity is a deployment prerequisite",
+    "dimensions": 40,
+    "forbidden": [
+      "RGB",
+      "visual_embedding",
+      "object_category",
+      "object_id",
+      "task_one_hot",
+      "language",
+      "task_id",
+      "GT_friction",
+      "root_id",
+      "simulator_seed",
+      "privileged_object_pose"
+    ],
+    "input": "{physical_o_t, probe_a_t}_{t=1:T}",
+    "name": "PhysicalOnly-Probe",
+    "privileged_fields_excluded": [
+      "friction",
+      "hidden_friction_analysis_only",
+      "object_x_priv",
+      "object_y_priv",
+      "object_z_priv",
+      "object_qw_priv",
+      "object_qx_priv",
+      "object_qy_priv",
+      "object_qz_priv",
+      "future_branch_telemetry",
+      "measured_branch_force",
+      "full_task_success_y",
+      "contact_normal_x",
+      "contact_normal_y",
+      "contact_normal_z",
+      "contact_tangent_x",
+      "contact_tangent_y",
+      "contact_tangent_z"
+    ]
+  },
+  "privileged_physical_only_diagnostic": {
+    "channels": [
+      "contact_normal_x",
+      "contact_normal_y",
+      "contact_normal_z",
+      "contact_tangent_x",
+      "contact_tangent_y",
+      "contact_tangent_z"
+    ],
+    "reason": "simulator geometry channels are not deployable without a privileged state interface",
+    "status": "NOT_RUN"
+  },
+  "scientific_question": "physical-history friction estimation versus matched visual+physical estimation",
+  "second_query_status": "SECOND_QUERY_NOT_EVALUATED_NO_ARCHIVED_REPEAT",
+  "simulator_rollouts_launched": 0,
+  "sources": {
+    "current_context_manifest": "/home/exouser/Tabero/analysis/results/gnp_style_visual_context_prospective_20260831_011000/PROSPECTIVE_CONTEXT_MANIFEST.csv",
+    "current_context_manifest_sha256": "2d167a1bb8618fb0e5a8dea7794a43279fb70f48a5e983b778da92ea51a78924",
+    "p5_feature_source": "/home/exouser/Tabero/analysis/p5s0c_model_adjudication.py",
+    "p5_feature_source_sha256": "ecf5a57c9bffb313fd3df94bef26d1579754836f26fa154538bff7acf6e7ea9f",
+    "p5_normalization": "/home/exouser/Tabero/analysis/results/p5s0c_paired_boundary_probe_value_20260824_000542/P5S0C_NORMALIZATION.json",
+    "p5_normalization_sha256": "5743bbbb6495c8c052a663a6dbf1ccf7fb974dc1bbe5c96236220ec4b90ecbd2",
+    "visual_manifest": "/home/exouser/Tabero/analysis/results/gnp_style_visual_context_prospective_20260831_011000/PROSPECTIVE_VISUAL_ALIGNMENT_MANIFEST.csv",
+    "visual_manifest_sha256": "efac28525279be9931ace20790075da974ee5d0eed4f25d625b6dac64cce9ddd"
+  },
+  "splits": {
+    "normalization": "per-fold training-only physical and visual mean/std",
+    "root_heldout": "3 deterministic grouped root folds",
+    "task_loto": "source three tasks, target held-out task; target friction labels never used for estimator training"
+  },
+  "status": "HASH_FROZEN_BEFORE_MODEL_TRAINING",
+  "timestamp_utc": "2026-09-01T18:14:33.435169+00:00"
+}

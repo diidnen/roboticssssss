@@ -1,0 +1,16 @@
+{
+  "gate": "V6_R2_MINIMUM_FORCE_INTERFACE",
+  "source": "V5 immutable V2 zero-residual pi0 trajectory",
+  "steps": [55, 57],
+  "minimum_force_grid_n": [10.0, 15.0, 20.0, 25.0, 30.0],
+  "requirements": {
+    "untouched_disabled_exact_state_parity": true,
+    "response_nondecreasing_at_each_step": true,
+    "at_least_two_strict_positive_adjacent_responses_at_each_step": true,
+    "finite_torque": true,
+    "zero_actuator_clips": true,
+    "stock_force_is_never_reduced": true
+  },
+  "torque_margin": 0.05,
+  "no_tuning_after_execution": true
+}

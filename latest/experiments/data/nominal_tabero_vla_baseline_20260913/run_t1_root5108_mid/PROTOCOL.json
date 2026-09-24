@@ -1,0 +1,19 @@
+{
+  "activeforcing": false,
+  "checkpoint": "/media/volume/newdata/exouser/tabero/models/pi0_lora_tacfield_tabero/checkpoints/pi0_lora_tacfield_tabero/pi0_lora_tacfield_tabero/49999",
+  "checkpoint_sha256": "0598a390733235fde0bf5633b1543d91176d31bb5012d4d26f9373a90642fe17",
+  "commanded_force_N": null,
+  "created_utc": "2026-09-13T14:18:33Z",
+  "force_or_gripper_override": false,
+  "friction": 0.5077986605848918,
+  "horizon": 350,
+  "method": "Nominal Frozen VLA / Native VLA",
+  "policy_config": "pi0_lora_tacfield_tabero",
+  "probe": false,
+  "prompt": "pick up the cream cheese and place it in the basket",
+  "replan_steps": 10,
+  "root_seed": 5108,
+  "submitted_action": "raw postprocessed pi0 action[:, :13], byte-identical float32 copy",
+  "success_rule": "lift_dz>=0.03m and basket_contact>0.05N and no drop",
+  "task": 1
+}

@@ -1,0 +1,100 @@
+{
+  "created_utc": "2026-09-13T11:41:26.426187+00:00",
+  "decision_contexts": 32,
+  "fixed_force_grid_N": [
+    1.0,
+    3.0,
+    5.0,
+    6.0,
+    8.0
+  ],
+  "frictions": [
+    0.375,
+    0.525,
+    0.675,
+    0.825
+  ],
+  "matching": {
+    "only_active_change": "grip-force policy",
+    "same_controller": true,
+    "same_first_action_chunk_discipline": true,
+    "same_friction": true,
+    "same_frozen_pi0": true,
+    "same_object_pose": true,
+    "same_policy_seed": true,
+    "same_reset_state": true,
+    "same_root": true,
+    "same_success_criterion": true
+  },
+  "methods": [
+    "ActiveForcing",
+    "Fixed-1N",
+    "Fixed-3N",
+    "Fixed-5N",
+    "Fixed-6N",
+    "Fixed-8N"
+  ],
+  "model": "AF_original",
+  "models_path": "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_maxf8_20260913/models_v4",
+  "paired_rollouts": 192,
+  "policy_seeds": [
+    160200002,
+    170200002,
+    180200002,
+    190200002,
+    200200002,
+    210200002,
+    220200002,
+    230200002
+  ],
+  "population_rules": {
+    "all_32_contexts_in_denominator": true,
+    "case_studies_separate_from_population_statistics": true,
+    "no_outcome_based_rerun": true,
+    "no_seed_replacement_after_failure": true,
+    "stage_i_seeds_forbidden_from_stage_ii_train_val": true
+  },
+  "precommit_path": "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_motion_diversity_study_20260913/PRECOMMITTED_MOTION_SEEDS.json",
+  "precommit_sha256": "2960fb145d7da73acb1bff6b72dcc1fef87a0fbbb1cf8592ceea7ac86712423b",
+  "root": 200002,
+  "runtime_manifest_path": "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_maxf8_20260913/additional_data_v1/RUNTIME_MANIFEST.json",
+  "runtime_manifest_sha256": "01d0289b14b812a4a12455e826a0b213ef4bf4fcdb27717892289b7e137b5034",
+  "source_hashes": {
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_motion_diversity_study_20260913/analyze_stage_i.py": "e0120d6a99213dc84889daae813e0318247ea331a5af88a9980beb510bb77bbd",
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_motion_diversity_study_20260913/freeze_stage_i.py": "a507e662ae8497ee3bf9b42238bbd236f3b997b34543b1aa3851a365bf2715ba",
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_motion_diversity_study_20260913/run_stage_i.py": "01f52a5fcd9e6d7600025fb00c07c1d7e6994958b722b998236e6439bba10fdc"
+  },
+  "statistics_precommitted": {
+    "bootstrap_replicates": 10000,
+    "bootstrap_seed": 20260913,
+    "bootstrap_unit": "context for nonmonotonic rate; friction-stratified motion resampling for within-friction pairwise landscape statistics",
+    "confidence_interval": "95% percentile",
+    "feasible_set_primary": "successful forces on common fixed grid {1,3,5,6,8}; AF-selected force is reported separately because it is not common across contexts",
+    "force_saving_condition": "AF=1 and Fixed8=1",
+    "nonmonotonic_definition": "exists F1<F2 with y(F1)=1 and y(F2)=0",
+    "paired_AF_Fixed8": [
+      "both_success",
+      "AF_only",
+      "Fixed8_only",
+      "both_failure"
+    ],
+    "set_metrics": [
+      "exact_set_mismatch_rate",
+      "Jaccard_similarity",
+      "Jaccard_distance",
+      "minimum_successful_force_difference",
+      "maximum_successful_force_difference"
+    ]
+  },
+  "storage": {
+    "compact_local_audit_retained": true,
+    "local_capacity_limited": true,
+    "per_context_remote_archive_required": true,
+    "raw_working_copy_may_be_removed_only_after_remote_sha256_and_gzip_test": true,
+    "remote_archive_dir": "/anvil/projects/x-cis250966/tabero-transfer/jetstream-activeforcing-20260912/motion_diversity_20260913/stage_i",
+    "remote_archive_host": "x-csong7@anvil.rcac.purdue.edu"
+  },
+  "task": "dump_bin_bigbin",
+  "training_complete_sha256": "f99f76022919440bc8a05d561996cebd63e332240e161cbf0c9d645a54d6a44a",
+  "version": "MOTION_DIVERSITY_STAGE_I_FROZEN_MODEL_V1"
+}

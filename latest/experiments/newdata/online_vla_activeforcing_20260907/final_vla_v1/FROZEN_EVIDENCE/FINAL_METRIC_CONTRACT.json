@@ -1,0 +1,78 @@
+{
+  "evidence_requirements": [
+    "Every downstream arm action joins to online inference receipt",
+    "Same postprobe state and initial observation/chunk per context",
+    "Matched policy noise seeds across methods",
+    "Original geometric label replay audit",
+    "Causal observable drop/failure-stage audit",
+    "No scripted or replay rollout in final table"
+  ],
+  "main_design": {
+    "contexts_per_method": 48,
+    "fresh_root_groups": 4,
+    "friction_bands": [
+      "LOW",
+      "MID",
+      "HIGH"
+    ],
+    "main_branches": 192,
+    "main_methods": [
+      "FIXED_3",
+      "FIXED_4",
+      "FIXED_5",
+      "ACTIVEFORCING"
+    ],
+    "paired_unit": "context; root is the clustering unit",
+    "tasks": [
+      0,
+      1,
+      5,
+      6
+    ]
+  },
+  "metrics": {
+    "DROP_RATE": {
+      "definition": "Mean of native object-drop terminal OR independently proven persistent pre-release detached-and-fallen event outside target",
+      "denominator": "all48 contexts",
+      "label_preservation": "Does not silently replace the frozen geometric full-task label; any recovered-drop success is explicitly disclosed",
+      "separate_fields": [
+        "NATIVE_DROP_RATE",
+        "MEASURED_PRE_RELEASE_DROP_RATE"
+      ]
+    },
+    "FORCE_SAVING_VS_FIXED5": {
+      "measured_companion": "Report separately with explicit contact/time denominator; do not substitute it for primary saving",
+      "primary_basis": "selected setpoint, never zero force after a drop",
+      "primary_definition": "1 - mean_AF_selected_setpoint / 5",
+      "units": "fraction; multiply100 for percent"
+    },
+    "FULL_TASK_SR": {
+      "definition": "Mean frozen geometric full_task_success_y across all48 prespecified contexts per method",
+      "unknown_policy": "Unknown/corrupt/incomplete evidence blocks final table; never silently drop rows or substitute success/failure"
+    },
+    "LIFT_SR": {
+      "definition": "Mean observed lift>=0.03m above post-probe object height, same48 contexts"
+    },
+    "MEAN_SELECTED_SETPOINT": {
+      "definition": "Unweighted mean of selected scalar grip-force setpoint over48 contexts",
+      "release_zero_included": false,
+      "units": "N"
+    },
+    "MEASURED_BILATERAL_SQUEEZE": {
+      "includes_contact_loss_zero": true,
+      "per_timestep": "2 * min(actual left normal force, actual right normal force)",
+      "primary_aggregation": "Mean per-branch non-release commanded-grasp squeeze, then equal-weight mean across48 contexts",
+      "required_companion": "BILATERAL_CONTACT_CONDITIONAL_SQUEEZE: same branch-balanced mean restricted to both observed normal forces>=0.15N; report qualifying timestep counts and missing branches",
+      "units": "N"
+    }
+  },
+  "parameter_changes": false,
+  "physics_runs_started_by_this_artifact": 0,
+  "status": "FROZEN_BEFORE_FRESH_ROOT_PHYSICS",
+  "uncertainty": {
+    "generalization_limit": "Four fresh root groups; avoid strong population-wide or asymptotic significance claims",
+    "paired_comparison": "Keep methods paired by context and sampling seed; do not treat192 branches as192 independent environments",
+    "root_groups": 4
+  },
+  "version": "FINAL_ONLINE_VLA_METRIC_CONTRACT_V1"
+}

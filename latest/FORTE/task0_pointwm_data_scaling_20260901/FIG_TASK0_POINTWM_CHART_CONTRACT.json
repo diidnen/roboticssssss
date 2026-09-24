@@ -1,0 +1,23 @@
+{
+  "common": {
+    "TEST": "FROZEN HELD-OUT TASK0 TEST",
+    "ensemble": "open markers only",
+    "non_color": "Direct circle/solid; Point-WM square/dashed",
+    "palette": {
+      "Direct": "#4C78A8",
+      "Point-WM": "#E45756"
+    },
+    "primary": "3-seed metric mean with population std",
+    "x": "independent TRAIN roots [6,15,30,50]"
+  },
+  "frontier": {
+    "current_metric": "selected-force MAE to empirical minimum force with >=4/5 successes",
+    "layout": "separate panels because absolute metric levels are not interchangeable",
+    "old_metric": "predicted-threshold frontier MAE"
+  },
+  "gain": {
+    "metric": "Point-WM minus Direct SR",
+    "zero_line": true
+  },
+  "surface": "standalone static PNG/PDF requested by user"
+}

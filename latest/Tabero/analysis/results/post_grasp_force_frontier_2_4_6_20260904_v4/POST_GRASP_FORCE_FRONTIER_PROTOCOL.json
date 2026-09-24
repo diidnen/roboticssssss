@@ -1,0 +1,15 @@
+{
+  "approach_grasp_probe_rerun": false,
+  "continuation": "same frozen VLA action sequence, cursor, phase semantics",
+  "forces_N": [
+    2.0,
+    4.0,
+    6.0
+  ],
+  "only_change": "F_des",
+  "protocol": "RUN SAME-STATE 2N / 4N / 6N POST-GRASP FORCE FRONTIER",
+  "pure_vertical": false,
+  "root": 7400,
+  "snapshot": "Task5_root7400_post_probe_pre_lift_v20",
+  "task": "Task5"
+}

@@ -1,0 +1,350 @@
+{
+  "DEV_context_ids": [
+    "pv_dev_t0_r06_s5106_low_mu0.288234",
+    "pv_dev_t0_r07_s5107_low_mu0.294781"
+  ],
+  "DEV_outcomes_available_at_freeze": false,
+  "DEV_outcomes_read_at_freeze": false,
+  "DEV_root_ids": [
+    "pv_dev_t0_root06_s5106",
+    "pv_dev_t0_root07_s5107"
+  ],
+  "PCA": {
+    "DEV_fit_forbidden": true,
+    "components_shape": [
+      17,
+      4096
+    ],
+    "dimension": 17,
+    "fit_split": "task0 TRAIN only",
+    "path": "/home/exouser/FORTE/task0_visual_context_early_20260831_025000/TASK0_PCA17_PROVISIONAL.npz",
+    "raw_dimension": 4096,
+    "reason_17_not_64": "18 centered task0 TRAIN contexts have rank at most 17; frozen before DEV",
+    "sha256": "2c05afbfe8901ee9ea7e80298af3978f8894099ae67768aebd24cd3cdcc33700"
+  },
+  "TEST_used": false,
+  "TRAIN_context_ids": [
+    "pv_train_t0_r00_s5100_high_mu0.940189",
+    "pv_train_t0_r00_s5100_low_mu0.293710",
+    "pv_train_t0_r00_s5100_mid_mu0.450580",
+    "pv_train_t0_r01_s5101_high_mu0.988466",
+    "pv_train_t0_r01_s5101_low_mu0.255969",
+    "pv_train_t0_r01_s5101_mid_mu0.592177",
+    "pv_train_t0_r02_s5102_high_mu0.974655",
+    "pv_train_t0_r02_s5102_low_mu0.285139",
+    "pv_train_t0_r02_s5102_mid_mu0.571550",
+    "pv_train_t0_r03_s5103_high_mu0.970453",
+    "pv_train_t0_r03_s5103_low_mu0.233498",
+    "pv_train_t0_r03_s5103_mid_mu0.554454",
+    "pv_train_t0_r04_s5104_high_mu0.905657",
+    "pv_train_t0_r04_s5104_low_mu0.298968",
+    "pv_train_t0_r04_s5104_mid_mu0.572072",
+    "pv_train_t0_r05_s5105_high_mu0.913775",
+    "pv_train_t0_r05_s5105_low_mu0.252358",
+    "pv_train_t0_r05_s5105_mid_mu0.529333"
+  ],
+  "TRAIN_root_ids": [
+    "pv_train_t0_root00_s5100",
+    "pv_train_t0_root01_s5101",
+    "pv_train_t0_root02_s5102",
+    "pv_train_t0_root03_s5103",
+    "pv_train_t0_root04_s5104",
+    "pv_train_t0_root05_s5105"
+  ],
+  "architectures": {
+    "PROSPECTIVE_BASE_FEAS": "GRU(17,64)+condition MLP(54,64)+head(128,64,1)",
+    "VISUAL_CONTEXT_FULL_FEAS": "authoritative Base backbone + Linear(17,16) visual projection + fused head(144,64,1)",
+    "VISUAL_CONTEXT_JOINT": "authoritative Physics-GRU(71,64)+H8x13 trajectory head+Linear(17,16) visual feasibility fusion+head(80,32,1)",
+    "VISUAL_INTERCEPT_RESIDUAL": "frozen matched Base logit + Linear(17,1); residual has no F input"
+  },
+  "authoritative_manifest_hashes": {
+    "/home/exouser/Tabero/analysis/results/gnp_style_visual_context_prospective_20260831_011000/PROSPECTIVE_CONTEXT_MANIFEST.csv": "2d167a1bb8618fb0e5a8dea7794a43279fb70f48a5e983b778da92ea51a78924",
+    "/home/exouser/Tabero/analysis/results/gnp_style_visual_context_prospective_20260831_011000/PROSPECTIVE_DEV_TARGET_MANIFEST.json": "922aa7fc80ef4cb227578393595d2712c0092aa210621edb87ff90b3967bb427",
+    "/home/exouser/Tabero/analysis/results/gnp_style_visual_context_prospective_20260831_011000/collection_train/task0/task0/branches.csv": "a01e6bbc64ee0bbe4108f6c7f10df3db2008338d75ec2cad8585f87ab17e0825",
+    "/home/exouser/Tabero/analysis/results/gnp_style_visual_context_prospective_20260831_011000/collection_train/task0/task0/context.csv": "0e1525a3e67d140ba24212e588b4cb759d38e72f39a8476a49b7d3950ca21c40"
+  },
+  "checkpoints": [
+    {
+      "DEV_used": false,
+      "epochs": 80,
+      "model": "PROSPECTIVE_BASE_FEAS",
+      "parameter_tensors": 10,
+      "parameters": 27777,
+      "path": "/home/exouser/FORTE/task0_visual_context_early_20260831_025000/PROSPECTIVE_BASE_FEAS_task0_seed0.pt",
+      "seed": 0,
+      "sha256": "0110d8eeba041ac3bec740a4280e92d6c7e1f302ad5de44daa83382110f32c63"
+    },
+    {
+      "DEV_used": false,
+      "epochs": 80,
+      "model": "PROSPECTIVE_BASE_FEAS",
+      "parameter_tensors": 10,
+      "parameters": 27777,
+      "path": "/home/exouser/FORTE/task0_visual_context_early_20260831_025000/PROSPECTIVE_BASE_FEAS_task0_seed1.pt",
+      "seed": 1,
+      "sha256": "7f0754b8e59774cc7654e0c5cb555f64fced08f9ea12a281b9cd2a8afee7af24"
+    },
+    {
+      "DEV_used": false,
+      "epochs": 80,
+      "model": "PROSPECTIVE_BASE_FEAS",
+      "parameter_tensors": 10,
+      "parameters": 27777,
+      "path": "/home/exouser/FORTE/task0_visual_context_early_20260831_025000/PROSPECTIVE_BASE_FEAS_task0_seed2.pt",
+      "seed": 2,
+      "sha256": "a90d3c7b863a1001b69156300e0a870e89605728a8bfa40ab9a9494a2836e9de"
+    },
+    {
+      "DEV_used": false,
+      "epochs": 80,
+      "model": "VISUAL_INTERCEPT_RESIDUAL",
+      "parameter_tensors": 2,
+      "parameters": 18,
+      "path": "/home/exouser/FORTE/task0_visual_context_early_20260831_025000/VISUAL_INTERCEPT_RESIDUAL_task0_seed0.pt",
+      "seed": 0,
+      "sha256": "6ab979278ff52e54258fa32a254b5b5244752da95135c2c2d037c21f4cf5c307"
+    },
+    {
+      "DEV_used": false,
+      "epochs": 80,
+      "model": "VISUAL_INTERCEPT_RESIDUAL",
+      "parameter_tensors": 2,
+      "parameters": 18,
+      "path": "/home/exouser/FORTE/task0_visual_context_early_20260831_025000/VISUAL_INTERCEPT_RESIDUAL_task0_seed1.pt",
+      "seed": 1,
+      "sha256": "f81b643bfd59d1f7f4fd65e5698814ba60e2bea0f2586fd12f09b89494e7d7a2"
+    },
+    {
+      "DEV_used": false,
+      "epochs": 80,
+      "model": "VISUAL_INTERCEPT_RESIDUAL",
+      "parameter_tensors": 2,
+      "parameters": 18,
+      "path": "/home/exouser/FORTE/task0_visual_context_early_20260831_025000/VISUAL_INTERCEPT_RESIDUAL_task0_seed2.pt",
+      "seed": 2,
+      "sha256": "0010a39efc20690dee45b12553285a15619482ad00c637a1174931ad3147950c"
+    },
+    {
+      "DEV_used": false,
+      "epochs": 80,
+      "model": "VISUAL_CONTEXT_FULL_FEAS",
+      "parameter_tensors": 12,
+      "parameters": 29089,
+      "path": "/home/exouser/FORTE/task0_visual_context_early_20260831_025000/VISUAL_CONTEXT_FULL_FEAS_task0_seed0.pt",
+      "seed": 0,
+      "sha256": "5000e4e0dc8996f7bbf54caaca4124c3f6327e3538f182d200df2e715630c422"
+    },
+    {
+      "DEV_used": false,
+      "epochs": 80,
+      "model": "VISUAL_CONTEXT_FULL_FEAS",
+      "parameter_tensors": 12,
+      "parameters": 29089,
+      "path": "/home/exouser/FORTE/task0_visual_context_early_20260831_025000/VISUAL_CONTEXT_FULL_FEAS_task0_seed1.pt",
+      "seed": 1,
+      "sha256": "c2ddf30ba53e707d7442d37ab56668038e41342e21fa14bcce752367ac608b66"
+    },
+    {
+      "DEV_used": false,
+      "epochs": 80,
+      "model": "VISUAL_CONTEXT_FULL_FEAS",
+      "parameter_tensors": 12,
+      "parameters": 29089,
+      "path": "/home/exouser/FORTE/task0_visual_context_early_20260831_025000/VISUAL_CONTEXT_FULL_FEAS_task0_seed2.pt",
+      "seed": 2,
+      "sha256": "de855b3c3e350deaf1d259c6c6b4b2fb789b41031194136aaf6dac2160197093"
+    },
+    {
+      "DEV_used": false,
+      "epochs": 80,
+      "model": "VISUAL_CONTEXT_JOINT",
+      "parameter_tensors": 14,
+      "parameters": 40137,
+      "path": "/home/exouser/FORTE/task0_visual_context_early_20260831_025000/VISUAL_CONTEXT_JOINT_task0_seed0.pt",
+      "seed": 0,
+      "sha256": "98e88fd9505b70dd25b1f201bfc2e4f62d97b396cb0b400ac616f22b76b06b85"
+    },
+    {
+      "DEV_used": false,
+      "epochs": 80,
+      "model": "VISUAL_CONTEXT_JOINT",
+      "parameter_tensors": 14,
+      "parameters": 40137,
+      "path": "/home/exouser/FORTE/task0_visual_context_early_20260831_025000/VISUAL_CONTEXT_JOINT_task0_seed1.pt",
+      "seed": 1,
+      "sha256": "41a85f3242517849a1c603eeb63089f7b7939e332bef98ce1186ef3d0427b312"
+    },
+    {
+      "DEV_used": false,
+      "epochs": 80,
+      "model": "VISUAL_CONTEXT_JOINT",
+      "parameter_tensors": 14,
+      "parameters": 40137,
+      "path": "/home/exouser/FORTE/task0_visual_context_early_20260831_025000/VISUAL_CONTEXT_JOINT_task0_seed2.pt",
+      "seed": 2,
+      "sha256": "176f573c09d9d33b7f4425b9abad55e611137143ff190a3c8b81057a6fc7cadc"
+    }
+  ],
+  "created_at_utc": "2026-08-31T04:12:33.253092+00:00",
+  "dense_query_grid_N": [
+    3.0,
+    3.05,
+    3.1,
+    3.15,
+    3.2,
+    3.25,
+    3.3,
+    3.35,
+    3.4,
+    3.45,
+    3.5,
+    3.55,
+    3.6,
+    3.65,
+    3.7,
+    3.75,
+    3.8,
+    3.85,
+    3.9,
+    3.95,
+    4.0,
+    4.05,
+    4.1,
+    4.15,
+    4.2,
+    4.25,
+    4.3,
+    4.35,
+    4.4,
+    4.45,
+    4.5,
+    4.55,
+    4.6,
+    4.65,
+    4.7,
+    4.75,
+    4.8,
+    4.85,
+    4.9,
+    4.95,
+    5.0
+  ],
+  "final_epoch": 80,
+  "loss_weights": {
+    "lambda_IE": 1.0,
+    "lambda_feasibility": 0.3,
+    "lambda_physics": 1.0
+  },
+  "metrics": {
+    "force_shape": [
+      "Spearman",
+      "adjacent_ordering",
+      "nonmonotonic_steps",
+      "context_monotonicity",
+      "safe_to_unsafe_reversals"
+    ],
+    "frontier": [
+      "finite_coverage",
+      "MAE",
+      "under_force_rate",
+      "under_force_magnitude",
+      "excess_force",
+      "within_0.25N",
+      "within_0.50N"
+    ],
+    "probability": [
+      "MAE",
+      "Brier",
+      "NLL",
+      "signed_bias",
+      "calibration_intercept",
+      "calibration_slope",
+      "per_context_MAE",
+      "seed_variation"
+    ]
+  },
+  "optional_CV": {
+    "PCA_rule": "fit within fold TRAIN only, preserve 17-D architecture by zero-padding rank-limited components",
+    "design": "3 folds; hold out two entire TRAIN roots (six contexts) per fold; one fixed seed; architectures/hyperparameters unchanged",
+    "known_DEV_context_count_at_freeze": 2,
+    "primary_result": false,
+    "trigger": "task0 DEV too small or ambiguous"
+  },
+  "real_force_grid_N": [
+    3.0,
+    3.25,
+    3.5,
+    3.75,
+    4.0,
+    4.25,
+    4.5,
+    4.75,
+    5.0
+  ],
+  "rho": 0.8,
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "single_scientific_goal": "distinguish held-out task0 visual generalization from TRAIN context memorization and test offset, x_visual\u00d7F, and independent Joint value",
+  "split_disjoint_at_freeze": true,
+  "status": "FROZEN_BEFORE_TASK0_DEV_AVAILABLE_OR_OPENED",
+  "stop_rules": {
+    "Probe_forbidden_if_GT_gate_fails": true,
+    "leakage": "TASK0_VISUAL_RESULT_INVALID_DUE_TO_LEAKAGE",
+    "no_DEV_calibration": true,
+    "no_DEV_substitute": true,
+    "no_architecture_PCA_lambda_feature_loss_or_checkpoint_changes": true,
+    "no_checkpoint_selection_on_DEV": true
+  },
+  "task": 0,
+  "visual_extraction": {
+    "collector_code": "/home/exouser/FORTE/prospective_visual_context_collect.py",
+    "collector_code_sha256": "567a34bdae3bca92df7009b39e70a13877652c4a96687dce39708436d3d5e861",
+    "feature_spec_path": "/home/exouser/Tabero/analysis/results/gnp_style_visual_context_prospective_20260831_011000/PROSPECTIVE_VISUAL_FEATURE_SPEC.json",
+    "feature_spec_sha256": "ae57858eef86fe6803b8244001792fdd44efe6825707c72840171bd4cfd4333a",
+    "pi0_checkpoint_hash": "d42eb9d79e44858dccac0a1a0bea2f4ad58c861ef89f9ad62c86d43d5e0242f8",
+    "pi0_checkpoint_path": "/media/volume/newdata/exouser/tabero/models/pi0_lora_tacfield_tabero/checkpoints/pi0_lora_tacfield_tabero/pi0_lora_tacfield_tabero/49999",
+    "raw_feature_shape": [
+      4096
+    ],
+    "source_module": "/media/volume/newdata/exouser/tabero/Tabero-VTLA/src/openpi/models/pi0.py",
+    "strict_capture_semantics": "after final pre-probe hold step and before any probe action"
+  },
+  "winner_rules": {
+    "GT_gate": {
+      "finite_model_decision_coverage_min": 0.8,
+      "frontier_MAE_max_N": 0.2,
+      "probability_MAE_max": 0.2,
+      "systematic_nonmonotonicity_forbidden": true,
+      "under_force_rate_max": 0.1,
+      "valid_real_frontier_coverage_min": 0.8
+    },
+    "force_interaction": {
+      "OR_frontier_MAE_improvement_min_N": 0.05,
+      "full_vs_residual_probability_MAE_relative_improvement_min": 0.1,
+      "multiple_contexts": true,
+      "safety_nonworse": true
+    },
+    "joint_win": {
+      "Brier_NLL_not_materially_worse": true,
+      "frontier_MAE_improvement_min_N": 0.05,
+      "multiple_contexts": true,
+      "probability_MAE_relative_improvement_min": 0.1,
+      "systematic_dense_nonmonotonicity_forbidden": true,
+      "under_force_nonworse": true
+    },
+    "offset_only": {
+      "residual_fraction_of_full_MAE_gain_min": 0.7,
+      "safety_nonworse": true
+    },
+    "visual_generalizes": {
+      "frontier_MAE_improvement_min_N": 0.05,
+      "monotonicity_not_materially_degraded": true,
+      "multiple_independent_DEV_contexts": true,
+      "probability_MAE_relative_improvement_min": 0.2,
+      "under_force_nonworse": true
+    }
+  }
+}

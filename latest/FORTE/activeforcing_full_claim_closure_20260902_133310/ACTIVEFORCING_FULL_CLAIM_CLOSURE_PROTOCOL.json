@@ -1,0 +1,60 @@
+{
+  "core_method": "ACTIVEFORCING_DIRECT",
+  "force_bounds_N": {
+    "0": [
+      3.0,
+      5.0
+    ],
+    "1": [
+      4.0,
+      6.0
+    ],
+    "5": [
+      3.0,
+      5.0
+    ],
+    "6": [
+      3.0,
+      4.0
+    ]
+  },
+  "force_planner_K": [
+    5,
+    10,
+    20
+  ],
+  "name": "PAPER_READY_FULL_ACTIVEFORCING_CLAIM_CLOSURE",
+  "query_budget": 2,
+  "rho": {
+    "selection": "TRAIN/DEV only",
+    "source": "E6_E7/FINAL_RHO.json",
+    "value": 0.9
+  },
+  "scientific_method": {
+    "belief": "three-member calibrated physical identifier ensemble",
+    "continuous_planners": [
+      "FIXED_GRID",
+      "UNIFORM_CONTINUOUS",
+      "STRATIFIED_CONTINUOUS",
+      "PROPOSAL_GUIDED"
+    ],
+    "fallback": "maximum safe force within frozen task bounds",
+    "latent_physics": "z=(friction_mu,mass_m); old Joint neural architecture rejected",
+    "pi0": "frozen; nominal motion and low-level controller unchanged",
+    "requery": "at most one extra P4-B query on frozen decision-consensus disagreement",
+    "selector": "minimum force F in candidate set with posterior mean task feasibility >= rho"
+  },
+  "source_artifacts": {
+    "current_e5": "/home/exouser/FORTE/activeforcing_final_e5_smoke_20260902_043100",
+    "direct_only": "/home/exouser/FORTE/activeforcing_final_closure_20260902_034923",
+    "ensemble_planner": "/home/exouser/FORTE/../FORTE_e6e7/activeforcing_e6e7_closure_20260902_052500",
+    "mass_extension": "/home/exouser/FORTE/../FORTE_mass/ACTIVEFORCING_MASS_AND_TASK_BREADTH_EXTENSION_20260902_041500"
+  },
+  "status": "FROZEN_FOR_EVIDENCE_CLOSURE",
+  "test_discipline": {
+    "fresh_e5_status": "sealed root3 Direct expected-utility test loaded; expanded posterior/re-query/continuous claims remain separate",
+    "locked_test_loaded_by_expanded_assembly": true,
+    "repair_split": "TRAIN/DEV only",
+    "sealed_test_tuning": false
+  }
+}

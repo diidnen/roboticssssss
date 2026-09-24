@@ -1,0 +1,30 @@
+{
+  "H": 8,
+  "active_phases": [
+    "branch_hold",
+    "lift",
+    "over_basket",
+    "place",
+    "transit"
+  ],
+  "aggregation": {
+    "kind": "worst_25_percent_chunk_mean",
+    "tail_fraction": 0.25
+  },
+  "excluded_phases": [
+    "release",
+    "settle"
+  ],
+  "frozen_before_test": true,
+  "local_cost": "mean_t(||rel_position||/0.005 + 0.25*||rel_velocity||/0.020)",
+  "score": "CVaR-like mean of worst 25 percent of H=8 local chunk costs",
+  "task_specific_sufficiency_thresholds": {
+    "0": 16.780904483795165,
+    "1": 10.214945030212402,
+    "5": 26.03975851535797,
+    "6": 8.463173532485962
+  },
+  "threshold_selection": "DEV real trajectories only; maximize exact-2*under, then exact, within-one, no-valid",
+  "uses_success_labels": "only for DEV calibration/evaluation; never in score input",
+  "world_model_checkpoint_sha256": "8d5158310eeb6de924ec27f2fe1a4fe661b89b73502a855bbe276edd304eac45"
+}

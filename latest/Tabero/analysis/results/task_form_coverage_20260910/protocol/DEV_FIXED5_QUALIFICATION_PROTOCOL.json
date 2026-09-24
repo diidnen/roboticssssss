@@ -1,0 +1,26 @@
+{
+  "protocol_version": "TASK_FORM_DEV_FIXED5_V1",
+  "created_utc": "2026-09-10T00:00:00Z",
+  "purpose": "Qualify unchanged frozen-VLA downstream behavior from supplied established grasps before any ActiveForcing training outcome is observed.",
+  "candidate_tasks": [
+    "libero_10/task5",
+    "libero_goal/task9",
+    "libero_spatial/task4"
+  ],
+  "method": "Fixed-5",
+  "force_setpoint_N": 5.0,
+  "friction_condition": 0.6,
+  "development_roots": [190100, 190101, 190102, 190103, 190104, 190105],
+  "admission_threshold": {"successes_required": 5, "trials": 6},
+  "selection_independent_of_activeforcing_outcomes": true,
+  "post_handoff_arm_action_source": "ONLINE_FROZEN_VLA_ONLY",
+  "vla_checkpoint_tree_sha256": "0598a390733235fde0bf5633b1543d91176d31bb5012d4d26f9373a90642fe17",
+  "failure_diagnoses": [
+    "VLA_DOWNSTREAM_SEMANTIC_OR_MOTION",
+    "EVALUATOR",
+    "SUPPLIED_GRASP_INCOMPATIBILITY",
+    "FORCE_OR_GRASP_RETENTION",
+    "SOFTWARE_EXECUTION_INVALID"
+  ],
+  "no_threshold_relaxation_after_outcomes": true
+}

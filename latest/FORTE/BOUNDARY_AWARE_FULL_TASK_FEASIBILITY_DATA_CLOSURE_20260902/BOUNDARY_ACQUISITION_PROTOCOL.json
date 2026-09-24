@@ -1,0 +1,90 @@
+{
+  "name": "BOUNDARY_AWARE_FULL_TASK_FEASIBILITY_DATA_CLOSURE",
+  "created_utc": "2026-09-02T11:52:09.790871+00:00",
+  "status": "FROZEN_PRE_OUTCOME_CPU_PREPARATION",
+  "scope": {
+    "tasks": [
+      0,
+      1,
+      5,
+      6
+    ],
+    "root_indices_each_task": [
+      0,
+      1
+    ],
+    "friction_bands": [
+      "LOW",
+      "MID",
+      "HIGH"
+    ],
+    "contexts": 24
+  },
+  "priority_order_is_scheduling_only": [
+    0,
+    1,
+    5,
+    6
+  ],
+  "task_agnostic_rule": true,
+  "outcome_classes": [
+    "LOCAL_FAILURE",
+    "LOCAL_SUCCESS_FULL_FAILURE",
+    "FULL_SUCCESS"
+  ],
+  "boundaries": [
+    "LOCAL_LIFT",
+    "FULL_TASK"
+  ],
+  "initial_rule": "If lowest tested force lifts, query one calibrated coarse step lower. If failure/success are bracketed, bisect. If outcomes overlap, replicate contradictory cells before interpolation.",
+  "coarse_step_N": 1.0,
+  "refinement_resolution_N": 0.25,
+  "resolution_status": "COMMAND_SUPPORTED_BUT_ADJACENT_MEASURED_SEPARATION_REQUIRES_MINIMAL_PREFLIGHT",
+  "empirical_lower_guard_N": 1.0,
+  "lower_guard_status": "PRIOR_EMPIRICAL_STABLE_SETPOINT_ON_DIFFERENT_TASK;NOT_CONTROLLER_SAFETY_CERTIFICATION",
+  "minimum_repeats_near_boundary": 2,
+  "stopping_rules": [
+    "local or full bracket width <= 0.25 N after repeat consistency check",
+    "controller lower guard reached with all local successes => NO_LOCAL_BOUNDARY_IN_SAFE_RANGE",
+    "task support upper bound reached with all full failures => RIGHT_CENSORED_FULL_BOUNDARY",
+    "candidate not measurably distinct in preflight",
+    "resource gate closed or telemetry/state-parity failure"
+  ],
+  "unchanged_components": [
+    "pi0",
+    "P4-B query",
+    "friction estimator",
+    "Direct architecture",
+    "Utility",
+    "candidate semantics",
+    "labels",
+    "controller semantics"
+  ],
+  "new_candidate_effect_on_runtime_utility": "NONE; acquisition branches train/evaluate Direct only and do not expand the frozen runtime candidate set",
+  "launch_gates": {
+    "force_interface": "MINIMAL_FORCE_INTERFACE_CALIBRATION_PASS.json must exist and pass 1.0 N lower setpoint plus 0.25 N adjacent distinguishability around planned region",
+    "resources": "No protected simulator conflict; GPU utilization <= 90%, with stricter capacity/headroom check before launch",
+    "telemetry": "all required telemetry and state hashes configured"
+  },
+  "lineage": {
+    "old": "UNIFORM_OLD",
+    "new": "BOUNDARY_SEEKING"
+  },
+  "source_hashes": {
+    "/home/exouser/FORTE/BOUNDARY_AWARE_FULL_TASK_FEASIBILITY_DATA_CLOSURE_20260902/AUTHORITATIVE_720_BOUNDARY_LABELS.csv": "62f4825e7b2ecadc697b11fcb0508f12f7fe755fe849a93b705c85c2ca3d555a",
+    "/home/exouser/FORTE/BOUNDARY_AWARE_FULL_TASK_FEASIBILITY_DATA_CLOSURE_20260902/EXISTING_BOUNDARY_STATUS.csv": "1fafc41500b014a8629c5897172be77ce0f1f52c8a19e0806c79dd482279480b",
+    "/home/exouser/Tabero/analysis/results/p4_contact_conditioned_probe_20260822_184213/scripts/p4_collect_probe.py": "a1566334f9f79ad9d8491612f10d086386049295314f6d1fd62512be1867bca9",
+    "/home/exouser/Tabero/analysis/results/dev_fine_force_forensic_20260829_150000/CONTINUOUS_FORCE_CONTROLLER_AUDIT.json": "32608e3c8c12dcc83b0ca05ff05640c7e5aa33f0856540060145cd62e8236161",
+    "/home/exouser/Tabero/analysis/results/f1r2_tabero_reactive_force_20260818_205953/FINAL_VERDICT.json": "87a4f3c25effbfa381c9f150cf640064790e280dc53886d0c5072d3353b78813"
+  },
+  "prohibited": [
+    "task6-specific force rule",
+    "Utility retuning",
+    "global Fmax promotion",
+    "pi0 retraining",
+    "identifier retraining",
+    "P4-B change",
+    "friction estimator change",
+    "TEST claim"
+  ]
+}

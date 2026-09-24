@@ -1,0 +1,17 @@
+{
+  "dataset": "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_original_restore_20260912/original_rootlocal_dataset_v3_rim20",
+  "models": "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_original_restore_20260912/original_models_v3_rim20",
+  "inference": "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_original_restore_20260912/original_inference_v3_rim20",
+  "collection_freeze_lock_sha256": "4f5233eab7a1ee25fe66eace86c02cd952e5dc6aedd9f1cf55ca29f7d8485e0d",
+  "source_hashes": {
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_original_restore_20260912/audit_original_collected_group.py": "35e36c26ea706e1d36e4df5472676aca69a00f1827e09a55ee74666f304b07b6",
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_original_restore_20260912/train_original_rootlocal.py": "deeeb56fcf28845bbe29741832164c9832748ddab81ebe3b893061bf0763e9ee",
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_original_restore_20260912/infer_original_rootlocal.py": "5e7d26da8d3bc355014c2f7ed4cd563d687257998db1233596944e4b45477acc",
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_original_restore_20260912/run_rim20_original_inference.py": "087b1f92327ff94e3ef248ecc03fce84e46044c7660c1aacdf5fde913a357853",
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_original_restore_20260912/test_original_rootlocal_training.py": "5781238589e47e3fdd92e191f27f3403b16d7ad068357917d61013b5b1eefe60",
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_original_restore_20260912/complete_original_rootlocal_pipeline.py": "24dd9dd720a852bc60ddc3b609eeb0d3f77b01392d2cf6b3bb24485000cef54e"
+  },
+  "created_utc": "2026-09-13T02:02:47.599863+00:00",
+  "models_selected_before_TEST": true,
+  "automatic_retry_or_model_reselection": false
+}

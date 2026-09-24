@@ -1,0 +1,80 @@
+{
+  "claim_boundary": "scripted controlled-motion auxiliary feasibility / force-causal labels; identical play_once motion across forces within a seed\u00d7friction context; not online continuous AF efficacy",
+  "created_utc": "2026-09-14T13:50:53.703533+00:00",
+  "force_convention": "RoboTwin AF single-finger gripper drive limit N on both arms",
+  "forces_N": [
+    10.0,
+    12.0,
+    15.0,
+    16.0,
+    18.0,
+    20.0
+  ],
+  "main_contexts": 9,
+  "main_rollouts": 54,
+  "motion_mode": "scripted_play_once_full_task",
+  "no_pi0": true,
+  "not_claimed": [
+    "online continuous ActiveForcing efficacy",
+    "VLA closed-loop force-success",
+    "NativeOriginal bilateral F/2 servo (this protocol uses AF single-finger caps)"
+  ],
+  "physical_root_note": "episode seeds include formal root 200002 plus 200003/200004 for layout diversity",
+  "population": [
+    {
+      "friction": 0.425,
+      "seed": 200002
+    },
+    {
+      "friction": 0.575,
+      "seed": 200002
+    },
+    {
+      "friction": 0.85,
+      "seed": 200002
+    },
+    {
+      "friction": 0.425,
+      "seed": 200003
+    },
+    {
+      "friction": 0.575,
+      "seed": 200003
+    },
+    {
+      "friction": 0.85,
+      "seed": 200003
+    },
+    {
+      "friction": 0.425,
+      "seed": 200004
+    },
+    {
+      "friction": 0.575,
+      "seed": 200004
+    },
+    {
+      "friction": 0.85,
+      "seed": 200004
+    }
+  ],
+  "smoke_forces_N": [
+    12.0,
+    16.0,
+    20.0
+  ],
+  "smoke_gate": {
+    "12N_must_succeed": true,
+    "all_completed": true,
+    "force_limits_match_command": true
+  },
+  "source_hashes": {
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_scripted_highforce_20260914/EXPERIMENT_CARD.md": "c547cc56a949f552a78c05972106c4018242d770ab6baec9cdaf1ae9e08e379d",
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_scripted_highforce_20260914/freeze_scripted_plan.py": "5d4f8a7521d8de2b81bdc66bfec8f4ea652da32ae1ad2dc6b496603b2edff542",
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_scripted_highforce_20260914/run_scripted_context.py": "1176082e41528a6b6b6426a11577521de70aea9a639d6cd99790233744b08539",
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_scripted_highforce_20260914/run_scripted_queue.py": "e31e110ff762e72408cefaa112425325f8c796f694dbd8724f626fc430e49987"
+  },
+  "storage_root": "/media/volume/dasdas/exouser/af_dump_scripted_highforce_20260914",
+  "task": "dump_bin_bigbin",
+  "version": "AF_DUMP_SCRIPTED_HIGHFORCE_V1"
+}

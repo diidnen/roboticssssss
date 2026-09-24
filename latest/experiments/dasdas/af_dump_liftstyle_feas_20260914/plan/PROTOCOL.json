@@ -1,0 +1,77 @@
+{
+  "belief": "not retrained; frozen dump v4 unused at train BCE (point mu)",
+  "claim_boundary": "controlled-motion auxiliary; hold-chunk features; not online AF",
+  "created_utc": "2026-09-14T15:33:10.426373+00:00",
+  "forces_N": [
+    1.0,
+    1.5,
+    2.0,
+    2.5,
+    3.0,
+    3.5,
+    4.0,
+    4.5,
+    5.0
+  ],
+  "grasp_force_N": 12.0,
+  "main_contexts": 9,
+  "main_rollouts": 81,
+  "no_pi0": true,
+  "population": [
+    {
+      "friction": 0.425,
+      "seed": 200002
+    },
+    {
+      "friction": 0.425,
+      "seed": 200003
+    },
+    {
+      "friction": 0.425,
+      "seed": 200004
+    },
+    {
+      "friction": 0.575,
+      "seed": 200002
+    },
+    {
+      "friction": 0.575,
+      "seed": 200003
+    },
+    {
+      "friction": 0.575,
+      "seed": 200004
+    },
+    {
+      "friction": 0.85,
+      "seed": 200002
+    },
+    {
+      "friction": 0.85,
+      "seed": 200003
+    },
+    {
+      "friction": 0.85,
+      "seed": 200010
+    }
+  ],
+  "query_force_N": 4.0,
+  "recipe": "lift V5 mimic: scripted grasp, dump shear query, 8-step EEF hold chunk, force-forked scripted remainder",
+  "smoke_forces_N": [
+    2.0,
+    3.5,
+    5.0
+  ],
+  "smoke_gate": {
+    "all_completed": true,
+    "force_limits_match_command": true
+  },
+  "source_hashes": {
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_liftstyle_feas_20260914/freeze_liftstyle_plan.py": "708493ad0c3bb021c2e8eb06b2a045a63c5c09c476823beb4ccd473f5f18efe4",
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_liftstyle_feas_20260914/run_liftstyle_context.py": "13030071671205f8138788908fa7e5dff79d468d930c6c30e25757d4833e0eed",
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_liftstyle_feas_20260914/run_liftstyle_queue.py": "27225ad196e38e7c20af93171c2441ddd250a00e2d87560f9669025339e60b16"
+  },
+  "storage_root": "/media/volume/dasdas/exouser/af_dump_liftstyle_feas_20260914",
+  "task": "dump_bin_bigbin",
+  "version": "AF_DUMP_LIFTSTYLE_FEAS_V1"
+}

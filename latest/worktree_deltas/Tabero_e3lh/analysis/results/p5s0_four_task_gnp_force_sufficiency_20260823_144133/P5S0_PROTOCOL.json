@@ -1,0 +1,61 @@
+{
+  "archival_proxy_allowed_for_claim": false,
+  "excluded_tasks": [
+    2
+  ],
+  "force_dev_N": [
+    3.0,
+    3.5,
+    4.0,
+    4.5,
+    5.0,
+    5.5,
+    6.0,
+    6.5,
+    7.0,
+    7.5,
+    8.0
+  ],
+  "frozen_artifact_inputs": {
+    "B2R2": "/home/exouser/Tabero/analysis/results/b2r2_tabero_task_breadth_20260821_073931",
+    "D2": "/home/exouser/Tabero/analysis/results/d2_hierarchical_force_decision_20260820_054605",
+    "M1": "/home/exouser/Tabero/analysis/results/m1_force_sufficiency_model_20260822_100045",
+    "M1R2": "/home/exouser/Tabero/analysis/results/m1r2_real_cross_task_probe_20260822_133903",
+    "P4": "/home/exouser/Tabero/analysis/results/p4_contact_conditioned_probe_20260822_184213",
+    "P4R2": "/home/exouser/Tabero/analysis/results/p4r2_contact_feasible_multi_primitive_20260823_070150",
+    "force_audit": "/home/exouser/Tabero/analysis/results/force_interface_forensic_audit_20260823_074718"
+  },
+  "method_change": "GNP_STYLE_FULL_TASK_FORCE_SUFFICIENCY_SMOKE_TEST",
+  "model_inputs_prohibited": [
+    "hidden_friction",
+    "GT friction",
+    "future outcome",
+    "canonical F*_grid"
+  ],
+  "name": "P5-S0 Four-Task GNP-Style Full-Task Force Sufficiency Pipeline Smoke Test",
+  "offgrid_force_values_N": [
+    3.5,
+    4.5,
+    5.5,
+    6.5,
+    7.0,
+    7.5
+  ],
+  "scope": "FOUR_TASK_DEVELOPMENT_SMOKE_TEST",
+  "simulator_branching_available": true,
+  "tasks": [
+    0,
+    1,
+    5,
+    6
+  ],
+  "train_force_values_N": [
+    3.0,
+    4.0,
+    5.0,
+    6.0,
+    8.0
+  ],
+  "true_matched_branching_blocker": "external Isaac runtime is importable, but this result-scoped runner does not yet implement single-process post-probe env.scene.get_state/reset_to branching; archival proxy integration is therefore marked invalid for the strict P5-S0 claim",
+  "true_matched_branching_executed": false
+}

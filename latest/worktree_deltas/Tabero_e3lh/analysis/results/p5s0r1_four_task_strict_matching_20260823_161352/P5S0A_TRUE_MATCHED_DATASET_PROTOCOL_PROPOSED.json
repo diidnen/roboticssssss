@@ -1,0 +1,15 @@
+{
+  "do_not_launch_without_explicit_instruction": true,
+  "estimated_full_task_branches": 200,
+  "force_branches_per_context": 5,
+  "hidden_friction_values": 5,
+  "name": "P5-S0-A TRUE MATCHED DATASET",
+  "physical_contexts": 40,
+  "seeds_per_task_friction": 2,
+  "tasks": [
+    0,
+    1,
+    5,
+    6
+  ]
+}

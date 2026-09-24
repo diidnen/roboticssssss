@@ -1,0 +1,35 @@
+{
+  "context": {
+    "band": "LOW",
+    "id": "t0_r170048_low__TRUE_NO_PHYSICAL_QUERY_V2",
+    "mu": 0.2937102019159983,
+    "object": "alphabet_soup_1",
+    "root": 170048,
+    "source_context_id": "t0_r170048_low",
+    "target": "basket_1",
+    "task": 0
+  },
+  "method": "TRUE_NO_PHYSICAL_QUERY_TRAINING_PRIOR",
+  "only_intended_runtime_changes": [
+    "stop canonical prefix after established-grasp hold",
+    "do not execute probe_out, probe_back, or post-probe hold",
+    "replace instance posterior with frozen 48-context TRAIN empirical prior"
+  ],
+  "role": "ENGINEERING_SMOKE_NOT_PAPER_EVIDENCE",
+  "source_hashes": {
+    "/home/exouser/FORTE/analysis/results/current_matched_stage1_648_v1_20260906/STAGE_MANIFEST.json": "8708f8493b78663f0c8dc665e487e23531225b7a47681228f1bc777ac3de1d49",
+    "/home/exouser/noquery_established_v2_worker.py": "5bf31fb597c34ae9f48780335cd10a5f136865788341d6550a16ba9202bcd3ca",
+    "/media/volume/newdata/exouser/online_vla_activeforcing_20260907/final_ablation_confirmatory_v1/FINAL_ABLATION_CONTEXT_PLAN.json": "53a5a9aa14431fa045d4640668db869e3f459063e7ff1da8e0a0bc4535c75fc4",
+    "/media/volume/newdata/exouser/online_vla_activeforcing_20260907/final_ablation_confirmatory_v1/SOURCE_SNAPSHOT/arbitration.py": "f6bdb7c4c666c7ebc9e1894a40048c46bc8a94b3fd06f59c91d2304c7095f062",
+    "/media/volume/newdata/exouser/online_vla_activeforcing_20260907/final_ablation_confirmatory_v1/SOURCE_SNAPSHOT/phase_free_feasibility.py": "456e19e00cc966e80b0dcbfe4af1bd3b3f653221212d43be81df1e8beb1d18cc",
+    "/media/volume/newdata/exouser/online_vla_activeforcing_20260907/final_ablation_confirmatory_v1/SOURCE_SNAPSHOT/runtime.py": "65ee446a50d35b2cda72e30cac09e3235c537d0f62a8034576118996e9625f9b",
+    "/media/volume/newdata/exouser/online_vla_activeforcing_20260907/final_ablation_confirmatory_v1/SOURCE_SNAPSHOT/worker.py": "1dce78f9e2ad4579ea99ec6f135fa05be150264e5a89a725db16b1f14dd0e215"
+  },
+  "unchanged": [
+    "geometry grasp initializer",
+    "online frozen VLA checkpoint and 50/10 requery schedule",
+    "arm-action arbitration",
+    "gripper force servo",
+    "350-step whole-mesh full-task evaluator"
+  ]
+}

@@ -1,0 +1,131 @@
+{
+  "created_at_utc": "2026-08-27T18:22:09.719481+00:00",
+  "fixed_invocation_protocol": "t1_G2_R23_ORIGINAL_P6G1",
+  "force_holdout": "7N outcomes are collected on DEV/TEST but excluded from teacher input, all training loss, selection and calibration until final held-out evaluation",
+  "forces_N": [
+    5.0,
+    6.0,
+    7.0,
+    8.0
+  ],
+  "fresh": {
+    "arms": [
+      "fixed_8N",
+      "no_query_prior",
+      "query_control",
+      "friction_oracle",
+      "most_likely",
+      "monte_carlo"
+    ],
+    "contexts": 20,
+    "root_groups": [
+      10330,
+      10331,
+      10332,
+      10333
+    ]
+  },
+  "friction_strata": [
+    [
+      0.2,
+      0.32
+    ],
+    [
+      0.32,
+      0.48
+    ],
+    [
+      0.48,
+      0.64
+    ],
+    [
+      0.64,
+      0.8
+    ],
+    [
+      0.8,
+      0.95
+    ]
+  ],
+  "frozen_checkpoint": {
+    "checkpoint": "/media/volume/newdata/exouser/tabero/models/pi0_lora_tacfield_tabero/checkpoints/pi0_lora_tacfield_tabero/pi0_lora_tacfield_tabero/49999",
+    "checkpoint_hash_sha256": "0598a390733235fde0bf5633b1543d91176d31bb5012d4d26f9373a90642fe17",
+    "config": "pi0_lora_tacfield_tabero",
+    "expected_hash_sha256": "0598a390733235fde0bf5633b1543d91176d31bb5012d4d26f9373a90642fe17",
+    "server_wrapper": "/home/exouser/Tabero/analysis/results/b5_tabero_neutral_20260822_040652/scripts/b5_serve_policy_with_explicit_norm_stats.py",
+    "server_wrapper_sha256": "a3baac379926856f928b8d5aad5e3285af84c2377158ea1c4bd19440f2907d01"
+  },
+  "held_out_force_N": 7.0,
+  "hidden_friction_is_model_input": false,
+  "main": {
+    "branches": 160,
+    "contexts": 20,
+    "root_groups": [
+      10330,
+      10331,
+      10332,
+      10333
+    ],
+    "split": {
+      "DEV": 4,
+      "TEST": 4,
+      "TRAIN": 12
+    }
+  },
+  "method_change": "GNP_STYLE_OUTCOME_TEACHER_TO_QUERY_POSTERIOR_DISTILLATION; P4B_QUERY_COMPATIBILITY_APPROACH_FROM_FIXED_G2_PREGRASP_TO_P4B_CENTER_TARGET",
+  "name": "P7-B GNP-Style Physical Belief for Full-Task Force Planning",
+  "object": "cream_cheese_1",
+  "output_directory": "/home/exouser/Tabero/analysis/results/p7b_query_recovery_queryonly_20260827_envfix",
+  "p7a_protocol_hash": "c15e8bf4f2b10464c2812a9422326e206b7bc0ccb81a32be8a0480b8d58b7d50",
+  "p7a_source": "/home/exouser/Tabero/analysis/results/p7a_fixed_invocation_force_frontier_20260826_153426",
+  "pilot": {
+    "branches": 80,
+    "contexts": 20,
+    "root_groups": [
+      10330,
+      10331,
+      10332,
+      10333
+    ]
+  },
+  "primary_task": 1,
+  "prohibited": [
+    "task6 primary",
+    "grasp-position selection",
+    "recipe search",
+    "retry",
+    "DreamTrajectory",
+    "VLA fine-tuning",
+    "RL",
+    "learned query selection",
+    "explicit friction supervision for main model"
+  ],
+  "query": {
+    "implementation": "P4-B common contact-frame shear inserted after fixed G2 staging; its validated 45-step approach is replayed to the object-root center pregrasp before the unchanged P4-B descend/close/hold/probe/return",
+    "implementation_source": "/home/exouser/Tabero/analysis/results/p4_contact_conditioned_probe_20260822_184213/scripts/p4_collect_probe.py",
+    "implementation_source_sha256": "a1566334f9f79ad9d8491612f10d086386049295314f6d1fd62512be1867bca9",
+    "max_displacement_mm": 2.0,
+    "preload_N": 3.0,
+    "reversible": true,
+    "single_query_per_context": true,
+    "step_mm": 0.2
+  },
+  "query_qualification_gate": {
+    "chunk_budget_exhaustion_is_runtime_error": false,
+    "frozen_before_collection": true,
+    "max_true_runtime_errors": 0,
+    "min_contact_retention": 20,
+    "min_query_qualification_rate": 1.0,
+    "min_query_qualified": 20,
+    "require_all_state_parity": true,
+    "require_return_state_valid": true
+  },
+  "runtime_action_space": [
+    "grip force only"
+  ],
+  "training_forces_N": [
+    5.0,
+    6.0,
+    8.0
+  ]
+}

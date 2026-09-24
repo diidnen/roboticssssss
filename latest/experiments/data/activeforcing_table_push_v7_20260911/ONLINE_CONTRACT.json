@@ -1,0 +1,39 @@
+{
+  "gate": "V7_DYNAMIC_MOTION_CONDITIONED_ONLINE_PAIR",
+  "version": "v1_frozen_before_execution",
+  "prerequisite": "V6_R2_MINIMUM_FORCE_INTERFACE pass",
+  "suite": "libero_goal",
+  "task_id": 5,
+  "task_language": "push the plate to the front of the stove",
+  "root": 0,
+  "table_friction": [1.2, 0.005, 0.0001],
+  "policy_port": 8015,
+  "initial_policy_seed": 1000,
+  "post_intervention_common_seed_base": 3000,
+  "chunk_execution_length": 5,
+  "stabilization_steps": 10,
+  "maximum_steps": 310,
+  "activeforcing_minimum_force_target_n": 20.5,
+  "controller": {
+    "ema_alpha": 0.5,
+    "kp": 0.5,
+    "ki": 0.05,
+    "ramp_n": 2.0,
+    "integral_cap": 10.0,
+    "axis_command_limits_n": [10.0, 30.0]
+  },
+  "motion_conditioning": "at each intervention, the unit force direction is the current nominal pi0 XY action direction; the selected scalar force target is unchanged",
+  "activation": "arm at third consecutive robot-plate contact; arming action is untouched; intervene from the next eligible XY action",
+  "causal_rule": "command magnitude uses only the preceding completed post-step force projected onto that preceding action direction",
+  "pass_gate": {
+    "exact_pre_intervention_state_and_action_pairing": true,
+    "hybrid_native_success_required": true,
+    "minimum_intervention_steps": 3,
+    "finite_torque_required": true,
+    "zero_actuator_clips_required": true,
+    "stock_axis_never_reduced": true,
+    "all_intervention_directions_match_nominal_actions": true,
+    "baseline_outcome_descriptive": true
+  },
+  "no_tuning_after_execution": true
+}

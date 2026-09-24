@@ -1,0 +1,54 @@
+{
+  "version": "MAXF8_SAME_ROOT_CONFIRMATION_V1",
+  "created_utc": "2026-09-13T04:10:59.388972+00:00",
+  "root_scope": [
+    200002
+  ],
+  "task": "dump_bin_bigbin",
+  "force_support_N": [
+    0.5,
+    8.0
+  ],
+  "utility_normalization_N": 8.0,
+  "prospective_specification": {
+    "root": 200002,
+    "frictions": [
+      0.375,
+      0.525,
+      0.675,
+      0.825
+    ],
+    "new_policy_seeds": [
+      50200002,
+      60200002
+    ],
+    "methods": [
+      "ActiveForcing",
+      "Fixed-1N",
+      "Fixed-3N",
+      "Fixed-5N",
+      "Fixed-6N",
+      "Fixed-8N"
+    ],
+    "rollouts": 48,
+    "new_rollouts_after_training_locks_only": true,
+    "prior_TEST_not_claimed_untouched": true
+  },
+  "additional_collection_protocol_sha256": "8691becc511e24cd8c0746e03bead411de55adb80135c2f98769ad04bd3fa897",
+  "source_hashes": {
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_maxf8_20260913/freeze_v4_confirmation.py": "f5ce626d123239d97ce19da04edcc82daeafff7782f7039c5be96c1bf844950a",
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_maxf8_20260913/infer_v4.py": "fc3220aef222d5e495dffbee6a57abf02b9554f7c324abff300b49391929b32f",
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_maxf8_20260913/run_v4_inference.py": "3a49dbdf61ba22a7f5be4afc5b1cef5fdff076e6118aaa2585727dc51273a58d",
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_maxf8_20260913/audit_v4_inference.py": "d2dde3c08d2ec10222b0d7776359ba768906b9efb704ce3ccb4eee4320d3a042",
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_maxf8_20260913/test_v4_online_bindings.py": "279fcd11c7800bbcd19a01a3e461fa8abec1e1f0bc0ca1342431c4296308bde0",
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_maxf8_20260913/maxf8_runtime.py": "d966a24dee1304cfcd78488c0243379e5ce465019f2023788d0c35395131ed56",
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_maxf8_20260913/max_force_utility.py": "de94e01c2727d4edfa3e6dae241e5c142370a5fb23917a71c8f69e67c9ddf168"
+  },
+  "physical_friction_settings": 4,
+  "decision_contexts": 8,
+  "paired_rollouts": 48,
+  "no_test_based_retraining_or_reselection": true,
+  "prior_frictions_known_new_policy_seeds_not_yet_executed": true,
+  "runtime_manifest_path": "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_maxf8_20260913/additional_data_v1/RUNTIME_MANIFEST.json",
+  "runtime_manifest_sha256": "01d0289b14b812a4a12455e826a0b213ef4bf4fcdb27717892289b7e137b5034"
+}

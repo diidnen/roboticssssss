@@ -1,0 +1,44 @@
+{
+  "version": "ONLINE_VLA_SMALL_DEV_ABLATIONS_CANDIDATE_V1",
+  "created_utc": "2026-09-07T08:50:29.929461+00:00",
+  "status": "METHODS_PREDECLARED_NO_ABLATION_PHYSICS_STARTED",
+  "roots": [
+    5100,
+    6200
+  ],
+  "root_role": "Both previously burned development roots; no final fresh roots",
+  "tasks": [
+    0,
+    1,
+    5,
+    6
+  ],
+  "friction_bands": [
+    "LOW",
+    "MID",
+    "HIGH"
+  ],
+  "contexts_per_ablation": 24,
+  "methods": {
+    "POSTERIOR_MEAN": "Replace continuous posterior quadrature with a point at its mean; retain current64D observations and online chunk.",
+    "COARSE_GRID": "Use forces3,4,5 with full continuous posterior and unchanged expected utility.",
+    "PRIOR_NO_POSTERIOR": "Keep executed probe/current64D X; replace posterior with48 equally weighted TRAIN-context empirical friction nodes. Must not be labeled NoProbe.",
+    "LOCAL_LIFT": "Use historical auxiliary lift-success checkpoint with exact removal of7 normalized-constant phase columns; full continuous posterior. Training labels remain explicitly scripted auxiliary, outcomes must be real online VLA."
+  },
+  "source": "/home/exouser/FORTE/online_vla_restore_20260907/online_ablation_feasibility.py",
+  "source_sha256": "707ab0f01aa64cd86ce3ba85aa2dad4545be0ddb1ce6dd32f8a5c649327b485e",
+  "offline_semantic_tests_passed": 4,
+  "new_training_steps": 0,
+  "main_feasibility_changed": false,
+  "physical_probe_changed": false,
+  "online_inference_required": true,
+  "same_action_arbitration_and_full_task_label": true,
+  "new_physical_ablation_branches_max": 96,
+  "AF_comparison": "Reuse valid online root5100 AF branches only after sameX/source checks; root6200 requires new online AF comparison unless identical legal evidence exists. Scripted AF results are excluded.",
+  "action_replay_allowed": false,
+  "outcomes_used_to_tune_variants": false,
+  "launch_gate": "Only after successful primary qualification/runtime freeze; follow requested main-evaluation-before-ablation order.",
+  "reuse_policy": "Any reuse must identify actual online original branch and prove same decisionX, selected force, frozen policy/controller and matching seeds; never call a cached trajectory an online rollout. No reuse admitted by this candidate protocol alone.",
+  "additional_online_AF_comparison_branches_max": 12,
+  "total_new_physical_ablation_plus_AF_comparison_max": 108
+}

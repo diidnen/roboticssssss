@@ -1,0 +1,35 @@
+{
+  "archive_candidate_pool_sha256": "fb2d96be8cf6576f116842684f34fd091b42a6af0e24f1f5b3248514c98d9916",
+  "config_sha256": "c5bc4f39861a84b9ba95d55cdb5f8633a8b004d205b3864a02799340653d9b10",
+  "equation": "p_success*(1-force_cost_coefficient*F/Fmax)+(1-p_success)*(-failure_penalty)",
+  "failure_penalty": 1.0,
+  "fit_and_sensitivity_scope": "TRAIN/root-heldout-OOF DEV folds only",
+  "force_cost_coefficient": 1.0,
+  "frozen": true,
+  "name": "ACTIVEFORCING_CURRENT_FULL_UTILITY",
+  "sealed_TEST_used": false,
+  "selection": "argmax_candidate_expected_utility",
+  "sensitivity_grid": {
+    "failure_penalty": [
+      0.75,
+      1.0,
+      1.25
+    ],
+    "force_cost_coefficient": [
+      0.75,
+      1.0,
+      1.25
+    ],
+    "grid_frozen_before_computation": true
+  },
+  "source_protocol": "/home/exouser/FORTE/activeforcing_residual_utility_20260901_055605/RESIDUAL_UTILITY_DEVELOPMENT_PROTOCOL.json",
+  "source_protocol_sha256": "f697eaa902559fffabaf77a7aa8cb2e8c319007162896a9b5b6a67b22c3857d7",
+  "success_benefit": 1.0,
+  "task_Fmax_N": {
+    "0": 5.0,
+    "1": 6.0,
+    "5": 5.0,
+    "6": 4.0
+  },
+  "tie_break": "lower_force"
+}

@@ -1,12 +1,16 @@
-# roboticssssss
+# ActiveForcing
 
-This repository carries the ActiveForcing transfer bundle for use on the
-second server.
+The current Jetstream source snapshot is in **[latest/](latest/README.md)**,
+captured on 2026-09-24 and verified against the server before this commit.
 
-See [`activeforcing/README.md`](activeforcing/README.md) for installation,
-the frozen Tabero control contract, model/executor boundary, and hardware
-notes.
+- [FORTE core, inference, training, and online experiment scripts](latest/FORTE/)
+- [Tabero source and analysis code](latest/Tabero/)
+- [RoboTwin task-form code and local XPolicyLab/pi0 changes](latest/robotwin_taskforms/)
+- [Additional experiment source on data, dasdas, and newdata volumes](latest/experiments/)
+- [Home-directory launch and analysis scripts](latest/home_scripts/)
+- [Unmerged worktree source differences](latest/worktree_deltas/)
+- [Source directory map](latest/SOURCE_ROOTS.md) and [validation](latest/VALIDATION.md)
 
-The bundle is intentionally limited to source, configuration templates, and
-the force-estimation checkpoint. Experiment logs, datasets, virtual
-environments, and machine-specific outputs are not included.
+The original smaller transfer bundle remains in [activeforcing/](activeforcing/README.md).
+Use `latest/` for the current server source. Dataset arrays, rollout binaries,
+training checkpoints, environments, and caches are external to this source snapshot.

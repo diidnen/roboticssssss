@@ -1,0 +1,39 @@
+{
+  "best_seed": {
+    "family": "grouped categorical comparison",
+    "output": "FIG_SAMPLE_EFFICIENCY_BEST_SEED.png",
+    "question": "Which tasks drive the largest post-hoc Sparse-60 Point-WM SR gain?",
+    "title_requirement": "Representative Best Seed; post-hoc visualization only",
+    "variant": "paired bars by task"
+  },
+  "sr": {
+    "family": "ordered comparison",
+    "focused_axis": "75%-100%, explicitly labeled",
+    "non_color_distinction": {
+      "Direct": "circle/solid",
+      "Point-WM": "square/dashed"
+    },
+    "outputs": [
+      "FIG_SAMPLE_EFFICIENCY_SR.png",
+      "FIG_SAMPLE_EFFICIENCY_SR.pdf"
+    ],
+    "palette": {
+      "Direct": "#4C78A8",
+      "Point-WM": "#E45756"
+    },
+    "question": "How do Direct and Point-WM full-task SR change from 60 to 120 task-specific training rollouts?",
+    "variant": "two-series line with 3-seed population-standard-deviation error bars and individual observed means",
+    "x": "task-specific training rollouts (60, 120)",
+    "y": "full-task success rate"
+  },
+  "surface": "standalone static PNG and PDF requested by user",
+  "utility": {
+    "family": "ordered comparison",
+    "outputs": [
+      "FIG_SAMPLE_EFFICIENCY_UTILITY.png",
+      "FIG_SAMPLE_EFFICIENCY_UTILITY.pdf"
+    ],
+    "question": "Does low-data Point-WM preserve realized utility?",
+    "variant": "two-series line with 3-seed population-standard-deviation error bars"
+  }
+}

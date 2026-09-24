@@ -1,0 +1,179 @@
+{
+  "belief": "not retrained; frozen dump v4 unused at train BCE (point mu)",
+  "claim_boundary": "controlled-motion auxiliary; hold-chunk features; not online AF",
+  "created_utc": "2026-09-14T16:28:16.848731+00:00",
+  "expansion_note": "v2 re-grasped each force; v3 snapshots after one grasp+query so all 32 forces share one 8x64",
+  "force_band_N": [
+    0.25,
+    8.0
+  ],
+  "force_step_N": 0.25,
+  "forces_N": [
+    0.25,
+    0.5,
+    0.75,
+    1.0,
+    1.25,
+    1.5,
+    1.75,
+    2.0,
+    2.25,
+    2.5,
+    2.75,
+    3.0,
+    3.25,
+    3.5,
+    3.75,
+    4.0,
+    4.25,
+    4.5,
+    4.75,
+    5.0,
+    5.25,
+    5.5,
+    5.75,
+    6.0,
+    6.25,
+    6.5,
+    6.75,
+    7.0,
+    7.25,
+    7.5,
+    7.75,
+    8.0
+  ],
+  "grasp_force_N": 12.0,
+  "main_contexts": 24,
+  "main_rollouts": 768,
+  "no_pi0": true,
+  "population": [
+    {
+      "friction": 0.3,
+      "seed": 200002
+    },
+    {
+      "friction": 0.3,
+      "seed": 200003
+    },
+    {
+      "friction": 0.3,
+      "seed": 200010
+    },
+    {
+      "friction": 0.35,
+      "seed": 200002
+    },
+    {
+      "friction": 0.35,
+      "seed": 200003
+    },
+    {
+      "friction": 0.35,
+      "seed": 200010
+    },
+    {
+      "friction": 0.425,
+      "seed": 200002
+    },
+    {
+      "friction": 0.425,
+      "seed": 200003
+    },
+    {
+      "friction": 0.425,
+      "seed": 200010
+    },
+    {
+      "friction": 0.5,
+      "seed": 200002
+    },
+    {
+      "friction": 0.5,
+      "seed": 200003
+    },
+    {
+      "friction": 0.5,
+      "seed": 200010
+    },
+    {
+      "friction": 0.575,
+      "seed": 200002
+    },
+    {
+      "friction": 0.575,
+      "seed": 200003
+    },
+    {
+      "friction": 0.575,
+      "seed": 200010
+    },
+    {
+      "friction": 0.7,
+      "seed": 200002
+    },
+    {
+      "friction": 0.7,
+      "seed": 200003
+    },
+    {
+      "friction": 0.7,
+      "seed": 200010
+    },
+    {
+      "friction": 0.75,
+      "seed": 200002
+    },
+    {
+      "friction": 0.75,
+      "seed": 200003
+    },
+    {
+      "friction": 0.75,
+      "seed": 200010
+    },
+    {
+      "friction": 0.85,
+      "seed": 200002
+    },
+    {
+      "friction": 0.85,
+      "seed": 200003
+    },
+    {
+      "friction": 0.85,
+      "seed": 200010
+    }
+  ],
+  "predecessor": "af_dump_liftstyle_feas_v2_dense_20260914",
+  "query_force_N": 4.0,
+  "recipe": "lift V5 snapshot fork: scripted grasp, dump shear query, one 8-step EEF hold chunk, restore physics and force-fork scripted remainder",
+  "seed_split": {
+    "TEST": [
+      200010
+    ],
+    "TRAIN": [
+      200002
+    ],
+    "VAL": [
+      200003
+    ]
+  },
+  "smoke_forces_N": [
+    0.25,
+    4.0,
+    8.0
+  ],
+  "smoke_gate": {
+    "all_completed": true,
+    "force_limits_match_command": true
+  },
+  "snapshot_fork": true,
+  "source_hashes": {
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_liftstyle_feas_v3_fork_20260914/freeze_liftstyle_plan.py": "56d0c1820d32517805d714e56962f06cd673f8c1ab8cc3d6098acc115f1c66a7",
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_liftstyle_feas_v3_fork_20260914/run_liftstyle_context.py": "08e9de4d3620066c52319c948ddafbf7ff862f85326d4dc1f33f66715c0e7f92",
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_liftstyle_feas_v3_fork_20260914/run_liftstyle_queue.py": "333b8689d656a75feb54b3cfbe396bc0b90db0270394389b1977c9cef13ff544"
+  },
+  "storage_root": "/media/volume/dasdas/exouser/af_dump_liftstyle_feas_v3_fork_20260914",
+  "task": "dump_bin_bigbin",
+  "version": "AF_DUMP_LIFTSTYLE_FEAS_V3"
+}

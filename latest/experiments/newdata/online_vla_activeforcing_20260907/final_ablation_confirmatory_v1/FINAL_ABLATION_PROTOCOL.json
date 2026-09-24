@@ -1,0 +1,77 @@
+{
+  "AF_comparison": "Prospectively reuse all12 current-server root5100 AF controls only after complete qualification and exact state/chunk/seed checks. Run12 new root6200 AF controls.",
+  "ablation_physics_started": false,
+  "action_replay_allowed": false,
+  "additional_online_AF_comparison_branches_max": 24,
+  "comparison_count_reason": "Completion of current-server36 qualification supplies12 AF controls. Reuse these regardless of success/failure, avoiding8 redundant branch executions. Variant definitions, roots, model weights and labels unchanged; no final physics has started.",
+  "contexts_per_ablation": 24,
+  "created_utc": "2026-09-07T10:24:02.211212+00:00",
+  "final_fresh_roots_used": false,
+  "friction_bands": [
+    "LOW",
+    "MID",
+    "HIGH"
+  ],
+  "launch_gate": "Only after successful primary qualification/runtime freeze; follow requested main-evaluation-before-ablation order.",
+  "main_feasibility_changed": false,
+  "main_test_outcomes_used": false,
+  "methods": {
+    "POSTERIOR_MEAN": "Full posterior replaced by delta at posterior mean; all else frozen.",
+    "PRIOR_NO_POSTERIOR": "Probe retained; posterior replaced by frozen empirical training prior; never NoProbe.",
+    "COARSE_GRID": "Full posterior and utility retained; candidate set {3,4,5} N.",
+    "LOCAL_LIFT": "Matched Local-Lift feasibility checkpoint; physical outcome remains full-task label."
+  },
+  "new_physical_ablation_branches_max": 96,
+  "new_training_steps": 0,
+  "offline_semantic_tests_passed": 5,
+  "online_inference_required": true,
+  "outcomes_used_to_tune_variants": false,
+  "physical_probe_changed": false,
+  "prospective_AF_control_reuse": {
+    "t0_r5100_low": "/media/volume/newdata/exouser/online_vla_activeforcing_20260907/current_server_complete36_v1/branches/t0_r5100_low__ACTIVEFORCING",
+    "t0_r5100_mid": "/media/volume/newdata/exouser/online_vla_activeforcing_20260907/current_server_complete36_v1/branches/t0_r5100_mid__ACTIVEFORCING",
+    "t0_r5100_high": "/media/volume/newdata/exouser/online_vla_activeforcing_20260907/current_server_complete36_v1/branches/t0_r5100_high__ACTIVEFORCING",
+    "t1_r5100_low": "/media/volume/newdata/exouser/online_vla_activeforcing_20260907/current_server_complete36_v1/branches/t1_r5100_low__ACTIVEFORCING",
+    "t1_r5100_mid": "/media/volume/newdata/exouser/online_vla_activeforcing_20260907/current_server_complete36_v1/branches/t1_r5100_mid__ACTIVEFORCING",
+    "t1_r5100_high": "/media/volume/newdata/exouser/online_vla_activeforcing_20260907/current_server_complete36_v1/branches/t1_r5100_high__ACTIVEFORCING",
+    "t5_r5100_low": "/media/volume/newdata/exouser/online_vla_activeforcing_20260907/current_server_complete36_v1/branches/t5_r5100_low__ACTIVEFORCING",
+    "t5_r5100_mid": "/media/volume/newdata/exouser/online_vla_activeforcing_20260907/current_server_complete36_v1/branches/t5_r5100_mid__ACTIVEFORCING",
+    "t5_r5100_high": "/media/volume/newdata/exouser/online_vla_activeforcing_20260907/current_server_complete36_v1/branches/t5_r5100_high__ACTIVEFORCING",
+    "t6_r5100_low": "/media/volume/newdata/exouser/online_vla_activeforcing_20260907/current_server_complete36_v1/branches/t6_r5100_low__ACTIVEFORCING",
+    "t6_r5100_mid": "/media/volume/newdata/exouser/online_vla_activeforcing_20260907/current_server_complete36_v1/branches/t6_r5100_mid__ACTIVEFORCING",
+    "t6_r5100_high": "/media/volume/newdata/exouser/online_vla_activeforcing_20260907/current_server_complete36_v1/branches/t6_r5100_high__ACTIVEFORCING"
+  },
+  "reuse_policy": "Any reuse must identify actual online original branch and prove same decisionX, selected force, frozen policy/controller and matching seeds; never call a cached trajectory an online rollout. No reuse admitted by this candidate protocol alone.",
+  "root_role": "two untouched ablation-only roots",
+  "roots": [
+    170048,
+    170049
+  ],
+  "same_action_arbitration_and_full_task_label": true,
+  "snapshot_worker_changes": "Only feasibility variant import/instantiation and selected-force method dispatch; current online arm/inference/arbitration/controller/evaluator byte-identical to final runtime.",
+  "source": "/home/exouser/FORTE/online_vla_restore_20260907/online_ablation_feasibility.py",
+  "source_hashes": {
+    "/home/exouser/FORTE/analysis/results/current_matched_stage1_648_v1_20260906/STAGE_MANIFEST.json": "8708f8493b78663f0c8dc665e487e23531225b7a47681228f1bc777ac3de1d49",
+    "/home/exouser/FORTE/analysis/results/icra_final_experiment_package_v1_20260907/local_lift_model/LOCAL_LIFT_FEAS_seed0.pt": "8a3df2e5abb1340f58fd193b454894a2b5bf333d312abafda497413147a8a54e",
+    "/home/exouser/FORTE/analysis/results/icra_final_experiment_package_v1_20260907/local_lift_model/LOCAL_LIFT_FEAS_seed1.pt": "3a7d97d099529367530492114453b22c948f849e30fe22b4a7a3e9a633eab3ac",
+    "/home/exouser/FORTE/analysis/results/icra_final_experiment_package_v1_20260907/local_lift_model/LOCAL_LIFT_FEAS_seed2.pt": "39f822ed945d0e73bd3d5617df7dbf0da62a7c084b97729718d6bbc2d15752a8",
+    "/home/exouser/FORTE/analysis/results/icra_final_experiment_package_v1_20260907/local_lift_model/LOCAL_LIFT_RUNTIME_MANIFEST.json": "82a03934588d88010e25863eeb2ad12a2d04ac2ae06f84702d334b63a67e0f74",
+    "/home/exouser/FORTE/online_vla_restore_20260907/audit_online_ablation.py": "79a68545a3d152f37de2a8789037efff97cb4357ec020d826d1075a7bf44b8b4",
+    "/home/exouser/FORTE/online_vla_restore_20260907/online_ablation_feasibility.py": "707ab0f01aa64cd86ce3ba85aa2dad4545be0ddb1ce6dd32f8a5c649327b485e",
+    "/home/exouser/FORTE/online_vla_restore_20260907/prepare_online_ablations.py": "4fd9ebb5e74ff685f5b48242ced5be7adc36720e38f002efdc9afd29b093a373",
+    "/home/exouser/FORTE/online_vla_restore_20260907/run_online_ablations.py": "9c1dd3aed56e798e14525316e125f18c0a5a1b039891f0c210e7707ec609488e",
+    "/home/exouser/FORTE/online_vla_restore_20260907/test_online_ablations.py": "78bd218d632a5c5f159a5a2e7a39206232d0637c131e4fb056b32fb39768cc91"
+  },
+  "source_sha256": "707ab0f01aa64cd86ce3ba85aa2dad4545be0ddb1ce6dd32f8a5c649327b485e",
+  "status": "DEFINITIONS_FROZEN_BEFORE_FINAL_MAIN_PHYSICS",
+  "tasks": [
+    0,
+    1,
+    5,
+    6
+  ],
+  "total_new_physical_ablation_plus_AF_comparison_max": 120,
+  "version": "FINAL_CONFIRMATORY_COMPONENT_ABLATIONS_V1",
+  "supersedes": "/home/exouser/FORTE/online_vla_restore_20260907/ONLINE_ABLATION_PROTOCOL_FROZEN.json",
+  "superseded_sha256": "46f3c88fb236556b45bbecf0a4eb34db5ade353cb18540ab159a8e3ed8de7755"
+}

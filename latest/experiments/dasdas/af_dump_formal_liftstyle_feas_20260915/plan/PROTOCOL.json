@@ -1,0 +1,48 @@
+{
+  "claim_boundary": "same-root AF-liftstyle argmax_p [1,5]@0.5 vs reused Nominal; EU logged not executed; not lift paper transfer qualification",
+  "created_utc": "2026-09-14T16:20:08.184128+00:00",
+  "formal_contexts": 24,
+  "formal_frictions": [
+    0.425,
+    0.575,
+    0.85
+  ],
+  "formal_policy_seeds": [
+    80200002,
+    80200003,
+    80200004,
+    80200005,
+    80200006,
+    80200007,
+    80200008,
+    80200009
+  ],
+  "methods_executed": [
+    "ActiveForcing"
+  ],
+  "methods_reused": [
+    "Nominal Frozen VLA"
+  ],
+  "methods_skipped": [
+    "Fixed-Strong 8N"
+  ],
+  "models_deploy": "/media/volume/dasdas/exouser/af_dump_formal_liftstyle_feas_20260915/models_deploy",
+  "offline_note": "EU on this model selects 1N on all 24 frozen formal features; not executed",
+  "physical_root": 200002,
+  "reused_nominal_results": "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_formal_single_root_20260914/FINAL_RESULTS.json",
+  "runtime_manifest": "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_maxf8_20260913/additional_data_v1/RUNTIME_MANIFEST.json",
+  "runtime_manifest_sha256": "01d0289b14b812a4a12455e826a0b213ef4bf4fcdb27717892289b7e137b5034",
+  "selector": "LiftstyleFeasibility argmax_p on [1,5] step 0.5",
+  "source_hashes": {
+    "/media/volume/dasdas/exouser/af_dump_formal_liftstyle_feas_20260915/EXPERIMENT_CARD.md": "4201d20e764bf93d109c2c73c5c84a10712d1a79c991c2ba4e4148ad2fe980b6",
+    "/media/volume/dasdas/exouser/af_dump_formal_liftstyle_feas_20260915/audit_formal_results.py": "939de5759b27bfda9485450c3c501977bea4356f197a357058cd3a994d919420",
+    "/media/volume/dasdas/exouser/af_dump_formal_liftstyle_feas_20260915/freeze_plan.py": "28a8197bebef19fb1f3a2f4aa1047b6eb7cae736c653ba1e389cc225c2937380",
+    "/media/volume/dasdas/exouser/af_dump_formal_liftstyle_feas_20260915/infer_af_context.py": "72573c7d3f549f383623052b28e08f0ca75e0394e403ba1052890bcbadaf8dfb",
+    "/media/volume/dasdas/exouser/af_dump_formal_liftstyle_feas_20260915/infer_liftstyle.py": "c7125f9ea84c61ec763e1973b15c5781745c3c1e89c355ae789a9019ab820a50",
+    "/media/volume/dasdas/exouser/af_dump_formal_liftstyle_feas_20260915/liftstyle_runtime.py": "1376d2a4b3286c7e2468f2d59000ceff522c5d14ee3fca3194ab2e177c618f5b",
+    "/media/volume/dasdas/exouser/af_dump_formal_liftstyle_feas_20260915/max_force_utility.py": "de94e01c2727d4edfa3e6dae241e5c142370a5fb23917a71c8f69e67c9ddf168",
+    "/media/volume/dasdas/exouser/af_dump_formal_liftstyle_feas_20260915/run_af_queue.py": "1fbc6c5b4f26d4a42d505cf4ac6538e31065abbf3244457f833cf911e7b2f69b"
+  },
+  "task": "dump_bin_bigbin",
+  "version": "AF_DUMP_FORMAL_LIFTSTYLE_FEAS_V1"
+}

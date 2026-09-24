@@ -1,0 +1,205 @@
+{
+  "arms": [
+    "FROZEN_PI0_NATIVE_DEFAULT",
+    "FIXED_MAX",
+    "NO_QUERY_TRAINING_PRIOR_UTILITY",
+    "ACTIVEFORCING_1Q_UTILITY",
+    "GT_PHYSICS_DIRECT_UTILITY"
+  ],
+  "base_runner_sha256": "a58863d34d7be6de0c2084a73edb5d03dd4173c3b3d950d60edfbe1e0b578de9",
+  "expected_worker_gpu_mib": 7600,
+  "experiment": "ACTIVEFORCING_E5_FRESH_UTILITY_E2E",
+  "final_force_selector": "EXPECTED_UTILITY",
+  "gpu": {
+    "estimated_incremental_worker_mib": 7600,
+    "launch_allowed": true,
+    "memory_free_mib": 24958,
+    "memory_total_mib": 40960,
+    "memory_used_mib": 15483,
+    "rule": "one heavy worker only when util<70% and free>10GiB",
+    "utilization_pct": 40
+  },
+  "max_tuples": 1,
+  "method_change": "FORCE_SELECTOR_ONLY_HARD_RHO_TO_FROZEN_EXPECTED_UTILITY",
+  "p6r1_sha256": "ae21e6d3299aab4bb2b910f27d774f3685dbc8e7ef6d90abe24fadecf780b1d4",
+  "phase": "full",
+  "pi0": {
+    "checks": {
+      "backend": true,
+      "base_policy": true,
+      "checkpoint_hash": true,
+      "checkpoint_path": true,
+      "effective_action_dim": true,
+      "instruction": true,
+      "policy_config": true,
+      "replan_steps": true
+    },
+    "manifest": {
+      "action_chunk": {
+        "effective_dim": 13,
+        "replan_steps": 10,
+        "server_action_dim": 32
+      },
+      "authoritative_prior_artifact": "/home/exouser/Tabero/analysis/results/p6g1_primitive_ik_vla_grasp_realization_20260825_103146",
+      "base_policy": "Pi0Config (pi0, not pi0.5), authoritative P6-G1 policy",
+      "checkpoint_hash_sha256": "0598a390733235fde0bf5633b1543d91176d31bb5012d4d26f9373a90642fe17",
+      "checkpoint_path": "/media/volume/newdata/exouser/tabero/models/pi0_lora_tacfield_tabero/checkpoints/pi0_lora_tacfield_tabero/pi0_lora_tacfield_tabero/49999",
+      "checkpoint_step": 49999,
+      "gripper_semantics": {
+        "force_slots_overridden": "fLz=fRz=4N for fixed 8N; other pose/gripper fields preserved",
+        "raw_gripper_slot_preserved": true,
+        "release_semantics": "authoritative VLA gripper slot passed through"
+      },
+      "instruction": "original official full-task instruction",
+      "method_change": "NONE",
+      "norm_stats_dir": "/media/volume/newdata/exouser/tabero/models/pi0_lora_tacfield_tabero/checkpoints/pi0_lora_tacfield_tabero/pi0_lora_tacfield_tabero/49999/assets/NathanWu7/tabero",
+      "observation_specification": {
+        "image": "agentview RGB uint8 224x224x3",
+        "state": "[eef position, eef axis-angle, gripper_abs]",
+        "tactile_gripper_force": "8x6 left/right fingertip force history when available",
+        "tactile_image": "4x4 tactile RGB history mosaic when available",
+        "tactile_marker_motion": "1+8 marker-motion history when available",
+        "wrist_image": "eye_in_hand RGB uint8 224x224x3"
+      },
+      "policy_class": "OpenPI websocket policy created by openpi.policies.policy_config.create_trained_policy",
+      "policy_config": "pi0_lora_tacfield_tabero",
+      "policy_state": {
+        "action_queue_cache": "none; infer then execute first 10 actions",
+        "history": "constructed online from current observation/tactile buffers",
+        "recurrent_hidden_state": "not exposed",
+        "websocket_client_reset_effect": "no-op"
+      },
+      "server_metadata": {
+        "b5_checkpoint_read_only": true,
+        "b5_explicit_norm_stats_dir": "/media/volume/newdata/exouser/tabero/models/pi0_lora_tacfield_tabero/checkpoints/pi0_lora_tacfield_tabero/pi0_lora_tacfield_tabero/49999/assets/NathanWu7/tabero",
+        "b5_policy_config": "pi0_lora_tacfield_tabero"
+      },
+      "server_python": "/media/volume/newdata/exouser/tabero/Tabero-VTLA/.venv/bin/python",
+      "server_wrapper": "/home/exouser/Tabero/analysis/results/b5_tabero_neutral_20260822_040652/scripts/b5_serve_policy_with_explicit_norm_stats.py"
+    },
+    "server_port": 18881
+  },
+  "protocol_version": "ACTIVEFORCING_FULL_CLAIM_V2_UTILITY",
+  "reset_semantics": "fresh reset per tuple; native/fixed/prior from root; 1Q/GT continue from exact post-query state",
+  "roots": [
+    {
+      "friction": 0.26441818757129376,
+      "friction_band": "LOW",
+      "object": "butter_1",
+      "phase": "full",
+      "root_id": "activeforcing_full_t6_root00_s7200",
+      "root_index": 0,
+      "root_seed": 7200,
+      "task": 6,
+      "tuple_id": "activeforcing_full_t6_root00_s7200_low_mu0.264418"
+    }
+  ],
+  "runner_sha256": "13b33cbc784e2d9bc712a8211ad11b846eca1f8be773dd2888d7b1d33cd9b0e8",
+  "start_utc": "2026-09-02T09:24:09.508505+00:00",
+  "task_Fmax_N": {
+    "0": 5.0,
+    "1": 6.0,
+    "5": 5.0,
+    "6": 4.0
+  },
+  "task_candidate_grid_N": {
+    "0": [
+      3.0,
+      3.25,
+      3.5,
+      3.75,
+      4.0,
+      4.25,
+      4.5,
+      4.75,
+      5.0
+    ],
+    "1": [
+      4.0,
+      4.25,
+      4.5,
+      4.75,
+      5.0,
+      5.25,
+      5.5,
+      5.75,
+      6.0
+    ],
+    "5": [
+      3.0,
+      3.25,
+      3.5,
+      3.75,
+      4.0,
+      4.25,
+      4.5,
+      4.75,
+      5.0
+    ],
+    "6": [
+      3.0,
+      3.125,
+      3.25,
+      3.375,
+      3.5,
+      3.625,
+      3.75,
+      3.875,
+      4.0
+    ]
+  },
+  "task_end_requirement": "no chunk-budget exhaustion; every final row must pass reset-to-end provenance",
+  "tasks": [
+    6
+  ],
+  "tuple_start": 0,
+  "utc": "2026-09-02T09:24:09.507174+00:00",
+  "utility": {
+    "canonical_hash": "c5bc4f39861a84b9ba95d55cdb5f8633a8b004d205b3864a02799340653d9b10",
+    "checks": {
+      "canonical_core_hash": true,
+      "embedded_hash": true,
+      "fmax": true,
+      "frozen": true,
+      "selection": true,
+      "tie_break": true
+    },
+    "config": {
+      "archive_candidate_pool_sha256": "fb2d96be8cf6576f116842684f34fd091b42a6af0e24f1f5b3248514c98d9916",
+      "config_sha256": "c5bc4f39861a84b9ba95d55cdb5f8633a8b004d205b3864a02799340653d9b10",
+      "equation": "p_success*(1-force_cost_coefficient*F/Fmax)+(1-p_success)*(-failure_penalty)",
+      "failure_penalty": 1.0,
+      "fit_and_sensitivity_scope": "TRAIN/root-heldout-OOF DEV folds only",
+      "force_cost_coefficient": 1.0,
+      "frozen": true,
+      "name": "ACTIVEFORCING_CURRENT_FULL_UTILITY",
+      "sealed_TEST_used": false,
+      "selection": "argmax_candidate_expected_utility",
+      "sensitivity_grid": {
+        "failure_penalty": [
+          0.75,
+          1.0,
+          1.25
+        ],
+        "force_cost_coefficient": [
+          0.75,
+          1.0,
+          1.25
+        ],
+        "grid_frozen_before_computation": true
+      },
+      "source_protocol": "/home/exouser/FORTE/activeforcing_residual_utility_20260901_055605/RESIDUAL_UTILITY_DEVELOPMENT_PROTOCOL.json",
+      "source_protocol_sha256": "f697eaa902559fffabaf77a7aa8cb2e8c319007162896a9b5b6a67b22c3857d7",
+      "success_benefit": 1.0,
+      "task_Fmax_N": {
+        "0": 5.0,
+        "1": 6.0,
+        "5": 5.0,
+        "6": 4.0
+      },
+      "tie_break": "lower_force"
+    }
+  },
+  "utility_config_sha256": "c5bc4f39861a84b9ba95d55cdb5f8633a8b004d205b3864a02799340653d9b10",
+  "vla_max_chunks": "dynamic ceil((env.max_episode_length-start_episode_step)/10)+1"
+}

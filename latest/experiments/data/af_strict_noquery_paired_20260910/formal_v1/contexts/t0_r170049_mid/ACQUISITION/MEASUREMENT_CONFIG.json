@@ -1,0 +1,18 @@
+{
+  "bodies": [
+    "panda_leftfinger",
+    "panda_rightfinger",
+    "gelsight_mini_case_left",
+    "gelsight_mini_case_right",
+    "gelpad_left",
+    "gelpad_right"
+  ],
+  "broad_history_length": 1,
+  "broad_update_period": 0.0,
+  "force_rescale": false,
+  "gains_changed": false,
+  "target": "alphabet_soup_1",
+  "target_contact_report_enabled": true,
+  "thresholds_changed": false,
+  "version": "WHOLE_GRASP_SIX_RIGID_BODY_SUM_SIGNED_PATCH_V3"
+}

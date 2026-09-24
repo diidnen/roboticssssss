@@ -1,0 +1,65 @@
+{
+  "version": "DUMP_ORIGINAL_AF_ROOTLOCAL_COLLECTION_V2_CANONICAL",
+  "created_utc": "2026-09-12T19:11:07.115895+00:00",
+  "root_scope": [
+    200002
+  ],
+  "task": "dump_bin_bigbin",
+  "policy_seed": 30200002,
+  "force_support_N": [
+    0.5,
+    8.0
+  ],
+  "forces_N": [
+    0.5,
+    1.0,
+    2.0,
+    3.0,
+    4.0,
+    5.0,
+    6.0,
+    8.0
+  ],
+  "frictions_by_split": {
+    "TRAIN": [
+      0.3,
+      0.35,
+      0.4,
+      0.45,
+      0.5,
+      0.55,
+      0.6,
+      0.65,
+      0.7,
+      0.75,
+      0.8,
+      0.85
+    ],
+    "VAL": [
+      0.325,
+      0.475,
+      0.625,
+      0.775
+    ],
+    "TEST": [
+      0.375,
+      0.525,
+      0.675,
+      0.825
+    ]
+  },
+  "split_unit": "complete physical query setting (root, friction); all branches together",
+  "cross_root_generalization": false,
+  "original_utility_normalization_N": 5.0,
+  "planned_training_validation_branches": 128,
+  "planned_test_rollouts": 24,
+  "protocol_text_sha256": "fc04587159dcaedc4944a0a9233bb5e940e31af0570763e3ea307b5c142cc6d4",
+  "runtime_manifest_path": "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_original_restore_20260912/original_rootlocal_dataset_v2_canonical/RUNTIME_MANIFEST.json",
+  "runtime_manifest_sha256": "76659a1c950d51a27944932347c14127c24c14b784b16d1614058661b2fbae40",
+  "test_not_collected_until_both_checkpoint_selection_locks": true,
+  "initialization_binding": "CANONICAL_OPEN_READY_V2",
+  "amendment_sha256": "7f22669d0734380e5a3a720f7963a3878dddf67c951b73c252db500cc1d7974a",
+  "prior_collection_protocol_path": "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_original_restore_20260912/original_rootlocal_dataset_v1/COLLECTION_PROTOCOL.json",
+  "prior_collection_protocol_sha256": "d5bca93462d29e9f5d972a4ab983117dc727407708b7e563cb2215227293401c",
+  "old_40_labels_retained_as_prior_version_not_mixed_into_v2": true
+}

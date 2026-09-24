@@ -1,0 +1,21 @@
+{
+  "activeforcing_used": false,
+  "commanded_force_N": null,
+  "comparison_note": "same root/task/friction strata as Table II; not post-probe state-paired",
+  "execution": "natural reset, 20 open-hold settling steps, then byte-identical postprocessed pi0 actions",
+  "force_or_gripper_override_used": false,
+  "method": "NOMINAL_VLA",
+  "metric_contract": "ONLINE_VLA_350STEP_WHOLE_MESH_RELEASE_SUPPORT_V1 plus contact-conditioned bilateral squeeze",
+  "plan": {
+    "band": "LOW",
+    "id": "t0_r170044_low__NOMINAL_VLA",
+    "mu": 0.2937102019159983,
+    "object": "alphabet_soup_1",
+    "root": 170044,
+    "target": "basket_1",
+    "task": 0
+  },
+  "probe_used": false,
+  "prompt": "pick up the alphabet soup and place it in the basket",
+  "runner_sha256": "f703070c40bb58eb254a5504337d6ea6483f786b43a0aaa7d81f90001207c067"
+}

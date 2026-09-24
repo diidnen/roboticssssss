@@ -1,0 +1,25 @@
+{
+  "checkpoint_sha256": "0598a390733235fde0bf5633b1543d91176d31bb5012d4d26f9373a90642fe17",
+  "contexts": 96,
+  "execution": "raw postprocessed pi0 arm+gripper action; no force/gripper override",
+  "horizon": 350,
+  "method": "MATCHED_NATIVE_VLA",
+  "probe_prefix": "shared but evidence ignored by Native policy",
+  "roots": [
+    170040,
+    170041,
+    170042,
+    170043,
+    170044,
+    170045,
+    170046,
+    170047
+  ],
+  "start": "exact deterministic Table-II post-query state",
+  "tasks": [
+    0,
+    1,
+    5,
+    6
+  ]
+}

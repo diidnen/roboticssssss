@@ -1,0 +1,10 @@
+{
+  "criterion": "DEV exact frontier >= 0.80 and under-force <= 0.10 and imagined branch AUROC >= 0.75",
+  "dev_branch_auroc": 0.5,
+  "dev_frontier_exact": 0.4583333333333333,
+  "dev_under_force": 0.5416666666666666,
+  "dev_within_one_step": 0.5833333333333334,
+  "frontier_threshold": 0.5,
+  "frozen_before_test": true,
+  "world_model_slip_f1_required": false
+}

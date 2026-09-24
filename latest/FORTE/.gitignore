@@ -1,0 +1,20 @@
+__pycache__/
+*.pyc
+*.log
+outputs/
+*.npz
+*.png
+.hydra/
+*.csv
+*.jpg
+*.zip
+*.pdf
+*.h5
+*.pt
+*.json
+
+# Build / install artifacts
+*.egg-info/
+build/
+dist/
+.venv/

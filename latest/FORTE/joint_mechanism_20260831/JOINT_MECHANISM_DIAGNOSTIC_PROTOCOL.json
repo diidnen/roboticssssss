@@ -1,0 +1,116 @@
+{
+  "protocol_name": "JOINT_MECHANISM_DIAGNOSTIC_PROTOCOL",
+  "status": "FROZEN_AFTER_PHASE0_BEFORE_NEW_TRAINING",
+  "created_utc": "2026-08-31T08:27:00Z",
+  "single_goal": "Distinguish visual-context memorization from sample-limited physics auxiliary learning without tuning the frozen model family.",
+  "scope": {
+    "same_task": true,
+    "same_object_task_distribution": true,
+    "held_out_physical_root_context": true,
+    "unseen_task_generalization": false,
+    "cross_object_generalization": false,
+    "universal_physical_reasoning": false
+  },
+  "hypotheses": {
+    "A": "High-dimensional visual features provide a train-root/context identification shortcut.",
+    "B": "The physics and intervention-effect auxiliary itself needs more independent contexts than a single 18-context task provides."
+  },
+  "joint_novisual": {
+    "input": "exact corresponding Base 17-D sequence plus 54-D condition; no RGB, visual feature, PCA visual representation or context ID",
+    "architecture": "authoritative JointIEFeasibility with Physics-GRU hidden64 and H8x13 trajectory target",
+    "parameter_count": 39337,
+    "initialization": "same authoritative per-seed pretrained Physics-GRU checkpoint as Visual Joint",
+    "loss": "1.0*L_physics + 1.0*L_IE + 0.3*L_feas",
+    "physical_target": "normalized H8x13 state delta",
+    "ie_target": "SmoothL1 of predicted adjacent-force trajectory difference against the true normalized matched trajectory difference",
+    "optimizer": "AdamW",
+    "learning_rate": 0.0008,
+    "weight_decay": 0.0001,
+    "gradient_clip": 1.0,
+    "batch_cap": 64,
+    "epochs": 80,
+    "seeds": [0, 1, 2],
+    "early_stopping": false,
+    "hyperparameter_search": false
+  },
+  "taskwise_data": {
+    "tasks": [0, 1, 5, 6],
+    "contexts_per_task": 18,
+    "roots_per_task": 6,
+    "branches_per_context": 10,
+    "force_cells_per_context": 5,
+    "repeats_per_force": 2,
+    "adjacent_ie_pairs_per_context": 8,
+    "force_support_N": {
+      "0": [3.0, 5.0],
+      "1": [4.0, 6.0],
+      "5": [3.0, 5.0],
+      "6": [3.0, 4.0]
+    }
+  },
+  "evaluation": {
+    "primary_probability": "raw mean of three per-seed sigmoid probabilities for frozen full-data checkpoints",
+    "train_root_cv": "3 folds, hold out two complete roots/six contexts/60 branches, fold-local normalization, frozen seed0 to match existing taskwise CV",
+    "metrics": [
+      "BCE",
+      "probability_MAE",
+      "Brier",
+      "NLL",
+      "frontier_MAE_N",
+      "under_force_rate",
+      "monotonicity",
+      "TRAIN_to_heldout_gap"
+    ],
+    "retrospective_only": true,
+    "model_selection_allowed": false,
+    "lambda_selection_allowed": false,
+    "untouched_dev_claim_allowed": false,
+    "task6_single_dev_rule": "Report metrics but do not claim multi-context generalization from one DEV root; rely primarily on TRAIN root-heldout CV."
+  },
+  "pooled": {
+    "population": "current task0/task1/task5/task6 TRAIN contexts only",
+    "contexts": 72,
+    "roots": 24,
+    "evaluation": "within-task held-out roots, reported separately by task; never unseen-task generalization",
+    "primary_clean_comparison": "matched Pooled Joint-NoVisual minus matched Pooled Base using the authoritative H8x13/target-matched-IE formulation",
+    "original_pooled_visual_pipeline": "reportable only with CRITICAL_IMPLEMENTATION_CONFOUND because its architecture, target and IE loss differ",
+    "dev_or_test_selection": false
+  },
+  "classification_rules": {
+    "Case_A": "Joint-NoVisual >= Base and Visual Joint << Full across multiple tasks: VISUAL_CONDITIONING_IS_PRIMARY_CONTEXT_MEMORIZATION_PATH",
+    "Case_B": "single-task Joint-NoVisual << Base and Visual Joint << Full, but pooled Joint-NoVisual recovers/exceeds Base: JOINT_REQUIRES_GREATER_CONTEXT_DIVERSITY",
+    "Case_C": "single-task and pooled Joint-NoVisual remain worse: OLD_JOINT_GAIN_DOES_NOT_TRANSFER_TO_CURRENT_DATA_REGIME",
+    "Case_D": "Joint-NoVisual consistently > Base while pooled/visual Joint remains unstable: PHYSICS_AUXILIARY_SIGNAL_SURVIVES_WITHOUT_VISUAL_CONTEXT"
+  },
+  "data_too_small_rule": "DATA_TOO_SMALL may be asserted only if pooled higher-context Joint-NoVisual recovers, or a frozen nested-context diagnostic shows systematic held-out improvement with independent-context count. Otherwise use SMALL_CONTEXT_COUNT_IS_A_PLAUSIBLE_BUT_UNPROVEN_EXPLANATION.",
+  "task1_label_caveat": "140/180 TRAIN labels reconstructed; analyze separately from task5, which has 180/180 direct labels.",
+  "forbidden": [
+    "architecture changes",
+    "loss changes",
+    "visual encoder changes",
+    "PCA dimension changes",
+    "lambda tuning",
+    "hidden-size tuning",
+    "best-seed selection",
+    "Probe restart",
+    "force-grid changes",
+    "restarting the existing task6 collector",
+    "rerunning existing scientific failures",
+    "using DEV or TEST for selection",
+    "counting timesteps or executions as independent contexts",
+    "describing pooled training as unseen-task generalization"
+  ],
+  "preexisting_artifact_handling": {
+    "task0_joint_novisual": "Checkpoint/result existed before this protocol; retain as retrospective evidence only after code/hash audit, with no tuning or selection.",
+    "old_nested_context_partial": "Partial checkpoints existed before this protocol; retain only complete frozen settings and correct taskwise evaluator reporting before use."
+  },
+  "source_sha256": {
+    "gnp_style_continuous.py": "0c919156a9a0dfad5f9b92c0499c17a59e93e2c3dd93acbf19963842d7031259",
+    "task0_visual_context_early.py": "af027174938106b29d081da26055b02a682c390ecaa7a817d1be4b65c6f55cd7",
+    "per_task_visual_context_early.py": "c6390d3fe7c5e6d2a3051f84f57792dbd17fec4fd294653f61d7c3b05a0e96d6",
+    "prospective_visual_context_pipeline.py": "710e1740b32a466248de4dda76f642674a9d645495b8d58023845a86d5b5cfef",
+    "full_task_feasibility_decoder.py": "bf002ca6a5e190f0eff4e0429bd3340f9acfdb4a694dde2528a98581ce8ff83d",
+    "trajectory_physical_imagination.py": "429761e395e5d6c4f658326e4f5642629eeaaf6498c2217f8f4829695340c2ff",
+    "counterfactual_force_world_model.py": "c088369626b2cd783f45f5130d932fd7aba6dcc9e54b3504c1a81b4e4317d560"
+  }
+}

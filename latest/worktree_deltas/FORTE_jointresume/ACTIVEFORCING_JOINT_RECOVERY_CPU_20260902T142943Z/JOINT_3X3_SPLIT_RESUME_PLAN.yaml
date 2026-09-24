@@ -1,0 +1,147 @@
+schema_version: 1
+plan_id: JOINT_3X3_CPU_PLAN_20260902T142943Z
+status: PREPARED_NOT_AUTHORIZED
+evidence_role: PROTOCOL_AND_ANALYSIS_SKELETON_ONLY
+protocol_version: ACTIVEFORCING_FULL_CLAIM_V2_UTILITY
+final_force_selector: EXPECTED_UTILITY
+gpu_work_authorized: false
+joint_results_available: false
+
+scope:
+  task_id: 2
+  object: salad_dressing_1
+  path_structure: LONG_TRANSPORT_TURNING_ACCELERATION_V1
+  query: frozen_P4B_subject_to_mass_release_hash
+  friction_values: [0.25, 0.50, 0.75]
+  mass_values_kg: [0.05, 0.10, 0.20]
+  factorial_cells_per_root: 9
+  query_repeats_per_cell: 1
+  rationale: Prefer independent root contexts over deterministic repeats.
+
+root_split:
+  reservation_status: PROVISIONAL_ALIASES_REQUIRE_COORDINATOR_COLLISION_SCAN
+  train:
+    aliases: [TRAIN_J00, TRAIN_J01, TRAIN_J02, TRAIN_J03, TRAIN_J04, TRAIN_J05]
+    roots: 6
+    query_cells: 54
+    use: Fit preprocessing and estimators; select alpha by root-grouped CV.
+  dev:
+    aliases: [DEV_J00, DEV_J01, DEV_J02]
+    roots: 3
+    query_cells: 27
+    use: One identifiability gate after every analysis choice is frozen.
+  locked_test:
+    aliases: [TEST_J00, TEST_J01, TEST_J02]
+    roots: 3
+    query_cells: 27
+    use: Sealed until query, features, estimator, Direct, Utility, and gates are frozen.
+  total_roots: 12
+  total_query_cells: 108
+  split_unit: root_seed_family
+  forbidden: [cell_random_split, timestep_random_split, repeat_random_split]
+
+staging:
+  - id: J0
+    name: CPU protocol and code gate
+    state: COMPLETE_IN_THIS_LANE
+    outputs: [code_protocol_audit, split_resume_plan, analysis_skeleton, recovery_status]
+  - id: J1
+    name: Mass dependency release
+    state: BLOCKED
+    requires:
+      - Mass formal protocol status COMPLETED.
+      - Exactly 18 unique contexts and 180 unique branches at five forces x two repeats.
+      - Expected TRAIN/TEST root and mass-cell coverage; no quarantined or partial material.
+      - Actual query-start state parity and applied mass/inertia/friction readback QA.
+      - Frozen Mass query feature, normalizer, belief, Direct, candidates, and V2 Utility hashes.
+      - Fresh Mass E2E and validated Mass final report/table.
+  - id: J2
+    name: Joint engineering smoke
+    state: NOT_AUTHORIZED
+    evidence_role: ENGINEERING_ONLY
+    design: One separately named non-evidentiary smoke root across all nine cells.
+    pass: Physics readback, state parity, query validity, atomic writes, and resume test all pass.
+  - id: J3
+    name: Joint TRAIN collection
+    state: NOT_STARTED
+    design: Six roots x nine cells; query evidence only for identifiability fitting.
+  - id: J4
+    name: CPU TRAIN grouped-CV analysis
+    state: WAITING_FOR_J3
+    test_access: forbidden
+  - id: J5
+    name: Joint DEV collection and gate
+    state: WAITING_FOR_J4_FREEZE
+    design: Three roots x nine cells, evaluated once.
+  - id: J6
+    name: Freeze full E8b decision contract
+    state: WAITING_FOR_J5_PASS
+    freezes: [query_hash, feature_schema_hash, estimator_hashes, normalizer_hashes, direct_hashes, utility_hash, candidates, force_bounds, posterior_samples, fallback, root_manifest, metrics, statistics]
+  - id: J7
+    name: Locked TEST and matched joint E2E
+    state: SEALED_NOT_AUTHORIZED
+    requires: Explicit coordinator authorization and healthy GPU admission gate.
+
+balanced_cell_order:
+  rule: Deterministic per-root permutation derived from plan_id plus root alias.
+  constraint: Each root contains the complete 3x3 grid; order is frozen before any outcomes exist.
+  resume: Preserve the original order and run only missing validated cell keys.
+
+atomic_cell_key: [protocol_version, task_id, split, root_seed, friction, mass_kg, query_repeat]
+cell_acceptance:
+  - Exactly one episode record for the atomic cell key.
+  - Timestep rows are contiguous, unique on [cell_key, step], and match recorded count.
+  - Requested and applied friction agree within frozen tolerance.
+  - Requested mass and readback mass agree within frozen tolerance.
+  - Inertia ratio agrees with mass ratio within frozen tolerance.
+  - Actual pre-query state hash matches the other eight cells for the root, excluding declared physics fields.
+  - Query validity and failure reason are explicit; invalid cells remain in denominator.
+  - Episode and timestep files plus hashes are committed atomically.
+
+resume_policy:
+  source: Immutable prior output plus SHA-256 manifest.
+  complete_cell: Validate and skip.
+  partial_cell: Quarantine; never append to or count it.
+  corrupt_or_duplicate_cell: Fail closed and require manual audit.
+  missing_cell: Run only after prerequisites and GPU admission pass.
+  completed_root: Accept only when all nine cell keys pass.
+  outcome_driven_retry: forbidden
+  locked_test_retry: forbidden_except_predeclared_infrastructure_failure_rule
+
+analysis_contract:
+  legal_inputs: Query history and pre-query metadata only.
+  forbidden_inputs: [downstream_outcome, success_label, selected_force, oracle_force, empirical_frontier, privileged_object_pose, true_physics_as_feature, split_encoded_feature, root_id_encoded_feature]
+  preprocessing: Fit on TRAIN only inside each root-grouped fold; transform DEV/TEST only.
+  candidate_estimators:
+    - friction_axis_control trained only at nominal mass 0.10 kg
+    - mass_axis_control trained only at nominal friction 0.50
+    - joint_multioutput_ridge trained on the full TRAIN factorial
+  primary_identifiability_metrics: [friction_MAE, mass_MAE_kg, friction_band_accuracy, mass_band_accuracy, exact_joint_cell_accuracy]
+  cross_confusion_metrics: [friction_confusion_by_true_mass, mass_confusion_by_true_friction, friction_error_vs_mass, mass_error_vs_friction, nuisance_prediction_spread]
+  uncertainty_unit: root_seed_family
+  reporting: Per-root values plus root-cluster bootstrap intervals; cells are not independent roots.
+  decision_metrics: UNAVAILABLE_UNTIL_FROZEN_DIRECT_UTILITY_AND_MATCHED_OUTCOMES_EXIST
+
+dev_gate:
+  all_required: true
+  requirements:
+    - Complete 3x3 coverage on every DEV root with no split overlap or leakage.
+    - Query-validity floor and per-cell missingness threshold are frozen before DEV access.
+    - Joint estimator meets frozen MAE/band/exact-cell thresholds on every reported axis.
+    - Joint estimator improves over both nominal-nuisance axis controls under a frozen paired root statistic.
+    - Cross-confusion and nuisance-spread limits pass.
+    - Root-cluster uncertainty is reported; no claim uses n_cells as independent n.
+  note: Numeric thresholds remain deliberately unset until Mass releases the compatible feature/noise contract; setting them now would be arbitrary.
+
+resource_gate:
+  current: BLOCKED_DRIVER
+  action: REMAIN_IDLE
+  before_any_future_launch:
+    - Fresh successful device query.
+    - No duplicate/scientific worker conflict.
+    - Mass release token exists and hashes match.
+    - Explicit GPU admission artifact names this plan and output directory.
+
+claim_guardrails:
+  allowed_now: [Joint protocol prepared, Joint code audited, Mass dependency blocked, CPU skeleton validated]
+  forbidden_now: [Joint identifiable, Joint not identifiable, Joint improves force choice, Joint interaction effect, Joint SR, Joint Utility]

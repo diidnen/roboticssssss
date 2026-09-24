@@ -1,0 +1,2911 @@
+{
+  "candidate_population": [
+    {
+      "F_next": 5.0,
+      "F_prev": 4.0,
+      "F_star": 4.5,
+      "context_id": "p5s0c_train_t0_r00_s5100_low_mu0.293710",
+      "force_lattice": [
+        3.0,
+        4.0,
+        4.5,
+        5.0
+      ],
+      "friction_band": "LOW",
+      "hidden_friction_analysis_only": 0.2937102019159983,
+      "historical_frontier_definition": "minimum successful force",
+      "root_id": "p5s0c_train_t0_root00_s5100",
+      "root_index": 0,
+      "root_seed": 5100,
+      "split": "TRAIN",
+      "task": 0
+    },
+    {
+      "F_next": 5.0,
+      "F_prev": 4.0,
+      "F_star": 4.5,
+      "context_id": "p5s0c_train_t0_r01_s5101_low_mu0.255969",
+      "force_lattice": [
+        3.0,
+        4.0,
+        4.5,
+        5.0
+      ],
+      "friction_band": "LOW",
+      "hidden_friction_analysis_only": 0.2559692046181955,
+      "historical_frontier_definition": "minimum successful force",
+      "root_id": "p5s0c_train_t0_root01_s5101",
+      "root_index": 1,
+      "root_seed": 5101,
+      "split": "TRAIN",
+      "task": 0
+    },
+    {
+      "F_next": 4.5,
+      "F_prev": 3.0,
+      "F_star": 4.0,
+      "context_id": "p5s0c_train_t0_r00_s5100_mid_mu0.450580",
+      "force_lattice": [
+        3.0,
+        4.0,
+        4.5,
+        5.0
+      ],
+      "friction_band": "MID",
+      "hidden_friction_analysis_only": 0.4505801238823336,
+      "historical_frontier_definition": "minimum successful force",
+      "root_id": "p5s0c_train_t0_root00_s5100",
+      "root_index": 0,
+      "root_seed": 5100,
+      "split": "TRAIN",
+      "task": 0
+    },
+    {
+      "F_next": 4.5,
+      "F_prev": 3.0,
+      "F_star": 4.0,
+      "context_id": "p5s0c_train_t0_r01_s5101_mid_mu0.592177",
+      "force_lattice": [
+        3.0,
+        4.0,
+        4.5,
+        5.0
+      ],
+      "friction_band": "MID",
+      "hidden_friction_analysis_only": 0.5921771020907431,
+      "historical_frontier_definition": "minimum successful force",
+      "root_id": "p5s0c_train_t0_root01_s5101",
+      "root_index": 1,
+      "root_seed": 5101,
+      "split": "TRAIN",
+      "task": 0
+    },
+    {
+      "F_next": 6.0,
+      "F_prev": 5.0,
+      "F_star": 5.5,
+      "context_id": "p5s0c_train_t1_r01_s5101_low_mu0.271996",
+      "force_lattice": [
+        4.0,
+        4.5,
+        5.0,
+        5.5,
+        6.0
+      ],
+      "friction_band": "LOW",
+      "hidden_friction_analysis_only": 0.2719961745269844,
+      "historical_frontier_definition": "minimum successful force",
+      "root_id": "p5s0c_train_t1_root01_s5101",
+      "root_index": 1,
+      "root_seed": 5101,
+      "split": "TRAIN",
+      "task": 1
+    },
+    {
+      "F_next": 6.0,
+      "F_prev": 5.0,
+      "F_star": 5.5,
+      "context_id": "p5s0c_train_t1_r05_s5105_low_mu0.281471",
+      "force_lattice": [
+        4.0,
+        4.5,
+        5.0,
+        5.5,
+        6.0
+      ],
+      "friction_band": "LOW",
+      "hidden_friction_analysis_only": 0.2814708484330954,
+      "historical_frontier_definition": "minimum successful force",
+      "root_id": "p5s0c_train_t1_root05_s5105",
+      "root_index": 5,
+      "root_seed": 5105,
+      "split": "TRAIN",
+      "task": 1
+    },
+    {
+      "F_next": 5.5,
+      "F_prev": 4.5,
+      "F_star": 5.0,
+      "context_id": "p5s0c_train_t1_r00_s5100_mid_mu0.467048",
+      "force_lattice": [
+        4.0,
+        4.5,
+        5.0,
+        5.5,
+        6.0
+      ],
+      "friction_band": "MID",
+      "hidden_friction_analysis_only": 0.4670478243968788,
+      "historical_frontier_definition": "minimum successful force",
+      "root_id": "p5s0c_train_t1_root00_s5100",
+      "root_index": 0,
+      "root_seed": 5100,
+      "split": "TRAIN",
+      "task": 1
+    },
+    {
+      "F_next": 5.0,
+      "F_prev": 4.0,
+      "F_star": 4.5,
+      "context_id": "p5s0c_train_t1_r01_s5101_mid_mu0.506177",
+      "force_lattice": [
+        4.0,
+        4.5,
+        5.0,
+        5.5,
+        6.0
+      ],
+      "friction_band": "MID",
+      "hidden_friction_analysis_only": 0.5061774499381578,
+      "historical_frontier_definition": "minimum successful force",
+      "root_id": "p5s0c_train_t1_root01_s5101",
+      "root_index": 1,
+      "root_seed": 5101,
+      "split": "TRAIN",
+      "task": 1
+    },
+    {
+      "F_next": 5.0,
+      "F_prev": 4.0,
+      "F_star": 4.5,
+      "context_id": "p5s0c_train_t5_r00_s5100_low_mu0.270805",
+      "force_lattice": [
+        3.0,
+        4.0,
+        4.5,
+        5.0
+      ],
+      "friction_band": "LOW",
+      "hidden_friction_analysis_only": 0.2708052527683458,
+      "historical_frontier_definition": "minimum successful force",
+      "root_id": "p5s0c_train_t5_root00_s5100",
+      "root_index": 0,
+      "root_seed": 5100,
+      "split": "TRAIN",
+      "task": 5
+    },
+    {
+      "F_next": 5.0,
+      "F_prev": 4.0,
+      "F_star": 4.5,
+      "context_id": "p5s0c_train_t5_r01_s5101_low_mu0.269928",
+      "force_lattice": [
+        3.0,
+        4.0,
+        4.5,
+        5.0
+      ],
+      "friction_band": "LOW",
+      "hidden_friction_analysis_only": 0.2699280391435209,
+      "historical_frontier_definition": "minimum successful force",
+      "root_id": "p5s0c_train_t5_root01_s5101",
+      "root_index": 1,
+      "root_seed": 5101,
+      "split": "TRAIN",
+      "task": 5
+    },
+    {
+      "F_next": 4.5,
+      "F_prev": 3.0,
+      "F_star": 4.0,
+      "context_id": "p5s0c_train_t5_r00_s5100_mid_mu0.538330",
+      "force_lattice": [
+        3.0,
+        4.0,
+        4.5,
+        5.0
+      ],
+      "friction_band": "MID",
+      "hidden_friction_analysis_only": 0.538330484944251,
+      "historical_frontier_definition": "minimum successful force",
+      "root_id": "p5s0c_train_t5_root00_s5100",
+      "root_index": 0,
+      "root_seed": 5100,
+      "split": "TRAIN",
+      "task": 5
+    },
+    {
+      "F_next": 4.5,
+      "F_prev": 3.0,
+      "F_star": 4.0,
+      "context_id": "p5s0c_train_t5_r01_s5101_mid_mu0.531976",
+      "force_lattice": [
+        3.0,
+        4.0,
+        4.5,
+        5.0
+      ],
+      "friction_band": "MID",
+      "hidden_friction_analysis_only": 0.5319764380853421,
+      "historical_frontier_definition": "minimum successful force",
+      "root_id": "p5s0c_train_t5_root01_s5101",
+      "root_index": 1,
+      "root_seed": 5101,
+      "split": "TRAIN",
+      "task": 5
+    },
+    {
+      "F_next": 4.0,
+      "F_prev": 3.0,
+      "F_star": 3.5,
+      "context_id": "p5s0c_train_t6_r00_s5100_low_mu0.257577",
+      "force_lattice": [
+        3.0,
+        3.5,
+        4.0
+      ],
+      "friction_band": "LOW",
+      "hidden_friction_analysis_only": 0.2575768733744629,
+      "historical_frontier_definition": "minimum successful force",
+      "root_id": "p5s0c_train_t6_root00_s5100",
+      "root_index": 0,
+      "root_seed": 5100,
+      "split": "TRAIN",
+      "task": 6
+    },
+    {
+      "F_next": 4.0,
+      "F_prev": 3.0,
+      "F_star": 3.5,
+      "context_id": "p5s0c_train_t6_r01_s5101_low_mu0.216789",
+      "force_lattice": [
+        3.0,
+        3.5,
+        4.0
+      ],
+      "friction_band": "LOW",
+      "hidden_friction_analysis_only": 0.2167888067328618,
+      "historical_frontier_definition": "minimum successful force",
+      "root_id": "p5s0c_train_t6_root01_s5101",
+      "root_index": 1,
+      "root_seed": 5101,
+      "split": "TRAIN",
+      "task": 6
+    },
+    {
+      "F_next": 4.0,
+      "F_prev": 3.0,
+      "F_star": 3.5,
+      "context_id": "p5s0c_train_t6_r01_s5101_high_mu0.910021",
+      "force_lattice": [
+        3.0,
+        3.5,
+        4.0
+      ],
+      "friction_band": "HIGH",
+      "hidden_friction_analysis_only": 0.910021416560606,
+      "historical_frontier_definition": "minimum successful force",
+      "root_id": "p5s0c_train_t6_root01_s5101",
+      "root_index": 1,
+      "root_seed": 5101,
+      "split": "TRAIN",
+      "task": 6
+    },
+    {
+      "F_next": 4.0,
+      "F_prev": 3.0,
+      "F_star": 3.5,
+      "context_id": "p5s0c_train_t6_r04_s5104_high_mu0.970401",
+      "force_lattice": [
+        3.0,
+        3.5,
+        4.0
+      ],
+      "friction_band": "HIGH",
+      "hidden_friction_analysis_only": 0.9704010725401304,
+      "historical_frontier_definition": "minimum successful force",
+      "root_id": "p5s0c_train_t6_root04_s5104",
+      "root_index": 4,
+      "root_seed": 5104,
+      "split": "TRAIN",
+      "task": 6
+    },
+    {
+      "F_next": 5.0,
+      "F_prev": 4.0,
+      "F_star": 4.5,
+      "context_id": "p5s0c_dev_t0_r06_s5106_low_mu0.288234",
+      "force_lattice": [
+        3.0,
+        4.0,
+        4.5,
+        5.0
+      ],
+      "friction_band": "LOW",
+      "hidden_friction_analysis_only": 0.2882343327859944,
+      "historical_frontier_definition": "minimum successful force",
+      "root_id": "p5s0c_dev_t0_root06_s5106",
+      "root_index": 6,
+      "root_seed": 5106,
+      "split": "DEV",
+      "task": 0
+    },
+    {
+      "F_next": 5.0,
+      "F_prev": 4.0,
+      "F_star": 4.5,
+      "context_id": "p5s0c_dev_t0_r07_s5107_low_mu0.294781",
+      "force_lattice": [
+        3.0,
+        4.0,
+        4.5,
+        5.0
+      ],
+      "friction_band": "LOW",
+      "hidden_friction_analysis_only": 0.2947813460786453,
+      "historical_frontier_definition": "minimum successful force",
+      "root_id": "p5s0c_dev_t0_root07_s5107",
+      "root_index": 7,
+      "root_seed": 5107,
+      "split": "DEV",
+      "task": 0
+    },
+    {
+      "F_next": 4.5,
+      "F_prev": 3.0,
+      "F_star": 4.0,
+      "context_id": "p5s0c_dev_t0_r06_s5106_mid_mu0.504922",
+      "force_lattice": [
+        3.0,
+        4.0,
+        4.5,
+        5.0
+      ],
+      "friction_band": "MID",
+      "hidden_friction_analysis_only": 0.5049219883120787,
+      "historical_frontier_definition": "minimum successful force",
+      "root_id": "p5s0c_dev_t0_root06_s5106",
+      "root_index": 6,
+      "root_seed": 5106,
+      "split": "DEV",
+      "task": 0
+    },
+    {
+      "F_next": 4.5,
+      "F_prev": 3.0,
+      "F_star": 4.0,
+      "context_id": "p5s0c_dev_t0_r07_s5107_mid_mu0.500365",
+      "force_lattice": [
+        3.0,
+        4.0,
+        4.5,
+        5.0
+      ],
+      "friction_band": "MID",
+      "hidden_friction_analysis_only": 0.5003653963090192,
+      "historical_frontier_definition": "minimum successful force",
+      "root_id": "p5s0c_dev_t0_root07_s5107",
+      "root_index": 7,
+      "root_seed": 5107,
+      "split": "DEV",
+      "task": 0
+    },
+    {
+      "F_next": 6.0,
+      "F_prev": 5.0,
+      "F_star": 5.5,
+      "context_id": "p5s0c_dev_t1_r06_s5106_low_mu0.262418",
+      "force_lattice": [
+        4.0,
+        4.5,
+        5.0,
+        5.5,
+        6.0
+      ],
+      "friction_band": "LOW",
+      "hidden_friction_analysis_only": 0.2624184362235552,
+      "historical_frontier_definition": "minimum successful force",
+      "root_id": "p5s0c_dev_t1_root06_s5106",
+      "root_index": 6,
+      "root_seed": 5106,
+      "split": "DEV",
+      "task": 1
+    },
+    {
+      "F_next": 5.0,
+      "F_prev": 4.0,
+      "F_star": 4.5,
+      "context_id": "p5s0c_dev_t1_r06_s5106_mid_mu0.515227",
+      "force_lattice": [
+        4.0,
+        4.5,
+        5.0,
+        5.5,
+        6.0
+      ],
+      "friction_band": "MID",
+      "hidden_friction_analysis_only": 0.5152267522480724,
+      "historical_frontier_definition": "minimum successful force",
+      "root_id": "p5s0c_dev_t1_root06_s5106",
+      "root_index": 6,
+      "root_seed": 5106,
+      "split": "DEV",
+      "task": 1
+    },
+    {
+      "F_next": 5.0,
+      "F_prev": 4.0,
+      "F_star": 4.5,
+      "context_id": "p5s0c_dev_t1_r07_s5107_mid_mu0.500836",
+      "force_lattice": [
+        4.0,
+        4.5,
+        5.0,
+        5.5,
+        6.0
+      ],
+      "friction_band": "MID",
+      "hidden_friction_analysis_only": 0.500835695412869,
+      "historical_frontier_definition": "minimum successful force",
+      "root_id": "p5s0c_dev_t1_root07_s5107",
+      "root_index": 7,
+      "root_seed": 5107,
+      "split": "DEV",
+      "task": 1
+    },
+    {
+      "F_next": 5.0,
+      "F_prev": 4.0,
+      "F_star": 4.5,
+      "context_id": "p5s0c_dev_t5_r06_s5106_low_mu0.283428",
+      "force_lattice": [
+        3.0,
+        4.0,
+        4.5,
+        5.0
+      ],
+      "friction_band": "LOW",
+      "hidden_friction_analysis_only": 0.2834278244355604,
+      "historical_frontier_definition": "minimum successful force",
+      "root_id": "p5s0c_dev_t5_root06_s5106",
+      "root_index": 6,
+      "root_seed": 5106,
+      "split": "DEV",
+      "task": 5
+    },
+    {
+      "F_next": 4.5,
+      "F_prev": 3.0,
+      "F_star": 4.0,
+      "context_id": "p5s0c_dev_t5_r06_s5106_mid_mu0.455479",
+      "force_lattice": [
+        3.0,
+        4.0,
+        4.5,
+        5.0
+      ],
+      "friction_band": "MID",
+      "hidden_friction_analysis_only": 0.4554788210846013,
+      "historical_frontier_definition": "minimum successful force",
+      "root_id": "p5s0c_dev_t5_root06_s5106",
+      "root_index": 6,
+      "root_seed": 5106,
+      "split": "DEV",
+      "task": 5
+    },
+    {
+      "F_next": 4.5,
+      "F_prev": 3.0,
+      "F_star": 4.0,
+      "context_id": "p5s0c_dev_t5_r07_s5107_mid_mu0.555512",
+      "force_lattice": [
+        3.0,
+        4.0,
+        4.5,
+        5.0
+      ],
+      "friction_band": "MID",
+      "hidden_friction_analysis_only": 0.5555123454255387,
+      "historical_frontier_definition": "minimum successful force",
+      "root_id": "p5s0c_dev_t5_root07_s5107",
+      "root_index": 7,
+      "root_seed": 5107,
+      "split": "DEV",
+      "task": 5
+    },
+    {
+      "F_next": 4.0,
+      "F_prev": 3.0,
+      "F_star": 3.5,
+      "context_id": "p5s0c_dev_t6_r07_s5107_low_mu0.233902",
+      "force_lattice": [
+        3.0,
+        3.5,
+        4.0
+      ],
+      "friction_band": "LOW",
+      "hidden_friction_analysis_only": 0.2339024543861059,
+      "historical_frontier_definition": "minimum successful force",
+      "root_id": "p5s0c_dev_t6_root07_s5107",
+      "root_index": 7,
+      "root_seed": 5107,
+      "split": "DEV",
+      "task": 6
+    },
+    {
+      "F_next": 5.0,
+      "F_prev": 4.0,
+      "F_star": 4.5,
+      "context_id": "p5s0c_test_t0_r08_s5108_low_mu0.267482",
+      "force_lattice": [
+        3.0,
+        4.0,
+        4.5,
+        5.0
+      ],
+      "friction_band": "LOW",
+      "hidden_friction_analysis_only": 0.2674822115103529,
+      "historical_frontier_definition": "minimum successful force",
+      "root_id": "p5s0c_test_t0_root08_s5108",
+      "root_index": 8,
+      "root_seed": 5108,
+      "split": "TEST",
+      "task": 0
+    },
+    {
+      "F_next": 5.0,
+      "F_prev": 4.0,
+      "F_star": 4.5,
+      "context_id": "p5s0c_test_t0_r09_s5109_low_mu0.256125",
+      "force_lattice": [
+        3.0,
+        4.0,
+        4.5,
+        5.0
+      ],
+      "friction_band": "LOW",
+      "hidden_friction_analysis_only": 0.2561249693238189,
+      "historical_frontier_definition": "minimum successful force",
+      "root_id": "p5s0c_test_t0_root09_s5109",
+      "root_index": 9,
+      "root_seed": 5109,
+      "split": "TEST",
+      "task": 0
+    },
+    {
+      "F_next": 4.5,
+      "F_prev": 3.0,
+      "F_star": 4.0,
+      "context_id": "p5s0c_test_t0_r08_s5108_mid_mu0.499104",
+      "force_lattice": [
+        3.0,
+        4.0,
+        4.5,
+        5.0
+      ],
+      "friction_band": "MID",
+      "hidden_friction_analysis_only": 0.4991042120886148,
+      "historical_frontier_definition": "minimum successful force",
+      "root_id": "p5s0c_test_t0_root08_s5108",
+      "root_index": 8,
+      "root_seed": 5108,
+      "split": "TEST",
+      "task": 0
+    },
+    {
+      "F_next": 4.5,
+      "F_prev": 3.0,
+      "F_star": 4.0,
+      "context_id": "p5s0c_test_t0_r09_s5109_mid_mu0.483186",
+      "force_lattice": [
+        3.0,
+        4.0,
+        4.5,
+        5.0
+      ],
+      "friction_band": "MID",
+      "hidden_friction_analysis_only": 0.4831864837456221,
+      "historical_frontier_definition": "minimum successful force",
+      "root_id": "p5s0c_test_t0_root09_s5109",
+      "root_index": 9,
+      "root_seed": 5109,
+      "split": "TEST",
+      "task": 0
+    },
+    {
+      "F_next": 6.0,
+      "F_prev": 5.0,
+      "F_star": 5.5,
+      "context_id": "p5s0c_test_t1_r10_s5110_low_mu0.276521",
+      "force_lattice": [
+        4.0,
+        4.5,
+        5.0,
+        5.5,
+        6.0
+      ],
+      "friction_band": "LOW",
+      "hidden_friction_analysis_only": 0.2765211847843557,
+      "historical_frontier_definition": "minimum successful force",
+      "root_id": "p5s0c_test_t1_root10_s5110",
+      "root_index": 10,
+      "root_seed": 5110,
+      "split": "TEST",
+      "task": 1
+    },
+    {
+      "F_next": 5.0,
+      "F_prev": 4.0,
+      "F_star": 4.5,
+      "context_id": "p5s0c_test_t1_r08_s5108_mid_mu0.507799",
+      "force_lattice": [
+        4.0,
+        4.5,
+        5.0,
+        5.5,
+        6.0
+      ],
+      "friction_band": "MID",
+      "hidden_friction_analysis_only": 0.5077986605848918,
+      "historical_frontier_definition": "minimum successful force",
+      "root_id": "p5s0c_test_t1_root08_s5108",
+      "root_index": 8,
+      "root_seed": 5108,
+      "split": "TEST",
+      "task": 1
+    },
+    {
+      "F_next": 5.0,
+      "F_prev": 4.0,
+      "F_star": 4.5,
+      "context_id": "p5s0c_test_t1_r09_s5109_mid_mu0.519816",
+      "force_lattice": [
+        4.0,
+        4.5,
+        5.0,
+        5.5,
+        6.0
+      ],
+      "friction_band": "MID",
+      "hidden_friction_analysis_only": 0.5198161355632988,
+      "historical_frontier_definition": "minimum successful force",
+      "root_id": "p5s0c_test_t1_root09_s5109",
+      "root_index": 9,
+      "root_seed": 5109,
+      "split": "TEST",
+      "task": 1
+    },
+    {
+      "F_next": 5.0,
+      "F_prev": 4.0,
+      "F_star": 4.5,
+      "context_id": "p5s0c_test_t5_r08_s5108_low_mu0.281022",
+      "force_lattice": [
+        3.0,
+        4.0,
+        4.5,
+        5.0
+      ],
+      "friction_band": "LOW",
+      "hidden_friction_analysis_only": 0.2810223546644395,
+      "historical_frontier_definition": "minimum successful force",
+      "root_id": "p5s0c_test_t5_root08_s5108",
+      "root_index": 8,
+      "root_seed": 5108,
+      "split": "TEST",
+      "task": 5
+    },
+    {
+      "F_next": 5.0,
+      "F_prev": 4.0,
+      "F_star": 4.5,
+      "context_id": "p5s0c_test_t5_r10_s5110_low_mu0.241595",
+      "force_lattice": [
+        3.0,
+        4.0,
+        4.5,
+        5.0
+      ],
+      "friction_band": "LOW",
+      "hidden_friction_analysis_only": 0.2415946392644449,
+      "historical_frontier_definition": "minimum successful force",
+      "root_id": "p5s0c_test_t5_root10_s5110",
+      "root_index": 10,
+      "root_seed": 5110,
+      "split": "TEST",
+      "task": 5
+    },
+    {
+      "F_next": 4.5,
+      "F_prev": 3.0,
+      "F_star": 4.0,
+      "context_id": "p5s0c_test_t5_r08_s5108_mid_mu0.472511",
+      "force_lattice": [
+        3.0,
+        4.0,
+        4.5,
+        5.0
+      ],
+      "friction_band": "MID",
+      "hidden_friction_analysis_only": 0.4725107627202033,
+      "historical_frontier_definition": "minimum successful force",
+      "root_id": "p5s0c_test_t5_root08_s5108",
+      "root_index": 8,
+      "root_seed": 5108,
+      "split": "TEST",
+      "task": 5
+    },
+    {
+      "F_next": 4.5,
+      "F_prev": 3.0,
+      "F_star": 4.0,
+      "context_id": "p5s0c_test_t5_r09_s5109_mid_mu0.511935",
+      "force_lattice": [
+        3.0,
+        4.0,
+        4.5,
+        5.0
+      ],
+      "friction_band": "MID",
+      "hidden_friction_analysis_only": 0.5119353501425179,
+      "historical_frontier_definition": "minimum successful force",
+      "root_id": "p5s0c_test_t5_root09_s5109",
+      "root_index": 9,
+      "root_seed": 5109,
+      "split": "TEST",
+      "task": 5
+    },
+    {
+      "F_next": 4.0,
+      "F_prev": 3.0,
+      "F_star": 3.5,
+      "context_id": "p5s0c_test_t6_r11_s5111_low_mu0.212521",
+      "force_lattice": [
+        3.0,
+        3.5,
+        4.0
+      ],
+      "friction_band": "LOW",
+      "hidden_friction_analysis_only": 0.212521463342134,
+      "historical_frontier_definition": "minimum successful force",
+      "root_id": "p5s0c_test_t6_root11_s5111",
+      "root_index": 11,
+      "root_seed": 5111,
+      "split": "TEST",
+      "task": 6
+    },
+    {
+      "F_next": 4.0,
+      "F_prev": 3.0,
+      "F_star": 3.5,
+      "context_id": "p5s0c_test_t6_r08_s5108_high_mu0.916654",
+      "force_lattice": [
+        3.0,
+        3.5,
+        4.0
+      ],
+      "friction_band": "HIGH",
+      "hidden_friction_analysis_only": 0.9166536478590028,
+      "historical_frontier_definition": "minimum successful force",
+      "root_id": "p5s0c_test_t6_root08_s5108",
+      "root_index": 8,
+      "root_seed": 5108,
+      "split": "TEST",
+      "task": 6
+    },
+    {
+      "F_next": 4.0,
+      "F_prev": 3.0,
+      "F_star": 3.5,
+      "context_id": "p5s0c_test_t6_r09_s5109_high_mu0.973763",
+      "force_lattice": [
+        3.0,
+        3.5,
+        4.0
+      ],
+      "friction_band": "HIGH",
+      "hidden_friction_analysis_only": 0.9737629202847972,
+      "historical_frontier_definition": "minimum successful force",
+      "root_id": "p5s0c_test_t6_root09_s5109",
+      "root_index": 9,
+      "root_seed": 5109,
+      "split": "TEST",
+      "task": 6
+    }
+  ],
+  "classifier_family": {
+    "fit_scope": "TRAIN roots only",
+    "models": [
+      "LogisticRegression(C=1, class_weight=balanced)",
+      "LinearSVM(C=1, class_weight=balanced)"
+    ],
+    "no_feature_redesign_after_outcomes": true,
+    "normalization": "TRAIN-fitted median imputation and standardization"
+  },
+  "collection_contract": {
+    "engineering_retry_only": true,
+    "fresh_worker_per_task": true,
+    "same_snapshot_triplet": true,
+    "scientific_failure_retry": false
+  },
+  "created_utc": "2026-08-29T00:14:09.135580+00:00",
+  "event_definition": "inherit corrected DIRECT_PHYSICAL_EVENT_DEFINITION.json; active phases only; intentional release and settling excluded",
+  "feature_set": {
+    "active_phases": [
+      "lift",
+      "transit",
+      "over_basket",
+      "place"
+    ],
+    "fixed_window": {
+      "alignment": "first 120 physics steps beginning at first lift row; phase-aligned when phase is present",
+      "purpose": "prevent early-termination trace length from becoming a label shortcut",
+      "release_settling_excluded": true,
+      "rows": 120
+    },
+    "forbidden_inputs": [
+      "commanded_force",
+      "force_class",
+      "ground_truth_friction",
+      "friction_band",
+      "task_success",
+      "frontier",
+      "F_star",
+      "root_id",
+      "split_id",
+      "post_release_data",
+      "trace_length"
+    ],
+    "input_policy": "corrected direct physical telemetry only",
+    "summary_features": [
+      "bilateral_contact_fraction",
+      "longest_bilateral_contact_loss_duration_s",
+      "left_normal_force_mean_min_std_N",
+      "right_normal_force_mean_min_std_N",
+      "left_right_normal_force_imbalance_mean_abs_N",
+      "left_right_normal_force_imbalance_max_abs_N",
+      "left_tangential_force_mean_max_N",
+      "right_tangential_force_mean_max_N",
+      "valid_tangential_normal_ratio_mean_max",
+      "relative_position_drift_mean_max_m",
+      "relative_velocity_mean_max_mps",
+      "tangential_relative_velocity_proxy_mean_max_mps",
+      "gripper_joint_deviation_mean_max",
+      "phase_wise_versions_where_available"
+    ]
+  },
+  "force_definitions": "F_prev, F_star, F_next are adjacent entries in the authoritative context-specific lattice; no frontier search or retuning",
+  "formal_threshold_audit": "No formal Gates B-D threshold was found in the inherited repository artifacts; descriptive evidence will be reported without post-hoc pass/fail threshold invention.",
+  "friction_bands": [
+    "LOW",
+    "MID",
+    "HIGH"
+  ],
+  "ineligible_contexts": [
+    {
+      "context_id": "p5s0c_dev_t0_r06_s5106_high_mu0.901218",
+      "forces": [
+        3.0,
+        4.0,
+        4.5,
+        5.0
+      ],
+      "friction_band": "HIGH",
+      "historical_successes": [
+        3.0,
+        4.0,
+        4.5,
+        5.0
+      ],
+      "reason": "NO_F_PREV_IN_AUTHORITATIVE_LATTICE",
+      "split": "DEV",
+      "task": 0
+    },
+    {
+      "context_id": "p5s0c_dev_t0_r07_s5107_high_mu0.932791",
+      "forces": [
+        3.0,
+        4.0,
+        4.5,
+        5.0
+      ],
+      "friction_band": "HIGH",
+      "historical_successes": [
+        3.0,
+        4.0,
+        4.5,
+        5.0
+      ],
+      "reason": "NO_F_PREV_IN_AUTHORITATIVE_LATTICE",
+      "split": "DEV",
+      "task": 0
+    },
+    {
+      "context_id": "p5s0c_test_t0_r08_s5108_high_mu0.933258",
+      "forces": [
+        3.0,
+        4.0,
+        4.5,
+        5.0
+      ],
+      "friction_band": "HIGH",
+      "historical_successes": [
+        3.0,
+        4.0,
+        4.5,
+        5.0
+      ],
+      "reason": "NO_F_PREV_IN_AUTHORITATIVE_LATTICE",
+      "split": "TEST",
+      "task": 0
+    },
+    {
+      "context_id": "p5s0c_test_t0_r09_s5109_high_mu0.928450",
+      "forces": [
+        3.0,
+        4.0,
+        4.5,
+        5.0
+      ],
+      "friction_band": "HIGH",
+      "historical_successes": [
+        3.0,
+        4.0,
+        4.5,
+        5.0
+      ],
+      "reason": "NO_F_PREV_IN_AUTHORITATIVE_LATTICE",
+      "split": "TEST",
+      "task": 0
+    },
+    {
+      "context_id": "p5s0c_test_t0_r10_s5110_high_mu0.965854",
+      "forces": [
+        3.0,
+        4.0,
+        4.5,
+        5.0
+      ],
+      "friction_band": "HIGH",
+      "historical_successes": [
+        3.0,
+        4.0,
+        4.5,
+        5.0
+      ],
+      "reason": "NO_F_PREV_IN_AUTHORITATIVE_LATTICE",
+      "split": "TEST",
+      "task": 0
+    },
+    {
+      "context_id": "p5s0c_test_t0_r11_s5111_high_mu0.947534",
+      "forces": [
+        3.0,
+        4.0,
+        4.5,
+        5.0
+      ],
+      "friction_band": "HIGH",
+      "historical_successes": [
+        3.0,
+        4.0,
+        4.5,
+        5.0
+      ],
+      "reason": "NO_F_PREV_IN_AUTHORITATIVE_LATTICE",
+      "split": "TEST",
+      "task": 0
+    },
+    {
+      "F_next": 5.0,
+      "F_prev": 4.0,
+      "F_star": 4.5,
+      "context_id": "p5s0c_test_t0_r10_s5110_low_mu0.246922",
+      "force_lattice": [
+        3.0,
+        4.0,
+        4.5,
+        5.0
+      ],
+      "friction_band": "LOW",
+      "hidden_friction_analysis_only": 0.2469216254159692,
+      "historical_frontier_definition": "minimum successful force",
+      "reason": "ELIGIBLE_BUT_NOT_SAMPLED_SMALL_POPULATION",
+      "root_id": "p5s0c_test_t0_root10_s5110",
+      "root_index": 10,
+      "root_seed": 5110,
+      "split": "TEST",
+      "task": 0
+    },
+    {
+      "F_next": 5.0,
+      "F_prev": 4.0,
+      "F_star": 4.5,
+      "context_id": "p5s0c_test_t0_r11_s5111_low_mu0.296027",
+      "force_lattice": [
+        3.0,
+        4.0,
+        4.5,
+        5.0
+      ],
+      "friction_band": "LOW",
+      "hidden_friction_analysis_only": 0.2960273891943319,
+      "historical_frontier_definition": "minimum successful force",
+      "reason": "ELIGIBLE_BUT_NOT_SAMPLED_SMALL_POPULATION",
+      "root_id": "p5s0c_test_t0_root11_s5111",
+      "root_index": 11,
+      "root_seed": 5111,
+      "split": "TEST",
+      "task": 0
+    },
+    {
+      "F_next": 4.5,
+      "F_prev": 3.0,
+      "F_star": 4.0,
+      "context_id": "p5s0c_test_t0_r10_s5110_mid_mu0.459307",
+      "force_lattice": [
+        3.0,
+        4.0,
+        4.5,
+        5.0
+      ],
+      "friction_band": "MID",
+      "hidden_friction_analysis_only": 0.4593074511620376,
+      "historical_frontier_definition": "minimum successful force",
+      "reason": "ELIGIBLE_BUT_NOT_SAMPLED_SMALL_POPULATION",
+      "root_id": "p5s0c_test_t0_root10_s5110",
+      "root_index": 10,
+      "root_seed": 5110,
+      "split": "TEST",
+      "task": 0
+    },
+    {
+      "F_next": 4.5,
+      "F_prev": 3.0,
+      "F_star": 4.0,
+      "context_id": "p5s0c_test_t0_r11_s5111_mid_mu0.511841",
+      "force_lattice": [
+        3.0,
+        4.0,
+        4.5,
+        5.0
+      ],
+      "friction_band": "MID",
+      "hidden_friction_analysis_only": 0.5118406297435366,
+      "historical_frontier_definition": "minimum successful force",
+      "reason": "ELIGIBLE_BUT_NOT_SAMPLED_SMALL_POPULATION",
+      "root_id": "p5s0c_test_t0_root11_s5111",
+      "root_index": 11,
+      "root_seed": 5111,
+      "split": "TEST",
+      "task": 0
+    },
+    {
+      "context_id": "p5s0c_train_t0_r00_s5100_high_mu0.940189",
+      "forces": [
+        3.0,
+        4.0,
+        4.5,
+        5.0
+      ],
+      "friction_band": "HIGH",
+      "historical_successes": [
+        3.0,
+        4.0,
+        4.5,
+        5.0
+      ],
+      "reason": "NO_F_PREV_IN_AUTHORITATIVE_LATTICE",
+      "split": "TRAIN",
+      "task": 0
+    },
+    {
+      "context_id": "p5s0c_train_t0_r01_s5101_high_mu0.988466",
+      "forces": [
+        3.0,
+        4.0,
+        4.5,
+        5.0
+      ],
+      "friction_band": "HIGH",
+      "historical_successes": [
+        3.0,
+        4.0,
+        4.5,
+        5.0
+      ],
+      "reason": "NO_F_PREV_IN_AUTHORITATIVE_LATTICE",
+      "split": "TRAIN",
+      "task": 0
+    },
+    {
+      "context_id": "p5s0c_train_t0_r02_s5102_high_mu0.974655",
+      "forces": [
+        3.0,
+        4.0,
+        4.5,
+        5.0
+      ],
+      "friction_band": "HIGH",
+      "historical_successes": [
+        3.0,
+        4.0,
+        4.5,
+        5.0
+      ],
+      "reason": "NO_F_PREV_IN_AUTHORITATIVE_LATTICE",
+      "split": "TRAIN",
+      "task": 0
+    },
+    {
+      "context_id": "p5s0c_train_t0_r03_s5103_high_mu0.970453",
+      "forces": [
+        3.0,
+        4.0,
+        4.5,
+        5.0
+      ],
+      "friction_band": "HIGH",
+      "historical_successes": [
+        3.0,
+        4.0,
+        4.5,
+        5.0
+      ],
+      "reason": "NO_F_PREV_IN_AUTHORITATIVE_LATTICE",
+      "split": "TRAIN",
+      "task": 0
+    },
+    {
+      "context_id": "p5s0c_train_t0_r04_s5104_high_mu0.905657",
+      "forces": [
+        3.0,
+        4.0,
+        4.5,
+        5.0
+      ],
+      "friction_band": "HIGH",
+      "historical_successes": [
+        3.0,
+        4.0,
+        4.5,
+        5.0
+      ],
+      "reason": "NO_F_PREV_IN_AUTHORITATIVE_LATTICE",
+      "split": "TRAIN",
+      "task": 0
+    },
+    {
+      "context_id": "p5s0c_train_t0_r05_s5105_high_mu0.913775",
+      "forces": [
+        3.0,
+        4.0,
+        4.5,
+        5.0
+      ],
+      "friction_band": "HIGH",
+      "historical_successes": [
+        3.0,
+        4.0,
+        4.5,
+        5.0
+      ],
+      "reason": "NO_F_PREV_IN_AUTHORITATIVE_LATTICE",
+      "split": "TRAIN",
+      "task": 0
+    },
+    {
+      "F_next": 5.0,
+      "F_prev": 4.0,
+      "F_star": 4.5,
+      "context_id": "p5s0c_train_t0_r02_s5102_low_mu0.285139",
+      "force_lattice": [
+        3.0,
+        4.0,
+        4.5,
+        5.0
+      ],
+      "friction_band": "LOW",
+      "hidden_friction_analysis_only": 0.2851387636485543,
+      "historical_frontier_definition": "minimum successful force",
+      "reason": "ELIGIBLE_BUT_NOT_SAMPLED_SMALL_POPULATION",
+      "root_id": "p5s0c_train_t0_root02_s5102",
+      "root_index": 2,
+      "root_seed": 5102,
+      "split": "TRAIN",
+      "task": 0
+    },
+    {
+      "F_next": 5.0,
+      "F_prev": 4.0,
+      "F_star": 4.5,
+      "context_id": "p5s0c_train_t0_r03_s5103_low_mu0.233498",
+      "force_lattice": [
+        3.0,
+        4.0,
+        4.5,
+        5.0
+      ],
+      "friction_band": "LOW",
+      "hidden_friction_analysis_only": 0.2334976939575435,
+      "historical_frontier_definition": "minimum successful force",
+      "reason": "ELIGIBLE_BUT_NOT_SAMPLED_SMALL_POPULATION",
+      "root_id": "p5s0c_train_t0_root03_s5103",
+      "root_index": 3,
+      "root_seed": 5103,
+      "split": "TRAIN",
+      "task": 0
+    },
+    {
+      "F_next": 5.0,
+      "F_prev": 4.0,
+      "F_star": 4.5,
+      "context_id": "p5s0c_train_t0_r04_s5104_low_mu0.298968",
+      "force_lattice": [
+        3.0,
+        4.0,
+        4.5,
+        5.0
+      ],
+      "friction_band": "LOW",
+      "hidden_friction_analysis_only": 0.2989681415686305,
+      "historical_frontier_definition": "minimum successful force",
+      "reason": "ELIGIBLE_BUT_NOT_SAMPLED_SMALL_POPULATION",
+      "root_id": "p5s0c_train_t0_root04_s5104",
+      "root_index": 4,
+      "root_seed": 5104,
+      "split": "TRAIN",
+      "task": 0
+    },
+    {
+      "F_next": 5.0,
+      "F_prev": 4.0,
+      "F_star": 4.5,
+      "context_id": "p5s0c_train_t0_r05_s5105_low_mu0.252358",
+      "force_lattice": [
+        3.0,
+        4.0,
+        4.5,
+        5.0
+      ],
+      "friction_band": "LOW",
+      "hidden_friction_analysis_only": 0.2523584006618226,
+      "historical_frontier_definition": "minimum successful force",
+      "reason": "ELIGIBLE_BUT_NOT_SAMPLED_SMALL_POPULATION",
+      "root_id": "p5s0c_train_t0_root05_s5105",
+      "root_index": 5,
+      "root_seed": 5105,
+      "split": "TRAIN",
+      "task": 0
+    },
+    {
+      "F_next": 4.5,
+      "F_prev": 3.0,
+      "F_star": 4.0,
+      "context_id": "p5s0c_train_t0_r02_s5102_mid_mu0.571550",
+      "force_lattice": [
+        3.0,
+        4.0,
+        4.5,
+        5.0
+      ],
+      "friction_band": "MID",
+      "hidden_friction_analysis_only": 0.5715496239149224,
+      "historical_frontier_definition": "minimum successful force",
+      "reason": "ELIGIBLE_BUT_NOT_SAMPLED_SMALL_POPULATION",
+      "root_id": "p5s0c_train_t0_root02_s5102",
+      "root_index": 2,
+      "root_seed": 5102,
+      "split": "TRAIN",
+      "task": 0
+    },
+    {
+      "F_next": 4.5,
+      "F_prev": 3.0,
+      "F_star": 4.0,
+      "context_id": "p5s0c_train_t0_r03_s5103_mid_mu0.554454",
+      "force_lattice": [
+        3.0,
+        4.0,
+        4.5,
+        5.0
+      ],
+      "friction_band": "MID",
+      "hidden_friction_analysis_only": 0.5544542093115656,
+      "historical_frontier_definition": "minimum successful force",
+      "reason": "ELIGIBLE_BUT_NOT_SAMPLED_SMALL_POPULATION",
+      "root_id": "p5s0c_train_t0_root03_s5103",
+      "root_index": 3,
+      "root_seed": 5103,
+      "split": "TRAIN",
+      "task": 0
+    },
+    {
+      "F_next": 4.5,
+      "F_prev": 3.0,
+      "F_star": 4.0,
+      "context_id": "p5s0c_train_t0_r04_s5104_mid_mu0.572072",
+      "force_lattice": [
+        3.0,
+        4.0,
+        4.5,
+        5.0
+      ],
+      "friction_band": "MID",
+      "hidden_friction_analysis_only": 0.5720723245328282,
+      "historical_frontier_definition": "minimum successful force",
+      "reason": "ELIGIBLE_BUT_NOT_SAMPLED_SMALL_POPULATION",
+      "root_id": "p5s0c_train_t0_root04_s5104",
+      "root_index": 4,
+      "root_seed": 5104,
+      "split": "TRAIN",
+      "task": 0
+    },
+    {
+      "F_next": 4.5,
+      "F_prev": 3.0,
+      "F_star": 4.0,
+      "context_id": "p5s0c_train_t0_r05_s5105_mid_mu0.529333",
+      "force_lattice": [
+        3.0,
+        4.0,
+        4.5,
+        5.0
+      ],
+      "friction_band": "MID",
+      "hidden_friction_analysis_only": 0.5293331885497402,
+      "historical_frontier_definition": "minimum successful force",
+      "reason": "ELIGIBLE_BUT_NOT_SAMPLED_SMALL_POPULATION",
+      "root_id": "p5s0c_train_t0_root05_s5105",
+      "root_index": 5,
+      "root_seed": 5105,
+      "split": "TRAIN",
+      "task": 0
+    },
+    {
+      "context_id": "p5s0c_dev_t1_r06_s5106_high_mu0.973004",
+      "forces": [
+        4.0,
+        4.5,
+        5.0,
+        5.5,
+        6.0
+      ],
+      "friction_band": "HIGH",
+      "historical_successes": [
+        4.0,
+        4.5,
+        5.0,
+        5.5,
+        6.0
+      ],
+      "reason": "NO_F_PREV_IN_AUTHORITATIVE_LATTICE",
+      "split": "DEV",
+      "task": 1
+    },
+    {
+      "context_id": "p5s0c_dev_t1_r07_s5107_high_mu0.903359",
+      "forces": [
+        4.0,
+        4.5,
+        5.0,
+        5.5,
+        6.0
+      ],
+      "friction_band": "HIGH",
+      "historical_successes": [
+        4.0,
+        4.5,
+        5.0,
+        5.5,
+        6.0
+      ],
+      "reason": "NO_F_PREV_IN_AUTHORITATIVE_LATTICE",
+      "split": "DEV",
+      "task": 1
+    },
+    {
+      "context_id": "p5s0c_dev_t1_r07_s5107_low_mu0.225573",
+      "forces": [
+        4.0,
+        4.5,
+        5.0,
+        5.5,
+        6.0
+      ],
+      "friction_band": "LOW",
+      "historical_successes": [
+        6.0
+      ],
+      "reason": "NO_F_NEXT_IN_AUTHORITATIVE_LATTICE",
+      "split": "DEV",
+      "task": 1
+    },
+    {
+      "context_id": "p5s0c_test_t1_r08_s5108_high_mu0.931731",
+      "forces": [
+        4.0,
+        4.5,
+        5.0,
+        5.5,
+        6.0
+      ],
+      "friction_band": "HIGH",
+      "historical_successes": [
+        4.0,
+        4.5,
+        5.0,
+        5.5,
+        6.0
+      ],
+      "reason": "NO_F_PREV_IN_AUTHORITATIVE_LATTICE",
+      "split": "TEST",
+      "task": 1
+    },
+    {
+      "context_id": "p5s0c_test_t1_r09_s5109_high_mu0.922940",
+      "forces": [
+        4.0,
+        4.5,
+        5.0,
+        5.5,
+        6.0
+      ],
+      "friction_band": "HIGH",
+      "historical_successes": [
+        4.0,
+        4.5,
+        5.0,
+        5.5,
+        6.0
+      ],
+      "reason": "NO_F_PREV_IN_AUTHORITATIVE_LATTICE",
+      "split": "TEST",
+      "task": 1
+    },
+    {
+      "context_id": "p5s0c_test_t1_r10_s5110_high_mu0.989762",
+      "forces": [
+        4.0,
+        4.5,
+        5.0,
+        5.5,
+        6.0
+      ],
+      "friction_band": "HIGH",
+      "historical_successes": [
+        4.0,
+        4.5,
+        5.0,
+        5.5,
+        6.0
+      ],
+      "reason": "NO_F_PREV_IN_AUTHORITATIVE_LATTICE",
+      "split": "TEST",
+      "task": 1
+    },
+    {
+      "context_id": "p5s0c_test_t1_r11_s5111_high_mu0.923745",
+      "forces": [
+        4.0,
+        4.5,
+        5.0,
+        5.5,
+        6.0
+      ],
+      "friction_band": "HIGH",
+      "historical_successes": [
+        4.0,
+        4.5,
+        5.0,
+        5.5,
+        6.0
+      ],
+      "reason": "NO_F_PREV_IN_AUTHORITATIVE_LATTICE",
+      "split": "TEST",
+      "task": 1
+    },
+    {
+      "context_id": "p5s0c_test_t1_r08_s5108_low_mu0.258914",
+      "forces": [
+        4.0,
+        4.5,
+        5.0,
+        5.5,
+        6.0
+      ],
+      "friction_band": "LOW",
+      "historical_successes": [
+        6.0
+      ],
+      "reason": "NO_F_NEXT_IN_AUTHORITATIVE_LATTICE",
+      "split": "TEST",
+      "task": 1
+    },
+    {
+      "context_id": "p5s0c_test_t1_r09_s5109_low_mu0.269281",
+      "forces": [
+        4.0,
+        4.5,
+        5.0,
+        5.5,
+        6.0
+      ],
+      "friction_band": "LOW",
+      "historical_successes": [
+        6.0
+      ],
+      "reason": "NO_F_NEXT_IN_AUTHORITATIVE_LATTICE",
+      "split": "TEST",
+      "task": 1
+    },
+    {
+      "context_id": "p5s0c_test_t1_r11_s5111_low_mu0.205248",
+      "forces": [
+        4.0,
+        4.5,
+        5.0,
+        5.5,
+        6.0
+      ],
+      "friction_band": "LOW",
+      "historical_successes": [
+        6.0
+      ],
+      "reason": "NO_F_NEXT_IN_AUTHORITATIVE_LATTICE",
+      "split": "TEST",
+      "task": 1
+    },
+    {
+      "F_next": 5.0,
+      "F_prev": 4.0,
+      "F_star": 4.5,
+      "context_id": "p5s0c_test_t1_r10_s5110_mid_mu0.557307",
+      "force_lattice": [
+        4.0,
+        4.5,
+        5.0,
+        5.5,
+        6.0
+      ],
+      "friction_band": "MID",
+      "hidden_friction_analysis_only": 0.5573074412236266,
+      "historical_frontier_definition": "minimum successful force",
+      "reason": "ELIGIBLE_BUT_NOT_SAMPLED_SMALL_POPULATION",
+      "root_id": "p5s0c_test_t1_root10_s5110",
+      "root_index": 10,
+      "root_seed": 5110,
+      "split": "TEST",
+      "task": 1
+    },
+    {
+      "F_next": 5.0,
+      "F_prev": 4.0,
+      "F_star": 4.5,
+      "context_id": "p5s0c_test_t1_r11_s5111_mid_mu0.594066",
+      "force_lattice": [
+        4.0,
+        4.5,
+        5.0,
+        5.5,
+        6.0
+      ],
+      "friction_band": "MID",
+      "hidden_friction_analysis_only": 0.5940658783003948,
+      "historical_frontier_definition": "minimum successful force",
+      "reason": "ELIGIBLE_BUT_NOT_SAMPLED_SMALL_POPULATION",
+      "root_id": "p5s0c_test_t1_root11_s5111",
+      "root_index": 11,
+      "root_seed": 5111,
+      "split": "TEST",
+      "task": 1
+    },
+    {
+      "context_id": "p5s0c_train_t1_r00_s5100_high_mu0.921500",
+      "forces": [
+        4.0,
+        4.5,
+        5.0,
+        5.5,
+        6.0
+      ],
+      "friction_band": "HIGH",
+      "historical_successes": [
+        4.0,
+        4.5,
+        5.0,
+        5.5,
+        6.0
+      ],
+      "reason": "NO_F_PREV_IN_AUTHORITATIVE_LATTICE",
+      "split": "TRAIN",
+      "task": 1
+    },
+    {
+      "context_id": "p5s0c_train_t1_r01_s5101_high_mu0.920754",
+      "forces": [
+        4.0,
+        4.5,
+        5.0,
+        5.5,
+        6.0
+      ],
+      "friction_band": "HIGH",
+      "historical_successes": [
+        4.0,
+        4.5,
+        5.0,
+        5.5,
+        6.0
+      ],
+      "reason": "NO_F_PREV_IN_AUTHORITATIVE_LATTICE",
+      "split": "TRAIN",
+      "task": 1
+    },
+    {
+      "context_id": "p5s0c_train_t1_r02_s5102_high_mu0.917516",
+      "forces": [
+        4.0,
+        4.5,
+        5.0,
+        5.5,
+        6.0
+      ],
+      "friction_band": "HIGH",
+      "historical_successes": [
+        4.0,
+        4.5,
+        5.0,
+        5.5,
+        6.0
+      ],
+      "reason": "NO_F_PREV_IN_AUTHORITATIVE_LATTICE",
+      "split": "TRAIN",
+      "task": 1
+    },
+    {
+      "context_id": "p5s0c_train_t1_r03_s5103_high_mu0.994255",
+      "forces": [
+        4.0,
+        4.5,
+        5.0,
+        5.5,
+        6.0
+      ],
+      "friction_band": "HIGH",
+      "historical_successes": [
+        4.0,
+        4.5,
+        5.0,
+        5.5,
+        6.0
+      ],
+      "reason": "NO_F_PREV_IN_AUTHORITATIVE_LATTICE",
+      "split": "TRAIN",
+      "task": 1
+    },
+    {
+      "context_id": "p5s0c_train_t1_r04_s5104_high_mu0.989461",
+      "forces": [
+        4.0,
+        4.5,
+        5.0,
+        5.5,
+        6.0
+      ],
+      "friction_band": "HIGH",
+      "historical_successes": [
+        4.0,
+        4.5,
+        5.0,
+        5.5,
+        6.0
+      ],
+      "reason": "NO_F_PREV_IN_AUTHORITATIVE_LATTICE",
+      "split": "TRAIN",
+      "task": 1
+    },
+    {
+      "context_id": "p5s0c_train_t1_r05_s5105_high_mu0.901787",
+      "forces": [
+        4.0,
+        4.5,
+        5.0,
+        5.5,
+        6.0
+      ],
+      "friction_band": "HIGH",
+      "historical_successes": [
+        4.0,
+        4.5,
+        5.0,
+        5.5,
+        6.0
+      ],
+      "reason": "NO_F_PREV_IN_AUTHORITATIVE_LATTICE",
+      "split": "TRAIN",
+      "task": 1
+    },
+    {
+      "context_id": "p5s0c_train_t1_r00_s5100_low_mu0.240019",
+      "forces": [
+        4.0,
+        4.5,
+        5.0,
+        5.5,
+        6.0
+      ],
+      "friction_band": "LOW",
+      "historical_successes": [
+        6.0
+      ],
+      "reason": "NO_F_NEXT_IN_AUTHORITATIVE_LATTICE",
+      "split": "TRAIN",
+      "task": 1
+    },
+    {
+      "context_id": "p5s0c_train_t1_r02_s5102_low_mu0.211510",
+      "forces": [
+        4.0,
+        4.5,
+        5.0,
+        5.5,
+        6.0
+      ],
+      "friction_band": "LOW",
+      "historical_successes": [
+        6.0
+      ],
+      "reason": "NO_F_NEXT_IN_AUTHORITATIVE_LATTICE",
+      "split": "TRAIN",
+      "task": 1
+    },
+    {
+      "context_id": "p5s0c_train_t1_r03_s5103_low_mu0.252239",
+      "forces": [
+        4.0,
+        4.5,
+        5.0,
+        5.5,
+        6.0
+      ],
+      "friction_band": "LOW",
+      "historical_successes": [
+        6.0
+      ],
+      "reason": "NO_F_NEXT_IN_AUTHORITATIVE_LATTICE",
+      "split": "TRAIN",
+      "task": 1
+    },
+    {
+      "context_id": "p5s0c_train_t1_r04_s5104_low_mu0.223399",
+      "forces": [
+        4.0,
+        4.5,
+        5.0,
+        5.5,
+        6.0
+      ],
+      "friction_band": "LOW",
+      "historical_successes": [],
+      "reason": "NO_HISTORICAL_SUCCESS_FORCE",
+      "split": "TRAIN",
+      "task": 1
+    },
+    {
+      "context_id": "p5s0c_train_t1_r03_s5103_mid_mu0.580481",
+      "forces": [
+        4.0,
+        4.5,
+        5.0,
+        5.5,
+        6.0
+      ],
+      "friction_band": "MID",
+      "historical_successes": [
+        4.0,
+        4.5,
+        5.0,
+        5.5,
+        6.0
+      ],
+      "reason": "NO_F_PREV_IN_AUTHORITATIVE_LATTICE",
+      "split": "TRAIN",
+      "task": 1
+    },
+    {
+      "F_next": 5.0,
+      "F_prev": 4.0,
+      "F_star": 4.5,
+      "context_id": "p5s0c_train_t1_r02_s5102_mid_mu0.509876",
+      "force_lattice": [
+        4.0,
+        4.5,
+        5.0,
+        5.5,
+        6.0
+      ],
+      "friction_band": "MID",
+      "hidden_friction_analysis_only": 0.509875894662746,
+      "historical_frontier_definition": "minimum successful force",
+      "reason": "ELIGIBLE_BUT_NOT_SAMPLED_SMALL_POPULATION",
+      "root_id": "p5s0c_train_t1_root02_s5102",
+      "root_index": 2,
+      "root_seed": 5102,
+      "split": "TRAIN",
+      "task": 1
+    },
+    {
+      "F_next": 5.0,
+      "F_prev": 4.0,
+      "F_star": 4.5,
+      "context_id": "p5s0c_train_t1_r04_s5104_mid_mu0.589024",
+      "force_lattice": [
+        4.0,
+        4.5,
+        5.0,
+        5.5,
+        6.0
+      ],
+      "friction_band": "MID",
+      "hidden_friction_analysis_only": 0.5890240876672719,
+      "historical_frontier_definition": "minimum successful force",
+      "reason": "ELIGIBLE_BUT_NOT_SAMPLED_SMALL_POPULATION",
+      "root_id": "p5s0c_train_t1_root04_s5104",
+      "root_index": 4,
+      "root_seed": 5104,
+      "split": "TRAIN",
+      "task": 1
+    },
+    {
+      "F_next": 5.0,
+      "F_prev": 4.0,
+      "F_star": 4.5,
+      "context_id": "p5s0c_train_t1_r05_s5105_mid_mu0.533126",
+      "force_lattice": [
+        4.0,
+        4.5,
+        5.0,
+        5.5,
+        6.0
+      ],
+      "friction_band": "MID",
+      "hidden_friction_analysis_only": 0.5331259916067848,
+      "historical_frontier_definition": "minimum successful force",
+      "reason": "ELIGIBLE_BUT_NOT_SAMPLED_SMALL_POPULATION",
+      "root_id": "p5s0c_train_t1_root05_s5105",
+      "root_index": 5,
+      "root_seed": 5105,
+      "split": "TRAIN",
+      "task": 1
+    },
+    {
+      "context_id": "p5s0c_dev_t5_r06_s5106_high_mu0.917878",
+      "forces": [
+        3.0,
+        4.0,
+        4.5,
+        5.0
+      ],
+      "friction_band": "HIGH",
+      "historical_successes": [
+        3.0,
+        4.0,
+        4.5,
+        5.0
+      ],
+      "reason": "NO_F_PREV_IN_AUTHORITATIVE_LATTICE",
+      "split": "DEV",
+      "task": 5
+    },
+    {
+      "context_id": "p5s0c_dev_t5_r07_s5107_high_mu0.960037",
+      "forces": [
+        3.0,
+        4.0,
+        4.5,
+        5.0
+      ],
+      "friction_band": "HIGH",
+      "historical_successes": [
+        3.0,
+        4.0,
+        4.5,
+        5.0
+      ],
+      "reason": "NO_F_PREV_IN_AUTHORITATIVE_LATTICE",
+      "split": "DEV",
+      "task": 5
+    },
+    {
+      "context_id": "p5s0c_dev_t5_r07_s5107_low_mu0.210709",
+      "forces": [
+        3.0,
+        4.0,
+        4.5,
+        5.0
+      ],
+      "friction_band": "LOW",
+      "historical_successes": [
+        5.0
+      ],
+      "reason": "NO_F_NEXT_IN_AUTHORITATIVE_LATTICE",
+      "split": "DEV",
+      "task": 5
+    },
+    {
+      "context_id": "p5s0c_test_t5_r08_s5108_high_mu0.916302",
+      "forces": [
+        3.0,
+        4.0,
+        4.5,
+        5.0
+      ],
+      "friction_band": "HIGH",
+      "historical_successes": [
+        3.0,
+        4.0,
+        4.5,
+        5.0
+      ],
+      "reason": "NO_F_PREV_IN_AUTHORITATIVE_LATTICE",
+      "split": "TEST",
+      "task": 5
+    },
+    {
+      "context_id": "p5s0c_test_t5_r09_s5109_high_mu0.914121",
+      "forces": [
+        3.0,
+        4.0,
+        4.5,
+        5.0
+      ],
+      "friction_band": "HIGH",
+      "historical_successes": [
+        3.0,
+        4.0,
+        4.5,
+        5.0
+      ],
+      "reason": "NO_F_PREV_IN_AUTHORITATIVE_LATTICE",
+      "split": "TEST",
+      "task": 5
+    },
+    {
+      "context_id": "p5s0c_test_t5_r10_s5110_high_mu0.927931",
+      "forces": [
+        3.0,
+        4.0,
+        4.5,
+        5.0
+      ],
+      "friction_band": "HIGH",
+      "historical_successes": [
+        3.0,
+        4.0,
+        4.5,
+        5.0
+      ],
+      "reason": "NO_F_PREV_IN_AUTHORITATIVE_LATTICE",
+      "split": "TEST",
+      "task": 5
+    },
+    {
+      "context_id": "p5s0c_test_t5_r11_s5111_high_mu0.923760",
+      "forces": [
+        3.0,
+        4.0,
+        4.5,
+        5.0
+      ],
+      "friction_band": "HIGH",
+      "historical_successes": [
+        3.0,
+        4.0,
+        4.5,
+        5.0
+      ],
+      "reason": "NO_F_PREV_IN_AUTHORITATIVE_LATTICE",
+      "split": "TEST",
+      "task": 5
+    },
+    {
+      "context_id": "p5s0c_test_t5_r09_s5109_low_mu0.219817",
+      "forces": [
+        3.0,
+        4.0,
+        4.5,
+        5.0
+      ],
+      "friction_band": "LOW",
+      "historical_successes": [
+        5.0
+      ],
+      "reason": "NO_F_NEXT_IN_AUTHORITATIVE_LATTICE",
+      "split": "TEST",
+      "task": 5
+    },
+    {
+      "F_next": 5.0,
+      "F_prev": 4.0,
+      "F_star": 4.5,
+      "context_id": "p5s0c_test_t5_r11_s5111_low_mu0.268178",
+      "force_lattice": [
+        3.0,
+        4.0,
+        4.5,
+        5.0
+      ],
+      "friction_band": "LOW",
+      "hidden_friction_analysis_only": 0.268177933747641,
+      "historical_frontier_definition": "minimum successful force",
+      "reason": "ELIGIBLE_BUT_NOT_SAMPLED_SMALL_POPULATION",
+      "root_id": "p5s0c_test_t5_root11_s5111",
+      "root_index": 11,
+      "root_seed": 5111,
+      "split": "TEST",
+      "task": 5
+    },
+    {
+      "F_next": 4.5,
+      "F_prev": 3.0,
+      "F_star": 4.0,
+      "context_id": "p5s0c_test_t5_r10_s5110_mid_mu0.558928",
+      "force_lattice": [
+        3.0,
+        4.0,
+        4.5,
+        5.0
+      ],
+      "friction_band": "MID",
+      "hidden_friction_analysis_only": 0.5589278760538872,
+      "historical_frontier_definition": "minimum successful force",
+      "reason": "ELIGIBLE_BUT_NOT_SAMPLED_SMALL_POPULATION",
+      "root_id": "p5s0c_test_t5_root10_s5110",
+      "root_index": 10,
+      "root_seed": 5110,
+      "split": "TEST",
+      "task": 5
+    },
+    {
+      "F_next": 4.5,
+      "F_prev": 3.0,
+      "F_star": 4.0,
+      "context_id": "p5s0c_test_t5_r11_s5111_mid_mu0.515846",
+      "force_lattice": [
+        3.0,
+        4.0,
+        4.5,
+        5.0
+      ],
+      "friction_band": "MID",
+      "hidden_friction_analysis_only": 0.515846448574493,
+      "historical_frontier_definition": "minimum successful force",
+      "reason": "ELIGIBLE_BUT_NOT_SAMPLED_SMALL_POPULATION",
+      "root_id": "p5s0c_test_t5_root11_s5111",
+      "root_index": 11,
+      "root_seed": 5111,
+      "split": "TEST",
+      "task": 5
+    },
+    {
+      "context_id": "p5s0c_train_t5_r00_s5100_high_mu0.945004",
+      "forces": [
+        3.0,
+        4.0,
+        4.5,
+        5.0
+      ],
+      "friction_band": "HIGH",
+      "historical_successes": [
+        3.0,
+        4.0,
+        4.5,
+        5.0
+      ],
+      "reason": "NO_F_PREV_IN_AUTHORITATIVE_LATTICE",
+      "split": "TRAIN",
+      "task": 5
+    },
+    {
+      "context_id": "p5s0c_train_t5_r01_s5101_high_mu0.977978",
+      "forces": [
+        3.0,
+        4.0,
+        4.5,
+        5.0
+      ],
+      "friction_band": "HIGH",
+      "historical_successes": [
+        3.0,
+        4.0,
+        4.5,
+        5.0
+      ],
+      "reason": "NO_F_PREV_IN_AUTHORITATIVE_LATTICE",
+      "split": "TRAIN",
+      "task": 5
+    },
+    {
+      "context_id": "p5s0c_train_t5_r02_s5102_high_mu0.938254",
+      "forces": [
+        3.0,
+        4.0,
+        4.5,
+        5.0
+      ],
+      "friction_band": "HIGH",
+      "historical_successes": [
+        3.0,
+        4.0,
+        4.5,
+        5.0
+      ],
+      "reason": "NO_F_PREV_IN_AUTHORITATIVE_LATTICE",
+      "split": "TRAIN",
+      "task": 5
+    },
+    {
+      "context_id": "p5s0c_train_t5_r03_s5103_high_mu0.971853",
+      "forces": [
+        3.0,
+        4.0,
+        4.5,
+        5.0
+      ],
+      "friction_band": "HIGH",
+      "historical_successes": [
+        3.0,
+        4.0,
+        4.5,
+        5.0
+      ],
+      "reason": "NO_F_PREV_IN_AUTHORITATIVE_LATTICE",
+      "split": "TRAIN",
+      "task": 5
+    },
+    {
+      "context_id": "p5s0c_train_t5_r04_s5104_high_mu0.927670",
+      "forces": [
+        3.0,
+        4.0,
+        4.5,
+        5.0
+      ],
+      "friction_band": "HIGH",
+      "historical_successes": [
+        3.0,
+        4.0,
+        4.5,
+        5.0
+      ],
+      "reason": "NO_F_PREV_IN_AUTHORITATIVE_LATTICE",
+      "split": "TRAIN",
+      "task": 5
+    },
+    {
+      "context_id": "p5s0c_train_t5_r05_s5105_high_mu0.955667",
+      "forces": [
+        3.0,
+        4.0,
+        4.5,
+        5.0
+      ],
+      "friction_band": "HIGH",
+      "historical_successes": [
+        3.0,
+        4.0,
+        4.5,
+        5.0
+      ],
+      "reason": "NO_F_PREV_IN_AUTHORITATIVE_LATTICE",
+      "split": "TRAIN",
+      "task": 5
+    },
+    {
+      "context_id": "p5s0c_train_t5_r05_s5105_low_mu0.212460",
+      "forces": [
+        3.0,
+        4.0,
+        4.5,
+        5.0
+      ],
+      "friction_band": "LOW",
+      "historical_successes": [
+        5.0
+      ],
+      "reason": "NO_F_NEXT_IN_AUTHORITATIVE_LATTICE",
+      "split": "TRAIN",
+      "task": 5
+    },
+    {
+      "F_next": 5.0,
+      "F_prev": 4.0,
+      "F_star": 4.5,
+      "context_id": "p5s0c_train_t5_r02_s5102_low_mu0.295394",
+      "force_lattice": [
+        3.0,
+        4.0,
+        4.5,
+        5.0
+      ],
+      "friction_band": "LOW",
+      "hidden_friction_analysis_only": 0.2953937543558703,
+      "historical_frontier_definition": "minimum successful force",
+      "reason": "ELIGIBLE_BUT_NOT_SAMPLED_SMALL_POPULATION",
+      "root_id": "p5s0c_train_t5_root02_s5102",
+      "root_index": 2,
+      "root_seed": 5102,
+      "split": "TRAIN",
+      "task": 5
+    },
+    {
+      "F_next": 5.0,
+      "F_prev": 4.0,
+      "F_star": 4.5,
+      "context_id": "p5s0c_train_t5_r03_s5103_low_mu0.268456",
+      "force_lattice": [
+        3.0,
+        4.0,
+        4.5,
+        5.0
+      ],
+      "friction_band": "LOW",
+      "hidden_friction_analysis_only": 0.2684556388624265,
+      "historical_frontier_definition": "minimum successful force",
+      "reason": "ELIGIBLE_BUT_NOT_SAMPLED_SMALL_POPULATION",
+      "root_id": "p5s0c_train_t5_root03_s5103",
+      "root_index": 3,
+      "root_seed": 5103,
+      "split": "TRAIN",
+      "task": 5
+    },
+    {
+      "F_next": 5.0,
+      "F_prev": 4.0,
+      "F_star": 4.5,
+      "context_id": "p5s0c_train_t5_r04_s5104_low_mu0.296413",
+      "force_lattice": [
+        3.0,
+        4.0,
+        4.5,
+        5.0
+      ],
+      "friction_band": "LOW",
+      "hidden_friction_analysis_only": 0.2964132778649048,
+      "historical_frontier_definition": "minimum successful force",
+      "reason": "ELIGIBLE_BUT_NOT_SAMPLED_SMALL_POPULATION",
+      "root_id": "p5s0c_train_t5_root04_s5104",
+      "root_index": 4,
+      "root_seed": 5104,
+      "split": "TRAIN",
+      "task": 5
+    },
+    {
+      "F_next": 4.5,
+      "F_prev": 3.0,
+      "F_star": 4.0,
+      "context_id": "p5s0c_train_t5_r02_s5102_mid_mu0.569222",
+      "force_lattice": [
+        3.0,
+        4.0,
+        4.5,
+        5.0
+      ],
+      "friction_band": "MID",
+      "hidden_friction_analysis_only": 0.5692222329044275,
+      "historical_frontier_definition": "minimum successful force",
+      "reason": "ELIGIBLE_BUT_NOT_SAMPLED_SMALL_POPULATION",
+      "root_id": "p5s0c_train_t5_root02_s5102",
+      "root_index": 2,
+      "root_seed": 5102,
+      "split": "TRAIN",
+      "task": 5
+    },
+    {
+      "F_next": 4.5,
+      "F_prev": 3.0,
+      "F_star": 4.0,
+      "context_id": "p5s0c_train_t5_r03_s5103_mid_mu0.579422",
+      "force_lattice": [
+        3.0,
+        4.0,
+        4.5,
+        5.0
+      ],
+      "friction_band": "MID",
+      "hidden_friction_analysis_only": 0.5794217219847442,
+      "historical_frontier_definition": "minimum successful force",
+      "reason": "ELIGIBLE_BUT_NOT_SAMPLED_SMALL_POPULATION",
+      "root_id": "p5s0c_train_t5_root03_s5103",
+      "root_index": 3,
+      "root_seed": 5103,
+      "split": "TRAIN",
+      "task": 5
+    },
+    {
+      "F_next": 4.5,
+      "F_prev": 3.0,
+      "F_star": 4.0,
+      "context_id": "p5s0c_train_t5_r04_s5104_mid_mu0.479493",
+      "force_lattice": [
+        3.0,
+        4.0,
+        4.5,
+        5.0
+      ],
+      "friction_band": "MID",
+      "hidden_friction_analysis_only": 0.4794931193111124,
+      "historical_frontier_definition": "minimum successful force",
+      "reason": "ELIGIBLE_BUT_NOT_SAMPLED_SMALL_POPULATION",
+      "root_id": "p5s0c_train_t5_root04_s5104",
+      "root_index": 4,
+      "root_seed": 5104,
+      "split": "TRAIN",
+      "task": 5
+    },
+    {
+      "F_next": 4.5,
+      "F_prev": 3.0,
+      "F_star": 4.0,
+      "context_id": "p5s0c_train_t5_r05_s5105_mid_mu0.478580",
+      "force_lattice": [
+        3.0,
+        4.0,
+        4.5,
+        5.0
+      ],
+      "friction_band": "MID",
+      "hidden_friction_analysis_only": 0.4785796961711498,
+      "historical_frontier_definition": "minimum successful force",
+      "reason": "ELIGIBLE_BUT_NOT_SAMPLED_SMALL_POPULATION",
+      "root_id": "p5s0c_train_t5_root05_s5105",
+      "root_index": 5,
+      "root_seed": 5105,
+      "split": "TRAIN",
+      "task": 5
+    },
+    {
+      "context_id": "p5s0c_dev_t6_r06_s5106_high_mu0.911169",
+      "forces": [
+        3.0,
+        3.5,
+        4.0
+      ],
+      "friction_band": "HIGH",
+      "historical_successes": [
+        3.0,
+        3.5,
+        4.0
+      ],
+      "reason": "NO_F_PREV_IN_AUTHORITATIVE_LATTICE",
+      "split": "DEV",
+      "task": 6
+    },
+    {
+      "context_id": "p5s0c_dev_t6_r07_s5107_high_mu0.971507",
+      "forces": [
+        3.0,
+        3.5,
+        4.0
+      ],
+      "friction_band": "HIGH",
+      "historical_successes": [
+        3.0,
+        3.5,
+        4.0
+      ],
+      "reason": "NO_F_PREV_IN_AUTHORITATIVE_LATTICE",
+      "split": "DEV",
+      "task": 6
+    },
+    {
+      "context_id": "p5s0c_dev_t6_r06_s5106_low_mu0.210449",
+      "forces": [
+        3.0,
+        3.5,
+        4.0
+      ],
+      "friction_band": "LOW",
+      "historical_successes": [
+        3.0,
+        3.5,
+        4.0
+      ],
+      "reason": "NO_F_PREV_IN_AUTHORITATIVE_LATTICE",
+      "split": "DEV",
+      "task": 6
+    },
+    {
+      "context_id": "p5s0c_dev_t6_r06_s5106_mid_mu0.569177",
+      "forces": [
+        3.0,
+        3.5,
+        4.0
+      ],
+      "friction_band": "MID",
+      "historical_successes": [
+        3.0,
+        3.5,
+        4.0
+      ],
+      "reason": "NO_F_PREV_IN_AUTHORITATIVE_LATTICE",
+      "split": "DEV",
+      "task": 6
+    },
+    {
+      "context_id": "p5s0c_dev_t6_r07_s5107_mid_mu0.522882",
+      "forces": [
+        3.0,
+        3.5,
+        4.0
+      ],
+      "friction_band": "MID",
+      "historical_successes": [
+        3.0,
+        3.5,
+        4.0
+      ],
+      "reason": "NO_F_PREV_IN_AUTHORITATIVE_LATTICE",
+      "split": "DEV",
+      "task": 6
+    },
+    {
+      "context_id": "p5s0c_test_t6_r10_s5110_high_mu0.987733",
+      "forces": [
+        3.0,
+        3.5,
+        4.0
+      ],
+      "friction_band": "HIGH",
+      "historical_successes": [
+        3.0,
+        3.5,
+        4.0
+      ],
+      "reason": "NO_F_PREV_IN_AUTHORITATIVE_LATTICE",
+      "split": "TEST",
+      "task": 6
+    },
+    {
+      "F_next": 4.0,
+      "F_prev": 3.0,
+      "F_star": 3.5,
+      "context_id": "p5s0c_test_t6_r11_s5111_high_mu0.906536",
+      "force_lattice": [
+        3.0,
+        3.5,
+        4.0
+      ],
+      "friction_band": "HIGH",
+      "hidden_friction_analysis_only": 0.9065357212447386,
+      "historical_frontier_definition": "minimum successful force",
+      "reason": "ELIGIBLE_BUT_NOT_SAMPLED_SMALL_POPULATION",
+      "root_id": "p5s0c_test_t6_root11_s5111",
+      "root_index": 11,
+      "root_seed": 5111,
+      "split": "TEST",
+      "task": 6
+    },
+    {
+      "context_id": "p5s0c_test_t6_r08_s5108_low_mu0.285949",
+      "forces": [
+        3.0,
+        3.5,
+        4.0
+      ],
+      "friction_band": "LOW",
+      "historical_successes": [
+        3.0,
+        3.5,
+        4.0
+      ],
+      "reason": "NO_F_PREV_IN_AUTHORITATIVE_LATTICE",
+      "split": "TEST",
+      "task": 6
+    },
+    {
+      "context_id": "p5s0c_test_t6_r09_s5109_low_mu0.212285",
+      "forces": [
+        3.0,
+        3.5,
+        4.0
+      ],
+      "friction_band": "LOW",
+      "historical_successes": [
+        3.0,
+        3.5,
+        4.0
+      ],
+      "reason": "NO_F_PREV_IN_AUTHORITATIVE_LATTICE",
+      "split": "TEST",
+      "task": 6
+    },
+    {
+      "context_id": "p5s0c_test_t6_r10_s5110_low_mu0.252659",
+      "forces": [
+        3.0,
+        3.5,
+        4.0
+      ],
+      "friction_band": "LOW",
+      "historical_successes": [
+        3.0,
+        3.5,
+        4.0
+      ],
+      "reason": "NO_F_PREV_IN_AUTHORITATIVE_LATTICE",
+      "split": "TEST",
+      "task": 6
+    },
+    {
+      "context_id": "p5s0c_test_t6_r08_s5108_mid_mu0.589667",
+      "forces": [
+        3.0,
+        3.5,
+        4.0
+      ],
+      "friction_band": "MID",
+      "historical_successes": [
+        3.0,
+        3.5,
+        4.0
+      ],
+      "reason": "NO_F_PREV_IN_AUTHORITATIVE_LATTICE",
+      "split": "TEST",
+      "task": 6
+    },
+    {
+      "context_id": "p5s0c_test_t6_r09_s5109_mid_mu0.500794",
+      "forces": [
+        3.0,
+        3.5,
+        4.0
+      ],
+      "friction_band": "MID",
+      "historical_successes": [
+        3.0,
+        3.5,
+        4.0
+      ],
+      "reason": "NO_F_PREV_IN_AUTHORITATIVE_LATTICE",
+      "split": "TEST",
+      "task": 6
+    },
+    {
+      "context_id": "p5s0c_test_t6_r10_s5110_mid_mu0.481102",
+      "forces": [
+        3.0,
+        3.5,
+        4.0
+      ],
+      "friction_band": "MID",
+      "historical_successes": [
+        3.0,
+        3.5,
+        4.0
+      ],
+      "reason": "NO_F_PREV_IN_AUTHORITATIVE_LATTICE",
+      "split": "TEST",
+      "task": 6
+    },
+    {
+      "context_id": "p5s0c_test_t6_r11_s5111_mid_mu0.483652",
+      "forces": [
+        3.0,
+        3.5,
+        4.0
+      ],
+      "friction_band": "MID",
+      "historical_successes": [
+        3.0,
+        3.5,
+        4.0
+      ],
+      "reason": "NO_F_PREV_IN_AUTHORITATIVE_LATTICE",
+      "split": "TEST",
+      "task": 6
+    },
+    {
+      "context_id": "p5s0c_train_t6_r00_s5100_high_mu0.989348",
+      "forces": [
+        3.0,
+        3.5,
+        4.0
+      ],
+      "friction_band": "HIGH",
+      "historical_successes": [
+        3.0,
+        3.5,
+        4.0
+      ],
+      "reason": "NO_F_PREV_IN_AUTHORITATIVE_LATTICE",
+      "split": "TRAIN",
+      "task": 6
+    },
+    {
+      "context_id": "p5s0c_train_t6_r02_s5102_high_mu0.958858",
+      "forces": [
+        3.0,
+        3.5,
+        4.0
+      ],
+      "friction_band": "HIGH",
+      "historical_successes": [
+        3.0,
+        3.5,
+        4.0
+      ],
+      "reason": "NO_F_PREV_IN_AUTHORITATIVE_LATTICE",
+      "split": "TRAIN",
+      "task": 6
+    },
+    {
+      "context_id": "p5s0c_train_t6_r03_s5103_high_mu0.989240",
+      "forces": [
+        3.0,
+        3.5,
+        4.0
+      ],
+      "friction_band": "HIGH",
+      "historical_successes": [
+        3.0,
+        3.5,
+        4.0
+      ],
+      "reason": "NO_F_PREV_IN_AUTHORITATIVE_LATTICE",
+      "split": "TRAIN",
+      "task": 6
+    },
+    {
+      "F_next": 4.0,
+      "F_prev": 3.0,
+      "F_star": 3.5,
+      "context_id": "p5s0c_train_t6_r05_s5105_high_mu0.940404",
+      "force_lattice": [
+        3.0,
+        3.5,
+        4.0
+      ],
+      "friction_band": "HIGH",
+      "hidden_friction_analysis_only": 0.9404040658568696,
+      "historical_frontier_definition": "minimum successful force",
+      "reason": "ELIGIBLE_BUT_NOT_SAMPLED_SMALL_POPULATION",
+      "root_id": "p5s0c_train_t6_root05_s5105",
+      "root_index": 5,
+      "root_seed": 5105,
+      "split": "TRAIN",
+      "task": 6
+    },
+    {
+      "context_id": "p5s0c_train_t6_r02_s5102_low_mu0.225446",
+      "forces": [
+        3.0,
+        3.5,
+        4.0
+      ],
+      "friction_band": "LOW",
+      "historical_successes": [
+        3.0,
+        3.5,
+        4.0
+      ],
+      "reason": "NO_F_PREV_IN_AUTHORITATIVE_LATTICE",
+      "split": "TRAIN",
+      "task": 6
+    },
+    {
+      "context_id": "p5s0c_train_t6_r03_s5103_low_mu0.298364",
+      "forces": [
+        3.0,
+        3.5,
+        4.0
+      ],
+      "friction_band": "LOW",
+      "historical_successes": [
+        3.0,
+        3.5,
+        4.0
+      ],
+      "reason": "NO_F_PREV_IN_AUTHORITATIVE_LATTICE",
+      "split": "TRAIN",
+      "task": 6
+    },
+    {
+      "context_id": "p5s0c_train_t6_r05_s5105_low_mu0.260231",
+      "forces": [
+        3.0,
+        3.5,
+        4.0
+      ],
+      "friction_band": "LOW",
+      "historical_successes": [
+        3.0,
+        3.5,
+        4.0
+      ],
+      "reason": "NO_F_PREV_IN_AUTHORITATIVE_LATTICE",
+      "split": "TRAIN",
+      "task": 6
+    },
+    {
+      "F_next": 4.0,
+      "F_prev": 3.0,
+      "F_star": 3.5,
+      "context_id": "p5s0c_train_t6_r04_s5104_low_mu0.226087",
+      "force_lattice": [
+        3.0,
+        3.5,
+        4.0
+      ],
+      "friction_band": "LOW",
+      "hidden_friction_analysis_only": 0.2260874595992573,
+      "historical_frontier_definition": "minimum successful force",
+      "reason": "ELIGIBLE_BUT_NOT_SAMPLED_SMALL_POPULATION",
+      "root_id": "p5s0c_train_t6_root04_s5104",
+      "root_index": 4,
+      "root_seed": 5104,
+      "split": "TRAIN",
+      "task": 6
+    },
+    {
+      "context_id": "p5s0c_train_t6_r00_s5100_mid_mu0.558595",
+      "forces": [
+        3.0,
+        3.5,
+        4.0
+      ],
+      "friction_band": "MID",
+      "historical_successes": [
+        3.0,
+        3.5,
+        4.0
+      ],
+      "reason": "NO_F_PREV_IN_AUTHORITATIVE_LATTICE",
+      "split": "TRAIN",
+      "task": 6
+    },
+    {
+      "context_id": "p5s0c_train_t6_r01_s5101_mid_mu0.529103",
+      "forces": [
+        3.0,
+        3.5,
+        4.0
+      ],
+      "friction_band": "MID",
+      "historical_successes": [
+        3.0,
+        3.5,
+        4.0
+      ],
+      "reason": "NO_F_PREV_IN_AUTHORITATIVE_LATTICE",
+      "split": "TRAIN",
+      "task": 6
+    },
+    {
+      "context_id": "p5s0c_train_t6_r02_s5102_mid_mu0.568022",
+      "forces": [
+        3.0,
+        3.5,
+        4.0
+      ],
+      "friction_band": "MID",
+      "historical_successes": [
+        3.0,
+        3.5,
+        4.0
+      ],
+      "reason": "NO_F_PREV_IN_AUTHORITATIVE_LATTICE",
+      "split": "TRAIN",
+      "task": 6
+    },
+    {
+      "context_id": "p5s0c_train_t6_r03_s5103_mid_mu0.494903",
+      "forces": [
+        3.0,
+        3.5,
+        4.0
+      ],
+      "friction_band": "MID",
+      "historical_successes": [
+        3.0,
+        3.5,
+        4.0
+      ],
+      "reason": "NO_F_PREV_IN_AUTHORITATIVE_LATTICE",
+      "split": "TRAIN",
+      "task": 6
+    },
+    {
+      "context_id": "p5s0c_train_t6_r04_s5104_mid_mu0.562603",
+      "forces": [
+        3.0,
+        3.5,
+        4.0
+      ],
+      "friction_band": "MID",
+      "historical_successes": [
+        3.0,
+        3.5,
+        4.0
+      ],
+      "reason": "NO_F_PREV_IN_AUTHORITATIVE_LATTICE",
+      "split": "TRAIN",
+      "task": 6
+    },
+    {
+      "context_id": "p5s0c_train_t6_r05_s5105_mid_mu0.481964",
+      "forces": [
+        3.0,
+        3.5,
+        4.0
+      ],
+      "friction_band": "MID",
+      "historical_successes": [
+        3.0,
+        3.5,
+        4.0
+      ],
+      "reason": "NO_F_PREV_IN_AUTHORITATIVE_LATTICE",
+      "split": "TRAIN",
+      "task": 6
+    }
+  ],
+  "metrics": [
+    "AUROC",
+    "AUPRC",
+    "balanced_accuracy",
+    "F1",
+    "F_prev_sensitivity",
+    "F_star_next_specificity",
+    "paired_boundary_ranking",
+    "strict_triplet_ordering",
+    "bootstrap_95_CI_by_context"
+  ],
+  "protocol_name": "DIRECT_CONTACT_ROOT_DIVERSE_DATASET",
+  "protocol_version": "1.0-data-only",
+  "repeats_per_force": 3,
+  "reused_artifacts": {
+    "analysis/p5s0c_paired_boundary_probe_value.py": "2ab5c37140bd0f92fcee29d5192d8e88db4d028e549e9cfd4676c71aafbdf019",
+    "analysis/results/direct_contact_boundary_imagination_20260829_000205/DIRECT_CONTACT_DATASET_AUDIT.json": "7eda383c80690ec0aed016e8707e30efce6d68d899d31820b01787b419be2cde",
+    "analysis/results/direct_contact_boundary_imagination_20260829_000205/DIRECT_CONTACT_LOGGER_AUDIT.json": "6c48fe1aec070b01106afff0b2cf4f517767305ee3f288255780a953a5c65d7f",
+    "analysis/results/direct_contact_boundary_imagination_20260829_000205/DIRECT_PHYSICAL_EVENT_DEFINITION.json": "63a7b1fef7bf0ada723ec6b7e8fec4e29e4624390c0c1aa0c9b8a92d1be9f525",
+    "analysis/results/p5s0c_paired_boundary_probe_value_20260824_000542/P5S0C_BRANCH_MANIFEST.csv": "778190f29b9414c7590141c6b07ba1bf29e625a8fd8ccea20559d466480c778a"
+  },
+  "root_split_membership": "inherited from authoritative P5-S0-C root split",
+  "scientific_goal": "test whether corrected direct physical telemetry separates F_prev from F_star/F_next on unseen roots without leakage",
+  "selected_context_count": 41,
+  "status_before_outcomes": "FROZEN_BEFORE_NEW_SCIENTIFIC_ROLLOUTS",
+  "tasks": [
+    0,
+    1,
+    5,
+    6
+  ],
+  "telemetry_fields": [
+    "relative_object_gripper_position",
+    "relative_object_gripper_velocity",
+    "left_normal_force_N",
+    "right_normal_force_N",
+    "left_tangential_force_N",
+    "right_tangential_force_N",
+    "contact_left",
+    "contact_right",
+    "tangential_relative_velocity_proxy",
+    "gripper_joint_state",
+    "task_phase",
+    "object_pose",
+    "object_linear_velocity",
+    "object_angular_velocity"
+  ]
+}

@@ -1,0 +1,18 @@
+# Final predictive-verifier development report
+
+The verifier is **not ready to replace Direct**. On the TRAIN-rootheldout verifier diagnostic, Direct SR was 0.969; strict verifier search had SR 0.806 with coverage 0.806, and Max fallback returned SR 0.969 only by executing Fmax after verifier rejection. The dominant observable blocker is verifier false-negative / NO_VALID_FORCE; these data do not show that world-model trajectory error is the dominant blocker. No untouched TEST result was read.
+
+## Direct answers
+
+1. **World Model or Outcome Verifier?** The main observed problem is the verifier: residual counts are `{'VERIFIER_FALSE_NEGATIVE': 47, 'NO_VALID_FORCE_IN_CANDIDATE_RANGE': 9}` across three single-seed controller runs. The earlier viewed DEV forensic also found three verifier FNs versus one primary WM shift. WM-vs-verifier separation is not identifiable for every OOF case.
+2. **Did a temporal verifier solve the three old false-negatives?** No robust solution was demonstrated. All-six-vote resolutions by architecture are `{'V0_LINEAR': 0, 'V1_SMALL_MLP': 2, 'V2_TEMPORAL_GRU': 0, 'V3_GRU_CONTEXT': 0}`; importantly this old-DEV check was retrospective and did not select the model. CV selected Linear on safety, not a temporal verifier.
+3. **Did conservative disagreement reduce under-force?** No. Under-force was already zero for single/majority/unanimous; unanimous reduced SR/coverage, so the explicit ensemble gate rejected it and retained single-seed evaluation.
+4. **Does PhysicsOnly still support verification?** It retains similar trajectory fidelity (DEV MAE current=0.1698, PhysicsOnly=0.1677) but weaker verifier discrimination (AUROC 0.843 vs 0.770; FPR 0.239 vs 0.347). Current performance partly benefits from outcome-shaped Joint training; do not call it a pure physics WM.
+5. **Did Receding-H8 fix late failures?** No. It detected later rejection signals in 5/6 seed-cases missed initially, but also rejected successful proposals at some chunk in 74 seed-cases. Moreover, no real post-switch outcomes exist, so receding controller SR is `NA`.
+6. **Selective checking or simply +1 force?** No selective advantage was demonstrated: Direct, one-step, Fixed Max, and Max fallback all had SR 0.969 in this saturated TRAIN population; strict verification instead lost coverage. Verifier+fallback used mean 4.027 N versus one-step 4.213 N, but did not improve SR.
+7. **Which controller?** Use **ActiveForcing-Direct** at this evidence stage. Hard Verifier is frozen but fails the development promotion gate; Receding is unevaluated; Max fallback is deployment fallback, not verified safety.
+8. **Paper role?** Predictive physics is presently an **auxiliary outcome-shaped predictive representation / candidate safety verifier**, not a standalone planner and not yet a validated safety verifier.
+
+## Evidence limits
+
+Architecture and ensemble selection used 22 independent TRAIN roots (48 contexts, 480 branches) with strict root grouping. Direct proposals came from the frozen all-TRAIN Direct checkpoints, so controller-level CV is verifier-heldout, not a fully OOF Direct+verifier system estimate. The exact old baseline uses 24 context-force cells after averaging repeats and seed scores; new CV control metrics use each repeat and each seed's hard Boolean decision. They answer different questions and are not interchangeable estimates. The old pooled DEV was retrospective only. No untouched TEST manifest, label, prediction, model result, or outcome was opened by this run. Because the development promotion gate failed, this artifact does not authorize a TEST run or a paper claim.

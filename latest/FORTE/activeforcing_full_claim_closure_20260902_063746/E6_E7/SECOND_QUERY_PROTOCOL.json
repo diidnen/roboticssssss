@@ -1,0 +1,22 @@
+{
+  "availability_audit": {
+    "historical_single_query_only": true,
+    "p7b_pilot": "query qualification gate failed; not reused as scientific evidence",
+    "second_query_files_found": false
+  },
+  "budget": 2,
+  "controller": "P4-B common contact-frame shear",
+  "first_query": "reused authoritative P4-B probe_out",
+  "forbidden": [
+    "sealed TEST",
+    "task outcome",
+    "adaptive force execution",
+    "query rule tuning on TEST"
+  ],
+  "fusion": "member evidence concatenation/re-encoding; no label/outcome input",
+  "name": "E6_SECOND_QUERY_PROTOCOL",
+  "query_selection": "decision-aware only; never reads task outcome",
+  "same_frozen_pi0": true,
+  "second_query": "pre-registered repeat P4-B with same preload/displacement/return",
+  "status": "FROZEN_PROTOCOL_NO_VALIDATED_SECOND_QUERY_DATA"
+}

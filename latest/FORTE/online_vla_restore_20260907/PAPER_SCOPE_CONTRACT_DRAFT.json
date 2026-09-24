@@ -1,0 +1,20 @@
+{
+  "role": "PAPER_SCOPE_CONTRACT_PENDING_FINAL_TEST",
+  "target_claim": "ActiveForcing performs online physical adaptation on top of a frozen pretrained VLA, without retraining the VLA.",
+  "scope": "Starting from a common established-grasp state; physical probing and force selection occur online. Frozen VLA generates arm actions under native50-step prediction/10-step execution schedule. AF controls squeeze; VLA open intent is preserved.",
+  "feasibility_training_disclosure": "Existing647 supervision rows came from controlled scripted-motion full-task outcomes. The current64D model exactly removes seven constant phase columns and is transferred without fitting new weights. VLA transfer is verified separately using online development and final fresh-root rollouts. Never label the647 rows as VLA-matched training data.",
+  "chunk_conditioning_disclosure": "Current initial online VLA chunk supplies six kinematic channels. These channels had negligible motion variation in old647 data; do not claim that varied VLA motion effects were learned from that training corpus. Report observed input-range extrapolation and empirical transfer.",
+  "force_adaptation_schedule": "One posterior-aware force setpoint is chosen after the probe using the current predicted chunk; unchanged force controller regulates it throughout grasp execution. No claim of posterior/F replanning at every VLA chunk.",
+  "observability_disclosure": "Current simulator-state object velocity is an online input; real-robot perception availability is not established. No hidden material friction is read during deployment selection.",
+  "success_and_drop": "Report frozen geometric full-task success and independently measured pre-release drops separately. Any recovered-drop geometric success must be disclosed.",
+  "statistics": "Four fresh root groups; paired contexts and shared policy-noise seeds. Do not count192 branches as192 independent roots.",
+  "scripted_results_role": "Controlled-motion engineering evidence only; excluded from all online-VLA main and ablation outcomes.",
+  "methodological_limitations_not_removed_by_good_SR": [
+    "One burned root for transfer qualification",
+    "Training motion diversity is limited",
+    "Native online inference in simulation is not a real-robot hard-real-time claim"
+  ],
+  "paper_source_path_question_pending": true,
+  "manuscript_modified": false,
+  "final_test_started": false
+}

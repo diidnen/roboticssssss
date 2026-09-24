@@ -1,0 +1,172 @@
+{
+  "claim_boundary": "same-root posthoc physical force-range diagnostic; >8 N is outside feasibility training support",
+  "created_utc": "2026-09-14T04:28:07.682023+00:00",
+  "engineering_admission_rule": "reuse V2 raw-audited smoke; exact command dispatch, finite bounded aperture, at least 100 target-contact steps at 15 N command, and raw impulse peak below 150 N",
+  "force_order_rule": "left rotation by context index modulo five",
+  "forces_N": [
+    5.0,
+    8.0,
+    10.0,
+    12.0,
+    15.0
+  ],
+  "main_contexts": 24,
+  "main_rollouts": 120,
+  "main_stop_rule": "retain and run all 24 contexts regardless of interim outcomes; stop only on engineering/audit failure",
+  "no_feasibility_or_utility_used": true,
+  "no_new_roots": true,
+  "paired_analysis": "each 10/12/15 N arm versus 8 N with exact McNemar and paired outcome table",
+  "physical_root": 200002,
+  "population": [
+    {
+      "friction": 0.425,
+      "policy_seed": 80200002
+    },
+    {
+      "friction": 0.575,
+      "policy_seed": 80200002
+    },
+    {
+      "friction": 0.85,
+      "policy_seed": 80200002
+    },
+    {
+      "friction": 0.425,
+      "policy_seed": 80200003
+    },
+    {
+      "friction": 0.575,
+      "policy_seed": 80200003
+    },
+    {
+      "friction": 0.85,
+      "policy_seed": 80200003
+    },
+    {
+      "friction": 0.425,
+      "policy_seed": 80200004
+    },
+    {
+      "friction": 0.575,
+      "policy_seed": 80200004
+    },
+    {
+      "friction": 0.85,
+      "policy_seed": 80200004
+    },
+    {
+      "friction": 0.425,
+      "policy_seed": 80200005
+    },
+    {
+      "friction": 0.575,
+      "policy_seed": 80200005
+    },
+    {
+      "friction": 0.85,
+      "policy_seed": 80200005
+    },
+    {
+      "friction": 0.425,
+      "policy_seed": 80200006
+    },
+    {
+      "friction": 0.575,
+      "policy_seed": 80200006
+    },
+    {
+      "friction": 0.85,
+      "policy_seed": 80200006
+    },
+    {
+      "friction": 0.425,
+      "policy_seed": 80200007
+    },
+    {
+      "friction": 0.575,
+      "policy_seed": 80200007
+    },
+    {
+      "friction": 0.85,
+      "policy_seed": 80200007
+    },
+    {
+      "friction": 0.425,
+      "policy_seed": 80200008
+    },
+    {
+      "friction": 0.575,
+      "policy_seed": 80200008
+    },
+    {
+      "friction": 0.85,
+      "policy_seed": 80200008
+    },
+    {
+      "friction": 0.425,
+      "policy_seed": 80200009
+    },
+    {
+      "friction": 0.575,
+      "policy_seed": 80200009
+    },
+    {
+      "friction": 0.85,
+      "policy_seed": 80200009
+    }
+  ],
+  "population_source": "all 24 contexts from the frozen formal same-root held-out-path evaluation",
+  "posthoc_range_diagnostic": true,
+  "primary_endpoint": "official full-task success per commanded force setpoint",
+  "prior_engineering_smoke": {
+    "characterization": {
+      "15N_aperture_saturation_fraction": 1.0,
+      "15N_contact_fraction": 1.0,
+      "15N_realized_contact_mean_N": 8.529830116418976,
+      "15N_success": 1,
+      "15N_tracking_ratio": 0.5686553410945984,
+      "8N_contact_fraction": 0.17260143702451394,
+      "8N_realized_contact_mean_N": 8.159348850630762,
+      "8N_success": 0
+    },
+    "checks": {
+      "15N_raw_peak_below_150N": true,
+      "15N_target_contact_steps_at_least_100": true,
+      "all_raw_audits_pass": true,
+      "apertures_within_physical_bounds": true,
+      "both_commands_present": true
+    },
+    "excluded_from_main_analysis": true,
+    "record_path": "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_fixed_force_5_15_20260914_v2/smoke_records/smoke_mu0.850_root200002_ps80200002_8v15.json",
+    "record_sha256": "2db4f80ad77959a7e72560af29212dea3cf232429ed370241f83288382005d43"
+  },
+  "runtime_manifest": "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_maxf8_20260913/additional_data_v1/RUNTIME_MANIFEST.json",
+  "runtime_manifest_sha256": "01d0289b14b812a4a12455e826a0b213ef4bf4fcdb27717892289b7e137b5034",
+  "secondary_endpoints": [
+    "target-contact fraction",
+    "target-contact realized squeeze / command",
+    "post-contact loss duration"
+  ],
+  "smoke_forces_N": [
+    8.0,
+    15.0
+  ],
+  "smoke_rollouts": 2,
+  "source_hashes": {
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_fixed_force_5_15_20260914_v3/EXPERIMENT_CARD.md": "24e3b509a61dc952355ed0ceda8a209fb42a7c534bc865fc96fd735186ae967e",
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_fixed_force_5_15_20260914_v3/audit_fixed_sweep.py": "fc0a10826a1bf7ad22d1a57ecd1362c2108ec6d04beb0c7ffce078adc4babe38",
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_fixed_force_5_15_20260914_v3/freeze_fixed_sweep.py": "e94919447432a22f0e4d04b37c9d80e556a3d2b4425283e46ce93c0e08d865ed",
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_fixed_force_5_15_20260914_v3/infer_fixed_sweep_context.py": "03563f72facd3de10d7541ccedf43d3a7e340998f2eb93f627e652e52446ed73",
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_fixed_force_5_15_20260914_v3/original_arbitration_binding.py": "2e7f758bf125e95ffa6d976beccda74f4340c36794efb4faccfb9783983d3538",
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_fixed_force_5_15_20260914_v3/run_fixed_sweep_queue.py": "e28a68bb583c258ef63e19dec3a5ac5c189fb07c1ad5b96c99bbe2da8be82976",
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_original_restore_20260912/native_original_force_controller.py": "d6e27fcd83f2bc9415a86632e37025f707a2ec22424bf120dae6af84ba229518",
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_original_restore_20260912/original_squeeze_inner.py": "4814f6ab0fcac0b7966e6789518decbd722eb38a89ecea03dbafb2cbef9896fc",
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_original_restore_20260912/qualify_original_online_forks.py": "da2c673047569bf88359e09cbedb440f43bd497b4f23dc1683369a00482cf264",
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_original_restore_20260912/qualify_original_p4_native.py": "3c20c733bdedf4f46145b17292873b4fa0b6e03b66384a9104bd6595cadfbbad"
+  },
+  "storage_root": "/media/volume/dasdas/exouser/af_dump_fixed_force_5_15_20260914_v3",
+  "supersedes_v2_tracking_gate": "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_fixed_force_5_15_20260914_v2",
+  "task": "dump_bin_bigbin",
+  "v2_interpretation_change": "15 N command is not a realized 15 N load; label all arms as commanded setpoints and report realized squeeze",
+  "version": "AF_DUMP_FIXED_FORCE_5_15_POSTHOC_V3_COMMANDED_SETPOINT"
+}

@@ -1,0 +1,63 @@
+# Omniverse
+**/*.dmp
+**/.thumbs
+
+# Python
+.DS_Store
+**/*.egg-info/
+**/__pycache__/
+**/.pytest_cache/
+**/*.pyc
+**/*.pb
+
+# IDE
+**/.idea/
+**/.vscode/
+# Don't ignore the top-level .vscode directory as it is
+# used to configure VS Code settings
+!.vscode
+
+# Outputs
+**/runs/*
+**/logs/*
+**/recordings/*
+**/output/*
+**/outputs/*
+**/videos/*
+!static/videos/
+!static/videos/*.mp4
+**/wandb/*
+**/.neptune/*
+evaluation_results/
+docker/artifacts/
+*.tmp
+*.hdf5
+# Isaac-Sim packman
+_isaac_sim*
+_repo
+_build
+.lastformat
+
+# local repo
+.datasets/
+source/tac_manip/tac_manip/assets/data
+benchmarks/datasets/libero/assembled_hdf5
+benchmarks/datasets/libero/replayed_demos
+benchmarks/datasets/libero/video_datasets
+benchmarks/datasets/libero/USD
+benchmarks/datasets/tabero/video_datasets
+benchmarks/datasets/tabero/replayed_demos
+benchmarks/datasets/tabero/gentle_force/
+benchmarks/datasets/tabero/firm_force/
+results/
+
+# Archived Tabero rollout data and experiment reports are intentionally kept
+# under version control. Exclude only local third-party snapshots and vendored
+# runtime dependencies that are not Tabero source or rollout evidence.
+!analysis/results/
+!analysis/results/**
+analysis/results/**/_vendor/
+analysis/**/repositories/
+analysis/**/.git/
+
+*.sha256

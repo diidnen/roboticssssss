@@ -1,0 +1,26 @@
+{
+  "status": "APPEND_ONLY_IMPLEMENTATION_CORRECTION_BEFORE_AUTHORITATIVE_RERUN",
+  "original_protocol_sha256": "607ae355febbb6099e372a50f918b0aa94641caba5491cdcb29139a0148c8db9",
+  "corrected_runner_sha256": "a9857b66c0b844ddb91f476ed8cfaa3d400d1b28328eb6c82fe5762fb30a624e",
+  "corrections": [
+    {
+      "item": "verifier shuffle schedule",
+      "old_implementation": "seed*1000003 + epoch*1009 + 727",
+      "corrected_implementation": "seed*1000003 + epoch*1009 + 313",
+      "reason": "V0 is the current Linear baseline and must reproduce its frozen seed protocol exactly; all four architectures share that protocol",
+      "result_driven": false
+    },
+    {
+      "item": "ensemble retention gate",
+      "old_implementation": "generic lexicographic safety sort",
+      "corrected_implementation": "retain unanimous only if under-force decreases, SR increases, and mean force increases by no more than 0.25 N; otherwise retain single",
+      "reason": "the user prompt explicitly specifies this rule",
+      "result_driven": false
+    }
+  ],
+  "architecture_added": false,
+  "threshold_changed": false,
+  "world_model_loss_changed": false,
+  "test_read": false,
+  "note": "The earlier outputs in this directory are superseded by the authoritative rerun; PhysicsOnly checkpoints are reusable because neither correction affects their training."
+}

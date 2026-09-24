@@ -1,0 +1,43 @@
+{
+  "branches": 100,
+  "candidate_forces_N": [
+    0.5,
+    1.0,
+    1.5,
+    2.5,
+    4.0
+  ],
+  "contexts": 10,
+  "controller_law_changed": false,
+  "downstream_outcome_used_by_query": false,
+  "fixed_friction": 0.5,
+  "mass_bands_kg": {
+    "HIGH": 0.2,
+    "LOW": 0.05,
+    "MID": 0.1
+  },
+  "object": "salad_dressing_1",
+  "orphan_material_excluded": true,
+  "path_structure": "LONG_TRANSPORT_TURNING_ACCELERATION_V1",
+  "query": "frozen_P4B",
+  "query_timesteps": 2060,
+  "repeats": 2,
+  "resume_from": "/home/exouser/FORTE_mass/ACTIVEFORCING_MASS_AND_TASK_BREADTH_EXTENSION_20260902_041500/M3_TASK2_FORMAL_STRUCTURED_20260902_130700_RESUME",
+  "sibling_force_branches_stay_together": true,
+  "source_directory": "/home/exouser/FORTE_mass/ACTIVEFORCING_MASS_AND_TASK_BREADTH_EXTENSION_20260902_041500/M3_TASK2_FORMAL_STRUCTURED_20260902_130700_RESUME",
+  "source_protocol_status": "RUNNING",
+  "status": "RECOVERED_ACCEPTED_PREFIX_READY_FOR_RESUME",
+  "task_id": 2,
+  "task_name": "libero_object_2",
+  "test_roots": [
+    8200,
+    8201
+  ],
+  "train_roots": [
+    8100,
+    8101,
+    8102,
+    8103
+  ],
+  "vla_retrained": false
+}

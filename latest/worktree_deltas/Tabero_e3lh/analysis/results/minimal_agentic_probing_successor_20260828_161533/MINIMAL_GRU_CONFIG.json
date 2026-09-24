@@ -1,0 +1,53 @@
+{
+  "architecture": "Linear(21,32)->GRU(32,32)->MLP(33,16,1)",
+  "features": [
+    "t_s",
+    "force_target",
+    "measured_squeeze",
+    "target_normal_force",
+    "measured_fn",
+    "measured_ft",
+    "ft_over_fn",
+    "force_imbalance",
+    "force_imbalance_ratio",
+    "gripper_opening",
+    "commanded_tangent_increment_mm",
+    "accumulated_displacement_mm",
+    "marker_motion",
+    "marker_tangential",
+    "marker_velocity",
+    "marker_loading_unloading",
+    "contact_left",
+    "contact_right",
+    "tactile_ok",
+    "eef_dx",
+    "eef_dy",
+    "eef_dz"
+  ],
+  "force_penalty": 0.02,
+  "forces_N": [
+    5.0,
+    6.0,
+    7.0,
+    8.0
+  ],
+  "internal_dev_roots": [
+    10108,
+    10109
+  ],
+  "internal_test_roots": [
+    10110
+  ],
+  "official_dev_test_labels": false,
+  "target": "full_task_success_y conditioned on candidate force",
+  "train_roots": [
+    10100,
+    10101,
+    10102,
+    10103,
+    10104,
+    10105,
+    10106,
+    10107
+  ]
+}

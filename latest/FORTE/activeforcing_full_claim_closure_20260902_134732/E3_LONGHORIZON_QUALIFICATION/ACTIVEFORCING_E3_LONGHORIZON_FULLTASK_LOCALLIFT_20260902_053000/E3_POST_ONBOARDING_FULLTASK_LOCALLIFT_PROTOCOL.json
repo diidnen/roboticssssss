@@ -1,0 +1,84 @@
+{
+  "protocol": "E3_POST_ONBOARDING_FULLTASK_VS_LOCALLIFT_V1",
+  "status": "PREREGISTERED_BEFORE_ONBOARDING_TRAINING_OR_POST_ONBOARDING_OUTCOMES",
+  "task": {
+    "suite": "libero_10",
+    "task_id": 5,
+    "identity": "black_book_1_to_back_compartment_of_caddy",
+    "instruction": "pick up the book and place it in the back compartment of the caddy"
+  },
+  "policy": {
+    "backend": "project-local OpenPI pi0",
+    "initialization": "pi0_lora_tacfield_tabero step 49999",
+    "onboarding": "5 successful official demonstrations first",
+    "freeze_rule": "after the nominal DEV gate passes, freeze one checkpoint and use it unchanged for all labels and comparisons",
+    "forbidden": [
+      "LeRobot pi0 replacement",
+      "checkpoint selection from ActiveForcing outcomes",
+      "different checkpoints for LocalLift and FullTask",
+      "force or Utility tuning from post-onboarding outcomes"
+    ]
+  },
+  "nominal_dev_gate": {
+    "roots": [7600, 7601, 7602, 7603, 7604],
+    "force_N": 8,
+    "role": "robust engineering qualification only; not Fmax or Utility",
+    "pass": "official full-task success >=3/5 and query-state reach >=4/5",
+    "failure": "increase onboarding demonstrations to 10, then at most 20, solely for nominal semantic capability"
+  },
+  "post_freeze_population": {
+    "train_roots": [7700, 7701, 7702, 7703, 7704, 7705],
+    "heldout_roots": [7800, 7801, 7802],
+    "friction": [0.2, 0.6, 1.0],
+    "force_N": [1, 2, 3, 4, 5, 6, 7, 8],
+    "repeats_per_cell": 1,
+    "train_contexts": 18,
+    "train_branches": 144,
+    "heldout_contexts": 9,
+    "heldout_branches": 72,
+    "branch_start": "same frozen root state within each root/friction context",
+    "timestamped_outputs_only": true
+  },
+  "labels": {
+    "LocalLift": "lift_success == 1",
+    "FullTask": "official conjunctive task evaluator == 1",
+    "regimes": {
+      "LOCAL_FAILURE": "LocalLift == 0",
+      "LOCAL_SUCCESS_DOWNSTREAM_FAILURE": "LocalLift == 1 and FullTask == 0",
+      "FULL_TASK_SUCCESS": "FullTask == 1"
+    },
+    "support_gate": "all three regimes present in TRAIN across at least three distinct root families and present in heldout data",
+    "forbidden": "define membership using which method wins"
+  },
+  "paired_model_comparison": {
+    "features": "identical legal pre-outcome query-state/physical features and candidate force for both targets",
+    "architecture": "identical frozen Direct architecture and optimizer for both targets",
+    "only_difference": "LocalLift versus FullTask binary target",
+    "train_cv": "three-fold grouped-root OOF; all friction/force siblings of one root remain in one fold",
+    "final_fit": "all six TRAIN roots only",
+    "evaluation": "three untouched heldout roots",
+    "metrics": [
+      "AUROC",
+      "Brier",
+      "NLL",
+      "calibration error",
+      "paired predicted probability gap",
+      "LocalLift-positive/FullTask-negative outcome rate",
+      "per-friction and per-root regime counts"
+    ]
+  },
+  "utility_and_selector": {
+    "existing_utility_hash_unchanged": "c5bc4f39861a84b9ba95d55cdb5f8633a8b004d205b3864a02799340653d9b10",
+    "existing_task5_Fmax_reused": false,
+    "reason": "libero_object/task5 tomato-to-basket and libero_10/task5 book-to-caddy are different task identities",
+    "new_task_Fmax_N": null,
+    "final_force_selection_claim": false,
+    "deprecated_hard_rho_used": false,
+    "scope": "E3 isolates the feasibility-target difference; it does not invent a new Utility normalization from outcomes"
+  },
+  "test_and_outcome_firewall": {
+    "heldout_outcomes_used_for_training_or_model_choice": false,
+    "activeforcing_outcomes_used_for_onboarding_or_task_choice": false,
+    "task_choice_basis": "historical benchmark task and nominal semantic capability, fixed before method comparison"
+  }
+}

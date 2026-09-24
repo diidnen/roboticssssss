@@ -1,0 +1,216 @@
+{
+  "backends": {
+    "calibration": "per-seed TRAIN-only isotonic, then ensemble mean",
+    "no_recalibration": true,
+    "no_training": true,
+    "primary": "frozen all-task PHYSICS_GRU_IE_FEAS lambda=0.3 three-seed ensemble; decision backend only",
+    "selection": "minimum tested force with ensemble calibrated probability >=0.5",
+    "shadow": "frozen all-task FULL_TASK_FEAS_ONLY three-seed ensemble",
+    "threshold": 0.5
+  },
+  "checkpoint_hashes": {
+    "/home/exouser/Tabero/analysis/results/counterfactual_force_world_model_20260829_160000/PHYSICS_GRU_FORCE_IE_lambda1.0_seed0.pt": "e6fa4c64317c81db906d9a55ca7168a79cdf37c98b3af4cd2c2980d04f278f2a",
+    "/home/exouser/Tabero/analysis/results/counterfactual_force_world_model_20260829_160000/PHYSICS_GRU_FORCE_IE_lambda1.0_seed1.pt": "ded1b7068e1e7e9db6a41e19ada8a7f3aef65f048fef2ddcf05f21909f91df2b",
+    "/home/exouser/Tabero/analysis/results/counterfactual_force_world_model_20260829_160000/PHYSICS_GRU_FORCE_IE_lambda1.0_seed2.pt": "85d058b3fcda884db1625d280701c6127509627be27ebe760469844fa6a2a94e",
+    "/home/exouser/Tabero/analysis/results/full_task_feasibility_20260830_012830/CALIBRATION_FULL_TASK_FEAS_ONLY_lambda0.0_seed0.json": "ba0ee414076f84a253220d9629a4af8cfe1584657b128a0575b3a7cffa18d670",
+    "/home/exouser/Tabero/analysis/results/full_task_feasibility_20260830_012830/CALIBRATION_FULL_TASK_FEAS_ONLY_lambda0.0_seed1.json": "bd3ecfe12edd4a5da22d2416209c486f338233f6f543d79e512480233ac506a4",
+    "/home/exouser/Tabero/analysis/results/full_task_feasibility_20260830_012830/CALIBRATION_FULL_TASK_FEAS_ONLY_lambda0.0_seed2.json": "b151c8c7ce7a724d25368e1de4bf5616c734466c658c40e47627e454a2617e8b",
+    "/home/exouser/Tabero/analysis/results/full_task_feasibility_20260830_012830/CALIBRATION_PHYSICS_GRU_IE_FEAS_lambda0.3_seed0.json": "37a8bbbc1834fff24ca38fb668dabc8a4abd08509909d7d4cee74c1902bf8f1b",
+    "/home/exouser/Tabero/analysis/results/full_task_feasibility_20260830_012830/CALIBRATION_PHYSICS_GRU_IE_FEAS_lambda0.3_seed1.json": "1203a23f06ff524363e18cf9422a77ad58c83d9dd5f62bd1a12e3d3cd1fa0649",
+    "/home/exouser/Tabero/analysis/results/full_task_feasibility_20260830_012830/CALIBRATION_PHYSICS_GRU_IE_FEAS_lambda0.3_seed2.json": "7bea2c2db43cd335856d3fe26ed94b6e92e09308d7d2ab6f8f4d20a950aaa2ab",
+    "/home/exouser/Tabero/analysis/results/full_task_feasibility_20260830_012830/FULL_TASK_FEAS_ONLY_seed0.pt": "6d07307339cbc8e171db5ab5d807ce69471fcf2d114ea7d1a488b06ba501691b",
+    "/home/exouser/Tabero/analysis/results/full_task_feasibility_20260830_012830/FULL_TASK_FEAS_ONLY_seed1.pt": "87ae50fab18a99522bcad5eb5e7bc97e35df4d9738983971a2956d091fce08bc",
+    "/home/exouser/Tabero/analysis/results/full_task_feasibility_20260830_012830/FULL_TASK_FEAS_ONLY_seed2.pt": "7c10609375494904eb2c36d93db1c686fd31f45d798479672501e90f175fe42e",
+    "/home/exouser/Tabero/analysis/results/full_task_feasibility_20260830_012830/PHYSICS_GRU_IE_FEAS_lambda0.3_seed0.pt": "f79bc697ac20d82a0d58687e4f9a1a0b18cd1f7d08ef46dbaca3d7de8ed9442a",
+    "/home/exouser/Tabero/analysis/results/full_task_feasibility_20260830_012830/PHYSICS_GRU_IE_FEAS_lambda0.3_seed1.pt": "73d89d23c1ee707b5dea803288df3889f4bb392cea13e3ec9c0338bb16a4ae02",
+    "/home/exouser/Tabero/analysis/results/full_task_feasibility_20260830_012830/PHYSICS_GRU_IE_FEAS_lambda0.3_seed2.pt": "90c34f64b1885f2e8075c6859de63ddfa26dc74424dcad1d9e647e0919542ddb"
+  },
+  "conditions": {
+    "GT": {
+      "physics": "mu_GT",
+      "role": "oracle ceiling"
+    },
+    "NO_PROBE": {
+      "aggregation": "mean calibrated probability",
+      "mus": [
+        0.3,
+        0.56,
+        0.92
+      ],
+      "physics": "historical three-point TRAIN prior",
+      "probe_executed": false
+    },
+    "PROBE": {
+      "physics": "frozen mu_hat from authoritative P4-B trace",
+      "sigma": "diagnostic only"
+    }
+  },
+  "created_utc": "2026-08-30T06:38:41.405585+00:00",
+  "evaluation_split": "DEV only; original TEST outcomes/telemetry are not loaded",
+  "forbidden": [
+    "model training",
+    "calibration fitting",
+    "threshold tuning",
+    "TEST evaluation",
+    "simulator E2E",
+    "continuous-force development",
+    "world-model development"
+  ],
+  "gate": {
+    "gt_pair_adaptive_success_min": 0.85,
+    "inherited_gate_found": false,
+    "paired_bootstrap_95ci_lower_gt_zero": true,
+    "probe_mean_excess_less_than_no_probe": true,
+    "probe_minus_no_probe_pair_success_min": 0.2,
+    "probe_pair_adaptive_success_min": 0.75,
+    "probe_under_force_max": 0.1
+  },
+  "metrics": {
+    "bootstrap": "paired root-family cluster bootstrap, n=10000, seed=2026083006",
+    "context": [
+      "exact",
+      "within_one_lattice_step",
+      "under_force",
+      "over_force",
+      "mean_excess_force",
+      "under_force_gap"
+    ],
+    "pair_primary": "both contexts exact, safe, and selected-force ordering matches real ordering",
+    "pair_secondary": [
+      "both safe",
+      "correct ordering",
+      "both within one lattice step"
+    ],
+    "uncertainty": [
+      "sigma_mu vs mu error",
+      "sigma_mu vs force error",
+      "sigma_mu vs pair failure"
+    ]
+  },
+  "nominal_motion": {
+    "same_motion_for_all_candidate_forces_and_information_conditions": true,
+    "selection_uses_outcome": false,
+    "source": "H8 relative Cartesian commands from highest-force authoritative branch per context"
+  },
+  "population": {
+    "context_count": 21,
+    "definition": "same task/root state family, differing hidden friction, differing authoritative real F_star",
+    "force_lattices": {
+      "0": [
+        3.0,
+        4.0,
+        4.5,
+        5.0
+      ],
+      "1": [
+        4.0,
+        4.5,
+        5.0,
+        5.5,
+        6.0
+      ],
+      "5": [
+        3.0,
+        4.0,
+        4.5,
+        5.0
+      ],
+      "6": [
+        3.0,
+        3.5,
+        4.0
+      ]
+    },
+    "pair_count": 20,
+    "roots": [
+      "p5s0c_dev_t0_root06_s5106",
+      "p5s0c_dev_t0_root07_s5107",
+      "p5s0c_dev_t1_root06_s5106",
+      "p5s0c_dev_t1_root07_s5107",
+      "p5s0c_dev_t5_root06_s5106",
+      "p5s0c_dev_t5_root07_s5107",
+      "p5s0c_dev_t6_root07_s5107"
+    ],
+    "selected_contexts": [
+      "p5s0c_dev_t0_r06_s5106_high_mu0.901218",
+      "p5s0c_dev_t0_r06_s5106_low_mu0.288234",
+      "p5s0c_dev_t0_r06_s5106_mid_mu0.504922",
+      "p5s0c_dev_t0_r07_s5107_high_mu0.932791",
+      "p5s0c_dev_t0_r07_s5107_low_mu0.294781",
+      "p5s0c_dev_t0_r07_s5107_mid_mu0.500365",
+      "p5s0c_dev_t1_r06_s5106_high_mu0.973004",
+      "p5s0c_dev_t1_r06_s5106_low_mu0.262418",
+      "p5s0c_dev_t1_r06_s5106_mid_mu0.515227",
+      "p5s0c_dev_t1_r07_s5107_high_mu0.903359",
+      "p5s0c_dev_t1_r07_s5107_low_mu0.225573",
+      "p5s0c_dev_t1_r07_s5107_mid_mu0.500836",
+      "p5s0c_dev_t5_r06_s5106_high_mu0.917878",
+      "p5s0c_dev_t5_r06_s5106_low_mu0.283428",
+      "p5s0c_dev_t5_r06_s5106_mid_mu0.455479",
+      "p5s0c_dev_t5_r07_s5107_high_mu0.960037",
+      "p5s0c_dev_t5_r07_s5107_low_mu0.210709",
+      "p5s0c_dev_t5_r07_s5107_mid_mu0.555512",
+      "p5s0c_dev_t6_r07_s5107_high_mu0.971507",
+      "p5s0c_dev_t6_r07_s5107_low_mu0.233902",
+      "p5s0c_dev_t6_r07_s5107_mid_mu0.522882"
+    ],
+    "selected_pairs": [
+      "p5s0c_dev_t0_root06_s5106:LOW_vs_MID",
+      "p5s0c_dev_t0_root06_s5106:LOW_vs_HIGH",
+      "p5s0c_dev_t0_root06_s5106:MID_vs_HIGH",
+      "p5s0c_dev_t0_root07_s5107:LOW_vs_MID",
+      "p5s0c_dev_t0_root07_s5107:LOW_vs_HIGH",
+      "p5s0c_dev_t0_root07_s5107:MID_vs_HIGH",
+      "p5s0c_dev_t1_root06_s5106:LOW_vs_MID",
+      "p5s0c_dev_t1_root06_s5106:LOW_vs_HIGH",
+      "p5s0c_dev_t1_root06_s5106:MID_vs_HIGH",
+      "p5s0c_dev_t1_root07_s5107:LOW_vs_MID",
+      "p5s0c_dev_t1_root07_s5107:LOW_vs_HIGH",
+      "p5s0c_dev_t1_root07_s5107:MID_vs_HIGH",
+      "p5s0c_dev_t5_root06_s5106:LOW_vs_MID",
+      "p5s0c_dev_t5_root06_s5106:LOW_vs_HIGH",
+      "p5s0c_dev_t5_root06_s5106:MID_vs_HIGH",
+      "p5s0c_dev_t5_root07_s5107:LOW_vs_MID",
+      "p5s0c_dev_t5_root07_s5107:LOW_vs_HIGH",
+      "p5s0c_dev_t5_root07_s5107:MID_vs_HIGH",
+      "p5s0c_dev_t6_root07_s5107:LOW_vs_MID",
+      "p5s0c_dev_t6_root07_s5107:LOW_vs_HIGH"
+    ],
+    "selected_without_model_outputs": true,
+    "tasks": [
+      0,
+      1,
+      5,
+      6
+    ]
+  },
+  "single_goal": "Does a frozen active physical probe improve minimum-force decisions over strict no-probe on real-frontier-defined friction-decision-discordant DEV pairs?",
+  "source_hashes": {
+    "/home/exouser/Tabero/analysis/counterfactual_force_world_model.py": "c088369626b2cd783f45f5130d932fd7aba6dcc9e54b3504c1a81b4e4317d560",
+    "/home/exouser/Tabero/analysis/full_task_feasibility_decoder.py": "bf002ca6a5e190f0eff4e0429bd3340f9acfdb4a694dde2528a98581ce8ff83d",
+    "/home/exouser/Tabero/analysis/results/active_friction_imagination_20260828_211106/FRICTION_GRU.pt": "a6c9d59bfa11c2481b7dca5fec1e41e0b625bbd463ed3fad9e3e4a1cb3eeb6af",
+    "/home/exouser/Tabero/analysis/results/active_friction_imagination_20260828_211106/FRICTION_PREDICTIONS.csv": "963f57d41d8c892c879ad88617d70f6731cd5dcb92f8577bfca08749ddcf2c00",
+    "/home/exouser/Tabero/analysis/results/full_task_feasibility_20260830_012830/DEV_SELECTION.json": "b0bc7d8e1217b060d9656cad156fcadb51ad5f85ae9338557ac37c61a11cb42d",
+    "/home/exouser/Tabero/analysis/results/full_task_feasibility_20260830_012830/FULL_TASK_FEASIBILITY_PROTOCOL.json": "63ba2e0756d4945a3da27a4510957111b2cfe15610577e12b68637a201bc8b1e",
+    "/home/exouser/Tabero/analysis/results/p5s0c_paired_boundary_probe_value_20260824_000542/P5S0C_BRANCH_MANIFEST.csv": "778190f29b9414c7590141c6b07ba1bf29e625a8fd8ccea20559d466480c778a",
+    "/home/exouser/Tabero/analysis/results/p5s0c_paired_boundary_probe_value_20260824_000542/P5S0C_CONTEXT_MANIFEST.csv": "25edcbdba6e11861af40fdeb3d8a7d3a922ecc3063439f25158289f65a2b7170",
+    "/home/exouser/Tabero/analysis/results/probe_informed_imagination_20260829_121500/PROBE_INFORMED_IMAGINATION_PROTOCOL.json": "20bb24229c4335547873bd4609d983dbfc440c012c34f60eeed29d34c3370899",
+    "/home/exouser/Tabero/analysis/results/task_demand_loto_generalization_20260830_044334/FINAL_REPORT.md": "3f632e09912550863772258062c1caefaef794dd06469b7f122a2b4f9d0ed0bd",
+    "/home/exouser/Tabero/analysis/trajectory_physical_imagination.py": "429761e395e5d6c4f658326e4f5642629eeaaf6498c2217f8f4829695340c2ff"
+  },
+  "status": "FROZEN_BEFORE_GT_PROBE_NOPROBE_INFERENCE",
+  "strict_state": {
+    "absolute_post_probe_pose_used": false,
+    "candidate_specific_branch_start_state_used": false,
+    "encoded_state": "rel position=0, rel velocity=0, historical force/contact masked, joints=[gripper_opening,-gripper_opening]",
+    "post_probe_contact_or_force_used": false,
+    "runtime_restore": "offline replay; tensor equality is verified, no simulator execution claimed",
+    "same_state_for_conditions": [
+      "GT",
+      "PROBE",
+      "NO_PROBE"
+    ],
+    "source": "last P4-B hold row immediately before probe_out active shear"
+  },
+  "world_model_line": "STOPPED; no world-model claim is reopened"
+}

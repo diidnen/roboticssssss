@@ -1,0 +1,26 @@
+{
+  "status": "RUNNING",
+  "task": 3,
+  "object": "bbq_sauce_1",
+  "query": "frozen_P4B",
+  "fixed_friction": 0.5,
+  "mass_bands_kg": {
+    "LOW": 0.05,
+    "MID": 0.1,
+    "HIGH": 0.2
+  },
+  "forces_N": [
+    0.5,
+    1.0,
+    1.5,
+    2.5,
+    4.0
+  ],
+  "roots": [
+    7042
+  ],
+  "path_structure": "LONG_TRANSPORT_TURNING_ACCELERATION_V1",
+  "vla_retraining": false,
+  "controller_law_changed": false,
+  "qualification_only": true
+}

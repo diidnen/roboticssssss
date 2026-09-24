@@ -1,0 +1,171 @@
+{
+  "claim_boundary": "same-root physical monotonicity/range diagnostic on new seeds; commanded force != realized load",
+  "created_utc": "2026-09-14T11:24:39.268185+00:00",
+  "engineering_admission_rule": "run smoke 12/20 N; all raw audits pass; 20 N has >=100 target-contact steps; apertures in [0,0.04]; max squeeze <=400 N",
+  "excluded_prior_seeds": [
+    80200002,
+    80200003,
+    80200004,
+    80200005,
+    80200006,
+    80200007,
+    80200008,
+    80200009
+  ],
+  "force_order_rule": "left rotation by context index modulo twelve",
+  "forces_N": [
+    9.0,
+    10.0,
+    11.0,
+    12.0,
+    13.0,
+    14.0,
+    15.0,
+    16.0,
+    17.0,
+    18.0,
+    19.0,
+    20.0
+  ],
+  "main_contexts": 24,
+  "main_rollouts": 288,
+  "main_stop_rule": "retain and run all 24 contexts regardless of interim outcomes; stop only on engineering/audit failure",
+  "monotonicity_range_diagnostic": true,
+  "no_feasibility_or_utility_used": true,
+  "no_new_roots": true,
+  "paired_analysis": "per-context success curve over 9-20 N; interval monotonicity fractions; no Fixed-8 baseline",
+  "physical_root": 200002,
+  "population": [
+    {
+      "friction": 0.425,
+      "policy_seed": 80200010
+    },
+    {
+      "friction": 0.575,
+      "policy_seed": 80200010
+    },
+    {
+      "friction": 0.85,
+      "policy_seed": 80200010
+    },
+    {
+      "friction": 0.425,
+      "policy_seed": 80200011
+    },
+    {
+      "friction": 0.575,
+      "policy_seed": 80200011
+    },
+    {
+      "friction": 0.85,
+      "policy_seed": 80200011
+    },
+    {
+      "friction": 0.425,
+      "policy_seed": 80200012
+    },
+    {
+      "friction": 0.575,
+      "policy_seed": 80200012
+    },
+    {
+      "friction": 0.85,
+      "policy_seed": 80200012
+    },
+    {
+      "friction": 0.425,
+      "policy_seed": 80200013
+    },
+    {
+      "friction": 0.575,
+      "policy_seed": 80200013
+    },
+    {
+      "friction": 0.85,
+      "policy_seed": 80200013
+    },
+    {
+      "friction": 0.425,
+      "policy_seed": 80200014
+    },
+    {
+      "friction": 0.575,
+      "policy_seed": 80200014
+    },
+    {
+      "friction": 0.85,
+      "policy_seed": 80200014
+    },
+    {
+      "friction": 0.425,
+      "policy_seed": 80200015
+    },
+    {
+      "friction": 0.575,
+      "policy_seed": 80200015
+    },
+    {
+      "friction": 0.85,
+      "policy_seed": 80200015
+    },
+    {
+      "friction": 0.425,
+      "policy_seed": 80200016
+    },
+    {
+      "friction": 0.575,
+      "policy_seed": 80200016
+    },
+    {
+      "friction": 0.85,
+      "policy_seed": 80200016
+    },
+    {
+      "friction": 0.425,
+      "policy_seed": 80200017
+    },
+    {
+      "friction": 0.575,
+      "policy_seed": 80200017
+    },
+    {
+      "friction": 0.85,
+      "policy_seed": 80200017
+    }
+  ],
+  "population_source": "new never-used VLA path seeds 80200010-80200017",
+  "primary_endpoint": "official full-task success per commanded force setpoint",
+  "runtime_manifest": "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_maxf8_20260913/additional_data_v1/RUNTIME_MANIFEST.json",
+  "runtime_manifest_sha256": "01d0289b14b812a4a12455e826a0b213ef4bf4fcdb27717892289b7e137b5034",
+  "secondary_endpoints": [
+    "target-contact fraction",
+    "target-contact realized squeeze / command",
+    "post-contact loss duration",
+    "per-context and interval-wise nondecreasing success"
+  ],
+  "smoke_forces_N": [
+    12.0,
+    20.0
+  ],
+  "smoke_gate": {
+    "20N_max_squeeze_N": 400.0,
+    "20N_target_contact_steps_min": 100,
+    "aperture_max_m": 0.04
+  },
+  "smoke_rollouts": 2,
+  "source_hashes": {
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_fixed_force_9_20_20260914/EXPERIMENT_CARD.md": "e42ea808993184dadb31bf88f4f136e02c1e76340a82984e3ad83d24bf1f17f9",
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_fixed_force_9_20_20260914/audit_fixed_sweep.py": "fc0a10826a1bf7ad22d1a57ecd1362c2108ec6d04beb0c7ffce078adc4babe38",
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_fixed_force_9_20_20260914/freeze_fixed_sweep.py": "c6f7cbf258639b4cc6ec3a433845e1d0cf5fe90fcf56ec7ea11f59696cc5f48c",
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_fixed_force_9_20_20260914/infer_fixed_sweep_context.py": "378f30006d9c64e80281c347738de9302ce75650b9c7b28ab8975000f4dbfee5",
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_fixed_force_9_20_20260914/original_arbitration_binding.py": "89e54a5c9868033987312afe825358ad484e437a1ca09afd54b2e1fe4fbb120b",
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_fixed_force_9_20_20260914/run_fixed_sweep_queue.py": "957c9f58ad405e4851d72e687d26abacbb1022fd3f70bdeb89c6c45c041cdbf4",
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_original_restore_20260912/native_original_force_controller.py": "d6e27fcd83f2bc9415a86632e37025f707a2ec22424bf120dae6af84ba229518",
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_original_restore_20260912/original_squeeze_inner.py": "4814f6ab0fcac0b7966e6789518decbd722eb38a89ecea03dbafb2cbef9896fc",
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_original_restore_20260912/qualify_original_online_forks.py": "da2c673047569bf88359e09cbedb440f43bd497b4f23dc1683369a00482cf264",
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_original_restore_20260912/qualify_original_p4_native.py": "3c20c733bdedf4f46145b17292873b4fa0b6e03b66384a9104bd6595cadfbbad"
+  },
+  "storage_root": "/media/volume/dasdas/exouser/af_dump_fixed_force_9_20_20260914",
+  "task": "dump_bin_bigbin",
+  "version": "AF_DUMP_FIXED_FORCE_9_20_MONOTONICITY_V1"
+}

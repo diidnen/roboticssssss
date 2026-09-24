@@ -1,0 +1,13 @@
+{
+  "H_plan": 8,
+  "K_candidates": [
+    2,
+    4,
+    8
+  ],
+  "K_execute": 2,
+  "force_transition": "one lattice step with rate-limited profile",
+  "friction": "GT only at this gate",
+  "principle": "real state -> short prediction -> execute K -> real-state re-anchor; no predicted-state chaining",
+  "test_opened_after_freeze": true
+}

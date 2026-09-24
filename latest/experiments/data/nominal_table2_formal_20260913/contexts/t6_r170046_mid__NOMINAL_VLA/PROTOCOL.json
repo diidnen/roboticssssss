@@ -1,0 +1,21 @@
+{
+  "activeforcing_used": false,
+  "commanded_force_N": null,
+  "comparison_note": "same root/task/friction strata as Table II; not post-probe state-paired",
+  "execution": "natural reset, 20 open-hold settling steps, then byte-identical postprocessed pi0 actions",
+  "force_or_gripper_override_used": false,
+  "method": "NOMINAL_VLA",
+  "metric_contract": "ONLINE_VLA_350STEP_WHOLE_MESH_RELEASE_SUPPORT_V1 plus contact-conditioned bilateral squeeze",
+  "plan": {
+    "band": "MID",
+    "id": "t6_r170046_mid__NOMINAL_VLA",
+    "mu": 0.5585950380614311,
+    "object": "butter_1",
+    "root": 170046,
+    "target": "basket_1",
+    "task": 6
+  },
+  "probe_used": false,
+  "prompt": "pick up the butter and place it in the basket",
+  "runner_sha256": "f703070c40bb58eb254a5504337d6ea6483f786b43a0aaa7d81f90001207c067"
+}

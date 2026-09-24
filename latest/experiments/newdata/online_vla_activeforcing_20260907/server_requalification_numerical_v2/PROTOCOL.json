@@ -1,0 +1,16 @@
+{
+  "all_requests_required": true,
+  "cross_process_exactness_required": false,
+  "diagnostic_only": true,
+  "does_not_admit_final_physics": true,
+  "final_roots_used": false,
+  "implementation_sha256": "b7cd1637283d3d0fa06a72da42abe90a0f27c1cac14b35ab55a9109cf82c6b74",
+  "new_full_task_labels": 0,
+  "policy_parameters_changed": false,
+  "required_requests": 1400,
+  "role": "ARCHIVED_DEV_OBSERVATION_REINFERENCE_ONLY",
+  "server_ready": "/home/exouser/FORTE/online_vla_restore_20260907/server_v3_frozen/SERVER_READY.json",
+  "server_ready_sha256": "f3c05150e03b1fe18597be89bb31280d0a9f0dcc023275fe302c7ff849584ba3",
+  "simulator_steps": 0,
+  "source_qualification": "/media/volume/newdata/exouser/online_vla_activeforcing_20260907/dev_v4_phasefree"
+}

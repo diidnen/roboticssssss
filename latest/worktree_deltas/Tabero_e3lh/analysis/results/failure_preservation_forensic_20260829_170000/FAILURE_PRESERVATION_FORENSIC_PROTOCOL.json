@@ -1,0 +1,221 @@
+{
+  "active_phases": [
+    "branch_hold",
+    "lift",
+    "over_basket",
+    "place",
+    "transit"
+  ],
+  "analysis_type": "FAILURE_PRESERVATION_FORENSIC_ONLY",
+  "attribution_categories": [
+    "direct_contact_loss",
+    "normal_contact_threshold",
+    "evaluator_margin_crossing",
+    "precursor_only",
+    "terminal_failure",
+    "no_failure_information_within_H8",
+    "not_directly_predicted"
+  ],
+  "authoritative_inputs_sha256": {
+    "/home/exouser/Tabero/analysis/results/counterfactual_force_world_model_20260829_160000/CALIBRATION_COVERAGE_seed0.json": "a68ff6d5d23f4bc0a20520629d3e1075edb9298872e466f03c0d942286fe0aa4",
+    "/home/exouser/Tabero/analysis/results/counterfactual_force_world_model_20260829_160000/CALIBRATION_COVERAGE_seed1.json": "f9b0826f043689b9d278e705bd1cf47326e3c39456b00b9130dbb291804a6e8c",
+    "/home/exouser/Tabero/analysis/results/counterfactual_force_world_model_20260829_160000/CALIBRATION_COVERAGE_seed2.json": "ab969587ed8b74de60512ec73ab0012e7747b9864345478d71df4a262f4cd057",
+    "/home/exouser/Tabero/analysis/results/counterfactual_force_world_model_20260829_160000/CALIBRATION_FORCE_IE_lambda1.0_seed0.json": "ecd1063097ad69dce5bb734d7c075a34431533342070ffd21ae5a88a86aa458b",
+    "/home/exouser/Tabero/analysis/results/counterfactual_force_world_model_20260829_160000/CALIBRATION_FORCE_IE_lambda1.0_seed1.json": "f57cbf633eace6ba72913643c7fecb4f0d70f0b7d8dcdb11924bfd1c68d39cc5",
+    "/home/exouser/Tabero/analysis/results/counterfactual_force_world_model_20260829_160000/CALIBRATION_FORCE_IE_lambda1.0_seed2.json": "ab44cd3b3235c4b2073fabd330e6e890895ae9f323c1915cb7d06b065319c890",
+    "/home/exouser/Tabero/analysis/results/counterfactual_force_world_model_20260829_160000/CALIBRATION_MANIFEST.json": "18523f3f1280a96310af90d762365f5ba5fef7ce53b9de58de3a6b1e55e9d65b",
+    "/home/exouser/Tabero/analysis/results/counterfactual_force_world_model_20260829_160000/COUNTERFACTUAL_FORCE_PAIR_AUDIT.json": "89a7641b6e47a3c328d645f75ac7b37b90134f6ff9f1fd9f7328b76790319fe8",
+    "/home/exouser/Tabero/analysis/results/counterfactual_force_world_model_20260829_160000/COVERAGE_MODEL_RESULTS.csv": "f49a21a8978b84f7b540adf51a6747b3c29ad53ba651ad805d1f97a7df4a05cd",
+    "/home/exouser/Tabero/analysis/results/counterfactual_force_world_model_20260829_160000/DEV_FAILURE_PRESERVATION.csv": "cd16605dfce05bfe6bf0004e80f9bd5da587587203acae7a53c32ccec57e60cf",
+    "/home/exouser/Tabero/analysis/results/counterfactual_force_world_model_20260829_160000/DEV_MODEL_COMPARISON.csv": "dc26bb0ae09740576e6df9dc2050f8fc8c1ff4ce88421976352d05d4866edb66",
+    "/home/exouser/Tabero/analysis/results/counterfactual_force_world_model_20260829_160000/FINAL_REPORT.md": "a9931ebdc96e6941f21c34d65bd57844833a933de33087ceb763d70dc3618184",
+    "/home/exouser/Tabero/analysis/results/counterfactual_force_world_model_20260829_160000/FORCE_IE_LOSS_SPEC.json": "6031ac6b34a899d41efbe60c4f554fd789f31a790b9a07577951495b8158a7e7",
+    "/home/exouser/Tabero/analysis/results/counterfactual_force_world_model_20260829_160000/FORCE_IE_MODEL_RESULTS.csv": "2c3683573b987bb989f6b41ff91608a924d38f5eb8ee4b567afc82e7c27e3df8",
+    "/home/exouser/Tabero/analysis/results/counterfactual_force_world_model_20260829_160000/PHYSICS_GRU_COVERAGE_seed0.pt": "84431fcc82ac6a2924bd9eade3c08eb1cffdedc882c1306f5097f2c4ef6f6d27",
+    "/home/exouser/Tabero/analysis/results/counterfactual_force_world_model_20260829_160000/PHYSICS_GRU_COVERAGE_seed1.pt": "eb9196a3a1d040fb0f227fee8b6bd49b2186a705b28613ada42a2eabcbdf2053",
+    "/home/exouser/Tabero/analysis/results/counterfactual_force_world_model_20260829_160000/PHYSICS_GRU_COVERAGE_seed2.pt": "c39dbab6f6f420ecba71f5a82bfdf4e55cd67712e38b29d28e3d29f78cc686f4",
+    "/home/exouser/Tabero/analysis/results/counterfactual_force_world_model_20260829_160000/PHYSICS_GRU_FORCE_IE_lambda1.0_seed0.pt": "e6fa4c64317c81db906d9a55ca7168a79cdf37c98b3af4cd2c2980d04f278f2a",
+    "/home/exouser/Tabero/analysis/results/counterfactual_force_world_model_20260829_160000/PHYSICS_GRU_FORCE_IE_lambda1.0_seed1.pt": "ded1b7068e1e7e9db6a41e19ada8a7f3aef65f048fef2ddcf05f21909f91df2b",
+    "/home/exouser/Tabero/analysis/results/counterfactual_force_world_model_20260829_160000/PHYSICS_GRU_FORCE_IE_lambda1.0_seed2.pt": "85d058b3fcda884db1625d280701c6127509627be27ebe760469844fa6a2a94e",
+    "/home/exouser/Tabero/analysis/results/direct_contact_boundary_imagination_20260829_000205/DIRECT_CONTACT_LOGGER_AUDIT.json": "6c48fe1aec070b01106afff0b2cf4f517767305ee3f288255780a953a5c65d7f",
+    "/home/exouser/Tabero/analysis/results/direct_contact_boundary_imagination_20260829_000205/DIRECT_PHYSICAL_EVENT_DEFINITION.json": "63a7b1fef7bf0ada723ec6b7e8fec4e29e4624390c0c1aa0c9b8a92d1be9f525",
+    "/home/exouser/Tabero/analysis/results/evaluator_interface_calibration_20260829_112603/CALIBRATED_EVALUATOR_FREEZE.json": "3a0466942c9c03a4d9cdcefe03fc4d88e07af62f01cf9058e9c8ffe5ccc2be60",
+    "/home/exouser/Tabero/analysis/results/trajectory_physical_imagination_20260829_065220/OUTCOME_EVALUATOR.pt": "afe02a0672637b6ec4c202934280e5344efd89e7dda76a334e49385a1e3617be",
+    "/home/exouser/Tabero/analysis/trajectory_physical_imagination.py": "429761e395e5d6c4f658326e4f5642629eeaaf6498c2217f8f4829695340c2ff"
+  },
+  "calibration": "frozen per-checkpoint artifacts from CFWM; no refit or modification",
+  "coverage_checkpoints": [
+    "/home/exouser/Tabero/analysis/results/counterfactual_force_world_model_20260829_160000/PHYSICS_GRU_COVERAGE_seed0.pt",
+    "/home/exouser/Tabero/analysis/results/counterfactual_force_world_model_20260829_160000/PHYSICS_GRU_COVERAGE_seed1.pt",
+    "/home/exouser/Tabero/analysis/results/counterfactual_force_world_model_20260829_160000/PHYSICS_GRU_COVERAGE_seed2.pt"
+  ],
+  "evaluator": "frozen OUTCOME_EVALUATOR.pt; signed logit margin, threshold 0.0; per-checkpoint TRAIN-only isotonic calibration retained",
+  "excluded_phases": [
+    "release",
+    "settle"
+  ],
+  "failure_event_definitions": {
+    "direct_contact_loss": "first active-phase bilateral contact=0 from corrected contact_left/contact_right, only when direct schema exists",
+    "evaluator_margin_crossing": "first prefix whose frozen evaluator signed logit margin < 0",
+    "normal_contact_threshold": "first active-phase min normal force < 0.15 N, existing contact epsilon, only when direct schema exists",
+    "relative_drift_and_velocity": "reported as existing continuous physical signals; no new threshold or surrogate event invented",
+    "terminal_failure": "authoritative episode end/failure metadata; not treated as an H=8 event unless an event is observed in-window"
+  },
+  "frozen_dev_boundary_pairs": [
+    {
+      "a_branch_id": "p5s0c_dev_t1_r06_s5106_mid_mu0.515227_BRANCH_F4p0_R1_F4",
+      "b_branch_id": "p5s0c_dev_t1_r06_s5106_mid_mu0.515227_BRANCH_F4p5_R1_F4.5",
+      "context_id": "p5s0c_dev_t1_r06_s5106_mid_mu0.515227",
+      "force_prev_N": 4.0,
+      "force_star_N": 4.5,
+      "friction": 0.5152267522480724,
+      "pair_id": "direct:p5s0c_dev_t1_r06_s5106_mid_mu0.515227:4.0_vs_4.5",
+      "source": "direct",
+      "task": 1
+    },
+    {
+      "a_branch_id": "p5s0c_dev_t0_r06_s5106_low_mu0.288234_BRANCH_F4p0_F4",
+      "b_branch_id": "p5s0c_dev_t0_r06_s5106_low_mu0.288234_BRANCH_F4p5_F4.5",
+      "context_id": "p5s0c_dev_t0_r06_s5106_low_mu0.288234",
+      "force_prev_N": 4.0,
+      "force_star_N": 4.5,
+      "friction": 0.2882343327859944,
+      "pair_id": "historical:p5s0c_dev_t0_r06_s5106_low_mu0.288234:4.0_vs_4.5",
+      "source": "historical",
+      "task": 0
+    },
+    {
+      "a_branch_id": "p5s0c_dev_t0_r07_s5107_low_mu0.294781_BRANCH_F4p0_F4",
+      "b_branch_id": "p5s0c_dev_t0_r07_s5107_low_mu0.294781_BRANCH_F4p5_F4.5",
+      "context_id": "p5s0c_dev_t0_r07_s5107_low_mu0.294781",
+      "force_prev_N": 4.0,
+      "force_star_N": 4.5,
+      "friction": 0.2947813460786453,
+      "pair_id": "historical:p5s0c_dev_t0_r07_s5107_low_mu0.294781:4.0_vs_4.5",
+      "source": "historical",
+      "task": 0
+    },
+    {
+      "a_branch_id": "p5s0c_dev_t1_r06_s5106_low_mu0.262418_BRANCH_F5p0_F5",
+      "b_branch_id": "p5s0c_dev_t1_r06_s5106_low_mu0.262418_BRANCH_F5p5_F5.5",
+      "context_id": "p5s0c_dev_t1_r06_s5106_low_mu0.262418",
+      "force_prev_N": 5.0,
+      "force_star_N": 5.5,
+      "friction": 0.2624184362235552,
+      "pair_id": "historical:p5s0c_dev_t1_r06_s5106_low_mu0.262418:5.0_vs_5.5",
+      "source": "historical",
+      "task": 1
+    },
+    {
+      "a_branch_id": "p5s0c_dev_t1_r06_s5106_mid_mu0.515227_BRANCH_F4p0_F4",
+      "b_branch_id": "p5s0c_dev_t1_r06_s5106_mid_mu0.515227_BRANCH_F4p5_F4.5",
+      "context_id": "p5s0c_dev_t1_r06_s5106_mid_mu0.515227",
+      "force_prev_N": 4.0,
+      "force_star_N": 4.5,
+      "friction": 0.5152267522480724,
+      "pair_id": "historical:p5s0c_dev_t1_r06_s5106_mid_mu0.515227:4.0_vs_4.5",
+      "source": "historical",
+      "task": 1
+    },
+    {
+      "a_branch_id": "p5s0c_dev_t1_r07_s5107_low_mu0.225573_BRANCH_F5p5_F5.5",
+      "b_branch_id": "p5s0c_dev_t1_r07_s5107_low_mu0.225573_BRANCH_F6p0_F6",
+      "context_id": "p5s0c_dev_t1_r07_s5107_low_mu0.225573",
+      "force_prev_N": 5.5,
+      "force_star_N": 6.0,
+      "friction": 0.2255725764990141,
+      "pair_id": "historical:p5s0c_dev_t1_r07_s5107_low_mu0.225573:5.5_vs_6.0",
+      "source": "historical",
+      "task": 1
+    },
+    {
+      "a_branch_id": "p5s0c_dev_t1_r07_s5107_mid_mu0.500836_BRANCH_F4p0_F4",
+      "b_branch_id": "p5s0c_dev_t1_r07_s5107_mid_mu0.500836_BRANCH_F4p5_F4.5",
+      "context_id": "p5s0c_dev_t1_r07_s5107_mid_mu0.500836",
+      "force_prev_N": 4.0,
+      "force_star_N": 4.5,
+      "friction": 0.500835695412869,
+      "pair_id": "historical:p5s0c_dev_t1_r07_s5107_mid_mu0.500836:4.0_vs_4.5",
+      "source": "historical",
+      "task": 1
+    },
+    {
+      "a_branch_id": "p5s0c_dev_t5_r06_s5106_low_mu0.283428_BRANCH_F4p0_F4",
+      "b_branch_id": "p5s0c_dev_t5_r06_s5106_low_mu0.283428_BRANCH_F4p5_F4.5",
+      "context_id": "p5s0c_dev_t5_r06_s5106_low_mu0.283428",
+      "force_prev_N": 4.0,
+      "force_star_N": 4.5,
+      "friction": 0.2834278244355604,
+      "pair_id": "historical:p5s0c_dev_t5_r06_s5106_low_mu0.283428:4.0_vs_4.5",
+      "source": "historical",
+      "task": 5
+    },
+    {
+      "a_branch_id": "p5s0c_dev_t5_r07_s5107_low_mu0.210709_BRANCH_F4p5_F4.5",
+      "b_branch_id": "p5s0c_dev_t5_r07_s5107_low_mu0.210709_BRANCH_F5p0_F5",
+      "context_id": "p5s0c_dev_t5_r07_s5107_low_mu0.210709",
+      "force_prev_N": 4.5,
+      "force_star_N": 5.0,
+      "friction": 0.2107091015129449,
+      "pair_id": "historical:p5s0c_dev_t5_r07_s5107_low_mu0.210709:4.5_vs_5.0",
+      "source": "historical",
+      "task": 5
+    },
+    {
+      "a_branch_id": "p5s0c_dev_t6_r07_s5107_low_mu0.233902_BRANCH_F3p0_F3",
+      "b_branch_id": "p5s0c_dev_t6_r07_s5107_low_mu0.233902_BRANCH_F3p5_F3.5",
+      "context_id": "p5s0c_dev_t6_r07_s5107_low_mu0.233902",
+      "force_prev_N": 3.0,
+      "force_star_N": 3.5,
+      "friction": 0.2339024543861059,
+      "pair_id": "historical:p5s0c_dev_t6_r07_s5107_low_mu0.233902:3.0_vs_3.5",
+      "source": "historical",
+      "task": 6
+    }
+  ],
+  "horizon": 8,
+  "ie_checkpoints_lambda_1": [
+    "/home/exouser/Tabero/analysis/results/counterfactual_force_world_model_20260829_160000/PHYSICS_GRU_FORCE_IE_lambda1.0_seed0.pt",
+    "/home/exouser/Tabero/analysis/results/counterfactual_force_world_model_20260829_160000/PHYSICS_GRU_FORCE_IE_lambda1.0_seed1.pt",
+    "/home/exouser/Tabero/analysis/results/counterfactual_force_world_model_20260829_160000/PHYSICS_GRU_FORCE_IE_lambda1.0_seed2.pt"
+  ],
+  "new_simulator_rollouts": 0,
+  "new_training": false,
+  "no_posthoc_changes": [
+    "variable definitions",
+    "thresholds",
+    "horizon",
+    "evaluator",
+    "context subset",
+    "checkpoint set"
+  ],
+  "physical_variables": [
+    "rel_dx_m",
+    "rel_dy_m",
+    "rel_dz_m",
+    "rel_vx_mps",
+    "rel_vy_mps",
+    "rel_vz_mps",
+    "left_normal_N",
+    "right_normal_N",
+    "left_tangent_N",
+    "right_tangent_N",
+    "tangent_velocity_proxy_mps",
+    "joint_left",
+    "joint_right",
+    "relative_drift_m",
+    "relative_speed_mps",
+    "object_speed_mps",
+    "normal_force_mean_N",
+    "normal_force_min_N",
+    "tangential_force_mean_N",
+    "bilateral_contact",
+    "contact_state",
+    "evaluator_margin"
+  ],
+  "population_rule": "primary causal analysis is exactly the 10 DEV F_prev unsafe -> F_star safe pairs; secondary TRAIN/DEV representation audit excludes TEST",
+  "prediction_mode": "deterministic autoregressive-compatible H=8 segment mode used by CFWM",
+  "selected_checkpoint_policy": "fixed seed set [0,1,2]; seed 0 is representative only; all primary tables report seed rows and pooled mean",
+  "status": "FROZEN_BEFORE_FORENSIC_ANALYSIS",
+  "test_used": false
+}

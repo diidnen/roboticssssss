@@ -1,0 +1,15 @@
+{
+  "branches": 2,
+  "contexts": [
+    "t5_r5100_mid"
+  ],
+  "final_fresh_roots_used": false,
+  "methods": [
+    "FIXED_3",
+    "FIXED_5"
+  ],
+  "new_full_task_label_role": "DEV_SERVER_RESTART_REQUALIFICATION",
+  "no_model_tuning": true,
+  "no_outcome_retry": true,
+  "source_qualification": "/media/volume/newdata/exouser/online_vla_activeforcing_20260907/dev_v4_phasefree"
+}

@@ -1,0 +1,147 @@
+{
+  "schema_version": "1.0",
+  "created_utc": "2026-08-29",
+  "project_scope": "INTERVENTION_ONLY",
+  "experiment_name": "Faithful official UPS NutAssemblySquare paired collateral-risk pilot",
+  "scientific_question": "From an identical simulator state t0, are there states where continuing the official base policy succeeds but executing the complete official UPS intervention mechanism fails?",
+  "phase0_classification": "BLOCKED_BY_MISSING_UPS_ARTIFACTS",
+  "execution_status": "NOT_RUN",
+  "phase0_stop_condition_applied": true,
+  "surrogate_implementation_allowed": false,
+  "provenance": {
+    "repository_url": "https://github.com/CMU-IntentLab/uncertainty_aware_policy_steering.git",
+    "branch": "main",
+    "root_commit": "f7bad4d7cd6d5e4350751a958ba9bb146a99ecec",
+    "root_commit_matches_origin_main": true,
+    "repository_status": "clean",
+    "public_releases": 0,
+    "submodules": {
+      "diffusion4robotics": {
+        "commit": "c347ddfdd969a0393f4e4d4f9b918b44bb281ad7",
+        "url": "https://github.com/jessie-yuan/diffusion4robotics.git",
+        "availability": "PRIVATE_OR_INACCESSIBLE_WITHOUT_CREDENTIALS"
+      },
+      "robomimic": {
+        "commit": "e10526b9a40c78b41f1e37e60041dc0ec0a5f60f",
+        "availability": "PUBLIC_AND_CHECKED_OUT"
+      },
+      "robosuite": {
+        "commit": "a3f2467375e434aa3c74eeea52e5d592a0cdc4d6",
+        "availability": "PUBLIC_AND_CHECKED_OUT"
+      }
+    },
+    "hugging_face_revisions": {
+      "jzyuan04/ups_nutassembly_diffusion_checkpoints": "17ad9ee2efb432e71e3d0e1ac730f08a77e9cf57",
+      "jzyuan04/ups_nutassembly_wm_checkpoint": "6e7ecaa1656dad88e05b0fe2dd8e3ff83dfe18db",
+      "jzyuan04/ups_nutassembly_wm_data": "904d157f1421e7c8c3579466ef67186f259c4935",
+      "jzyuan04/ups_nutassembly_wm_data_residual": "84326dc0ee5836736e875447005f708b9f10f04f"
+    }
+  },
+  "required_component_audit": {
+    "official_environment": {
+      "status": "AVAILABLE_AS_SOURCE",
+      "evidence": "Pinned RoboMimic and robosuite submodules are public and checked out; NutAssemblySquare is present."
+    },
+    "base_policy": {
+      "status": "INCOMPLETE_FOR_FAITHFUL_EXECUTION",
+      "evidence": "A public wrapper and one base DiffusionUnetAgent checkpoint run are available, but the referenced data4robotics implementation is in the inaccessible diffusion4robotics submodule."
+    },
+    "intervention_gate_classifier": {
+      "status": "MISSING",
+      "evidence": "No public classifier source, config, identifiable checkpoint, normalization bundle, decision threshold, or runtime call site was found."
+    },
+    "residual_policy": {
+      "status": "MISSING",
+      "evidence": "No public UPS residual-policy source, config, identifiable checkpoint, normalization bundle, action-composition implementation, or action-clipping implementation was found."
+    },
+    "runtime_wrapper": {
+      "status": "MISSING",
+      "evidence": "README documents scripts/run_ups, but the root tree contains no scripts directory and no equivalent deployment driver."
+    },
+    "high_level_verifier_integration": {
+      "status": "INCOMPLETE",
+      "evidence": "World-model and VLM fragments exist, but the conformal verifier and integrated ACT/ASK/LEARN execution path are absent; WMPredictor also references missing code and author-local paths."
+    },
+    "official_task_evaluator_configuration": {
+      "status": "MISSING",
+      "evidence": "The generic environment success predicate is public, but the official UPS horizon, instruction-consistent handle-mode evaluator, seed schedule, and evaluation script are not."
+    }
+  },
+  "blockers": [
+    {
+      "id": "UPS-B01",
+      "type": "MISSING_SOURCE",
+      "artifact_needed": "A public source snapshot of diffusion4robotics commit c347ddfdd969a0393f4e4d4f9b918b44bb281ad7, including the base agent, intervention classifier, residual policy, preprocessors, and training configs."
+    },
+    {
+      "id": "UPS-B02",
+      "type": "MISSING_RUNTIME",
+      "artifact_needed": "The scripts/run_ups deployment driver and its matching calibration, correction-processing, environment, and evaluation configuration at root commit f7bad4d7cd6d5e4350751a958ba9bb146a99ecec."
+    },
+    {
+      "id": "UPS-B03",
+      "type": "MISSING_CHECKPOINTS",
+      "artifact_needed": "Exact NutAssemblySquare intervention-classifier and residual-policy checkpoints, configs, normalization data, checkpoint hashes, and the classifier decision threshold."
+    },
+    {
+      "id": "UPS-B04",
+      "type": "MISSING_EXECUTION_SEMANTICS",
+      "artifact_needed": "Executable action composition, scaling/clipping, per-step gate cadence, activation/deactivation, candidate mixing, verifier cadence, and control-return semantics."
+    },
+    {
+      "id": "UPS-B05",
+      "type": "MISSING_EVALUATION_SPECIFICATION",
+      "artifact_needed": "The exact NutAssemblySquare environment kwargs, controller, horizon, instruction/behavior-mode assignment, terminal evaluator, and seed manifest used for the official downstream."
+    }
+  ],
+  "paper_and_readme_evidence_policy": "README and paper descriptions are triangulation only. They do not replace missing executable code or trained artifacts and cannot satisfy faithful-execution requirements.",
+  "preregistered_pilot_if_unblocked": {
+    "target_valid_paired_states": 40,
+    "selection_rule": "Before observing paired outcomes, select independently rooted held-out t0 states at which the frozen official learned intervention gate activates; stratify across independent roots, both instruction/behavior modes if represented by the official evaluator, and non-adjacent temporal positions. Do not select using future terminal outcomes.",
+    "branch_continue": "Restore t0 and disable learned intervention after t0; execute the frozen official base policy to the official terminal horizon.",
+    "branch_intervene": "Restore the identical t0 and execute the complete frozen official UPS runtime with its released gate, residual action composition, per-step reevaluation, candidate mixing, activation/deactivation, and verifier cadence; do not impose a fixed duration or custom handoff.",
+    "outcome_categories": [
+      "BOTH_SUCCESS",
+      "INTERVENE_ONLY",
+      "CONTINUE_ONLY",
+      "BOTH_FAILURE"
+    ],
+    "primary_metrics": [
+      "paired category counts and fractions",
+      "SR_continue",
+      "SR_intervene",
+      "SR_oracle",
+      "CONTINUE_ONLY/N",
+      "INTERVENE_ONLY/N",
+      "INTERVENE_ONLY-CONTINUE_ONLY",
+      "SR_intervene-SR_continue"
+    ],
+    "parity_requirements": [
+      "MuJoCo model XML and flattened state",
+      "robot and object qpos/qvel",
+      "environment counters and task specification",
+      "controller goals and buffers",
+      "base, classifier, residual, and world-model history or recurrent state",
+      "observation history and action chunk",
+      "Python, NumPy, Torch CPU/CUDA, environment, and policy sampler RNG states",
+      "identical pre-branch observations, policy inputs, and next base action"
+    ],
+    "invalid_pair_rule": "Reject any pair with a pre-branch parity mismatch or nondeterministic no-intervention replay."
+  },
+  "execution_results": {
+    "sanity_check": "NOT_RUN",
+    "state_parity_validation": "NOT_RUN",
+    "valid_paired_states": 0,
+    "BOTH_SUCCESS": null,
+    "INTERVENE_ONLY": null,
+    "CONTINUE_ONLY": null,
+    "BOTH_FAILURE": null,
+    "SR_continue": null,
+    "SR_intervene": null,
+    "SR_oracle": null,
+    "collateral_rate": null,
+    "rescue_rate": null,
+    "net_intervention_gain_count": null,
+    "paired_success_rate_difference": null
+  }
+}

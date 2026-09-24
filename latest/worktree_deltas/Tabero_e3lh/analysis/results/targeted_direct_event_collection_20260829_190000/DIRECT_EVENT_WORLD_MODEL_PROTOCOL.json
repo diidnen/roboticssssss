@@ -1,0 +1,39 @@
+{
+  "architecture": "ShortHorizonPhysicsGRU trunk unchanged; H=8; explicit direct-event channels only if collection gate passes",
+  "current_ie_checkpoint": "/home/exouser/Tabero/analysis/results/counterfactual_force_world_model_20260829_160000/PHYSICS_GRU_FORCE_IE_lambda1.0_seed0.pt",
+  "eligible_telemetry_lineage": "corrected direct-contact logger; no second local-frame rotation; Fn=abs(local z); Ft=sqrt(local x^2+local y^2)",
+  "event_definitions": "/home/exouser/Tabero/analysis/results/direct_contact_boundary_imagination_20260829_000205/DIRECT_PHYSICAL_EVENT_DEFINITION.json",
+  "forbidden": [
+    "TEST",
+    "continuous-force search",
+    "Probe",
+    "No-physics",
+    "E2E",
+    "horizon change",
+    "architecture/capacity change",
+    "evaluator change"
+  ],
+  "horizon": 8,
+  "lambda_event_candidates": [
+    0.1,
+    0.3,
+    1.0
+  ],
+  "lambda_ie": 1.0,
+  "pair_sampling": "existing frozen matched F_prev/F_star groups; two branches per selected new group; no expansion",
+  "protocol_name": "DIRECT_EVENT_WORLD_MODEL_PROTOCOL",
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "splits": {
+    "DEV": "frozen DEV contexts only",
+    "TEST": "not used",
+    "TRAIN": "frozen TRAIN contexts only"
+  },
+  "status": "FROZEN_BEFORE_COLLECTION",
+  "target_manifest": "/home/exouser/Tabero/analysis/results/targeted_direct_event_collection_20260829_190000/DIRECT_EVENT_TARGET_MANIFEST.json",
+  "target_manifest_sha256": "85f8c2330b26c72d5e83f70aa8cfee18daceefbd4c82d1ae0a16e22953d40c72",
+  "training_budget": "inherit authoritative IE optimizer, steps, batch, and H=8"
+}

@@ -1,0 +1,22 @@
+{
+  "claim_boundary": "scripted remainder labels on [0.25,5]; not pi0; not online AF; not official 18/19",
+  "created_utc": "2026-09-15T11:04:21.660337+00:00",
+  "filter": "v4 snapshot-fork rows already on [0.25,5]",
+  "force_norm": 8.0,
+  "force_step_N": 0.25,
+  "force_support_N": [
+    0.25,
+    5.0
+  ],
+  "n_rows": 640,
+  "no_new_rollouts": true,
+  "source": "/media/volume/dasdas/exouser/af_dump_liftstyle_feas_v4_relabel_20260915",
+  "source_version": "AF_DUMP_LIFTSTYLE_FEAS_V4_RELABEL",
+  "split_by_seed": {
+    "200002": "TRAIN",
+    "200003": "TRAIN",
+    "200010": "VAL",
+    "200014": "TEST"
+  },
+  "version": "AF_DUMP_LIFTSTYLE_FEAS_V4_RELABEL"
+}

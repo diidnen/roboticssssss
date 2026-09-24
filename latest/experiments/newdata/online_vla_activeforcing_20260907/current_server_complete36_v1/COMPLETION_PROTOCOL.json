@@ -1,0 +1,127 @@
+{
+  "acceptance": "Use original complete36 transfer thresholds and all provenance/behavior/probe/feature/force-boundary gates. Outcome parity with old server is diagnostic, not a substitute for current-server qualification.",
+  "changed_failure_retained": "t5_r5100_mid__FIXED_3",
+  "combined_primary_max": 72,
+  "current_primary_branches": 36,
+  "final_roots_used": false,
+  "new_branches": 22,
+  "no_model_or_runtime_tuning": true,
+  "no_outcome_retry": true,
+  "old_primary_branches": 36,
+  "pending": [
+    {
+      "context": "t5_r5100_mid",
+      "method": "ACTIVEFORCING"
+    },
+    {
+      "context": "t0_r5100_high",
+      "method": "FIXED_3"
+    },
+    {
+      "context": "t0_r5100_high",
+      "method": "FIXED_5"
+    },
+    {
+      "context": "t0_r5100_high",
+      "method": "ACTIVEFORCING"
+    },
+    {
+      "context": "t0_r5100_mid",
+      "method": "FIXED_3"
+    },
+    {
+      "context": "t0_r5100_mid",
+      "method": "FIXED_5"
+    },
+    {
+      "context": "t0_r5100_mid",
+      "method": "ACTIVEFORCING"
+    },
+    {
+      "context": "t1_r5100_high",
+      "method": "FIXED_3"
+    },
+    {
+      "context": "t1_r5100_high",
+      "method": "FIXED_5"
+    },
+    {
+      "context": "t1_r5100_high",
+      "method": "ACTIVEFORCING"
+    },
+    {
+      "context": "t1_r5100_low",
+      "method": "FIXED_3"
+    },
+    {
+      "context": "t1_r5100_low",
+      "method": "FIXED_5"
+    },
+    {
+      "context": "t1_r5100_low",
+      "method": "ACTIVEFORCING"
+    },
+    {
+      "context": "t5_r5100_high",
+      "method": "FIXED_3"
+    },
+    {
+      "context": "t5_r5100_high",
+      "method": "FIXED_5"
+    },
+    {
+      "context": "t5_r5100_high",
+      "method": "ACTIVEFORCING"
+    },
+    {
+      "context": "t6_r5100_high",
+      "method": "FIXED_3"
+    },
+    {
+      "context": "t6_r5100_high",
+      "method": "FIXED_5"
+    },
+    {
+      "context": "t6_r5100_high",
+      "method": "ACTIVEFORCING"
+    },
+    {
+      "context": "t6_r5100_mid",
+      "method": "FIXED_3"
+    },
+    {
+      "context": "t6_r5100_mid",
+      "method": "FIXED_5"
+    },
+    {
+      "context": "t6_r5100_mid",
+      "method": "ACTIVEFORCING"
+    }
+  ],
+  "qualification": "/media/volume/newdata/exouser/online_vla_activeforcing_20260907/dev_v4_phasefree",
+  "reason": "Task5 MID Fixed3 changed from success to valid placement failure after server restart. Complete all cells under current server; do not require byte-identical cross-process outcomes.",
+  "reuse": {
+    "t0_r5100_low__ACTIVEFORCING": "/media/volume/newdata/exouser/online_vla_activeforcing_20260907/server_restart_dev_recheck_v1/branches/t0_r5100_low__ACTIVEFORCING",
+    "t0_r5100_low__FIXED_3": "/media/volume/newdata/exouser/online_vla_activeforcing_20260907/server_restart_dev_recheck_v1/branches/t0_r5100_low__FIXED_3",
+    "t0_r5100_low__FIXED_5": "/media/volume/newdata/exouser/online_vla_activeforcing_20260907/server_restart_dev_recheck_v1/branches/t0_r5100_low__FIXED_5",
+    "t1_r5100_mid__ACTIVEFORCING": "/media/volume/newdata/exouser/online_vla_activeforcing_20260907/server_restart_dev_recheck_v1/branches/t1_r5100_mid__ACTIVEFORCING",
+    "t1_r5100_mid__FIXED_3": "/media/volume/newdata/exouser/online_vla_activeforcing_20260907/server_restart_dev_recheck_v1/branches/t1_r5100_mid__FIXED_3",
+    "t1_r5100_mid__FIXED_5": "/media/volume/newdata/exouser/online_vla_activeforcing_20260907/server_restart_dev_recheck_v1/branches/t1_r5100_mid__FIXED_5",
+    "t5_r5100_low__ACTIVEFORCING": "/media/volume/newdata/exouser/online_vla_activeforcing_20260907/server_restart_dev_recheck_v1/branches/t5_r5100_low__ACTIVEFORCING",
+    "t5_r5100_low__FIXED_3": "/media/volume/newdata/exouser/online_vla_activeforcing_20260907/server_restart_dev_recheck_v1/branches/t5_r5100_low__FIXED_3",
+    "t5_r5100_low__FIXED_5": "/media/volume/newdata/exouser/online_vla_activeforcing_20260907/server_restart_dev_recheck_v1/branches/t5_r5100_low__FIXED_5",
+    "t5_r5100_mid__FIXED_3": "/media/volume/newdata/exouser/online_vla_activeforcing_20260907/server_restart_release_recheck_v1/branches/t5_r5100_mid__FIXED_3",
+    "t5_r5100_mid__FIXED_5": "/media/volume/newdata/exouser/online_vla_activeforcing_20260907/server_restart_release_recheck_v1/branches/t5_r5100_mid__FIXED_5",
+    "t6_r5100_low__ACTIVEFORCING": "/media/volume/newdata/exouser/online_vla_activeforcing_20260907/server_restart_dev_recheck_v1/branches/t6_r5100_low__ACTIVEFORCING",
+    "t6_r5100_low__FIXED_3": "/media/volume/newdata/exouser/online_vla_activeforcing_20260907/server_restart_dev_recheck_v1/branches/t6_r5100_low__FIXED_3",
+    "t6_r5100_low__FIXED_5": "/media/volume/newdata/exouser/online_vla_activeforcing_20260907/server_restart_dev_recheck_v1/branches/t6_r5100_low__FIXED_5"
+  },
+  "reused_current_branches": 14,
+  "separate_old_fixed4_boundary_branches": 4,
+  "server_ready": "/home/exouser/FORTE/online_vla_restore_20260907/server_v3_frozen/SERVER_READY.json",
+  "server_ready_sha256": "f3c05150e03b1fe18597be89bb31280d0a9f0dcc023275fe302c7ff849584ba3",
+  "threshold_source": "/home/exouser/FORTE/online_vla_restore_20260907/PRIMARY36_TRANSFER_SCREEN.json",
+  "threshold_source_sha256": "fce73a8f9846133d5f4232a62c29ad8e05acb474b65e7b6a35c139997fedaf4c",
+  "total_dev_downstream_max": 76,
+  "version": "CURRENT_SERVER_COMPLETE36_V1"
+}

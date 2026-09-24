@@ -1,0 +1,301 @@
+{
+  "AF_all_22_Fstar_counts": {
+    "1.95": 2,
+    "2.0": 5,
+    "2.05": 4,
+    "2.10": 2,
+    "2.20": 2,
+    "2.25": 2,
+    "2.35": 3,
+    "2.40": 1,
+    "2.55": 1
+  },
+  "AF_all_22_mean_F": 2.1454545454545455,
+  "AF_all_22_mean_squeeze": 2.1198362334968377,
+  "AF_all_22_success": "21/22",
+  "EU": {
+    "F_max_N": 5.0,
+    "argmax_p_status": "diagnostic counterfactual only; 22/22 official AF records have argmax_p=5.0",
+    "executed_selector": "expected_utility",
+    "formula": "U(F)=p*(Fmax-F)/Fmax-(1-p)",
+    "grid_max": 5.0,
+    "grid_min": 0.25,
+    "grid_step": 0.05,
+    "source_contains_formula": true,
+    "source_file": "/media/volume/dasdas/exouser/af_dump_formal_liftclone_eu_fmax5_20260915/max_force_utility.py"
+  },
+  "P4_and_query": {
+    "dump_shear": "4 N / 0.012 m after 12 N cap",
+    "established_grasp_N": 12.0,
+    "established_grasp_rule": "keep P4 hold; 12N is force cap; grasp_actor only from open state",
+    "example_from_first_AF": {
+      "grasp_force_N": 12.0,
+      "query_displacement_m": 0.012,
+      "query_force_N": 4.0,
+      "scope": "original P4 native query engineering"
+    },
+    "probe_for_belief": "original dump P4",
+    "probe_for_handoff": "dump run_activeforcing_query after established grasp"
+  },
+  "belief": {
+    "all_deploy_hashes_match": true,
+    "checkpoints": [
+      {
+        "deploy_copy": "/media/volume/dasdas/exouser/af_dump_formal_liftclone_eu_fmax5_20260915/models_deploy/belief/CURRENT_MULTITASK58_seed0.pt",
+        "deploy_copy_sha256": "f6edfd05430c4ccf24f025fe0a196add859ae8ffa91f97ceaff572aff8c2bc62",
+        "deploy_matches_manifest": true,
+        "manifest_path": "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_maxf8_20260913/models_v4/belief/CURRENT_MULTITASK58_seed0.pt",
+        "manifest_sha256": "f6edfd05430c4ccf24f025fe0a196add859ae8ffa91f97ceaff572aff8c2bc62",
+        "seed": 0,
+        "selected_epoch": 110,
+        "source_matches_manifest": true,
+        "source_sha256": "f6edfd05430c4ccf24f025fe0a196add859ae8ffa91f97ceaff572aff8c2bc62"
+      },
+      {
+        "deploy_copy": "/media/volume/dasdas/exouser/af_dump_formal_liftclone_eu_fmax5_20260915/models_deploy/belief/CURRENT_MULTITASK58_seed1.pt",
+        "deploy_copy_sha256": "693ffe462ea3b012976f5fd7a516a21d6e15bafae4ac03bfe22d61c519315ccc",
+        "deploy_matches_manifest": true,
+        "manifest_path": "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_maxf8_20260913/models_v4/belief/CURRENT_MULTITASK58_seed1.pt",
+        "manifest_sha256": "693ffe462ea3b012976f5fd7a516a21d6e15bafae4ac03bfe22d61c519315ccc",
+        "seed": 1,
+        "selected_epoch": 143,
+        "source_matches_manifest": true,
+        "source_sha256": "693ffe462ea3b012976f5fd7a516a21d6e15bafae4ac03bfe22d61c519315ccc"
+      },
+      {
+        "deploy_copy": "/media/volume/dasdas/exouser/af_dump_formal_liftclone_eu_fmax5_20260915/models_deploy/belief/CURRENT_MULTITASK58_seed2.pt",
+        "deploy_copy_sha256": "647f8dd7c7d23661e0ba688e4a867090fce5dfc539968677ec3db69b9d0098d2",
+        "deploy_matches_manifest": true,
+        "manifest_path": "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_maxf8_20260913/models_v4/belief/CURRENT_MULTITASK58_seed2.pt",
+        "manifest_sha256": "647f8dd7c7d23661e0ba688e4a867090fce5dfc539968677ec3db69b9d0098d2",
+        "seed": 2,
+        "selected_epoch": 108,
+        "source_matches_manifest": true,
+        "source_sha256": "647f8dd7c7d23661e0ba688e4a867090fce5dfc539968677ec3db69b9d0098d2"
+      }
+    ],
+    "description": "frozen dump v4 on original P4 rows",
+    "normalization": {
+      "feature_dim": 58,
+      "feature_schema_id": "CURRENT_PROBE_OBSERVABLES_PLUS_TRUE_FRICTION_58D_V1",
+      "fit_roots": [
+        200002
+      ],
+      "fit_split": "TRAIN"
+    },
+    "source": "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_maxf8_20260913/models_v4/belief"
+  },
+  "do_not_mix": [
+    "maxf8 confirmation",
+    "current v4 relabel development 24",
+    "friction-isolation / unit-test / pre-pour diagnostics"
+  ],
+  "evaluation_set": {
+    "AF_executed": 22,
+    "AF_prefix_skips": 2,
+    "Nominal_executed": 20,
+    "Nominal_prefix_skips": 4,
+    "first_chunk_sha_matches_in_matched": 1,
+    "frictions": [
+      0.425,
+      0.575,
+      0.85
+    ],
+    "handoff_sha_matches_in_matched": 1,
+    "matched_by_root_mu_seed": 19,
+    "physical_root": 200002,
+    "planned_contexts": 24,
+    "policy_seeds": [
+      80200002,
+      80200003,
+      80200004,
+      80200005,
+      80200006,
+      80200007,
+      80200008,
+      80200009
+    ],
+    "task": "dump_bin_bigbin"
+  },
+  "feasibility": {
+    "all_checkpoint_hashes_match": true,
+    "architecture": "dump_phasefree_gru10_cond54",
+    "belief_unused_at_train_BCE": "not retrained; frozen dump v4 unused at train BCE (point mu)",
+    "checkpoints": [
+      {
+        "hash_match": true,
+        "manifest_sha256": "43509ec70723c2aed19fc5fc6c96b03b52751c1da6a3fea500b0c0f33b5ccfdc",
+        "on_disk_sha256": "43509ec70723c2aed19fc5fc6c96b03b52751c1da6a3fea500b0c0f33b5ccfdc",
+        "path": "/media/volume/dasdas/exouser/af_dump_formal_liftclone_eu_fmax5_20260915/models_deploy/feasibility/member_seed0.pt",
+        "seed": 0,
+        "selected_epoch": 14
+      },
+      {
+        "hash_match": true,
+        "manifest_sha256": "0408d580f9a55a118414ce719d263dbd63b2ca49f643a1cf838ef4d70947bc05",
+        "on_disk_sha256": "0408d580f9a55a118414ce719d263dbd63b2ca49f643a1cf838ef4d70947bc05",
+        "path": "/media/volume/dasdas/exouser/af_dump_formal_liftclone_eu_fmax5_20260915/models_deploy/feasibility/member_seed1.pt",
+        "seed": 1,
+        "selected_epoch": 19
+      },
+      {
+        "hash_match": true,
+        "manifest_sha256": "c70b3839cdab3b56ddc363d27349f98346b828eddb23f673985800b74768112b",
+        "on_disk_sha256": "c70b3839cdab3b56ddc363d27349f98346b828eddb23f673985800b74768112b",
+        "path": "/media/volume/dasdas/exouser/af_dump_formal_liftclone_eu_fmax5_20260915/models_deploy/feasibility/member_seed2.pt",
+        "seed": 2,
+        "selected_epoch": 18
+      }
+    ],
+    "force_feature_normalization_N": 8.0,
+    "label_target": "full_task_success_y",
+    "training_experiment": "/media/volume/dasdas/exouser/af_dump_liftstyle_feas_v3_fmax5_20260915",
+    "training_source_rows": "/media/volume/dasdas/exouser/af_dump_liftstyle_feas_v3_fork_20260914"
+  },
+  "figure_B_rgb": {
+    "current_overlay_forces": [
+      1.25,
+      1.0,
+      0.75
+    ],
+    "figure_only_ps80200002_forces": [
+      2.25,
+      2.4,
+      2.4
+    ],
+    "mid_row_in_matched_19": false,
+    "official_ps80200002_forces": [
+      2.1,
+      2.0,
+      2.4
+    ],
+    "rgb_is_official_18_19_rollout": false,
+    "rgb_source_run": "/media/volume/dasdas/exouser/figB_dump_bin_af_frames_20260915"
+  },
+  "force_definition": {
+    "AF_F": "bilateral squeeze force setpoint / force_setpoint_bilateral_n; not doubled; not an actuator-limit-only quantity",
+    "Nominal_F": "none; commanded_force_N is null; native VLA gripper pass-through",
+    "do_not": "do not multiply or divide by two; do not substitute commanded F for measured squeeze",
+    "measured_squeeze": "mean over ALL remainder physics_trace steps of contact.measured_squeeze_n; no bilateral-contact filter in the official summary"
+  },
+  "official_success": {
+    "all_AF_success_equals_official": true,
+    "all_Nominal_success_equals_official": true,
+    "rule": "deskbin z>=1 and all 5 garbage spheres have z in [0.13, 0.25]; must equal official_final_check",
+    "source": "RoboTwin dump_bin_bigbin.check_success"
+  },
+  "paper_number_audit": {
+    "432_108_108": {
+      "feasibility_v3_fmax5_split_rows": {
+        "TEST": 160,
+        "TRAIN": 160,
+        "VAL": 160
+      },
+      "note": "Actual fmax5 split is TRAIN/VAL/TEST = 160/160/160 rows (8 mu x 20 forces per seed). Not 432/108/108.",
+      "status": "UNSUPPORTED_for_this_dump_run"
+    },
+    "48_contexts": {
+      "found_instead": {
+        "AF_executed": 22,
+        "Nominal_executed": 20,
+        "matched": 19,
+        "planned_online_contexts": 24
+      },
+      "note": "48 appears in the older 4-task frozen-VLA paper draft (4 tasks x 4 roots x 3 frictions), not in this dump liftclone EU fmax5 run.",
+      "status": "UNSUPPORTED_for_this_dump_run"
+    },
+    "648_continuations_or_72_contexts": {
+      "feasibility_fork_v3": {
+        "main_contexts": 24,
+        "main_rollouts_0p25_to_8": 768
+      },
+      "feasibility_v3_fmax5_rows": 480,
+      "note": "v3 fork is 24 contexts x 32 forces = 768 scripted continuations; fmax5 clip is 480 rows. Not 72/648.",
+      "status": "UNSUPPORTED_for_this_dump_run"
+    },
+    "all_bins_10g": {
+      "logged": {
+        "af_object_mass_kg_in_this_run": "not present in liftclone EU fmax5 records",
+        "deskbin_runtime_mass_in_this_run_logs": "MISSING",
+        "garbage_sphere_mass_in_env_source": 0.0001
+      },
+      "note": "Do not write 10 g from this dump run. Deskbin mass is not recorded in the frozen online logs.",
+      "status": "UNSUPPORTED"
+    }
+  },
+  "prefix_fill_directory": "/media/volume/dasdas/exouser/af_dump_formal_liftclone_eu_fmax5_prefix_fill_20260915",
+  "prefix_fill_excluded_from_official_18_19": true,
+  "protocol": {
+    "belief": "frozen dump v4 on original P4 rows",
+    "claim_boundary": "same-root AF lift-clone EU Fmax5; original P4 v4 belief, 12N grasp, dump shear, last-command handoff, pi0 remainder; executed EU maxF=5 on [0.25,5]@0.05; official comparator is matched Nominal on this prefix when that queue exists; old pre-grasp Nominal 10/24 is not it",
+    "created_utc": "2026-09-14T19:28:29.792399+00:00",
+    "established_grasp_N": 12.0,
+    "established_grasp_rule": "keep P4 hold; 12N is force cap; grasp_actor only from open state",
+    "executed_selector": "expected_utility",
+    "feature_source": "ONLINE_VLA_ACTION_CHUNK",
+    "force_support": [
+      0.25,
+      5.0
+    ],
+    "formal_contexts": 24,
+    "formal_frictions": [
+      0.425,
+      0.575,
+      0.85
+    ],
+    "formal_policy_seeds": [
+      80200002,
+      80200003,
+      80200004,
+      80200005,
+      80200006,
+      80200007,
+      80200008,
+      80200009
+    ],
+    "handoff": "last gripper command after dump shear query",
+    "methods_executed": [
+      "ActiveForcing"
+    ],
+    "methods_official_comparator": "matched Nominal on this prefix; not yet run",
+    "methods_skipped": [
+      "Fixed-Strong 8N"
+    ],
+    "methods_unofficial_only": [
+      "Nominal Frozen VLA reused formal 10/24"
+    ],
+    "models_deploy": "/media/volume/dasdas/exouser/af_dump_formal_liftclone_eu_fmax5_20260915/models_deploy",
+    "physical_root": 200002,
+    "pi0_remainder_only": true,
+    "planner_grid_step": 0.05,
+    "probe_for_belief": "original dump P4",
+    "probe_for_handoff": "dump run_activeforcing_query after established grasp",
+    "runtime_manifest": "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_maxf8_20260913/additional_data_v1/RUNTIME_MANIFEST.json",
+    "runtime_manifest_sha256": "01d0289b14b812a4a12455e826a0b213ef4bf4fcdb27717892289b7e137b5034",
+    "selector": "LiftstyleFeasibility Fmax5 expected_utility on [0.25,5]@0.05 maxF=5",
+    "source_hashes": {
+      "/media/volume/dasdas/exouser/af_dump_formal_liftclone_eu_fmax5_20260915/EXPERIMENT_CARD.md": "c8eeb39effa4516821cd9c506511d03d049f7f44459b66af111feae3a3b59da8",
+      "/media/volume/dasdas/exouser/af_dump_formal_liftclone_eu_fmax5_20260915/audit_formal_results.py": "d84664e25ac89c677d3fb00d445d320911aa7613d7fb2499773ba27a7a1e61ba",
+      "/media/volume/dasdas/exouser/af_dump_formal_liftclone_eu_fmax5_20260915/establish_grasp.py": "8e10ba10ce5a61ae39e389b4d8c974b8d1c5f3286209dd40d7a411bd9ff797a3",
+      "/media/volume/dasdas/exouser/af_dump_formal_liftclone_eu_fmax5_20260915/freeze_plan.py": "96b0a21169ca7171c7ba0de0663853d319aee4db6cafffb0f48302aed4f803d8",
+      "/media/volume/dasdas/exouser/af_dump_formal_liftclone_eu_fmax5_20260915/infer_af_context.py": "480391b8229f1fc193fe5ff6d8b1b0620f18c61b075ca02a4b4a84e342814966",
+      "/media/volume/dasdas/exouser/af_dump_formal_liftclone_eu_fmax5_20260915/liftstyle_runtime.py": "0c394971b01e6ee6f6e2233a56f985711cb37e8c9a70684c03089d9d6c326cbb",
+      "/media/volume/dasdas/exouser/af_dump_formal_liftclone_eu_fmax5_20260915/max_force_utility.py": "275e32f34609a6bb9af3e6ca31f6f55f58b0d4472dfc5876eb7cf0da1b29da0d",
+      "/media/volume/dasdas/exouser/af_dump_formal_liftclone_eu_fmax5_20260915/run_af_queue.py": "5f97fd5e7054b7eb3683c6245262e22857fa9343f9eddefac9a38724dabe920c"
+    },
+    "task": "dump_bin_bigbin",
+    "utility_normalization_N": 5.0,
+    "version": "AF_DUMP_FORMAL_LIFTCLONE_EU_FMAX5"
+  },
+  "remainder": {
+    "deployment_remainder": "frozen pi0 native remainder only",
+    "example_mq_len": 8,
+    "example_mq_width": 64,
+    "mq_deployment": "ONLINE_VLA_ACTION_CHUNK (first pi0 chunk, 8x64)",
+    "mq_training": "scripted 8-step EEF hold chunk (hold_chunk / 8x64)",
+    "training_remainder": "scripted snapshot-fork remainder (liftstyle v3, not pi0)"
+  },
+  "run_directory_AF": "/media/volume/dasdas/exouser/af_dump_formal_liftclone_eu_fmax5_20260915",
+  "run_directory_Nominal": "/media/volume/dasdas/exouser/af_dump_formal_liftclone_eu_fmax5_nominal_20260915",
+  "version_locked": "AF_DUMP_FORMAL_LIFTCLONE_EU_FMAX5"
+}

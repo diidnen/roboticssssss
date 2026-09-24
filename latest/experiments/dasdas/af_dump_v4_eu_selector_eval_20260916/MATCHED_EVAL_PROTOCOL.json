@@ -1,0 +1,9 @@
+{
+  "controller": "unchanged",
+  "new_isaac_rollouts": false,
+  "only_difference": "which already-executed force branch is read as the selected operating point",
+  "query": "unchanged dump shear 4N / 0.012m",
+  "reason": "v4 collection already executed every grid force from the identical snapshot-fork prefix (matched_prefix_exact=true, 20 branches/context). Re-running would change remainder or add non-determinism. Selecting EU/Fixed-4/Fixed-5 among stored branches is the matched online evaluation for this remainder contract.",
+  "remainder": "scripted dump remainder",
+  "terminal": "full_task_success_y / success in main_records"
+}

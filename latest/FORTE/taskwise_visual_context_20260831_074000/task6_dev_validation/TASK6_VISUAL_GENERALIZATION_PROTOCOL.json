@@ -1,0 +1,204 @@
+{
+  "DEV_context_ids": [
+    "pv_dev_t6_r07_s5107_low_mu0.233902"
+  ],
+  "DEV_outcomes_read_at_freeze": false,
+  "DEV_root_ids": [
+    "pv_dev_t6_root07_s5107"
+  ],
+  "PCA": {
+    "DEV_fit_forbidden": true,
+    "fit_split": "task6 TRAIN only",
+    "path": "/home/exouser/FORTE/taskwise_visual_context_20260831_074000/task6_train_frozen/TASK6_PCA17_TRAIN_ONLY.npz",
+    "sha256": "aa1b42651200d982476d9e360411cbe87577f7e34dc5a14976a51abc4d212069"
+  },
+  "TEST_used": false,
+  "TRAIN_context_ids": [
+    "pv_train_t6_r00_s5100_high_mu0.989348",
+    "pv_train_t6_r00_s5100_low_mu0.257577",
+    "pv_train_t6_r00_s5100_mid_mu0.558595",
+    "pv_train_t6_r01_s5101_high_mu0.910021",
+    "pv_train_t6_r01_s5101_low_mu0.216789",
+    "pv_train_t6_r01_s5101_mid_mu0.529103",
+    "pv_train_t6_r02_s5102_high_mu0.958858",
+    "pv_train_t6_r02_s5102_low_mu0.225446",
+    "pv_train_t6_r02_s5102_mid_mu0.568022",
+    "pv_train_t6_r03_s5103_high_mu0.989240",
+    "pv_train_t6_r03_s5103_low_mu0.298364",
+    "pv_train_t6_r03_s5103_mid_mu0.494903",
+    "pv_train_t6_r04_s5104_high_mu0.970401",
+    "pv_train_t6_r04_s5104_low_mu0.226087",
+    "pv_train_t6_r04_s5104_mid_mu0.562603",
+    "pv_train_t6_r05_s5105_high_mu0.940404",
+    "pv_train_t6_r05_s5105_low_mu0.260231",
+    "pv_train_t6_r05_s5105_mid_mu0.481964"
+  ],
+  "TRAIN_root_ids": [
+    "pv_train_t6_root00_s5100",
+    "pv_train_t6_root01_s5101",
+    "pv_train_t6_root02_s5102",
+    "pv_train_t6_root03_s5103",
+    "pv_train_t6_root04_s5104",
+    "pv_train_t6_root05_s5105"
+  ],
+  "checkpoints": [
+    {
+      "model": "PROSPECTIVE_BASE_FEAS",
+      "path": "/home/exouser/FORTE/taskwise_visual_context_20260831_074000/task6_train_frozen/PROSPECTIVE_BASE_FEAS_task6_seed0.pt",
+      "seed": 0,
+      "sha256": "e0d500ae48dc614a30ee09ae24e9e7b14d22534f742b79d29b525f0ad1cbdf4f"
+    },
+    {
+      "model": "PROSPECTIVE_BASE_FEAS",
+      "path": "/home/exouser/FORTE/taskwise_visual_context_20260831_074000/task6_train_frozen/PROSPECTIVE_BASE_FEAS_task6_seed1.pt",
+      "seed": 1,
+      "sha256": "616b1e610ad1a40ae47b54b7837cbe137e62a2189758c5a8cf9c240c987b8b46"
+    },
+    {
+      "model": "PROSPECTIVE_BASE_FEAS",
+      "path": "/home/exouser/FORTE/taskwise_visual_context_20260831_074000/task6_train_frozen/PROSPECTIVE_BASE_FEAS_task6_seed2.pt",
+      "seed": 2,
+      "sha256": "72d7d2764b633410b8ddcfe0dd88dc3b5240e7df511a14f7eda0d2a2d389723f"
+    },
+    {
+      "model": "VISUAL_INTERCEPT_RESIDUAL",
+      "path": "/home/exouser/FORTE/taskwise_visual_context_20260831_074000/task6_train_frozen/VISUAL_INTERCEPT_RESIDUAL_task6_seed0.pt",
+      "seed": 0,
+      "sha256": "6d006c1e5f9caadcf6cf90066c8be6f2dd4b455bc04167359cb5821804243624"
+    },
+    {
+      "model": "VISUAL_INTERCEPT_RESIDUAL",
+      "path": "/home/exouser/FORTE/taskwise_visual_context_20260831_074000/task6_train_frozen/VISUAL_INTERCEPT_RESIDUAL_task6_seed1.pt",
+      "seed": 1,
+      "sha256": "75d035eab053523c3c11389d48922bf090d056acb1e030d5d3816f5e92028547"
+    },
+    {
+      "model": "VISUAL_INTERCEPT_RESIDUAL",
+      "path": "/home/exouser/FORTE/taskwise_visual_context_20260831_074000/task6_train_frozen/VISUAL_INTERCEPT_RESIDUAL_task6_seed2.pt",
+      "seed": 2,
+      "sha256": "4e16419096affd4650c4d8446728a0e2556d7def46bc9861b9f852233e56c464"
+    },
+    {
+      "model": "VISUAL_CONTEXT_FULL_FEAS",
+      "path": "/home/exouser/FORTE/taskwise_visual_context_20260831_074000/task6_train_frozen/VISUAL_CONTEXT_FULL_FEAS_task6_seed0.pt",
+      "seed": 0,
+      "sha256": "46d9074aba64f141f1091b6d5cbae7360bfd394408a5051f6cc05f2853bf37f5"
+    },
+    {
+      "model": "VISUAL_CONTEXT_FULL_FEAS",
+      "path": "/home/exouser/FORTE/taskwise_visual_context_20260831_074000/task6_train_frozen/VISUAL_CONTEXT_FULL_FEAS_task6_seed1.pt",
+      "seed": 1,
+      "sha256": "12acdca3063cc7c5d29d8feff2120d358f96f530cc4976193d5e30052678c2e9"
+    },
+    {
+      "model": "VISUAL_CONTEXT_FULL_FEAS",
+      "path": "/home/exouser/FORTE/taskwise_visual_context_20260831_074000/task6_train_frozen/VISUAL_CONTEXT_FULL_FEAS_task6_seed2.pt",
+      "seed": 2,
+      "sha256": "471e17f76be08310da376182dd36878d5dfd9718a388642c387172a5f9250b3d"
+    },
+    {
+      "model": "VISUAL_CONTEXT_JOINT",
+      "path": "/home/exouser/FORTE/taskwise_visual_context_20260831_074000/task6_train_frozen/VISUAL_CONTEXT_JOINT_task6_seed0.pt",
+      "seed": 0,
+      "sha256": "af7d02bcc3467f40e40f75d26ff782e9d0a9cc39ad61c31fb1c2e003b4899ac0"
+    },
+    {
+      "model": "VISUAL_CONTEXT_JOINT",
+      "path": "/home/exouser/FORTE/taskwise_visual_context_20260831_074000/task6_train_frozen/VISUAL_CONTEXT_JOINT_task6_seed1.pt",
+      "seed": 1,
+      "sha256": "ba6512186ba0bf204da2cfcaa6a7d4c19eed037c07af3ce1ee433210de8df347"
+    },
+    {
+      "model": "VISUAL_CONTEXT_JOINT",
+      "path": "/home/exouser/FORTE/taskwise_visual_context_20260831_074000/task6_train_frozen/VISUAL_CONTEXT_JOINT_task6_seed2.pt",
+      "seed": 2,
+      "sha256": "416b0c614c058a7b0d64826e08546139b8d955d181f76a2bdfab55945ba588cc"
+    }
+  ],
+  "created_at_utc": "2026-08-31T08:43:24.849579+00:00",
+  "dense_query_grid_N": [
+    3.0,
+    3.05,
+    3.1,
+    3.15,
+    3.2,
+    3.25,
+    3.3,
+    3.35,
+    3.4,
+    3.45,
+    3.5,
+    3.55,
+    3.6,
+    3.65,
+    3.7,
+    3.75,
+    3.8,
+    3.85,
+    3.9,
+    3.95,
+    4.0
+  ],
+  "expected_DEV_branches": 25,
+  "goal": "test whether task0 visual memorization/generalization and Joint behavior recur on this task",
+  "no_DEV_calibration": true,
+  "no_DEV_checkpoint_selection": true,
+  "no_post_freeze_model_PCA_feature_loss_or_threshold_changes": true,
+  "normalization": {
+    "fit_split": "task6 TRAIN only",
+    "path": "/home/exouser/FORTE/taskwise_visual_context_20260831_074000/task6_train_frozen/TASK6_TRAIN_NORMALIZATION.npz",
+    "sha256": "311976f1b31a20ea5b91ef5fb0c8b698a24a129984c27ab79e3c4653f26e09bf"
+  },
+  "object": "butter",
+  "real_force_grid_N": [
+    3.0,
+    3.25,
+    3.5,
+    3.75,
+    4.0
+  ],
+  "rho": 0.8,
+  "single_context_rule": "task6 cannot establish multi-context generalization from its one DEV context; report metrics and TRAIN root-heldout CV only",
+  "status": "FROZEN_BEFORE_TASK6_DEV_OPENED",
+  "task": 6,
+  "task1_label_sensitivity": {
+    "reason": "140/180 TRAIN labels use the preregistered terminal-height fallback; available direct task1 labels agree 40/40, while task5 indicates a 2/180 rare transient-contact miss rate",
+    "required": false,
+    "rule": "report task1 classification with this material caveat and mark any TRAIN/CV conclusion label-sensitive when its model gap is not larger than the empirical 2/180 reference rate"
+  },
+  "winner_rules": {
+    "GT_gate": {
+      "finite_model_decision_coverage_min": 0.8,
+      "frontier_MAE_max_N": 0.2,
+      "probability_MAE_max": 0.2,
+      "systematic_nonmonotonicity_forbidden": true,
+      "under_force_rate_max": 0.1,
+      "valid_real_frontier_coverage_min": 0.8
+    },
+    "force_interaction": {
+      "OR_frontier_MAE_improvement_min_N": 0.05,
+      "full_vs_residual_probability_MAE_relative_improvement_min": 0.1,
+      "multiple_contexts": true,
+      "safety_nonworse": true
+    },
+    "joint_win": {
+      "Brier_NLL_not_worse": true,
+      "frontier_MAE_improvement_min_N": 0.05,
+      "multiple_contexts": true,
+      "probability_MAE_relative_improvement_min": 0.1,
+      "systematic_nonmonotonicity_forbidden": true,
+      "under_force_nonworse": true
+    },
+    "offset_only": {
+      "residual_fraction_of_full_MAE_gain_min": 0.7,
+      "safety_nonworse": true
+    },
+    "visual_generalizes": {
+      "frontier_MAE_improvement_min_N": 0.05,
+      "monotonicity_degradation_max": 0.1,
+      "multiple_independent_DEV_contexts": true,
+      "probability_MAE_relative_improvement_min": 0.2,
+      "under_force_nonworse": true
+    }
+  }
+}

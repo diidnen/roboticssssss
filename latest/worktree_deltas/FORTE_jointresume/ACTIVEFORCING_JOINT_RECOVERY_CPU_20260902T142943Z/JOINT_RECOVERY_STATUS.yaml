@@ -1,0 +1,64 @@
+schema_version: 1
+status_id: JOINT_RECOVERY_STATUS_20260902T142943Z
+updated_utc: 2026-09-02T14:29:43Z
+lane: /home/exouser/FORTE_jointresume
+branch: activeforcing-recovery-joint-20260902
+base_commit: 7f88d0184c1617ed95e67502da96e60be07b3689
+mode: CPU_ONLY_FAIL_CLOSED
+
+overall_state: BLOCKED_ON_MASS_RELEASE_AND_GPU_DRIVER
+cpu_work: COMPLETE
+joint_collection: NOT_STARTED
+joint_analysis_results: NONE
+new_gpu_workload_launched: false
+simulator_launched: false
+model_training_launched: false
+
+mass_dependency_snapshot:
+  source_directory: /home/exouser/FORTE_mass/ACTIVEFORCING_MASS_AND_TASK_BREADTH_EXTENSION_20260902_041500/M3_TASK2_FORMAL_STRUCTURED_20260902_130700_RESUME
+  protocol_status: RUNNING
+  accepted_contexts: 10
+  planned_contexts: 18
+  accepted_branches: 100
+  planned_branches: 180
+  accepted_train_branches: 100
+  accepted_test_branches: 0
+  duplicate_branch_keys: 0
+  branches_per_accepted_context: 10
+  accepted_query_valid: 10
+  missing:
+    - TRAIN root8103 MID and HIGH: 2 contexts / 20 branches
+    - LOCKED mass TEST roots8200 and 8201: 6 contexts / 60 branches
+  excluded:
+    - TRAIN root8103 MID in-flight material quarantined by recovery coordinator
+  contexts_sha256: a0a8728619c4958eaa533a2eba6aac09f47a29b87f885258d2fb0b55f4a4140b
+  branches_sha256: f2895479ece9f9eb3e0588d8f07abc9355b1c6f0283da302e5a892d96bc410ec
+  release_gate: NOT_MET
+
+gpu_gate:
+  source: /home/exouser/ACTIVEFORCING_LIVE_STATUS/MASTER_LIVE_STATUS.json
+  state: BLOCKED_DRIVER
+  rechecked_utc: 2026-09-02T14:34:43Z
+  nvidia_smi: FAILED_DRIVER_COMMUNICATION
+  visible_joint_mass_isaac_pi0_processes: 0
+  action: REMAIN_IDLE
+
+completed_outputs:
+  - JOINT_PHYSICS_CODE_PROTOCOL_AUDIT.md
+  - JOINT_3X3_SPLIT_RESUME_PLAN.yaml
+  - joint_identifiability_skeleton.py
+  - JOINT_RECOVERY_STATUS.yaml
+  - SHA256SUMS
+
+cpu_validation:
+  ast_parse: PASS
+  module_import: PASS
+  empty_input_fail_closed: PASS
+  yaml_parse: PASS
+  default_python_external_ml_dependency: NONE
+
+next_allowed_action:
+  trigger: Mass release gate and GPU admission both pass.
+  action: Revalidate source hashes, resolve collision-free root aliases, then run engineering smoke only.
+
+claim_guardrail: No joint result, positive or negative, exists in this recovery output.

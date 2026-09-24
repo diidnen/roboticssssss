@@ -1,0 +1,22 @@
+{
+  "version": "AF_DUMP_V4_EU_SELECTOR_EVAL_20260916",
+  "created_utc": "2026-09-16T08:50:00+00:00",
+  "source_checkpoint_root": "/media/volume/dasdas/exouser/af_dump_liftstyle_feas_v4_relabel_20260915",
+  "forbidden": [
+    "retrain feasibility",
+    "retrain belief",
+    "relabel",
+    "modify query/friction/geometry/controller/remainder",
+    "overwrite Fig.B",
+    "overwrite official 18/19"
+  ],
+  "allowed": [
+    "read frozen v4 p_hat(F) from TRAIN_RESULTS.json",
+    "apply Method EU with F_max=5",
+    "score stored snapshot-fork branches (matched prefix)"
+  ],
+  "new_isaac_rollouts": false,
+  "matched_eval": "read already-executed force forks from the same PRE snapshot",
+  "formal_selector": "expected_utility",
+  "argmax_p": "diagnostic only, not ActiveForcing"
+}

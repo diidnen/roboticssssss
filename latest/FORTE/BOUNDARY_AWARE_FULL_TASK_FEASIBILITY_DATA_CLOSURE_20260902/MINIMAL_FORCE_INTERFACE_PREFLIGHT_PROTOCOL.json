@@ -1,0 +1,21 @@
+{
+  "status": "FROZEN_NOT_RUN",
+  "purpose": "Verify the current frozen controller can stably realize the empirical 1.0 N lower guard and distinguish 0.25 N adjacent commands before any boundary-seeking object rollout.",
+  "scientific_data": false,
+  "task_or_outcome_selection": false,
+  "controller_change": false,
+  "setpoints_N": [1.0, 1.25, 2.0, 2.25, 3.0, 3.25, 4.0, 4.25],
+  "repeats": 3,
+  "pass_criteria": {
+    "lowest_stable_force_N_max": 1.0,
+    "tracking_mae_max_N": 0.4,
+    "adjacent_mean_separation_min_N": 0.2,
+    "adjacent_alternative": "non-overlapping 95% intervals",
+    "peak_force_max_N": 8.0,
+    "saturation_allowed": false,
+    "runtime_errors_max": 0
+  },
+  "output_gate": "MINIMAL_FORCE_INTERFACE_CALIBRATION_PASS.json",
+  "resource_requirement": "Run only after protected Mass/E3/E5 Isaac work releases capacity.",
+  "note": "The 0.25 N points span the planned 1-4.25 N qualification region. This is a minimal interface calibration, not a force-outcome sweep and not a Direct training dataset."
+}

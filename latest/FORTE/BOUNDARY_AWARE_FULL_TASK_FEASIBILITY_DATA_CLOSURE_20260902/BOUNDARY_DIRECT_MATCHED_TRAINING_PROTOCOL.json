@@ -1,0 +1,97 @@
+{
+  "status": "FROZEN_BEFORE_NEW_BOUNDARY_OUTCOMES",
+  "scientific_comparison": {
+    "A": "OLD_DATA_ONLY",
+    "B": "OLD_PLUS_BOUNDARY_DATA"
+  },
+  "minimum_seeds": [0, 1, 2],
+  "optional_gpu_capacity_seeds": [3, 4],
+  "root_split": {
+    "assignment": "within every task, lexicographic root-family index modulo 3",
+    "group_key": ["task", "root_id"],
+    "rule_for_new_boundary_rows": "inherit the fold of the same task/root family",
+    "held_root_exclusion": "for each fold, neither old nor new rows from the held root may enter training",
+    "normalization": "fit independently inside each training fold and arm; never use held-root rows"
+  },
+  "direct_model": {
+    "class": "full_task_feasibility_decoder.FeasibilityOnly",
+    "command_encoder": "GRU(input=17,hidden=64,batch_first=True)",
+    "condition_encoder": "Linear(54,64)+ReLU",
+    "head": "Linear(128,64)+ReLU+Linear(64,1)",
+    "input_schema": "H=8 command/task-phase sequence plus the unchanged 54D force/physics/initial-state condition",
+    "target": "full_task_success",
+    "loss": "binary_cross_entropy_with_logits"
+  },
+  "optimizer_and_budget": {
+    "optimizer": "AdamW",
+    "learning_rate": 0.0008,
+    "weight_decay": 0.0001,
+    "epochs": 80,
+    "batch_size": 64,
+    "gradient_clip": 1.0,
+    "early_stopping": false
+  },
+  "sampling": {
+    "frozen_existing_rule": "inverse frequency over friction_band x outcome x stratum as implemented by task0_visual_context_early.sample_weights",
+    "new_boundary_stratum": "BOUNDARY_NEW; preserved as acquisition metadata but not exposed as a model input",
+    "no_boundary_weighting_in_primary": true,
+    "note": "Any boundary-weighted loss is a separate optional scientific method ablation after ordinary augmentation is evaluated."
+  },
+  "fixed_runtime": {
+    "utility": "unchanged task-specific Expected Utility from UTILITY_FINAL_CONFIG.json",
+    "candidate_force_set": "unchanged archived per-context candidates",
+    "identifier": "unchanged",
+    "P4_B": "unchanged",
+    "friction_estimator": "unchanged",
+    "controller_semantics": "unchanged",
+    "low_force_tie_break": true
+  },
+  "primary_metrics": [
+    "Brier",
+    "ECE_10_equal_width",
+    "NLL",
+    "AUROC",
+    "force_ranking_accuracy",
+    "known_fail_to_success_probability_gap",
+    "boundary_MAE_N",
+    "controller_SR",
+    "mean_selected_force_N",
+    "under_force",
+    "excess_force",
+    "realized_utility",
+    "rescue",
+    "collateral"
+  ],
+  "task6_preregistered_slice_N": [3.01, 3.06],
+  "promotion_gate": {
+    "required": [
+      "task6 low-force failure confidence decreases",
+      "task6 selected force rises only where archived/fresh paired evidence supports it",
+      "task6 under-force decreases",
+      "task0/task1/task5 have no comparable collateral loss",
+      "same Utility; no force-scale or threshold retuning",
+      "effect appears across at least two tasks or is classified task6-only"
+    ],
+    "fresh_test_required_after_dev_gate": true
+  },
+  "source_hashes": {
+    "/home/exouser/Tabero/analysis/full_task_feasibility_decoder.py": "bf002ca6a5e190f0eff4e0429bd3340f9acfdb4a694dde2528a98581ce8ff83d",
+    "/home/exouser/FORTE/task0_visual_context_early.py": "af027174938106b29d081da26055b02a682c390ecaa7a817d1be4b65c6f55cd7",
+    "/home/exouser/FORTE/run_pooled_predictive_verifier.py": "eea0784a63c3aa072e9950c9a3739ec950e287ff9f0587b80ea6136cb35c4bb6",
+    "/home/exouser/FORTE/UTILITY_FINAL_CONFIG.json": "19c93ad7a57ff5823c53e0171cf297424256d1bbac62df79b7736f0c680415e1"
+  },
+  "git": {
+    "FORTE": "7f88d0184c1617ed95e67502da96e60be07b3689",
+    "Tabero": "80ab3be09ce884f86cfc2037d3af30bc28061426"
+  },
+  "forbidden": [
+    "pi0 retraining",
+    "Utility change",
+    "P4-B change",
+    "friction estimator change",
+    "identifier retraining",
+    "task6 special-case sampling or Fmax",
+    "boundary-weighted loss in the primary comparison",
+    "fresh TEST claim from observed 720 roots"
+  ]
+}

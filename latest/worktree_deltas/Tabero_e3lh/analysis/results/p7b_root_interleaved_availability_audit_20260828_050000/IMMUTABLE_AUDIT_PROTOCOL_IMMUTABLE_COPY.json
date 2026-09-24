@@ -1,0 +1,353 @@
+{
+  "contexts": {
+    "10100": {
+      "actual_displacement_mm": "2.0",
+      "contact_frame_source": "projected_object_to_basket_transport",
+      "contact_retained": "1",
+      "context_id": "p7b_t1_g10100_s2_mu0.587672",
+      "drop": "0",
+      "fixed_recipe_id": "t1_G2_R23_ORIGINAL_P6G1",
+      "friction_stratum": "2",
+      "hidden_friction_analysis_only": "0.5876719657054629",
+      "infra_failure": "",
+      "infra_retry_count": "0",
+      "major_disturbance": "0",
+      "obj_disp_probe_m": "0.0014702846528962255",
+      "obj_rot_probe_rad": "0.010449686963727535",
+      "post_query_state_hash": "7277f3fc020c67d7781c48aade7e82f071248489fd36d4dd1e301e01de0bd095",
+      "pre_query_state_hash": "2f9205c7948b18835ddb98f410e1f285886ab50e2099a0cb5a78d30650835dd4",
+      "probe_duration_s": "1.25",
+      "query_failure": "0",
+      "query_failure_reason": "",
+      "query_predicate_version": "P4B_probe_failure_return_valid_v3",
+      "query_qualified": "1",
+      "query_telemetry_path": "/home/exouser/Tabero/analysis/results/p7b_scientific_main_20260828_000729/P7B_QUERY_TELEMETRY/p7b_t1_g10100_s2_mu0.587672.csv",
+      "query_true_runtime_error": "",
+      "return_position_error_mm": "0.07356734568020329",
+      "return_state_valid": "1",
+      "rho_impulse": "0.009228835541823072",
+      "root_group_id": "10100",
+      "root_restore_parity": "1",
+      "root_restore_state_hash": "2f9205c7948b18835ddb98f410e1f285886ab50e2099a0cb5a78d30650835dd4",
+      "root_seed": "10100",
+      "split": "TRAIN",
+      "stop_reason": "max_displacement_cap",
+      "target_preload_N": "3.0",
+      "task": "1"
+    },
+    "10108": {
+      "actual_displacement_mm": "2.0",
+      "contact_frame_source": "projected_object_to_basket_transport",
+      "contact_retained": "1",
+      "context_id": "p7b_t1_g10108_s2_mu0.594860",
+      "drop": "0",
+      "fixed_recipe_id": "t1_G2_R23_ORIGINAL_P6G1",
+      "friction_stratum": "2",
+      "hidden_friction_analysis_only": "0.594859832558962",
+      "infra_failure": "",
+      "infra_retry_count": "0",
+      "major_disturbance": "0",
+      "obj_disp_probe_m": "0.00132252206094563",
+      "obj_rot_probe_rad": "0.017469336608042715",
+      "post_query_state_hash": "b583ff7c2eb16ceac7a397403714cec008bdca05b6784b5052d9c3d68c272eea",
+      "pre_query_state_hash": "3f7543a3611175cb0c8135d821b1a20cf74526858f851a1bf856387a692fda1e",
+      "probe_duration_s": "1.25",
+      "query_failure": "0",
+      "query_failure_reason": "",
+      "query_predicate_version": "P4B_probe_failure_return_valid_v3",
+      "query_qualified": "1",
+      "query_telemetry_path": "/home/exouser/Tabero/analysis/results/p7b_scientific_main_20260828_000729/P7B_QUERY_TELEMETRY/p7b_t1_g10108_s2_mu0.594860.csv",
+      "query_true_runtime_error": "",
+      "return_position_error_mm": "0.07208900933619589",
+      "return_state_valid": "1",
+      "rho_impulse": "0.010784966800123613",
+      "root_group_id": "10108",
+      "root_restore_parity": "1",
+      "root_restore_state_hash": "3f7543a3611175cb0c8135d821b1a20cf74526858f851a1bf856387a692fda1e",
+      "root_seed": "10108",
+      "split": "TRAIN",
+      "stop_reason": "max_displacement_cap",
+      "target_preload_N": "3.0",
+      "task": "1"
+    },
+    "10111": {
+      "actual_displacement_mm": "0.0",
+      "contact_frame_source": "projected_object_to_basket_transport",
+      "contact_retained": "0",
+      "context_id": "p7b_t1_g10111_s2_mu0.511098",
+      "drop": "1",
+      "fixed_recipe_id": "t1_G2_R23_ORIGINAL_P6G1",
+      "friction_stratum": "2",
+      "hidden_friction_analysis_only": "0.5110977431167373",
+      "infra_failure": "",
+      "infra_retry_count": "0",
+      "major_disturbance": "0",
+      "obj_disp_probe_m": "0.0",
+      "obj_rot_probe_rad": "0.0",
+      "post_query_state_hash": "",
+      "pre_query_state_hash": "bba71eab5bde4b416e7fd21385d112271eec605701a4a09f2895673cf40a9a1f",
+      "probe_duration_s": "0.0",
+      "query_failure": "1",
+      "query_failure_reason": "drop",
+      "query_predicate_version": "P4B_probe_failure_return_valid_v3",
+      "query_qualified": "0",
+      "query_telemetry_path": "/home/exouser/Tabero/analysis/results/p7b_scientific_main_20260828_000729/P7B_QUERY_TELEMETRY/p7b_t1_g10111_s2_mu0.511098.csv",
+      "query_true_runtime_error": "",
+      "return_position_error_mm": "0.0",
+      "return_state_valid": "0",
+      "rho_impulse": "0.0",
+      "root_group_id": "10111",
+      "root_restore_parity": "1",
+      "root_restore_state_hash": "bba71eab5bde4b416e7fd21385d112271eec605701a4a09f2895673cf40a9a1f",
+      "root_seed": "10111",
+      "split": "TRAIN",
+      "stop_reason": "completed",
+      "target_preload_N": "3.0",
+      "task": "1"
+    },
+    "10112": {
+      "actual_displacement_mm": "0.0",
+      "contact_frame_source": "projected_object_to_basket_transport",
+      "contact_retained": "0",
+      "context_id": "p7b_t1_g10112_s2_mu0.536091",
+      "drop": "1",
+      "fixed_recipe_id": "t1_G2_R23_ORIGINAL_P6G1",
+      "friction_stratum": "2",
+      "hidden_friction_analysis_only": "0.5360912738213484",
+      "infra_failure": "",
+      "infra_retry_count": "0",
+      "major_disturbance": "0",
+      "obj_disp_probe_m": "0.0",
+      "obj_rot_probe_rad": "0.0",
+      "post_query_state_hash": "",
+      "pre_query_state_hash": "d0a72413329ea94e23a71e2983e1bf7cd4d082b911a0a34ea62389f9628de38e",
+      "probe_duration_s": "0.0",
+      "query_failure": "1",
+      "query_failure_reason": "drop",
+      "query_predicate_version": "P4B_probe_failure_return_valid_v3",
+      "query_qualified": "0",
+      "query_telemetry_path": "/home/exouser/Tabero/analysis/results/p7b_scientific_main_20260828_000729/P7B_QUERY_TELEMETRY/p7b_t1_g10112_s2_mu0.536091.csv",
+      "query_true_runtime_error": "",
+      "return_position_error_mm": "0.0",
+      "return_state_valid": "0",
+      "rho_impulse": "0.0",
+      "root_group_id": "10112",
+      "root_restore_parity": "1",
+      "root_restore_state_hash": "d0a72413329ea94e23a71e2983e1bf7cd4d082b911a0a34ea62389f9628de38e",
+      "root_seed": "10112",
+      "split": "DEV",
+      "stop_reason": "completed",
+      "target_preload_N": "3.0",
+      "task": "1"
+    },
+    "10116": {
+      "actual_displacement_mm": "0.0",
+      "contact_frame_source": "projected_object_to_basket_transport",
+      "contact_retained": "0",
+      "context_id": "p7b_t1_g10116_s2_mu0.523901",
+      "drop": "1",
+      "fixed_recipe_id": "t1_G2_R23_ORIGINAL_P6G1",
+      "friction_stratum": "2",
+      "hidden_friction_analysis_only": "0.5239012626290293",
+      "infra_failure": "",
+      "infra_retry_count": "0",
+      "major_disturbance": "0",
+      "obj_disp_probe_m": "0.0",
+      "obj_rot_probe_rad": "0.0",
+      "post_query_state_hash": "",
+      "pre_query_state_hash": "1923232e87b4ef706b21eb9f54be6b2e6b8c087304ba5f223fcfe3cf422745aa",
+      "probe_duration_s": "0.0",
+      "query_failure": "1",
+      "query_failure_reason": "drop",
+      "query_predicate_version": "P4B_probe_failure_return_valid_v3",
+      "query_qualified": "0",
+      "query_telemetry_path": "/home/exouser/Tabero/analysis/results/p7b_scientific_main_20260828_000729/P7B_QUERY_TELEMETRY/p7b_t1_g10116_s2_mu0.523901.csv",
+      "query_true_runtime_error": "",
+      "return_position_error_mm": "0.0",
+      "return_state_valid": "0",
+      "rho_impulse": "0.0",
+      "root_group_id": "10116",
+      "root_restore_parity": "1",
+      "root_restore_state_hash": "1923232e87b4ef706b21eb9f54be6b2e6b8c087304ba5f223fcfe3cf422745aa",
+      "root_seed": "10116",
+      "split": "TEST",
+      "stop_reason": "completed",
+      "target_preload_N": "3.0",
+      "task": "1"
+    }
+  },
+  "controls": {
+    "fresh_process_one_context_per_process": true,
+    "long_lived_repeated_success_control": [
+      0,
+      2,
+      7,
+      9
+    ],
+    "no_scientific_retries": true,
+    "root_major_order_removed": true,
+    "same_frozen_query": true,
+    "same_stratum": true,
+    "same_task": true
+  },
+  "created_at_utc": "2026-08-28T04:29:39.527082+00:00",
+  "fresh_process_execution_order": [
+    {
+      "context_id": "p7b_t1_g10100_s2_mu0.587672",
+      "execution_order_index": 0,
+      "root_group_id": 10100,
+      "split": "TRAIN"
+    },
+    {
+      "context_id": "p7b_t1_g10112_s2_mu0.536091",
+      "execution_order_index": 1,
+      "root_group_id": 10112,
+      "split": "DEV"
+    },
+    {
+      "context_id": "p7b_t1_g10116_s2_mu0.523901",
+      "execution_order_index": 2,
+      "root_group_id": 10116,
+      "split": "TEST"
+    },
+    {
+      "context_id": "p7b_t1_g10108_s2_mu0.594860",
+      "execution_order_index": 3,
+      "root_group_id": 10108,
+      "split": "TRAIN"
+    },
+    {
+      "context_id": "p7b_t1_g10111_s2_mu0.511098",
+      "execution_order_index": 4,
+      "root_group_id": 10111,
+      "split": "TRAIN"
+    }
+  ],
+  "frozen_method": {
+    "branches": false,
+    "collector": "/home/exouser/Tabero/analysis/p7b_gnp_physical_belief_force_planning.py",
+    "probe_and_predicates_unchanged": true,
+    "protocol": "/home/exouser/Tabero/analysis/results/p7b_scientific_main_20260827_234017/P7B_PROTOCOL_IMMUTABLE_COPY.json",
+    "query_only": true,
+    "stratum": 2,
+    "task": 1
+  },
+  "hashes": {
+    "clean_pilot_identity": "638045a19295db7721b0757030302dac27ffef2700ebbac9a8bccfd5a9daaeb5",
+    "collector": "2ef853b3d3a4ad4d1642332841dc5deb3daed71a7ca2ae8cb8d588668ec28337",
+    "gripper": "51292d864a3bae436a0dbfeb2f737e2b27317f717b4e36011173241afa59956d",
+    "protocol": "7cbdd36a600204e06ddc635f68563731445756e2e24cd5e14712036a39a3941a"
+  },
+  "long_lived_execution_order": [
+    {
+      "context_id": "p7b_t1_g10100_s2_mu0.587672",
+      "execution_order_index": 0,
+      "root_group_id": 10100,
+      "split": "TRAIN"
+    },
+    {
+      "context_id": "p7b_t1_g10112_s2_mu0.536091",
+      "execution_order_index": 1,
+      "root_group_id": 10112,
+      "split": "DEV"
+    },
+    {
+      "context_id": "p7b_t1_g10100_s2_mu0.587672",
+      "execution_order_index": 2,
+      "root_group_id": 10100,
+      "split": "TRAIN"
+    },
+    {
+      "context_id": "p7b_t1_g10116_s2_mu0.523901",
+      "execution_order_index": 3,
+      "root_group_id": 10116,
+      "split": "TEST"
+    },
+    {
+      "context_id": "p7b_t1_g10108_s2_mu0.594860",
+      "execution_order_index": 4,
+      "root_group_id": 10108,
+      "split": "TRAIN"
+    },
+    {
+      "context_id": "p7b_t1_g10112_s2_mu0.536091",
+      "execution_order_index": 5,
+      "root_group_id": 10112,
+      "split": "DEV"
+    },
+    {
+      "context_id": "p7b_t1_g10111_s2_mu0.511098",
+      "execution_order_index": 6,
+      "root_group_id": 10111,
+      "split": "TRAIN"
+    },
+    {
+      "context_id": "p7b_t1_g10100_s2_mu0.587672",
+      "execution_order_index": 7,
+      "root_group_id": 10100,
+      "split": "TRAIN"
+    },
+    {
+      "context_id": "p7b_t1_g10116_s2_mu0.523901",
+      "execution_order_index": 8,
+      "root_group_id": 10116,
+      "split": "TEST"
+    },
+    {
+      "context_id": "p7b_t1_g10100_s2_mu0.587672",
+      "execution_order_index": 9,
+      "root_group_id": 10100,
+      "split": "TRAIN"
+    }
+  ],
+  "name": "P7-B root-interleaved execution-availability audit",
+  "purpose": "separate root-dependent query handoff failure from temporal/session degradation",
+  "scientific_method_change": "NONE",
+  "selected_roots": [
+    {
+      "context_id": "p7b_t1_g10100_s2_mu0.587672",
+      "friction_stratum": 2,
+      "hidden_friction_context_value": "0.5876719657054629",
+      "prior_query_qualification": "1",
+      "rationale": "strong success control: prior main query qualification 5/5",
+      "root_group_id": 10100,
+      "split": "TRAIN"
+    },
+    {
+      "context_id": "p7b_t1_g10108_s2_mu0.594860",
+      "friction_stratum": 2,
+      "hidden_friction_context_value": "0.594859832558962",
+      "prior_query_qualification": "1",
+      "rationale": "partial TRAIN root: prior main query qualification 3/5",
+      "root_group_id": 10108,
+      "split": "TRAIN"
+    },
+    {
+      "context_id": "p7b_t1_g10111_s2_mu0.511098",
+      "friction_stratum": 2,
+      "hidden_friction_context_value": "0.5110977431167373",
+      "prior_query_qualification": "0",
+      "rationale": "zero-success TRAIN root adjacent to split cliff: 0/5",
+      "root_group_id": 10111,
+      "split": "TRAIN"
+    },
+    {
+      "context_id": "p7b_t1_g10112_s2_mu0.536091",
+      "friction_stratum": 2,
+      "hidden_friction_context_value": "0.5360912738213484",
+      "prior_query_qualification": "0",
+      "rationale": "DEV representative immediately after TRAIN cliff: 0/5",
+      "root_group_id": 10112,
+      "split": "DEV"
+    },
+    {
+      "context_id": "p7b_t1_g10116_s2_mu0.523901",
+      "friction_stratum": 2,
+      "hidden_friction_context_value": "0.5239012626290293",
+      "prior_query_qualification": "0",
+      "rationale": "TEST representative: 0/5",
+      "root_group_id": 10116,
+      "split": "TEST"
+    }
+  ]
+}

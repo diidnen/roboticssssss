@@ -1,0 +1,60 @@
+{
+  "version": "DUMP_ORIGINAL_AF_ROOTLOCAL_COLLECTION_V1",
+  "created_utc": "2026-09-12T17:06:52.294587+00:00",
+  "root_scope": [
+    200002
+  ],
+  "task": "dump_bin_bigbin",
+  "policy_seed": 30200002,
+  "force_support_N": [
+    0.5,
+    8.0
+  ],
+  "forces_N": [
+    0.5,
+    1.0,
+    2.0,
+    3.0,
+    4.0,
+    5.0,
+    6.0,
+    8.0
+  ],
+  "frictions_by_split": {
+    "TRAIN": [
+      0.3,
+      0.35,
+      0.4,
+      0.45,
+      0.5,
+      0.55,
+      0.6,
+      0.65,
+      0.7,
+      0.75,
+      0.8,
+      0.85
+    ],
+    "VAL": [
+      0.325,
+      0.475,
+      0.625,
+      0.775
+    ],
+    "TEST": [
+      0.375,
+      0.525,
+      0.675,
+      0.825
+    ]
+  },
+  "split_unit": "complete physical query setting (root, friction); all branches together",
+  "cross_root_generalization": false,
+  "original_utility_normalization_N": 5.0,
+  "planned_training_validation_branches": 128,
+  "planned_test_rollouts": 24,
+  "protocol_text_sha256": "fc04587159dcaedc4944a0a9233bb5e940e31af0570763e3ea307b5c142cc6d4",
+  "runtime_manifest_path": "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_original_restore_20260912/original_rootlocal_dataset_v1/RUNTIME_MANIFEST.json",
+  "runtime_manifest_sha256": "3cb11c19448dfc6762883800e8b9fd094738d7fe8f033b131cd3f1ffdd2adca4",
+  "test_not_collected_until_both_checkpoint_selection_locks": true
+}

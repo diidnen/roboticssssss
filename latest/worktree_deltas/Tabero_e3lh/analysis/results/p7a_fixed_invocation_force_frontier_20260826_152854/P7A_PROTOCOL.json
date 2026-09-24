@@ -1,0 +1,171 @@
+{
+  "analysis_rules": {
+    "bootstrap": "10,000 paired bootstrap resamples of roots within task x hidden-friction group",
+    "confirmed_rule": "At least one task x hidden-friction group has a >=0.10 absolute range in stable-lift or full-task success across force, with paired 95% CI excluding zero and >=0.70 root-direction consistency, with complete valid data.",
+    "invalid_rule": "Missing/duplicate rollouts, state-parity failure, recipe/invocation drift, runtime errors, or material execution-geometry confound prevents attribution.",
+    "meaningful_effect_threshold": 0.1,
+    "none_rule": "No force range reaches 0.10 and no repeatable frontier structure is present.",
+    "paired_unit": "root-level mean over two policy repeats; policy repeats are not independent environmental roots",
+    "weak_rule": "Any force range is >=0.10 but the confirmed rule is not met, or a smaller directionally repeatable effect is present."
+  },
+  "center_of_mass": "centered/default",
+  "created_at_utc": "2026-08-26T15:28:56Z",
+  "fixed_recipe_by_task": {
+    "1": {
+      "approach_axis_offset_m": "0.0",
+      "is_original_p6g1": "True",
+      "max_vla_chunks": "22",
+      "mode_axis_lateral_offset_m": "0.0",
+      "object": "cream_cheese_1",
+      "policy_context_mode": "COLD",
+      "recipe_id": "t1_G2_R23_ORIGINAL_P6G1",
+      "source_grasp_label": "g_plus",
+      "stabilization_observations": "4",
+      "staging_basis": "approach=[0,0,-1], mode=lateral closing axis, vertical=[0,1,0], all object-relative",
+      "staging_deviation_norm": "0.0",
+      "target_mode": "G2",
+      "task": "1",
+      "vertical_offset_m": "0.0",
+      "wrist_roll_deg": "0.0"
+    },
+    "6": {
+      "approach_axis_offset_m": "-0.0075",
+      "is_original_p6g1": "",
+      "max_vla_chunks": "4",
+      "mode_axis_lateral_offset_m": "-0.012",
+      "object": "butter_1",
+      "policy_context_mode": "COLD",
+      "recipe_id": "t6_G0_R09",
+      "source_grasp_label": "g_minus",
+      "stabilization_observations": "3",
+      "staging_basis": "approach=[0,0,-1], mode=lateral closing axis, vertical=[0,1,0], all object-relative",
+      "staging_deviation_norm": "1.5",
+      "target_mode": "G0",
+      "task": "6",
+      "vertical_offset_m": "0.008",
+      "wrist_roll_deg": "0.0"
+    }
+  },
+  "force_grid_N": [
+    3.0,
+    5.0,
+    8.0
+  ],
+  "fresh_roots_per_task": [
+    9840,
+    9841,
+    9842,
+    9843,
+    9844,
+    9845,
+    9846,
+    9847,
+    9848,
+    9849
+  ],
+  "frozen_policy": {
+    "checkpoint": "/media/volume/newdata/exouser/tabero/models/pi0_lora_tacfield_tabero/checkpoints/pi0_lora_tacfield_tabero/pi0_lora_tacfield_tabero/49999",
+    "checkpoint_hash_sha256": "0598a390733235fde0bf5633b1543d91176d31bb5012d4d26f9373a90642fe17",
+    "config": "pi0_lora_tacfield_tabero",
+    "expected_hash_sha256": "0598a390733235fde0bf5633b1543d91176d31bb5012d4d26f9373a90642fe17",
+    "server_wrapper": "/home/exouser/Tabero/analysis/results/b5_tabero_neutral_20260822_040652/scripts/b5_serve_policy_with_explicit_norm_stats.py",
+    "server_wrapper_sha256": "a3baac379926856f928b8d5aad5e3285af84c2377158ea1c4bd19440f2907d01"
+  },
+  "hidden_friction_values": [
+    0.25,
+    0.9
+  ],
+  "invocation": {
+    "grasp_position_runtime_decision": false,
+    "online_force_change": false,
+    "recipe_search": false,
+    "recipe_selection": false,
+    "retry": false,
+    "sequence": [
+      "analytic/IK staging using frozen qualified recipe",
+      "frozen VLA contact-rich execution",
+      "constant requested force for entire rollout",
+      "full task"
+    ],
+    "steering_operator_change": false,
+    "vla_checkpoint_change": false
+  },
+  "matched_root_protocol": "one settled initial state per task/root, independently restored before every force x friction x policy-repeat rollout",
+  "matrix_instantiation": {
+    "force_source": "/home/exouser/Tabero/analysis/results/p6g0r1_confirmatory_and_candidate_coverage_20260824_232236/P6G0R1_PROTOCOL.json",
+    "force_source_grid_N": [
+      3.0,
+      5.0,
+      8.0
+    ],
+    "friction_source": "/home/exouser/Tabero/analysis/results/p6g0r1_confirmatory_and_candidate_coverage_20260824_232236/P6G0R1_PROTOCOL.json",
+    "friction_source_values": [
+      0.25,
+      0.9
+    ],
+    "human_visible_before_execution": true,
+    "reason": "The frozen P7A markdown specifies force/hidden-friction crossing but omits numeric levels, root count, and repeat count.",
+    "root_repeat_discipline_source": "/home/exouser/Tabero/analysis/results/p6g1r3_raw_vla_vs_fixed_recipe_20260826_123552/P6G1R3_PROTOCOL.json",
+    "status": "explicit_inherited_execution_matrix"
+  },
+  "method_change": "NONE",
+  "name": "P7A Fixed-Invocation Force Frontier",
+  "object_by_task": {
+    "1": "cream_cheese_1",
+    "6": "butter_1"
+  },
+  "output_directory": "/home/exouser/Tabero/analysis/results/p7a_fixed_invocation_force_frontier_20260826_152854",
+  "physics": {
+    "com": "centered/default",
+    "hidden_variable": "object friction",
+    "inertia": "unchanged/default",
+    "mass": "unchanged"
+  },
+  "policy_repeats": [
+    0,
+    1
+  ],
+  "prohibited": [
+    "training",
+    "GNP",
+    "physical query",
+    "DreamTrajectory",
+    "probe",
+    "recipe search",
+    "recipe selection",
+    "retry",
+    "online force change",
+    "grasp candidate changes"
+  ],
+  "protocol_text_length": 350,
+  "protocol_text_sha256": "f0b0dfa76d6019eb35fc5d5add2fd85c32159c090a0acb7bb6014b763aea11c0",
+  "root_audit": {
+    "collisions": [],
+    "disjoint": true,
+    "prior_artifact_glob": "p6g0*/p6g1*",
+    "roots": [
+      9840,
+      9841,
+      9842,
+      9843,
+      9844,
+      9845,
+      9846,
+      9847,
+      9848,
+      9849
+    ]
+  },
+  "runtime_action_space": [
+    "Force only"
+  ],
+  "scientific_question": "Whether force has a stable, repeatable, actionable causal effect on manipulation outcome after invocation, grasp, and execution geometry are fixed.",
+  "source_frozen_protocol": "/home/exouser/Tabero/analysis/results/p6g1r3_raw_vla_vs_fixed_recipe_20260826_123552/P7A_FIXED_INVOCATION_FORCE_FRONTIER_PROTOCOL.md",
+  "source_frozen_protocol_sha256": "f0b0dfa76d6019eb35fc5d5add2fd85c32159c090a0acb7bb6014b763aea11c0",
+  "source_frozen_protocol_text_preserved_verbatim": true,
+  "tasks": [
+    1,
+    6
+  ],
+  "total_rollouts": 240
+}

@@ -1,0 +1,37 @@
+{
+  "context": {
+    "id": "train_mu0.600_root200002",
+    "split": "TRAIN",
+    "friction": 0.6,
+    "root": 200002,
+    "policy_seed": 30200002,
+    "task": "dump_bin_bigbin",
+    "force_support_N": [
+      0.5,
+      8.0
+    ],
+    "forces_N": [
+      0.5,
+      1.0,
+      2.0,
+      3.0,
+      4.0,
+      5.0,
+      6.0,
+      8.0
+    ],
+    "runtime_manifest_path": "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_original_restore_20260912/original_rootlocal_dataset_v1/RUNTIME_MANIFEST.json",
+    "runtime_manifest_sha256": "3cb11c19448dfc6762883800e8b9fd094738d7fe8f033b131cd3f1ffdd2adca4",
+    "collection_protocol_path": "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_original_restore_20260912/original_rootlocal_dataset_v1/COLLECTION_PROTOCOL.json",
+    "collection_protocol_sha256": "d5bca93462d29e9f5d972a4ab983117dc727407708b7e563cb2215227293401c"
+  },
+  "queries": 2,
+  "formal_admission": false,
+  "source_hashes": {
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_original_restore_20260912/trace_original_query_contact.py": "2f99e7ed5a200a92781be85141a63cb7e425bab79e198b344c718fea665aa2dd",
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_original_restore_20260912/run_mu060_contact_diagnostics.py": "e38b1702db5b9f47b75d99808a7be8100f4f9db7a2996fae28e385c6e8b406f9",
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_original_restore_20260912/MU060_CONTACT_DIAGNOSTIC_PLAN.md": "8c17ebeafc3f0ad8db471ad8f149c773b6c4cc0e86c104d138b862bbe48cf56c"
+  },
+  "started_utc": "2026-09-12T18:43:05.469110+00:00",
+  "retry_until_success": false
+}

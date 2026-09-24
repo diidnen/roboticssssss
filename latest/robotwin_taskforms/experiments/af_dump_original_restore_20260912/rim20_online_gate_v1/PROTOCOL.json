@@ -1,0 +1,36 @@
+{
+  "root": 200002,
+  "friction": 0.7,
+  "policy_seed": 30200002,
+  "offset_m": 0.02,
+  "forces_N": [
+    3.0,
+    3.0,
+    8.0
+  ],
+  "source_hashes": {
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_original_restore_20260912/qualify_rim20_online.py": "749b398a5ecdc249b4e61c5bddd69e42ac69ac858d7452e482ec01c98428aa09",
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_original_restore_20260912/run_rim20_online_gate.py": "39b9cd5b27a960263ee3923d1c0147abe3930daeeaa0a9e142b167d776261f03",
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_original_restore_20260912/diagnose_canonical_rim_alignment.py": "eaf0ce26e1622a3fd8a2ee1b1217e30e0689eb06f93bf6c4419f9601702627ad",
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_original_restore_20260912/canonical_open_ready_query.py": "a24c5144dc73badd408d99c860ca61c96000a8c58def572417a91ad0c1e84384",
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_original_restore_20260912/trace_original_query_contact.py": "2f99e7ed5a200a92781be85141a63cb7e425bab79e198b344c718fea665aa2dd",
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_original_restore_20260912/RIM20_QUALIFICATION_PROTOCOL.md": "cb630fdfdaf7dc6325cefa8a843ff2a78d0f6307d82fb913cdf7930109a563d9",
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_original_restore_20260912/run_rim20_qualification.py": "ebd62e2625151afdfdc27b93080523cb94e8081966175e29d6b4a266d5f90cf9",
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_original_restore_20260912/analyze_mu060_highrate.py": "3821560e63257ed2b67a7298347f30d5f9d6324d75452161d9bab1792a3a9b81",
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_original_restore_20260912/audit_original_collected_group.py": "35e36c26ea706e1d36e4df5472676aca69a00f1827e09a55ee74666f304b07b6",
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_original_restore_20260912/check_canonical_contact_order.py": "d3c9bc10a22bed0d4f0ad353b1befb71ca3a3c31c6ea96b5d944fb51fa63b835",
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_original_restore_20260912/rootlocal_collection_contract.py": "118f71acc1be0b8b9efc95cc6031bfeb00877fcc62dc384b50cffc8c09ae3c89",
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_original_restore_20260912/MU070_CANONICAL_GEOMETRY_DIAGNOSTIC.md": "87e0d8652b15609f27a3ef42e03b36b569bbb6a9a7751a2822aba93b246cc108",
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_original_restore_20260912/run_mu070_rim_diagnostics.py": "cc6268a97b1a3697f2f3c52619b9c7c7f4c98a43215466af50fa65d4002df760"
+  },
+  "query_qualification_hashes": {
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_original_restore_20260912/rim20_trainval_query_qualification_v1/COMPLETE.json": "d5caea5831c827a00c898bb917cec72054577dda46b6a5f0a451605ea8661ead",
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_original_restore_20260912/rim20_trainval_query_qualification_v1/PROTOCOL.json": "b69b500878f9e826d2e80d467298af5c3c398851075b2065e16d2d319a21df58",
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_original_restore_20260912/rim20_trainval_query_qualification_v1/INDEPENDENT_FULL_QUALIFICATION.json": "f9d1a01d3f3deff4ffe1a032bc8cb6a3672e77540a02f25fb39dc5f0fc60a448",
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_original_restore_20260912/rim20_trainval_query_qualification_v1/REPLAY_AUDIT.json": "753afe93661f1fd602e390e1bfad46b2909fa380583bd7e5592600711248e901"
+  },
+  "formal_data_admission": false,
+  "success_not_required_for_valid_negative": true,
+  "requires_all_terminal_and_duplicate_full_trace_exact": true,
+  "started_utc": "2026-09-12T21:03:47.744672+00:00"
+}

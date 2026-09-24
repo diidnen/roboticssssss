@@ -1,0 +1,22 @@
+{
+  "seed": 17,
+  "candidate_forces_N": [
+    3,
+    4,
+    5,
+    6,
+    8
+  ],
+  "tau": 0.8,
+  "optimizer": "AdamW",
+  "lr": 0.01,
+  "weight_decay": 0.0001,
+  "loss": "BCEWithLogitsLoss with train-split pos_weight",
+  "early_stopping": "validation BCE, patience 25 epochs",
+  "normalization": "numeric means/std fit on train split only",
+  "hidden": [
+    32,
+    16
+  ],
+  "text_dim": 32
+}

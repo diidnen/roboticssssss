@@ -1,0 +1,67 @@
+{
+  "stage": "POSTHOC_DEVELOPMENT",
+  "created_utc": "2026-09-13T10:33:39.293256+00:00",
+  "cases": [
+    {
+      "id": "test_mu0.375_root200002_ps60200002",
+      "forces_N": [
+        5.45,
+        5.45,
+        5.25,
+        5.65,
+        6.0,
+        8.0
+      ],
+      "methods": [
+        "ANCHOR_A",
+        "ANCHOR_B",
+        "NEIGHBOR_MINUS",
+        "NEIGHBOR_PLUS",
+        "FIXED6",
+        "FIXED8"
+      ],
+      "historical_spec": "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_maxf8_confirmation_storage_20260913/inference_v4/test_mu0.375_root200002_ps60200002/SPEC.json",
+      "historical_spec_sha256": "21367f4e02865a87a1bedbafc3656ac1ff5b8b910b6835fa3cbdbd0429a6d725",
+      "historical_lock": "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_maxf8_confirmation_storage_20260913/inference_v4/test_mu0.375_root200002_ps60200002/job/PREACTION_SELECTION_LOCK.json",
+      "historical_lock_sha256": "b42cce6673cef2907856f2b888ad1c5c4f2c7fe4e6bdd235a1e6998adfd2905b",
+      "historical_result": "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_maxf8_confirmation_storage_20260913/inference_v4/test_mu0.375_root200002_ps60200002/job/AF_INFERENCE_RESULT.json",
+      "historical_result_sha256": "3620be0a8cbc99d8e855bef37ce69aa04a06ede6da796af70045824bf232f88c"
+    },
+    {
+      "id": "test_mu0.675_root200002_ps50200002",
+      "forces_N": [
+        5.0,
+        5.0,
+        4.8,
+        5.2,
+        6.0,
+        8.0
+      ],
+      "methods": [
+        "ANCHOR_A",
+        "ANCHOR_B",
+        "NEIGHBOR_MINUS",
+        "NEIGHBOR_PLUS",
+        "FIXED6",
+        "FIXED8"
+      ],
+      "historical_spec": "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_maxf8_confirmation_storage_20260913/inference_v4/test_mu0.675_root200002_ps50200002/SPEC.json",
+      "historical_spec_sha256": "23cf8e7fcb4efd0ca1887c05bea84d3096287c1b5623957d1639950d801120ed",
+      "historical_lock": "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_maxf8_confirmation_storage_20260913/inference_v4/test_mu0.675_root200002_ps50200002/job/PREACTION_SELECTION_LOCK.json",
+      "historical_lock_sha256": "482e3730523e1d68848c0ea7a981564b6ac0de1350b6ee9e5fcfb5f0d2cd91a4",
+      "historical_result": "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_maxf8_confirmation_storage_20260913/inference_v4/test_mu0.675_root200002_ps50200002/job/AF_INFERENCE_RESULT.json",
+      "historical_result_sha256": "d01c4dd7b1912d8ffcb53c094e05ba1531c7d7bd0d337a879dec9d19d307f45d"
+    }
+  ],
+  "planned_rollouts": 12,
+  "model_training": false,
+  "cross_root": false,
+  "outcome_informed_case_selection": true,
+  "source_hashes": {
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_mechanism_20260913/run_stage_a.py": "474c81d7beb2c6e943978cb277364d7d3cd7486b57fa1639ba4f4d6bf141b3a0",
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_mechanism_20260913/replicate_force_window.py": "71bef52c6abde0b36c9f499a4491908ebc24cfb9dcf3a46a038517a2d80846e5",
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_mechanism_20260913/EXPERIMENT_CARD.md": "3f4c1c880d8d3c28034d719b1d2ebf45db4965e4095fec4c7e4c75cdc914d0d9"
+  },
+  "minimum_start_free_bytes": 2147483648,
+  "disk_reserve_bytes": 805306368
+}

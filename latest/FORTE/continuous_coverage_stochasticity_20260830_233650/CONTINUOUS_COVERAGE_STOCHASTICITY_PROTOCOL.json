@@ -1,0 +1,157 @@
+{
+  "GT_gate": {
+    "frontier_MAE_max_N": 0.2,
+    "probability_MAE_max": 0.2,
+    "systematic_nonmonotonic_context_rate_max": 0.1,
+    "under_force_rate_max": 0.1,
+    "valid_real_frontier_coverage_min": 0.8
+  },
+  "Probe_gate": {
+    "comparison": "strict TRAIN-only no-probe friction prior",
+    "force_grid_step_N": 0.05,
+    "primary_condition": "point estimate mu_hat",
+    "rho": 0.8,
+    "run_only_if_GT_gate_passes": true
+  },
+  "analysis_metrics": {
+    "coverage_attribution": [
+      "nearest_task_train_force_distance",
+      "local_task_force_density",
+      "DEV_stochasticity",
+      "near_real_frontier",
+      "friction_band",
+      "task"
+    ],
+    "current_model_MAE": 0.24491496104839813,
+    "dev_cell": [
+      "k/5",
+      "empirical_p",
+      "Bernoulli_variance",
+      "entropy_bits",
+      "Wilson_95_interval"
+    ],
+    "exact_subsampling": [
+      "expected_MAE",
+      "RMSE",
+      "P(reliability_class_mismatch)"
+    ]
+  },
+  "authoritative_input_sha256": {
+    "/home/exouser/Tabero/analysis/results/continuous_probe_joint_20260830_110712/REAL_CONTINUOUS_REPEAT_MANIFEST.csv": "507d9e41e3f78bd35e63754aecd3b4f0d306a7d9ee06739d13f7ef6850a79d25",
+    "/home/exouser/Tabero/analysis/results/continuous_probe_joint_20260830_110712/REAL_CONTINUOUS_SUCCESS_CURVES.csv": "5df7447e9aaf96e2b40c17a746e1778c00346904fff5b774f9c5f04a6e10ee7b",
+    "/home/exouser/Tabero/analysis/results/continuous_probe_joint_20260830_110712/REAL_FINE_FRONTIER_SUMMARY.csv": "805892167c452ddb7b216cd836746c6adae466dec3be0f4007a93aaf70e3af0b",
+    "/home/exouser/Tabero/analysis/results/gnp_style_continuous_20260830_125107/CONTINUOUS_DEV_FRONTIER_METRICS.csv": "18f0b39cd1d75e0e8861058b23dcb01854b93625c3e1de3c96a610821a87a0f1",
+    "/home/exouser/Tabero/analysis/results/gnp_style_continuous_20260830_125107/CONTINUOUS_DEV_FROZEN_PREDICTIONS.csv": "2218badedc6481a1616339f02316cb230f6ff8e80ca35c71bfcd9222bdb3393c",
+    "/home/exouser/Tabero/analysis/results/gnp_style_continuous_20260830_125107/CONTINUOUS_FORCE_SAMPLE_MANIFEST.csv": "8664b53261d4db4a96db83149c66031edb95ac11c158c30fe171b88f577398d7",
+    "/home/exouser/Tabero/analysis/results/gnp_style_continuous_20260830_125107/CONTINUOUS_TRAIN_SUCCESS_DATA.csv": "80bb811e79796a9c292517ae37d2e224710a228ab8afd1e5be38ab9c2e5857c9",
+    "/home/exouser/Tabero/analysis/results/gnp_style_continuous_20260830_125107/GNP_STYLE_CHECKPOINT_MANIFEST.json": "22ddbd5444df067695ca314f0da0852979de9ad2896989a539b53e16b44e4982",
+    "/home/exouser/Tabero/analysis/results/gnp_style_continuous_20260830_125107/GNP_STYLE_CONTINUOUS_TRAINING_PROTOCOL.json": "8931fba64eb4bbc417ea01b7ff2bf4ee972047853217c24537f41c2ced1c818c",
+    "/home/exouser/Tabero/analysis/results/gnp_style_continuous_20260830_125107/SELECTED_CONTINUOUS_BACKEND.json": "bbf8bb9e98797b0f43ce88177cad53a7c25d45585156c191eab10f60ba3121ff"
+  },
+  "backend": "GNP_STYLE_CONTINUOUS_FEAS_ONLY",
+  "bootstrap": {
+    "samples": 10000,
+    "seed": 2026083033,
+    "unit": "context"
+  },
+  "claim_boundary": {
+    "cross_object": false,
+    "current_object_task_distribution_only": true,
+    "fresh_E2E": false,
+    "original_TEST_loaded": false,
+    "unseen_task": false
+  },
+  "classification_precedence": [
+    "MIXED_COVERAGE_AND_STOCHASTICITY when repeat/coverage material AND stochasticity material",
+    "TRAIN_REPEAT_NOISE_DOMINATES when repeat material only",
+    "CONTINUOUS_TRAIN_COVERAGE_DOMINATES when coverage material only",
+    "REAL_FRONTIER_STOCHASTICITY_DOMINATES when stochasticity material only",
+    "MODEL_ERROR_DOMINATES when model/noise ratio threshold passes and neither data nor stochasticity criterion passes",
+    "INSUFFICIENT_VALID_EVIDENCE otherwise"
+  ],
+  "dev_population": {
+    "branches": 135,
+    "cells": 27,
+    "contexts": 9,
+    "repeats_per_cell": 5
+  },
+  "forensic_thresholds": {
+    "coverage_abs_spearman_error_vs_nearest_distance_min": 0.35,
+    "coverage_sparse_minus_dense_error_min": 0.05,
+    "dev_boundary_stochastic_fraction_min": 0.3333333333333333,
+    "dev_mean_bernoulli_variance_min": 0.1,
+    "model_error_to_m2_noise_ratio_min": 1.5,
+    "repeat_noise_comparable_fraction_of_model_MAE_min": 0.75,
+    "train_ambiguous_1of2_fraction_min": 0.1
+  },
+  "frozen_feasibility_checkpoints": [
+    {
+      "path": "/home/exouser/FORTE/gnp_style_continuous_20260830_125107/GNP_STYLE_CONTINUOUS_FEAS_seed0.pt",
+      "seed": 0,
+      "sha256": "920bc6308e997355e39c196afdea9fa65202732c7fc68ea25b2696a48a223b71"
+    },
+    {
+      "path": "/home/exouser/FORTE/gnp_style_continuous_20260830_125107/GNP_STYLE_CONTINUOUS_FEAS_seed1.pt",
+      "seed": 1,
+      "sha256": "5eeaccbf4e9b83019986c55b5c4d48e61d56c4c3744b60e2682d9b20bafb093d"
+    },
+    {
+      "path": "/home/exouser/FORTE/gnp_style_continuous_20260830_125107/GNP_STYLE_CONTINUOUS_FEAS_seed2.pt",
+      "seed": 2,
+      "sha256": "41cf4bdcef697694d046c3ebf1671755c16e4f1d3cc2a44bc633421dc094943f"
+    }
+  ],
+  "joint_reopened": false,
+  "protocol_payload_sha256": "9a52508f3c3e5d17409b140a6bebe46398b90755caa2cfc4e266fe0319f94606",
+  "retraining_rule": {
+    "architecture": "exact GNP_STYLE_CONTINUOUS_FEAS",
+    "batch_size": 64,
+    "epochs": 80,
+    "loss": "individual-branch BCEWithLogits",
+    "no_DEV_tuning": true,
+    "optimizer": "AdamW lr=8e-4 wd=1e-4",
+    "raw_ensemble_primary": true,
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "strict_preprobe": true,
+    "train_only_normalization": true
+  },
+  "scientific_goal": "attribute remaining continuous Feasibility-only error to repeat noise, coverage, real stochasticity, or model error",
+  "status": "FROZEN_BEFORE_OUTCOME_ANALYSIS",
+  "subsampling_procedure": {
+    "enumeration": "all index combinations without replacement within each 5-repeat cell",
+    "reference": "observed p_5",
+    "reliability_rule": "p >= 0.80",
+    "sizes": [
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  "targeted_collection_rule": {
+    "cell_rules": [
+      "existing outcome is 1/2",
+      "immediately adjacent to lower 0/2 -> higher 2/2 transition",
+      "nearest sampled force on either side of that transition"
+    ],
+    "eligible_classifications": [
+      "TRAIN_REPEAT_NOISE_DOMINATES",
+      "CONTINUOUS_TRAIN_COVERAGE_DOMINATES",
+      "MIXED_COVERAGE_AND_STOCHASTICITY"
+    ],
+    "new_repeats_per_selected_cell": 3,
+    "no_new_forces": true,
+    "scientific_failures_retried": false,
+    "selection_uses_TRAIN_only": true
+  },
+  "train_population": {
+    "branches": 720,
+    "cells": 360,
+    "contexts": 72,
+    "existing_repeats_per_cell": 2
+  }
+}

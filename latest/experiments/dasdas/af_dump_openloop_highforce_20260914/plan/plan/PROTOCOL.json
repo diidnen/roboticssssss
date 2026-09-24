@@ -1,0 +1,147 @@
+{
+  "claim_boundary": "controlled open-loop feasibility / force-causal diagnostic labels; force feasibility conditioned on a prospectively fixed prior-successful 12N trajectory imported from af_dump_fixed_force_5_15_v3; identical arm actions across forces; not online continuous AF efficacy",
+  "created_utc": "2026-09-14T12:55:20.314343+00:00",
+  "force_support_N": [
+    0.5,
+    20.0
+  ],
+  "forces_N": [
+    10.0,
+    12.0,
+    15.0,
+    16.0,
+    18.0,
+    20.0
+  ],
+  "main_contexts": 10,
+  "main_record_rollouts": 0,
+  "main_replay_rollouts": 60,
+  "motion_mode": "import_prior_successful_12N_then_openloop_replay",
+  "no_feasibility_or_utility_used": true,
+  "not_claimed": [
+    "online continuous ActiveForcing efficacy",
+    "closed-loop VLA force-success under replanning",
+    "force-neutral scripted motion population"
+  ],
+  "physical_root": 200002,
+  "population": [
+    {
+      "friction": 0.425,
+      "policy_seed": 80200003,
+      "prior_native_actions": 64,
+      "prior_successful_branch": "/media/volume/dasdas/exouser/af_dump_fixed_force_5_15_20260914_v3/main_raw/range_mu0.425_root200002_ps80200003/job/branch_0_12N",
+      "prior_v3_successes": 1,
+      "source_context_id": "range_mu0.425_root200002_ps80200003"
+    },
+    {
+      "friction": 0.425,
+      "policy_seed": 80200006,
+      "prior_native_actions": 64,
+      "prior_successful_branch": "/media/volume/dasdas/exouser/af_dump_fixed_force_5_15_20260914_v3/main_raw/range_mu0.425_root200002_ps80200006/job/branch_1_12N",
+      "prior_v3_successes": 1,
+      "source_context_id": "range_mu0.425_root200002_ps80200006"
+    },
+    {
+      "friction": 0.425,
+      "policy_seed": 80200007,
+      "prior_native_actions": 69,
+      "prior_successful_branch": "/media/volume/dasdas/exouser/af_dump_fixed_force_5_15_20260914_v3/main_raw/range_mu0.425_root200002_ps80200007/job/branch_3_12N",
+      "prior_v3_successes": 3,
+      "source_context_id": "range_mu0.425_root200002_ps80200007"
+    },
+    {
+      "friction": 0.575,
+      "policy_seed": 80200008,
+      "prior_native_actions": 60,
+      "prior_successful_branch": "/media/volume/dasdas/exouser/af_dump_fixed_force_5_15_20260914_v3/main_raw/range_mu0.575_root200002_ps80200008/job/branch_4_12N",
+      "prior_v3_successes": 3,
+      "source_context_id": "range_mu0.575_root200002_ps80200008"
+    },
+    {
+      "friction": 0.575,
+      "policy_seed": 80200009,
+      "prior_native_actions": 63,
+      "prior_successful_branch": "/media/volume/dasdas/exouser/af_dump_fixed_force_5_15_20260914_v3/main_raw/range_mu0.575_root200002_ps80200009/job/branch_1_12N",
+      "prior_v3_successes": 1,
+      "source_context_id": "range_mu0.575_root200002_ps80200009"
+    },
+    {
+      "friction": 0.85,
+      "policy_seed": 80200002,
+      "prior_native_actions": 64,
+      "prior_successful_branch": "/media/volume/dasdas/exouser/af_dump_fixed_force_5_15_20260914_v3/main_raw/range_mu0.850_root200002_ps80200002/job/branch_1_12N",
+      "prior_v3_successes": 4,
+      "source_context_id": "range_mu0.850_root200002_ps80200002"
+    },
+    {
+      "friction": 0.85,
+      "policy_seed": 80200003,
+      "prior_native_actions": 64,
+      "prior_successful_branch": "/media/volume/dasdas/exouser/af_dump_fixed_force_5_15_20260914_v3/main_raw/range_mu0.850_root200002_ps80200003/job/branch_3_12N",
+      "prior_v3_successes": 4,
+      "source_context_id": "range_mu0.850_root200002_ps80200003"
+    },
+    {
+      "friction": 0.85,
+      "policy_seed": 80200005,
+      "prior_native_actions": 62,
+      "prior_successful_branch": "/media/volume/dasdas/exouser/af_dump_fixed_force_5_15_20260914_v3/main_raw/range_mu0.850_root200002_ps80200005/job/branch_2_12N",
+      "prior_v3_successes": 4,
+      "source_context_id": "range_mu0.850_root200002_ps80200005"
+    },
+    {
+      "friction": 0.85,
+      "policy_seed": 80200006,
+      "prior_native_actions": 64,
+      "prior_successful_branch": "/media/volume/dasdas/exouser/af_dump_fixed_force_5_15_20260914_v3/main_raw/range_mu0.850_root200002_ps80200006/job/branch_4_12N",
+      "prior_v3_successes": 5,
+      "source_context_id": "range_mu0.850_root200002_ps80200006"
+    },
+    {
+      "friction": 0.85,
+      "policy_seed": 80200007,
+      "prior_native_actions": 63,
+      "prior_successful_branch": "/media/volume/dasdas/exouser/af_dump_fixed_force_5_15_20260914_v3/main_raw/range_mu0.850_root200002_ps80200007/job/branch_1_12N",
+      "prior_v3_successes": 5,
+      "source_context_id": "range_mu0.850_root200002_ps80200007"
+    }
+  ],
+  "primary_endpoint": "official full-task success vs commanded force under fixed open-loop trajectory",
+  "prior_source": "/media/volume/dasdas/exouser/af_dump_fixed_force_5_15_20260914_v3",
+  "record_force_N": 12.0,
+  "record_parallelism": 1,
+  "runtime_manifest": "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_maxf8_20260913/additional_data_v1/RUNTIME_MANIFEST.json",
+  "runtime_manifest_sha256": "01d0289b14b812a4a12455e826a0b213ef4bf4fcdb27717892289b7e137b5034",
+  "secondary_endpoints": [
+    "contact fraction",
+    "realized squeeze",
+    "interval nondecreasing fractions"
+  ],
+  "smoke_forces_N": [
+    12.0,
+    16.0,
+    20.0
+  ],
+  "smoke_gate": {
+    "12N_must_succeed": true,
+    "20N_max_squeeze_N": 400.0,
+    "20N_target_contact_steps_min": 50,
+    "aperture_max_m": 0.04,
+    "identical_first_chunk_required": true
+  },
+  "source_hashes": {
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_openloop_highforce_20260914/EXPERIMENT_CARD.md": "5c25009f566ad7d4dcf3498ad700f3fa8b3045c4fe0751b4253e037436510866",
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_openloop_highforce_20260914/audit_openloop.py": "fd70605325b3bf76fc6ee5e52e5b22a2ffcef8f092797acc2312ca62567011da",
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_openloop_highforce_20260914/freeze_openloop_plan.py": "ebdbec689ffde57c15c57e7412787dee728d37af021e79065f58b31ce4e01477",
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_openloop_highforce_20260914/infer_openloop_context.py": "558e6a3c3ac49a22ee70f117ef9e2ad04b57d2592d0bfcdee005ea717a412ea0",
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_openloop_highforce_20260914/openloop_execution.py": "85831a482a81df8478777e41d1b29e5818c03e16bf243b05108251fc6e980987",
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_openloop_highforce_20260914/original_arbitration_binding.py": "89e54a5c9868033987312afe825358ad484e437a1ca09afd54b2e1fe4fbb120b",
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_openloop_highforce_20260914/run_openloop_queue.py": "065755bbc3f290c09da23278abeedceea5377eaa052df5f240a81654d71d7cff",
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_original_restore_20260912/native_original_force_controller.py": "d6e27fcd83f2bc9415a86632e37025f707a2ec22424bf120dae6af84ba229518",
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_original_restore_20260912/original_squeeze_inner.py": "4814f6ab0fcac0b7966e6789518decbd722eb38a89ecea03dbafb2cbef9896fc",
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_original_restore_20260912/qualify_original_p4_native.py": "3c20c733bdedf4f46145b17292873b4fa0b6e03b66384a9104bd6595cadfbbad"
+  },
+  "storage_root": "/media/volume/dasdas/exouser/af_dump_openloop_highforce_20260914",
+  "task": "dump_bin_bigbin",
+  "version": "AF_DUMP_OPENLOOP_PRIORSUCC_V2"
+}

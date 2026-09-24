@@ -1,0 +1,3 @@
+# Paper experiment notes
+
+Report the expanded methods as an attempted closure. Keep E6/E7 negative gates and mass/E5 partial status visible. The grouped-root OOF utility/causal ablations in `UTILITY_CAUSAL_ABLATIONS/` provide point-vs-posterior, query-information, and full-utility-vs-success-only evidence; the posterior result is neutral in pooled SR and should not be described as a gain. Do not describe the old Joint neural architecture as the z=(friction,mass) study. The long-horizon task3 qualification is a negative capability screen, not a replacement for the preregistered 720-task benchmark.

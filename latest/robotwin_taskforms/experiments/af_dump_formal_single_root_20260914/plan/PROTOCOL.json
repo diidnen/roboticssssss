@@ -1,0 +1,50 @@
+{
+  "claim_boundary": "same-root held-out-path performance only",
+  "created_utc": "2026-09-13T18:58:02.335985+00:00",
+  "existing_feasibility_labels": 192,
+  "formal_contexts": 24,
+  "formal_frictions": [
+    0.425,
+    0.575,
+    0.85
+  ],
+  "formal_methods": [
+    "Nominal Frozen VLA",
+    "Fixed-Strong 8N",
+    "ActiveForcing"
+  ],
+  "formal_policy_seeds": [
+    80200002,
+    80200003,
+    80200004,
+    80200005,
+    80200006,
+    80200007,
+    80200008,
+    80200009
+  ],
+  "formal_rollouts": 72,
+  "frozen_models": "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_maxf8_20260913/models_v4",
+  "method_order_rule": "left rotation by seed-index plus friction-index modulo 3",
+  "no_new_roots": true,
+  "no_retraining_or_reselection": true,
+  "physical_root": 200002,
+  "runtime_manifest": "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_maxf8_20260913/additional_data_v1/RUNTIME_MANIFEST.json",
+  "runtime_manifest_sha256": "01d0289b14b812a4a12455e826a0b213ef4bf4fcdb27717892289b7e137b5034",
+  "smoke_rollouts": 1,
+  "source_hashes": {
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_formal_single_root_20260914/EXPERIMENT_CARD.md": "3a821ad839f18021976eaef94da3ad2698cd3af12d05ba8b285226db99fb2fb0",
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_formal_single_root_20260914/audit_formal_results.py": "a7ff260ff9ed536ab35c81e4f5e56214c29d86233281e19d90c2ce960d4d51af",
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_formal_single_root_20260914/freeze_plan.py": "d0c1e912727bcb952e447077f2c94efd45f5ec860e917f6fd9a44d31513d0659",
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_formal_single_root_20260914/infer_formal_context.py": "b7fe0a4ce29d7725516ef53a5a1a87c9cecc77a470430495055dde5cadecddb1",
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_formal_single_root_20260914/run_formal_queue.py": "43a4b4e4fca8cb95aabe8943077e2808965f09d19519adee31c085f2de0adede",
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_maxf8_20260913/infer_v4.py": "fc3220aef222d5e495dffbee6a57abf02b9554f7c324abff300b49391929b32f",
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_maxf8_20260913/max_force_utility.py": "de94e01c2727d4edfa3e6dae241e5c142370a5fb23917a71c8f69e67c9ddf168",
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_maxf8_20260913/maxf8_runtime.py": "d966a24dee1304cfcd78488c0243379e5ce465019f2023788d0c35395131ed56",
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_original_restore_20260912/native_original_force_controller.py": "d6e27fcd83f2bc9415a86632e37025f707a2ec22424bf120dae6af84ba229518",
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_original_restore_20260912/qualify_original_online_forks.py": "da2c673047569bf88359e09cbedb440f43bd497b4f23dc1683369a00482cf264"
+  },
+  "task": "dump_bin_bigbin",
+  "training_complete_sha256": "f99f76022919440bc8a05d561996cebd63e332240e161cbf0c9d645a54d6a44a",
+  "version": "AF_DUMP_SINGLE_ROOT_FORMAL_V1"
+}

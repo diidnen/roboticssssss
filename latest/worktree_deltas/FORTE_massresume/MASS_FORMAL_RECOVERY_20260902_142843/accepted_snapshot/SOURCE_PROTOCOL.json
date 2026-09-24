@@ -1,0 +1,37 @@
+{
+  "status": "RUNNING",
+  "task_id": 2,
+  "task_name": "libero_object_2",
+  "object": "salad_dressing_1",
+  "query": "frozen_P4B",
+  "fixed_friction": 0.5,
+  "mass_bands_kg": {
+    "LOW": 0.05,
+    "MID": 0.1,
+    "HIGH": 0.2
+  },
+  "candidate_forces_N": [
+    0.5,
+    1.0,
+    1.5,
+    2.5,
+    4.0
+  ],
+  "train_roots": [
+    8100,
+    8101,
+    8102,
+    8103
+  ],
+  "test_roots": [
+    8200,
+    8201
+  ],
+  "repeats": 2,
+  "path_structure": "LONG_TRANSPORT_TURNING_ACCELERATION_V1",
+  "sibling_force_branches_stay_together": true,
+  "downstream_outcome_used_by_query": false,
+  "vla_retrained": false,
+  "controller_law_changed": false,
+  "resume_from": "/home/exouser/FORTE_mass/ACTIVEFORCING_MASS_AND_TASK_BREADTH_EXTENSION_20260902_041500/M3_TASK2_FORMAL_STRUCTURED_20260902_130700_RESUME"
+}

@@ -1,0 +1,89 @@
+{
+  "candidate_forces_N": [
+    0.5,
+    1.0,
+    1.5,
+    2.5,
+    4.0
+  ],
+  "direct_fit": "formal TRAIN full-task labels, Mass-only z=mass plus force interaction",
+  "frozen_pi0_server": {
+    "checks": {
+      "backend": true,
+      "base_policy": true,
+      "checkpoint_hash": true,
+      "checkpoint_path": true,
+      "effective_action_dim": true,
+      "instruction": true,
+      "policy_config": true,
+      "replan_steps": true
+    },
+    "manifest": {
+      "action_chunk": {
+        "effective_dim": 13,
+        "replan_steps": 10,
+        "server_action_dim": 32
+      },
+      "authoritative_prior_artifact": "/home/exouser/Tabero/analysis/results/p6g1_primitive_ik_vla_grasp_realization_20260825_103146",
+      "base_policy": "Pi0Config (pi0, not pi0.5), authoritative P6-G1 policy",
+      "checkpoint_hash_sha256": "0598a390733235fde0bf5633b1543d91176d31bb5012d4d26f9373a90642fe17",
+      "checkpoint_path": "/media/volume/newdata/exouser/tabero/models/pi0_lora_tacfield_tabero/checkpoints/pi0_lora_tacfield_tabero/pi0_lora_tacfield_tabero/49999",
+      "checkpoint_step": 49999,
+      "gripper_semantics": {
+        "force_slots_overridden": "fLz=fRz=4N for fixed 8N; other pose/gripper fields preserved",
+        "raw_gripper_slot_preserved": true,
+        "release_semantics": "authoritative VLA gripper slot passed through"
+      },
+      "instruction": "original official full-task instruction",
+      "method_change": "NONE",
+      "norm_stats_dir": "/media/volume/newdata/exouser/tabero/models/pi0_lora_tacfield_tabero/checkpoints/pi0_lora_tacfield_tabero/pi0_lora_tacfield_tabero/49999/assets/NathanWu7/tabero",
+      "observation_specification": {
+        "image": "agentview RGB uint8 224x224x3",
+        "state": "[eef position, eef axis-angle, gripper_abs]",
+        "tactile_gripper_force": "8x6 left/right fingertip force history when available",
+        "tactile_image": "4x4 tactile RGB history mosaic when available",
+        "tactile_marker_motion": "1+8 marker-motion history when available",
+        "wrist_image": "eye_in_hand RGB uint8 224x224x3"
+      },
+      "policy_class": "OpenPI websocket policy created by openpi.policies.policy_config.create_trained_policy",
+      "policy_config": "pi0_lora_tacfield_tabero",
+      "policy_state": {
+        "action_queue_cache": "none; infer then execute first 10 actions",
+        "history": "constructed online from current observation/tactile buffers",
+        "recurrent_hidden_state": "not exposed",
+        "websocket_client_reset_effect": "no-op"
+      },
+      "server_metadata": {
+        "b5_checkpoint_read_only": true,
+        "b5_explicit_norm_stats_dir": "/media/volume/newdata/exouser/tabero/models/pi0_lora_tacfield_tabero/checkpoints/pi0_lora_tacfield_tabero/pi0_lora_tacfield_tabero/49999/assets/NathanWu7/tabero",
+        "b5_policy_config": "pi0_lora_tacfield_tabero"
+      },
+      "server_python": "/media/volume/newdata/exouser/tabero/Tabero-VTLA/.venv/bin/python",
+      "server_wrapper": "/home/exouser/Tabero/analysis/results/b5_tabero_neutral_20260822_040652/scripts/b5_serve_policy_with_explicit_norm_stats.py"
+    },
+    "server_port": 18881
+  },
+  "identifier_fit": "formal TRAIN physical history only, 3 seed ensemble",
+  "mass_bands_kg": {
+    "HIGH": 0.2,
+    "LOW": 0.05,
+    "MID": 0.1
+  },
+  "object": "salad_dressing_1",
+  "policies": [
+    "FROZEN_PI0_NATIVE_DEFAULT",
+    "FIXED_MAX",
+    "TRUE_NOQUERY_PRIOR",
+    "ACTIVEFORCING_MASS",
+    "GT_MASS"
+  ],
+  "protected_processes_untouched": true,
+  "query": "frozen_P4B",
+  "roots": [
+    8400,
+    8401
+  ],
+  "status": "RUNNING",
+  "task": 2,
+  "utility": "p_success*(8-force)+(1-p_success)*(-1)"
+}

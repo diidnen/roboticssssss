@@ -1,0 +1,12 @@
+{
+  "created_utc": "2026-09-07T11:34:32.880435+00:00",
+  "artifact": "/home/exouser/FORTE/online_vla_restore_20260907/paper_online_experiment_protocol.tex",
+  "sha256": "a6ed833622451eb30b0af116858862489671e2334aaae08ddbbe73cb70852721",
+  "role": "PROTOCOL_ONLY_MANUSCRIPT_COMPONENT",
+  "final_results_complete": false,
+  "latex_rendered": false,
+  "validation": "Balanced braces and equation environment; final manifest unchanged. Typesetting and final evidence integration remain pending.",
+  "final_manifest_sha256": "84cdb3687443d6ffe618cbb99c23877c8dc84be8a85f7dcde5fab8b48dbc35e1",
+  "admitted_final_branches_at_check": 5,
+  "source_map": "/home/exouser/FORTE/online_vla_restore_20260907/PAPER_EXPERIMENT_PROTOCOL_SOURCE_MAP.json"
+}

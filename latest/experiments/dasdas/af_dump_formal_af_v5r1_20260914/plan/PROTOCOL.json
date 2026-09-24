@@ -1,0 +1,53 @@
+{
+  "arbitration_support_max_N": 15.0,
+  "claim_boundary": "same-root AF-v5r1 continuous vs reused Nominal; Fixed-Strong skipped",
+  "created_utc": "2026-09-14T10:42:45.182294+00:00",
+  "formal_contexts": 24,
+  "formal_frictions": [
+    0.425,
+    0.575,
+    0.85
+  ],
+  "formal_policy_seeds": [
+    80200002,
+    80200003,
+    80200004,
+    80200005,
+    80200006,
+    80200007,
+    80200008,
+    80200009
+  ],
+  "harness_force_support_N": [
+    0.5,
+    15.0
+  ],
+  "methods_executed": [
+    "ActiveForcing"
+  ],
+  "methods_reused": [
+    "Nominal Frozen VLA"
+  ],
+  "methods_skipped": [
+    "Fixed-Strong 8N"
+  ],
+  "models_deploy": "/media/volume/dasdas/exouser/af_dump_formal_af_v5r1_20260914/models_deploy",
+  "physical_root": 200002,
+  "reused_nominal_results": "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_formal_single_root_20260914/FINAL_RESULTS.json",
+  "runtime_manifest": "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_maxf8_20260913/additional_data_v1/RUNTIME_MANIFEST.json",
+  "runtime_manifest_sha256": "01d0289b14b812a4a12455e826a0b213ef4bf4fcdb27717892289b7e137b5034",
+  "selector": "continuous Force15Feasibility EU on [0.5,15] step 0.05",
+  "source_hashes": {
+    "EXPERIMENT_CARD.md": "1439cc7217abba3a0c0012471566b49497a52a0b78e721789bc1eb5e22b8ac6c",
+    "audit_formal_results.py": "a7ff260ff9ed536ab35c81e4f5e56214c29d86233281e19d90c2ce960d4d51af",
+    "force15_runtime.py": "1eb297c6eb1c22fb7b0c50a6a378186b96385c0ca6261a3c53cfbb5938850e29",
+    "force15_utility.py": "2acaf42942768ca0d45d86fd1037c946ea65c55861c523093fd8754d2f6f98bd",
+    "infer_af_context.py": "44cf8d5d87a4447bbbebbb89e5002080fb08c0b7730fb3ae97974158f65b7c68",
+    "infer_v5r1.py": "68f2c1e6b1f645e001d72ebb259e851496e69287e4e5946a6c5a56679b1ce12a",
+    "original_arbitration_binding.py": "2e7f758bf125e95ffa6d976beccda74f4340c36794efb4faccfb9783983d3538",
+    "run_af_queue.py": "7fde57e48e5a56d0e87211a2e516d032844e46a8a64697f3d82b357837966624"
+  },
+  "task": "dump_bin_bigbin",
+  "v5r1_models": "/media/volume/dasdas/exouser/af_dump_force15_retrain_20260914_v5r1/models_v5",
+  "version": "AF_DUMP_FORMAL_AF_V5R1_CONTINUOUS_V1"
+}

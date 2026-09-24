@@ -1,0 +1,78 @@
+{
+  "historical_warning": "Prior real-trajectory evaluator reached AUROC 1.0, while imagined-trajectory AUROC was 0.5; this run trains on imagined TRAIN trajectories to remove that train/deploy interface mismatch.",
+  "name": "DIRECT_UTILITY_TRAJECTORY_ONLY_VERIFIER_DIAGNOSTIC",
+  "no_tuning": [
+    "architecture",
+    "threshold",
+    "epochs",
+    "optimizer",
+    "feature family",
+    "C_fail",
+    "DEV calibration"
+  ],
+  "outcome_evaluator": {
+    "architecture": "Linear(52,1)",
+    "batch_size": 64,
+    "checkpoint": "final epoch; no DEV selection",
+    "epochs": 80,
+    "forbidden_inputs": [
+      "force",
+      "task",
+      "root/context identity",
+      "friction",
+      "Direct probability",
+      "Joint latent",
+      "real future trajectory"
+    ],
+    "input": "trajectory only: concat(final, mean, std, max) over H8x13 = 52 dimensions",
+    "loss": "BCEWithLogits",
+    "lr": 0.0008,
+    "normalization": "per-seed TRAIN predicted-trajectory features only",
+    "optimizer": "AdamW",
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "weight_decay": 0.0001
+  },
+  "primary_questions": [
+    "Does the trajectory-only verifier reject failed Direct utility proposals without rejecting successful ones?",
+    "Does the cascade improve success/under-force/realized utility over Direct utility alone?"
+  ],
+  "proposal": {
+    "C_fail": "Fmax",
+    "model": "Direct 100%-TRAIN three-seed ensemble",
+    "repeat_reduction": "mean probability per context/force",
+    "rule": "argmax p_direct*(Fmax-F)+(1-p_direct)*(-Fmax)"
+  },
+  "scope": "retrospective fixed-scene held-out-friction DEV diagnostic only; no TEST",
+  "source_hashes": {
+    "/home/exouser/FORTE/fixed_scene_reframing_20260831_174144/FIXED_SCENE_JOINT_seed0.pt": "c6eba1bbffce612a39e532c56cb88a290917e2cbe63587f61f8b091dbd731cd6",
+    "/home/exouser/FORTE/fixed_scene_reframing_20260831_174144/FIXED_SCENE_JOINT_seed1.pt": "e68d9368d735f32ac6c96fe3435d5088ec2eb11dfec36d66d7e773fe68e26a67",
+    "/home/exouser/FORTE/fixed_scene_reframing_20260831_174144/FIXED_SCENE_JOINT_seed2.pt": "4bfc5c5514c2c4349ce565e49dd0d9f5722028bd951c3eaadcf27eb5bfd2a1a6",
+    "/home/exouser/FORTE/gnp_style_continuous.py": "0c919156a9a0dfad5f9b92c0499c17a59e93e2c3dd93acbf19963842d7031259",
+    "/home/exouser/FORTE/joint_decision_alignment_20260831_200441/JOINT_DECISIONALIGNED_ALL_PREDICTIONS.csv": "b8d8016b4a0e5836b66ac663d66345907cf9085bac6f2f716a5e811791b1b0b8",
+    "/home/exouser/FORTE/train_fixed_scene_exact.py": "a8d3db6cbba8028f040f7cbfb70522831bc99ba7c6e65015ddda81d1ca1cb15c",
+    "/home/exouser/Tabero/analysis/counterfactual_force_world_model.py": "c088369626b2cd783f45f5130d932fd7aba6dcc9e54b3504c1a81b4e4317d560",
+    "/home/exouser/Tabero/analysis/full_task_feasibility_decoder.py": "bf002ca6a5e190f0eff4e0429bd3340f9acfdb4a694dde2528a98581ce8ff83d"
+  },
+  "status": "FROZEN_BEFORE_EVALUATOR_TRAINING",
+  "verification": {
+    "execution_fallback": "if rejected, scan higher candidate forces ascending; if none passes, use maximum candidate and mark unvalidated fallback",
+    "strict": "Direct proposal accepted iff verifier p>0.8",
+    "threshold": 0.8,
+    "threshold_source": "user-fixed before this diagnostic"
+  },
+  "world_model": {
+    "horizon": 8,
+    "output": "denormalized H8x13 predicted physical states",
+    "retrained": false,
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "source": "frozen Fixed-Scene Joint-Original physics trajectory head"
+  }
+}

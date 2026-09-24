@@ -1,0 +1,101 @@
+{
+  "classification_rules": {
+    "A": "S6 and S15 gain <= +2pp; mean gain rises at S30 and again at S50; S50 gain >0; >=2/3 S50 seeds positive; S50 delta under-force <=+2pp and delta utility >=0",
+    "B": "S50 prediction-level ensemble gain >0 but fewer than 2/3 single seeds positive",
+    "C": "frontier delta positive at >=3 scales while S50 SR/utility gains are nonpositive",
+    "D": "otherwise",
+    "E": "S50 SR gain negative while H8 MAE improves S6->S50"
+  },
+  "deployable_controller_claim": false,
+  "direct": {
+    "architecture": "GRU(17,64)+condition MLP(54,64)+head(128,64,1)",
+    "batch": 64,
+    "epochs": 80,
+    "lr": 0.0008,
+    "objective": "full-task BCE",
+    "optimizer": "AdamW",
+    "weight_decay": 0.0001
+  },
+  "empirical_frontier": "minimum archived force with >=4 successes/5; otherwise NO_RELIABLE_FORCE",
+  "ensemble": "prediction/utility-level mean across all three canonical seeds before argmax; reported separately from three-seed metric mean",
+  "forbidden": [
+    "simulator collection",
+    "new TEST collection",
+    "root selection",
+    "checkpoint selection",
+    "architecture tuning",
+    "lambda tuning",
+    "horizon tuning",
+    "residual tuning",
+    "force-grid tuning",
+    "utility tuning",
+    "post-hoc ensemble changes"
+  ],
+  "inner_crossfit": {
+    "S6": "2 held roots/fold",
+    "assignment": "frozen manifest root order modulo 3",
+    "folds": 3,
+    "group": "root_id"
+  },
+  "nested_root_manifest_reused": true,
+  "point_wm": {
+    "H": 8,
+    "architecture": "PhysicsOnly GRU(71,64)+H8x13 head",
+    "batch": 64,
+    "epochs": 80,
+    "lambdaIE": 1.0,
+    "lr": 0.0008,
+    "objective": "smooth-L1 physical trajectory + lambdaIE*IE",
+    "optimizer": "AdamW",
+    "outcome_gradient": false,
+    "residual": "summary52 trajectory + normalized force -> Linear(53,32)-GELU-Linear(1); MSE; 80 epochs",
+    "weight_decay": 0.0001
+  },
+  "pointwm_prediction_metric": "utility-implied probability p=(score+1)/(R_success+1), clipped only for diagnostic NLL/Brier/AUROC; controller still uses unmodified score",
+  "primary": "GT-PHYSICS SCALING DIAGNOSTIC",
+  "probe_secondary": {
+    "eligible": true,
+    "rule": "existing traces only; grouped-root OOF Probe estimates for residual/base training; full-TRAIN Probe inference on frozen TEST",
+    "test": {
+      "contexts": 10,
+      "failures": 0,
+      "legal_215x46": 10
+    },
+    "train": {
+      "contexts": 62,
+      "failures": 0,
+      "legal_215x46": 62
+    }
+  },
+  "scales": [
+    6,
+    15,
+    30,
+    50
+  ],
+  "scope": "Task0 only; S6/S15/S30/S50; archived TRAIN and FROZEN HELD-OUT TASK0 TEST only",
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "source_hashes": {
+    "/home/exouser/FORTE/root_scaling_20260831/ROOT_SCALING_FREEZE_SHA256.json": "c51da53bbd11a31ec2a8c77ad172bd914a7a15ba7400e26d1a95882c3ee5ffa2",
+    "/home/exouser/FORTE/root_scaling_20260831/ROOT_SCALING_TEST_MANIFEST.json": "3b375521ae1f5713ccf2b19e909aee020a99aeb35e3d646738dabf483f48f085",
+    "/home/exouser/FORTE/root_scaling_20260831/ROOT_SCALING_TRAIN_MANIFEST.json": "c40919836d49a0055b4045f28d6a98c2d021fd012c56a23869c1d02c3c51f9e3",
+    "/home/exouser/FORTE/root_scaling_20260831/TASK0_TEST_COLLECTION_COMMIT.json": "4bb64fec3d0a3e9d785358c224fffd6d2a792bbab7700b53e3b60ecd36fda986",
+    "/home/exouser/FORTE/root_scaling_learning_curve.py": "f2d106a2a4be3c720c98df579a5f1c57ec10b2267e9e8d2c6edc55b2a652798c",
+    "/home/exouser/FORTE/run_probe_conditioned_wm.py": "9f2d5667f27039764933d3adc93abf508b58f506f8e3beb02d9066806cfc0119",
+    "/home/exouser/FORTE/run_task0_pointwm_data_scaling.py": "df49248555e3e785c9a3b1da990c43fbeccee08a1bede6b93436ee84dbaa29ab",
+    "/home/exouser/FORTE/task0_visual_context_early.py": "af027174938106b29d081da26055b02a682c390ecaa7a817d1be4b65c6f55cd7"
+  },
+  "status": "FROZEN_BEFORE_TASK0_POINTWM_SCALING_TRAINING",
+  "test_force_grid": "exact archived 9 forces/root; no interpolation or replay",
+  "test_semantics": "FROZEN HELD-OUT TASK0 TEST; previously evaluated in root-scaling analysis",
+  "utility": {
+    "Fmax": 5.0,
+    "failure": -1,
+    "selection": "argmax expected utility; ties lower archived force",
+    "success": "(Fmax-F)/Fmax"
+  }
+}

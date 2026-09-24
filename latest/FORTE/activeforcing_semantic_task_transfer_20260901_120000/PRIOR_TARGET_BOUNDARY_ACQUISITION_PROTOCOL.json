@@ -1,0 +1,51 @@
+{
+  "all_queries_count": true,
+  "boundary_policy": {
+    "first": "F3",
+    "if_failure": "F4 then F5 until adjacent bracket or grid end",
+    "if_success": "F2 then F1 until adjacent bracket or grid end",
+    "round_robin": "one query/context/round; only observed outcomes set the next query"
+  },
+  "budgets": [
+    0,
+    10,
+    20,
+    30,
+    60
+  ],
+  "canonical_repeat": 1,
+  "context_order": "SHA256(ACTIVEFORCING_LOTO_V1|target|fold|context_id)",
+  "failure_reward": -1,
+  "nested_prefixes": true,
+  "order_hashes": {
+    "task0_fold0": "ab6afcfc0456c447f7e7d51ec2a70bd5274f9df833394ce35355670e98a6dd8c",
+    "task0_fold1": "403db7b318307404dc4c21ae0384199080e183737cafe3a326c5cd4566247131",
+    "task0_fold2": "5a9cd9ad23bc99979d16bd9127077aa9272219bd87fceca4692d1a68b3dc9549",
+    "task1_fold0": "2dedd6c2e76c62c3487b3f058f7a195e99b2c557b3a10276d80ec3e2ec2df890",
+    "task1_fold1": "39136015ae7699a8168a985abae061a0ee1e077a11a770ddb14b1c7ea3219146",
+    "task1_fold2": "2c179f97207ba1d27ef9e93157254e20809288e7f6ffb6e8e3fc187f092dd168",
+    "task5_fold0": "2e446f4165465684b44a060a461109f77a36b68966c42486b542aa27f926f75b",
+    "task5_fold1": "afa6a9389eea9681bdc988cf67744cbd72f25de20d065143ebeb4609edaebd59",
+    "task5_fold2": "860c0ed561f497cf1bf2729d959cdcf114092e6a772744595210f8fe58f28060",
+    "task6_fold0": "84e0d1552d9f40ef238b7297f507425a7efd5f3eb6bc66d0921bc6355251cafa",
+    "task6_fold1": "bf32d53870fbbb32daf37a4d8bb52cecb32abe614efaabeaad52532e266b47fc",
+    "task6_fold2": "3888eb76df859aa70c45ac9ad90d1b2a58d39f6441029b123049e3ee11439835"
+  },
+  "planner": "argmax expected utility",
+  "pool_completion": "after boundary-seeking terminates, query every unobserved force in fixed rank order [F3,F2,F4,F1,F5] so B60 is the complete 60-branch pool",
+  "random_reference": "100 fixed SHA256 permutations/split; outcome-blind; analysis only",
+  "semantic_zero_shot_status": "NOT_IDENTIFIABLE_WITH_UNSEEN_TASK_ONE_HOT",
+  "simulator_queries_launched": 0,
+  "source_train": "3 tasks x 4 roots x 3 frictions x 5 forces x canonical repeat = 180",
+  "status": "HASH_FROZEN_BEFORE_ANY_TRANSFER_MODEL_TRAINING",
+  "success_reward": "(Fmax-F)/Fmax",
+  "target_eval": "2 roots x 3 frictions x 2 repeats = 12/fold",
+  "tasks": [
+    0,
+    1,
+    5,
+    6
+  ],
+  "unqueried_outcomes_used_for_selection": false,
+  "untouched_root_scaling_TEST_used": false
+}

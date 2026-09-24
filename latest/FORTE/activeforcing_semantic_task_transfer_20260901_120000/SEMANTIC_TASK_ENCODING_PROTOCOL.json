@@ -1,0 +1,251 @@
+{
+  "budgets": [
+    0,
+    10,
+    20,
+    30,
+    60
+  ],
+  "direct": {
+    "epochs": 80,
+    "hidden_dimension": 64,
+    "learning_rate": 0.0008,
+    "loss": "full-task outcome BCE; authoritative class-sampling semantics unchanged",
+    "new_static_input": 70,
+    "new_temporal_input": "6 command + 7 phase = 13",
+    "new_trainable_parameters": 28033,
+    "old_static_input": 54,
+    "old_temporal_input": "6 command + 7 phase + 4 task one-hot = 17",
+    "old_trainable_parameters": 27777,
+    "optimizer": "AdamW",
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "semantic_input": 16,
+    "weight_decay": 0.0001
+  },
+  "joint_used": false,
+  "matched_previous_experiment": "/home/exouser/FORTE/activeforcing_shared_physical_transfer_20260901_094722",
+  "nested_prefixes": true,
+  "onehot_baseline_policy": "reuse authoritative prior results; supplement no training",
+  "physics_estimators": [
+    "GT",
+    "ExplicitSysID",
+    "LearnedProbe"
+  ],
+  "planner": {
+    "decision": "argmax expected utility",
+    "probability_threshold": null,
+    "reward_failure": -1,
+    "reward_success": "(Fmax-F)/Fmax"
+  },
+  "previous_source_hashes": {
+    "CURRENT_PHYSICS_PREDICTIONS.csv": "d1bbfc6344b69c9ce5f897e4b966d4b0fbcf292e2783e15cebe1defe54321f12",
+    "CURRENT_PROBE_CONTEXTS.csv": "dd7dad21aa5f89a6cda9e4c94f9589847b4033702a156d223533f5d073ba2e59",
+    "EXPLICIT_SYSID_CALIBRATION.json": "b33a687374daeabe52b7d86f2578bdf45b4710f0be3e661572e49b207a52a17e",
+    "NEW_TASK_FEWSHOT_PER_EPISODE.csv": "2b687ef8f752de91c1d8f5bfabf8d3ca10fb664b101d3112373dbf87e51c0c1f",
+    "NEW_TASK_FEWSHOT_TRANSFER.csv": "10b277bac2a866720e6c15f79b30cbf6bc896deafa7e9c71d1acdf079000e0d5",
+    "PHYSICS_ESTIMATOR_LOTO.csv": "70e2bf61b6511432fd39a927d17415a495362f54287a3f53ea3d376c0831b4e1",
+    "TARGET_ACQUISITION_TRAJECTORIES.csv": "b405c18204fbbfe7434589cab11e892e82ac7a1d3b5acdb1aa94d822456f3805",
+    "TARGET_BOUNDARY_ACQUISITION_PROTOCOL.json": "698aaf666ea41d0d5d663be3a8f535704835c0d38f76b5550693e9b6d05c4baa",
+    "TARGET_FEWSHOT_LABEL_BALANCE.csv": "f6fcffdc975ad80afb1fcd6071987815cd4fd147ed9374924376a14bdd012072"
+  },
+  "primary_representation": {
+    "checkpoint": "/media/volume/newdata/exouser/tabero/models/pi0_lora_tacfield_tabero/checkpoints/pi0_lora_tacfield_tabero/pi0_lora_tacfield_tabero/49999",
+    "checkpoint_metadata_sha256": "f8519027dab6cf8eb113771fbc04d78042a0fb2b38bf770ce4c07866d2b6e022",
+    "embedding_file": "PI0_TASK_EMBEDDINGS.npy",
+    "embedding_metadata_sha256": "f128976acf0700f0ff39faddb0b44571d0d736867a44db9c1f0ba7d4f06c5723",
+    "embedding_sha256": "63b7c80fa6610186c9212bc2e59ac7ebe44dbd4814e2eba2a4ddc6b1483b1113",
+    "frozen": true,
+    "name": "frozen_pi0_paligemma_masked_mean_input_token_embedding",
+    "outcome_force_friction_information": false,
+    "pi0_source": "/media/volume/newdata/exouser/tabero/Tabero-VTLA/src/openpi/models/pi0.py",
+    "pi0_source_sha256": "7959ce59fa17b581bf3fb4f0ba685cc24eb9b6e2410dba5dad84b3da910f5638",
+    "prompts": {
+      "0": "pick up the alphabet soup and place it in the basket",
+      "1": "pick up the cream cheese and place it in the basket",
+      "5": "pick up the tomato sauce and place it in the basket",
+      "6": "pick up the butter and place it in the basket"
+    },
+    "raw_dimension": 2048,
+    "task_specific_training": false,
+    "tokenizer_source": "/media/volume/newdata/exouser/tabero/Tabero-VTLA/src/openpi/models/tokenizer.py",
+    "tokenizer_source_sha256": "965be8b3c393a6811875bbc32da9e01a5d01cc2f87802de801cf7293e049748c"
+  },
+  "projection": {
+    "alternatives_tested": 0,
+    "output_dimension": 16,
+    "projected_embedding_sha256": "3937fb47e2a55ae891fc84387be22d145a6477a9bc5570d2c3d038847cdc6269",
+    "seed": 20260901,
+    "selected_before_results": true,
+    "trainable": false,
+    "type": "fixed Gaussian orthogonal projection; per-vector non-affine LayerNorm; GELU"
+  },
+  "residual_used": false,
+  "root_scaling_TEST_used": false,
+  "root_split_manifest": {
+    "task0_fold0": {
+      "adaptation_roots": [
+        "pv_train_t0_root01_s5101",
+        "pv_train_t0_root02_s5102",
+        "pv_train_t0_root04_s5104",
+        "pv_train_t0_root05_s5105"
+      ],
+      "evaluation_roots": [
+        "pv_train_t0_root00_s5100",
+        "pv_train_t0_root03_s5103"
+      ],
+      "hash": "a2a20c3ee029ab475922b6f1aab65ed32be7b6b5bcd5ae56ad704d4dd5f9896d"
+    },
+    "task0_fold1": {
+      "adaptation_roots": [
+        "pv_train_t0_root00_s5100",
+        "pv_train_t0_root02_s5102",
+        "pv_train_t0_root03_s5103",
+        "pv_train_t0_root05_s5105"
+      ],
+      "evaluation_roots": [
+        "pv_train_t0_root01_s5101",
+        "pv_train_t0_root04_s5104"
+      ],
+      "hash": "92ea813bf012aacf5aa18397404db0949792118d10699a30db76879ef298ca6b"
+    },
+    "task0_fold2": {
+      "adaptation_roots": [
+        "pv_train_t0_root00_s5100",
+        "pv_train_t0_root01_s5101",
+        "pv_train_t0_root03_s5103",
+        "pv_train_t0_root04_s5104"
+      ],
+      "evaluation_roots": [
+        "pv_train_t0_root02_s5102",
+        "pv_train_t0_root05_s5105"
+      ],
+      "hash": "3f21a1d94d4f5c58c1f3464b42642e8bcaaac5a07e0bf4d6f927ea9ae830b389"
+    },
+    "task1_fold0": {
+      "adaptation_roots": [
+        "pv_train_t1_root01_s5101",
+        "pv_train_t1_root02_s5102",
+        "pv_train_t1_root04_s5104",
+        "pv_train_t1_root05_s5105"
+      ],
+      "evaluation_roots": [
+        "pv_train_t1_root00_s5100",
+        "pv_train_t1_root03_s5103"
+      ],
+      "hash": "7f98cb422b0e59219e219570d8035b0a12dd7f0ffc26291405e782f4ef7ae6ec"
+    },
+    "task1_fold1": {
+      "adaptation_roots": [
+        "pv_train_t1_root00_s5100",
+        "pv_train_t1_root02_s5102",
+        "pv_train_t1_root03_s5103",
+        "pv_train_t1_root05_s5105"
+      ],
+      "evaluation_roots": [
+        "pv_train_t1_root01_s5101",
+        "pv_train_t1_root04_s5104"
+      ],
+      "hash": "fe42c6ba35ad6e110dabc2893eafa833db773a8d38fd7ec33b1bea11a13b0a93"
+    },
+    "task1_fold2": {
+      "adaptation_roots": [
+        "pv_train_t1_root00_s5100",
+        "pv_train_t1_root01_s5101",
+        "pv_train_t1_root03_s5103",
+        "pv_train_t1_root04_s5104"
+      ],
+      "evaluation_roots": [
+        "pv_train_t1_root02_s5102",
+        "pv_train_t1_root05_s5105"
+      ],
+      "hash": "c75463dae9a6e81f3f08a1ee6b4d070d953ff2c05302701fc62a43c6855fc127"
+    },
+    "task5_fold0": {
+      "adaptation_roots": [
+        "pv_train_t5_root01_s5101",
+        "pv_train_t5_root02_s5102",
+        "pv_train_t5_root04_s5104",
+        "pv_train_t5_root05_s5105"
+      ],
+      "evaluation_roots": [
+        "pv_train_t5_root00_s5100",
+        "pv_train_t5_root03_s5103"
+      ],
+      "hash": "2a4cadf3937e728bf87642e737a90b4dc28dc8c8c485058aa4e59d3a810f4b18"
+    },
+    "task5_fold1": {
+      "adaptation_roots": [
+        "pv_train_t5_root00_s5100",
+        "pv_train_t5_root02_s5102",
+        "pv_train_t5_root03_s5103",
+        "pv_train_t5_root05_s5105"
+      ],
+      "evaluation_roots": [
+        "pv_train_t5_root01_s5101",
+        "pv_train_t5_root04_s5104"
+      ],
+      "hash": "fc92bc0a8b90b02e7bc03d601c1d49f6f673eb65bcacfd4804e44899a5357eee"
+    },
+    "task5_fold2": {
+      "adaptation_roots": [
+        "pv_train_t5_root00_s5100",
+        "pv_train_t5_root01_s5101",
+        "pv_train_t5_root03_s5103",
+        "pv_train_t5_root04_s5104"
+      ],
+      "evaluation_roots": [
+        "pv_train_t5_root02_s5102",
+        "pv_train_t5_root05_s5105"
+      ],
+      "hash": "51ff1142e8792812d87f93007dfacfebc33e574630b491c59c418609b38eb7f7"
+    },
+    "task6_fold0": {
+      "adaptation_roots": [
+        "pv_train_t6_root01_s5101",
+        "pv_train_t6_root02_s5102",
+        "pv_train_t6_root04_s5104",
+        "pv_train_t6_root05_s5105"
+      ],
+      "evaluation_roots": [
+        "pv_train_t6_root00_s5100",
+        "pv_train_t6_root03_s5103"
+      ],
+      "hash": "20ac7247473327498e85f91e6fa0dbd1c1fa0194006264abf316806154c80b63"
+    },
+    "task6_fold1": {
+      "adaptation_roots": [
+        "pv_train_t6_root00_s5100",
+        "pv_train_t6_root02_s5102",
+        "pv_train_t6_root03_s5103",
+        "pv_train_t6_root05_s5105"
+      ],
+      "evaluation_roots": [
+        "pv_train_t6_root01_s5101",
+        "pv_train_t6_root04_s5104"
+      ],
+      "hash": "2aeb9ef31b5f7cfc67d8717673e9ba28efe2c120ec8285112f78b73e28aec94b"
+    },
+    "task6_fold2": {
+      "adaptation_roots": [
+        "pv_train_t6_root00_s5100",
+        "pv_train_t6_root01_s5101",
+        "pv_train_t6_root03_s5103",
+        "pv_train_t6_root04_s5104"
+      ],
+      "evaluation_roots": [
+        "pv_train_t6_root02_s5102",
+        "pv_train_t6_root05_s5105"
+      ],
+      "hash": "bcb37f2f86b7543481aea6c0ef712165cb77114a80291415893f1e5c98272151"
+    }
+  },
+  "scientific_variable": "TASK_REPRESENTATION_ONLY",
+  "simulator_rollouts_launched": 0,
+  "status": "HASH_FROZEN_BEFORE_ANY_SEMANTIC_DIRECT_TRAINING",
+  "timestamp_utc": "2026-09-01T10:29:42.082985+00:00",
+  "world_model_used": false
+}

@@ -1,0 +1,303 @@
+{
+  "authoritative_provenance": {
+    "calibrated_imagination": "/home/exouser/Tabero/analysis/results/evaluator_interface_calibration_20260829_112603",
+    "probe_gate": "/home/exouser/Tabero/analysis/results/probe_informed_imagination_20260829_121500",
+    "q2f_continuous_audit": "/home/exouser/Tabero/analysis/results/p5s0e_force_decision_collapse_audit_20260824_141143",
+    "q2f_masked_fraction": 0.327,
+    "real_branches": 576,
+    "real_half_newton_execution": "/home/exouser/Tabero/analysis/results/p5s0c_paired_boundary_probe_value_20260824_000542",
+    "real_off_integer_branches": 180
+  },
+  "coarse_search": {
+    "candidates_N": [
+      3.0,
+      4.0,
+      5.0,
+      6.0,
+      8.0
+    ],
+    "exclude_extrapolation_from_formal_result": true
+  },
+  "context_count": 9,
+  "contexts": [
+    {
+      "F_next": 5.0,
+      "F_prev": 4.0,
+      "F_star_anchor": 4.5,
+      "context_id": "p5s0c_dev_t0_r06_s5106_low_mu0.288234",
+      "friction": 0.2882343327859944,
+      "friction_band": "LOW",
+      "new_midpoint_force_N": 4.25,
+      "real_anchor_forces_N": [
+        3.0,
+        4.0,
+        4.5,
+        5.0
+      ],
+      "root_id": "p5s0c_dev_t0_root06_s5106",
+      "seed": 5106,
+      "split": "DEV",
+      "task": 0
+    },
+    {
+      "F_next": 5.0,
+      "F_prev": 4.0,
+      "F_star_anchor": 4.5,
+      "context_id": "p5s0c_dev_t0_r07_s5107_low_mu0.294781",
+      "friction": 0.2947813460786453,
+      "friction_band": "LOW",
+      "new_midpoint_force_N": 4.25,
+      "real_anchor_forces_N": [
+        3.0,
+        4.0,
+        4.5,
+        5.0
+      ],
+      "root_id": "p5s0c_dev_t0_root07_s5107",
+      "seed": 5107,
+      "split": "DEV",
+      "task": 0
+    },
+    {
+      "F_next": 6.0,
+      "F_prev": 5.0,
+      "F_star_anchor": 5.5,
+      "context_id": "p5s0c_dev_t1_r06_s5106_low_mu0.262418",
+      "friction": 0.2624184362235552,
+      "friction_band": "LOW",
+      "new_midpoint_force_N": 5.25,
+      "real_anchor_forces_N": [
+        4.0,
+        4.5,
+        5.0,
+        5.5,
+        6.0
+      ],
+      "root_id": "p5s0c_dev_t1_root06_s5106",
+      "seed": 5106,
+      "split": "DEV",
+      "task": 1
+    },
+    {
+      "F_next": 5.0,
+      "F_prev": 4.0,
+      "F_star_anchor": 4.5,
+      "context_id": "p5s0c_dev_t1_r06_s5106_mid_mu0.515227",
+      "friction": 0.5152267522480724,
+      "friction_band": "MID",
+      "new_midpoint_force_N": 4.25,
+      "real_anchor_forces_N": [
+        4.0,
+        4.5,
+        5.0,
+        5.5,
+        6.0
+      ],
+      "root_id": "p5s0c_dev_t1_root06_s5106",
+      "seed": 5106,
+      "split": "DEV",
+      "task": 1
+    },
+    {
+      "F_next": null,
+      "F_prev": 5.5,
+      "F_star_anchor": 6.0,
+      "context_id": "p5s0c_dev_t1_r07_s5107_low_mu0.225573",
+      "friction": 0.2255725764990141,
+      "friction_band": "LOW",
+      "new_midpoint_force_N": 5.75,
+      "real_anchor_forces_N": [
+        4.0,
+        4.5,
+        5.0,
+        5.5,
+        6.0
+      ],
+      "root_id": "p5s0c_dev_t1_root07_s5107",
+      "seed": 5107,
+      "split": "DEV",
+      "task": 1
+    },
+    {
+      "F_next": 5.0,
+      "F_prev": 4.0,
+      "F_star_anchor": 4.5,
+      "context_id": "p5s0c_dev_t1_r07_s5107_mid_mu0.500836",
+      "friction": 0.500835695412869,
+      "friction_band": "MID",
+      "new_midpoint_force_N": 4.25,
+      "real_anchor_forces_N": [
+        4.0,
+        4.5,
+        5.0,
+        5.5,
+        6.0
+      ],
+      "root_id": "p5s0c_dev_t1_root07_s5107",
+      "seed": 5107,
+      "split": "DEV",
+      "task": 1
+    },
+    {
+      "F_next": 5.0,
+      "F_prev": 4.0,
+      "F_star_anchor": 4.5,
+      "context_id": "p5s0c_dev_t5_r06_s5106_low_mu0.283428",
+      "friction": 0.2834278244355604,
+      "friction_band": "LOW",
+      "new_midpoint_force_N": 4.25,
+      "real_anchor_forces_N": [
+        3.0,
+        4.0,
+        4.5,
+        5.0
+      ],
+      "root_id": "p5s0c_dev_t5_root06_s5106",
+      "seed": 5106,
+      "split": "DEV",
+      "task": 5
+    },
+    {
+      "F_next": null,
+      "F_prev": 4.5,
+      "F_star_anchor": 5.0,
+      "context_id": "p5s0c_dev_t5_r07_s5107_low_mu0.210709",
+      "friction": 0.2107091015129449,
+      "friction_band": "LOW",
+      "new_midpoint_force_N": 4.75,
+      "real_anchor_forces_N": [
+        3.0,
+        4.0,
+        4.5,
+        5.0
+      ],
+      "root_id": "p5s0c_dev_t5_root07_s5107",
+      "seed": 5107,
+      "split": "DEV",
+      "task": 5
+    },
+    {
+      "F_next": 4.0,
+      "F_prev": 3.0,
+      "F_star_anchor": 3.5,
+      "context_id": "p5s0c_dev_t6_r07_s5107_low_mu0.233902",
+      "friction": 0.2339024543861059,
+      "friction_band": "LOW",
+      "new_midpoint_force_N": 3.25,
+      "real_anchor_forces_N": [
+        3.0,
+        3.5,
+        4.0
+      ],
+      "root_id": "p5s0c_dev_t6_root07_s5107",
+      "seed": 5107,
+      "split": "DEV",
+      "task": 6
+    }
+  ],
+  "created_utc": "2026-08-29T14:22:25.835845+00:00",
+  "fine_search": {
+    "resolution_N": 0.25,
+    "rule": "largest calibrated-unsafe coarse to smallest calibrated-safe coarse, then minimum calibrated-safe 0.25-N point"
+  },
+  "forbidden": [
+    "Physics-GRU training",
+    "friction estimator training",
+    "calibration refit",
+    "evaluator modification",
+    "Pi0 modification",
+    "controller modification",
+    "TEST",
+    "fresh E2E",
+    "extrapolation claim"
+  ],
+  "friction_bands": [
+    "LOW",
+    "MID"
+  ],
+  "frozen_before_new_model_sweep_or_real_outcome": true,
+  "frozen_stack": {
+    "calibration": {
+      "path": "/home/exouser/Tabero/analysis/results/evaluator_interface_calibration_20260829_112603/CALIBRATED_EVALUATOR_FREEZE.json",
+      "selected_family": "isotonic",
+      "sha256": "3a0466942c9c03a4d9cdcefe03fc4d88e07af62f01cf9058e9c8ffe5ccc2be60"
+    },
+    "evaluator": {
+      "path": "/home/exouser/Tabero/analysis/results/trajectory_physical_imagination_20260829_065220/OUTCOME_EVALUATOR.pt",
+      "sha256": "afe02a0672637b6ec4c202934280e5344efd89e7dda76a334e49385a1e3617be"
+    },
+    "friction_estimator": {
+      "path": "/home/exouser/Tabero/analysis/results/active_friction_imagination_20260828_211106/FRICTION_GRU.pt",
+      "sha256": "a6c9d59bfa11c2481b7dca5fec1e41e0b625bbd463ed3fad9e3e4a1cb3eeb6af"
+    },
+    "physics_gru": {
+      "H": 8,
+      "path": "/home/exouser/Tabero/analysis/results/trajectory_physical_imagination_20260829_065220/PHYSICS_TRAJECTORY_GRU.pt",
+      "sha256": "8d5158310eeb6de924ec27f2fe1a4fe661b89b73502a855bbe276edd304eac45"
+    },
+    "probe": {
+      "path": "/home/exouser/Tabero/analysis/results/p5s0c_paired_boundary_probe_value_20260824_000542/P5S0C_FROZEN_PROBE.json",
+      "sha256": "16906d0053594911c191f7dab2d30de6d8251273f5e0c2a6330e462cc314df37"
+    }
+  },
+  "gt_continuous_gate": {
+    "require_abs_error_not_worse_than_coarse": true,
+    "require_excess_force_lower_than_coarse": true,
+    "under_force_rate_max": 0.1
+  },
+  "model_sweep_rule": "0.25-N grid from minimum to maximum existing per-context anchor force; formal results only within global TRAIN support",
+  "name": "continuous Physics-GRU imagination DEV interpolation protocol",
+  "offgrid_gate": {
+    "binary_accuracy_min": 0.8,
+    "false_safe_rate_max": 0.1,
+    "valid_repeat_coverage_min": 0.9
+  },
+  "offline_gate": {
+    "adjacent_raw_margin_monotonic_fraction_min": 0.8,
+    "anchor_safe_unsafe_accuracy_min": 0.8,
+    "finite_prediction_fraction_min": 1.0,
+    "interpolation_margin_envelope_fraction_min": 0.8,
+    "safe_to_unsafe_reversal_context_rate_max": 0.1
+  },
+  "population_rule": "all DEV contexts whose inherited maximum unsafe and minimum safe anchors are exactly 0.5 N apart",
+  "probe_stage_gate": "run only if offline, off-grid, and GT-continuous gates pass",
+  "real_midpoint_sufficiency_rule": "safe only if 3/3 valid repeats succeed; unsafe if 0/3; mixed is stochastic/not-identifiable",
+  "real_validation_rule": "one preregistered midpoint=(F_prev+F_star)/2 per context; 3 same-post-probe-snapshot restores; midpoint fixed before model and real outcomes",
+  "roots": [
+    "p5s0c_dev_t0_root06_s5106",
+    "p5s0c_dev_t0_root07_s5107",
+    "p5s0c_dev_t1_root06_s5106",
+    "p5s0c_dev_t1_root07_s5107",
+    "p5s0c_dev_t5_root06_s5106",
+    "p5s0c_dev_t5_root07_s5107",
+    "p5s0c_dev_t6_root07_s5107"
+  ],
+  "scope": "DEV only; no TEST; no fresh E2E; no training/recalibration/controller change",
+  "single_goal": "test frozen Physics-GRU interpolation and fine minimum-force recovery within training support",
+  "source_hashes": {
+    "/home/exouser/Tabero/analysis/dreamstyle_physical_ranking.py": "eff43a22b9af50b69774329db5594e5bbdc8c5e5df308685ee61f8104710d54f",
+    "/home/exouser/Tabero/analysis/p5s0c_paired_boundary_probe_value.py": "2ab5c37140bd0f92fcee29d5192d8e88db4d028e549e9cfd4676c71aafbdf019",
+    "/home/exouser/Tabero/analysis/results/active_friction_imagination_20260828_211106/FRICTION_PREDICTIONS.csv": "963f57d41d8c892c879ad88617d70f6731cd5dcb92f8577bfca08749ddcf2c00",
+    "/home/exouser/Tabero/analysis/results/evaluator_interface_calibration_20260829_112603/CALIBRATED_EVALUATOR_FREEZE.json": "3a0466942c9c03a4d9cdcefe03fc4d88e07af62f01cf9058e9c8ffe5ccc2be60",
+    "/home/exouser/Tabero/analysis/results/evaluator_interface_calibration_20260829_112603/CALIBRATION_SELECTION.json": "b9ce76d48cdcabd905930ee0216b6c033d8b18c3bba823d0d9f60febb87c627f",
+    "/home/exouser/Tabero/analysis/results/evaluator_interface_calibration_20260829_112603/EVALUATOR_INTERFACE_CALIBRATION_PROTOCOL.json": "10ba63fa113a765f482c8b3f426388da5e0f4e35c6c4a1edc8f753d238e85e14",
+    "/home/exouser/Tabero/analysis/results/force_quantization_conditioning_forensic_20260829_130800/PHYSICS_GRU_CONDITIONING_AUDIT.json": "5d1cd6244bea9b110fcdff5e0608fef717d19325a839f9b6596df6d3c4cb7767",
+    "/home/exouser/Tabero/analysis/results/p4_contact_conditioned_probe_20260822_184213/scripts/p4_collect_probe.py": "a1566334f9f79ad9d8491612f10d086386049295314f6d1fd62512be1867bca9",
+    "/home/exouser/Tabero/analysis/results/p5s0c_paired_boundary_probe_value_20260824_000542/P5S0C_BRANCH_MANIFEST.csv": "778190f29b9414c7590141c6b07ba1bf29e625a8fd8ccea20559d466480c778a",
+    "/home/exouser/Tabero/analysis/results/p5s0c_paired_boundary_probe_value_20260824_000542/P5S0C_FORCE_MANIFEST.json": "d2a4bd82685f7dcce3c1adb089f8766c4d3d4f81fca06de624e77ac16c7e8f3d",
+    "/home/exouser/Tabero/analysis/results/p5s0c_paired_boundary_probe_value_20260824_000542/P5S0C_FROZEN_PROBE.json": "16906d0053594911c191f7dab2d30de6d8251273f5e0c2a6330e462cc314df37",
+    "/home/exouser/Tabero/analysis/results/p5s0c_paired_boundary_probe_value_20260824_000542/P5S0C_STATE_PARITY.csv": "e04c22d70f21ad5de884f0c7c67d422ea3062e4278e733ee17e641821300393d",
+    "/home/exouser/Tabero/analysis/results/p5s0e_force_decision_collapse_audit_20260824_141143/P5S0E_FINAL_REPORT.md": "f9e46ec3473ee60203e38d75a74774818a72bf86ece6f6a4441b06e37012942e",
+    "/home/exouser/Tabero/analysis/results/p5s0e_force_decision_collapse_audit_20260824_141143/P5S0E_PROTOCOL.json": "1f3685a7f8bb818f84d20b263e7c01fee819ad15ab4bcaf525456f17db1eabeb",
+    "/home/exouser/Tabero/analysis/results/probe_informed_imagination_20260829_121500/PROBE_INFORMED_IMAGINATION_PROTOCOL.json": "20bb24229c4335547873bd4609d983dbfc440c012c34f60eeed29d34c3370899",
+    "/home/exouser/Tabero/analysis/results/trajectory_physical_imagination_20260829_065220/OUTCOME_EVALUATOR.pt": "afe02a0672637b6ec4c202934280e5344efd89e7dda76a334e49385a1e3617be",
+    "/home/exouser/Tabero/analysis/results/trajectory_physical_imagination_20260829_065220/PHYSICS_TRAJECTORY_GRU.pt": "8d5158310eeb6de924ec27f2fe1a4fe661b89b73502a855bbe276edd304eac45",
+    "/home/exouser/Tabero/analysis/trajectory_physical_imagination.py": "429761e395e5d6c4f658326e4f5642629eeaaf6498c2217f8f4829695340c2ff"
+  },
+  "tasks": [
+    0,
+    1,
+    5,
+    6
+  ]
+}

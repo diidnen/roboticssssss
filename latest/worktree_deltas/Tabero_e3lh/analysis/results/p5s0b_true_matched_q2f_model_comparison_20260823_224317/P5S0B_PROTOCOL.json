@@ -1,0 +1,43 @@
+{
+  "dataset": "/home/exouser/Tabero/analysis/results/p5s0a_true_matched_dataset_20260823_172635",
+  "method_change": "NONE",
+  "model_seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "models": [
+    "ALWAYS_SUCCESS",
+    "TRAIN_PREVALENCE",
+    "TASK_PREVALENCE",
+    "TASK_FORCE_MLP",
+    "TASK_FORCE_THRESHOLD",
+    "DETERMINISTIC_GRU",
+    "Q2F_GNP",
+    "Q2F_THRESHOLD"
+  ],
+  "name": "P5-S0-B True-Matched Query2Force Model Comparison",
+  "no_new_e2e_rollouts": true,
+  "no_new_simulation_data": true,
+  "task2_used": false,
+  "tasks": [
+    0,
+    1,
+    5,
+    6
+  ],
+  "training": {
+    "checkpoint_selection": "DEV seen-force NLL",
+    "early_stopping_patience": 30,
+    "gradient_clip": 1.0,
+    "latent_beta": 0.01,
+    "latent_beta_ablation": 0.0,
+    "learning_rate": 0.001,
+    "max_epochs": 300,
+    "optimizer": "AdamW",
+    "primary_loss": "unweighted BCEWithLogitsLoss",
+    "weight_decay": 0.0001
+  }
+}

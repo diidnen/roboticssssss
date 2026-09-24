@@ -1,0 +1,28 @@
+{
+  "status": "ERROR",
+  "task": 3,
+  "object": "bbq_sauce_1",
+  "query": "frozen_P4B",
+  "fixed_friction": 0.5,
+  "mass_bands_kg": {
+    "LOW": 0.05,
+    "MID": 0.1,
+    "HIGH": 0.2
+  },
+  "forces_N": [
+    0.5,
+    1.0,
+    1.5,
+    2.5,
+    4.0
+  ],
+  "roots": [
+    7030,
+    7031
+  ],
+  "qualification_only": true,
+  "downstream_controller": "existing_scripted_branch_controller",
+  "vla_retraining": false,
+  "outcome_used_for_query_design": false,
+  "error": "KeyError(3)"
+}

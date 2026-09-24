@@ -1,0 +1,454 @@
+{
+  "coarse_bracket_source": "analysis/results/p5s0c_paired_boundary_probe_value_20260824_000542/P5S0C_BRANCH_MANIFEST.csv",
+  "context_count": 24,
+  "contexts": [
+    "p5s0c_dev_t0_r06_s5106_high_mu0.901218",
+    "p5s0c_dev_t0_r06_s5106_low_mu0.288234",
+    "p5s0c_dev_t0_r06_s5106_mid_mu0.504922",
+    "p5s0c_dev_t0_r07_s5107_high_mu0.932791",
+    "p5s0c_dev_t0_r07_s5107_low_mu0.294781",
+    "p5s0c_dev_t0_r07_s5107_mid_mu0.500365",
+    "p5s0c_dev_t1_r06_s5106_high_mu0.973004",
+    "p5s0c_dev_t1_r06_s5106_low_mu0.262418",
+    "p5s0c_dev_t1_r06_s5106_mid_mu0.515227",
+    "p5s0c_dev_t1_r07_s5107_high_mu0.903359",
+    "p5s0c_dev_t1_r07_s5107_low_mu0.225573",
+    "p5s0c_dev_t1_r07_s5107_mid_mu0.500836",
+    "p5s0c_dev_t5_r06_s5106_high_mu0.917878",
+    "p5s0c_dev_t5_r06_s5106_low_mu0.283428",
+    "p5s0c_dev_t5_r06_s5106_mid_mu0.455479",
+    "p5s0c_dev_t5_r07_s5107_high_mu0.960037",
+    "p5s0c_dev_t5_r07_s5107_low_mu0.210709",
+    "p5s0c_dev_t5_r07_s5107_mid_mu0.555512",
+    "p5s0c_dev_t6_r06_s5106_high_mu0.911169",
+    "p5s0c_dev_t6_r06_s5106_low_mu0.210449",
+    "p5s0c_dev_t6_r06_s5106_mid_mu0.569177",
+    "p5s0c_dev_t6_r07_s5107_high_mu0.971507",
+    "p5s0c_dev_t6_r07_s5107_low_mu0.233902",
+    "p5s0c_dev_t6_r07_s5107_mid_mu0.522882"
+  ],
+  "fine_grid_rule": "fixed inclusive 0.25 N grid from largest known insufficient force to minimum known sufficient coarse force; no result-driven additions",
+  "friction_bands": [
+    "LOW",
+    "MID",
+    "HIGH"
+  ],
+  "frontier_summary_rule": "minimum-successful-force is reported per repeat only when observed; no 2/3 or 3/3 aggregate threshold invented",
+  "frozen_stack": {
+    "calibration": "analysis/results/evaluator_interface_calibration_20260829_112603/CALIBRATED_EVALUATOR_FREEZE.json",
+    "evaluator": "analysis/results/trajectory_physical_imagination_20260829_065220/OUTCOME_EVALUATOR.pt",
+    "friction_estimator": "analysis/results/active_friction_imagination_20260828_211106/FRICTION_GRU.pt",
+    "probe": "analysis/results/p5s0c_paired_boundary_probe_value_20260824_000542/P5S0C_FROZEN_PROBE.json",
+    "world_model": "analysis/results/trajectory_physical_imagination_20260829_065220/PHYSICS_TRAJECTORY_GRU.pt"
+  },
+  "grids": [
+    {
+      "coarse_F_prev": NaN,
+      "coarse_F_star": 3.0,
+      "context_id": "p5s0c_dev_t0_r06_s5106_high_mu0.901218",
+      "context_seed": 5106,
+      "fine_grid_N": [],
+      "friction": 0.9012180083570992,
+      "friction_band": "HIGH",
+      "repeats_per_force": 3,
+      "root_id": "p5s0c_dev_t0_root06_s5106",
+      "split": "DEV",
+      "task": 0
+    },
+    {
+      "coarse_F_prev": 4.0,
+      "coarse_F_star": 4.5,
+      "context_id": "p5s0c_dev_t0_r06_s5106_low_mu0.288234",
+      "context_seed": 5106,
+      "fine_grid_N": [
+        4.0,
+        4.25,
+        4.5
+      ],
+      "friction": 0.2882343327859944,
+      "friction_band": "LOW",
+      "repeats_per_force": 3,
+      "root_id": "p5s0c_dev_t0_root06_s5106",
+      "split": "DEV",
+      "task": 0
+    },
+    {
+      "coarse_F_prev": 3.0,
+      "coarse_F_star": 4.0,
+      "context_id": "p5s0c_dev_t0_r06_s5106_mid_mu0.504922",
+      "context_seed": 5106,
+      "fine_grid_N": [
+        3.0,
+        3.25,
+        3.5,
+        3.75,
+        4.0
+      ],
+      "friction": 0.5049219883120787,
+      "friction_band": "MID",
+      "repeats_per_force": 3,
+      "root_id": "p5s0c_dev_t0_root06_s5106",
+      "split": "DEV",
+      "task": 0
+    },
+    {
+      "coarse_F_prev": NaN,
+      "coarse_F_star": 3.0,
+      "context_id": "p5s0c_dev_t0_r07_s5107_high_mu0.932791",
+      "context_seed": 5107,
+      "fine_grid_N": [],
+      "friction": 0.9327914080609748,
+      "friction_band": "HIGH",
+      "repeats_per_force": 3,
+      "root_id": "p5s0c_dev_t0_root07_s5107",
+      "split": "DEV",
+      "task": 0
+    },
+    {
+      "coarse_F_prev": 4.0,
+      "coarse_F_star": 4.5,
+      "context_id": "p5s0c_dev_t0_r07_s5107_low_mu0.294781",
+      "context_seed": 5107,
+      "fine_grid_N": [
+        4.0,
+        4.25,
+        4.5
+      ],
+      "friction": 0.2947813460786453,
+      "friction_band": "LOW",
+      "repeats_per_force": 3,
+      "root_id": "p5s0c_dev_t0_root07_s5107",
+      "split": "DEV",
+      "task": 0
+    },
+    {
+      "coarse_F_prev": 3.0,
+      "coarse_F_star": 4.0,
+      "context_id": "p5s0c_dev_t0_r07_s5107_mid_mu0.500365",
+      "context_seed": 5107,
+      "fine_grid_N": [
+        3.0,
+        3.25,
+        3.5,
+        3.75,
+        4.0
+      ],
+      "friction": 0.5003653963090192,
+      "friction_band": "MID",
+      "repeats_per_force": 3,
+      "root_id": "p5s0c_dev_t0_root07_s5107",
+      "split": "DEV",
+      "task": 0
+    },
+    {
+      "coarse_F_prev": NaN,
+      "coarse_F_star": 4.0,
+      "context_id": "p5s0c_dev_t1_r06_s5106_high_mu0.973004",
+      "context_seed": 5106,
+      "fine_grid_N": [],
+      "friction": 0.9730036338301252,
+      "friction_band": "HIGH",
+      "repeats_per_force": 3,
+      "root_id": "p5s0c_dev_t1_root06_s5106",
+      "split": "DEV",
+      "task": 1
+    },
+    {
+      "coarse_F_prev": 5.0,
+      "coarse_F_star": 5.5,
+      "context_id": "p5s0c_dev_t1_r06_s5106_low_mu0.262418",
+      "context_seed": 5106,
+      "fine_grid_N": [
+        5.0,
+        5.25,
+        5.5
+      ],
+      "friction": 0.2624184362235552,
+      "friction_band": "LOW",
+      "repeats_per_force": 3,
+      "root_id": "p5s0c_dev_t1_root06_s5106",
+      "split": "DEV",
+      "task": 1
+    },
+    {
+      "coarse_F_prev": 4.0,
+      "coarse_F_star": 4.5,
+      "context_id": "p5s0c_dev_t1_r06_s5106_mid_mu0.515227",
+      "context_seed": 5106,
+      "fine_grid_N": [
+        4.0,
+        4.25,
+        4.5
+      ],
+      "friction": 0.5152267522480724,
+      "friction_band": "MID",
+      "repeats_per_force": 3,
+      "root_id": "p5s0c_dev_t1_root06_s5106",
+      "split": "DEV",
+      "task": 1
+    },
+    {
+      "coarse_F_prev": NaN,
+      "coarse_F_star": 4.0,
+      "context_id": "p5s0c_dev_t1_r07_s5107_high_mu0.903359",
+      "context_seed": 5107,
+      "fine_grid_N": [],
+      "friction": 0.9033587570076792,
+      "friction_band": "HIGH",
+      "repeats_per_force": 3,
+      "root_id": "p5s0c_dev_t1_root07_s5107",
+      "split": "DEV",
+      "task": 1
+    },
+    {
+      "coarse_F_prev": 5.5,
+      "coarse_F_star": 6.0,
+      "context_id": "p5s0c_dev_t1_r07_s5107_low_mu0.225573",
+      "context_seed": 5107,
+      "fine_grid_N": [
+        5.5,
+        5.75,
+        6.0
+      ],
+      "friction": 0.2255725764990141,
+      "friction_band": "LOW",
+      "repeats_per_force": 3,
+      "root_id": "p5s0c_dev_t1_root07_s5107",
+      "split": "DEV",
+      "task": 1
+    },
+    {
+      "coarse_F_prev": 4.0,
+      "coarse_F_star": 4.5,
+      "context_id": "p5s0c_dev_t1_r07_s5107_mid_mu0.500836",
+      "context_seed": 5107,
+      "fine_grid_N": [
+        4.0,
+        4.25,
+        4.5
+      ],
+      "friction": 0.500835695412869,
+      "friction_band": "MID",
+      "repeats_per_force": 3,
+      "root_id": "p5s0c_dev_t1_root07_s5107",
+      "split": "DEV",
+      "task": 1
+    },
+    {
+      "coarse_F_prev": NaN,
+      "coarse_F_star": 3.0,
+      "context_id": "p5s0c_dev_t5_r06_s5106_high_mu0.917878",
+      "context_seed": 5106,
+      "fine_grid_N": [],
+      "friction": 0.9178783381827694,
+      "friction_band": "HIGH",
+      "repeats_per_force": 3,
+      "root_id": "p5s0c_dev_t5_root06_s5106",
+      "split": "DEV",
+      "task": 5
+    },
+    {
+      "coarse_F_prev": 4.0,
+      "coarse_F_star": 4.5,
+      "context_id": "p5s0c_dev_t5_r06_s5106_low_mu0.283428",
+      "context_seed": 5106,
+      "fine_grid_N": [
+        4.0,
+        4.25,
+        4.5
+      ],
+      "friction": 0.2834278244355604,
+      "friction_band": "LOW",
+      "repeats_per_force": 3,
+      "root_id": "p5s0c_dev_t5_root06_s5106",
+      "split": "DEV",
+      "task": 5
+    },
+    {
+      "coarse_F_prev": 3.0,
+      "coarse_F_star": 4.0,
+      "context_id": "p5s0c_dev_t5_r06_s5106_mid_mu0.455479",
+      "context_seed": 5106,
+      "fine_grid_N": [
+        3.0,
+        3.25,
+        3.5,
+        3.75,
+        4.0
+      ],
+      "friction": 0.4554788210846013,
+      "friction_band": "MID",
+      "repeats_per_force": 3,
+      "root_id": "p5s0c_dev_t5_root06_s5106",
+      "split": "DEV",
+      "task": 5
+    },
+    {
+      "coarse_F_prev": NaN,
+      "coarse_F_star": 3.0,
+      "context_id": "p5s0c_dev_t5_r07_s5107_high_mu0.960037",
+      "context_seed": 5107,
+      "fine_grid_N": [],
+      "friction": 0.9600366003423394,
+      "friction_band": "HIGH",
+      "repeats_per_force": 3,
+      "root_id": "p5s0c_dev_t5_root07_s5107",
+      "split": "DEV",
+      "task": 5
+    },
+    {
+      "coarse_F_prev": 4.5,
+      "coarse_F_star": 5.0,
+      "context_id": "p5s0c_dev_t5_r07_s5107_low_mu0.210709",
+      "context_seed": 5107,
+      "fine_grid_N": [
+        4.5,
+        4.75,
+        5.0
+      ],
+      "friction": 0.2107091015129449,
+      "friction_band": "LOW",
+      "repeats_per_force": 3,
+      "root_id": "p5s0c_dev_t5_root07_s5107",
+      "split": "DEV",
+      "task": 5
+    },
+    {
+      "coarse_F_prev": 3.0,
+      "coarse_F_star": 4.0,
+      "context_id": "p5s0c_dev_t5_r07_s5107_mid_mu0.555512",
+      "context_seed": 5107,
+      "fine_grid_N": [
+        3.0,
+        3.25,
+        3.5,
+        3.75,
+        4.0
+      ],
+      "friction": 0.5555123454255387,
+      "friction_band": "MID",
+      "repeats_per_force": 3,
+      "root_id": "p5s0c_dev_t5_root07_s5107",
+      "split": "DEV",
+      "task": 5
+    },
+    {
+      "coarse_F_prev": NaN,
+      "coarse_F_star": 3.0,
+      "context_id": "p5s0c_dev_t6_r06_s5106_high_mu0.911169",
+      "context_seed": 5106,
+      "fine_grid_N": [],
+      "friction": 0.911168502048108,
+      "friction_band": "HIGH",
+      "repeats_per_force": 3,
+      "root_id": "p5s0c_dev_t6_root06_s5106",
+      "split": "DEV",
+      "task": 6
+    },
+    {
+      "coarse_F_prev": NaN,
+      "coarse_F_star": 3.0,
+      "context_id": "p5s0c_dev_t6_r06_s5106_low_mu0.210449",
+      "context_seed": 5106,
+      "fine_grid_N": [],
+      "friction": 0.210448504464096,
+      "friction_band": "LOW",
+      "repeats_per_force": 3,
+      "root_id": "p5s0c_dev_t6_root06_s5106",
+      "split": "DEV",
+      "task": 6
+    },
+    {
+      "coarse_F_prev": NaN,
+      "coarse_F_star": 3.0,
+      "context_id": "p5s0c_dev_t6_r06_s5106_mid_mu0.569177",
+      "context_seed": 5106,
+      "fine_grid_N": [],
+      "friction": 0.569177278763916,
+      "friction_band": "MID",
+      "repeats_per_force": 3,
+      "root_id": "p5s0c_dev_t6_root06_s5106",
+      "split": "DEV",
+      "task": 6
+    },
+    {
+      "coarse_F_prev": NaN,
+      "coarse_F_star": 3.0,
+      "context_id": "p5s0c_dev_t6_r07_s5107_high_mu0.971507",
+      "context_seed": 5107,
+      "fine_grid_N": [],
+      "friction": 0.9715069289124254,
+      "friction_band": "HIGH",
+      "repeats_per_force": 3,
+      "root_id": "p5s0c_dev_t6_root07_s5107",
+      "split": "DEV",
+      "task": 6
+    },
+    {
+      "coarse_F_prev": 3.0,
+      "coarse_F_star": 3.5,
+      "context_id": "p5s0c_dev_t6_r07_s5107_low_mu0.233902",
+      "context_seed": 5107,
+      "fine_grid_N": [
+        3.0,
+        3.25,
+        3.5
+      ],
+      "friction": 0.2339024543861059,
+      "friction_band": "LOW",
+      "repeats_per_force": 3,
+      "root_id": "p5s0c_dev_t6_root07_s5107",
+      "split": "DEV",
+      "task": 6
+    },
+    {
+      "coarse_F_prev": NaN,
+      "coarse_F_star": 3.0,
+      "context_id": "p5s0c_dev_t6_r07_s5107_mid_mu0.522882",
+      "context_seed": 5107,
+      "fine_grid_N": [],
+      "friction": 0.5228824585854834,
+      "friction_band": "MID",
+      "repeats_per_force": 3,
+      "root_id": "p5s0c_dev_t6_root07_s5107",
+      "split": "DEV",
+      "task": 6
+    }
+  ],
+  "name": "DEV fine-force frontier and strict pre-probe baseline forensic",
+  "physical_event_definition": "inherited full-task failure/outcome plus direct telemetry fields; release/settling not reclassified",
+  "repeats_per_force": 3,
+  "roots": [
+    "p5s0c_dev_t0_root06_s5106",
+    "p5s0c_dev_t0_root07_s5107",
+    "p5s0c_dev_t1_root06_s5106",
+    "p5s0c_dev_t1_root07_s5107",
+    "p5s0c_dev_t5_root06_s5106",
+    "p5s0c_dev_t5_root07_s5107",
+    "p5s0c_dev_t6_root06_s5106",
+    "p5s0c_dev_t6_root07_s5107"
+  ],
+  "scope": "DEV only; no TEST fine-force replay; no fresh E2E; no training or calibration",
+  "source_hashes": {
+    "analysis/p5s0c_paired_boundary_probe_value.py": "2ab5c37140bd0f92fcee29d5192d8e88db4d028e549e9cfd4676c71aafbdf019",
+    "analysis/results/evaluator_interface_calibration_20260829_112603/CALIBRATED_EVALUATOR_FREEZE.json": "3a0466942c9c03a4d9cdcefe03fc4d88e07af62f01cf9058e9c8ffe5ccc2be60",
+    "analysis/results/p4_contact_conditioned_probe_20260822_184213/scripts/p4_collect_probe.py": "a1566334f9f79ad9d8491612f10d086386049295314f6d1fd62512be1867bca9",
+    "analysis/results/p5s0c_paired_boundary_probe_value_20260824_000542/P5S0C_BRANCH_MANIFEST.csv": "778190f29b9414c7590141c6b07ba1bf29e625a8fd8ccea20559d466480c778a",
+    "analysis/results/p5s0c_paired_boundary_probe_value_20260824_000542/P5S0C_CONTEXT_MANIFEST.csv": "25edcbdba6e11861af40fdeb3d8a7d3a922ecc3063439f25158289f65a2b7170",
+    "analysis/results/p5s0c_paired_boundary_probe_value_20260824_000542/P5S0C_ROOT_STATE_PARITY.csv": "fc02061151ee32f58e16a6f3a9f325c87cf6d480984d2cc14f28afc2ab91f9c3",
+    "analysis/results/p5s0c_paired_boundary_probe_value_20260824_000542/P5S0C_STATE_PARITY.csv": "e04c22d70f21ad5de884f0c7c67d422ea3062e4278e733ee17e641821300393d",
+    "analysis/results/probe_informed_imagination_20260829_121500/PROBE_INFORMED_IMAGINATION_PROVENANCE.json": "e655add4bac48a435c949df058935fb145da5ac1c5b5a2877ddfb9314edf619e",
+    "analysis/results/trajectory_physical_imagination_20260829_065220/PHYSICS_TRAJECTORY_GRU.pt": "8d5158310eeb6de924ec27f2fe1a4fe661b89b73502a855bbe276edd304eac45"
+  },
+  "state_parity": "restore exact same post-probe snapshot for probe-state branches and exact captured pre-probe snapshot for strict branches; hash every restore",
+  "stochasticity_rule": "empirical success frequencies and repeat disagreement are reported; F_FINE_STAR aggregate is NOT formally identifiable without an inherited repeated-outcome rule",
+  "strict_no_physics": "restore the same captured pre-probe state and execute no probe in the downstream counterfactual; no probe trace or estimator output is an input to the branch",
+  "strict_probe_informed": "execute P4-B once to obtain frozen estimator evidence, then restore captured pre-probe state before downstream fine branch; probe-perturbed state is never used",
+  "success_definition": "inherited full_task_success_y from existing deterministic downstream controller; no new criterion",
+  "tasks": [
+    0,
+    1,
+    5,
+    6
+  ]
+}

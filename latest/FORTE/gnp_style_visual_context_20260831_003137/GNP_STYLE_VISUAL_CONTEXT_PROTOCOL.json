@@ -1,0 +1,99 @@
+{
+  "GT_gate": {
+    "finite_decision_coverage_min": 0.8,
+    "frontier_MAE_N_max": 0.2,
+    "probability_MAE_max": 0.2,
+    "real_frontier_coverage_min": 0.8,
+    "systematic_nonmonotonicity_allowed": false,
+    "under_force_rate_max": 0.1
+  },
+  "architecture_search": false,
+  "authoritative_inputs": [
+    "/home/exouser/Tabero/analysis/results/continuous_coverage_stochasticity_20260830_233650",
+    "/home/exouser/Tabero/analysis/results/context_calibration_forensic_20260830_235151",
+    "/home/exouser/Tabero/analysis/results/gnp_style_continuous_20260830_125107",
+    "/home/exouser/Tabero/analysis/results/continuous_probe_joint_20260830_110712"
+  ],
+  "claim_boundary": {
+    "cross_object": false,
+    "current_object_task_distribution_only": true,
+    "fresh_E2E": false,
+    "original_TEST_loaded": false,
+    "unseen_object": false,
+    "unseen_task": false
+  },
+  "code_hashes": {
+    "paligemma_pytorch": {
+      "path": "/media/volume/newdata/exouser/tabero/Tabero-VTLA/src/openpi/models_pytorch/gemma_pytorch.py",
+      "sha256": "08fd8d750519f0fb44fc5173311e50a30f4c8f32c02e51244b4f8e47b32cd52f"
+    },
+    "pi0_pytorch": {
+      "path": "/media/volume/newdata/exouser/tabero/Tabero-VTLA/src/openpi/models_pytorch/pi0_pytorch.py",
+      "sha256": "0c7b9f1de02ed886da49035e3fa1b38efea46eb6209489cb4f594f777f97b70c"
+    },
+    "serving_wrapper": {
+      "path": "/home/exouser/Tabero/analysis/results/b5_tabero_neutral_20260822_040652/scripts/b5_serve_policy_with_explicit_norm_stats.py",
+      "sha256": "a3baac379926856f928b8d5aad5e3285af84c2377158ea1c4bd19440f2907d01"
+    },
+    "strict_preprobe_collector": {
+      "path": "/home/exouser/FORTE/gnp_style_continuous_collect.py",
+      "sha256": "176a09431eff6df428401da689d4442901c2fb4b040c13607a04ceb807cb7103"
+    },
+    "tabero_input_transform": {
+      "path": "/media/volume/newdata/exouser/tabero/Tabero-VTLA/src/openpi/policies/libero_policy.py",
+      "sha256": "b14f18349cf3c6379376f060f20873505207c9e1bd506c50dd3a9bf54fe730fa"
+    },
+    "vla_observation_builder": {
+      "path": "/home/exouser/Tabero/analysis/p6g1_primitive_ik_vla_grasp_realization.py",
+      "sha256": "ff3248dc9e983438f62494120d2c40dbf2db810537114e05c9060536e74c4508"
+    }
+  },
+  "conditional_probe": {
+    "executed": false,
+    "grid_N": 0.05,
+    "reason": "visual-context GT gate not reached",
+    "rho": 0.8
+  },
+  "conditional_training": {
+    "epochs": 80,
+    "executed": false,
+    "models": [
+      "VISUAL_CONTEXT_CONTINUOUS_FEAS",
+      "VISUAL_CONTEXT_CONTINUOUS_JOINT"
+    ],
+    "probability_semantics": "raw mean sigmoid over 3 seeds",
+    "reason": "no scientifically aligned x",
+    "rho": 0.8,
+    "seeds": [
+      0,
+      1,
+      2
+    ]
+  },
+  "data": {
+    "DEV_cells": 27,
+    "DEV_contexts": 9,
+    "DEV_repeats": 135,
+    "TRAIN_contexts": 72,
+    "continuous_branches": 720,
+    "feasibility_outcomes": 1008,
+    "historical_coarse_branches": 288
+  },
+  "frozen_at": "2026-08-31T00:34:02.814124+00:00",
+  "joint_value_criteria": {
+    "Brier_NLL_not_materially_worse": true,
+    "dense_grid_monotonicity_required": true,
+    "frontier_MAE_improvement_N_min": 0.05,
+    "probability_MAE_relative_improvement_min": 0.1,
+    "under_force": "lower or safely non-worse"
+  },
+  "no_new_force_samples": true,
+  "no_new_repeats": true,
+  "no_outcome_driven_feature_selection": true,
+  "pi0_modified": false,
+  "protocol_name": "GNP_STYLE_VISUAL_CONTEXT_PROTOCOL",
+  "scientific_question": "Does deployment-time visual object/grasp context x fix continuous feasibility, and does Joint add value under matched x?",
+  "selected_x": null,
+  "selection_result": "STOP_DEPLOYABLE_VISUAL_CONTEXT_UNAVAILABLE",
+  "selection_rule": "Use first historically aligned, deployment-available representation in the user-specified four-level precedence; stop if none exists."
+}

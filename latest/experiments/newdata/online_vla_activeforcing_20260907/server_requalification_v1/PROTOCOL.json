@@ -1,0 +1,13 @@
+{
+  "all_requests_required": true,
+  "final_roots_used": false,
+  "implementation_sha256": "90ac33d0cb78455da84b4ef015ce91d55942d5582d45ca969dd58bf8f4d77458",
+  "new_full_task_labels": 0,
+  "policy_parameters_changed": false,
+  "required_requests": 1400,
+  "role": "ARCHIVED_DEV_OBSERVATION_REINFERENCE_ONLY",
+  "server_ready": "/home/exouser/FORTE/online_vla_restore_20260907/server_v3_frozen/SERVER_READY.json",
+  "server_ready_sha256": "f3c05150e03b1fe18597be89bb31280d0a9f0dcc023275fe302c7ff849584ba3",
+  "simulator_steps": 0,
+  "source_qualification": "/media/volume/newdata/exouser/online_vla_activeforcing_20260907/dev_v4_phasefree"
+}

@@ -1,0 +1,110 @@
+{
+  "created_at_utc": "2026-08-25T20:36:28Z",
+  "decision_discipline": {
+    "candidates_added_after_final_outcomes": false,
+    "full_downstream_task_outcomes_used_for_selection": false,
+    "hidden_physics_used_for_search_or_selection": false,
+    "max_retries": 1,
+    "target_clusters_frozen": true,
+    "training_or_finetuning": false
+  },
+  "fixed_contract": {
+    "com": "centered",
+    "friction": "nominal",
+    "grip_force_N": 8.0,
+    "physical_query": false
+  },
+  "learned_method_change": "NONE",
+  "name": "P6-G1-R2 BATON-style verified VLA grasp recipe bootstrapping",
+  "offline_verifier": "MODE_CORRECT AND BILATERAL_CONTACT AND STABLE_LIFT",
+  "recipe_space": {
+    "approach_axis_offset_m": [
+      -0.015,
+      -0.0075,
+      0.0,
+      0.0075,
+      0.015
+    ],
+    "max_vla_chunks": [
+      2,
+      3,
+      4
+    ],
+    "mode_axis_lateral_offset_m": [
+      -0.012,
+      -0.006,
+      0.0,
+      0.006,
+      0.012
+    ],
+    "policy_context_mode": [
+      "COLD"
+    ],
+    "shadow_supported": false,
+    "stabilization_observations": [
+      3,
+      6
+    ],
+    "vertical_offset_m": [
+      -0.008,
+      0.0,
+      0.008
+    ],
+    "wrist_roll_deg": [
+      -12.0,
+      -6.0,
+      0.0,
+      6.0,
+      12.0
+    ]
+  },
+  "rollout_plan": {
+    "final_single_shot": 288,
+    "retry_diagnostic_max_primary_plus_alternate": 192,
+    "search": 432,
+    "selection": 240
+  },
+  "roots": {
+    "final_test": [
+      9600,
+      9601,
+      9602,
+      9603,
+      9604,
+      9605,
+      9606,
+      9607
+    ],
+    "physics_diagnostic": [
+      9700,
+      9701
+    ],
+    "search": [
+      9400,
+      9401,
+      9402
+    ],
+    "selection": [
+      9500,
+      9501,
+      9502,
+      9503
+    ]
+  },
+  "source_artifacts": {
+    "p6g0r1": "/home/exouser/Tabero/analysis/results/p6g0r1_confirmatory_and_candidate_coverage_20260824_232236",
+    "p6g1": "/home/exouser/Tabero/analysis/results/p6g1_primitive_ik_vla_grasp_realization_20260825_103146",
+    "p6g1r1": "/home/exouser/Tabero/analysis/results/p6g1r1_controller_grasp_vla_handoff_20260825_180558"
+  },
+  "stop_predicate": "bilateral contact + object lifted >= 0.03 m + retained for 8 consecutive simulation steps; drop/collision/timeout/fault stop",
+  "system_method_change": "BATON_STYLE_BOUNDED_VLA_INVOCATION_RECIPE_SEARCH_AND_VERIFICATION",
+  "target_modes": [
+    "G0",
+    "G1",
+    "G2"
+  ],
+  "tasks": [
+    1,
+    6
+  ]
+}

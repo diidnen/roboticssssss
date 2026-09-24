@@ -1,0 +1,82 @@
+{
+  "claim_boundary": "scripted controlled-motion auxiliary 3-8N; not online AF efficacy",
+  "companion_bands": [
+    "5-10N",
+    "10-20N"
+  ],
+  "created_utc": "2026-09-14T14:42:43.161146+00:00",
+  "force_convention": "RoboTwin AF single-finger gripper drive limit N on both arms",
+  "forces_N": [
+    3.0,
+    4.0,
+    5.0,
+    6.0,
+    7.0,
+    8.0
+  ],
+  "main_contexts": 9,
+  "main_rollouts": 54,
+  "motion_mode": "scripted_play_once_full_task",
+  "no_pi0": true,
+  "not_claimed": [
+    "online continuous ActiveForcing efficacy",
+    "VLA closed-loop force-success"
+  ],
+  "physical_root_note": "same seed\u00d7\u03bc grid as highforce/5-10 after mu0.85\u2192seed200010",
+  "population": [
+    {
+      "friction": 0.425,
+      "seed": 200002
+    },
+    {
+      "friction": 0.425,
+      "seed": 200003
+    },
+    {
+      "friction": 0.425,
+      "seed": 200004
+    },
+    {
+      "friction": 0.575,
+      "seed": 200002
+    },
+    {
+      "friction": 0.575,
+      "seed": 200003
+    },
+    {
+      "friction": 0.575,
+      "seed": 200004
+    },
+    {
+      "friction": 0.85,
+      "seed": 200002
+    },
+    {
+      "friction": 0.85,
+      "seed": 200003
+    },
+    {
+      "friction": 0.85,
+      "seed": 200010
+    }
+  ],
+  "smoke_forces_N": [
+    3.0,
+    5.0,
+    8.0
+  ],
+  "smoke_gate": {
+    "8N_must_succeed": true,
+    "all_completed": true,
+    "force_limits_match_command": true
+  },
+  "source_hashes": {
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_scripted_lowforce_3_8_20260914/freeze_scripted_plan.py": "ddd886eaa30879a1c6ab3aac2820e4961fa1fcd1c9889bd33449a07363ee3a00",
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_scripted_lowforce_3_8_20260914/run_scripted_context.py": "4565bfb4a4170e5b7f8d3441f257550bc83b4583c7641efc3c5e4b2eae11061f",
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_scripted_lowforce_3_8_20260914/run_scripted_queue.py": "0ba37bc157e003fbdc927f3042c7540850dc452daae93440910b8e941f38bb08"
+  },
+  "storage_root": "/media/volume/dasdas/exouser/af_dump_scripted_lowforce_3_8_20260914",
+  "task": "dump_bin_bigbin",
+  "version": "AF_DUMP_SCRIPTED_LOWFORCE_3_8_V1"
+}

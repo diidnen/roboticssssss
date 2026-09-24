@@ -1,0 +1,11 @@
+# Execution details frozen before VLA calls
+
+VLA competence screening starts at the native reset and uses Fixed-5 throughout VLA-requested grasping, with the original open-intent threshold, sensor correction, force servo and ten-step online cadence. This is a stronger start-state requirement than supplied-grasp downstream competence: a failure to acquire a grasp cannot establish failure of the VLA from a supplied grasp. Such failures will be explicitly reported as pregrasp failures, and do not become AF results.
+
+Allow up to 200 VLA steps to acquire four consecutive bilateral-contact observations (native 0.15 N contact magnitude threshold, opposing normals). Then allow 350 downstream steps. No second grasp is allowed after a VLA release. Native full-task semantic success must hold for the final 20 observations; placement tasks also require VLA-requested opening and bilateral unheld contact over those final 20 observations. The book/wine native metric remains insufficient to certify compartment/orientation correctness: positive native results cannot pass the formal task-form/evaluator gate by themselves.
+
+Run contexts in order: root 5100 at friction 0.30, 0.50, 0.90, then root 6100 at the same triplet. A task is rejected early after its second valid failed context, because even four subsequent successes cannot reach 5/6. This deterministic futility rule does not change the threshold. Unrun contexts remain NOT_RUN, not failures. Simulator/transport crashes are not valid outcomes.
+
+Three rigid-object candidate tasks use the exact existing six-body contact sensor correction with a new object name: book-to-caddy, wine-to-rack, and bowl-from-drawer. This is interface binding, without new sensor arithmetic or feasibility inference. Drawer-handle qualification cannot use that rigid-object alias and is separately recorded as an unimplemented articulated-grasp interface; do not substitute cabinet-base force for handle force.
+
+This competence screen supplies a prerequisite only. Any final AF benchmark additionally requires a shared established grasp, unchanged physical query, identical post-query restoration, frozen evaluator and declared unseen-task encoding. No result from this screen is a held-out AF result.

@@ -1,0 +1,174 @@
+{
+  "arms": [
+    "FROZEN_VLA_DEFAULT",
+    "FIXED_MAX",
+    "NO_QUERY_PRIOR",
+    "ACTIVEFORCING_DIRECT",
+    "GT_PHYSICS_DIRECT"
+  ],
+  "default_force_N": 0.0,
+  "experiment": "ACTIVEFORCING_FINAL_E5",
+  "fixed_max_by_task": {
+    "0": 5.0,
+    "1": 5.0,
+    "5": 5.0,
+    "6": 4.0
+  },
+  "git_commit": "7f88d0184c1617ed95e67502da96e60be07b3689",
+  "grid_N": [
+    3.0,
+    3.25,
+    3.5,
+    3.75,
+    4.0,
+    4.25,
+    4.5,
+    4.75,
+    5.0
+  ],
+  "method_change": "NONE",
+  "phase": "smoke",
+  "prior_mu": 0.6,
+  "roots": [
+    {
+      "friction": 0.2366583748227468,
+      "friction_band": "LOW",
+      "object": "alphabet_soup_1",
+      "phase": "smoke",
+      "root_id": "activeforcing_smoke_t0_root00_s7100",
+      "root_index": 0,
+      "root_seed": 7100,
+      "task": 0,
+      "tuple_id": "activeforcing_smoke_t0_root00_s7100_low_mu0.236658"
+    },
+    {
+      "friction": 0.47241119737855425,
+      "friction_band": "MID",
+      "object": "alphabet_soup_1",
+      "phase": "smoke",
+      "root_id": "activeforcing_smoke_t0_root00_s7100",
+      "root_index": 0,
+      "root_seed": 7100,
+      "task": 0,
+      "tuple_id": "activeforcing_smoke_t0_root00_s7100_mid_mu0.472411"
+    },
+    {
+      "friction": 0.9955114113526506,
+      "friction_band": "HIGH",
+      "object": "alphabet_soup_1",
+      "phase": "smoke",
+      "root_id": "activeforcing_smoke_t0_root00_s7100",
+      "root_index": 0,
+      "root_seed": 7100,
+      "task": 0,
+      "tuple_id": "activeforcing_smoke_t0_root00_s7100_high_mu0.995511"
+    },
+    {
+      "friction": 0.28447754390729035,
+      "friction_band": "LOW",
+      "object": "cream_cheese_1",
+      "phase": "smoke",
+      "root_id": "activeforcing_smoke_t1_root00_s7100",
+      "root_index": 0,
+      "root_seed": 7100,
+      "task": 1,
+      "tuple_id": "activeforcing_smoke_t1_root00_s7100_low_mu0.284478"
+    },
+    {
+      "friction": 0.5691358065936214,
+      "friction_band": "MID",
+      "object": "cream_cheese_1",
+      "phase": "smoke",
+      "root_id": "activeforcing_smoke_t1_root00_s7100",
+      "root_index": 0,
+      "root_seed": 7100,
+      "task": 1,
+      "tuple_id": "activeforcing_smoke_t1_root00_s7100_mid_mu0.569136"
+    },
+    {
+      "friction": 0.9825206217294012,
+      "friction_band": "HIGH",
+      "object": "cream_cheese_1",
+      "phase": "smoke",
+      "root_id": "activeforcing_smoke_t1_root00_s7100",
+      "root_index": 0,
+      "root_seed": 7100,
+      "task": 1,
+      "tuple_id": "activeforcing_smoke_t1_root00_s7100_high_mu0.982521"
+    },
+    {
+      "friction": 0.2629500546294238,
+      "friction_band": "LOW",
+      "object": "tomato_sauce_1",
+      "phase": "smoke",
+      "root_id": "activeforcing_smoke_t5_root00_s7100",
+      "root_index": 0,
+      "root_seed": 7100,
+      "task": 5,
+      "tuple_id": "activeforcing_smoke_t5_root00_s7100_low_mu0.262950"
+    },
+    {
+      "friction": 0.4541313948724048,
+      "friction_band": "MID",
+      "object": "tomato_sauce_1",
+      "phase": "smoke",
+      "root_id": "activeforcing_smoke_t5_root00_s7100",
+      "root_index": 0,
+      "root_seed": 7100,
+      "task": 5,
+      "tuple_id": "activeforcing_smoke_t5_root00_s7100_mid_mu0.454131"
+    },
+    {
+      "friction": 0.9551587843274741,
+      "friction_band": "HIGH",
+      "object": "tomato_sauce_1",
+      "phase": "smoke",
+      "root_id": "activeforcing_smoke_t5_root00_s7100",
+      "root_index": 0,
+      "root_seed": 7100,
+      "task": 5,
+      "tuple_id": "activeforcing_smoke_t5_root00_s7100_high_mu0.955159"
+    },
+    {
+      "friction": 0.20903311665313082,
+      "friction_band": "LOW",
+      "object": "butter_1",
+      "phase": "smoke",
+      "root_id": "activeforcing_smoke_t6_root00_s7100",
+      "root_index": 0,
+      "root_seed": 7100,
+      "task": 6,
+      "tuple_id": "activeforcing_smoke_t6_root00_s7100_low_mu0.209033"
+    },
+    {
+      "friction": 0.5017737668833624,
+      "friction_band": "MID",
+      "object": "butter_1",
+      "phase": "smoke",
+      "root_id": "activeforcing_smoke_t6_root00_s7100",
+      "root_index": 0,
+      "root_seed": 7100,
+      "task": 6,
+      "tuple_id": "activeforcing_smoke_t6_root00_s7100_mid_mu0.501774"
+    },
+    {
+      "friction": 0.9698224594661262,
+      "friction_band": "HIGH",
+      "object": "butter_1",
+      "phase": "smoke",
+      "root_id": "activeforcing_smoke_t6_root00_s7100",
+      "root_index": 0,
+      "root_seed": 7100,
+      "task": 6,
+      "tuple_id": "activeforcing_smoke_t6_root00_s7100_high_mu0.969822"
+    }
+  ],
+  "runner_sha256_at_start": "dfba89e06d4c5431a8620422968a8eca9a68a03bc72cbf4f302abfea9ad9b09d",
+  "start_utc": "2026-09-02T04:16:37.612840+00:00",
+  "tasks": [
+    0,
+    1,
+    5,
+    6
+  ]
+}

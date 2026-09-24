@@ -1,0 +1,39 @@
+{
+  "architecture": "future nominal task-motion sequence + current/initial masked physical state -> GRU(64) -> H-step physical trajectory head",
+  "candidate_force_input": true,
+  "created_before_training": "2026-08-29T07:04:59.531603+00:00",
+  "device": {
+    "cuda_available": true,
+    "device_count": 1,
+    "device_name": "NVIDIA A100-SXM4-40GB",
+    "nvidia_smi_returncode": 0,
+    "nvidia_smi_stderr": "",
+    "nvidia_smi_stdout": "GPU 0: NVIDIA A100-SXM4-40GB (UUID: GPU-c8a98c2a-5c0d-c047-ccee-fc7ee39b9839)",
+    "torch_version": "2.7.1+cu126"
+  },
+  "friction_input": true,
+  "horizon_candidates": [
+    8,
+    16,
+    32
+  ],
+  "loss": "SmoothL1 on executed state displacement with channel masks and near-frontier sampling weights",
+  "outcome_in_loss": false,
+  "selection": "DEV masked trajectory fidelity; no outcome metric",
+  "short_horizon_chaining": "fixed non-adaptive chunks; no full-task monolithic autoregression",
+  "targets": [
+    "rel_dx_m",
+    "rel_dy_m",
+    "rel_dz_m",
+    "rel_vx_mps",
+    "rel_vy_mps",
+    "rel_vz_mps",
+    "left_normal_N",
+    "right_normal_N",
+    "left_tangent_N",
+    "right_tangent_N",
+    "tangent_velocity_proxy_mps",
+    "joint_left",
+    "joint_right"
+  ]
+}

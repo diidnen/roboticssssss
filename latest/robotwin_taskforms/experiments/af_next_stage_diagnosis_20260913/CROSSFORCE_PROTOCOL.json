@@ -1,0 +1,50 @@
+{
+  "stage": "POSTHOC_DEVELOPMENT_CROSS_FORCE",
+  "created_utc": "2026-09-13T11:29:23.355251+00:00",
+  "cases": [
+    {
+      "id": "test_mu0.675_root200002_ps50200002",
+      "forces_N": [
+        3.8,
+        8.0
+      ],
+      "methods": [
+        "CROSS_LOW",
+        "NATIVE_HIGH"
+      ],
+      "historical_spec": "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_maxf8_confirmation_storage_20260913/inference_v4/test_mu0.675_root200002_ps50200002/SPEC.json",
+      "historical_spec_sha256": "23cf8e7fcb4efd0ca1887c05bea84d3096287c1b5623957d1639950d801120ed",
+      "historical_lock": "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_maxf8_confirmation_storage_20260913/inference_v4/test_mu0.675_root200002_ps50200002/job/PREACTION_SELECTION_LOCK.json",
+      "historical_lock_sha256": "482e3730523e1d68848c0ea7a981564b6ac0de1350b6ee9e5fcfb5f0d2cd91a4",
+      "historical_result": "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_maxf8_confirmation_storage_20260913/inference_v4/test_mu0.675_root200002_ps50200002/job/AF_INFERENCE_RESULT.json",
+      "historical_result_sha256": "d01c4dd7b1912d8ffcb53c094e05ba1531c7d7bd0d337a879dec9d19d307f45d"
+    },
+    {
+      "id": "test_mu0.675_root200002_ps60200002",
+      "forces_N": [
+        3.8,
+        8.0
+      ],
+      "methods": [
+        "NATIVE_LOW",
+        "CROSS_HIGH"
+      ],
+      "historical_spec": "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_maxf8_confirmation_storage_20260913/inference_v4/test_mu0.675_root200002_ps60200002/SPEC.json",
+      "historical_spec_sha256": "8bf7b7aca7c444238449e464d51837a7d24effc50f91319329b5a3e2d344796d",
+      "historical_lock": "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_maxf8_confirmation_storage_20260913/inference_v4/test_mu0.675_root200002_ps60200002/job/PREACTION_SELECTION_LOCK.json",
+      "historical_lock_sha256": "34e616bd9d32757aacc422f23df681c2a54e22c8d900ac401ffe465288fbe078",
+      "historical_result": "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_maxf8_confirmation_storage_20260913/inference_v4/test_mu0.675_root200002_ps60200002/job/AF_INFERENCE_RESULT.json",
+      "historical_result_sha256": "2c14934c71a305c42c37d501e95440cc7760241a998c4125abf606f72cd4b945"
+    }
+  ],
+  "planned_rollouts": 4,
+  "model_training": false,
+  "outcome_informed_case_selection": true,
+  "source_hashes": {
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_next_stage_diagnosis_20260913/run_crossforce.py": "25a3da97ed69f65a222bdc2f72b9a43ecc4d812ec5ebbd378616eb302050f8fe",
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_next_stage_diagnosis_20260913/crossforce_worker.py": "d85ef20af5297d556b0ef4d68d5fc652ba37dc2779d1c5b37e5a3c45e2e3dbf5",
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_next_stage_diagnosis_20260913/CROSSFORCE_EXPERIMENT_CARD.md": "e0d36bc8d7e855456b5ae0a55fc9d5e56599b8534295fbe1209d6a78be0d2968"
+  },
+  "minimum_start_free_bytes": 1610612736,
+  "disk_reserve_bytes": 805306368
+}

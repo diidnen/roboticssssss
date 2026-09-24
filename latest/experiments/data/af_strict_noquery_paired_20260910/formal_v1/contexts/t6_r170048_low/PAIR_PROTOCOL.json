@@ -1,0 +1,43 @@
+{
+  "branch_order": [
+    "STRICT_NOQUERY_LIVE_PREPROBE",
+    "RESTORE_PREPROBE",
+    "ACTIVEFORCING_PROBE_SUFFIX"
+  ],
+  "context": {
+    "band": "LOW",
+    "id": "t6_r170048_low",
+    "mu": 0.2575768733744629,
+    "object": "butter_1",
+    "root": 170048,
+    "target": "basket_1",
+    "task": 6
+  },
+  "force_freeze_path": "/home/exouser/strict_noquery_freeze_20260910/FIXED_FORCE_FREEZE.json",
+  "force_freeze_sha256": "ee9ee3f537348ca8b527f64216979af460e4b40a45be3a5df158661c668375af",
+  "instrumentation": {
+    "canonical_lines_replaced": [
+      "def run_probe_episode(env, *, seed_idx: int, mu: float, trial_id: str, dt: float, termination_signal=None):",
+      "    probe_start = grasp.copy()\n    cmd_pos = probe_start.copy()\n\n    if not terminated:\n"
+    ],
+    "canonical_sha256": "74f559865357eb3fb6a3df4df702414832b9e01574a8783077d37622f70c5d82",
+    "canonical_source": "/home/exouser/FORTE/activeforcing_current_probe.py",
+    "instrumented_sha256": "12a6ea0d007d93d3f38b457abb62785dee4e8f05551bc1aa963e158e85d34bbf",
+    "instrumented_source": "/media/volume/data/exouser/af_strict_noquery_paired_20260910/formal_v1/contexts/t6_r170048_low/SOURCE/activeforcing_current_probe_hook.py",
+    "semantic_change": "one preprobe callback after canonical prefix and before first probe action"
+  },
+  "pairing_contract": {
+    "known_limit": "unexposed PhysX contact/solver warm-start state is not in snapshot API",
+    "same_captured_preprobe_state": true,
+    "same_context_id_for_vla_seed_schedule": "t6_r170048_low",
+    "same_vla_noise_seed_per_common_replan_step": true
+  },
+  "schema": "PAIRED_AF_STRICT_NOQUERY_PREPROBE_V1",
+  "strict_force_N": 3.5,
+  "strict_information_contract": {
+    "belief_modules_loaded_before_or_during_strict": false,
+    "feasibility_modules_loaded_before_or_during_strict": false,
+    "force_source": "frozen TRAIN-only task lookup",
+    "physical_probe_actions": 0
+  }
+}

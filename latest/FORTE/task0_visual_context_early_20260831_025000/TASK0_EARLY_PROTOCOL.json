@@ -1,0 +1,38 @@
+{
+  "DEV_used": false,
+  "TEST_used": false,
+  "branches": 180,
+  "contexts": 18,
+  "created_at_utc": "2026-08-31T03:44:31.098520+00:00",
+  "deviation_from_full_protocol": "task0-only rank-limited PCA; not eligible for final comparison",
+  "device": "CPU_ONLY",
+  "epochs": 80,
+  "launches_Isaac_or_pi0": false,
+  "loss": "BCEWithLogits; Joint additionally authoritative trajectory + IE with lambda_feas=0.3",
+  "lr": 0.0008,
+  "models": [
+    "PROSPECTIVE_BASE_FEAS",
+    "VISUAL_INTERCEPT_RESIDUAL",
+    "VISUAL_CONTEXT_FULL_FEAS",
+    "VISUAL_CONTEXT_JOINT"
+  ],
+  "optimizer": "AdamW",
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "source": "/home/exouser/Tabero/analysis/results/gnp_style_visual_context_prospective_20260831_011000",
+  "source_code_hashes": {
+    "/home/exouser/FORTE/task0_visual_context_early.py": "af027174938106b29d081da26055b02a682c390ecaa7a817d1be4b65c6f55cd7",
+    "/home/exouser/Tabero/analysis/counterfactual_force_world_model.py": "c088369626b2cd783f45f5130d932fd7aba6dcc9e54b3504c1a81b4e4317d560",
+    "/home/exouser/Tabero/analysis/full_task_feasibility_decoder.py": "bf002ca6a5e190f0eff4e0429bd3340f9acfdb4a694dde2528a98581ce8ff83d",
+    "/home/exouser/Tabero/analysis/trajectory_physical_imagination.py": "429761e395e5d6c4f658326e4f5642629eeaaf6498c2217f8f4829695340c2ff"
+  },
+  "split": "TRAIN",
+  "status": "TASK0_ONLY_PROVISIONAL_PROTOCOL",
+  "task": 0,
+  "torch_threads": 1,
+  "visual_pca_components": 17,
+  "weight_decay": 0.0001
+}

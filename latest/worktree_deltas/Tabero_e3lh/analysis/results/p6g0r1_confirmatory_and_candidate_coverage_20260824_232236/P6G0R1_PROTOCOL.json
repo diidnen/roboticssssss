@@ -1,0 +1,58 @@
+{
+  "learned_method_used": false,
+  "name": "P6-G0-R1 confirmatory completion and GNP-style candidate coverage",
+  "physical_query_used": false,
+  "track_a": {
+    "com_offsets": [
+      -0.15,
+      0.0,
+      0.15
+    ],
+    "force_grid": [
+      3.0,
+      5.0,
+      8.0
+    ],
+    "frictions": [
+      0.25,
+      0.9
+    ],
+    "method_change": "NONE",
+    "previous_artifacts": "/home/exouser/Tabero/analysis/results/p6g0_grasp_force_physics_benchmark_20260824_182251",
+    "refinement_rule": "3 fail/5 success -> 4N; 5 fail/8 success -> 6N",
+    "root_seeds": [
+      6100,
+      6101
+    ],
+    "shard_definition": "one task x one root x one hidden-physics world",
+    "tasks": [
+      1,
+      6
+    ]
+  },
+  "track_b": {
+    "antipodal_tolerance_deg": 30.0,
+    "benchmark_protocol_change": "GNP_STYLE_GEOMETRY_AWARE_GRASP_CANDIDATE_GENERATION",
+    "centered_com": true,
+    "nominal_friction": 0.5,
+    "preflight_roots": [
+      7100,
+      7101,
+      7102,
+      7103,
+      7104
+    ],
+    "reference_tasks": [
+      1,
+      6
+    ],
+    "robust_force_N": 8.0,
+    "surface_samples": 4096,
+    "surface_sampling_seed": 73001,
+    "tasks": [
+      0,
+      2,
+      5
+    ]
+  }
+}

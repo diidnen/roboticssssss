@@ -1,0 +1,77 @@
+{
+  "coarse_brackets": {
+    "p5s0c_dev_t1_r06_s5106_low_mu0.262418": {
+      "F_prev": 5.0,
+      "F_star": 5.5
+    },
+    "p5s0c_dev_t1_r06_s5106_mid_mu0.515227": {
+      "F_prev": 4.0,
+      "F_star": 4.5
+    }
+  },
+  "controller_source_sha256": "a1566334f9f79ad9d8491612f10d086386049295314f6d1fd62512be1867bca9",
+  "fine_grids_N": {
+    "p5s0c_dev_t1_r06_s5106_low_mu0.262418": [
+      5.0,
+      5.25,
+      5.5
+    ],
+    "p5s0c_dev_t1_r06_s5106_mid_mu0.515227": [
+      4.0,
+      4.25,
+      4.5
+    ]
+  },
+  "friction_conditions": [
+    0.2624184362235552,
+    0.5152267522480724
+  ],
+  "matched_contexts": [
+    {
+      "coarse_F_prev": 5.0,
+      "coarse_F_star": 5.5,
+      "context_id": "p5s0c_dev_t1_r06_s5106_low_mu0.262418",
+      "friction": 0.2624184362235552,
+      "friction_band": "LOW",
+      "root_id": "p5s0c_dev_t1_root06_s5106",
+      "seed": 5106,
+      "task": 1
+    },
+    {
+      "coarse_F_prev": 4.0,
+      "coarse_F_star": 4.5,
+      "context_id": "p5s0c_dev_t1_r06_s5106_mid_mu0.515227",
+      "friction": 0.5152267522480724,
+      "friction_band": "MID",
+      "root_id": "p5s0c_dev_t1_root06_s5106",
+      "seed": 5106,
+      "task": 1
+    }
+  ],
+  "parity_criterion": "stable hash of restorable scene snapshot after restore must match target hash",
+  "physical_event_definition": "inherited dropped/lost_in_transit/full_task_success_y plus corrected direct telemetry; release/settle excluded from stability interpretation",
+  "probe_study": false,
+  "recalibration": false,
+  "repeat_aggregation": "no aggregate rule inherited; empirical curves reported and F_FINE_STAR aggregate remains NOT_FORMALLY_IDENTIFIABLE",
+  "repeats_per_friction_force": 3,
+  "root_state_family": "P5-S0-C DEV task 1 root06, standardized pre-probe grasp state",
+  "scientific_retry_policy": "no scientific retries; engineering retries only for crash/corruption/restore/infrastructure failure and logged",
+  "scope": "single matched DEV task/root/state family; real simulator only; no probe/no models/ no TEST/no E2E",
+  "snapshot_creation": "fixed P4-B pre-probe staging motion interrupted exactly before probe command; no probe command executed",
+  "source_hashes": {
+    "analysis/p5s0c_paired_boundary_probe_value.py": "2ab5c37140bd0f92fcee29d5192d8e88db4d028e549e9cfd4676c71aafbdf019",
+    "analysis/results/dev_fine_force_forensic_20260829_150000/CONTINUOUS_FORCE_CONTROLLER_AUDIT.json": "32608e3c8c12dcc83b0ca05ff05640c7e5aa33f0856540060145cd62e8236161",
+    "analysis/results/dev_fine_force_forensic_20260829_150000/DEV_FINE_FORCE_FORENSIC_PROTOCOL.json": "45b1043e01a03764e35d374c18be7ff9829887c0ac119afc51cc1e98d5958dfa",
+    "analysis/results/p4_contact_conditioned_probe_20260822_184213/scripts/p4_collect_probe.py": "a1566334f9f79ad9d8491612f10d086386049295314f6d1fd62512be1867bca9",
+    "analysis/results/p5s0c_paired_boundary_probe_value_20260824_000542/P5S0C_BRANCH_MANIFEST.csv": "778190f29b9414c7590141c6b07ba1bf29e625a8fd8ccea20559d466480c778a",
+    "analysis/results/p5s0c_paired_boundary_probe_value_20260824_000542/P5S0C_CONTEXT_MANIFEST.csv": "25edcbdba6e11861af40fdeb3d8a7d3a922ecc3063439f25158289f65a2b7170",
+    "analysis/results/p5s0c_paired_boundary_probe_value_20260824_000542/P5S0C_ROOT_STATE_PARITY.csv": "fc02061151ee32f58e16a6f3a9f325c87cf6d480984d2cc14f28afc2ab91f9c3",
+    "analysis/results/p5s0c_paired_boundary_probe_value_20260824_000542/P5S0C_STATE_PARITY.csv": "e04c22d70f21ad5de884f0c7c67d422ea3062e4278e733ee17e641821300393d"
+  },
+  "status": "FROZEN_BEFORE_NEW_OUTCOMES",
+  "strict_matching": "one captured common pre-probe state; restore same state before every branch; apply only hidden friction material after restore; same task/root/nominal controller/force semantics",
+  "sufficiency_criterion": "inherited full_task_success_y from P5-S0-C deterministic downstream controller; no new criterion",
+  "task": 1,
+  "test_touched": false,
+  "training": false
+}

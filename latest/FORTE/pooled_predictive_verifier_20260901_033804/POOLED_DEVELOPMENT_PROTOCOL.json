@@ -1,0 +1,72 @@
+{
+  "architecture_selection": "safety-first on macro mean: under-force, FPR, then SR, coverage, FNR, force; stable benefit required before promotion",
+  "control": {
+    "C_fail": "task Fmax",
+    "decision": "SUCCESS iff logit>0",
+    "fallback": "execute Fmax after NO_VALID_FORCE; not a verifier safety judgment",
+    "proposal": "argmax expected utility",
+    "search": "upward-only",
+    "strict_exhaustion": "NO_VALID_FORCE",
+    "threshold_tuning": false
+  },
+  "ensemble_gate": "retain Majority/Unanimous only if under-force lower, SR nonlower, coverage loss <=0.02, and >=2 tasks improve; Boolean votes only",
+  "fold_manifest_sha256": "d15ba30422043104c2ed03d44b919a70d6212cc333ac2f4f5b71bb0f56fd9000",
+  "forbidden": [
+    "root-scaling pipeline mutation",
+    "root-scaling TEST discovery/read",
+    "Probe",
+    "visual input",
+    "branch-random split"
+  ],
+  "models": {
+    "Direct": "one pooled frozen authoritative FeasibilityOnly architecture; full-task BCE",
+    "WM_Current": "one pooled current Joint-lineage WM; Lphysics + LIE + frozen lambda_feas*full-task BCE",
+    "WM_PhysicsOnly": "same architecture/init/inputs/H8/telemetry/IE/epochs/optimizer; Lphysics + LIE; no outcome gradient",
+    "verifiers": [
+      "V0_LINEAR",
+      "V1_SMALL_MLP",
+      "V2_TEMPORAL_GRU",
+      "V3_GRU_CONTEXT"
+    ]
+  },
+  "population": {
+    "branches": 720,
+    "contexts": 72,
+    "root_families": 24,
+    "tasks": [
+      0,
+      1,
+      5,
+      6
+    ]
+  },
+  "promotion": {
+    "FPR_max": 0.1,
+    "all_3_fold_SR_deltas_nonnegative": true,
+    "all_3_seed_SR_deltas_positive": true,
+    "coverage_min": 0.95,
+    "macro_SR_strictly_higher": true,
+    "mean_force_delta_max_N": 0.25,
+    "positive_task_count_min": 2,
+    "strict_not_fallback": true,
+    "under_force_nonincrease": true
+  },
+  "scope": "task0/task1/task5/task6 pooled authoritative TRAIN; 3-fold grouped root-family CV; old viewed fixed-scene DEV retrospective only",
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "source_hashes": {
+    "/home/exouser/FORTE/per_task_visual_context_early.py": "c6390d3fe7c5e6d2a3051f84f57792dbd17fec4fd294653f61d7c3b05a0e96d6",
+    "/home/exouser/FORTE/pooled_joint_novisual_current.py": "a11eb98a3e71737783dec6f261aaceb2ed971f5f4c2c3a1f9aa5f93d366da1c7",
+    "/home/exouser/FORTE/run_predictive_verifier_development.py": "a9857b66c0b844ddb91f476ed8cfaa3d400d1b28328eb6c82fe5762fb30a624e",
+    "/home/exouser/FORTE/task0_visual_context_early.py": "af027174938106b29d081da26055b02a682c390ecaa7a817d1be4b65c6f55cd7",
+    "/home/exouser/FORTE/taskwise_joint_novisual.py": "6d7f410afc57a0f02ca3da503bbc2c4865924c6bcaf8cd974f855553692955b5",
+    "/home/exouser/Tabero/analysis/counterfactual_force_world_model.py": "c088369626b2cd783f45f5130d932fd7aba6dcc9e54b3504c1a81b4e4317d560",
+    "/home/exouser/Tabero/analysis/full_task_feasibility_decoder.py": "bf002ca6a5e190f0eff4e0429bd3340f9acfdb4a694dde2528a98581ce8ff83d",
+    "/home/exouser/Tabero/analysis/trajectory_physical_imagination.py": "429761e395e5d6c4f658326e4f5642629eeaaf6498c2217f8f4829695340c2ff"
+  },
+  "status": "FROZEN_BEFORE_MODEL_TRAINING",
+  "untouched_TEST_read": false
+}

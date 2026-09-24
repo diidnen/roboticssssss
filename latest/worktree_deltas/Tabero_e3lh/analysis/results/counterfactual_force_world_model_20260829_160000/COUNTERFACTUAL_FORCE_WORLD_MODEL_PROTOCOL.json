@@ -1,0 +1,126 @@
+{
+  "active_phases": [
+    "branch_hold",
+    "lift",
+    "over_basket",
+    "place",
+    "transit"
+  ],
+  "authoritative_inputs_hashes": {
+    "/home/exouser/Tabero/analysis/results/direct_contact_boundary_imagination_20260829_000205/DIRECT_CONTACT_LOGGER_AUDIT.json": "6c48fe1aec070b01106afff0b2cf4f517767305ee3f288255780a953a5c65d7f",
+    "/home/exouser/Tabero/analysis/results/direct_contact_boundary_imagination_20260829_000205/DIRECT_PHYSICAL_EVENT_DEFINITION.json": "63a7b1fef7bf0ada723ec6b7e8fec4e29e4624390c0c1aa0c9b8a92d1be9f525",
+    "/home/exouser/Tabero/analysis/results/evaluator_interface_calibration_20260829_112603/CALIBRATED_EVALUATOR_FREEZE.json": "3a0466942c9c03a4d9cdcefe03fc4d88e07af62f01cf9058e9c8ffe5ccc2be60",
+    "/home/exouser/Tabero/analysis/results/evaluator_interface_calibration_20260829_112603/EVALUATOR_INTERFACE_CALIBRATION_PROTOCOL.json": "10ba63fa113a765f482c8b3f426388da5e0f4e35c6c4a1edc8f753d238e85e14",
+    "/home/exouser/Tabero/analysis/results/force_sensitivity_forensic_20260829_090000/FORCE_SENSITIVITY_FORENSIC_PROTOCOL.json": "531f3509d99079e308cc8d3e5001cc8e4cfaaab808e228e049a5774739a95611",
+    "/home/exouser/Tabero/analysis/results/force_sensitivity_forensic_20260829_090000/STATE_PARITY_AUDIT.json": "f83ff1d835cee078560a8e19335f688382556e1ec82204e8dbecd94404edfb01",
+    "/home/exouser/Tabero/analysis/results/p5s0c_paired_boundary_probe_value_20260824_000542/P5S0C_BRANCH_MANIFEST.csv": "778190f29b9414c7590141c6b07ba1bf29e625a8fd8ccea20559d466480c778a",
+    "/home/exouser/Tabero/analysis/results/p5s0c_paired_boundary_probe_value_20260824_000542/P5S0C_DATASET_SCHEMA.md": "b03f29fb1fd97526af296d1a1709d670cadffd930c671c9014ffac8dce3c9523",
+    "/home/exouser/Tabero/analysis/results/p5s0c_paired_boundary_probe_value_20260824_000542/P5S0C_FORCE_MANIFEST.json": "d2a4bd82685f7dcce3c1adb089f8766c4d3d4f81fca06de624e77ac16c7e8f3d",
+    "/home/exouser/Tabero/analysis/results/p5s0c_paired_boundary_probe_value_20260824_000542/P5S0C_SPLIT_MANIFEST.json": "bd1da97d866bea5651dad2a76a75e2a92902b14ad8d5b46163c93d194e9ffa7f",
+    "/home/exouser/Tabero/analysis/results/trajectory_physical_imagination_20260829_065220/PHYSICS_TRAJECTORY_GRU.pt": "8d5158310eeb6de924ec27f2fe1a4fe661b89b73502a855bbe276edd304eac45",
+    "/home/exouser/Tabero/analysis/results/trajectory_physical_imagination_20260829_065220/TRAJECTORY_REPRESENTATION.json": "6212bea07952e0d596080d0eef0602ecc26dd88473f54b4633b07007ad50c3d3",
+    "/home/exouser/Tabero/analysis/results/trajectory_physical_imagination_20260829_065220/WORLD_MODEL_PROTOCOL_IMMUTABLE.json": "a078b612103a7dda67430aa943126f0c7bce751cbd191acfce6eac5152c018cf"
+  },
+  "calibration": "independent TRAIN-only isotonic per checkpoint over frozen evaluator raw margin; DEV only for selection",
+  "created_before_new_training_or_dev_results": true,
+  "current_checkpoint": {
+    "architecture": "ShortHorizonPhysicsGRU GRU(64), step_dim=17, condition_dim=54, output H=8x13",
+    "path": "/home/exouser/Tabero/analysis/results/trajectory_physical_imagination_20260829_065220/PHYSICS_TRAJECTORY_GRU.pt",
+    "sha256": "8d5158310eeb6de924ec27f2fe1a4fe661b89b73502a855bbe276edd304eac45"
+  },
+  "dev_gates": {
+    "bootstrap_ci_positive": true,
+    "boundary_accuracy_min": 0.8,
+    "continuous_monotonicity_min": 0.8,
+    "fprev_false_safe_max": 0.1,
+    "ie_relative_improvement_min": 0.2,
+    "margin_ordering_min": 0.8,
+    "trajectory_regression_max": 0.1
+  },
+  "device": {
+    "cuda": false,
+    "name": "CPU",
+    "torch": "2.11.0+cu130"
+  },
+  "excluded_phases": [
+    "release",
+    "settle"
+  ],
+  "forbidden": [
+    "TEST predictions",
+    "Probe-informed continuous search",
+    "No-physics comparison",
+    "fresh roots",
+    "final E2E",
+    "Pi0 retraining",
+    "friction-estimator retraining",
+    "new loss families",
+    "architecture search"
+  ],
+  "forceecho_metrics": [
+    "anchor replay",
+    "normalized IE error",
+    "cosine",
+    "magnitude ratio",
+    "signed agreement",
+    "H=1/2/4/8",
+    "boundary preservation",
+    "continuous 0.25N model sweep"
+  ],
+  "ie_loss": {
+    "contact_indicator": "not an output of current 13-state model; no fabricated probability term",
+    "inference_mode": "same one-shot H=8 rollout as inference",
+    "mask": "pair mask intersection x active phases; no zero-padding; common first H window",
+    "normalization": "frozen TRAIN-only normalization from current checkpoint; target delta in normalized 13-state space",
+    "weighting": "boundary=4, adjacent=2, wider=1"
+  },
+  "lambda_candidates": [
+    0.1,
+    0.3,
+    1.0
+  ],
+  "optimizer": {
+    "batch_size": 64,
+    "epochs": 80,
+    "gradient_clip": 1.0,
+    "learning_rate": 0.0008,
+    "name": "AdamW",
+    "steps_fixed": true,
+    "weight_decay": 0.0001
+  },
+  "optional_real_025N": {
+    "contexts": 9,
+    "new_rollouts_allowed": true,
+    "only_if_dev_gate_passes": true,
+    "repeats": 3
+  },
+  "pair_rule": "same source schema, context, root, task/object, friction, post-probe branch-start state/hash, prediction start=0, phase/mask, H=8 future nominal command; only requested grip force differs; approximate pairs rejected",
+  "physical_state_definition": [
+    "rel_dx_m",
+    "rel_dy_m",
+    "rel_dz_m",
+    "rel_vx_mps",
+    "rel_vy_mps",
+    "rel_vz_mps",
+    "left_normal_N",
+    "right_normal_N",
+    "left_tangent_N",
+    "right_tangent_N",
+    "tangent_velocity_proxy_mps",
+    "joint_left",
+    "joint_right"
+  ],
+  "prediction_horizon": 8,
+  "protocol_name": "COUNTERFACTUAL_FORCE_WORLD_MODEL_PROTOCOL",
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "source_code": "/home/exouser/Tabero/analysis/counterfactual_force_world_model.py",
+  "splits": "root-held-out inherited TRAIN/DEV/TEST; TEST metadata-only in this run",
+  "training_variants": {
+    "PHYSICS_GRU_COVERAGE": "same base SmoothL1 trajectory loss, pair-balanced batch sampling",
+    "PHYSICS_GRU_FORCE_IE": "same sampling plus lambda_IE*masked_Huber(delta_pred,delta_real)"
+  }
+}

@@ -1,0 +1,159 @@
+{
+  "dataset": "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_maxf8_20260913/confirmation_plan_v1",
+  "models": "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_maxf8_20260913/models_v4",
+  "contexts": [
+    {
+      "id": "test_mu0.375_root200002_ps50200002",
+      "split": "TEST",
+      "friction": 0.375,
+      "root": 200002,
+      "policy_seed": 50200002,
+      "task": "dump_bin_bigbin",
+      "force_support_N": [
+        0.5,
+        8.0
+      ],
+      "forces_N": null,
+      "runtime_manifest_path": "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_maxf8_20260913/additional_data_v1/RUNTIME_MANIFEST.json",
+      "runtime_manifest_sha256": "01d0289b14b812a4a12455e826a0b213ef4bf4fcdb27717892289b7e137b5034",
+      "collection_protocol_path": "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_maxf8_20260913/confirmation_plan_v1/COLLECTION_PROTOCOL.json",
+      "collection_protocol_sha256": "99bca47a797bc5fb8a37837a947281b3688ea584bf9324c990622bb7915d481a"
+    },
+    {
+      "id": "test_mu0.525_root200002_ps50200002",
+      "split": "TEST",
+      "friction": 0.525,
+      "root": 200002,
+      "policy_seed": 50200002,
+      "task": "dump_bin_bigbin",
+      "force_support_N": [
+        0.5,
+        8.0
+      ],
+      "forces_N": null,
+      "runtime_manifest_path": "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_maxf8_20260913/additional_data_v1/RUNTIME_MANIFEST.json",
+      "runtime_manifest_sha256": "01d0289b14b812a4a12455e826a0b213ef4bf4fcdb27717892289b7e137b5034",
+      "collection_protocol_path": "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_maxf8_20260913/confirmation_plan_v1/COLLECTION_PROTOCOL.json",
+      "collection_protocol_sha256": "99bca47a797bc5fb8a37837a947281b3688ea584bf9324c990622bb7915d481a"
+    },
+    {
+      "id": "test_mu0.675_root200002_ps50200002",
+      "split": "TEST",
+      "friction": 0.675,
+      "root": 200002,
+      "policy_seed": 50200002,
+      "task": "dump_bin_bigbin",
+      "force_support_N": [
+        0.5,
+        8.0
+      ],
+      "forces_N": null,
+      "runtime_manifest_path": "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_maxf8_20260913/additional_data_v1/RUNTIME_MANIFEST.json",
+      "runtime_manifest_sha256": "01d0289b14b812a4a12455e826a0b213ef4bf4fcdb27717892289b7e137b5034",
+      "collection_protocol_path": "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_maxf8_20260913/confirmation_plan_v1/COLLECTION_PROTOCOL.json",
+      "collection_protocol_sha256": "99bca47a797bc5fb8a37837a947281b3688ea584bf9324c990622bb7915d481a"
+    },
+    {
+      "id": "test_mu0.825_root200002_ps50200002",
+      "split": "TEST",
+      "friction": 0.825,
+      "root": 200002,
+      "policy_seed": 50200002,
+      "task": "dump_bin_bigbin",
+      "force_support_N": [
+        0.5,
+        8.0
+      ],
+      "forces_N": null,
+      "runtime_manifest_path": "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_maxf8_20260913/additional_data_v1/RUNTIME_MANIFEST.json",
+      "runtime_manifest_sha256": "01d0289b14b812a4a12455e826a0b213ef4bf4fcdb27717892289b7e137b5034",
+      "collection_protocol_path": "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_maxf8_20260913/confirmation_plan_v1/COLLECTION_PROTOCOL.json",
+      "collection_protocol_sha256": "99bca47a797bc5fb8a37837a947281b3688ea584bf9324c990622bb7915d481a"
+    },
+    {
+      "id": "test_mu0.375_root200002_ps60200002",
+      "split": "TEST",
+      "friction": 0.375,
+      "root": 200002,
+      "policy_seed": 60200002,
+      "task": "dump_bin_bigbin",
+      "force_support_N": [
+        0.5,
+        8.0
+      ],
+      "forces_N": null,
+      "runtime_manifest_path": "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_maxf8_20260913/additional_data_v1/RUNTIME_MANIFEST.json",
+      "runtime_manifest_sha256": "01d0289b14b812a4a12455e826a0b213ef4bf4fcdb27717892289b7e137b5034",
+      "collection_protocol_path": "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_maxf8_20260913/confirmation_plan_v1/COLLECTION_PROTOCOL.json",
+      "collection_protocol_sha256": "99bca47a797bc5fb8a37837a947281b3688ea584bf9324c990622bb7915d481a"
+    },
+    {
+      "id": "test_mu0.525_root200002_ps60200002",
+      "split": "TEST",
+      "friction": 0.525,
+      "root": 200002,
+      "policy_seed": 60200002,
+      "task": "dump_bin_bigbin",
+      "force_support_N": [
+        0.5,
+        8.0
+      ],
+      "forces_N": null,
+      "runtime_manifest_path": "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_maxf8_20260913/additional_data_v1/RUNTIME_MANIFEST.json",
+      "runtime_manifest_sha256": "01d0289b14b812a4a12455e826a0b213ef4bf4fcdb27717892289b7e137b5034",
+      "collection_protocol_path": "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_maxf8_20260913/confirmation_plan_v1/COLLECTION_PROTOCOL.json",
+      "collection_protocol_sha256": "99bca47a797bc5fb8a37837a947281b3688ea584bf9324c990622bb7915d481a"
+    },
+    {
+      "id": "test_mu0.675_root200002_ps60200002",
+      "split": "TEST",
+      "friction": 0.675,
+      "root": 200002,
+      "policy_seed": 60200002,
+      "task": "dump_bin_bigbin",
+      "force_support_N": [
+        0.5,
+        8.0
+      ],
+      "forces_N": null,
+      "runtime_manifest_path": "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_maxf8_20260913/additional_data_v1/RUNTIME_MANIFEST.json",
+      "runtime_manifest_sha256": "01d0289b14b812a4a12455e826a0b213ef4bf4fcdb27717892289b7e137b5034",
+      "collection_protocol_path": "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_maxf8_20260913/confirmation_plan_v1/COLLECTION_PROTOCOL.json",
+      "collection_protocol_sha256": "99bca47a797bc5fb8a37837a947281b3688ea584bf9324c990622bb7915d481a"
+    },
+    {
+      "id": "test_mu0.825_root200002_ps60200002",
+      "split": "TEST",
+      "friction": 0.825,
+      "root": 200002,
+      "policy_seed": 60200002,
+      "task": "dump_bin_bigbin",
+      "force_support_N": [
+        0.5,
+        8.0
+      ],
+      "forces_N": null,
+      "runtime_manifest_path": "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_maxf8_20260913/additional_data_v1/RUNTIME_MANIFEST.json",
+      "runtime_manifest_sha256": "01d0289b14b812a4a12455e826a0b213ef4bf4fcdb27717892289b7e137b5034",
+      "collection_protocol_path": "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_maxf8_20260913/confirmation_plan_v1/COLLECTION_PROTOCOL.json",
+      "collection_protocol_sha256": "99bca47a797bc5fb8a37837a947281b3688ea584bf9324c990622bb7915d481a"
+    }
+  ],
+  "training_complete_sha256": "f99f76022919440bc8a05d561996cebd63e332240e161cbf0c9d645a54d6a44a",
+  "source_hashes": {
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_maxf8_20260913/run_v4_inference.py": "3a49dbdf61ba22a7f5be4afc5b1cef5fdff076e6118aaa2585727dc51273a58d",
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_maxf8_20260913/infer_v4.py": "fc3220aef222d5e495dffbee6a57abf02b9554f7c324abff300b49391929b32f",
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_maxf8_20260913/maxf8_runtime.py": "d966a24dee1304cfcd78488c0243379e5ce465019f2023788d0c35395131ed56",
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_maxf8_20260913/max_force_utility.py": "de94e01c2727d4edfa3e6dae241e5c142370a5fb23917a71c8f69e67c9ddf168",
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_maxf8_20260913/audit_v4_inference.py": "d2dde3c08d2ec10222b0d7776359ba768906b9efb704ce3ccb4eee4320d3a042"
+  },
+  "methods": [
+    "ActiveForcing",
+    "Fixed-1N",
+    "Fixed-3N",
+    "Fixed-5N",
+    "Fixed-6N",
+    "Fixed-8N"
+  ],
+  "test_labels_read_before_protocol": false
+}

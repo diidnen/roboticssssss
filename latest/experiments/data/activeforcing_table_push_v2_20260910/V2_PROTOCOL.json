@@ -1,0 +1,12 @@
+{
+  "namespace": "/media/volume/data/exouser/activeforcing_table_push_v2_20260910",
+  "immutable_write_policy": "Artifacts are created once; no V1 files are modified.",
+  "checkpoint": "/media/volume/newdata/exouser/pi0_libero_activeforcing_20260910/pi0_libero",
+  "checkpoint_tree_sha256": "92b4ac0c5ed929c81677b750fd13b93aa1d30d1fed50fef06a3143dfda9df103",
+  "task": {"suite":"libero_goal","task_id":5,"language":"push the plate to the front of the stove"},
+  "hidden_factor": {"field":"model.geom_friction[table_collision][0]","readback":["mu",0.005,0.0001]},
+  "direction": {"contact_steps_required":3,"discard_precontact_plan":true,"fresh_chunk_only":true,"indices":"first 15 actions whose XY norm >= 0.01, from fresh chunk","aggregate":"coordinate-wise median XY then normalize","persistence_analysis":"median dot of later nominal contact-phase XY unit vectors with frozen direction > 0"},
+  "A2_1": {"root":0,"mu":1.2,"max_episodes":5,"grid_normalized_residual":[-0.12,-0.06,0,0.06,0.12],"hard_absolute_cap":0.15,"ramp_per_step":0.02,"segments":"bounded steady-contact segments with identical root and policy seed","not_newtons":true},
+  "A2_2": "Only on A2.1 pass: freeze three targets from overlapping observed steady-force range and controller values; <=6 paired online full-task branches.",
+  "later_gates": "Gate B/C/D and 216 collection forbidden unless A2 then B pass."
+}

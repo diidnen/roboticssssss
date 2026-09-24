@@ -1,0 +1,169 @@
+{
+  "base_oof": {
+    "Direct_checkpoint_has_not_seen_scored_root": true,
+    "WM_checkpoint_has_not_seen_scored_root": true,
+    "base_seed_aggregation": "mean probability / mean predicted trajectory across fixed seeds 0,1,2; no best seed",
+    "folds": 3,
+    "group": [
+      "task",
+      "root_id"
+    ],
+    "same_root_context_force_repeat_one_fold": true
+  },
+  "challenge": {
+    "claim_limit": "retrospective model-independent stress subset, not untouched prospective TEST",
+    "definition_sha256": "264345f33ca92bd1cdc40baa5c9fe22c850302dece9b305baf65542a8b5bd64e",
+    "manifest_sha256": "ad79af5c2b21440daa195683a139606918fb545f3b710b47a60a85664ce2793f",
+    "membership_change_forbidden": true,
+    "qa_sha256": "61930d767b39940f7463e92501ab132cb48a36680b9ac99467227f2d51bfed60"
+  },
+  "direct": {
+    "DirectUtility": "argmax p_D*(Fmax-F)/Fmax + (1-p_D)*(-1); ties choose lower force",
+    "historical_equivalence": "the existing planner used the same numerator without division by Fmax; decisions must be exactly identical",
+    "model": "existing frozen pooled ActiveForcing-Direct OOF ensemble",
+    "probability": "mean sigmoid over three fixed Direct seeds",
+    "probability_threshold": null
+  },
+  "forbidden": [
+    "root-scaling untouched TEST discovery/read",
+    "prospective challenge membership mutation",
+    "probability or verifier threshold tuning",
+    "failure penalty tuning",
+    "Hard Verifier promotion",
+    "architecture sweep",
+    "best-seed selection"
+  ],
+  "planners": [
+    "P0 Existing Direct Rule",
+    "P1 Direct Utility",
+    "P2 Direct + Direct-Only Residual + Utility",
+    "P3 Direct + WM-Current Residual + Utility",
+    "P3b Direct + WM-PhysicsOnly Residual + Utility",
+    "P4 Direct + One-Step Increase",
+    "P5 Fixed Max",
+    "P6 Historical Hard Verifier (ablation only)"
+  ],
+  "probe": {
+    "GT": "hidden friction, offline oracle only",
+    "NoProbe": {
+      "aggregation": "mean utility across prior support",
+      "discrete_prior_mu": [
+        0.3,
+        0.56,
+        0.92
+      ]
+    },
+    "Probe": "point mu_hat only",
+    "backend_selection": "use WM-Current Residual only if preregistered WM gate passes; otherwise DirectUtility",
+    "current_population_caveat": "same root seeds as estimator TRAIN; Probe comparison is not root-heldout and cannot support final Probe claim",
+    "estimator": "/home/exouser/Tabero/analysis/results/active_friction_imagination_20260828_211106/FRICTION_GRU.pt",
+    "estimator_frozen": true,
+    "sigma_mu": "diagnostic only; no posterior integration"
+  },
+  "residual_cross_fit": {
+    "architecture": "input -> Linear(hidden=32) -> GELU -> Linear(1)",
+    "architecture_sweep": false,
+    "batch": 64,
+    "direct_only_input": "DirectUtility, normalized force, fixed one-hot task encoding (6D); same hidden/head capacity",
+    "early_stopping": false,
+    "epochs": 80,
+    "evaluation_fold_k": "train residual only on OOF rows from the other two folds",
+    "group": [
+      "task",
+      "root_id"
+    ],
+    "input_normalization": "fit only on residual TRAIN folds",
+    "learning_rate": 0.0008,
+    "loss": "unweighted mean squared error",
+    "optimizer": "AdamW",
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "target": "realized normalized reward minus DirectUtility",
+    "threshold_tuning": false,
+    "weight_decay": 0.0001,
+    "wm_input": "summary of mean OOF H8x13 trajectory: final, mean, population std, max (52D), plus normalized candidate force (1D)"
+  },
+  "reward": {
+    "FAILURE": -1,
+    "SUCCESS": "(Fmax-F)/Fmax",
+    "failure_penalty_tuned": false,
+    "task_Fmax_N": {
+      "0": 5.0,
+      "1": 6.0,
+      "5": 5.0,
+      "6": 4.0
+    }
+  },
+  "root_scaling_pipeline_modified": false,
+  "scope": "task0/task1/task5/task6 pooled authoritative TRAIN; grouped-root OOF development; retrospective frozen existing-data force-critical subset",
+  "source_hashes": {
+    "/home/exouser/FORTE/existing_force_critical_benchmark_20260901_052000/FORCE_CRITICAL_EXISTING_DEFINITION.json": "264345f33ca92bd1cdc40baa5c9fe22c850302dece9b305baf65542a8b5bd64e",
+    "/home/exouser/FORTE/existing_force_critical_benchmark_20260901_052000/FORCE_CRITICAL_EXISTING_MANIFEST.json": "ad79af5c2b21440daa195683a139606918fb545f3b710b47a60a85664ce2793f",
+    "/home/exouser/FORTE/existing_force_critical_benchmark_20260901_052000/FORCE_CRITICAL_EXISTING_QA.json": "61930d767b39940f7463e92501ab132cb48a36680b9ac99467227f2d51bfed60",
+    "/home/exouser/FORTE/pooled_joint_novisual_current.py": "a11eb98a3e71737783dec6f261aaceb2ed971f5f4c2c3a1f9aa5f93d366da1c7",
+    "/home/exouser/FORTE/pooled_predictive_verifier_20260901_033804/FINAL_POOLED_VERIFIER_CLASSIFICATION.json": "a88bd127a8d8984d1de8ef36028e431c85461b70e826676d822990bbe70049d2",
+    "/home/exouser/FORTE/pooled_predictive_verifier_20260901_033804/POOLED_DEVELOPMENT_PROTOCOL.json": "e43cd667e685b4197ee037fdce532167065e679704be7b471f9a0f08927b5a05",
+    "/home/exouser/FORTE/pooled_predictive_verifier_20260901_033804/POOLED_GROUPED_CV_MANIFEST.json": "d15ba30422043104c2ed03d44b919a70d6212cc333ac2f4f5b71bb0f56fd9000",
+    "/home/exouser/FORTE/pooled_predictive_verifier_20260901_033804/checkpoints/DIRECT_POOLED_fold0_seed0.pt": "3d262618f312b1d99035e012ab42f306edfd3afb3a6dcfbbb1fbb680fb107f57",
+    "/home/exouser/FORTE/pooled_predictive_verifier_20260901_033804/checkpoints/DIRECT_POOLED_fold0_seed1.pt": "5a144e0f3d766273ae03760c530feae9f50fd31539a826255ee3d009dbc6dd27",
+    "/home/exouser/FORTE/pooled_predictive_verifier_20260901_033804/checkpoints/DIRECT_POOLED_fold0_seed2.pt": "4b47cc44dd2fb951b4646a7f83a1f4c7c4e0da84228d0c8de8a5513611ba86f9",
+    "/home/exouser/FORTE/pooled_predictive_verifier_20260901_033804/checkpoints/DIRECT_POOLED_fold1_seed0.pt": "2549c465ad2df5166bab925eb5762a48be70a1a6da66679594fcce107660873e",
+    "/home/exouser/FORTE/pooled_predictive_verifier_20260901_033804/checkpoints/DIRECT_POOLED_fold1_seed1.pt": "d11b1eb5c94bd461f6a4fc50d390b8e946967d1519896496e961c2805cdd2e23",
+    "/home/exouser/FORTE/pooled_predictive_verifier_20260901_033804/checkpoints/DIRECT_POOLED_fold1_seed2.pt": "0ad9a6dcf0d3dabb5e77c0ca996d85f7e00e599df8f950c6d5e54f3960967038",
+    "/home/exouser/FORTE/pooled_predictive_verifier_20260901_033804/checkpoints/DIRECT_POOLED_fold2_seed0.pt": "311b5608dfdf2db312eafff89a1ee7e092ea8786c98983f5f2d3a7cc86743c50",
+    "/home/exouser/FORTE/pooled_predictive_verifier_20260901_033804/checkpoints/DIRECT_POOLED_fold2_seed1.pt": "a00326f88ee10a20f8dfb4140a8cdca97f2f3d0aac19ad786cce7e0be5847802",
+    "/home/exouser/FORTE/pooled_predictive_verifier_20260901_033804/checkpoints/DIRECT_POOLED_fold2_seed2.pt": "a02ef57e6b2ca9e6fcfb40102487c963fb87d5d0d47ceda103b89a68b069b2b9",
+    "/home/exouser/FORTE/pooled_predictive_verifier_20260901_033804/checkpoints/WM_CURRENT_POOLED_fold0_seed0.pt": "c0daad803c107e8d287db77802bfeb9937115bb62abd82fa79aad60be632bee8",
+    "/home/exouser/FORTE/pooled_predictive_verifier_20260901_033804/checkpoints/WM_CURRENT_POOLED_fold0_seed1.pt": "d29cb2fa6d81ebda23212e0f02c829a8651eacfdf10ca1694b001c555a2b9774",
+    "/home/exouser/FORTE/pooled_predictive_verifier_20260901_033804/checkpoints/WM_CURRENT_POOLED_fold0_seed2.pt": "b233a9198d5b96cd97f6421f7d29cdb744cc5a8493de19a370103b41913e6783",
+    "/home/exouser/FORTE/pooled_predictive_verifier_20260901_033804/checkpoints/WM_CURRENT_POOLED_fold1_seed0.pt": "783efba2d5a975bd50b42ae7b93c8c83084950b3059949d3be2a874b4ed3fa80",
+    "/home/exouser/FORTE/pooled_predictive_verifier_20260901_033804/checkpoints/WM_CURRENT_POOLED_fold1_seed1.pt": "8afa400815ce748604fc5a351d4723008cc71db29324906ea82e0718be28199d",
+    "/home/exouser/FORTE/pooled_predictive_verifier_20260901_033804/checkpoints/WM_CURRENT_POOLED_fold1_seed2.pt": "3ca90614f048ec885795547b5ecccd39760f638274bce694690b7e619ab64434",
+    "/home/exouser/FORTE/pooled_predictive_verifier_20260901_033804/checkpoints/WM_CURRENT_POOLED_fold2_seed0.pt": "d3f58554bd2459f888f8a1f0027888d12e06de9c47073c2b7782da7ef6808d9c",
+    "/home/exouser/FORTE/pooled_predictive_verifier_20260901_033804/checkpoints/WM_CURRENT_POOLED_fold2_seed1.pt": "f38f65ed0c6ee066ed3c9605b8e94b9d3e3a5d0055ba26fafcd8de9f9b18a83a",
+    "/home/exouser/FORTE/pooled_predictive_verifier_20260901_033804/checkpoints/WM_CURRENT_POOLED_fold2_seed2.pt": "d0b0160b7fda4b6f5ffd6916321b7c8a0014cd404806f7baa12f8ccee9d12135",
+    "/home/exouser/FORTE/pooled_predictive_verifier_20260901_033804/checkpoints/WM_PHYSICSONLY_POOLED_fold0_seed0.pt": "b1184c5ac78937cf1c05332b2328bd5c7d498a69dfbd001870ce1abe494b72d6",
+    "/home/exouser/FORTE/pooled_predictive_verifier_20260901_033804/checkpoints/WM_PHYSICSONLY_POOLED_fold0_seed1.pt": "d95dbff0ba450ce576b946a30c482e02f012f8250bc5f3f00fa5bd1a68dc77c5",
+    "/home/exouser/FORTE/pooled_predictive_verifier_20260901_033804/checkpoints/WM_PHYSICSONLY_POOLED_fold0_seed2.pt": "f033f30d88e6190574d1d02435262df0cf60be93a3c2bad69c090f43be2007ff",
+    "/home/exouser/FORTE/pooled_predictive_verifier_20260901_033804/checkpoints/WM_PHYSICSONLY_POOLED_fold1_seed0.pt": "247696c151bcda55bfcc7f7318a0f27b94acfd05a3360ea9b19f13d716363cba",
+    "/home/exouser/FORTE/pooled_predictive_verifier_20260901_033804/checkpoints/WM_PHYSICSONLY_POOLED_fold1_seed1.pt": "390071d7c603507f35bb67756297dbc2663a503eb04891cac155da6c554b9271",
+    "/home/exouser/FORTE/pooled_predictive_verifier_20260901_033804/checkpoints/WM_PHYSICSONLY_POOLED_fold1_seed2.pt": "b7c2f6f52396ef8c76c16f181149551903591f0dbdcac8de4d29241da537ea17",
+    "/home/exouser/FORTE/pooled_predictive_verifier_20260901_033804/checkpoints/WM_PHYSICSONLY_POOLED_fold2_seed0.pt": "5cb42f51ab852a5269bb6e3acd46cee1111c5384ef1b83634c8d6966dd20007a",
+    "/home/exouser/FORTE/pooled_predictive_verifier_20260901_033804/checkpoints/WM_PHYSICSONLY_POOLED_fold2_seed1.pt": "ebcf44d1020152e324fa9d7113bac442fe3acfb0e5422986de53520a43a87614",
+    "/home/exouser/FORTE/pooled_predictive_verifier_20260901_033804/checkpoints/WM_PHYSICSONLY_POOLED_fold2_seed2.pt": "51c6283ad37c75ead9c530e843bea14f96384a28c2372c59d59ffcff2677792e",
+    "/home/exouser/FORTE/pooled_predictive_verifier_20260901_033804/shards/fold0_seed0.npz": "012e483f6a6c666ca571d19d9d8aee96d5b8fd4465c02e23f49b27407a698320",
+    "/home/exouser/FORTE/pooled_predictive_verifier_20260901_033804/shards/fold0_seed1.npz": "7ac34600c1fb92264fe8c2f5f6a3b6c7593c9374c134c792e96c1bda356216e2",
+    "/home/exouser/FORTE/pooled_predictive_verifier_20260901_033804/shards/fold0_seed2.npz": "8c472e4b6f1cf927bba669514a759adec73b17bfeae75cb54bf20b3eab52d160",
+    "/home/exouser/FORTE/pooled_predictive_verifier_20260901_033804/shards/fold1_seed0.npz": "b4970a5c9a4e97de8c43224b635f642a755d776d167c9a269093b8ed0b753b8c",
+    "/home/exouser/FORTE/pooled_predictive_verifier_20260901_033804/shards/fold1_seed1.npz": "2620daddc37c91101708943e7e3d689eda62589de35dc0edf3ac8be128e575bb",
+    "/home/exouser/FORTE/pooled_predictive_verifier_20260901_033804/shards/fold1_seed2.npz": "6417bc36c7cc60ce4972962b11ef9311ea6480f9b23e316b3dce765c37312f5d",
+    "/home/exouser/FORTE/pooled_predictive_verifier_20260901_033804/shards/fold2_seed0.npz": "6d458747ba3249184edbedb475645304cafcd14d94f4db7d7c0432df8d0ead33",
+    "/home/exouser/FORTE/pooled_predictive_verifier_20260901_033804/shards/fold2_seed1.npz": "e759d37e0b2138093029f96875770ec1d4acb64b5e30385d5cb09665c98beffa",
+    "/home/exouser/FORTE/pooled_predictive_verifier_20260901_033804/shards/fold2_seed2.npz": "5956b66e82d22cd5415d133f55d26f5fef51573ac2380ab04829541aa3659dff",
+    "/home/exouser/FORTE/run_pooled_predictive_verifier.py": "eea0784a63c3aa072e9950c9a3739ec950e287ff9f0587b80ea6136cb35c4bb6",
+    "/home/exouser/FORTE/run_predictive_verifier_development.py": "a9857b66c0b844ddb91f476ed8cfaa3d400d1b28328eb6c82fe5762fb30a624e",
+    "/home/exouser/Tabero/analysis/active_friction_imagination.py": "c06e09b34a27b1c3a1111d60a3be012edf6e9d604008eeb2ef0858a65d532918",
+    "/home/exouser/Tabero/analysis/p5s0c_model_adjudication.py": "ecf5a57c9bffb313fd3df94bef26d1579754836f26fa154538bff7acf6e7ea9f",
+    "/home/exouser/Tabero/analysis/results/active_friction_imagination_20260828_211106/FRICTION_GRU.pt": "a6c9d59bfa11c2481b7dca5fec1e41e0b625bbd463ed3fad9e3e4a1cb3eeb6af",
+    "/home/exouser/Tabero/analysis/results/active_friction_imagination_20260828_211106/PROTOCOL.json": "b7e4bed5febd89a3e52ec9daa174d834ad4627087c2bf53cefc465a88c01d86b",
+    "/home/exouser/Tabero/analysis/results/active_probe_necessity_20260830_063435/NO_PROBE_PHYSICS_PRIOR.json": "252a184908da2246849e6100c5ca825fc0995df7e4a6aa99c83e12039b64e51e",
+    "/home/exouser/Tabero/analysis/results/p5s0c_paired_boundary_probe_value_20260824_000542/P5S0C_NORMALIZATION.json": "5743bbbb6495c8c052a663a6dbf1ccf7fb974dc1bbe5c96236220ec4b90ecbd2",
+    "/home/exouser/Tabero/analysis/results/probe_informed_imagination_20260829_121500/PROBE_INFORMED_IMAGINATION_PROTOCOL.json": "20bb24229c4335547873bd4609d983dbfc440c012c34f60eeed29d34c3370899"
+  },
+  "status": "FROZEN_BEFORE_RESIDUAL_TRAINING_OR_CASE_LEVEL_EVALUATION",
+  "untouched_TEST_read": false,
+  "world_model_gate": {
+    "all_three_seed_SR_nonnegative_and_utility_positive": true,
+    "challenge_excess_or_regret_lt_FixedMax": true,
+    "challenge_rescue_rate_improves": true,
+    "multiple_roots_benefit": true,
+    "normal_macro_SR_non_decrease": true,
+    "normal_macro_realized_utility_gt_DirectOnlyResidual": true,
+    "normal_macro_realized_utility_gt_DirectUtility": true,
+    "normal_macro_under_force_nonincrease": true,
+    "positive_task_count_min": 2
+  }
+}

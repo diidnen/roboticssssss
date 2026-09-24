@@ -1,0 +1,32 @@
+{
+  "dense_force_grid": {
+    "max": 8.0,
+    "min": 3.0,
+    "step": 0.05
+  },
+  "eta": 0.9,
+  "execution_lattice": [
+    3.0,
+    4.0,
+    5.0,
+    6.0,
+    8.0
+  ],
+  "experiment": "P5-S0-E",
+  "method_change": "NONE",
+  "models": [
+    "TASK_FORCE_THRESHOLD",
+    "Q2F_THRESHOLD"
+  ],
+  "no_new_simulator_data": true,
+  "no_training": true,
+  "shuffles_per_root": 100,
+  "source": "/home/exouser/Tabero/analysis/results/p5s0d_fresh_e2e_q2f_20260824_090205",
+  "tasks": [
+    0,
+    1,
+    5,
+    6
+  ],
+  "type": "forensic_offline_analysis_only"
+}

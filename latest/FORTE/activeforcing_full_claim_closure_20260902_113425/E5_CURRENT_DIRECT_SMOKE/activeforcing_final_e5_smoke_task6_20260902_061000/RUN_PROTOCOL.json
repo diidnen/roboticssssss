@@ -1,0 +1,75 @@
+{
+  "arms": [
+    "FROZEN_VLA_DEFAULT",
+    "FIXED_MAX",
+    "NO_QUERY_PRIOR",
+    "ACTIVEFORCING_DIRECT",
+    "GT_PHYSICS_DIRECT"
+  ],
+  "default_force_N": 0.0,
+  "experiment": "ACTIVEFORCING_FINAL_E5",
+  "fixed_max_by_task": {
+    "0": 5.0,
+    "1": 5.0,
+    "5": 5.0,
+    "6": 4.0
+  },
+  "git_commit": "7f88d0184c1617ed95e67502da96e60be07b3689",
+  "grid_N": [
+    3.0,
+    3.25,
+    3.5,
+    3.75,
+    4.0,
+    4.25,
+    4.5,
+    4.75,
+    5.0
+  ],
+  "method_change": "NONE",
+  "phase": "smoke",
+  "prior_mu": 0.6,
+  "roots": [
+    {
+      "friction": 0.2366583748227468,
+      "friction_band": "LOW",
+      "object": "butter_1",
+      "phase": "smoke",
+      "root_id": "activeforcing_smoke_t6_root00_s7100",
+      "root_index": 0,
+      "root_seed": 7100,
+      "task": 6,
+      "tuple_id": "activeforcing_smoke_t6_root00_s7100_low_mu0.236658"
+    },
+    {
+      "friction": 0.47241119737855425,
+      "friction_band": "MID",
+      "object": "butter_1",
+      "phase": "smoke",
+      "root_id": "activeforcing_smoke_t6_root00_s7100",
+      "root_index": 0,
+      "root_seed": 7100,
+      "task": 6,
+      "tuple_id": "activeforcing_smoke_t6_root00_s7100_mid_mu0.472411"
+    },
+    {
+      "friction": 0.9955114113526506,
+      "friction_band": "HIGH",
+      "object": "butter_1",
+      "phase": "smoke",
+      "root_id": "activeforcing_smoke_t6_root00_s7100",
+      "root_index": 0,
+      "root_seed": 7100,
+      "task": 6,
+      "tuple_id": "activeforcing_smoke_t6_root00_s7100_high_mu0.995511"
+    }
+  ],
+  "runner_sha256_at_start": "a58863d34d7be6de0c2084a73edb5d03dd4173c3b3d950d60edfbe1e0b578de9",
+  "start_utc": "2026-09-02T05:42:37.302411+00:00",
+  "tasks": [
+    0,
+    1,
+    5,
+    6
+  ]
+}

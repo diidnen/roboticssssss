@@ -1,0 +1,159 @@
+{
+  "authoritative_hashes": {
+    "/home/exouser/Tabero/analysis/active_probe_necessity.py": "7c1e82b67f54cfc7e644b43447cf54c501b870e67bd0599ef3d76a2d4aaf7479",
+    "/home/exouser/Tabero/analysis/counterfactual_force_world_model.py": "c088369626b2cd783f45f5130d932fd7aba6dcc9e54b3504c1a81b4e4317d560",
+    "/home/exouser/Tabero/analysis/full_task_feasibility_decoder.py": "bf002ca6a5e190f0eff4e0429bd3340f9acfdb4a694dde2528a98581ce8ff83d",
+    "/home/exouser/Tabero/analysis/results/active_friction_imagination_20260828_211106/FRICTION_GRU.pt": "a6c9d59bfa11c2481b7dca5fec1e41e0b625bbd463ed3fad9e3e4a1cb3eeb6af",
+    "/home/exouser/Tabero/analysis/results/active_friction_imagination_20260828_211106/FRICTION_PREDICTIONS.csv": "963f57d41d8c892c879ad88617d70f6731cd5dcb92f8577bfca08749ddcf2c00",
+    "/home/exouser/Tabero/analysis/results/active_probe_necessity_20260830_063435/ACTIVE_PROBE_NECESSITY_PROTOCOL.json": "45ca0f7ba32e824b0a597d5f78a3d74d506b76b51aa195fa5d00893756872d63",
+    "/home/exouser/Tabero/analysis/results/active_probe_necessity_20260830_063435/FRICTION_DECISION_DISCORDANT_PAIRS.csv": "2152e5aa8a228ff7d0322c32d75fc3c1eef2dc30d9c12c9b86b64a133f057613",
+    "/home/exouser/Tabero/analysis/results/active_probe_necessity_20260830_063435/NO_PROBE_PHYSICS_PRIOR.json": "252a184908da2246849e6100c5ca825fc0995df7e4a6aa99c83e12039b64e51e",
+    "/home/exouser/Tabero/analysis/results/full_task_feasibility_20260830_012830/FEASIBILITY_MODEL_COMPARISON.csv": "9f9455fcccc73133713984e145d102b89d2a88711acb39552bfe1035ae156302",
+    "/home/exouser/Tabero/analysis/results/full_task_feasibility_20260830_012830/FULL_TASK_FEASIBILITY_PROTOCOL.json": "63ba2e0756d4945a3da27a4510957111b2cfe15610577e12b68637a201bc8b1e",
+    "/home/exouser/Tabero/analysis/results/p5s0c_paired_boundary_probe_value_20260824_000542/P5S0C_BRANCH_MANIFEST.csv": "778190f29b9414c7590141c6b07ba1bf29e625a8fd8ccea20559d466480c778a",
+    "/home/exouser/Tabero/analysis/results/p5s0c_paired_boundary_probe_value_20260824_000542/P5S0C_CONTEXT_MANIFEST.csv": "25edcbdba6e11861af40fdeb3d8a7d3a922ecc3063439f25158289f65a2b7170",
+    "/home/exouser/Tabero/analysis/trajectory_physical_imagination.py": "429761e395e5d6c4f658326e4f5642629eeaaf6498c2217f8f4829695340c2ff"
+  },
+  "calibration": {
+    "ensemble": "mean calibrated probability",
+    "fit_split": "TRAIN",
+    "method": "isotonic",
+    "per_seed": true,
+    "threshold": 0.5
+  },
+  "conditional_execution": "Probe/NoProbe inputs are not loaded or scored unless GT gate passes",
+  "created_utc": "2026-08-30T07:11:45.477887+00:00",
+  "forbidden": [
+    "original TEST outcome/telemetry",
+    "E2E",
+    "continuous force",
+    "Q2F",
+    "world-model/IE/event/task-demand development",
+    "pi0 modification",
+    "friction-estimator retraining"
+  ],
+  "gt_gate": {
+    "fprev_false_safe_max": 0.1,
+    "pair_adaptive_success_min": 0.85,
+    "pair_force_ordering_min": 0.9,
+    "under_force_max": 0.1
+  },
+  "input_schema": {
+    "canonical_motion": "highest requested-force branch per context; same H8 motion for all candidate forces/conditions; selection independent of outcome",
+    "condition_dim_54": "candidate force/8, mu, strict state13, state mask13, initial state13, initial mask13",
+    "step_dim_17": "relative Cartesian command xyz, delta xyz, 7 phase one-hot, 4 task one-hot over H8",
+    "strict_state": "last stable P4-B hold immediately before probe_out; relative position/velocity zero; force/contact masked; joints=[opening,-opening]"
+  },
+  "model": {
+    "IE": false,
+    "architecture": "authoritative FeasibilityOnly GRU(17,64)+condition MLP(54,64)+head MLP(128,64,1)",
+    "event_head": false,
+    "loss": "BCEWithLogits",
+    "name": "PREPROBE_FEASIBILITY",
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "trajectory_head": false
+  },
+  "no_probe_prior": [
+    0.3,
+    0.56,
+    0.92
+  ],
+  "population": {
+    "DEV": {
+      "branches": 96,
+      "contexts": 24,
+      "failure": 23,
+      "forces": [
+        3.0,
+        3.5,
+        4.0,
+        4.5,
+        5.0,
+        5.5,
+        6.0
+      ],
+      "roots": 8,
+      "success": 73,
+      "tasks": [
+        0,
+        1,
+        5,
+        6
+      ]
+    },
+    "TRAIN": {
+      "branches": 288,
+      "contexts": 72,
+      "failure": 72,
+      "forces": [
+        3.0,
+        3.5,
+        4.0,
+        4.5,
+        5.0,
+        5.5,
+        6.0
+      ],
+      "roots": 24,
+      "success": 216,
+      "tasks": [
+        0,
+        1,
+        5,
+        6
+      ]
+    },
+    "original_TEST": "FORBIDDEN; rows discarded before label parsing",
+    "strict_discordant_context_count": 21,
+    "strict_discordant_contexts": [
+      "p5s0c_dev_t0_r06_s5106_high_mu0.901218",
+      "p5s0c_dev_t0_r06_s5106_low_mu0.288234",
+      "p5s0c_dev_t0_r06_s5106_mid_mu0.504922",
+      "p5s0c_dev_t0_r07_s5107_high_mu0.932791",
+      "p5s0c_dev_t0_r07_s5107_low_mu0.294781",
+      "p5s0c_dev_t0_r07_s5107_mid_mu0.500365",
+      "p5s0c_dev_t1_r06_s5106_high_mu0.973004",
+      "p5s0c_dev_t1_r06_s5106_low_mu0.262418",
+      "p5s0c_dev_t1_r06_s5106_mid_mu0.515227",
+      "p5s0c_dev_t1_r07_s5107_high_mu0.903359",
+      "p5s0c_dev_t1_r07_s5107_low_mu0.225573",
+      "p5s0c_dev_t1_r07_s5107_mid_mu0.500836",
+      "p5s0c_dev_t5_r06_s5106_high_mu0.917878",
+      "p5s0c_dev_t5_r06_s5106_low_mu0.283428",
+      "p5s0c_dev_t5_r06_s5106_mid_mu0.455479",
+      "p5s0c_dev_t5_r07_s5107_high_mu0.960037",
+      "p5s0c_dev_t5_r07_s5107_low_mu0.210709",
+      "p5s0c_dev_t5_r07_s5107_mid_mu0.555512",
+      "p5s0c_dev_t6_r07_s5107_high_mu0.971507",
+      "p5s0c_dev_t6_r07_s5107_low_mu0.233902",
+      "p5s0c_dev_t6_r07_s5107_mid_mu0.522882"
+    ],
+    "strict_discordant_pairs": 20
+  },
+  "probe_gate": {
+    "cluster_bootstrap_95ci_lower_gt_zero": true,
+    "mean_excess_less_than_no_probe": true,
+    "pair_adaptive_success_min": 0.75,
+    "probe_minus_no_probe_pair_success_min": 0.2,
+    "under_force_max": 0.1
+  },
+  "single_goal": "Train deployment-aligned strict pre-probe full-task feasibility and gate GT before conditional Probe versus strict No-Probe.",
+  "source_code": "/home/exouser/Tabero/analysis/preprobe_full_task_feasibility.py",
+  "status": "FROZEN_BEFORE_NEW_TRAINING_OR_DEV_OUTCOMES",
+  "training": {
+    "batch_size": 64,
+    "epochs": 80,
+    "gradient_clip": 1.0,
+    "lr": 0.0008,
+    "normalization": "strict TRAIN inputs only",
+    "optimizer": "AdamW",
+    "sampling": "TRAIN-only inverse-frequency task x friction-band x outcome x boundary-role",
+    "weight_decay": 0.0001
+  },
+  "vla_role": "Frozen pi0 provides task semantics/staging and the inherited H8 nominal Cartesian motion; it is not trained or modified.",
+  "world_model_line": "STOPPED"
+}

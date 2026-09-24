@@ -1,0 +1,125 @@
+{
+  "attribution_rules": {
+    "CALIBRATION_BOUNDARY_ERROR": "raw ensemble threshold decision is correct at the mistaken anchor but calibrated ensemble flips it",
+    "FRONTIER_LABEL_INSTABILITY": "an independent valid same-context replay contradicts the original anchor outcome defining F_star",
+    "RAW_MODEL_ERROR": "raw local ordering is nonmonotonic beyond 0.02 or raw mistaken-anchor decision is wrong by >0.15 without unstable real label evidence",
+    "THRESHOLD_ONLY_ERROR": "raw and calibrated local ordering are non-decreasing and mistaken calibrated anchor is within 0.15 of 0.5 without a calibration flip"
+  },
+  "authoritative_force_support": {
+    "p5s0c_dev_t1_r06_s5106_low_mu0.262418": [
+      4.0,
+      4.5,
+      5.0,
+      5.5,
+      6.0
+    ],
+    "p5s0c_dev_t6_r07_s5107_low_mu0.233902": [
+      3.0,
+      3.5,
+      4.0
+    ]
+  },
+  "cases": {
+    "CASE_A": {
+      "context_id": "p5s0c_dev_t1_r06_s5106_low_mu0.262418",
+      "offgrid": [
+        5.25,
+        5.5,
+        5.75
+      ],
+      "real_F_star": 5.5,
+      "selected_force": 6.0,
+      "task": 1
+    },
+    "CASE_B": {
+      "context_id": "p5s0c_dev_t6_r07_s5107_low_mu0.233902",
+      "offgrid": [
+        3.0,
+        3.25,
+        3.5,
+        3.75
+      ],
+      "real_F_star": 3.5,
+      "selected_force": 3.0,
+      "task": 6
+    }
+  },
+  "created_utc": "2026-08-30T07:29:03.766308+00:00",
+  "decision_rules": {
+    "FIX_BACKEND_FIRST": "either case has a HIGH/MEDIUM-confidence stable frontier plus confident raw wrong-side prediction, nonmonotonic response beyond tolerance, or absent adjacent force sensitivity not attributable to calibration/seed variance",
+    "GO_CONTINUOUS": "both errors are one 0.5N step; no high-confidence stable-label raw force-sensitivity failure; curves are locally non-decreasing/smooth within tolerance; and each error is explained by threshold/calibration/seed variance or LOW-confidence contradictory frontier replay"
+  },
+  "ensemble_rules": {
+    "calibrated": "mean of per-seed TRAIN-only isotonic probability",
+    "raw": "mean of per-seed sigmoid(raw logit)",
+    "selection": "minimum authoritative force with ensemble probability >=0.5",
+    "threshold": 0.5
+  },
+  "forbidden": [
+    "training",
+    "architecture/calibration/threshold modification",
+    "Probe",
+    "No-Probe",
+    "TEST",
+    "simulator",
+    "real continuous-force rollout",
+    "world-model development"
+  ],
+  "frontier_confidence": {
+    "HIGH": "at least two independent consistent observations at both boundary anchors",
+    "LOW": "independent valid replay contradicts either boundary-defining anchor",
+    "MEDIUM": "single authoritative observation with consistent neighbor evidence and no contradiction"
+  },
+  "metrics": {
+    "high_confidence_false_safe_min": 0.75,
+    "high_seed_std_min": 0.2,
+    "input_distance": "TRAIN-normalized H8 x, force column excluded; Euclidean RMS",
+    "monotonic_drop_tolerance": 0.02,
+    "near_threshold_abs_margin_max": 0.15,
+    "nearby_contexts": "up to 3 same-task exact-correct DEV contexts, ordered by same-band then mu distance then input distance",
+    "strong_adjacent_delta_min": 0.15,
+    "weak_adjacent_delta_max": 0.05
+  },
+  "offgrid_model_only": {
+    "CASE_A": [
+      5.25,
+      5.5,
+      5.75
+    ],
+    "CASE_B": [
+      3.0,
+      3.25,
+      3.5,
+      3.75
+    ],
+    "role": "diagnostic only; no simulator execution; no inferred crossing is a real continuous F_star"
+  },
+  "raw_logit_extraction": "direct frozen PREPROBE_FEASIBILITY forward pass using checkpoint-embedded TRAIN normalization",
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "single_goal": "Attribute the only two strict pre-probe GT discrete frontier errors and choose GO_CONTINUOUS or FIX_BACKEND_FIRST.",
+  "source_hashes": {
+    "/home/exouser/Tabero/analysis/active_probe_necessity.py": "7c1e82b67f54cfc7e644b43447cf54c501b870e67bd0599ef3d76a2d4aaf7479",
+    "/home/exouser/Tabero/analysis/counterfactual_force_world_model.py": "c088369626b2cd783f45f5130d932fd7aba6dcc9e54b3504c1a81b4e4317d560",
+    "/home/exouser/Tabero/analysis/full_task_feasibility_decoder.py": "bf002ca6a5e190f0eff4e0429bd3340f9acfdb4a694dde2528a98581ce8ff83d",
+    "/home/exouser/Tabero/analysis/preprobe_full_task_feasibility.py": "12b34cee3c704088e511db1f797eaf17482e425bfe2691454ad7bd5441b5cfdb",
+    "/home/exouser/Tabero/analysis/results/p5s0c_paired_boundary_probe_value_20260824_000542/P5S0C_BRANCH_MANIFEST.csv": "778190f29b9414c7590141c6b07ba1bf29e625a8fd8ccea20559d466480c778a",
+    "/home/exouser/Tabero/analysis/results/preprobe_full_task_feasibility_20260830_071139/PREPROBE_CALIBRATION_seed0.json": "30c97bd7b3a603aaa9efc14969213844d33c02b199b20af02330edcf70cf394f",
+    "/home/exouser/Tabero/analysis/results/preprobe_full_task_feasibility_20260830_071139/PREPROBE_CALIBRATION_seed1.json": "463d1961b790d47db2b4c54ffca380d46cce8fc061de869f5249f24e848bb9e3",
+    "/home/exouser/Tabero/analysis/results/preprobe_full_task_feasibility_20260830_071139/PREPROBE_CALIBRATION_seed2.json": "cbed4e230f8dd25226d617a4018ada3bec6058e57635ed5ac2ca38a50b42efee",
+    "/home/exouser/Tabero/analysis/results/preprobe_full_task_feasibility_20260830_071139/PREPROBE_FEASIBILITY_CHECKPOINT_MANIFEST.json": "ab97dda8b7bc4f7329334d15d4c1a853739975257c13e7f204b080c5b20547ec",
+    "/home/exouser/Tabero/analysis/results/preprobe_full_task_feasibility_20260830_071139/PREPROBE_FEASIBILITY_seed0.pt": "926eb051eef876bee034c58bc35f93b0bfc9bee79407aacb262ccba1866a220f",
+    "/home/exouser/Tabero/analysis/results/preprobe_full_task_feasibility_20260830_071139/PREPROBE_FEASIBILITY_seed1.pt": "378ac1332734ccf5fcf805be6ab633048f0eb04c76a4da99aec078afa14e2507",
+    "/home/exouser/Tabero/analysis/results/preprobe_full_task_feasibility_20260830_071139/PREPROBE_FEASIBILITY_seed2.pt": "e24f57e98ff46ae6d3c1a07624b93833aef1475732c94ab4f5b133d7ecba6690",
+    "/home/exouser/Tabero/analysis/results/preprobe_full_task_feasibility_20260830_071139/PREPROBE_FULL_TASK_FEASIBILITY_PROTOCOL.json": "a2e1953fca2e3734dfa657d8648947a2af06a6ee060f3bcfeab5fedd62c373fd",
+    "/home/exouser/Tabero/analysis/results/preprobe_full_task_feasibility_20260830_071139/PREPROBE_GT_DISCORDANT_RESULT.csv": "dae5973d42665e120c86a9804cc1958e26babf946a2ae5d45a4512047d2f85a4",
+    "/home/exouser/Tabero/analysis/results/preprobe_full_task_feasibility_20260830_071139/PREPROBE_STATE_RECONSTRUCTION_AUDIT.json": "f07dc90cc1bc30a9510cb2e9ffb04ccb268b5bce9069ba43dd247ca703aadb76",
+    "/home/exouser/Tabero/analysis/results/targeted_direct_event_collection_20260829_193500/CORRECTED_DIRECT_EVENT_DATASET_AUDIT.json": "2e47ab49b3cbdf575fca92ca7db5795da667158e8ee0d83e117677b5b1d900aa",
+    "/home/exouser/Tabero/analysis/results/targeted_direct_event_collection_20260829_193500/DIRECT_EVENT_TARGET_MANIFEST.csv": "78750e5b71b5698763a5d3ac3431d9dd071c46c8c052980e19c2c8bc61aef646",
+    "/home/exouser/Tabero/analysis/trajectory_physical_imagination.py": "429761e395e5d6c4f658326e4f5642629eeaaf6498c2217f8f4829695340c2ff"
+  },
+  "status": "FROZEN_BEFORE_DETAILED_MODEL_OUTPUT_INSPECTION"
+}

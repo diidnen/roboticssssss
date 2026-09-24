@@ -1,0 +1,35 @@
+{
+  "cases": [
+    [
+      "baseline_01",
+      0.0
+    ],
+    [
+      "baseline_02",
+      0.0
+    ],
+    [
+      "shallower_10mm",
+      0.01
+    ],
+    [
+      "shallower_20mm",
+      0.02
+    ]
+  ],
+  "root": 200002,
+  "friction": 0.7,
+  "policy_seed": 30200002,
+  "source_hashes": {
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_original_restore_20260912/MU070_CANONICAL_GEOMETRY_DIAGNOSTIC.md": "87e0d8652b15609f27a3ef42e03b36b569bbb6a9a7751a2822aba93b246cc108",
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_original_restore_20260912/diagnose_canonical_rim_alignment.py": "eaf0ce26e1622a3fd8a2ee1b1217e30e0689eb06f93bf6c4419f9601702627ad",
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_original_restore_20260912/run_mu070_rim_diagnostics.py": "cc6268a97b1a3697f2f3c52619b9c7c7f4c98a43215466af50fa65d4002df760",
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_original_restore_20260912/canonical_open_ready_query.py": "a24c5144dc73badd408d99c860ca61c96000a8c58def572417a91ad0c1e84384",
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_original_restore_20260912/trace_original_query_contact.py": "2f99e7ed5a200a92781be85141a63cb7e425bab79e198b344c718fea665aa2dd"
+  },
+  "frozen_runtime_sha256": "76659a1c950d51a27944932347c14127c24c14b784b16d1614058661b2fbae40",
+  "formal_admission": false,
+  "query_failures_retained": true,
+  "automatic_adoption_or_retry": false,
+  "started_utc": "2026-09-12T20:10:24.999557+00:00"
+}

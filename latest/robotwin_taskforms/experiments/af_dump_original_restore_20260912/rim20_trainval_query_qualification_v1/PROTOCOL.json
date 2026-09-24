@@ -1,0 +1,42 @@
+{
+  "frictions": [
+    0.7,
+    0.6,
+    0.3,
+    0.35,
+    0.4,
+    0.45,
+    0.5,
+    0.55,
+    0.65,
+    0.75,
+    0.8,
+    0.85,
+    0.325,
+    0.475,
+    0.625,
+    0.775,
+    0.7
+  ],
+  "offset_m": 0.02,
+  "root": 200002,
+  "policy_seed": 30200002,
+  "source_hashes": {
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_original_restore_20260912/RIM20_QUALIFICATION_PROTOCOL.md": "cb630fdfdaf7dc6325cefa8a843ff2a78d0f6307d82fb913cdf7930109a563d9",
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_original_restore_20260912/run_rim20_qualification.py": "ebd62e2625151afdfdc27b93080523cb94e8081966175e29d6b4a266d5f90cf9",
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_original_restore_20260912/diagnose_canonical_rim_alignment.py": "eaf0ce26e1622a3fd8a2ee1b1217e30e0689eb06f93bf6c4419f9601702627ad",
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_original_restore_20260912/canonical_open_ready_query.py": "a24c5144dc73badd408d99c860ca61c96000a8c58def572417a91ad0c1e84384",
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_original_restore_20260912/trace_original_query_contact.py": "2f99e7ed5a200a92781be85141a63cb7e425bab79e198b344c718fea665aa2dd",
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_original_restore_20260912/analyze_mu060_highrate.py": "3821560e63257ed2b67a7298347f30d5f9d6324d75452161d9bab1792a3a9b81",
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_original_restore_20260912/audit_original_collected_group.py": "35e36c26ea706e1d36e4df5472676aca69a00f1827e09a55ee74666f304b07b6",
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_original_restore_20260912/check_canonical_contact_order.py": "d3c9bc10a22bed0d4f0ad353b1befb71ca3a3c31c6ea96b5d944fb51fa63b835",
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_original_restore_20260912/rootlocal_collection_contract.py": "118f71acc1be0b8b9efc95cc6031bfeb00877fcc62dc384b50cffc8c09ae3c89",
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_original_restore_20260912/MU070_CANONICAL_GEOMETRY_DIAGNOSTIC.md": "87e0d8652b15609f27a3ef42e03b36b569bbb6a9a7751a2822aba93b246cc108",
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_original_restore_20260912/run_mu070_rim_diagnostics.py": "cc6268a97b1a3697f2f3c52619b9c7c7f4c98a43215466af50fa65d4002df760"
+  },
+  "frozen_runtime_sha256": "76659a1c950d51a27944932347c14127c24c14b784b16d1614058661b2fbae40",
+  "candidate_evidence_sha256": "5bc8976b62ad1c2ac1b9d72915f6802352374919ff5ed9a05aa9388db7483577",
+  "formal_admission": false,
+  "test_contexts_used": false,
+  "started_utc": "2026-09-12T20:21:58.687616+00:00"
+}

@@ -1,0 +1,22 @@
+{
+  "architectures": {
+    "DETERMINISTIC_GRU": {
+      "param_count": 12673
+    },
+    "Q2F_GNP": {
+      "param_count": 11145
+    },
+    "Q2F_THRESHOLD": {
+      "param_count": 11114
+    },
+    "TASK_FORCE_MLP": {
+      "param_count": 1441
+    },
+    "TASK_FORCE_THRESHOLD": {
+      "param_count": 386
+    }
+  },
+  "feature_count": 46,
+  "force_normalization": "2 * ((F - 3) / 5) - 1",
+  "input_dim": 46
+}

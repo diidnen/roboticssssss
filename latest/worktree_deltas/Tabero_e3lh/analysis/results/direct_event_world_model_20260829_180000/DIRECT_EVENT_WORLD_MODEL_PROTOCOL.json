@@ -1,0 +1,248 @@
+{
+  "active_phases": [
+    "lift",
+    "over_basket",
+    "place",
+    "transit"
+  ],
+  "architecture": "unchanged ShortHorizonPhysicsGRU hidden=64, same trunk; no new capacity",
+  "authoritative_input_sha256": {
+    "/home/exouser/Tabero/analysis/results/counterfactual_force_world_model_20260829_160000/COUNTERFACTUAL_FORCE_PAIRS.csv": "67966d3b8586084be3b32201145c68e46c73b8e4226f4bac4f1dee051b87d511",
+    "/home/exouser/Tabero/analysis/results/counterfactual_force_world_model_20260829_160000/COUNTERFACTUAL_FORCE_PAIR_AUDIT.json": "89a7641b6e47a3c328d645f75ac7b37b90134f6ff9f1fd9f7328b76790319fe8",
+    "/home/exouser/Tabero/analysis/results/counterfactual_force_world_model_20260829_160000/FINAL_REPORT.md": "a9931ebdc96e6941f21c34d65bd57844833a933de33087ceb763d70dc3618184",
+    "/home/exouser/Tabero/analysis/results/counterfactual_force_world_model_20260829_160000/FORCE_IE_LOSS_SPEC.json": "6031ac6b34a899d41efbe60c4f554fd789f31a790b9a07577951495b8158a7e7",
+    "/home/exouser/Tabero/analysis/results/direct_contact_boundary_imagination_20260829_000205/DIRECT_CONTACT_DATASET_AUDIT.json": "7eda383c80690ec0aed016e8707e30efce6d68d899d31820b01787b419be2cde",
+    "/home/exouser/Tabero/analysis/results/direct_contact_boundary_imagination_20260829_000205/DIRECT_CONTACT_LOGGER_AUDIT.json": "6c48fe1aec070b01106afff0b2cf4f517767305ee3f288255780a953a5c65d7f",
+    "/home/exouser/Tabero/analysis/results/direct_contact_boundary_imagination_20260829_000205/DIRECT_PHYSICAL_EVENT_DEFINITION.json": "63a7b1fef7bf0ada723ec6b7e8fec4e29e4624390c0c1aa0c9b8a92d1be9f525",
+    "/home/exouser/Tabero/analysis/results/evaluator_interface_calibration_20260829_112603/CALIBRATED_EVALUATOR_FREEZE.json": "3a0466942c9c03a4d9cdcefe03fc4d88e07af62f01cf9058e9c8ffe5ccc2be60",
+    "/home/exouser/Tabero/analysis/results/evaluator_interface_calibration_20260829_112603/FROZEN_EVALUATOR_DECOMPOSITION.json": "5767169ce27a74fbc16809705a83582984c5df0781dbd60ede2600326e505f70",
+    "/home/exouser/Tabero/analysis/results/failure_preservation_forensic_20260829_170000/FAILURE_EVALUATOR_INTERFACE_AUDIT.csv": "c4fef61c0e6ce7fafac41b2ed7a4aec5fa665dc8c899d00e951cc94f17ed5f7c",
+    "/home/exouser/Tabero/analysis/results/failure_preservation_forensic_20260829_170000/FAILURE_SUPERVISION_WEIGHT_AUDIT.json": "29f4b5e1d34526eaa9e614eac7f2f95458bb8754269650254e94b60b38216012",
+    "/home/exouser/Tabero/analysis/results/failure_preservation_forensic_20260829_170000/FAILURE_VARIABLE_REAL_VS_MODEL.csv": "d55ccdb6925249f9398343189460acc5ceea51fdb0571d1f9114801f4e352e1c",
+    "/home/exouser/Tabero/analysis/results/failure_preservation_forensic_20260829_170000/FINAL_REPORT.md": "f15717554c0268084be72ac371c505976cf360d0b2325076a72b02ec569a799b",
+    "/home/exouser/Tabero/analysis/results/failure_preservation_forensic_20260829_170000/TRAIN_FAILURE_COVERAGE_AUDIT.json": "3fe48843316830ad7ff3b80254927c16444e3d3285ffc05f8a717c3a92507bdc"
+  },
+  "coverage_checkpoint_set": [
+    "/home/exouser/Tabero/analysis/results/counterfactual_force_world_model_20260829_160000/PHYSICS_GRU_COVERAGE_seed0.pt",
+    "/home/exouser/Tabero/analysis/results/counterfactual_force_world_model_20260829_160000/PHYSICS_GRU_COVERAGE_seed1.pt",
+    "/home/exouser/Tabero/analysis/results/counterfactual_force_world_model_20260829_160000/PHYSICS_GRU_COVERAGE_seed2.pt"
+  ],
+  "created_utc": "2026-08-29T16:31:07.712158+00:00",
+  "current_ie_checkpoint_set": [
+    "/home/exouser/Tabero/analysis/results/counterfactual_force_world_model_20260829_160000/PHYSICS_GRU_FORCE_IE_lambda1.0_seed0.pt",
+    "/home/exouser/Tabero/analysis/results/counterfactual_force_world_model_20260829_160000/PHYSICS_GRU_FORCE_IE_lambda1.0_seed1.pt",
+    "/home/exouser/Tabero/analysis/results/counterfactual_force_world_model_20260829_160000/PHYSICS_GRU_FORCE_IE_lambda1.0_seed2.pt"
+  ],
+  "event_semantics_source": "/home/exouser/Tabero/analysis/results/direct_contact_boundary_imagination_20260829_000205/DIRECT_PHYSICAL_EVENT_DEFINITION.json",
+  "event_targets": [
+    "left_contact",
+    "right_contact",
+    "bilateral_contact",
+    "contact_loss"
+  ],
+  "excluded_phases": [
+    "release",
+    "settle"
+  ],
+  "frozen_boundary_pairs": [
+    {
+      "a_branch_id": "p5s0c_dev_t1_r06_s5106_mid_mu0.515227_BRANCH_F4p0_R1_F4",
+      "b_branch_id": "p5s0c_dev_t1_r06_s5106_mid_mu0.515227_BRANCH_F4p5_R1_F4.5",
+      "context_id": "p5s0c_dev_t1_r06_s5106_mid_mu0.515227",
+      "force_a_N": 4.0,
+      "force_b_N": 4.5,
+      "friction": 0.5152267522480724,
+      "group_id": "direct:p5s0c_dev_t1_r06_s5106_mid_mu0.515227",
+      "pair_id": "direct:p5s0c_dev_t1_r06_s5106_mid_mu0.515227:4.0_vs_4.5",
+      "root_id": "p5s0c_dev_t1_root06_s5106",
+      "source": "direct",
+      "split": "DEV",
+      "task": 1
+    },
+    {
+      "a_branch_id": "p5s0c_dev_t0_r06_s5106_low_mu0.288234_BRANCH_F4p0_F4",
+      "b_branch_id": "p5s0c_dev_t0_r06_s5106_low_mu0.288234_BRANCH_F4p5_F4.5",
+      "context_id": "p5s0c_dev_t0_r06_s5106_low_mu0.288234",
+      "force_a_N": 4.0,
+      "force_b_N": 4.5,
+      "friction": 0.2882343327859944,
+      "group_id": "historical:p5s0c_dev_t0_r06_s5106_low_mu0.288234",
+      "pair_id": "historical:p5s0c_dev_t0_r06_s5106_low_mu0.288234:4.0_vs_4.5",
+      "root_id": "p5s0c_dev_t0_root06_s5106",
+      "source": "historical",
+      "split": "DEV",
+      "task": 0
+    },
+    {
+      "a_branch_id": "p5s0c_dev_t0_r07_s5107_low_mu0.294781_BRANCH_F4p0_F4",
+      "b_branch_id": "p5s0c_dev_t0_r07_s5107_low_mu0.294781_BRANCH_F4p5_F4.5",
+      "context_id": "p5s0c_dev_t0_r07_s5107_low_mu0.294781",
+      "force_a_N": 4.0,
+      "force_b_N": 4.5,
+      "friction": 0.2947813460786453,
+      "group_id": "historical:p5s0c_dev_t0_r07_s5107_low_mu0.294781",
+      "pair_id": "historical:p5s0c_dev_t0_r07_s5107_low_mu0.294781:4.0_vs_4.5",
+      "root_id": "p5s0c_dev_t0_root07_s5107",
+      "source": "historical",
+      "split": "DEV",
+      "task": 0
+    },
+    {
+      "a_branch_id": "p5s0c_dev_t1_r06_s5106_low_mu0.262418_BRANCH_F5p0_F5",
+      "b_branch_id": "p5s0c_dev_t1_r06_s5106_low_mu0.262418_BRANCH_F5p5_F5.5",
+      "context_id": "p5s0c_dev_t1_r06_s5106_low_mu0.262418",
+      "force_a_N": 5.0,
+      "force_b_N": 5.5,
+      "friction": 0.2624184362235552,
+      "group_id": "historical:p5s0c_dev_t1_r06_s5106_low_mu0.262418",
+      "pair_id": "historical:p5s0c_dev_t1_r06_s5106_low_mu0.262418:5.0_vs_5.5",
+      "root_id": "p5s0c_dev_t1_root06_s5106",
+      "source": "historical",
+      "split": "DEV",
+      "task": 1
+    },
+    {
+      "a_branch_id": "p5s0c_dev_t1_r06_s5106_mid_mu0.515227_BRANCH_F4p0_F4",
+      "b_branch_id": "p5s0c_dev_t1_r06_s5106_mid_mu0.515227_BRANCH_F4p5_F4.5",
+      "context_id": "p5s0c_dev_t1_r06_s5106_mid_mu0.515227",
+      "force_a_N": 4.0,
+      "force_b_N": 4.5,
+      "friction": 0.5152267522480724,
+      "group_id": "historical:p5s0c_dev_t1_r06_s5106_mid_mu0.515227",
+      "pair_id": "historical:p5s0c_dev_t1_r06_s5106_mid_mu0.515227:4.0_vs_4.5",
+      "root_id": "p5s0c_dev_t1_root06_s5106",
+      "source": "historical",
+      "split": "DEV",
+      "task": 1
+    },
+    {
+      "a_branch_id": "p5s0c_dev_t1_r07_s5107_low_mu0.225573_BRANCH_F5p5_F5.5",
+      "b_branch_id": "p5s0c_dev_t1_r07_s5107_low_mu0.225573_BRANCH_F6p0_F6",
+      "context_id": "p5s0c_dev_t1_r07_s5107_low_mu0.225573",
+      "force_a_N": 5.5,
+      "force_b_N": 6.0,
+      "friction": 0.2255725764990141,
+      "group_id": "historical:p5s0c_dev_t1_r07_s5107_low_mu0.225573",
+      "pair_id": "historical:p5s0c_dev_t1_r07_s5107_low_mu0.225573:5.5_vs_6.0",
+      "root_id": "p5s0c_dev_t1_root07_s5107",
+      "source": "historical",
+      "split": "DEV",
+      "task": 1
+    },
+    {
+      "a_branch_id": "p5s0c_dev_t1_r07_s5107_mid_mu0.500836_BRANCH_F4p0_F4",
+      "b_branch_id": "p5s0c_dev_t1_r07_s5107_mid_mu0.500836_BRANCH_F4p5_F4.5",
+      "context_id": "p5s0c_dev_t1_r07_s5107_mid_mu0.500836",
+      "force_a_N": 4.0,
+      "force_b_N": 4.5,
+      "friction": 0.500835695412869,
+      "group_id": "historical:p5s0c_dev_t1_r07_s5107_mid_mu0.500836",
+      "pair_id": "historical:p5s0c_dev_t1_r07_s5107_mid_mu0.500836:4.0_vs_4.5",
+      "root_id": "p5s0c_dev_t1_root07_s5107",
+      "source": "historical",
+      "split": "DEV",
+      "task": 1
+    },
+    {
+      "a_branch_id": "p5s0c_dev_t5_r06_s5106_low_mu0.283428_BRANCH_F4p0_F4",
+      "b_branch_id": "p5s0c_dev_t5_r06_s5106_low_mu0.283428_BRANCH_F4p5_F4.5",
+      "context_id": "p5s0c_dev_t5_r06_s5106_low_mu0.283428",
+      "force_a_N": 4.0,
+      "force_b_N": 4.5,
+      "friction": 0.2834278244355604,
+      "group_id": "historical:p5s0c_dev_t5_r06_s5106_low_mu0.283428",
+      "pair_id": "historical:p5s0c_dev_t5_r06_s5106_low_mu0.283428:4.0_vs_4.5",
+      "root_id": "p5s0c_dev_t5_root06_s5106",
+      "source": "historical",
+      "split": "DEV",
+      "task": 5
+    },
+    {
+      "a_branch_id": "p5s0c_dev_t5_r07_s5107_low_mu0.210709_BRANCH_F4p5_F4.5",
+      "b_branch_id": "p5s0c_dev_t5_r07_s5107_low_mu0.210709_BRANCH_F5p0_F5",
+      "context_id": "p5s0c_dev_t5_r07_s5107_low_mu0.210709",
+      "force_a_N": 4.5,
+      "force_b_N": 5.0,
+      "friction": 0.2107091015129449,
+      "group_id": "historical:p5s0c_dev_t5_r07_s5107_low_mu0.210709",
+      "pair_id": "historical:p5s0c_dev_t5_r07_s5107_low_mu0.210709:4.5_vs_5.0",
+      "root_id": "p5s0c_dev_t5_root07_s5107",
+      "source": "historical",
+      "split": "DEV",
+      "task": 5
+    },
+    {
+      "a_branch_id": "p5s0c_dev_t6_r07_s5107_low_mu0.233902_BRANCH_F3p0_F3",
+      "b_branch_id": "p5s0c_dev_t6_r07_s5107_low_mu0.233902_BRANCH_F3p5_F3.5",
+      "context_id": "p5s0c_dev_t6_r07_s5107_low_mu0.233902",
+      "force_a_N": 3.0,
+      "force_b_N": 3.5,
+      "friction": 0.2339024543861059,
+      "group_id": "historical:p5s0c_dev_t6_r07_s5107_low_mu0.233902",
+      "pair_id": "historical:p5s0c_dev_t6_r07_s5107_low_mu0.233902:3.0_vs_3.5",
+      "root_id": "p5s0c_dev_t6_root07_s5107",
+      "source": "historical",
+      "split": "DEV",
+      "task": 6
+    }
+  ],
+  "frozen_no_posthoc_changes": [
+    "event definition",
+    "horizon",
+    "pair subset",
+    "evaluator",
+    "context subset",
+    "lambda_IE",
+    "seeds",
+    "budget"
+  ],
+  "gates": {
+    "dev_event_valid_boundary_pairs_min": 6,
+    "dev_event_valid_groups_min": 10,
+    "eligible_tasks_min": 3,
+    "event_label_validity_min": 0.95,
+    "friction_regions_min": 2,
+    "future_command_exact_match_min": 0.95,
+    "no_logger_bug": true,
+    "no_root_leakage": true,
+    "train_event_valid_boundary_pairs_min": 15,
+    "train_event_valid_groups_min": 30
+  },
+  "horizon": 8,
+  "label_construction": {
+    "bilateral_contact": "left AND right",
+    "contact_loss": "bilateral 1->0 transition in active phase",
+    "left_contact": "corrected contact_left",
+    "normal_check": "min(left/right local normal)<0.15N is an audit signal, not a replacement contact label",
+    "right_contact": "corrected contact_right"
+  },
+  "lambda_event_candidates": [
+    0.1,
+    0.3,
+    1.0
+  ],
+  "logger_lineage_classes": [
+    "CORRECTED_DIRECT",
+    "OFFLINE_RECONSTRUCTABLE",
+    "PROXY_ONLY",
+    "INVALID_LOGGER_LINEAGE"
+  ],
+  "new_simulator_rollouts": 0,
+  "new_training": false,
+  "pair_sampling": "inherit CFWM pair-balanced sampling; both branches in one batch; no pair definition changes",
+  "protocol_name": "DIRECT_EVENT_WORLD_MODEL",
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "slip_target": "only if authoritative direct slip label is present; current artifact marks provisional slip proxy NOT accepted",
+  "splits": "TRAIN/DEV only for this run; TEST unopened",
+  "status": "FROZEN_BEFORE_LABELABILITY_OUTCOMES",
+  "test_used": false,
+  "training_budget": "identical to CFWM, only if labelability gate passes",
+  "variants": {
+    "baseline": "PHYSICS_GRU_FORCE_IE, lambda_IE=1.0",
+    "event": "PHYSICS_GRU_FORCE_IE_EVENT, lambda_IE=1.0 + lambda_event*L_event"
+  }
+}

@@ -1,0 +1,230 @@
+{
+  "DEV_context_ids": [
+    "pv_dev_t5_r06_s5106_low_mu0.283428",
+    "pv_dev_t5_r07_s5107_low_mu0.210709"
+  ],
+  "DEV_outcomes_read_at_freeze": false,
+  "DEV_root_ids": [
+    "pv_dev_t5_root06_s5106",
+    "pv_dev_t5_root07_s5107"
+  ],
+  "PCA": {
+    "DEV_fit_forbidden": true,
+    "fit_split": "task5 TRAIN only",
+    "path": "/home/exouser/FORTE/taskwise_visual_context_20260831_074000/task5_train_frozen/TASK5_PCA17_TRAIN_ONLY.npz",
+    "sha256": "68c3d4bc7aa2d5080e29433fea1526ddf7de00037098dfe56da6ef213c7de5c2"
+  },
+  "TEST_used": false,
+  "TRAIN_context_ids": [
+    "pv_train_t5_r00_s5100_high_mu0.945004",
+    "pv_train_t5_r00_s5100_low_mu0.270805",
+    "pv_train_t5_r00_s5100_mid_mu0.538330",
+    "pv_train_t5_r01_s5101_high_mu0.977978",
+    "pv_train_t5_r01_s5101_low_mu0.269928",
+    "pv_train_t5_r01_s5101_mid_mu0.531976",
+    "pv_train_t5_r02_s5102_high_mu0.938254",
+    "pv_train_t5_r02_s5102_low_mu0.295394",
+    "pv_train_t5_r02_s5102_mid_mu0.569222",
+    "pv_train_t5_r03_s5103_high_mu0.971853",
+    "pv_train_t5_r03_s5103_low_mu0.268456",
+    "pv_train_t5_r03_s5103_mid_mu0.579422",
+    "pv_train_t5_r04_s5104_high_mu0.927670",
+    "pv_train_t5_r04_s5104_low_mu0.296413",
+    "pv_train_t5_r04_s5104_mid_mu0.479493",
+    "pv_train_t5_r05_s5105_high_mu0.955667",
+    "pv_train_t5_r05_s5105_low_mu0.212460",
+    "pv_train_t5_r05_s5105_mid_mu0.478580"
+  ],
+  "TRAIN_root_ids": [
+    "pv_train_t5_root00_s5100",
+    "pv_train_t5_root01_s5101",
+    "pv_train_t5_root02_s5102",
+    "pv_train_t5_root03_s5103",
+    "pv_train_t5_root04_s5104",
+    "pv_train_t5_root05_s5105"
+  ],
+  "checkpoints": [
+    {
+      "model": "PROSPECTIVE_BASE_FEAS",
+      "path": "/home/exouser/FORTE/taskwise_visual_context_20260831_074000/task5_train_frozen/PROSPECTIVE_BASE_FEAS_task5_seed0.pt",
+      "seed": 0,
+      "sha256": "cfc39d1990dbf64d3113db78bf857cc4486971cea1e45d0ed3949b85219c6f37"
+    },
+    {
+      "model": "PROSPECTIVE_BASE_FEAS",
+      "path": "/home/exouser/FORTE/taskwise_visual_context_20260831_074000/task5_train_frozen/PROSPECTIVE_BASE_FEAS_task5_seed1.pt",
+      "seed": 1,
+      "sha256": "21acc393352866dbcec930e9ea9fb1789da26799eb4428986e2c624a342c66e3"
+    },
+    {
+      "model": "PROSPECTIVE_BASE_FEAS",
+      "path": "/home/exouser/FORTE/taskwise_visual_context_20260831_074000/task5_train_frozen/PROSPECTIVE_BASE_FEAS_task5_seed2.pt",
+      "seed": 2,
+      "sha256": "5faa0ca1399ecb0f16aa249b84da6d574c7834c65e91c591e7615429cb465d01"
+    },
+    {
+      "model": "VISUAL_INTERCEPT_RESIDUAL",
+      "path": "/home/exouser/FORTE/taskwise_visual_context_20260831_074000/task5_train_frozen/VISUAL_INTERCEPT_RESIDUAL_task5_seed0.pt",
+      "seed": 0,
+      "sha256": "6cb223d4c728374cae9aac4e67d857b323b7ec03ebc48b3b64923b1fe76c2a63"
+    },
+    {
+      "model": "VISUAL_INTERCEPT_RESIDUAL",
+      "path": "/home/exouser/FORTE/taskwise_visual_context_20260831_074000/task5_train_frozen/VISUAL_INTERCEPT_RESIDUAL_task5_seed1.pt",
+      "seed": 1,
+      "sha256": "bf07b0742f8c8acc241f149b7cb46b3b8c8b22d040f70fea123014831c1cfe46"
+    },
+    {
+      "model": "VISUAL_INTERCEPT_RESIDUAL",
+      "path": "/home/exouser/FORTE/taskwise_visual_context_20260831_074000/task5_train_frozen/VISUAL_INTERCEPT_RESIDUAL_task5_seed2.pt",
+      "seed": 2,
+      "sha256": "ebb953c08067c6092983a22df78905819990e218162f64524d4f23fe8ff49ea8"
+    },
+    {
+      "model": "VISUAL_CONTEXT_FULL_FEAS",
+      "path": "/home/exouser/FORTE/taskwise_visual_context_20260831_074000/task5_train_frozen/VISUAL_CONTEXT_FULL_FEAS_task5_seed0.pt",
+      "seed": 0,
+      "sha256": "81f2bd50f550cfd17160a1146d4af6240cf3f97b184929b88f39d7be675ef9d6"
+    },
+    {
+      "model": "VISUAL_CONTEXT_FULL_FEAS",
+      "path": "/home/exouser/FORTE/taskwise_visual_context_20260831_074000/task5_train_frozen/VISUAL_CONTEXT_FULL_FEAS_task5_seed1.pt",
+      "seed": 1,
+      "sha256": "0f20eda0e9996cbe826bf49a82d84033bb744b9ddb1fa117ebc03d13726ffc0f"
+    },
+    {
+      "model": "VISUAL_CONTEXT_FULL_FEAS",
+      "path": "/home/exouser/FORTE/taskwise_visual_context_20260831_074000/task5_train_frozen/VISUAL_CONTEXT_FULL_FEAS_task5_seed2.pt",
+      "seed": 2,
+      "sha256": "f0a4f264f3ac1f7dc98ed167883aec26ed86bc9907448102b85726e7655e1027"
+    },
+    {
+      "model": "VISUAL_CONTEXT_JOINT",
+      "path": "/home/exouser/FORTE/taskwise_visual_context_20260831_074000/task5_train_frozen/VISUAL_CONTEXT_JOINT_task5_seed0.pt",
+      "seed": 0,
+      "sha256": "3228db957927a46de075eb4b3aa0342fc9e0fbe07c20022f7b2036931bf8ec05"
+    },
+    {
+      "model": "VISUAL_CONTEXT_JOINT",
+      "path": "/home/exouser/FORTE/taskwise_visual_context_20260831_074000/task5_train_frozen/VISUAL_CONTEXT_JOINT_task5_seed1.pt",
+      "seed": 1,
+      "sha256": "f9a00fb8ac7d5501ef1f6362d32572f35f3d3bc04b00848b9dd3eb0b80af3c7a"
+    },
+    {
+      "model": "VISUAL_CONTEXT_JOINT",
+      "path": "/home/exouser/FORTE/taskwise_visual_context_20260831_074000/task5_train_frozen/VISUAL_CONTEXT_JOINT_task5_seed2.pt",
+      "seed": 2,
+      "sha256": "f59f00dc87767eaba775c286a6d7b9dd8a33eabbe802b0e00f46b691adb267e9"
+    }
+  ],
+  "created_at_utc": "2026-08-31T08:05:16.053552+00:00",
+  "dense_query_grid_N": [
+    3.0,
+    3.05,
+    3.1,
+    3.15,
+    3.2,
+    3.25,
+    3.3,
+    3.35,
+    3.4,
+    3.45,
+    3.5,
+    3.55,
+    3.6,
+    3.65,
+    3.7,
+    3.75,
+    3.8,
+    3.85,
+    3.9,
+    3.95,
+    4.0,
+    4.05,
+    4.1,
+    4.15,
+    4.2,
+    4.25,
+    4.3,
+    4.35,
+    4.4,
+    4.45,
+    4.5,
+    4.55,
+    4.6,
+    4.65,
+    4.7,
+    4.75,
+    4.8,
+    4.85,
+    4.9,
+    4.95,
+    5.0
+  ],
+  "expected_DEV_branches": 90,
+  "goal": "test whether task0 visual memorization/generalization and Joint behavior recur on this task",
+  "no_DEV_calibration": true,
+  "no_DEV_checkpoint_selection": true,
+  "no_post_freeze_model_PCA_feature_loss_or_threshold_changes": true,
+  "normalization": {
+    "fit_split": "task5 TRAIN only",
+    "path": "/home/exouser/FORTE/taskwise_visual_context_20260831_074000/task5_train_frozen/TASK5_TRAIN_NORMALIZATION.npz",
+    "sha256": "0b49dc0a3248a0c5d60fe06369e57b23957f3e37d9c0bea82ba5d9922d40f932"
+  },
+  "object": "tomato sauce",
+  "real_force_grid_N": [
+    3.0,
+    3.25,
+    3.5,
+    3.75,
+    4.0,
+    4.25,
+    4.5,
+    4.75,
+    5.0
+  ],
+  "rho": 0.8,
+  "single_context_rule": null,
+  "status": "FROZEN_BEFORE_TASK5_DEV_OPENED",
+  "task": 5,
+  "task1_label_sensitivity": {
+    "reason": "140/180 TRAIN labels use the preregistered terminal-height fallback; available direct task1 labels agree 40/40, while task5 indicates a 2/180 rare transient-contact miss rate",
+    "required": false,
+    "rule": "report task1 classification with this material caveat and mark any TRAIN/CV conclusion label-sensitive when its model gap is not larger than the empirical 2/180 reference rate"
+  },
+  "winner_rules": {
+    "GT_gate": {
+      "finite_model_decision_coverage_min": 0.8,
+      "frontier_MAE_max_N": 0.2,
+      "probability_MAE_max": 0.2,
+      "systematic_nonmonotonicity_forbidden": true,
+      "under_force_rate_max": 0.1,
+      "valid_real_frontier_coverage_min": 0.8
+    },
+    "force_interaction": {
+      "OR_frontier_MAE_improvement_min_N": 0.05,
+      "full_vs_residual_probability_MAE_relative_improvement_min": 0.1,
+      "multiple_contexts": true,
+      "safety_nonworse": true
+    },
+    "joint_win": {
+      "Brier_NLL_not_worse": true,
+      "frontier_MAE_improvement_min_N": 0.05,
+      "multiple_contexts": true,
+      "probability_MAE_relative_improvement_min": 0.1,
+      "systematic_nonmonotonicity_forbidden": true,
+      "under_force_nonworse": true
+    },
+    "offset_only": {
+      "residual_fraction_of_full_MAE_gain_min": 0.7,
+      "safety_nonworse": true
+    },
+    "visual_generalizes": {
+      "frontier_MAE_improvement_min_N": 0.05,
+      "monotonicity_degradation_max": 0.1,
+      "multiple_independent_DEV_contexts": true,
+      "probability_MAE_relative_improvement_min": 0.2,
+      "under_force_nonworse": true
+    }
+  }
+}

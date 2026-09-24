@@ -1,0 +1,50 @@
+{
+  "claim_boundary": "same-root AF-liftstyle v3 argmax_p [0.25,8]@0.25 vs reused Nominal; original dump probe then pi0 remainder; EU logged not executed",
+  "created_utc": "2026-09-14T17:00:54.520788+00:00",
+  "established_grasp_N": null,
+  "formal_contexts": 24,
+  "formal_frictions": [
+    0.425,
+    0.575,
+    0.85
+  ],
+  "formal_policy_seeds": [
+    80200002,
+    80200003,
+    80200004,
+    80200005,
+    80200006,
+    80200007,
+    80200008,
+    80200009
+  ],
+  "methods_executed": [
+    "ActiveForcing"
+  ],
+  "methods_reused": [
+    "Nominal Frozen VLA"
+  ],
+  "methods_skipped": [
+    "Fixed-Strong 8N"
+  ],
+  "models_deploy": "/media/volume/dasdas/exouser/af_dump_formal_liftstyle_v3_20260915/models_deploy",
+  "physical_root": 200002,
+  "pi0_remainder_only": true,
+  "reused_nominal_results": "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_formal_single_root_20260914/FINAL_RESULTS.json",
+  "runtime_manifest": "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_maxf8_20260913/additional_data_v1/RUNTIME_MANIFEST.json",
+  "runtime_manifest_sha256": "01d0289b14b812a4a12455e826a0b213ef4bf4fcdb27717892289b7e137b5034",
+  "selector": "LiftstyleFeasibility v3 argmax_p on [0.25,8] step 0.25",
+  "source_hashes": {
+    "/media/volume/dasdas/exouser/af_dump_formal_liftstyle_v3_20260915/EXPERIMENT_CARD.md": "bc79379b79623548a68e0a81c7e453e491a7c6bce6693599e6a410a753f1592c",
+    "/media/volume/dasdas/exouser/af_dump_formal_liftstyle_v3_20260915/audit_formal_results.py": "939de5759b27bfda9485450c3c501977bea4356f197a357058cd3a994d919420",
+    "/media/volume/dasdas/exouser/af_dump_formal_liftstyle_v3_20260915/freeze_plan.py": "689e5546283882e9ec439c435cd910aace5eafd10903b6ad63b962643aca4271",
+    "/media/volume/dasdas/exouser/af_dump_formal_liftstyle_v3_20260915/hold_chunk.py": "c773f00a6a7b67f50cb14fdecadc5300067f79469b7fad4158bc465da40f6514",
+    "/media/volume/dasdas/exouser/af_dump_formal_liftstyle_v3_20260915/infer_af_context.py": "8fac8887ee9cae93580b68ecd1d98b31455148114fba0717779c913d3e8e74d0",
+    "/media/volume/dasdas/exouser/af_dump_formal_liftstyle_v3_20260915/infer_liftstyle.py": "8c2764fbeb1ed56f240c2e6ebd4d339a2a58d6c346227a38a5578bcbae04c3da",
+    "/media/volume/dasdas/exouser/af_dump_formal_liftstyle_v3_20260915/liftstyle_runtime.py": "b393baf6175800402ba214033e86271e2b2fbc24416d9fc038e604cef9b2ffea",
+    "/media/volume/dasdas/exouser/af_dump_formal_liftstyle_v3_20260915/max_force_utility.py": "275e32f34609a6bb9af3e6ca31f6f55f58b0d4472dfc5876eb7cf0da1b29da0d",
+    "/media/volume/dasdas/exouser/af_dump_formal_liftstyle_v3_20260915/run_af_queue.py": "0872bdc51c1eb2ebec6278e5c198f00bf96e22b42428563ce67457c3ef43b03c"
+  },
+  "task": "dump_bin_bigbin",
+  "version": "AF_DUMP_FORMAL_LIFTSTYLE_FEAS_V3"
+}

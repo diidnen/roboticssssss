@@ -1,0 +1,105 @@
+{
+  "F_max": 5.0,
+  "F_min": 0.25,
+  "P4_version": "unused_at_v4_BCE; query still dump shear 4N/0.012m from collection recipe",
+  "architecture": "dump_phasefree_gru10_cond54",
+  "belief": "not used at train time; point mu written into feature col 11; P4 unused (plan.PROTOCOL belief field)",
+  "belief_checkpoint": null,
+  "candidate_force_grid_N": [
+    0.25,
+    0.5,
+    0.75,
+    1.0,
+    1.25,
+    1.5,
+    1.75,
+    2.0,
+    2.25,
+    2.5,
+    2.75,
+    3.0,
+    3.25,
+    3.5,
+    3.75,
+    4.0,
+    4.25,
+    4.5,
+    4.75,
+    5.0
+  ],
+  "claim_boundary": "v4 checkpoint frozen; selector-only EU eval on existing snapshot-fork labels; not official 18/19; Fig.B untouched",
+  "dataset": "/media/volume/dasdas/exouser/af_dump_liftstyle_feas_v4_relabel_20260915",
+  "feasibility_checkpoints": {
+    "member_seed0.pt": {
+      "bytes": 110203,
+      "mtime_utc": "2026-09-15T11:04:24.115193+00:00",
+      "path": "/media/volume/dasdas/exouser/af_dump_liftstyle_feas_v4_relabel_20260915/models/member_seed0.pt",
+      "sha256": "31eadce06ba7ccc832e7e2a1ec280735f4bde9419c314df0b3e3ad050a62bd62"
+    },
+    "member_seed1.pt": {
+      "bytes": 110203,
+      "mtime_utc": "2026-09-15T11:04:25.190207+00:00",
+      "path": "/media/volume/dasdas/exouser/af_dump_liftstyle_feas_v4_relabel_20260915/models/member_seed1.pt",
+      "sha256": "a0bb6b1a438364df2ac608447f070f29680c870bad7c88bcd407285b9326be08"
+    },
+    "member_seed2.pt": {
+      "bytes": 110203,
+      "mtime_utc": "2026-09-15T11:04:26.263220+00:00",
+      "path": "/media/volume/dasdas/exouser/af_dump_liftstyle_feas_v4_relabel_20260915/models/member_seed2.pt",
+      "sha256": "ca7a89868018f6588db22372990c681ab611f867b4edac968f503bdfaabb27a6"
+    }
+  },
+  "feature_contract": {
+    "force_col": 10,
+    "force_norm": 8.0,
+    "mq_source": "scripted_eef_hold_interp_8_like_lift_v5",
+    "mu_col": 11,
+    "phase": "phase-free dump_phasefree_gru10_cond54",
+    "remainder": "snapshot-fork scripted dump remainder; not pi0",
+    "shape": [
+      8,
+      64
+    ]
+  },
+  "force_norm_metadata_note": "force_norm=8.0 is feature scaling leftover from maxF8; selector F_max is 5.0",
+  "force_step_N": 0.25,
+  "matched_eval_source": "main_records snapshot-fork outcomes; same prefix per context; no new simulation",
+  "members": [
+    {
+      "epoch": 26,
+      "seed": 0,
+      "val_nll": 0.45093679428100586
+    },
+    {
+      "epoch": 31,
+      "seed": 1,
+      "val_nll": 0.44466882944107056
+    },
+    {
+      "epoch": 34,
+      "seed": 2,
+      "val_nll": 0.43488606810569763
+    }
+  ],
+  "n_contexts": 32,
+  "n_force_cells": 640,
+  "official_18_19_path_untouched": "/media/volume/dasdas/exouser/af_dump_formal_liftclone_eu_fmax5_20260915",
+  "p_full_source": "TRAIN_RESULTS.json selections[].p_success_by_force (frozen ensemble; no re-forward)",
+  "splits": {
+    "TEST_roots": [
+      200014
+    ],
+    "TRAIN_roots": [
+      200002,
+      200003
+    ],
+    "VAL_roots": [
+      200010
+    ],
+    "n_TEST": 8,
+    "n_TRAIN": 16,
+    "n_VAL": 8
+  },
+  "utility": "p*(Fmax-F)/Fmax - (1-p)",
+  "utility_Fmax_used": 5.0
+}

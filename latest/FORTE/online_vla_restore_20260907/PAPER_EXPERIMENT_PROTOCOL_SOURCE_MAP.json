@@ -1,0 +1,37 @@
+{
+  "role": "PROTOCOL_SOURCE_MAP_NOT_COMPLETION_CERTIFICATE",
+  "protocol": "/home/exouser/FORTE/online_vla_restore_20260907/paper_online_experiment_protocol.tex",
+  "protocol_sha256": "a6ed833622451eb30b0af116858862489671e2334aaae08ddbbe73cb70852721",
+  "evidence": [
+    {
+      "claim": "full_task_geometry",
+      "source": "/media/volume/newdata/exouser/online_vla_activeforcing_20260907/final_vla_v1/SOURCE_SNAPSHOT/runtime.py",
+      "function": "evaluate",
+      "line": 100,
+      "sha256": "65ee446a50d35b2cda72e30cac09e3235c537d0f62a8034576118996e9625f9b"
+    },
+    {
+      "claim": "independent_geometry",
+      "source": "/media/volume/newdata/exouser/online_vla_activeforcing_20260907/final_vla_v1/SOURCE_SNAPSHOT/audit_geometric_label.py",
+      "function": "audit",
+      "line": 12,
+      "sha256": "63c3371a9ae5d73eeba53cbbbfd994c95b6d11c84a946f004039c54b07aaa6d1"
+    },
+    {
+      "claim": "force_and_grouping_metrics",
+      "source": "/media/volume/newdata/exouser/online_vla_activeforcing_20260907/final_vla_v1/SOURCE_SNAPSHOT/build_final_online_results.py",
+      "function": "build",
+      "line": 14,
+      "sha256": "84360aa17cab2fa28f8d79160baeadc2c8178d9484dfe795eafaa5dfd687b183"
+    },
+    {
+      "claim": "frozen_run_admission",
+      "source": "/media/volume/newdata/exouser/online_vla_activeforcing_20260907/final_vla_v1/SOURCE_SNAPSHOT/run_final_online_vla.py",
+      "function": "validate",
+      "line": 26,
+      "sha256": "23e1d21174376f25ef39e390183f7e2f532b4c20aa1c482b1c8c7cf35ce82d5e"
+    }
+  ],
+  "results_pending": true,
+  "typesetting_pending": true
+}

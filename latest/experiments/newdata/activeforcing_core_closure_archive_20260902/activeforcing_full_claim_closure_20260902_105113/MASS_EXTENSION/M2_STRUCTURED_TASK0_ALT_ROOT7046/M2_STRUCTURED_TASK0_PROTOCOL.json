@@ -1,0 +1,30 @@
+{
+  "status": "COMPLETED",
+  "task": 0,
+  "object": "alphabet_soup_1",
+  "query": "frozen_P4B",
+  "fixed_friction": 0.5,
+  "mass_bands_kg": {
+    "LOW": 0.025,
+    "MID": 0.05,
+    "HIGH": 0.1
+  },
+  "forces_N": [
+    0.5,
+    1.0,
+    1.5,
+    2.5,
+    4.0
+  ],
+  "roots": [
+    7046
+  ],
+  "path_structure": "LONG_TRANSPORT_TURNING_ACCELERATION_V1",
+  "vla_retraining": false,
+  "controller_law_changed": false,
+  "qualification_only": true,
+  "contexts": 3,
+  "branches": 15,
+  "dt_s": 0.05,
+  "nominal_mass_kg": 0.10000000149011612
+}

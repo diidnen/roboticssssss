@@ -1,0 +1,1490 @@
+{
+  "SCHEMA": "CURRENT_FULLTASK_8x71_ZERO_BASED",
+  "FEAS_FEATURE_TOTAL_DIM": 71,
+  "SEQUENCE_DIM": 17,
+  "CONDITION_DIM": 54,
+  "SCRIPT_ONLY_FEATURES_FOUND": {
+    "hard_script_phase_indices": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "historical_script_sourced_motion_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "additional_hidden_script_stage_or_waypoint_fields": [],
+    "distinction": "Six motion definitions are reusable with causal online chunk; seven scripted phase labels are removed entirely."
+  },
+  "PROPOSED_FINAL_TOTAL_DIM": 64,
+  "PROPOSED_FINAL_SEQUENCE_DIM": 10,
+  "CONDITION_DIM_UNCHANGED": 54,
+  "SCRIPT_ONLY_FEATURES_REMOVED": "7 phase columns pending exact-removal verification and runtime integration; 6 motion sources already replaced in dev runtime.",
+  "FEATURE_RECORDS": [
+    {
+      "FEATURE_NAME": "chunk_relative_x",
+      "FEATURE_INDEX": 0,
+      "INDEX_BASE": 0,
+      "SOURCE_FUNCTION": [
+        "/home/exouser/FORTE/analysis/results/current_runtime_branch_execution_v6_20260905/branch_execution.py::preaction_features",
+        "/home/exouser/FORTE/activeforcing_feasibility_features.py::nominal_input",
+        "/home/exouser/FORTE/online_vla_restore_20260907/worker.py::make_sequence"
+      ],
+      "SOURCE_DATA": "Historical: first eight p4._interp(start,start,i,20) commands. Restored VLA candidate: first eight decoded XYZ targets from current online inference.",
+      "AVAILABLE_PRE_ACTION": true,
+      "AVAILABLE_DURING_ONLINE_VLA": false,
+      "SCRIPT_ONLY": true,
+      "CAUSAL": true,
+      "DEPENDS_ON_FUTURE_ACTION": false,
+      "RECOMMENDED_FINAL_STATUS": "REPLACE_SOURCE_WITH_CURRENT_ONLINE_VLA_CHUNK; ALREADY IMPLEMENTED IN DEV",
+      "AVAILABLE_DURING_ONLINE_VLA_AFTER_REPLACEMENT": true,
+      "DEPENDS_ON_CURRENT_PREDICTED_CHUNK": true,
+      "FUTURE_ACTION_NOTE": "Predicted chunk is known before force selection; no executed future trajectory or outcome is read.",
+      "FINAL_ONLINE_VLA_OBSERVABLE": true,
+      "FINAL_PRE_ACTION_CAUSAL": true,
+      "FINAL_SCRIPT_ONLY": false,
+      "COVERAGE_RISK": "Old 647 motion magnitude <=1.1920929e-7. Online motion is outside old support; qualification required."
+    },
+    {
+      "FEATURE_NAME": "chunk_relative_y",
+      "FEATURE_INDEX": 1,
+      "INDEX_BASE": 0,
+      "SOURCE_FUNCTION": [
+        "/home/exouser/FORTE/analysis/results/current_runtime_branch_execution_v6_20260905/branch_execution.py::preaction_features",
+        "/home/exouser/FORTE/activeforcing_feasibility_features.py::nominal_input",
+        "/home/exouser/FORTE/online_vla_restore_20260907/worker.py::make_sequence"
+      ],
+      "SOURCE_DATA": "Historical: first eight p4._interp(start,start,i,20) commands. Restored VLA candidate: first eight decoded XYZ targets from current online inference.",
+      "AVAILABLE_PRE_ACTION": true,
+      "AVAILABLE_DURING_ONLINE_VLA": false,
+      "SCRIPT_ONLY": true,
+      "CAUSAL": true,
+      "DEPENDS_ON_FUTURE_ACTION": false,
+      "RECOMMENDED_FINAL_STATUS": "REPLACE_SOURCE_WITH_CURRENT_ONLINE_VLA_CHUNK; ALREADY IMPLEMENTED IN DEV",
+      "AVAILABLE_DURING_ONLINE_VLA_AFTER_REPLACEMENT": true,
+      "DEPENDS_ON_CURRENT_PREDICTED_CHUNK": true,
+      "FUTURE_ACTION_NOTE": "Predicted chunk is known before force selection; no executed future trajectory or outcome is read.",
+      "FINAL_ONLINE_VLA_OBSERVABLE": true,
+      "FINAL_PRE_ACTION_CAUSAL": true,
+      "FINAL_SCRIPT_ONLY": false,
+      "COVERAGE_RISK": "Old 647 motion magnitude <=1.1920929e-7. Online motion is outside old support; qualification required."
+    },
+    {
+      "FEATURE_NAME": "chunk_relative_z",
+      "FEATURE_INDEX": 2,
+      "INDEX_BASE": 0,
+      "SOURCE_FUNCTION": [
+        "/home/exouser/FORTE/analysis/results/current_runtime_branch_execution_v6_20260905/branch_execution.py::preaction_features",
+        "/home/exouser/FORTE/activeforcing_feasibility_features.py::nominal_input",
+        "/home/exouser/FORTE/online_vla_restore_20260907/worker.py::make_sequence"
+      ],
+      "SOURCE_DATA": "Historical: first eight p4._interp(start,start,i,20) commands. Restored VLA candidate: first eight decoded XYZ targets from current online inference.",
+      "AVAILABLE_PRE_ACTION": true,
+      "AVAILABLE_DURING_ONLINE_VLA": false,
+      "SCRIPT_ONLY": true,
+      "CAUSAL": true,
+      "DEPENDS_ON_FUTURE_ACTION": false,
+      "RECOMMENDED_FINAL_STATUS": "REPLACE_SOURCE_WITH_CURRENT_ONLINE_VLA_CHUNK; ALREADY IMPLEMENTED IN DEV",
+      "AVAILABLE_DURING_ONLINE_VLA_AFTER_REPLACEMENT": true,
+      "DEPENDS_ON_CURRENT_PREDICTED_CHUNK": true,
+      "FUTURE_ACTION_NOTE": "Predicted chunk is known before force selection; no executed future trajectory or outcome is read.",
+      "FINAL_ONLINE_VLA_OBSERVABLE": true,
+      "FINAL_PRE_ACTION_CAUSAL": true,
+      "FINAL_SCRIPT_ONLY": false,
+      "COVERAGE_RISK": "Old 647 motion magnitude <=1.1920929e-7. Online motion is outside old support; qualification required."
+    },
+    {
+      "FEATURE_NAME": "chunk_step_dx",
+      "FEATURE_INDEX": 3,
+      "INDEX_BASE": 0,
+      "SOURCE_FUNCTION": [
+        "/home/exouser/FORTE/analysis/results/current_runtime_branch_execution_v6_20260905/branch_execution.py::preaction_features",
+        "/home/exouser/FORTE/activeforcing_feasibility_features.py::nominal_input",
+        "/home/exouser/FORTE/online_vla_restore_20260907/worker.py::make_sequence"
+      ],
+      "SOURCE_DATA": "Historical: first eight p4._interp(start,start,i,20) commands. Restored VLA candidate: first eight decoded XYZ targets from current online inference.",
+      "AVAILABLE_PRE_ACTION": true,
+      "AVAILABLE_DURING_ONLINE_VLA": false,
+      "SCRIPT_ONLY": true,
+      "CAUSAL": true,
+      "DEPENDS_ON_FUTURE_ACTION": false,
+      "RECOMMENDED_FINAL_STATUS": "REPLACE_SOURCE_WITH_CURRENT_ONLINE_VLA_CHUNK; ALREADY IMPLEMENTED IN DEV",
+      "AVAILABLE_DURING_ONLINE_VLA_AFTER_REPLACEMENT": true,
+      "DEPENDS_ON_CURRENT_PREDICTED_CHUNK": true,
+      "FUTURE_ACTION_NOTE": "Predicted chunk is known before force selection; no executed future trajectory or outcome is read.",
+      "FINAL_ONLINE_VLA_OBSERVABLE": true,
+      "FINAL_PRE_ACTION_CAUSAL": true,
+      "FINAL_SCRIPT_ONLY": false,
+      "COVERAGE_RISK": "Old 647 motion magnitude <=1.1920929e-7. Online motion is outside old support; qualification required."
+    },
+    {
+      "FEATURE_NAME": "chunk_step_dy",
+      "FEATURE_INDEX": 4,
+      "INDEX_BASE": 0,
+      "SOURCE_FUNCTION": [
+        "/home/exouser/FORTE/analysis/results/current_runtime_branch_execution_v6_20260905/branch_execution.py::preaction_features",
+        "/home/exouser/FORTE/activeforcing_feasibility_features.py::nominal_input",
+        "/home/exouser/FORTE/online_vla_restore_20260907/worker.py::make_sequence"
+      ],
+      "SOURCE_DATA": "Historical: first eight p4._interp(start,start,i,20) commands. Restored VLA candidate: first eight decoded XYZ targets from current online inference.",
+      "AVAILABLE_PRE_ACTION": true,
+      "AVAILABLE_DURING_ONLINE_VLA": false,
+      "SCRIPT_ONLY": true,
+      "CAUSAL": true,
+      "DEPENDS_ON_FUTURE_ACTION": false,
+      "RECOMMENDED_FINAL_STATUS": "REPLACE_SOURCE_WITH_CURRENT_ONLINE_VLA_CHUNK; ALREADY IMPLEMENTED IN DEV",
+      "AVAILABLE_DURING_ONLINE_VLA_AFTER_REPLACEMENT": true,
+      "DEPENDS_ON_CURRENT_PREDICTED_CHUNK": true,
+      "FUTURE_ACTION_NOTE": "Predicted chunk is known before force selection; no executed future trajectory or outcome is read.",
+      "FINAL_ONLINE_VLA_OBSERVABLE": true,
+      "FINAL_PRE_ACTION_CAUSAL": true,
+      "FINAL_SCRIPT_ONLY": false,
+      "COVERAGE_RISK": "Old 647 motion magnitude <=1.1920929e-7. Online motion is outside old support; qualification required."
+    },
+    {
+      "FEATURE_NAME": "chunk_step_dz",
+      "FEATURE_INDEX": 5,
+      "INDEX_BASE": 0,
+      "SOURCE_FUNCTION": [
+        "/home/exouser/FORTE/analysis/results/current_runtime_branch_execution_v6_20260905/branch_execution.py::preaction_features",
+        "/home/exouser/FORTE/activeforcing_feasibility_features.py::nominal_input",
+        "/home/exouser/FORTE/online_vla_restore_20260907/worker.py::make_sequence"
+      ],
+      "SOURCE_DATA": "Historical: first eight p4._interp(start,start,i,20) commands. Restored VLA candidate: first eight decoded XYZ targets from current online inference.",
+      "AVAILABLE_PRE_ACTION": true,
+      "AVAILABLE_DURING_ONLINE_VLA": false,
+      "SCRIPT_ONLY": true,
+      "CAUSAL": true,
+      "DEPENDS_ON_FUTURE_ACTION": false,
+      "RECOMMENDED_FINAL_STATUS": "REPLACE_SOURCE_WITH_CURRENT_ONLINE_VLA_CHUNK; ALREADY IMPLEMENTED IN DEV",
+      "AVAILABLE_DURING_ONLINE_VLA_AFTER_REPLACEMENT": true,
+      "DEPENDS_ON_CURRENT_PREDICTED_CHUNK": true,
+      "FUTURE_ACTION_NOTE": "Predicted chunk is known before force selection; no executed future trajectory or outcome is read.",
+      "FINAL_ONLINE_VLA_OBSERVABLE": true,
+      "FINAL_PRE_ACTION_CAUSAL": true,
+      "FINAL_SCRIPT_ONLY": false,
+      "COVERAGE_RISK": "Old 647 motion magnitude <=1.1920929e-7. Online motion is outside old support; qualification required."
+    },
+    {
+      "FEATURE_NAME": "script_phase_branch_hold",
+      "FEATURE_INDEX": 6,
+      "INDEX_BASE": 0,
+      "SOURCE_FUNCTION": [
+        "/home/exouser/FORTE/analysis/results/current_runtime_branch_execution_v6_20260905/branch_execution.py::preaction_features",
+        "/home/exouser/FORTE/activeforcing_feasibility_features.py::nominal_input"
+      ],
+      "SOURCE_DATA": "Hard-coded ['branch_hold']*8. Not measured task progress.",
+      "AVAILABLE_PRE_ACTION": true,
+      "AVAILABLE_DURING_ONLINE_VLA": false,
+      "SCRIPT_ONLY": true,
+      "CAUSAL": true,
+      "DEPENDS_ON_FUTURE_ACTION": false,
+      "RECOMMENDED_FINAL_STATUS": "REMOVE_NORMALIZED_GRU_INPUT_COLUMN",
+      "FINAL_INPUT_PRESENT": false,
+      "FINAL_SCRIPT_ONLY": false,
+      "NOTE": "All 647 phase vectors identical; normalized contribution exactly zero. No phase proxy necessary to preserve existing function."
+    },
+    {
+      "FEATURE_NAME": "script_phase_lift",
+      "FEATURE_INDEX": 7,
+      "INDEX_BASE": 0,
+      "SOURCE_FUNCTION": [
+        "/home/exouser/FORTE/analysis/results/current_runtime_branch_execution_v6_20260905/branch_execution.py::preaction_features",
+        "/home/exouser/FORTE/activeforcing_feasibility_features.py::nominal_input"
+      ],
+      "SOURCE_DATA": "Hard-coded ['branch_hold']*8. Not measured task progress.",
+      "AVAILABLE_PRE_ACTION": true,
+      "AVAILABLE_DURING_ONLINE_VLA": false,
+      "SCRIPT_ONLY": true,
+      "CAUSAL": true,
+      "DEPENDS_ON_FUTURE_ACTION": false,
+      "RECOMMENDED_FINAL_STATUS": "REMOVE_NORMALIZED_GRU_INPUT_COLUMN",
+      "FINAL_INPUT_PRESENT": false,
+      "FINAL_SCRIPT_ONLY": false,
+      "NOTE": "All 647 phase vectors identical; normalized contribution exactly zero. No phase proxy necessary to preserve existing function."
+    },
+    {
+      "FEATURE_NAME": "script_phase_transit",
+      "FEATURE_INDEX": 8,
+      "INDEX_BASE": 0,
+      "SOURCE_FUNCTION": [
+        "/home/exouser/FORTE/analysis/results/current_runtime_branch_execution_v6_20260905/branch_execution.py::preaction_features",
+        "/home/exouser/FORTE/activeforcing_feasibility_features.py::nominal_input"
+      ],
+      "SOURCE_DATA": "Hard-coded ['branch_hold']*8. Not measured task progress.",
+      "AVAILABLE_PRE_ACTION": true,
+      "AVAILABLE_DURING_ONLINE_VLA": false,
+      "SCRIPT_ONLY": true,
+      "CAUSAL": true,
+      "DEPENDS_ON_FUTURE_ACTION": false,
+      "RECOMMENDED_FINAL_STATUS": "REMOVE_NORMALIZED_GRU_INPUT_COLUMN",
+      "FINAL_INPUT_PRESENT": false,
+      "FINAL_SCRIPT_ONLY": false,
+      "NOTE": "All 647 phase vectors identical; normalized contribution exactly zero. No phase proxy necessary to preserve existing function."
+    },
+    {
+      "FEATURE_NAME": "script_phase_over_basket",
+      "FEATURE_INDEX": 9,
+      "INDEX_BASE": 0,
+      "SOURCE_FUNCTION": [
+        "/home/exouser/FORTE/analysis/results/current_runtime_branch_execution_v6_20260905/branch_execution.py::preaction_features",
+        "/home/exouser/FORTE/activeforcing_feasibility_features.py::nominal_input"
+      ],
+      "SOURCE_DATA": "Hard-coded ['branch_hold']*8. Not measured task progress.",
+      "AVAILABLE_PRE_ACTION": true,
+      "AVAILABLE_DURING_ONLINE_VLA": false,
+      "SCRIPT_ONLY": true,
+      "CAUSAL": true,
+      "DEPENDS_ON_FUTURE_ACTION": false,
+      "RECOMMENDED_FINAL_STATUS": "REMOVE_NORMALIZED_GRU_INPUT_COLUMN",
+      "FINAL_INPUT_PRESENT": false,
+      "FINAL_SCRIPT_ONLY": false,
+      "NOTE": "All 647 phase vectors identical; normalized contribution exactly zero. No phase proxy necessary to preserve existing function."
+    },
+    {
+      "FEATURE_NAME": "script_phase_place",
+      "FEATURE_INDEX": 10,
+      "INDEX_BASE": 0,
+      "SOURCE_FUNCTION": [
+        "/home/exouser/FORTE/analysis/results/current_runtime_branch_execution_v6_20260905/branch_execution.py::preaction_features",
+        "/home/exouser/FORTE/activeforcing_feasibility_features.py::nominal_input"
+      ],
+      "SOURCE_DATA": "Hard-coded ['branch_hold']*8. Not measured task progress.",
+      "AVAILABLE_PRE_ACTION": true,
+      "AVAILABLE_DURING_ONLINE_VLA": false,
+      "SCRIPT_ONLY": true,
+      "CAUSAL": true,
+      "DEPENDS_ON_FUTURE_ACTION": false,
+      "RECOMMENDED_FINAL_STATUS": "REMOVE_NORMALIZED_GRU_INPUT_COLUMN",
+      "FINAL_INPUT_PRESENT": false,
+      "FINAL_SCRIPT_ONLY": false,
+      "NOTE": "All 647 phase vectors identical; normalized contribution exactly zero. No phase proxy necessary to preserve existing function."
+    },
+    {
+      "FEATURE_NAME": "script_phase_release",
+      "FEATURE_INDEX": 11,
+      "INDEX_BASE": 0,
+      "SOURCE_FUNCTION": [
+        "/home/exouser/FORTE/analysis/results/current_runtime_branch_execution_v6_20260905/branch_execution.py::preaction_features",
+        "/home/exouser/FORTE/activeforcing_feasibility_features.py::nominal_input"
+      ],
+      "SOURCE_DATA": "Hard-coded ['branch_hold']*8. Not measured task progress.",
+      "AVAILABLE_PRE_ACTION": true,
+      "AVAILABLE_DURING_ONLINE_VLA": false,
+      "SCRIPT_ONLY": true,
+      "CAUSAL": true,
+      "DEPENDS_ON_FUTURE_ACTION": false,
+      "RECOMMENDED_FINAL_STATUS": "REMOVE_NORMALIZED_GRU_INPUT_COLUMN",
+      "FINAL_INPUT_PRESENT": false,
+      "FINAL_SCRIPT_ONLY": false,
+      "NOTE": "All 647 phase vectors identical; normalized contribution exactly zero. No phase proxy necessary to preserve existing function."
+    },
+    {
+      "FEATURE_NAME": "script_phase_settle",
+      "FEATURE_INDEX": 12,
+      "INDEX_BASE": 0,
+      "SOURCE_FUNCTION": [
+        "/home/exouser/FORTE/analysis/results/current_runtime_branch_execution_v6_20260905/branch_execution.py::preaction_features",
+        "/home/exouser/FORTE/activeforcing_feasibility_features.py::nominal_input"
+      ],
+      "SOURCE_DATA": "Hard-coded ['branch_hold']*8. Not measured task progress.",
+      "AVAILABLE_PRE_ACTION": true,
+      "AVAILABLE_DURING_ONLINE_VLA": false,
+      "SCRIPT_ONLY": true,
+      "CAUSAL": true,
+      "DEPENDS_ON_FUTURE_ACTION": false,
+      "RECOMMENDED_FINAL_STATUS": "REMOVE_NORMALIZED_GRU_INPUT_COLUMN",
+      "FINAL_INPUT_PRESENT": false,
+      "FINAL_SCRIPT_ONLY": false,
+      "NOTE": "All 647 phase vectors identical; normalized contribution exactly zero. No phase proxy necessary to preserve existing function."
+    },
+    {
+      "FEATURE_NAME": "task_onehot_0",
+      "FEATURE_INDEX": 13,
+      "INDEX_BASE": 0,
+      "SOURCE_FUNCTION": [
+        "/home/exouser/FORTE/activeforcing_feasibility_features.py::nominal_input",
+        "/home/exouser/FORTE/online_vla_restore_20260907/worker.py::make_sequence"
+      ],
+      "SOURCE_DATA": "Known requested task ID mapped from frozen task instruction; not simulator task-stage flag.",
+      "AVAILABLE_PRE_ACTION": true,
+      "AVAILABLE_DURING_ONLINE_VLA": true,
+      "SCRIPT_ONLY": false,
+      "CAUSAL": true,
+      "DEPENDS_ON_FUTURE_ACTION": false,
+      "RECOMMENDED_FINAL_STATUS": "KEEP"
+    },
+    {
+      "FEATURE_NAME": "task_onehot_1",
+      "FEATURE_INDEX": 14,
+      "INDEX_BASE": 0,
+      "SOURCE_FUNCTION": [
+        "/home/exouser/FORTE/activeforcing_feasibility_features.py::nominal_input",
+        "/home/exouser/FORTE/online_vla_restore_20260907/worker.py::make_sequence"
+      ],
+      "SOURCE_DATA": "Known requested task ID mapped from frozen task instruction; not simulator task-stage flag.",
+      "AVAILABLE_PRE_ACTION": true,
+      "AVAILABLE_DURING_ONLINE_VLA": true,
+      "SCRIPT_ONLY": false,
+      "CAUSAL": true,
+      "DEPENDS_ON_FUTURE_ACTION": false,
+      "RECOMMENDED_FINAL_STATUS": "KEEP"
+    },
+    {
+      "FEATURE_NAME": "task_onehot_5",
+      "FEATURE_INDEX": 15,
+      "INDEX_BASE": 0,
+      "SOURCE_FUNCTION": [
+        "/home/exouser/FORTE/activeforcing_feasibility_features.py::nominal_input",
+        "/home/exouser/FORTE/online_vla_restore_20260907/worker.py::make_sequence"
+      ],
+      "SOURCE_DATA": "Known requested task ID mapped from frozen task instruction; not simulator task-stage flag.",
+      "AVAILABLE_PRE_ACTION": true,
+      "AVAILABLE_DURING_ONLINE_VLA": true,
+      "SCRIPT_ONLY": false,
+      "CAUSAL": true,
+      "DEPENDS_ON_FUTURE_ACTION": false,
+      "RECOMMENDED_FINAL_STATUS": "KEEP"
+    },
+    {
+      "FEATURE_NAME": "task_onehot_6",
+      "FEATURE_INDEX": 16,
+      "INDEX_BASE": 0,
+      "SOURCE_FUNCTION": [
+        "/home/exouser/FORTE/activeforcing_feasibility_features.py::nominal_input",
+        "/home/exouser/FORTE/online_vla_restore_20260907/worker.py::make_sequence"
+      ],
+      "SOURCE_DATA": "Known requested task ID mapped from frozen task instruction; not simulator task-stage flag.",
+      "AVAILABLE_PRE_ACTION": true,
+      "AVAILABLE_DURING_ONLINE_VLA": true,
+      "SCRIPT_ONLY": false,
+      "CAUSAL": true,
+      "DEPENDS_ON_FUTURE_ACTION": false,
+      "RECOMMENDED_FINAL_STATUS": "KEEP"
+    },
+    {
+      "FEATURE_NAME": "candidate_force_div8",
+      "FEATURE_INDEX": 17,
+      "INDEX_BASE": 0,
+      "SOURCE_FUNCTION": [
+        "/home/exouser/FORTE/current_fulltask_feasibility_runtime.py::CurrentFeasibility",
+        "/home/exouser/FORTE/activeforcing_feasibility_features.py::nominal_input"
+      ],
+      "SOURCE_DATA": "Enumerated candidate force F in [3,5] N divided by8. Available before execution; not measured realized force.",
+      "AVAILABLE_PRE_ACTION": true,
+      "AVAILABLE_DURING_ONLINE_VLA": true,
+      "SCRIPT_ONLY": false,
+      "CAUSAL": true,
+      "DEPENDS_ON_FUTURE_ACTION": false,
+      "RECOMMENDED_FINAL_STATUS": "KEEP"
+    },
+    {
+      "FEATURE_NAME": "posterior_quadrature_mu",
+      "FEATURE_INDEX": 18,
+      "INDEX_BASE": 0,
+      "SOURCE_FUNCTION": [
+        "/home/exouser/FORTE/current_fulltask_feasibility_runtime.py::CurrentFeasibility"
+      ],
+      "SOURCE_DATA": "Runtime: positive continuous posterior integration nodes from current physical probe. Training: simulator friction conditional supervision.",
+      "AVAILABLE_PRE_ACTION": true,
+      "AVAILABLE_DURING_ONLINE_VLA": true,
+      "SCRIPT_ONLY": false,
+      "CAUSAL": true,
+      "DEPENDS_ON_FUTURE_ACTION": false,
+      "RECOMMENDED_FINAL_STATUS": "KEEP",
+      "NOTE": "Training ground truth mu is not a deployment input. Posterior weights integrate model predictions once outside the 71D tensor.",
+      "RUNTIME_HIDDEN_FRICTION_USED": false
+    },
+    {
+      "FEATURE_NAME": "current_state_relative_reference_x",
+      "FEATURE_INDEX": 19,
+      "INDEX_BASE": 0,
+      "SOURCE_FUNCTION": [
+        "/home/exouser/FORTE/analysis/results/current_runtime_branch_execution_v6_20260905/branch_execution.py::preaction_features",
+        "/home/exouser/FORTE/online_vla_restore_20260907/worker.py::make_sequence"
+      ],
+      "SOURCE_DATA": "Zero displacement relative to current pre-action reference; valid constant, not desired waypoint.",
+      "AVAILABLE_PRE_ACTION": true,
+      "AVAILABLE_DURING_ONLINE_VLA": true,
+      "SCRIPT_ONLY": false,
+      "CAUSAL": true,
+      "DEPENDS_ON_FUTURE_ACTION": false,
+      "RECOMMENDED_FINAL_STATUS": "KEEP",
+      "DUPLICATES_FEATURE_INDEX": null,
+      "SIMULATOR_STATE_MEASUREMENT_ASSUMPTION": false,
+      "REAL_ROBOT_OBSERVABILITY_VERIFIED": null,
+      "NOTE": "No future state or downstream outcome read."
+    },
+    {
+      "FEATURE_NAME": "current_state_relative_reference_y",
+      "FEATURE_INDEX": 20,
+      "INDEX_BASE": 0,
+      "SOURCE_FUNCTION": [
+        "/home/exouser/FORTE/analysis/results/current_runtime_branch_execution_v6_20260905/branch_execution.py::preaction_features",
+        "/home/exouser/FORTE/online_vla_restore_20260907/worker.py::make_sequence"
+      ],
+      "SOURCE_DATA": "Zero displacement relative to current pre-action reference; valid constant, not desired waypoint.",
+      "AVAILABLE_PRE_ACTION": true,
+      "AVAILABLE_DURING_ONLINE_VLA": true,
+      "SCRIPT_ONLY": false,
+      "CAUSAL": true,
+      "DEPENDS_ON_FUTURE_ACTION": false,
+      "RECOMMENDED_FINAL_STATUS": "KEEP",
+      "DUPLICATES_FEATURE_INDEX": null,
+      "SIMULATOR_STATE_MEASUREMENT_ASSUMPTION": false,
+      "REAL_ROBOT_OBSERVABILITY_VERIFIED": null,
+      "NOTE": "No future state or downstream outcome read."
+    },
+    {
+      "FEATURE_NAME": "current_state_relative_reference_z",
+      "FEATURE_INDEX": 21,
+      "INDEX_BASE": 0,
+      "SOURCE_FUNCTION": [
+        "/home/exouser/FORTE/analysis/results/current_runtime_branch_execution_v6_20260905/branch_execution.py::preaction_features",
+        "/home/exouser/FORTE/online_vla_restore_20260907/worker.py::make_sequence"
+      ],
+      "SOURCE_DATA": "Zero displacement relative to current pre-action reference; valid constant, not desired waypoint.",
+      "AVAILABLE_PRE_ACTION": true,
+      "AVAILABLE_DURING_ONLINE_VLA": true,
+      "SCRIPT_ONLY": false,
+      "CAUSAL": true,
+      "DEPENDS_ON_FUTURE_ACTION": false,
+      "RECOMMENDED_FINAL_STATUS": "KEEP",
+      "DUPLICATES_FEATURE_INDEX": null,
+      "SIMULATOR_STATE_MEASUREMENT_ASSUMPTION": false,
+      "REAL_ROBOT_OBSERVABILITY_VERIFIED": null,
+      "NOTE": "No future state or downstream outcome read."
+    },
+    {
+      "FEATURE_NAME": "current_state_object_velocity_x",
+      "FEATURE_INDEX": 22,
+      "INDEX_BASE": 0,
+      "SOURCE_FUNCTION": [
+        "/home/exouser/FORTE/analysis/results/current_runtime_branch_execution_v6_20260905/branch_execution.py::preaction_features",
+        "/home/exouser/FORTE/online_vla_restore_20260907/worker.py::make_sequence"
+      ],
+      "SOURCE_DATA": "Current post-probe rigid-object root_velocity; speed is norm(vx,vy). Live Isaac observation captured before action.",
+      "AVAILABLE_PRE_ACTION": true,
+      "AVAILABLE_DURING_ONLINE_VLA": true,
+      "SCRIPT_ONLY": false,
+      "CAUSAL": true,
+      "DEPENDS_ON_FUTURE_ACTION": false,
+      "RECOMMENDED_FINAL_STATUS": "KEEP",
+      "DUPLICATES_FEATURE_INDEX": null,
+      "SIMULATOR_STATE_MEASUREMENT_ASSUMPTION": true,
+      "REAL_ROBOT_OBSERVABILITY_VERIFIED": false,
+      "NOTE": "Object velocity is online available in this simulator, but privileged relative to vision-only deployment; no physical-world velocity estimator has been validated."
+    },
+    {
+      "FEATURE_NAME": "current_state_object_velocity_y",
+      "FEATURE_INDEX": 23,
+      "INDEX_BASE": 0,
+      "SOURCE_FUNCTION": [
+        "/home/exouser/FORTE/analysis/results/current_runtime_branch_execution_v6_20260905/branch_execution.py::preaction_features",
+        "/home/exouser/FORTE/online_vla_restore_20260907/worker.py::make_sequence"
+      ],
+      "SOURCE_DATA": "Current post-probe rigid-object root_velocity; speed is norm(vx,vy). Live Isaac observation captured before action.",
+      "AVAILABLE_PRE_ACTION": true,
+      "AVAILABLE_DURING_ONLINE_VLA": true,
+      "SCRIPT_ONLY": false,
+      "CAUSAL": true,
+      "DEPENDS_ON_FUTURE_ACTION": false,
+      "RECOMMENDED_FINAL_STATUS": "KEEP",
+      "DUPLICATES_FEATURE_INDEX": null,
+      "SIMULATOR_STATE_MEASUREMENT_ASSUMPTION": true,
+      "REAL_ROBOT_OBSERVABILITY_VERIFIED": false,
+      "NOTE": "Object velocity is online available in this simulator, but privileged relative to vision-only deployment; no physical-world velocity estimator has been validated."
+    },
+    {
+      "FEATURE_NAME": "current_state_object_velocity_z",
+      "FEATURE_INDEX": 24,
+      "INDEX_BASE": 0,
+      "SOURCE_FUNCTION": [
+        "/home/exouser/FORTE/analysis/results/current_runtime_branch_execution_v6_20260905/branch_execution.py::preaction_features",
+        "/home/exouser/FORTE/online_vla_restore_20260907/worker.py::make_sequence"
+      ],
+      "SOURCE_DATA": "Current post-probe rigid-object root_velocity; speed is norm(vx,vy). Live Isaac observation captured before action.",
+      "AVAILABLE_PRE_ACTION": true,
+      "AVAILABLE_DURING_ONLINE_VLA": true,
+      "SCRIPT_ONLY": false,
+      "CAUSAL": true,
+      "DEPENDS_ON_FUTURE_ACTION": false,
+      "RECOMMENDED_FINAL_STATUS": "KEEP",
+      "DUPLICATES_FEATURE_INDEX": null,
+      "SIMULATOR_STATE_MEASUREMENT_ASSUMPTION": true,
+      "REAL_ROBOT_OBSERVABILITY_VERIFIED": false,
+      "NOTE": "Object velocity is online available in this simulator, but privileged relative to vision-only deployment; no physical-world velocity estimator has been validated."
+    },
+    {
+      "FEATURE_NAME": "current_state_left_abs_local_normal",
+      "FEATURE_INDEX": 25,
+      "INDEX_BASE": 0,
+      "SOURCE_FUNCTION": [
+        "/home/exouser/FORTE/analysis/results/current_runtime_branch_execution_v6_20260905/branch_execution.py::preaction_features",
+        "/home/exouser/FORTE/online_vla_restore_20260907/worker.py::make_sequence"
+      ],
+      "SOURCE_DATA": "Last actual probe per-finger gripper-local force vector; abs(Fz) or norm(Fxy).",
+      "AVAILABLE_PRE_ACTION": true,
+      "AVAILABLE_DURING_ONLINE_VLA": true,
+      "SCRIPT_ONLY": false,
+      "CAUSAL": true,
+      "DEPENDS_ON_FUTURE_ACTION": false,
+      "RECOMMENDED_FINAL_STATUS": "KEEP",
+      "DUPLICATES_FEATURE_INDEX": null,
+      "SIMULATOR_STATE_MEASUREMENT_ASSUMPTION": false,
+      "REAL_ROBOT_OBSERVABILITY_VERIFIED": null,
+      "NOTE": "No future state or downstream outcome read."
+    },
+    {
+      "FEATURE_NAME": "current_state_right_abs_local_normal",
+      "FEATURE_INDEX": 26,
+      "INDEX_BASE": 0,
+      "SOURCE_FUNCTION": [
+        "/home/exouser/FORTE/analysis/results/current_runtime_branch_execution_v6_20260905/branch_execution.py::preaction_features",
+        "/home/exouser/FORTE/online_vla_restore_20260907/worker.py::make_sequence"
+      ],
+      "SOURCE_DATA": "Last actual probe per-finger gripper-local force vector; abs(Fz) or norm(Fxy).",
+      "AVAILABLE_PRE_ACTION": true,
+      "AVAILABLE_DURING_ONLINE_VLA": true,
+      "SCRIPT_ONLY": false,
+      "CAUSAL": true,
+      "DEPENDS_ON_FUTURE_ACTION": false,
+      "RECOMMENDED_FINAL_STATUS": "KEEP",
+      "DUPLICATES_FEATURE_INDEX": null,
+      "SIMULATOR_STATE_MEASUREMENT_ASSUMPTION": false,
+      "REAL_ROBOT_OBSERVABILITY_VERIFIED": null,
+      "NOTE": "No future state or downstream outcome read."
+    },
+    {
+      "FEATURE_NAME": "current_state_left_local_tangent_norm",
+      "FEATURE_INDEX": 27,
+      "INDEX_BASE": 0,
+      "SOURCE_FUNCTION": [
+        "/home/exouser/FORTE/analysis/results/current_runtime_branch_execution_v6_20260905/branch_execution.py::preaction_features",
+        "/home/exouser/FORTE/online_vla_restore_20260907/worker.py::make_sequence"
+      ],
+      "SOURCE_DATA": "Last actual probe per-finger gripper-local force vector; abs(Fz) or norm(Fxy).",
+      "AVAILABLE_PRE_ACTION": true,
+      "AVAILABLE_DURING_ONLINE_VLA": true,
+      "SCRIPT_ONLY": false,
+      "CAUSAL": true,
+      "DEPENDS_ON_FUTURE_ACTION": false,
+      "RECOMMENDED_FINAL_STATUS": "KEEP",
+      "DUPLICATES_FEATURE_INDEX": null,
+      "SIMULATOR_STATE_MEASUREMENT_ASSUMPTION": false,
+      "REAL_ROBOT_OBSERVABILITY_VERIFIED": null,
+      "NOTE": "No future state or downstream outcome read."
+    },
+    {
+      "FEATURE_NAME": "current_state_right_local_tangent_norm",
+      "FEATURE_INDEX": 28,
+      "INDEX_BASE": 0,
+      "SOURCE_FUNCTION": [
+        "/home/exouser/FORTE/analysis/results/current_runtime_branch_execution_v6_20260905/branch_execution.py::preaction_features",
+        "/home/exouser/FORTE/online_vla_restore_20260907/worker.py::make_sequence"
+      ],
+      "SOURCE_DATA": "Last actual probe per-finger gripper-local force vector; abs(Fz) or norm(Fxy).",
+      "AVAILABLE_PRE_ACTION": true,
+      "AVAILABLE_DURING_ONLINE_VLA": true,
+      "SCRIPT_ONLY": false,
+      "CAUSAL": true,
+      "DEPENDS_ON_FUTURE_ACTION": false,
+      "RECOMMENDED_FINAL_STATUS": "KEEP",
+      "DUPLICATES_FEATURE_INDEX": null,
+      "SIMULATOR_STATE_MEASUREMENT_ASSUMPTION": false,
+      "REAL_ROBOT_OBSERVABILITY_VERIFIED": null,
+      "NOTE": "No future state or downstream outcome read."
+    },
+    {
+      "FEATURE_NAME": "current_state_object_horizontal_speed",
+      "FEATURE_INDEX": 29,
+      "INDEX_BASE": 0,
+      "SOURCE_FUNCTION": [
+        "/home/exouser/FORTE/analysis/results/current_runtime_branch_execution_v6_20260905/branch_execution.py::preaction_features",
+        "/home/exouser/FORTE/online_vla_restore_20260907/worker.py::make_sequence"
+      ],
+      "SOURCE_DATA": "Current post-probe rigid-object root_velocity; speed is norm(vx,vy). Live Isaac observation captured before action.",
+      "AVAILABLE_PRE_ACTION": true,
+      "AVAILABLE_DURING_ONLINE_VLA": true,
+      "SCRIPT_ONLY": false,
+      "CAUSAL": true,
+      "DEPENDS_ON_FUTURE_ACTION": false,
+      "RECOMMENDED_FINAL_STATUS": "KEEP",
+      "DUPLICATES_FEATURE_INDEX": null,
+      "SIMULATOR_STATE_MEASUREMENT_ASSUMPTION": true,
+      "REAL_ROBOT_OBSERVABILITY_VERIFIED": false,
+      "NOTE": "Object velocity is online available in this simulator, but privileged relative to vision-only deployment; no physical-world velocity estimator has been validated."
+    },
+    {
+      "FEATURE_NAME": "current_state_first_finger_joint",
+      "FEATURE_INDEX": 30,
+      "INDEX_BASE": 0,
+      "SOURCE_FUNCTION": [
+        "/home/exouser/FORTE/analysis/results/current_runtime_branch_execution_v6_20260905/branch_execution.py::preaction_features",
+        "/home/exouser/FORTE/online_vla_restore_20260907/worker.py::make_sequence"
+      ],
+      "SOURCE_DATA": "Current robot snapshot finger joint positions; first joint checked against last probe reading, second sign follows native policy.",
+      "AVAILABLE_PRE_ACTION": true,
+      "AVAILABLE_DURING_ONLINE_VLA": true,
+      "SCRIPT_ONLY": false,
+      "CAUSAL": true,
+      "DEPENDS_ON_FUTURE_ACTION": false,
+      "RECOMMENDED_FINAL_STATUS": "KEEP",
+      "DUPLICATES_FEATURE_INDEX": null,
+      "SIMULATOR_STATE_MEASUREMENT_ASSUMPTION": false,
+      "REAL_ROBOT_OBSERVABILITY_VERIFIED": null,
+      "NOTE": "No future state or downstream outcome read."
+    },
+    {
+      "FEATURE_NAME": "current_state_negative_second_finger_joint",
+      "FEATURE_INDEX": 31,
+      "INDEX_BASE": 0,
+      "SOURCE_FUNCTION": [
+        "/home/exouser/FORTE/analysis/results/current_runtime_branch_execution_v6_20260905/branch_execution.py::preaction_features",
+        "/home/exouser/FORTE/online_vla_restore_20260907/worker.py::make_sequence"
+      ],
+      "SOURCE_DATA": "Current robot snapshot finger joint positions; first joint checked against last probe reading, second sign follows native policy.",
+      "AVAILABLE_PRE_ACTION": true,
+      "AVAILABLE_DURING_ONLINE_VLA": true,
+      "SCRIPT_ONLY": false,
+      "CAUSAL": true,
+      "DEPENDS_ON_FUTURE_ACTION": false,
+      "RECOMMENDED_FINAL_STATUS": "KEEP",
+      "DUPLICATES_FEATURE_INDEX": null,
+      "SIMULATOR_STATE_MEASUREMENT_ASSUMPTION": false,
+      "REAL_ROBOT_OBSERVABILITY_VERIFIED": null,
+      "NOTE": "No future state or downstream outcome read."
+    },
+    {
+      "FEATURE_NAME": "current_validity_relative_reference_x",
+      "FEATURE_INDEX": 32,
+      "INDEX_BASE": 0,
+      "SOURCE_FUNCTION": [
+        "/home/exouser/FORTE/analysis/results/current_runtime_branch_execution_v6_20260905/branch_execution.py::preaction_features",
+        "/home/exouser/FORTE/online_vla_restore_20260907/worker.py::make_sequence"
+      ],
+      "SOURCE_DATA": "Validity of Zero displacement relative to current pre-action reference; valid constant, not desired waypoint. One only when the actual decision-time source exists; do not fabricate missing readings.",
+      "AVAILABLE_PRE_ACTION": true,
+      "AVAILABLE_DURING_ONLINE_VLA": true,
+      "SCRIPT_ONLY": false,
+      "CAUSAL": true,
+      "DEPENDS_ON_FUTURE_ACTION": false,
+      "RECOMMENDED_FINAL_STATUS": "KEEP",
+      "DUPLICATES_FEATURE_INDEX": null,
+      "SIMULATOR_STATE_MEASUREMENT_ASSUMPTION": false,
+      "REAL_ROBOT_OBSERVABILITY_VERIFIED": null,
+      "NOTE": "No future state or downstream outcome read."
+    },
+    {
+      "FEATURE_NAME": "current_validity_relative_reference_y",
+      "FEATURE_INDEX": 33,
+      "INDEX_BASE": 0,
+      "SOURCE_FUNCTION": [
+        "/home/exouser/FORTE/analysis/results/current_runtime_branch_execution_v6_20260905/branch_execution.py::preaction_features",
+        "/home/exouser/FORTE/online_vla_restore_20260907/worker.py::make_sequence"
+      ],
+      "SOURCE_DATA": "Validity of Zero displacement relative to current pre-action reference; valid constant, not desired waypoint. One only when the actual decision-time source exists; do not fabricate missing readings.",
+      "AVAILABLE_PRE_ACTION": true,
+      "AVAILABLE_DURING_ONLINE_VLA": true,
+      "SCRIPT_ONLY": false,
+      "CAUSAL": true,
+      "DEPENDS_ON_FUTURE_ACTION": false,
+      "RECOMMENDED_FINAL_STATUS": "KEEP",
+      "DUPLICATES_FEATURE_INDEX": null,
+      "SIMULATOR_STATE_MEASUREMENT_ASSUMPTION": false,
+      "REAL_ROBOT_OBSERVABILITY_VERIFIED": null,
+      "NOTE": "No future state or downstream outcome read."
+    },
+    {
+      "FEATURE_NAME": "current_validity_relative_reference_z",
+      "FEATURE_INDEX": 34,
+      "INDEX_BASE": 0,
+      "SOURCE_FUNCTION": [
+        "/home/exouser/FORTE/analysis/results/current_runtime_branch_execution_v6_20260905/branch_execution.py::preaction_features",
+        "/home/exouser/FORTE/online_vla_restore_20260907/worker.py::make_sequence"
+      ],
+      "SOURCE_DATA": "Validity of Zero displacement relative to current pre-action reference; valid constant, not desired waypoint. One only when the actual decision-time source exists; do not fabricate missing readings.",
+      "AVAILABLE_PRE_ACTION": true,
+      "AVAILABLE_DURING_ONLINE_VLA": true,
+      "SCRIPT_ONLY": false,
+      "CAUSAL": true,
+      "DEPENDS_ON_FUTURE_ACTION": false,
+      "RECOMMENDED_FINAL_STATUS": "KEEP",
+      "DUPLICATES_FEATURE_INDEX": null,
+      "SIMULATOR_STATE_MEASUREMENT_ASSUMPTION": false,
+      "REAL_ROBOT_OBSERVABILITY_VERIFIED": null,
+      "NOTE": "No future state or downstream outcome read."
+    },
+    {
+      "FEATURE_NAME": "current_validity_object_velocity_x",
+      "FEATURE_INDEX": 35,
+      "INDEX_BASE": 0,
+      "SOURCE_FUNCTION": [
+        "/home/exouser/FORTE/analysis/results/current_runtime_branch_execution_v6_20260905/branch_execution.py::preaction_features",
+        "/home/exouser/FORTE/online_vla_restore_20260907/worker.py::make_sequence"
+      ],
+      "SOURCE_DATA": "Validity of Current post-probe rigid-object root_velocity; speed is norm(vx,vy). Live Isaac observation captured before action. One only when the actual decision-time source exists; do not fabricate missing readings.",
+      "AVAILABLE_PRE_ACTION": true,
+      "AVAILABLE_DURING_ONLINE_VLA": true,
+      "SCRIPT_ONLY": false,
+      "CAUSAL": true,
+      "DEPENDS_ON_FUTURE_ACTION": false,
+      "RECOMMENDED_FINAL_STATUS": "KEEP",
+      "DUPLICATES_FEATURE_INDEX": null,
+      "SIMULATOR_STATE_MEASUREMENT_ASSUMPTION": true,
+      "REAL_ROBOT_OBSERVABILITY_VERIFIED": false,
+      "NOTE": "Object velocity is online available in this simulator, but privileged relative to vision-only deployment; no physical-world velocity estimator has been validated."
+    },
+    {
+      "FEATURE_NAME": "current_validity_object_velocity_y",
+      "FEATURE_INDEX": 36,
+      "INDEX_BASE": 0,
+      "SOURCE_FUNCTION": [
+        "/home/exouser/FORTE/analysis/results/current_runtime_branch_execution_v6_20260905/branch_execution.py::preaction_features",
+        "/home/exouser/FORTE/online_vla_restore_20260907/worker.py::make_sequence"
+      ],
+      "SOURCE_DATA": "Validity of Current post-probe rigid-object root_velocity; speed is norm(vx,vy). Live Isaac observation captured before action. One only when the actual decision-time source exists; do not fabricate missing readings.",
+      "AVAILABLE_PRE_ACTION": true,
+      "AVAILABLE_DURING_ONLINE_VLA": true,
+      "SCRIPT_ONLY": false,
+      "CAUSAL": true,
+      "DEPENDS_ON_FUTURE_ACTION": false,
+      "RECOMMENDED_FINAL_STATUS": "KEEP",
+      "DUPLICATES_FEATURE_INDEX": null,
+      "SIMULATOR_STATE_MEASUREMENT_ASSUMPTION": true,
+      "REAL_ROBOT_OBSERVABILITY_VERIFIED": false,
+      "NOTE": "Object velocity is online available in this simulator, but privileged relative to vision-only deployment; no physical-world velocity estimator has been validated."
+    },
+    {
+      "FEATURE_NAME": "current_validity_object_velocity_z",
+      "FEATURE_INDEX": 37,
+      "INDEX_BASE": 0,
+      "SOURCE_FUNCTION": [
+        "/home/exouser/FORTE/analysis/results/current_runtime_branch_execution_v6_20260905/branch_execution.py::preaction_features",
+        "/home/exouser/FORTE/online_vla_restore_20260907/worker.py::make_sequence"
+      ],
+      "SOURCE_DATA": "Validity of Current post-probe rigid-object root_velocity; speed is norm(vx,vy). Live Isaac observation captured before action. One only when the actual decision-time source exists; do not fabricate missing readings.",
+      "AVAILABLE_PRE_ACTION": true,
+      "AVAILABLE_DURING_ONLINE_VLA": true,
+      "SCRIPT_ONLY": false,
+      "CAUSAL": true,
+      "DEPENDS_ON_FUTURE_ACTION": false,
+      "RECOMMENDED_FINAL_STATUS": "KEEP",
+      "DUPLICATES_FEATURE_INDEX": null,
+      "SIMULATOR_STATE_MEASUREMENT_ASSUMPTION": true,
+      "REAL_ROBOT_OBSERVABILITY_VERIFIED": false,
+      "NOTE": "Object velocity is online available in this simulator, but privileged relative to vision-only deployment; no physical-world velocity estimator has been validated."
+    },
+    {
+      "FEATURE_NAME": "current_validity_left_abs_local_normal",
+      "FEATURE_INDEX": 38,
+      "INDEX_BASE": 0,
+      "SOURCE_FUNCTION": [
+        "/home/exouser/FORTE/analysis/results/current_runtime_branch_execution_v6_20260905/branch_execution.py::preaction_features",
+        "/home/exouser/FORTE/online_vla_restore_20260907/worker.py::make_sequence"
+      ],
+      "SOURCE_DATA": "Validity of Last actual probe per-finger gripper-local force vector; abs(Fz) or norm(Fxy). One only when the actual decision-time source exists; do not fabricate missing readings.",
+      "AVAILABLE_PRE_ACTION": true,
+      "AVAILABLE_DURING_ONLINE_VLA": true,
+      "SCRIPT_ONLY": false,
+      "CAUSAL": true,
+      "DEPENDS_ON_FUTURE_ACTION": false,
+      "RECOMMENDED_FINAL_STATUS": "KEEP",
+      "DUPLICATES_FEATURE_INDEX": null,
+      "SIMULATOR_STATE_MEASUREMENT_ASSUMPTION": false,
+      "REAL_ROBOT_OBSERVABILITY_VERIFIED": null,
+      "NOTE": "No future state or downstream outcome read."
+    },
+    {
+      "FEATURE_NAME": "current_validity_right_abs_local_normal",
+      "FEATURE_INDEX": 39,
+      "INDEX_BASE": 0,
+      "SOURCE_FUNCTION": [
+        "/home/exouser/FORTE/analysis/results/current_runtime_branch_execution_v6_20260905/branch_execution.py::preaction_features",
+        "/home/exouser/FORTE/online_vla_restore_20260907/worker.py::make_sequence"
+      ],
+      "SOURCE_DATA": "Validity of Last actual probe per-finger gripper-local force vector; abs(Fz) or norm(Fxy). One only when the actual decision-time source exists; do not fabricate missing readings.",
+      "AVAILABLE_PRE_ACTION": true,
+      "AVAILABLE_DURING_ONLINE_VLA": true,
+      "SCRIPT_ONLY": false,
+      "CAUSAL": true,
+      "DEPENDS_ON_FUTURE_ACTION": false,
+      "RECOMMENDED_FINAL_STATUS": "KEEP",
+      "DUPLICATES_FEATURE_INDEX": null,
+      "SIMULATOR_STATE_MEASUREMENT_ASSUMPTION": false,
+      "REAL_ROBOT_OBSERVABILITY_VERIFIED": null,
+      "NOTE": "No future state or downstream outcome read."
+    },
+    {
+      "FEATURE_NAME": "current_validity_left_local_tangent_norm",
+      "FEATURE_INDEX": 40,
+      "INDEX_BASE": 0,
+      "SOURCE_FUNCTION": [
+        "/home/exouser/FORTE/analysis/results/current_runtime_branch_execution_v6_20260905/branch_execution.py::preaction_features",
+        "/home/exouser/FORTE/online_vla_restore_20260907/worker.py::make_sequence"
+      ],
+      "SOURCE_DATA": "Validity of Last actual probe per-finger gripper-local force vector; abs(Fz) or norm(Fxy). One only when the actual decision-time source exists; do not fabricate missing readings.",
+      "AVAILABLE_PRE_ACTION": true,
+      "AVAILABLE_DURING_ONLINE_VLA": true,
+      "SCRIPT_ONLY": false,
+      "CAUSAL": true,
+      "DEPENDS_ON_FUTURE_ACTION": false,
+      "RECOMMENDED_FINAL_STATUS": "KEEP",
+      "DUPLICATES_FEATURE_INDEX": null,
+      "SIMULATOR_STATE_MEASUREMENT_ASSUMPTION": false,
+      "REAL_ROBOT_OBSERVABILITY_VERIFIED": null,
+      "NOTE": "No future state or downstream outcome read."
+    },
+    {
+      "FEATURE_NAME": "current_validity_right_local_tangent_norm",
+      "FEATURE_INDEX": 41,
+      "INDEX_BASE": 0,
+      "SOURCE_FUNCTION": [
+        "/home/exouser/FORTE/analysis/results/current_runtime_branch_execution_v6_20260905/branch_execution.py::preaction_features",
+        "/home/exouser/FORTE/online_vla_restore_20260907/worker.py::make_sequence"
+      ],
+      "SOURCE_DATA": "Validity of Last actual probe per-finger gripper-local force vector; abs(Fz) or norm(Fxy). One only when the actual decision-time source exists; do not fabricate missing readings.",
+      "AVAILABLE_PRE_ACTION": true,
+      "AVAILABLE_DURING_ONLINE_VLA": true,
+      "SCRIPT_ONLY": false,
+      "CAUSAL": true,
+      "DEPENDS_ON_FUTURE_ACTION": false,
+      "RECOMMENDED_FINAL_STATUS": "KEEP",
+      "DUPLICATES_FEATURE_INDEX": null,
+      "SIMULATOR_STATE_MEASUREMENT_ASSUMPTION": false,
+      "REAL_ROBOT_OBSERVABILITY_VERIFIED": null,
+      "NOTE": "No future state or downstream outcome read."
+    },
+    {
+      "FEATURE_NAME": "current_validity_object_horizontal_speed",
+      "FEATURE_INDEX": 42,
+      "INDEX_BASE": 0,
+      "SOURCE_FUNCTION": [
+        "/home/exouser/FORTE/analysis/results/current_runtime_branch_execution_v6_20260905/branch_execution.py::preaction_features",
+        "/home/exouser/FORTE/online_vla_restore_20260907/worker.py::make_sequence"
+      ],
+      "SOURCE_DATA": "Validity of Current post-probe rigid-object root_velocity; speed is norm(vx,vy). Live Isaac observation captured before action. One only when the actual decision-time source exists; do not fabricate missing readings.",
+      "AVAILABLE_PRE_ACTION": true,
+      "AVAILABLE_DURING_ONLINE_VLA": true,
+      "SCRIPT_ONLY": false,
+      "CAUSAL": true,
+      "DEPENDS_ON_FUTURE_ACTION": false,
+      "RECOMMENDED_FINAL_STATUS": "KEEP",
+      "DUPLICATES_FEATURE_INDEX": null,
+      "SIMULATOR_STATE_MEASUREMENT_ASSUMPTION": true,
+      "REAL_ROBOT_OBSERVABILITY_VERIFIED": false,
+      "NOTE": "Object velocity is online available in this simulator, but privileged relative to vision-only deployment; no physical-world velocity estimator has been validated."
+    },
+    {
+      "FEATURE_NAME": "current_validity_first_finger_joint",
+      "FEATURE_INDEX": 43,
+      "INDEX_BASE": 0,
+      "SOURCE_FUNCTION": [
+        "/home/exouser/FORTE/analysis/results/current_runtime_branch_execution_v6_20260905/branch_execution.py::preaction_features",
+        "/home/exouser/FORTE/online_vla_restore_20260907/worker.py::make_sequence"
+      ],
+      "SOURCE_DATA": "Validity of Current robot snapshot finger joint positions; first joint checked against last probe reading, second sign follows native policy. One only when the actual decision-time source exists; do not fabricate missing readings.",
+      "AVAILABLE_PRE_ACTION": true,
+      "AVAILABLE_DURING_ONLINE_VLA": true,
+      "SCRIPT_ONLY": false,
+      "CAUSAL": true,
+      "DEPENDS_ON_FUTURE_ACTION": false,
+      "RECOMMENDED_FINAL_STATUS": "KEEP",
+      "DUPLICATES_FEATURE_INDEX": null,
+      "SIMULATOR_STATE_MEASUREMENT_ASSUMPTION": false,
+      "REAL_ROBOT_OBSERVABILITY_VERIFIED": null,
+      "NOTE": "No future state or downstream outcome read."
+    },
+    {
+      "FEATURE_NAME": "current_validity_negative_second_finger_joint",
+      "FEATURE_INDEX": 44,
+      "INDEX_BASE": 0,
+      "SOURCE_FUNCTION": [
+        "/home/exouser/FORTE/analysis/results/current_runtime_branch_execution_v6_20260905/branch_execution.py::preaction_features",
+        "/home/exouser/FORTE/online_vla_restore_20260907/worker.py::make_sequence"
+      ],
+      "SOURCE_DATA": "Validity of Current robot snapshot finger joint positions; first joint checked against last probe reading, second sign follows native policy. One only when the actual decision-time source exists; do not fabricate missing readings.",
+      "AVAILABLE_PRE_ACTION": true,
+      "AVAILABLE_DURING_ONLINE_VLA": true,
+      "SCRIPT_ONLY": false,
+      "CAUSAL": true,
+      "DEPENDS_ON_FUTURE_ACTION": false,
+      "RECOMMENDED_FINAL_STATUS": "KEEP",
+      "DUPLICATES_FEATURE_INDEX": null,
+      "SIMULATOR_STATE_MEASUREMENT_ASSUMPTION": false,
+      "REAL_ROBOT_OBSERVABILITY_VERIFIED": null,
+      "NOTE": "No future state or downstream outcome read."
+    },
+    {
+      "FEATURE_NAME": "initial_state_relative_reference_x",
+      "FEATURE_INDEX": 45,
+      "INDEX_BASE": 0,
+      "SOURCE_FUNCTION": [
+        "/home/exouser/FORTE/analysis/results/current_runtime_branch_execution_v6_20260905/branch_execution.py::preaction_features",
+        "/home/exouser/FORTE/online_vla_restore_20260907/worker.py::make_sequence"
+      ],
+      "SOURCE_DATA": "Zero displacement relative to current pre-action reference; valid constant, not desired waypoint.",
+      "AVAILABLE_PRE_ACTION": true,
+      "AVAILABLE_DURING_ONLINE_VLA": true,
+      "SCRIPT_ONLY": false,
+      "CAUSAL": true,
+      "DEPENDS_ON_FUTURE_ACTION": false,
+      "RECOMMENDED_FINAL_STATUS": "KEEP",
+      "DUPLICATES_FEATURE_INDEX": 19,
+      "SIMULATOR_STATE_MEASUREMENT_ASSUMPTION": false,
+      "REAL_ROBOT_OBSERVABILITY_VERIFIED": null,
+      "NOTE": "No future state or downstream outcome read."
+    },
+    {
+      "FEATURE_NAME": "initial_state_relative_reference_y",
+      "FEATURE_INDEX": 46,
+      "INDEX_BASE": 0,
+      "SOURCE_FUNCTION": [
+        "/home/exouser/FORTE/analysis/results/current_runtime_branch_execution_v6_20260905/branch_execution.py::preaction_features",
+        "/home/exouser/FORTE/online_vla_restore_20260907/worker.py::make_sequence"
+      ],
+      "SOURCE_DATA": "Zero displacement relative to current pre-action reference; valid constant, not desired waypoint.",
+      "AVAILABLE_PRE_ACTION": true,
+      "AVAILABLE_DURING_ONLINE_VLA": true,
+      "SCRIPT_ONLY": false,
+      "CAUSAL": true,
+      "DEPENDS_ON_FUTURE_ACTION": false,
+      "RECOMMENDED_FINAL_STATUS": "KEEP",
+      "DUPLICATES_FEATURE_INDEX": 20,
+      "SIMULATOR_STATE_MEASUREMENT_ASSUMPTION": false,
+      "REAL_ROBOT_OBSERVABILITY_VERIFIED": null,
+      "NOTE": "No future state or downstream outcome read."
+    },
+    {
+      "FEATURE_NAME": "initial_state_relative_reference_z",
+      "FEATURE_INDEX": 47,
+      "INDEX_BASE": 0,
+      "SOURCE_FUNCTION": [
+        "/home/exouser/FORTE/analysis/results/current_runtime_branch_execution_v6_20260905/branch_execution.py::preaction_features",
+        "/home/exouser/FORTE/online_vla_restore_20260907/worker.py::make_sequence"
+      ],
+      "SOURCE_DATA": "Zero displacement relative to current pre-action reference; valid constant, not desired waypoint.",
+      "AVAILABLE_PRE_ACTION": true,
+      "AVAILABLE_DURING_ONLINE_VLA": true,
+      "SCRIPT_ONLY": false,
+      "CAUSAL": true,
+      "DEPENDS_ON_FUTURE_ACTION": false,
+      "RECOMMENDED_FINAL_STATUS": "KEEP",
+      "DUPLICATES_FEATURE_INDEX": 21,
+      "SIMULATOR_STATE_MEASUREMENT_ASSUMPTION": false,
+      "REAL_ROBOT_OBSERVABILITY_VERIFIED": null,
+      "NOTE": "No future state or downstream outcome read."
+    },
+    {
+      "FEATURE_NAME": "initial_state_object_velocity_x",
+      "FEATURE_INDEX": 48,
+      "INDEX_BASE": 0,
+      "SOURCE_FUNCTION": [
+        "/home/exouser/FORTE/analysis/results/current_runtime_branch_execution_v6_20260905/branch_execution.py::preaction_features",
+        "/home/exouser/FORTE/online_vla_restore_20260907/worker.py::make_sequence"
+      ],
+      "SOURCE_DATA": "Current post-probe rigid-object root_velocity; speed is norm(vx,vy). Live Isaac observation captured before action.",
+      "AVAILABLE_PRE_ACTION": true,
+      "AVAILABLE_DURING_ONLINE_VLA": true,
+      "SCRIPT_ONLY": false,
+      "CAUSAL": true,
+      "DEPENDS_ON_FUTURE_ACTION": false,
+      "RECOMMENDED_FINAL_STATUS": "KEEP",
+      "DUPLICATES_FEATURE_INDEX": 22,
+      "SIMULATOR_STATE_MEASUREMENT_ASSUMPTION": true,
+      "REAL_ROBOT_OBSERVABILITY_VERIFIED": false,
+      "NOTE": "Object velocity is online available in this simulator, but privileged relative to vision-only deployment; no physical-world velocity estimator has been validated."
+    },
+    {
+      "FEATURE_NAME": "initial_state_object_velocity_y",
+      "FEATURE_INDEX": 49,
+      "INDEX_BASE": 0,
+      "SOURCE_FUNCTION": [
+        "/home/exouser/FORTE/analysis/results/current_runtime_branch_execution_v6_20260905/branch_execution.py::preaction_features",
+        "/home/exouser/FORTE/online_vla_restore_20260907/worker.py::make_sequence"
+      ],
+      "SOURCE_DATA": "Current post-probe rigid-object root_velocity; speed is norm(vx,vy). Live Isaac observation captured before action.",
+      "AVAILABLE_PRE_ACTION": true,
+      "AVAILABLE_DURING_ONLINE_VLA": true,
+      "SCRIPT_ONLY": false,
+      "CAUSAL": true,
+      "DEPENDS_ON_FUTURE_ACTION": false,
+      "RECOMMENDED_FINAL_STATUS": "KEEP",
+      "DUPLICATES_FEATURE_INDEX": 23,
+      "SIMULATOR_STATE_MEASUREMENT_ASSUMPTION": true,
+      "REAL_ROBOT_OBSERVABILITY_VERIFIED": false,
+      "NOTE": "Object velocity is online available in this simulator, but privileged relative to vision-only deployment; no physical-world velocity estimator has been validated."
+    },
+    {
+      "FEATURE_NAME": "initial_state_object_velocity_z",
+      "FEATURE_INDEX": 50,
+      "INDEX_BASE": 0,
+      "SOURCE_FUNCTION": [
+        "/home/exouser/FORTE/analysis/results/current_runtime_branch_execution_v6_20260905/branch_execution.py::preaction_features",
+        "/home/exouser/FORTE/online_vla_restore_20260907/worker.py::make_sequence"
+      ],
+      "SOURCE_DATA": "Current post-probe rigid-object root_velocity; speed is norm(vx,vy). Live Isaac observation captured before action.",
+      "AVAILABLE_PRE_ACTION": true,
+      "AVAILABLE_DURING_ONLINE_VLA": true,
+      "SCRIPT_ONLY": false,
+      "CAUSAL": true,
+      "DEPENDS_ON_FUTURE_ACTION": false,
+      "RECOMMENDED_FINAL_STATUS": "KEEP",
+      "DUPLICATES_FEATURE_INDEX": 24,
+      "SIMULATOR_STATE_MEASUREMENT_ASSUMPTION": true,
+      "REAL_ROBOT_OBSERVABILITY_VERIFIED": false,
+      "NOTE": "Object velocity is online available in this simulator, but privileged relative to vision-only deployment; no physical-world velocity estimator has been validated."
+    },
+    {
+      "FEATURE_NAME": "initial_state_left_abs_local_normal",
+      "FEATURE_INDEX": 51,
+      "INDEX_BASE": 0,
+      "SOURCE_FUNCTION": [
+        "/home/exouser/FORTE/analysis/results/current_runtime_branch_execution_v6_20260905/branch_execution.py::preaction_features",
+        "/home/exouser/FORTE/online_vla_restore_20260907/worker.py::make_sequence"
+      ],
+      "SOURCE_DATA": "Last actual probe per-finger gripper-local force vector; abs(Fz) or norm(Fxy).",
+      "AVAILABLE_PRE_ACTION": true,
+      "AVAILABLE_DURING_ONLINE_VLA": true,
+      "SCRIPT_ONLY": false,
+      "CAUSAL": true,
+      "DEPENDS_ON_FUTURE_ACTION": false,
+      "RECOMMENDED_FINAL_STATUS": "KEEP",
+      "DUPLICATES_FEATURE_INDEX": 25,
+      "SIMULATOR_STATE_MEASUREMENT_ASSUMPTION": false,
+      "REAL_ROBOT_OBSERVABILITY_VERIFIED": null,
+      "NOTE": "No future state or downstream outcome read."
+    },
+    {
+      "FEATURE_NAME": "initial_state_right_abs_local_normal",
+      "FEATURE_INDEX": 52,
+      "INDEX_BASE": 0,
+      "SOURCE_FUNCTION": [
+        "/home/exouser/FORTE/analysis/results/current_runtime_branch_execution_v6_20260905/branch_execution.py::preaction_features",
+        "/home/exouser/FORTE/online_vla_restore_20260907/worker.py::make_sequence"
+      ],
+      "SOURCE_DATA": "Last actual probe per-finger gripper-local force vector; abs(Fz) or norm(Fxy).",
+      "AVAILABLE_PRE_ACTION": true,
+      "AVAILABLE_DURING_ONLINE_VLA": true,
+      "SCRIPT_ONLY": false,
+      "CAUSAL": true,
+      "DEPENDS_ON_FUTURE_ACTION": false,
+      "RECOMMENDED_FINAL_STATUS": "KEEP",
+      "DUPLICATES_FEATURE_INDEX": 26,
+      "SIMULATOR_STATE_MEASUREMENT_ASSUMPTION": false,
+      "REAL_ROBOT_OBSERVABILITY_VERIFIED": null,
+      "NOTE": "No future state or downstream outcome read."
+    },
+    {
+      "FEATURE_NAME": "initial_state_left_local_tangent_norm",
+      "FEATURE_INDEX": 53,
+      "INDEX_BASE": 0,
+      "SOURCE_FUNCTION": [
+        "/home/exouser/FORTE/analysis/results/current_runtime_branch_execution_v6_20260905/branch_execution.py::preaction_features",
+        "/home/exouser/FORTE/online_vla_restore_20260907/worker.py::make_sequence"
+      ],
+      "SOURCE_DATA": "Last actual probe per-finger gripper-local force vector; abs(Fz) or norm(Fxy).",
+      "AVAILABLE_PRE_ACTION": true,
+      "AVAILABLE_DURING_ONLINE_VLA": true,
+      "SCRIPT_ONLY": false,
+      "CAUSAL": true,
+      "DEPENDS_ON_FUTURE_ACTION": false,
+      "RECOMMENDED_FINAL_STATUS": "KEEP",
+      "DUPLICATES_FEATURE_INDEX": 27,
+      "SIMULATOR_STATE_MEASUREMENT_ASSUMPTION": false,
+      "REAL_ROBOT_OBSERVABILITY_VERIFIED": null,
+      "NOTE": "No future state or downstream outcome read."
+    },
+    {
+      "FEATURE_NAME": "initial_state_right_local_tangent_norm",
+      "FEATURE_INDEX": 54,
+      "INDEX_BASE": 0,
+      "SOURCE_FUNCTION": [
+        "/home/exouser/FORTE/analysis/results/current_runtime_branch_execution_v6_20260905/branch_execution.py::preaction_features",
+        "/home/exouser/FORTE/online_vla_restore_20260907/worker.py::make_sequence"
+      ],
+      "SOURCE_DATA": "Last actual probe per-finger gripper-local force vector; abs(Fz) or norm(Fxy).",
+      "AVAILABLE_PRE_ACTION": true,
+      "AVAILABLE_DURING_ONLINE_VLA": true,
+      "SCRIPT_ONLY": false,
+      "CAUSAL": true,
+      "DEPENDS_ON_FUTURE_ACTION": false,
+      "RECOMMENDED_FINAL_STATUS": "KEEP",
+      "DUPLICATES_FEATURE_INDEX": 28,
+      "SIMULATOR_STATE_MEASUREMENT_ASSUMPTION": false,
+      "REAL_ROBOT_OBSERVABILITY_VERIFIED": null,
+      "NOTE": "No future state or downstream outcome read."
+    },
+    {
+      "FEATURE_NAME": "initial_state_object_horizontal_speed",
+      "FEATURE_INDEX": 55,
+      "INDEX_BASE": 0,
+      "SOURCE_FUNCTION": [
+        "/home/exouser/FORTE/analysis/results/current_runtime_branch_execution_v6_20260905/branch_execution.py::preaction_features",
+        "/home/exouser/FORTE/online_vla_restore_20260907/worker.py::make_sequence"
+      ],
+      "SOURCE_DATA": "Current post-probe rigid-object root_velocity; speed is norm(vx,vy). Live Isaac observation captured before action.",
+      "AVAILABLE_PRE_ACTION": true,
+      "AVAILABLE_DURING_ONLINE_VLA": true,
+      "SCRIPT_ONLY": false,
+      "CAUSAL": true,
+      "DEPENDS_ON_FUTURE_ACTION": false,
+      "RECOMMENDED_FINAL_STATUS": "KEEP",
+      "DUPLICATES_FEATURE_INDEX": 29,
+      "SIMULATOR_STATE_MEASUREMENT_ASSUMPTION": true,
+      "REAL_ROBOT_OBSERVABILITY_VERIFIED": false,
+      "NOTE": "Object velocity is online available in this simulator, but privileged relative to vision-only deployment; no physical-world velocity estimator has been validated."
+    },
+    {
+      "FEATURE_NAME": "initial_state_first_finger_joint",
+      "FEATURE_INDEX": 56,
+      "INDEX_BASE": 0,
+      "SOURCE_FUNCTION": [
+        "/home/exouser/FORTE/analysis/results/current_runtime_branch_execution_v6_20260905/branch_execution.py::preaction_features",
+        "/home/exouser/FORTE/online_vla_restore_20260907/worker.py::make_sequence"
+      ],
+      "SOURCE_DATA": "Current robot snapshot finger joint positions; first joint checked against last probe reading, second sign follows native policy.",
+      "AVAILABLE_PRE_ACTION": true,
+      "AVAILABLE_DURING_ONLINE_VLA": true,
+      "SCRIPT_ONLY": false,
+      "CAUSAL": true,
+      "DEPENDS_ON_FUTURE_ACTION": false,
+      "RECOMMENDED_FINAL_STATUS": "KEEP",
+      "DUPLICATES_FEATURE_INDEX": 30,
+      "SIMULATOR_STATE_MEASUREMENT_ASSUMPTION": false,
+      "REAL_ROBOT_OBSERVABILITY_VERIFIED": null,
+      "NOTE": "No future state or downstream outcome read."
+    },
+    {
+      "FEATURE_NAME": "initial_state_negative_second_finger_joint",
+      "FEATURE_INDEX": 57,
+      "INDEX_BASE": 0,
+      "SOURCE_FUNCTION": [
+        "/home/exouser/FORTE/analysis/results/current_runtime_branch_execution_v6_20260905/branch_execution.py::preaction_features",
+        "/home/exouser/FORTE/online_vla_restore_20260907/worker.py::make_sequence"
+      ],
+      "SOURCE_DATA": "Current robot snapshot finger joint positions; first joint checked against last probe reading, second sign follows native policy.",
+      "AVAILABLE_PRE_ACTION": true,
+      "AVAILABLE_DURING_ONLINE_VLA": true,
+      "SCRIPT_ONLY": false,
+      "CAUSAL": true,
+      "DEPENDS_ON_FUTURE_ACTION": false,
+      "RECOMMENDED_FINAL_STATUS": "KEEP",
+      "DUPLICATES_FEATURE_INDEX": 31,
+      "SIMULATOR_STATE_MEASUREMENT_ASSUMPTION": false,
+      "REAL_ROBOT_OBSERVABILITY_VERIFIED": null,
+      "NOTE": "No future state or downstream outcome read."
+    },
+    {
+      "FEATURE_NAME": "initial_validity_relative_reference_x",
+      "FEATURE_INDEX": 58,
+      "INDEX_BASE": 0,
+      "SOURCE_FUNCTION": [
+        "/home/exouser/FORTE/analysis/results/current_runtime_branch_execution_v6_20260905/branch_execution.py::preaction_features",
+        "/home/exouser/FORTE/online_vla_restore_20260907/worker.py::make_sequence"
+      ],
+      "SOURCE_DATA": "Validity of Zero displacement relative to current pre-action reference; valid constant, not desired waypoint. One only when the actual decision-time source exists; do not fabricate missing readings.",
+      "AVAILABLE_PRE_ACTION": true,
+      "AVAILABLE_DURING_ONLINE_VLA": true,
+      "SCRIPT_ONLY": false,
+      "CAUSAL": true,
+      "DEPENDS_ON_FUTURE_ACTION": false,
+      "RECOMMENDED_FINAL_STATUS": "KEEP",
+      "DUPLICATES_FEATURE_INDEX": 32,
+      "SIMULATOR_STATE_MEASUREMENT_ASSUMPTION": false,
+      "REAL_ROBOT_OBSERVABILITY_VERIFIED": null,
+      "NOTE": "No future state or downstream outcome read."
+    },
+    {
+      "FEATURE_NAME": "initial_validity_relative_reference_y",
+      "FEATURE_INDEX": 59,
+      "INDEX_BASE": 0,
+      "SOURCE_FUNCTION": [
+        "/home/exouser/FORTE/analysis/results/current_runtime_branch_execution_v6_20260905/branch_execution.py::preaction_features",
+        "/home/exouser/FORTE/online_vla_restore_20260907/worker.py::make_sequence"
+      ],
+      "SOURCE_DATA": "Validity of Zero displacement relative to current pre-action reference; valid constant, not desired waypoint. One only when the actual decision-time source exists; do not fabricate missing readings.",
+      "AVAILABLE_PRE_ACTION": true,
+      "AVAILABLE_DURING_ONLINE_VLA": true,
+      "SCRIPT_ONLY": false,
+      "CAUSAL": true,
+      "DEPENDS_ON_FUTURE_ACTION": false,
+      "RECOMMENDED_FINAL_STATUS": "KEEP",
+      "DUPLICATES_FEATURE_INDEX": 33,
+      "SIMULATOR_STATE_MEASUREMENT_ASSUMPTION": false,
+      "REAL_ROBOT_OBSERVABILITY_VERIFIED": null,
+      "NOTE": "No future state or downstream outcome read."
+    },
+    {
+      "FEATURE_NAME": "initial_validity_relative_reference_z",
+      "FEATURE_INDEX": 60,
+      "INDEX_BASE": 0,
+      "SOURCE_FUNCTION": [
+        "/home/exouser/FORTE/analysis/results/current_runtime_branch_execution_v6_20260905/branch_execution.py::preaction_features",
+        "/home/exouser/FORTE/online_vla_restore_20260907/worker.py::make_sequence"
+      ],
+      "SOURCE_DATA": "Validity of Zero displacement relative to current pre-action reference; valid constant, not desired waypoint. One only when the actual decision-time source exists; do not fabricate missing readings.",
+      "AVAILABLE_PRE_ACTION": true,
+      "AVAILABLE_DURING_ONLINE_VLA": true,
+      "SCRIPT_ONLY": false,
+      "CAUSAL": true,
+      "DEPENDS_ON_FUTURE_ACTION": false,
+      "RECOMMENDED_FINAL_STATUS": "KEEP",
+      "DUPLICATES_FEATURE_INDEX": 34,
+      "SIMULATOR_STATE_MEASUREMENT_ASSUMPTION": false,
+      "REAL_ROBOT_OBSERVABILITY_VERIFIED": null,
+      "NOTE": "No future state or downstream outcome read."
+    },
+    {
+      "FEATURE_NAME": "initial_validity_object_velocity_x",
+      "FEATURE_INDEX": 61,
+      "INDEX_BASE": 0,
+      "SOURCE_FUNCTION": [
+        "/home/exouser/FORTE/analysis/results/current_runtime_branch_execution_v6_20260905/branch_execution.py::preaction_features",
+        "/home/exouser/FORTE/online_vla_restore_20260907/worker.py::make_sequence"
+      ],
+      "SOURCE_DATA": "Validity of Current post-probe rigid-object root_velocity; speed is norm(vx,vy). Live Isaac observation captured before action. One only when the actual decision-time source exists; do not fabricate missing readings.",
+      "AVAILABLE_PRE_ACTION": true,
+      "AVAILABLE_DURING_ONLINE_VLA": true,
+      "SCRIPT_ONLY": false,
+      "CAUSAL": true,
+      "DEPENDS_ON_FUTURE_ACTION": false,
+      "RECOMMENDED_FINAL_STATUS": "KEEP",
+      "DUPLICATES_FEATURE_INDEX": 35,
+      "SIMULATOR_STATE_MEASUREMENT_ASSUMPTION": true,
+      "REAL_ROBOT_OBSERVABILITY_VERIFIED": false,
+      "NOTE": "Object velocity is online available in this simulator, but privileged relative to vision-only deployment; no physical-world velocity estimator has been validated."
+    },
+    {
+      "FEATURE_NAME": "initial_validity_object_velocity_y",
+      "FEATURE_INDEX": 62,
+      "INDEX_BASE": 0,
+      "SOURCE_FUNCTION": [
+        "/home/exouser/FORTE/analysis/results/current_runtime_branch_execution_v6_20260905/branch_execution.py::preaction_features",
+        "/home/exouser/FORTE/online_vla_restore_20260907/worker.py::make_sequence"
+      ],
+      "SOURCE_DATA": "Validity of Current post-probe rigid-object root_velocity; speed is norm(vx,vy). Live Isaac observation captured before action. One only when the actual decision-time source exists; do not fabricate missing readings.",
+      "AVAILABLE_PRE_ACTION": true,
+      "AVAILABLE_DURING_ONLINE_VLA": true,
+      "SCRIPT_ONLY": false,
+      "CAUSAL": true,
+      "DEPENDS_ON_FUTURE_ACTION": false,
+      "RECOMMENDED_FINAL_STATUS": "KEEP",
+      "DUPLICATES_FEATURE_INDEX": 36,
+      "SIMULATOR_STATE_MEASUREMENT_ASSUMPTION": true,
+      "REAL_ROBOT_OBSERVABILITY_VERIFIED": false,
+      "NOTE": "Object velocity is online available in this simulator, but privileged relative to vision-only deployment; no physical-world velocity estimator has been validated."
+    },
+    {
+      "FEATURE_NAME": "initial_validity_object_velocity_z",
+      "FEATURE_INDEX": 63,
+      "INDEX_BASE": 0,
+      "SOURCE_FUNCTION": [
+        "/home/exouser/FORTE/analysis/results/current_runtime_branch_execution_v6_20260905/branch_execution.py::preaction_features",
+        "/home/exouser/FORTE/online_vla_restore_20260907/worker.py::make_sequence"
+      ],
+      "SOURCE_DATA": "Validity of Current post-probe rigid-object root_velocity; speed is norm(vx,vy). Live Isaac observation captured before action. One only when the actual decision-time source exists; do not fabricate missing readings.",
+      "AVAILABLE_PRE_ACTION": true,
+      "AVAILABLE_DURING_ONLINE_VLA": true,
+      "SCRIPT_ONLY": false,
+      "CAUSAL": true,
+      "DEPENDS_ON_FUTURE_ACTION": false,
+      "RECOMMENDED_FINAL_STATUS": "KEEP",
+      "DUPLICATES_FEATURE_INDEX": 37,
+      "SIMULATOR_STATE_MEASUREMENT_ASSUMPTION": true,
+      "REAL_ROBOT_OBSERVABILITY_VERIFIED": false,
+      "NOTE": "Object velocity is online available in this simulator, but privileged relative to vision-only deployment; no physical-world velocity estimator has been validated."
+    },
+    {
+      "FEATURE_NAME": "initial_validity_left_abs_local_normal",
+      "FEATURE_INDEX": 64,
+      "INDEX_BASE": 0,
+      "SOURCE_FUNCTION": [
+        "/home/exouser/FORTE/analysis/results/current_runtime_branch_execution_v6_20260905/branch_execution.py::preaction_features",
+        "/home/exouser/FORTE/online_vla_restore_20260907/worker.py::make_sequence"
+      ],
+      "SOURCE_DATA": "Validity of Last actual probe per-finger gripper-local force vector; abs(Fz) or norm(Fxy). One only when the actual decision-time source exists; do not fabricate missing readings.",
+      "AVAILABLE_PRE_ACTION": true,
+      "AVAILABLE_DURING_ONLINE_VLA": true,
+      "SCRIPT_ONLY": false,
+      "CAUSAL": true,
+      "DEPENDS_ON_FUTURE_ACTION": false,
+      "RECOMMENDED_FINAL_STATUS": "KEEP",
+      "DUPLICATES_FEATURE_INDEX": 38,
+      "SIMULATOR_STATE_MEASUREMENT_ASSUMPTION": false,
+      "REAL_ROBOT_OBSERVABILITY_VERIFIED": null,
+      "NOTE": "No future state or downstream outcome read."
+    },
+    {
+      "FEATURE_NAME": "initial_validity_right_abs_local_normal",
+      "FEATURE_INDEX": 65,
+      "INDEX_BASE": 0,
+      "SOURCE_FUNCTION": [
+        "/home/exouser/FORTE/analysis/results/current_runtime_branch_execution_v6_20260905/branch_execution.py::preaction_features",
+        "/home/exouser/FORTE/online_vla_restore_20260907/worker.py::make_sequence"
+      ],
+      "SOURCE_DATA": "Validity of Last actual probe per-finger gripper-local force vector; abs(Fz) or norm(Fxy). One only when the actual decision-time source exists; do not fabricate missing readings.",
+      "AVAILABLE_PRE_ACTION": true,
+      "AVAILABLE_DURING_ONLINE_VLA": true,
+      "SCRIPT_ONLY": false,
+      "CAUSAL": true,
+      "DEPENDS_ON_FUTURE_ACTION": false,
+      "RECOMMENDED_FINAL_STATUS": "KEEP",
+      "DUPLICATES_FEATURE_INDEX": 39,
+      "SIMULATOR_STATE_MEASUREMENT_ASSUMPTION": false,
+      "REAL_ROBOT_OBSERVABILITY_VERIFIED": null,
+      "NOTE": "No future state or downstream outcome read."
+    },
+    {
+      "FEATURE_NAME": "initial_validity_left_local_tangent_norm",
+      "FEATURE_INDEX": 66,
+      "INDEX_BASE": 0,
+      "SOURCE_FUNCTION": [
+        "/home/exouser/FORTE/analysis/results/current_runtime_branch_execution_v6_20260905/branch_execution.py::preaction_features",
+        "/home/exouser/FORTE/online_vla_restore_20260907/worker.py::make_sequence"
+      ],
+      "SOURCE_DATA": "Validity of Last actual probe per-finger gripper-local force vector; abs(Fz) or norm(Fxy). One only when the actual decision-time source exists; do not fabricate missing readings.",
+      "AVAILABLE_PRE_ACTION": true,
+      "AVAILABLE_DURING_ONLINE_VLA": true,
+      "SCRIPT_ONLY": false,
+      "CAUSAL": true,
+      "DEPENDS_ON_FUTURE_ACTION": false,
+      "RECOMMENDED_FINAL_STATUS": "KEEP",
+      "DUPLICATES_FEATURE_INDEX": 40,
+      "SIMULATOR_STATE_MEASUREMENT_ASSUMPTION": false,
+      "REAL_ROBOT_OBSERVABILITY_VERIFIED": null,
+      "NOTE": "No future state or downstream outcome read."
+    },
+    {
+      "FEATURE_NAME": "initial_validity_right_local_tangent_norm",
+      "FEATURE_INDEX": 67,
+      "INDEX_BASE": 0,
+      "SOURCE_FUNCTION": [
+        "/home/exouser/FORTE/analysis/results/current_runtime_branch_execution_v6_20260905/branch_execution.py::preaction_features",
+        "/home/exouser/FORTE/online_vla_restore_20260907/worker.py::make_sequence"
+      ],
+      "SOURCE_DATA": "Validity of Last actual probe per-finger gripper-local force vector; abs(Fz) or norm(Fxy). One only when the actual decision-time source exists; do not fabricate missing readings.",
+      "AVAILABLE_PRE_ACTION": true,
+      "AVAILABLE_DURING_ONLINE_VLA": true,
+      "SCRIPT_ONLY": false,
+      "CAUSAL": true,
+      "DEPENDS_ON_FUTURE_ACTION": false,
+      "RECOMMENDED_FINAL_STATUS": "KEEP",
+      "DUPLICATES_FEATURE_INDEX": 41,
+      "SIMULATOR_STATE_MEASUREMENT_ASSUMPTION": false,
+      "REAL_ROBOT_OBSERVABILITY_VERIFIED": null,
+      "NOTE": "No future state or downstream outcome read."
+    },
+    {
+      "FEATURE_NAME": "initial_validity_object_horizontal_speed",
+      "FEATURE_INDEX": 68,
+      "INDEX_BASE": 0,
+      "SOURCE_FUNCTION": [
+        "/home/exouser/FORTE/analysis/results/current_runtime_branch_execution_v6_20260905/branch_execution.py::preaction_features",
+        "/home/exouser/FORTE/online_vla_restore_20260907/worker.py::make_sequence"
+      ],
+      "SOURCE_DATA": "Validity of Current post-probe rigid-object root_velocity; speed is norm(vx,vy). Live Isaac observation captured before action. One only when the actual decision-time source exists; do not fabricate missing readings.",
+      "AVAILABLE_PRE_ACTION": true,
+      "AVAILABLE_DURING_ONLINE_VLA": true,
+      "SCRIPT_ONLY": false,
+      "CAUSAL": true,
+      "DEPENDS_ON_FUTURE_ACTION": false,
+      "RECOMMENDED_FINAL_STATUS": "KEEP",
+      "DUPLICATES_FEATURE_INDEX": 42,
+      "SIMULATOR_STATE_MEASUREMENT_ASSUMPTION": true,
+      "REAL_ROBOT_OBSERVABILITY_VERIFIED": false,
+      "NOTE": "Object velocity is online available in this simulator, but privileged relative to vision-only deployment; no physical-world velocity estimator has been validated."
+    },
+    {
+      "FEATURE_NAME": "initial_validity_first_finger_joint",
+      "FEATURE_INDEX": 69,
+      "INDEX_BASE": 0,
+      "SOURCE_FUNCTION": [
+        "/home/exouser/FORTE/analysis/results/current_runtime_branch_execution_v6_20260905/branch_execution.py::preaction_features",
+        "/home/exouser/FORTE/online_vla_restore_20260907/worker.py::make_sequence"
+      ],
+      "SOURCE_DATA": "Validity of Current robot snapshot finger joint positions; first joint checked against last probe reading, second sign follows native policy. One only when the actual decision-time source exists; do not fabricate missing readings.",
+      "AVAILABLE_PRE_ACTION": true,
+      "AVAILABLE_DURING_ONLINE_VLA": true,
+      "SCRIPT_ONLY": false,
+      "CAUSAL": true,
+      "DEPENDS_ON_FUTURE_ACTION": false,
+      "RECOMMENDED_FINAL_STATUS": "KEEP",
+      "DUPLICATES_FEATURE_INDEX": 43,
+      "SIMULATOR_STATE_MEASUREMENT_ASSUMPTION": false,
+      "REAL_ROBOT_OBSERVABILITY_VERIFIED": null,
+      "NOTE": "No future state or downstream outcome read."
+    },
+    {
+      "FEATURE_NAME": "initial_validity_negative_second_finger_joint",
+      "FEATURE_INDEX": 70,
+      "INDEX_BASE": 0,
+      "SOURCE_FUNCTION": [
+        "/home/exouser/FORTE/analysis/results/current_runtime_branch_execution_v6_20260905/branch_execution.py::preaction_features",
+        "/home/exouser/FORTE/online_vla_restore_20260907/worker.py::make_sequence"
+      ],
+      "SOURCE_DATA": "Validity of Current robot snapshot finger joint positions; first joint checked against last probe reading, second sign follows native policy. One only when the actual decision-time source exists; do not fabricate missing readings.",
+      "AVAILABLE_PRE_ACTION": true,
+      "AVAILABLE_DURING_ONLINE_VLA": true,
+      "SCRIPT_ONLY": false,
+      "CAUSAL": true,
+      "DEPENDS_ON_FUTURE_ACTION": false,
+      "RECOMMENDED_FINAL_STATUS": "KEEP",
+      "DUPLICATES_FEATURE_INDEX": 44,
+      "SIMULATOR_STATE_MEASUREMENT_ASSUMPTION": false,
+      "REAL_ROBOT_OBSERVABILITY_VERIFIED": null,
+      "NOTE": "No future state or downstream outcome read."
+    }
+  ],
+  "CONSUMPTION": "GRU consumes all 8 timesteps of columns0:17; MLP consumes only timestep0 of columns17:71. Remaining condition repetitions ignored.",
+  "NO_OTHER_DIRECT_INPUTS": [
+    "No downstream outcome",
+    "No executed future pose",
+    "No desired object pose",
+    "No hidden simulator task-stage",
+    "No placement waypoint ID",
+    "No progress scalar"
+  ],
+  "EXTERNAL_INPUTS": [
+    {
+      "name": "posterior integration nodes and weights",
+      "source": "58D corrected probe belief -> frozen positive continuous posterior",
+      "available_pre_action": true,
+      "script_only": false,
+      "causal": true,
+      "note": "Variance represented by full node/weight distribution, not a separate tensor sigma dimension."
+    },
+    {
+      "name": "TRAIN-only normalization constants",
+      "source": "frozen feasibility checkpoints",
+      "available_pre_action": true,
+      "script_only": false,
+      "causal": true
+    },
+    {
+      "name": "force support and utility",
+      "source": "runtime manifest; F=3:0.05:5, p*(5-F)/5-(1-p)",
+      "available_pre_action": true,
+      "script_only": false,
+      "causal": true
+    }
+  ],
+  "OBSERVABILITY_SCOPE": "Current simulation runtime. Direct object velocity must be disclosed; real-robot sensor availability is not established.",
+  "PRE_ACTION_DEFINITION": "After completed physical probe and current online VLA chunk inference, before candidate force is executed. Current predicted actions are allowed; future executed state/outcome is forbidden.",
+  "FINAL_QUALIFIED": false,
+  "SOURCE_HASHES": {
+    "/home/exouser/FORTE/analysis/results/current_runtime_branch_execution_v6_20260905/branch_execution.py": "f65d3c7f456dbcca9c043336da47288b43ce724f453bd2307471c8ec4aca01aa",
+    "/home/exouser/FORTE/activeforcing_feasibility_features.py": "fdbf8869f66b49b56adec1ca65a7f420db6c9b38ad6f437a9c221b8b75720795",
+    "/home/exouser/FORTE/current_fulltask_feasibility_runtime.py": "34b0c45db5b3b80e4f10379c2f1cdef01171e19834ee3a508f768bf80f88473c",
+    "/home/exouser/FORTE/online_vla_restore_20260907/worker.py": "00a450581d308cb57ab62efeecfc803dcb883fe31e8d3a6d3883eaafeeb5d950",
+    "/home/exouser/FORTE/online_vla_restore_20260907/build_feature_schema_audit.py": "2bb07c0e7d996cbdb4b3919afe8e27860a04b9e7859dc64bb54b8ef3b3420640"
+  }
+}

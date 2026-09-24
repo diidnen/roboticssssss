@@ -1,0 +1,4110 @@
+{
+  "architectures": {
+    "FEASIBILITY_ONLY": "authoritative GRU(17,64)+condition MLP(54,64)+feasibility head",
+    "JOINT": "authoritative Physics-GRU(64), H8 trajectory head, feasibility head"
+  },
+  "calibration": {
+    "isotonic_decides_winner": false,
+    "primary": "raw ensemble mean of per-seed sigmoid logits",
+    "rho": 0.8,
+    "secondary": "TRAIN-only isotonic diagnostic"
+  },
+  "claim_boundary": {
+    "cross_object": false,
+    "current_object_task_distribution_only": true,
+    "universal_transfer": false,
+    "unseen_task": false
+  },
+  "continuous_collection": {
+    "force_support_N": {
+      "0": [
+        3.0,
+        5.0
+      ],
+      "1": [
+        4.0,
+        6.0
+      ],
+      "5": [
+        3.0,
+        5.0
+      ],
+      "6": [
+        3.0,
+        4.0
+      ]
+    },
+    "global_rng_seed": 2026083031,
+    "infrastructure_retry_only": true,
+    "rounding": "none; controller accepts native float commands",
+    "sampling": "one independent uniform draw per equal-width task-support stratum",
+    "scientific_failure_retry": false,
+    "strata_per_context": 5,
+    "valid_repeats_per_force": 2
+  },
+  "created_utc": "2026-08-30T12:54:30.184149+00:00",
+  "dev": {
+    "benchmark": "/home/exouser/Tabero/analysis/results/continuous_probe_joint_20260830_110712",
+    "bootstrap_samples": 10000,
+    "bootstrap_seed": 2026083032,
+    "new_simulator_points": 0,
+    "query_grid_step_N": 0.05,
+    "touch": "once after all six checkpoints complete"
+  },
+  "forbidden": [
+    "DEV tuning",
+    "TEST",
+    "fresh roots",
+    "fresh E2E",
+    "architecture search",
+    "new loss family",
+    "post-probe state",
+    "frontier labels as training inputs"
+  ],
+  "gnp_principles_borrowed": [
+    "continuous action coverage",
+    "direct binary feasibility supervision",
+    "probabilistic minimum-force planning"
+  ],
+  "gt_gate": {
+    "frontier_MAE_max_N": 0.2,
+    "probability_MAE_max": 0.2,
+    "systematic_nonmonotonic_context_rate_max": 0.1,
+    "under_force_rate_max": 0.1,
+    "valid_real_frontier_coverage_min": 0.8
+  },
+  "joint_win_criteria": {
+    "frontier_MAE_improvement_min_N": 0.05,
+    "probability_MAE_relative_improvement_min": 0.1,
+    "systematic_nonmonotonicity_forbidden": true,
+    "under_force_lower_or_safely_nonworse": true
+  },
+  "not_borrowed": [
+    "Neural Process latent architecture",
+    "PointNet",
+    "GNP grasp-pose planner",
+    "repeated adaptation grasps"
+  ],
+  "objective": {
+    "authoritative_joint_native": "L_physics + 1.0*L_IE + 0.3*L_feas",
+    "equivalent_user_form": "L_feas + 3.33333333333*L_physics + 3.33333333333*L_IE",
+    "event_loss": false,
+    "feasibility": "BCEWithLogits on every individual real branch outcome",
+    "monotonic_loss": false
+  },
+  "probe_secondary_rule": {
+    "competitive": "absolute frontier-MAE difference <0.05N and under-force equal",
+    "estimation_limited": "GT passes but Probe is materially worse than No-Probe and errors are GT-correct/Probe-wrong",
+    "evidence_limited": "insufficient valid contexts or legitimate matched pairs",
+    "minimum_valid_frontier_contexts": 7,
+    "supported": "Probe under-force non-worse and frontier MAE improves >=0.05N with probability MAE or excess-force improvement"
+  },
+  "protocol_name": "GNP_STYLE_CONTINUOUS_TRAINING_PROTOCOL",
+  "single_scientific_goal": "same-data Feasibility-only versus Joint under direct continuous full-task feasibility supervision",
+  "source_hashes": {
+    "/home/exouser/FORTE/gnp_style_continuous_collect.py": "6b487e687128e1d5e99509b50fef12c26d7ebb997ca10eb274317d8a2fbdd2ac",
+    "/home/exouser/Tabero/analysis/active_probe_necessity.py": "7c1e82b67f54cfc7e644b43447cf54c501b870e67bd0599ef3d76a2d4aaf7479",
+    "/home/exouser/Tabero/analysis/counterfactual_force_world_model.py": "c088369626b2cd783f45f5130d932fd7aba6dcc9e54b3504c1a81b4e4317d560",
+    "/home/exouser/Tabero/analysis/full_task_feasibility_decoder.py": "bf002ca6a5e190f0eff4e0429bd3340f9acfdb4a694dde2528a98581ce8ff83d",
+    "/home/exouser/Tabero/analysis/preprobe_full_task_feasibility.py": "12b34cee3c704088e511db1f797eaf17482e425bfe2691454ad7bd5441b5cfdb",
+    "/home/exouser/Tabero/analysis/results/full_task_feasibility_20260830_012830/FULL_TASK_FEASIBILITY_PROTOCOL.json": "63ba2e0756d4945a3da27a4510957111b2cfe15610577e12b68637a201bc8b1e",
+    "/home/exouser/Tabero/analysis/results/p5s0c_paired_boundary_probe_value_20260824_000542/P5S0C_BRANCH_MANIFEST.csv": "778190f29b9414c7590141c6b07ba1bf29e625a8fd8ccea20559d466480c778a",
+    "/home/exouser/Tabero/analysis/results/preprobe_full_task_feasibility_20260830_071139/PREPROBE_FULL_TASK_FEASIBILITY_PROTOCOL.json": "a2e1953fca2e3734dfa657d8648947a2af06a6ee060f3bcfeab5fedd62c373fd",
+    "/home/exouser/Tabero/analysis/results/targeted_direct_event_collection_20260829_193500/CORRECTED_DIRECT_EVENT_DATASET_AUDIT.json": "2e47ab49b3cbdf575fca92ca7db5795da667158e8ee0d83e117677b5b1d900aa",
+    "/home/exouser/Tabero/analysis/trajectory_physical_imagination.py": "429761e395e5d6c4f658326e4f5642629eeaaf6498c2217f8f4829695340c2ff"
+  },
+  "status": "FROZEN_BEFORE_CONTINUOUS_TRAIN_COLLECTION",
+  "strict_preprobe_interface": "authoritative reconstructed last P4-B hold before probe_out; no post-probe state",
+  "train_context_population": [
+    {
+      "context_id": "p5s0c_train_t0_r00_s5100_high_mu0.940189",
+      "continuous_force_samples": [
+        {
+          "requested_force_N": 3.2029647423914454,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.4,
+          "stratum_index": 1,
+          "stratum_low_N": 3.0
+        },
+        {
+          "requested_force_N": 3.4501044015152598,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.8,
+          "stratum_index": 2,
+          "stratum_low_N": 3.4
+        },
+        {
+          "requested_force_N": 3.9325538659954553,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.2,
+          "stratum_index": 3,
+          "stratum_low_N": 3.8
+        },
+        {
+          "requested_force_N": 4.597131691690806,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.6,
+          "stratum_index": 4,
+          "stratum_low_N": 4.2
+        },
+        {
+          "requested_force_N": 4.8981073830186554,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 5.0,
+          "stratum_index": 5,
+          "stratum_low_N": 4.6
+        }
+      ],
+      "friction": 0.9401893373882813,
+      "friction_band": "HIGH",
+      "last_hold_step": 190,
+      "opening": 0.0244682095944881,
+      "probe_telemetry": "/home/exouser/Tabero/analysis/results/p5s0c_paired_boundary_probe_value_20260824_000542/P5S0C_PROBE_TELEMETRY/p5s0c_train_t0_r00_s5100_high_mu0.940189_probe_timesteps.csv",
+      "probe_telemetry_sha256": "cc9c38d719a997e54802952a7a9575ce7123854cf2ff5c186484bc764d93fa1a",
+      "root_id": "p5s0c_train_t0_root00_s5100",
+      "root_index": 0,
+      "root_seed": 5100,
+      "task": 0
+    },
+    {
+      "context_id": "p5s0c_train_t0_r00_s5100_low_mu0.293710",
+      "continuous_force_samples": [
+        {
+          "requested_force_N": 3.3274269914534806,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.4,
+          "stratum_index": 1,
+          "stratum_low_N": 3.0
+        },
+        {
+          "requested_force_N": 3.5804616000261396,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.8,
+          "stratum_index": 2,
+          "stratum_low_N": 3.4
+        },
+        {
+          "requested_force_N": 4.1951268916184405,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.2,
+          "stratum_index": 3,
+          "stratum_low_N": 3.8
+        },
+        {
+          "requested_force_N": 4.225682863145822,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.6,
+          "stratum_index": 4,
+          "stratum_low_N": 4.2
+        },
+        {
+          "requested_force_N": 4.899172114786442,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 5.0,
+          "stratum_index": 5,
+          "stratum_low_N": 4.6
+        }
+      ],
+      "friction": 0.2937102019159983,
+      "friction_band": "LOW",
+      "last_hold_step": 190,
+      "opening": 0.0243697259575128,
+      "probe_telemetry": "/home/exouser/Tabero/analysis/results/p5s0c_paired_boundary_probe_value_20260824_000542/P5S0C_PROBE_TELEMETRY/p5s0c_train_t0_r00_s5100_low_mu0.293710_probe_timesteps.csv",
+      "probe_telemetry_sha256": "f5dcb3e54e2da8bc4401fa8945b735207bfe5f733d1c0a760c93cc3d800db418",
+      "root_id": "p5s0c_train_t0_root00_s5100",
+      "root_index": 0,
+      "root_seed": 5100,
+      "task": 0
+    },
+    {
+      "context_id": "p5s0c_train_t0_r00_s5100_mid_mu0.450580",
+      "continuous_force_samples": [
+        {
+          "requested_force_N": 3.1149682915557113,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.4,
+          "stratum_index": 1,
+          "stratum_low_N": 3.0
+        },
+        {
+          "requested_force_N": 3.5841809148911308,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.8,
+          "stratum_index": 2,
+          "stratum_low_N": 3.4
+        },
+        {
+          "requested_force_N": 3.868479176527506,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.2,
+          "stratum_index": 3,
+          "stratum_low_N": 3.8
+        },
+        {
+          "requested_force_N": 4.239612216196188,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.6,
+          "stratum_index": 4,
+          "stratum_low_N": 4.2
+        },
+        {
+          "requested_force_N": 4.8985046170256945,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 5.0,
+          "stratum_index": 5,
+          "stratum_low_N": 4.6
+        }
+      ],
+      "friction": 0.45058012388233365,
+      "friction_band": "MID",
+      "last_hold_step": 190,
+      "opening": 0.0243840161710977,
+      "probe_telemetry": "/home/exouser/Tabero/analysis/results/p5s0c_paired_boundary_probe_value_20260824_000542/P5S0C_PROBE_TELEMETRY/p5s0c_train_t0_r00_s5100_mid_mu0.450580_probe_timesteps.csv",
+      "probe_telemetry_sha256": "a70c286f57c8905b27b2ec623232833a8dcec49d364ce07c0efb67e37bf9492d",
+      "root_id": "p5s0c_train_t0_root00_s5100",
+      "root_index": 0,
+      "root_seed": 5100,
+      "task": 0
+    },
+    {
+      "context_id": "p5s0c_train_t0_r01_s5101_high_mu0.988466",
+      "continuous_force_samples": [
+        {
+          "requested_force_N": 3.267251748830606,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.4,
+          "stratum_index": 1,
+          "stratum_low_N": 3.0
+        },
+        {
+          "requested_force_N": 3.5719130813229065,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.8,
+          "stratum_index": 2,
+          "stratum_low_N": 3.4
+        },
+        {
+          "requested_force_N": 4.136133001828375,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.2,
+          "stratum_index": 3,
+          "stratum_low_N": 3.8
+        },
+        {
+          "requested_force_N": 4.557399724766146,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.6,
+          "stratum_index": 4,
+          "stratum_low_N": 4.2
+        },
+        {
+          "requested_force_N": 4.678691249620773,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 5.0,
+          "stratum_index": 5,
+          "stratum_low_N": 4.6
+        }
+      ],
+      "friction": 0.9884659937733329,
+      "friction_band": "HIGH",
+      "last_hold_step": 190,
+      "opening": 0.024424098432064,
+      "probe_telemetry": "/home/exouser/Tabero/analysis/results/p5s0c_paired_boundary_probe_value_20260824_000542/P5S0C_PROBE_TELEMETRY/p5s0c_train_t0_r01_s5101_high_mu0.988466_probe_timesteps.csv",
+      "probe_telemetry_sha256": "9d5d5c6207c7a3bcb8b384cdd3c8038ef84e805073f2f7079320126b4e0a9033",
+      "root_id": "p5s0c_train_t0_root01_s5101",
+      "root_index": 1,
+      "root_seed": 5101,
+      "task": 0
+    },
+    {
+      "context_id": "p5s0c_train_t0_r01_s5101_low_mu0.255969",
+      "continuous_force_samples": [
+        {
+          "requested_force_N": 3.1219674552060077,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.4,
+          "stratum_index": 1,
+          "stratum_low_N": 3.0
+        },
+        {
+          "requested_force_N": 3.6888028476897534,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.8,
+          "stratum_index": 2,
+          "stratum_low_N": 3.4
+        },
+        {
+          "requested_force_N": 3.942358965459201,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.2,
+          "stratum_index": 3,
+          "stratum_low_N": 3.8
+        },
+        {
+          "requested_force_N": 4.232428603806659,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.6,
+          "stratum_index": 4,
+          "stratum_low_N": 4.2
+        },
+        {
+          "requested_force_N": 4.829316480382576,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 5.0,
+          "stratum_index": 5,
+          "stratum_low_N": 4.6
+        }
+      ],
+      "friction": 0.25596920461819556,
+      "friction_band": "LOW",
+      "last_hold_step": 190,
+      "opening": 0.0243085455149412,
+      "probe_telemetry": "/home/exouser/Tabero/analysis/results/p5s0c_paired_boundary_probe_value_20260824_000542/P5S0C_PROBE_TELEMETRY/p5s0c_train_t0_r01_s5101_low_mu0.255969_probe_timesteps.csv",
+      "probe_telemetry_sha256": "c0656e58508b266c0c1e0253e857ea52688446ff82023dc2a9f90315a3fcdaf6",
+      "root_id": "p5s0c_train_t0_root01_s5101",
+      "root_index": 1,
+      "root_seed": 5101,
+      "task": 0
+    },
+    {
+      "context_id": "p5s0c_train_t0_r01_s5101_mid_mu0.592177",
+      "continuous_force_samples": [
+        {
+          "requested_force_N": 3.067545649434074,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.4,
+          "stratum_index": 1,
+          "stratum_low_N": 3.0
+        },
+        {
+          "requested_force_N": 3.706328022674844,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.8,
+          "stratum_index": 2,
+          "stratum_low_N": 3.4
+        },
+        {
+          "requested_force_N": 4.150897619720806,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.2,
+          "stratum_index": 3,
+          "stratum_low_N": 3.8
+        },
+        {
+          "requested_force_N": 4.379634025984292,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.6,
+          "stratum_index": 4,
+          "stratum_low_N": 4.2
+        },
+        {
+          "requested_force_N": 4.730989807622448,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 5.0,
+          "stratum_index": 5,
+          "stratum_low_N": 4.6
+        }
+      ],
+      "friction": 0.5921771020907431,
+      "friction_band": "MID",
+      "last_hold_step": 190,
+      "opening": 0.0244023185223341,
+      "probe_telemetry": "/home/exouser/Tabero/analysis/results/p5s0c_paired_boundary_probe_value_20260824_000542/P5S0C_PROBE_TELEMETRY/p5s0c_train_t0_r01_s5101_mid_mu0.592177_probe_timesteps.csv",
+      "probe_telemetry_sha256": "86368278ee5b4c8cc457a005a1e762d44d37924e36eb9fdfec1e3622cba92859",
+      "root_id": "p5s0c_train_t0_root01_s5101",
+      "root_index": 1,
+      "root_seed": 5101,
+      "task": 0
+    },
+    {
+      "context_id": "p5s0c_train_t0_r02_s5102_high_mu0.974655",
+      "continuous_force_samples": [
+        {
+          "requested_force_N": 3.1907854798487083,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.4,
+          "stratum_index": 1,
+          "stratum_low_N": 3.0
+        },
+        {
+          "requested_force_N": 3.4008762237416743,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.8,
+          "stratum_index": 2,
+          "stratum_low_N": 3.4
+        },
+        {
+          "requested_force_N": 4.193212205714488,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.2,
+          "stratum_index": 3,
+          "stratum_low_N": 3.8
+        },
+        {
+          "requested_force_N": 4.428610485412011,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.6,
+          "stratum_index": 4,
+          "stratum_low_N": 4.2
+        },
+        {
+          "requested_force_N": 4.612146250360485,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 5.0,
+          "stratum_index": 5,
+          "stratum_low_N": 4.6
+        }
+      ],
+      "friction": 0.9746549647633304,
+      "friction_band": "HIGH",
+      "last_hold_step": 190,
+      "opening": 0.0244209114462137,
+      "probe_telemetry": "/home/exouser/Tabero/analysis/results/p5s0c_paired_boundary_probe_value_20260824_000542/P5S0C_PROBE_TELEMETRY/p5s0c_train_t0_r02_s5102_high_mu0.974655_probe_timesteps.csv",
+      "probe_telemetry_sha256": "021d42f957f92f61d94cf77b1a0faf72980c126bd0dfe31a46c6a25865670298",
+      "root_id": "p5s0c_train_t0_root02_s5102",
+      "root_index": 2,
+      "root_seed": 5102,
+      "task": 0
+    },
+    {
+      "context_id": "p5s0c_train_t0_r02_s5102_low_mu0.285139",
+      "continuous_force_samples": [
+        {
+          "requested_force_N": 3.3044451998703446,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.4,
+          "stratum_index": 1,
+          "stratum_low_N": 3.0
+        },
+        {
+          "requested_force_N": 3.484570775284657,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.8,
+          "stratum_index": 2,
+          "stratum_low_N": 3.4
+        },
+        {
+          "requested_force_N": 4.191219974510905,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.2,
+          "stratum_index": 3,
+          "stratum_low_N": 3.8
+        },
+        {
+          "requested_force_N": 4.53748219249262,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.6,
+          "stratum_index": 4,
+          "stratum_low_N": 4.2
+        },
+        {
+          "requested_force_N": 4.78416089893309,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 5.0,
+          "stratum_index": 5,
+          "stratum_low_N": 4.6
+        }
+      ],
+      "friction": 0.2851387636485543,
+      "friction_band": "LOW",
+      "last_hold_step": 190,
+      "opening": 0.0243018101900815,
+      "probe_telemetry": "/home/exouser/Tabero/analysis/results/p5s0c_paired_boundary_probe_value_20260824_000542/P5S0C_PROBE_TELEMETRY/p5s0c_train_t0_r02_s5102_low_mu0.285139_probe_timesteps.csv",
+      "probe_telemetry_sha256": "052432046a1b1a0d7a9c263da138a8044c0742fb266d714d252b98a688691caf",
+      "root_id": "p5s0c_train_t0_root02_s5102",
+      "root_index": 2,
+      "root_seed": 5102,
+      "task": 0
+    },
+    {
+      "context_id": "p5s0c_train_t0_r02_s5102_mid_mu0.571550",
+      "continuous_force_samples": [
+        {
+          "requested_force_N": 3.301786731255919,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.4,
+          "stratum_index": 1,
+          "stratum_low_N": 3.0
+        },
+        {
+          "requested_force_N": 3.4234238505617176,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.8,
+          "stratum_index": 2,
+          "stratum_low_N": 3.4
+        },
+        {
+          "requested_force_N": 3.915237914902276,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.2,
+          "stratum_index": 3,
+          "stratum_low_N": 3.8
+        },
+        {
+          "requested_force_N": 4.561601689584602,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.6,
+          "stratum_index": 4,
+          "stratum_low_N": 4.2
+        },
+        {
+          "requested_force_N": 4.615975345568856,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 5.0,
+          "stratum_index": 5,
+          "stratum_low_N": 4.6
+        }
+      ],
+      "friction": 0.5715496239149224,
+      "friction_band": "MID",
+      "last_hold_step": 190,
+      "opening": 0.024388913065195,
+      "probe_telemetry": "/home/exouser/Tabero/analysis/results/p5s0c_paired_boundary_probe_value_20260824_000542/P5S0C_PROBE_TELEMETRY/p5s0c_train_t0_r02_s5102_mid_mu0.571550_probe_timesteps.csv",
+      "probe_telemetry_sha256": "868010905cfce72c6948289379f5069ba4dcf75242950fc8fd99dcb7323fc8ba",
+      "root_id": "p5s0c_train_t0_root02_s5102",
+      "root_index": 2,
+      "root_seed": 5102,
+      "task": 0
+    },
+    {
+      "context_id": "p5s0c_train_t0_r03_s5103_high_mu0.970453",
+      "continuous_force_samples": [
+        {
+          "requested_force_N": 3.397869680808585,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.4,
+          "stratum_index": 1,
+          "stratum_low_N": 3.0
+        },
+        {
+          "requested_force_N": 3.6645804592630276,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.8,
+          "stratum_index": 2,
+          "stratum_low_N": 3.4
+        },
+        {
+          "requested_force_N": 4.198349120516071,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.2,
+          "stratum_index": 3,
+          "stratum_low_N": 3.8
+        },
+        {
+          "requested_force_N": 4.203484502726651,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.6,
+          "stratum_index": 4,
+          "stratum_low_N": 4.2
+        },
+        {
+          "requested_force_N": 4.922836541163274,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 5.0,
+          "stratum_index": 5,
+          "stratum_low_N": 4.6
+        }
+      ],
+      "friction": 0.9704531443351275,
+      "friction_band": "HIGH",
+      "last_hold_step": 190,
+      "opening": 0.0243963561952114,
+      "probe_telemetry": "/home/exouser/Tabero/analysis/results/p5s0c_paired_boundary_probe_value_20260824_000542/P5S0C_PROBE_TELEMETRY/p5s0c_train_t0_r03_s5103_high_mu0.970453_probe_timesteps.csv",
+      "probe_telemetry_sha256": "8edbbd34621bd73e2250c63a10d5fe01ab1fa9f9bbefb64351c591cf7bb4e1b9",
+      "root_id": "p5s0c_train_t0_root03_s5103",
+      "root_index": 3,
+      "root_seed": 5103,
+      "task": 0
+    },
+    {
+      "context_id": "p5s0c_train_t0_r03_s5103_low_mu0.233498",
+      "continuous_force_samples": [
+        {
+          "requested_force_N": 3.3336589360618754,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.4,
+          "stratum_index": 1,
+          "stratum_low_N": 3.0
+        },
+        {
+          "requested_force_N": 3.4688173991340596,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.8,
+          "stratum_index": 2,
+          "stratum_low_N": 3.4
+        },
+        {
+          "requested_force_N": 4.122729430797518,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.2,
+          "stratum_index": 3,
+          "stratum_low_N": 3.8
+        },
+        {
+          "requested_force_N": 4.423169348756639,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.6,
+          "stratum_index": 4,
+          "stratum_low_N": 4.2
+        },
+        {
+          "requested_force_N": 4.960470832047788,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 5.0,
+          "stratum_index": 5,
+          "stratum_low_N": 4.6
+        }
+      ],
+      "friction": 0.23349769395754352,
+      "friction_band": "LOW",
+      "last_hold_step": 190,
+      "opening": 0.0242982376366853,
+      "probe_telemetry": "/home/exouser/Tabero/analysis/results/p5s0c_paired_boundary_probe_value_20260824_000542/P5S0C_PROBE_TELEMETRY/p5s0c_train_t0_r03_s5103_low_mu0.233498_probe_timesteps.csv",
+      "probe_telemetry_sha256": "14b8ced9a934a130088e007545ca6439f358c6854b26142d12ad7661656fc457",
+      "root_id": "p5s0c_train_t0_root03_s5103",
+      "root_index": 3,
+      "root_seed": 5103,
+      "task": 0
+    },
+    {
+      "context_id": "p5s0c_train_t0_r03_s5103_mid_mu0.554454",
+      "continuous_force_samples": [
+        {
+          "requested_force_N": 3.3542693842279907,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.4,
+          "stratum_index": 1,
+          "stratum_low_N": 3.0
+        },
+        {
+          "requested_force_N": 3.536258992316307,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.8,
+          "stratum_index": 2,
+          "stratum_low_N": 3.4
+        },
+        {
+          "requested_force_N": 3.823228162939641,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.2,
+          "stratum_index": 3,
+          "stratum_low_N": 3.8
+        },
+        {
+          "requested_force_N": 4.505821501921208,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.6,
+          "stratum_index": 4,
+          "stratum_low_N": 4.2
+        },
+        {
+          "requested_force_N": 4.81813162942436,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 5.0,
+          "stratum_index": 5,
+          "stratum_low_N": 4.6
+        }
+      ],
+      "friction": 0.5544542093115656,
+      "friction_band": "MID",
+      "last_hold_step": 190,
+      "opening": 0.0243771784007549,
+      "probe_telemetry": "/home/exouser/Tabero/analysis/results/p5s0c_paired_boundary_probe_value_20260824_000542/P5S0C_PROBE_TELEMETRY/p5s0c_train_t0_r03_s5103_mid_mu0.554454_probe_timesteps.csv",
+      "probe_telemetry_sha256": "07dc7355e2d86a39a0c6effef08e73eea44c0c1c207a18fde8c0a6b939c3f1d9",
+      "root_id": "p5s0c_train_t0_root03_s5103",
+      "root_index": 3,
+      "root_seed": 5103,
+      "task": 0
+    },
+    {
+      "context_id": "p5s0c_train_t0_r04_s5104_high_mu0.905657",
+      "continuous_force_samples": [
+        {
+          "requested_force_N": 3.395650535552486,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.4,
+          "stratum_index": 1,
+          "stratum_low_N": 3.0
+        },
+        {
+          "requested_force_N": 3.7501791374175193,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.8,
+          "stratum_index": 2,
+          "stratum_low_N": 3.4
+        },
+        {
+          "requested_force_N": 3.853747570816002,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.2,
+          "stratum_index": 3,
+          "stratum_low_N": 3.8
+        },
+        {
+          "requested_force_N": 4.521782552974874,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.6,
+          "stratum_index": 4,
+          "stratum_low_N": 4.2
+        },
+        {
+          "requested_force_N": 4.7501816720434284,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 5.0,
+          "stratum_index": 5,
+          "stratum_low_N": 4.6
+        }
+      ],
+      "friction": 0.9056570160733267,
+      "friction_band": "HIGH",
+      "last_hold_step": 190,
+      "opening": 0.0243804156780242,
+      "probe_telemetry": "/home/exouser/Tabero/analysis/results/p5s0c_paired_boundary_probe_value_20260824_000542/P5S0C_PROBE_TELEMETRY/p5s0c_train_t0_r04_s5104_high_mu0.905657_probe_timesteps.csv",
+      "probe_telemetry_sha256": "3ac1723de562c2bc952b2b1306e46aad5ea10e396f9f4c66419e31ad6302d30c",
+      "root_id": "p5s0c_train_t0_root04_s5104",
+      "root_index": 4,
+      "root_seed": 5104,
+      "task": 0
+    },
+    {
+      "context_id": "p5s0c_train_t0_r04_s5104_low_mu0.298968",
+      "continuous_force_samples": [
+        {
+          "requested_force_N": 3.3463605549543933,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.4,
+          "stratum_index": 1,
+          "stratum_low_N": 3.0
+        },
+        {
+          "requested_force_N": 3.5275338354523913,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.8,
+          "stratum_index": 2,
+          "stratum_low_N": 3.4
+        },
+        {
+          "requested_force_N": 4.02390188499984,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.2,
+          "stratum_index": 3,
+          "stratum_low_N": 3.8
+        },
+        {
+          "requested_force_N": 4.315760958917736,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.6,
+          "stratum_index": 4,
+          "stratum_low_N": 4.2
+        },
+        {
+          "requested_force_N": 4.8646121942607685,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 5.0,
+          "stratum_index": 5,
+          "stratum_low_N": 4.6
+        }
+      ],
+      "friction": 0.2989681415686305,
+      "friction_band": "LOW",
+      "last_hold_step": 190,
+      "opening": 0.0243058279156684,
+      "probe_telemetry": "/home/exouser/Tabero/analysis/results/p5s0c_paired_boundary_probe_value_20260824_000542/P5S0C_PROBE_TELEMETRY/p5s0c_train_t0_r04_s5104_low_mu0.298968_probe_timesteps.csv",
+      "probe_telemetry_sha256": "0b613ee7604512a9b0dce37c0b189a320e3998dfae87d058fd2543039de9f7ea",
+      "root_id": "p5s0c_train_t0_root04_s5104",
+      "root_index": 4,
+      "root_seed": 5104,
+      "task": 0
+    },
+    {
+      "context_id": "p5s0c_train_t0_r04_s5104_mid_mu0.572072",
+      "continuous_force_samples": [
+        {
+          "requested_force_N": 3.3051311903557075,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.4,
+          "stratum_index": 1,
+          "stratum_low_N": 3.0
+        },
+        {
+          "requested_force_N": 3.4957588534464934,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.8,
+          "stratum_index": 2,
+          "stratum_low_N": 3.4
+        },
+        {
+          "requested_force_N": 4.063549828889162,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.2,
+          "stratum_index": 3,
+          "stratum_low_N": 3.8
+        },
+        {
+          "requested_force_N": 4.498515023314507,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.6,
+          "stratum_index": 4,
+          "stratum_low_N": 4.2
+        },
+        {
+          "requested_force_N": 4.6277239896960705,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 5.0,
+          "stratum_index": 5,
+          "stratum_low_N": 4.6
+        }
+      ],
+      "friction": 0.5720723245328282,
+      "friction_band": "MID",
+      "last_hold_step": 190,
+      "opening": 0.0243922136723995,
+      "probe_telemetry": "/home/exouser/Tabero/analysis/results/p5s0c_paired_boundary_probe_value_20260824_000542/P5S0C_PROBE_TELEMETRY/p5s0c_train_t0_r04_s5104_mid_mu0.572072_probe_timesteps.csv",
+      "probe_telemetry_sha256": "f79cb85b59c442188ce6b383242d57b2842c143878568901de07b019ccda0665",
+      "root_id": "p5s0c_train_t0_root04_s5104",
+      "root_index": 4,
+      "root_seed": 5104,
+      "task": 0
+    },
+    {
+      "context_id": "p5s0c_train_t0_r05_s5105_high_mu0.913775",
+      "continuous_force_samples": [
+        {
+          "requested_force_N": 3.1460206603544147,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.4,
+          "stratum_index": 1,
+          "stratum_low_N": 3.0
+        },
+        {
+          "requested_force_N": 3.4608823958112067,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.8,
+          "stratum_index": 2,
+          "stratum_low_N": 3.4
+        },
+        {
+          "requested_force_N": 3.9202839517968435,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.2,
+          "stratum_index": 3,
+          "stratum_low_N": 3.8
+        },
+        {
+          "requested_force_N": 4.254814369293597,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.6,
+          "stratum_index": 4,
+          "stratum_low_N": 4.2
+        },
+        {
+          "requested_force_N": 4.9913273990690445,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 5.0,
+          "stratum_index": 5,
+          "stratum_low_N": 4.6
+        }
+      ],
+      "friction": 0.913775019025229,
+      "friction_band": "HIGH",
+      "last_hold_step": 190,
+      "opening": 0.0244182962924242,
+      "probe_telemetry": "/home/exouser/Tabero/analysis/results/p5s0c_paired_boundary_probe_value_20260824_000542/P5S0C_PROBE_TELEMETRY/p5s0c_train_t0_r05_s5105_high_mu0.913775_probe_timesteps.csv",
+      "probe_telemetry_sha256": "ea74ad96e4366b0580c7690148019af86c3e0f59a405f91533c587cfdabf9dd0",
+      "root_id": "p5s0c_train_t0_root05_s5105",
+      "root_index": 5,
+      "root_seed": 5105,
+      "task": 0
+    },
+    {
+      "context_id": "p5s0c_train_t0_r05_s5105_low_mu0.252358",
+      "continuous_force_samples": [
+        {
+          "requested_force_N": 3.097658731869344,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.4,
+          "stratum_index": 1,
+          "stratum_low_N": 3.0
+        },
+        {
+          "requested_force_N": 3.681842360269451,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.8,
+          "stratum_index": 2,
+          "stratum_low_N": 3.4
+        },
+        {
+          "requested_force_N": 3.8006191494530257,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.2,
+          "stratum_index": 3,
+          "stratum_low_N": 3.8
+        },
+        {
+          "requested_force_N": 4.243859561731617,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.6,
+          "stratum_index": 4,
+          "stratum_low_N": 4.2
+        },
+        {
+          "requested_force_N": 4.687651871335493,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 5.0,
+          "stratum_index": 5,
+          "stratum_low_N": 4.6
+        }
+      ],
+      "friction": 0.2523584006618226,
+      "friction_band": "LOW",
+      "last_hold_step": 190,
+      "opening": 0.0242827702313661,
+      "probe_telemetry": "/home/exouser/Tabero/analysis/results/p5s0c_paired_boundary_probe_value_20260824_000542/P5S0C_PROBE_TELEMETRY/p5s0c_train_t0_r05_s5105_low_mu0.252358_probe_timesteps.csv",
+      "probe_telemetry_sha256": "e608604d2368d4e9d5183a15a57673c00c0d249d3dfb74235bc3326dfe3c6c78",
+      "root_id": "p5s0c_train_t0_root05_s5105",
+      "root_index": 5,
+      "root_seed": 5105,
+      "task": 0
+    },
+    {
+      "context_id": "p5s0c_train_t0_r05_s5105_mid_mu0.529333",
+      "continuous_force_samples": [
+        {
+          "requested_force_N": 3.314461214633906,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.4,
+          "stratum_index": 1,
+          "stratum_low_N": 3.0
+        },
+        {
+          "requested_force_N": 3.4543794517133555,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.8,
+          "stratum_index": 2,
+          "stratum_low_N": 3.4
+        },
+        {
+          "requested_force_N": 3.897830783725788,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.2,
+          "stratum_index": 3,
+          "stratum_low_N": 3.8
+        },
+        {
+          "requested_force_N": 4.423970878927225,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.6,
+          "stratum_index": 4,
+          "stratum_low_N": 4.2
+        },
+        {
+          "requested_force_N": 4.729842036103465,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 5.0,
+          "stratum_index": 5,
+          "stratum_low_N": 4.6
+        }
+      ],
+      "friction": 0.5293331885497402,
+      "friction_band": "MID",
+      "last_hold_step": 190,
+      "opening": 0.0243807584047317,
+      "probe_telemetry": "/home/exouser/Tabero/analysis/results/p5s0c_paired_boundary_probe_value_20260824_000542/P5S0C_PROBE_TELEMETRY/p5s0c_train_t0_r05_s5105_mid_mu0.529333_probe_timesteps.csv",
+      "probe_telemetry_sha256": "2e882909f59ee960eb3bb94b82d00585a84dd08a5baa60c8d821527f83c88982",
+      "root_id": "p5s0c_train_t0_root05_s5105",
+      "root_index": 5,
+      "root_seed": 5105,
+      "task": 0
+    },
+    {
+      "context_id": "p5s0c_train_t1_r00_s5100_high_mu0.921500",
+      "continuous_force_samples": [
+        {
+          "requested_force_N": 4.21210095834229,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.4,
+          "stratum_index": 1,
+          "stratum_low_N": 4.0
+        },
+        {
+          "requested_force_N": 4.539502146681921,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.8,
+          "stratum_index": 2,
+          "stratum_low_N": 4.4
+        },
+        {
+          "requested_force_N": 5.064144012551618,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 5.2,
+          "stratum_index": 3,
+          "stratum_low_N": 4.8
+        },
+        {
+          "requested_force_N": 5.340909749997316,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 5.6,
+          "stratum_index": 4,
+          "stratum_low_N": 5.2
+        },
+        {
+          "requested_force_N": 5.6702052804400624,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 6.0,
+          "stratum_index": 5,
+          "stratum_low_N": 5.6
+        }
+      ],
+      "friction": 0.9215002256494116,
+      "friction_band": "HIGH",
+      "last_hold_step": 190,
+      "opening": 0.0142151834443211,
+      "probe_telemetry": "/home/exouser/Tabero/analysis/results/p5s0c_paired_boundary_probe_value_20260824_000542/P5S0C_PROBE_TELEMETRY/p5s0c_train_t1_r00_s5100_high_mu0.921500_probe_timesteps.csv",
+      "probe_telemetry_sha256": "6637eb87a596260658e637e83a54bd93a3d49721a52468fefec0e936dabb83e2",
+      "root_id": "p5s0c_train_t1_root00_s5100",
+      "root_index": 0,
+      "root_seed": 5100,
+      "task": 1
+    },
+    {
+      "context_id": "p5s0c_train_t1_r00_s5100_low_mu0.240019",
+      "continuous_force_samples": [
+        {
+          "requested_force_N": 4.164645625838943,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.4,
+          "stratum_index": 1,
+          "stratum_low_N": 4.0
+        },
+        {
+          "requested_force_N": 4.421121521276834,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.8,
+          "stratum_index": 2,
+          "stratum_low_N": 4.4
+        },
+        {
+          "requested_force_N": 5.119637846314241,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 5.2,
+          "stratum_index": 3,
+          "stratum_low_N": 4.8
+        },
+        {
+          "requested_force_N": 5.502161488735795,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 5.6,
+          "stratum_index": 4,
+          "stratum_low_N": 5.2
+        },
+        {
+          "requested_force_N": 5.859326751521704,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 6.0,
+          "stratum_index": 5,
+          "stratum_low_N": 5.6
+        }
+      ],
+      "friction": 0.24001855706823938,
+      "friction_band": "LOW",
+      "last_hold_step": 190,
+      "opening": 0.0140253948047757,
+      "probe_telemetry": "/home/exouser/Tabero/analysis/results/p5s0c_paired_boundary_probe_value_20260824_000542/P5S0C_PROBE_TELEMETRY/p5s0c_train_t1_r00_s5100_low_mu0.240019_probe_timesteps.csv",
+      "probe_telemetry_sha256": "c690463b51330b792454c9be19b6791eb712e9407f40ae7c29dc7bc254885329",
+      "root_id": "p5s0c_train_t1_root00_s5100",
+      "root_index": 0,
+      "root_seed": 5100,
+      "task": 1
+    },
+    {
+      "context_id": "p5s0c_train_t1_r00_s5100_mid_mu0.467048",
+      "continuous_force_samples": [
+        {
+          "requested_force_N": 4.154801664363949,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.4,
+          "stratum_index": 1,
+          "stratum_low_N": 4.0
+        },
+        {
+          "requested_force_N": 4.772503047650745,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.8,
+          "stratum_index": 2,
+          "stratum_low_N": 4.4
+        },
+        {
+          "requested_force_N": 5.023419669736597,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 5.2,
+          "stratum_index": 3,
+          "stratum_low_N": 4.8
+        },
+        {
+          "requested_force_N": 5.482512073127117,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 5.6,
+          "stratum_index": 4,
+          "stratum_low_N": 5.2
+        },
+        {
+          "requested_force_N": 5.671332546530255,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 6.0,
+          "stratum_index": 5,
+          "stratum_low_N": 5.6
+        }
+      ],
+      "friction": 0.4670478243968788,
+      "friction_band": "MID",
+      "last_hold_step": 190,
+      "opening": 0.014127523638308,
+      "probe_telemetry": "/home/exouser/Tabero/analysis/results/p5s0c_paired_boundary_probe_value_20260824_000542/P5S0C_PROBE_TELEMETRY/p5s0c_train_t1_r00_s5100_mid_mu0.467048_probe_timesteps.csv",
+      "probe_telemetry_sha256": "cebb3e2af6facc8af4e7cd23afbd33cfb679811b4811ff9ae11dd657577f87dd",
+      "root_id": "p5s0c_train_t1_root00_s5100",
+      "root_index": 0,
+      "root_seed": 5100,
+      "task": 1
+    },
+    {
+      "context_id": "p5s0c_train_t1_r01_s5101_high_mu0.920754",
+      "continuous_force_samples": [
+        {
+          "requested_force_N": 4.338078926384688,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.4,
+          "stratum_index": 1,
+          "stratum_low_N": 4.0
+        },
+        {
+          "requested_force_N": 4.44240793198037,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.8,
+          "stratum_index": 2,
+          "stratum_low_N": 4.4
+        },
+        {
+          "requested_force_N": 4.813712498162126,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 5.2,
+          "stratum_index": 3,
+          "stratum_low_N": 4.8
+        },
+        {
+          "requested_force_N": 5.489677305552813,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 5.6,
+          "stratum_index": 4,
+          "stratum_low_N": 5.2
+        },
+        {
+          "requested_force_N": 5.6332451054602055,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 6.0,
+          "stratum_index": 5,
+          "stratum_low_N": 5.6
+        }
+      ],
+      "friction": 0.9207541147845438,
+      "friction_band": "HIGH",
+      "last_hold_step": 190,
+      "opening": 0.0142164416611194,
+      "probe_telemetry": "/home/exouser/Tabero/analysis/results/p5s0c_paired_boundary_probe_value_20260824_000542/P5S0C_PROBE_TELEMETRY/p5s0c_train_t1_r01_s5101_high_mu0.920754_probe_timesteps.csv",
+      "probe_telemetry_sha256": "fe27b461a45d650ca41bfdc7a2659dbfb2ac11dd24ca9d7c2093502c2ec1579a",
+      "root_id": "p5s0c_train_t1_root01_s5101",
+      "root_index": 1,
+      "root_seed": 5101,
+      "task": 1
+    },
+    {
+      "context_id": "p5s0c_train_t1_r01_s5101_low_mu0.271996",
+      "continuous_force_samples": [
+        {
+          "requested_force_N": 4.022641498213649,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.4,
+          "stratum_index": 1,
+          "stratum_low_N": 4.0
+        },
+        {
+          "requested_force_N": 4.557928243459699,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.8,
+          "stratum_index": 2,
+          "stratum_low_N": 4.4
+        },
+        {
+          "requested_force_N": 5.107717938919584,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 5.2,
+          "stratum_index": 3,
+          "stratum_low_N": 4.8
+        },
+        {
+          "requested_force_N": 5.368121340026501,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 5.6,
+          "stratum_index": 4,
+          "stratum_low_N": 5.2
+        },
+        {
+          "requested_force_N": 5.658111754514343,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 6.0,
+          "stratum_index": 5,
+          "stratum_low_N": 5.6
+        }
+      ],
+      "friction": 0.27199617452698444,
+      "friction_band": "LOW",
+      "last_hold_step": 190,
+      "opening": 0.0140041094273328,
+      "probe_telemetry": "/home/exouser/Tabero/analysis/results/p5s0c_paired_boundary_probe_value_20260824_000542/P5S0C_PROBE_TELEMETRY/p5s0c_train_t1_r01_s5101_low_mu0.271996_probe_timesteps.csv",
+      "probe_telemetry_sha256": "c929d05a3506497166b8dff06784fd161cef94cfbf3b865ba77989169e649b71",
+      "root_id": "p5s0c_train_t1_root01_s5101",
+      "root_index": 1,
+      "root_seed": 5101,
+      "task": 1
+    },
+    {
+      "context_id": "p5s0c_train_t1_r01_s5101_mid_mu0.506177",
+      "continuous_force_samples": [
+        {
+          "requested_force_N": 4.2478906691026745,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.4,
+          "stratum_index": 1,
+          "stratum_low_N": 4.0
+        },
+        {
+          "requested_force_N": 4.680680042814863,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.8,
+          "stratum_index": 2,
+          "stratum_low_N": 4.4
+        },
+        {
+          "requested_force_N": 5.087600296865551,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 5.2,
+          "stratum_index": 3,
+          "stratum_low_N": 4.8
+        },
+        {
+          "requested_force_N": 5.5671673435935345,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 5.6,
+          "stratum_index": 4,
+          "stratum_low_N": 5.2
+        },
+        {
+          "requested_force_N": 5.920660595226906,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 6.0,
+          "stratum_index": 5,
+          "stratum_low_N": 5.6
+        }
+      ],
+      "friction": 0.5061774499381578,
+      "friction_band": "MID",
+      "last_hold_step": 190,
+      "opening": 0.01415057759732,
+      "probe_telemetry": "/home/exouser/Tabero/analysis/results/p5s0c_paired_boundary_probe_value_20260824_000542/P5S0C_PROBE_TELEMETRY/p5s0c_train_t1_r01_s5101_mid_mu0.506177_probe_timesteps.csv",
+      "probe_telemetry_sha256": "27a6da4fd5a797b56497005dce43e88ada74f0c8a1213b54d1399d921ff45eb4",
+      "root_id": "p5s0c_train_t1_root01_s5101",
+      "root_index": 1,
+      "root_seed": 5101,
+      "task": 1
+    },
+    {
+      "context_id": "p5s0c_train_t1_r02_s5102_high_mu0.917516",
+      "continuous_force_samples": [
+        {
+          "requested_force_N": 4.046544282374859,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.4,
+          "stratum_index": 1,
+          "stratum_low_N": 4.0
+        },
+        {
+          "requested_force_N": 4.645521271192858,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.8,
+          "stratum_index": 2,
+          "stratum_low_N": 4.4
+        },
+        {
+          "requested_force_N": 4.991993577424889,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 5.2,
+          "stratum_index": 3,
+          "stratum_low_N": 4.8
+        },
+        {
+          "requested_force_N": 5.202270075450634,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 5.6,
+          "stratum_index": 4,
+          "stratum_low_N": 5.2
+        },
+        {
+          "requested_force_N": 5.8130235107752934,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 6.0,
+          "stratum_index": 5,
+          "stratum_low_N": 5.6
+        }
+      ],
+      "friction": 0.9175159521214378,
+      "friction_band": "HIGH",
+      "last_hold_step": 190,
+      "opening": 0.0142150595784187,
+      "probe_telemetry": "/home/exouser/Tabero/analysis/results/p5s0c_paired_boundary_probe_value_20260824_000542/P5S0C_PROBE_TELEMETRY/p5s0c_train_t1_r02_s5102_high_mu0.917516_probe_timesteps.csv",
+      "probe_telemetry_sha256": "0f7aee07954f098f17886da15114126fe9d2cf25f264698414f3b40fe92ee360",
+      "root_id": "p5s0c_train_t1_root02_s5102",
+      "root_index": 2,
+      "root_seed": 5102,
+      "task": 1
+    },
+    {
+      "context_id": "p5s0c_train_t1_r02_s5102_low_mu0.211510",
+      "continuous_force_samples": [
+        {
+          "requested_force_N": 4.244758741018327,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.4,
+          "stratum_index": 1,
+          "stratum_low_N": 4.0
+        },
+        {
+          "requested_force_N": 4.628489652754248,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.8,
+          "stratum_index": 2,
+          "stratum_low_N": 4.4
+        },
+        {
+          "requested_force_N": 4.896070123380016,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 5.2,
+          "stratum_index": 3,
+          "stratum_low_N": 4.8
+        },
+        {
+          "requested_force_N": 5.549562242377508,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 5.6,
+          "stratum_index": 4,
+          "stratum_low_N": 5.2
+        },
+        {
+          "requested_force_N": 5.729339031593505,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 6.0,
+          "stratum_index": 5,
+          "stratum_low_N": 5.6
+        }
+      ],
+      "friction": 0.21150975088555124,
+      "friction_band": "LOW",
+      "last_hold_step": 190,
+      "opening": 0.0139897614717483,
+      "probe_telemetry": "/home/exouser/Tabero/analysis/results/p5s0c_paired_boundary_probe_value_20260824_000542/P5S0C_PROBE_TELEMETRY/p5s0c_train_t1_r02_s5102_low_mu0.211510_probe_timesteps.csv",
+      "probe_telemetry_sha256": "aa986d9095ab0c589fd88129889e0bf5362cec65ab0fe8d5b7106f96fe50a414",
+      "root_id": "p5s0c_train_t1_root02_s5102",
+      "root_index": 2,
+      "root_seed": 5102,
+      "task": 1
+    },
+    {
+      "context_id": "p5s0c_train_t1_r02_s5102_mid_mu0.509876",
+      "continuous_force_samples": [
+        {
+          "requested_force_N": 4.094368940039778,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.4,
+          "stratum_index": 1,
+          "stratum_low_N": 4.0
+        },
+        {
+          "requested_force_N": 4.703787687371598,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.8,
+          "stratum_index": 2,
+          "stratum_low_N": 4.4
+        },
+        {
+          "requested_force_N": 4.807712968748104,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 5.2,
+          "stratum_index": 3,
+          "stratum_low_N": 4.8
+        },
+        {
+          "requested_force_N": 5.429323358250914,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 5.6,
+          "stratum_index": 4,
+          "stratum_low_N": 5.2
+        },
+        {
+          "requested_force_N": 5.88692354114526,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 6.0,
+          "stratum_index": 5,
+          "stratum_low_N": 5.6
+        }
+      ],
+      "friction": 0.509875894662746,
+      "friction_band": "MID",
+      "last_hold_step": 190,
+      "opening": 0.014155464246869,
+      "probe_telemetry": "/home/exouser/Tabero/analysis/results/p5s0c_paired_boundary_probe_value_20260824_000542/P5S0C_PROBE_TELEMETRY/p5s0c_train_t1_r02_s5102_mid_mu0.509876_probe_timesteps.csv",
+      "probe_telemetry_sha256": "1093d417cb44928edcda1e5bd65afa59a637d6b291f885d618ac9e0ef86cba44",
+      "root_id": "p5s0c_train_t1_root02_s5102",
+      "root_index": 2,
+      "root_seed": 5102,
+      "task": 1
+    },
+    {
+      "context_id": "p5s0c_train_t1_r03_s5103_high_mu0.994255",
+      "continuous_force_samples": [
+        {
+          "requested_force_N": 4.032550079235487,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.4,
+          "stratum_index": 1,
+          "stratum_low_N": 4.0
+        },
+        {
+          "requested_force_N": 4.610066550785013,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.8,
+          "stratum_index": 2,
+          "stratum_low_N": 4.4
+        },
+        {
+          "requested_force_N": 5.155131018235401,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 5.2,
+          "stratum_index": 3,
+          "stratum_low_N": 4.8
+        },
+        {
+          "requested_force_N": 5.319473824847019,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 5.6,
+          "stratum_index": 4,
+          "stratum_low_N": 5.2
+        },
+        {
+          "requested_force_N": 5.705129342952412,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 6.0,
+          "stratum_index": 5,
+          "stratum_low_N": 5.6
+        }
+      ],
+      "friction": 0.9942547016813209,
+      "friction_band": "HIGH",
+      "last_hold_step": 190,
+      "opening": 0.0142186433076858,
+      "probe_telemetry": "/home/exouser/Tabero/analysis/results/p5s0c_paired_boundary_probe_value_20260824_000542/P5S0C_PROBE_TELEMETRY/p5s0c_train_t1_r03_s5103_high_mu0.994255_probe_timesteps.csv",
+      "probe_telemetry_sha256": "30eba4ad1d8a6f8d4a3ebdaa6198a347ac75306625a9c1b4d84429057cf1c392",
+      "root_id": "p5s0c_train_t1_root03_s5103",
+      "root_index": 3,
+      "root_seed": 5103,
+      "task": 1
+    },
+    {
+      "context_id": "p5s0c_train_t1_r03_s5103_low_mu0.252239",
+      "continuous_force_samples": [
+        {
+          "requested_force_N": 4.363649450800043,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.4,
+          "stratum_index": 1,
+          "stratum_low_N": 4.0
+        },
+        {
+          "requested_force_N": 4.546908323699988,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.8,
+          "stratum_index": 2,
+          "stratum_low_N": 4.4
+        },
+        {
+          "requested_force_N": 5.046982974873693,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 5.2,
+          "stratum_index": 3,
+          "stratum_low_N": 4.8
+        },
+        {
+          "requested_force_N": 5.340767218731952,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 5.6,
+          "stratum_index": 4,
+          "stratum_low_N": 5.2
+        },
+        {
+          "requested_force_N": 5.943215935032666,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 6.0,
+          "stratum_index": 5,
+          "stratum_low_N": 5.6
+        }
+      ],
+      "friction": 0.2522389282215292,
+      "friction_band": "LOW",
+      "last_hold_step": 190,
+      "opening": 0.0140096461400389,
+      "probe_telemetry": "/home/exouser/Tabero/analysis/results/p5s0c_paired_boundary_probe_value_20260824_000542/P5S0C_PROBE_TELEMETRY/p5s0c_train_t1_r03_s5103_low_mu0.252239_probe_timesteps.csv",
+      "probe_telemetry_sha256": "999f48b0e74914672b65761cb1560e91811283b77eb96f9828b88231b7a7b8f9",
+      "root_id": "p5s0c_train_t1_root03_s5103",
+      "root_index": 3,
+      "root_seed": 5103,
+      "task": 1
+    },
+    {
+      "context_id": "p5s0c_train_t1_r03_s5103_mid_mu0.580481",
+      "continuous_force_samples": [
+        {
+          "requested_force_N": 4.102998937138528,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.4,
+          "stratum_index": 1,
+          "stratum_low_N": 4.0
+        },
+        {
+          "requested_force_N": 4.550383456840101,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.8,
+          "stratum_index": 2,
+          "stratum_low_N": 4.4
+        },
+        {
+          "requested_force_N": 4.8214679285846955,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 5.2,
+          "stratum_index": 3,
+          "stratum_low_N": 4.8
+        },
+        {
+          "requested_force_N": 5.473552530129805,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 5.6,
+          "stratum_index": 4,
+          "stratum_low_N": 5.2
+        },
+        {
+          "requested_force_N": 5.810926924157705,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 6.0,
+          "stratum_index": 5,
+          "stratum_low_N": 5.6
+        }
+      ],
+      "friction": 0.5804812058382962,
+      "friction_band": "MID",
+      "last_hold_step": 190,
+      "opening": 0.0141662545502185,
+      "probe_telemetry": "/home/exouser/Tabero/analysis/results/p5s0c_paired_boundary_probe_value_20260824_000542/P5S0C_PROBE_TELEMETRY/p5s0c_train_t1_r03_s5103_mid_mu0.580481_probe_timesteps.csv",
+      "probe_telemetry_sha256": "3095e4026bdd2ed14e7c0302f5c9c056dab81e2fab7f42fe8f932542d66f93aa",
+      "root_id": "p5s0c_train_t1_root03_s5103",
+      "root_index": 3,
+      "root_seed": 5103,
+      "task": 1
+    },
+    {
+      "context_id": "p5s0c_train_t1_r04_s5104_high_mu0.989461",
+      "continuous_force_samples": [
+        {
+          "requested_force_N": 4.369303635272635,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.4,
+          "stratum_index": 1,
+          "stratum_low_N": 4.0
+        },
+        {
+          "requested_force_N": 4.728456625914877,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.8,
+          "stratum_index": 2,
+          "stratum_low_N": 4.4
+        },
+        {
+          "requested_force_N": 4.807289371850478,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 5.2,
+          "stratum_index": 3,
+          "stratum_low_N": 4.8
+        },
+        {
+          "requested_force_N": 5.575498232484046,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 5.6,
+          "stratum_index": 4,
+          "stratum_low_N": 5.2
+        },
+        {
+          "requested_force_N": 5.953857169614121,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 6.0,
+          "stratum_index": 5,
+          "stratum_low_N": 5.6
+        }
+      ],
+      "friction": 0.9894606289679417,
+      "friction_band": "HIGH",
+      "last_hold_step": 190,
+      "opening": 0.0142156900838017,
+      "probe_telemetry": "/home/exouser/Tabero/analysis/results/p5s0c_paired_boundary_probe_value_20260824_000542/P5S0C_PROBE_TELEMETRY/p5s0c_train_t1_r04_s5104_high_mu0.989461_probe_timesteps.csv",
+      "probe_telemetry_sha256": "a2486c74ac569fab152f49efeacf5390a599131a64a1e61298d336ba597a0cfa",
+      "root_id": "p5s0c_train_t1_root04_s5104",
+      "root_index": 4,
+      "root_seed": 5104,
+      "task": 1
+    },
+    {
+      "context_id": "p5s0c_train_t1_r04_s5104_low_mu0.223399",
+      "continuous_force_samples": [
+        {
+          "requested_force_N": 4.206096551576313,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.4,
+          "stratum_index": 1,
+          "stratum_low_N": 4.0
+        },
+        {
+          "requested_force_N": 4.699789215407094,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.8,
+          "stratum_index": 2,
+          "stratum_low_N": 4.4
+        },
+        {
+          "requested_force_N": 4.99376081747376,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 5.2,
+          "stratum_index": 3,
+          "stratum_low_N": 4.8
+        },
+        {
+          "requested_force_N": 5.242796083300154,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 5.6,
+          "stratum_index": 4,
+          "stratum_low_N": 5.2
+        },
+        {
+          "requested_force_N": 5.960140104231352,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 6.0,
+          "stratum_index": 5,
+          "stratum_low_N": 5.6
+        }
+      ],
+      "friction": 0.2233988467038157,
+      "friction_band": "LOW",
+      "last_hold_step": 190,
+      "opening": 0.0139900939539074,
+      "probe_telemetry": "/home/exouser/Tabero/analysis/results/p5s0c_paired_boundary_probe_value_20260824_000542/P5S0C_PROBE_TELEMETRY/p5s0c_train_t1_r04_s5104_low_mu0.223399_probe_timesteps.csv",
+      "probe_telemetry_sha256": "95a0899e8986e8ab37ae7e94a800a1f52eb19d090144f6b516287ae28c52d51e",
+      "root_id": "p5s0c_train_t1_root04_s5104",
+      "root_index": 4,
+      "root_seed": 5104,
+      "task": 1
+    },
+    {
+      "context_id": "p5s0c_train_t1_r04_s5104_mid_mu0.589024",
+      "continuous_force_samples": [
+        {
+          "requested_force_N": 4.117024133820839,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.4,
+          "stratum_index": 1,
+          "stratum_low_N": 4.0
+        },
+        {
+          "requested_force_N": 4.6549246113999985,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.8,
+          "stratum_index": 2,
+          "stratum_low_N": 4.4
+        },
+        {
+          "requested_force_N": 5.087361532190781,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 5.2,
+          "stratum_index": 3,
+          "stratum_low_N": 4.8
+        },
+        {
+          "requested_force_N": 5.379140542338786,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 5.6,
+          "stratum_index": 4,
+          "stratum_low_N": 5.2
+        },
+        {
+          "requested_force_N": 5.968989986633949,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 6.0,
+          "stratum_index": 5,
+          "stratum_low_N": 5.6
+        }
+      ],
+      "friction": 0.5890240876672719,
+      "friction_band": "MID",
+      "last_hold_step": 190,
+      "opening": 0.0141732692718505,
+      "probe_telemetry": "/home/exouser/Tabero/analysis/results/p5s0c_paired_boundary_probe_value_20260824_000542/P5S0C_PROBE_TELEMETRY/p5s0c_train_t1_r04_s5104_mid_mu0.589024_probe_timesteps.csv",
+      "probe_telemetry_sha256": "bb49fe0c45110027a3bf8d695f2f6b088504eb1c0aec9d63ef9b7c4f94bd55d5",
+      "root_id": "p5s0c_train_t1_root04_s5104",
+      "root_index": 4,
+      "root_seed": 5104,
+      "task": 1
+    },
+    {
+      "context_id": "p5s0c_train_t1_r05_s5105_high_mu0.901787",
+      "continuous_force_samples": [
+        {
+          "requested_force_N": 4.09191288039365,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.4,
+          "stratum_index": 1,
+          "stratum_low_N": 4.0
+        },
+        {
+          "requested_force_N": 4.664546554144782,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.8,
+          "stratum_index": 2,
+          "stratum_low_N": 4.4
+        },
+        {
+          "requested_force_N": 4.912183714085512,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 5.2,
+          "stratum_index": 3,
+          "stratum_low_N": 4.8
+        },
+        {
+          "requested_force_N": 5.507581539991828,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 5.6,
+          "stratum_index": 4,
+          "stratum_low_N": 5.2
+        },
+        {
+          "requested_force_N": 5.770738234158682,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 6.0,
+          "stratum_index": 5,
+          "stratum_low_N": 5.6
+        }
+      ],
+      "friction": 0.9017871422121704,
+      "friction_band": "HIGH",
+      "last_hold_step": 190,
+      "opening": 0.0140639841556549,
+      "probe_telemetry": "/home/exouser/Tabero/analysis/results/p5s0c_paired_boundary_probe_value_20260824_000542/P5S0C_PROBE_TELEMETRY/p5s0c_train_t1_r05_s5105_high_mu0.901787_probe_timesteps.csv",
+      "probe_telemetry_sha256": "d693459edc25502e323944d33b306970cb574c0839ee990c80e05d6deaed9a7c",
+      "root_id": "p5s0c_train_t1_root05_s5105",
+      "root_index": 5,
+      "root_seed": 5105,
+      "task": 1
+    },
+    {
+      "context_id": "p5s0c_train_t1_r05_s5105_low_mu0.281471",
+      "continuous_force_samples": [
+        {
+          "requested_force_N": 4.051380762050056,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.4,
+          "stratum_index": 1,
+          "stratum_low_N": 4.0
+        },
+        {
+          "requested_force_N": 4.651381570381043,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.8,
+          "stratum_index": 2,
+          "stratum_low_N": 4.4
+        },
+        {
+          "requested_force_N": 4.888889194071916,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 5.2,
+          "stratum_index": 3,
+          "stratum_low_N": 4.8
+        },
+        {
+          "requested_force_N": 5.45426664831663,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 5.6,
+          "stratum_index": 4,
+          "stratum_low_N": 5.2
+        },
+        {
+          "requested_force_N": 5.869333434272343,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 6.0,
+          "stratum_index": 5,
+          "stratum_low_N": 5.6
+        }
+      ],
+      "friction": 0.28147084843309544,
+      "friction_band": "LOW",
+      "last_hold_step": 190,
+      "opening": 0.0139968022704124,
+      "probe_telemetry": "/home/exouser/Tabero/analysis/results/p5s0c_paired_boundary_probe_value_20260824_000542/P5S0C_PROBE_TELEMETRY/p5s0c_train_t1_r05_s5105_low_mu0.281471_probe_timesteps.csv",
+      "probe_telemetry_sha256": "b2da15a556647bbb3c28234bda98cd8c4350a4299b24b2583a6f95ea0de184e4",
+      "root_id": "p5s0c_train_t1_root05_s5105",
+      "root_index": 5,
+      "root_seed": 5105,
+      "task": 1
+    },
+    {
+      "context_id": "p5s0c_train_t1_r05_s5105_mid_mu0.533126",
+      "continuous_force_samples": [
+        {
+          "requested_force_N": 4.251500823527196,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.4,
+          "stratum_index": 1,
+          "stratum_low_N": 4.0
+        },
+        {
+          "requested_force_N": 4.46335115057102,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.8,
+          "stratum_index": 2,
+          "stratum_low_N": 4.4
+        },
+        {
+          "requested_force_N": 4.963415498461771,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 5.2,
+          "stratum_index": 3,
+          "stratum_low_N": 4.8
+        },
+        {
+          "requested_force_N": 5.30099933454891,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 5.6,
+          "stratum_index": 4,
+          "stratum_low_N": 5.2
+        },
+        {
+          "requested_force_N": 5.984855347684767,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 6.0,
+          "stratum_index": 5,
+          "stratum_low_N": 5.6
+        }
+      ],
+      "friction": 0.5331259916067848,
+      "friction_band": "MID",
+      "last_hold_step": 190,
+      "opening": 0.0140608670189976,
+      "probe_telemetry": "/home/exouser/Tabero/analysis/results/p5s0c_paired_boundary_probe_value_20260824_000542/P5S0C_PROBE_TELEMETRY/p5s0c_train_t1_r05_s5105_mid_mu0.533126_probe_timesteps.csv",
+      "probe_telemetry_sha256": "8b3ce33a9cd8ccc6cad536eece6d73698c29ee82641255255f99e9bc093bda5a",
+      "root_id": "p5s0c_train_t1_root05_s5105",
+      "root_index": 5,
+      "root_seed": 5105,
+      "task": 1
+    },
+    {
+      "context_id": "p5s0c_train_t5_r00_s5100_high_mu0.945004",
+      "continuous_force_samples": [
+        {
+          "requested_force_N": 3.3505755204828644,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.4,
+          "stratum_index": 1,
+          "stratum_low_N": 3.0
+        },
+        {
+          "requested_force_N": 3.5585173118758044,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.8,
+          "stratum_index": 2,
+          "stratum_low_N": 3.4
+        },
+        {
+          "requested_force_N": 3.8612235562231323,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.2,
+          "stratum_index": 3,
+          "stratum_low_N": 3.8
+        },
+        {
+          "requested_force_N": 4.469635244548228,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.6,
+          "stratum_index": 4,
+          "stratum_low_N": 4.2
+        },
+        {
+          "requested_force_N": 4.703840318327821,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 5.0,
+          "stratum_index": 5,
+          "stratum_low_N": 4.6
+        }
+      ],
+      "friction": 0.9450036831015114,
+      "friction_band": "HIGH",
+      "last_hold_step": 190,
+      "opening": 0.0242093596607446,
+      "probe_telemetry": "/home/exouser/Tabero/analysis/results/p5s0c_paired_boundary_probe_value_20260824_000542/P5S0C_PROBE_TELEMETRY/p5s0c_train_t5_r00_s5100_high_mu0.945004_probe_timesteps.csv",
+      "probe_telemetry_sha256": "31a9cbede56c2839eb2827b3cecf354e6ca0fa6b55aac433dc3ea92e2007d1ec",
+      "root_id": "p5s0c_train_t5_root00_s5100",
+      "root_index": 0,
+      "root_seed": 5100,
+      "task": 5
+    },
+    {
+      "context_id": "p5s0c_train_t5_r00_s5100_low_mu0.270805",
+      "continuous_force_samples": [
+        {
+          "requested_force_N": 3.269748668514723,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.4,
+          "stratum_index": 1,
+          "stratum_low_N": 3.0
+        },
+        {
+          "requested_force_N": 3.6421547665244454,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.8,
+          "stratum_index": 2,
+          "stratum_low_N": 3.4
+        },
+        {
+          "requested_force_N": 3.868495292791647,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.2,
+          "stratum_index": 3,
+          "stratum_low_N": 3.8
+        },
+        {
+          "requested_force_N": 4.262457200031596,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.6,
+          "stratum_index": 4,
+          "stratum_low_N": 4.2
+        },
+        {
+          "requested_force_N": 4.607648212984033,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 5.0,
+          "stratum_index": 5,
+          "stratum_low_N": 4.6
+        }
+      ],
+      "friction": 0.2708052527683458,
+      "friction_band": "LOW",
+      "last_hold_step": 190,
+      "opening": 0.0241531617939472,
+      "probe_telemetry": "/home/exouser/Tabero/analysis/results/p5s0c_paired_boundary_probe_value_20260824_000542/P5S0C_PROBE_TELEMETRY/p5s0c_train_t5_r00_s5100_low_mu0.270805_probe_timesteps.csv",
+      "probe_telemetry_sha256": "0873d7781bc0840c4b7e57c8387703428d51b6c9ddabb4af0e5096c1712db9f6",
+      "root_id": "p5s0c_train_t5_root00_s5100",
+      "root_index": 0,
+      "root_seed": 5100,
+      "task": 5
+    },
+    {
+      "context_id": "p5s0c_train_t5_r00_s5100_mid_mu0.538330",
+      "continuous_force_samples": [
+        {
+          "requested_force_N": 3.3783778960898334,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.4,
+          "stratum_index": 1,
+          "stratum_low_N": 3.0
+        },
+        {
+          "requested_force_N": 3.724624453815742,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.8,
+          "stratum_index": 2,
+          "stratum_low_N": 3.4
+        },
+        {
+          "requested_force_N": 3.806626624175867,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.2,
+          "stratum_index": 3,
+          "stratum_low_N": 3.8
+        },
+        {
+          "requested_force_N": 4.473636225380101,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.6,
+          "stratum_index": 4,
+          "stratum_low_N": 4.2
+        },
+        {
+          "requested_force_N": 4.899777177127945,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 5.0,
+          "stratum_index": 5,
+          "stratum_low_N": 4.6
+        }
+      ],
+      "friction": 0.538330484944251,
+      "friction_band": "MID",
+      "last_hold_step": 190,
+      "opening": 0.0241261031478643,
+      "probe_telemetry": "/home/exouser/Tabero/analysis/results/p5s0c_paired_boundary_probe_value_20260824_000542/P5S0C_PROBE_TELEMETRY/p5s0c_train_t5_r00_s5100_mid_mu0.538330_probe_timesteps.csv",
+      "probe_telemetry_sha256": "bec55805f3cf5d3f44f8183ad69efdba7b78e5665931034a03ecceb451e61002",
+      "root_id": "p5s0c_train_t5_root00_s5100",
+      "root_index": 0,
+      "root_seed": 5100,
+      "task": 5
+    },
+    {
+      "context_id": "p5s0c_train_t5_r01_s5101_high_mu0.977978",
+      "continuous_force_samples": [
+        {
+          "requested_force_N": 3.090115265052377,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.4,
+          "stratum_index": 1,
+          "stratum_low_N": 3.0
+        },
+        {
+          "requested_force_N": 3.5306077564098737,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.8,
+          "stratum_index": 2,
+          "stratum_low_N": 3.4
+        },
+        {
+          "requested_force_N": 4.058922122692139,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.2,
+          "stratum_index": 3,
+          "stratum_low_N": 3.8
+        },
+        {
+          "requested_force_N": 4.2990048795726326,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.6,
+          "stratum_index": 4,
+          "stratum_low_N": 4.2
+        },
+        {
+          "requested_force_N": 4.767481637100028,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 5.0,
+          "stratum_index": 5,
+          "stratum_low_N": 4.6
+        }
+      ],
+      "friction": 0.9779779583271985,
+      "friction_band": "HIGH",
+      "last_hold_step": 190,
+      "opening": 0.0242171417921781,
+      "probe_telemetry": "/home/exouser/Tabero/analysis/results/p5s0c_paired_boundary_probe_value_20260824_000542/P5S0C_PROBE_TELEMETRY/p5s0c_train_t5_r01_s5101_high_mu0.977978_probe_timesteps.csv",
+      "probe_telemetry_sha256": "09da81db58d40f5e577705dd1b6107dc6924a71e7ab9a06d0928016ba831d13f",
+      "root_id": "p5s0c_train_t5_root01_s5101",
+      "root_index": 1,
+      "root_seed": 5101,
+      "task": 5
+    },
+    {
+      "context_id": "p5s0c_train_t5_r01_s5101_low_mu0.269928",
+      "continuous_force_samples": [
+        {
+          "requested_force_N": 3.177409629369215,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.4,
+          "stratum_index": 1,
+          "stratum_low_N": 3.0
+        },
+        {
+          "requested_force_N": 3.5468531263569956,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.8,
+          "stratum_index": 2,
+          "stratum_low_N": 3.4
+        },
+        {
+          "requested_force_N": 3.8215311489925243,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.2,
+          "stratum_index": 3,
+          "stratum_low_N": 3.8
+        },
+        {
+          "requested_force_N": 4.4892662337666875,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.6,
+          "stratum_index": 4,
+          "stratum_low_N": 4.2
+        },
+        {
+          "requested_force_N": 4.751575092897414,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 5.0,
+          "stratum_index": 5,
+          "stratum_low_N": 4.6
+        }
+      ],
+      "friction": 0.2699280391435209,
+      "friction_band": "LOW",
+      "last_hold_step": 190,
+      "opening": 0.0241837184876203,
+      "probe_telemetry": "/home/exouser/Tabero/analysis/results/p5s0c_paired_boundary_probe_value_20260824_000542/P5S0C_PROBE_TELEMETRY/p5s0c_train_t5_r01_s5101_low_mu0.269928_probe_timesteps.csv",
+      "probe_telemetry_sha256": "3e8d071d30101b1c94d0a699b3650dc32d1c208bf42b64908594b3885cfdb943",
+      "root_id": "p5s0c_train_t5_root01_s5101",
+      "root_index": 1,
+      "root_seed": 5101,
+      "task": 5
+    },
+    {
+      "context_id": "p5s0c_train_t5_r01_s5101_mid_mu0.531976",
+      "continuous_force_samples": [
+        {
+          "requested_force_N": 3.320795934166386,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.4,
+          "stratum_index": 1,
+          "stratum_low_N": 3.0
+        },
+        {
+          "requested_force_N": 3.4506289941814625,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.8,
+          "stratum_index": 2,
+          "stratum_low_N": 3.4
+        },
+        {
+          "requested_force_N": 4.039076053805774,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.2,
+          "stratum_index": 3,
+          "stratum_low_N": 3.8
+        },
+        {
+          "requested_force_N": 4.306801978581236,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.6,
+          "stratum_index": 4,
+          "stratum_low_N": 4.2
+        },
+        {
+          "requested_force_N": 4.722125450637501,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 5.0,
+          "stratum_index": 5,
+          "stratum_low_N": 4.6
+        }
+      ],
+      "friction": 0.5319764380853421,
+      "friction_band": "MID",
+      "last_hold_step": 190,
+      "opening": 0.0241977758705616,
+      "probe_telemetry": "/home/exouser/Tabero/analysis/results/p5s0c_paired_boundary_probe_value_20260824_000542/P5S0C_PROBE_TELEMETRY/p5s0c_train_t5_r01_s5101_mid_mu0.531976_probe_timesteps.csv",
+      "probe_telemetry_sha256": "6fe3658dd0ae5c7da2ebb9e353d962435d3c0275ba73e9bea9cae85c5e2c93fb",
+      "root_id": "p5s0c_train_t5_root01_s5101",
+      "root_index": 1,
+      "root_seed": 5101,
+      "task": 5
+    },
+    {
+      "context_id": "p5s0c_train_t5_r02_s5102_high_mu0.938254",
+      "continuous_force_samples": [
+        {
+          "requested_force_N": 3.0695896790224766,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.4,
+          "stratum_index": 1,
+          "stratum_low_N": 3.0
+        },
+        {
+          "requested_force_N": 3.703419886287761,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.8,
+          "stratum_index": 2,
+          "stratum_low_N": 3.4
+        },
+        {
+          "requested_force_N": 4.0351580201941095,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.2,
+          "stratum_index": 3,
+          "stratum_low_N": 3.8
+        },
+        {
+          "requested_force_N": 4.424210392196606,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.6,
+          "stratum_index": 4,
+          "stratum_low_N": 4.2
+        },
+        {
+          "requested_force_N": 4.8063724865143795,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 5.0,
+          "stratum_index": 5,
+          "stratum_low_N": 4.6
+        }
+      ],
+      "friction": 0.9382535774444987,
+      "friction_band": "HIGH",
+      "last_hold_step": 190,
+      "opening": 0.0241973716765642,
+      "probe_telemetry": "/home/exouser/Tabero/analysis/results/p5s0c_paired_boundary_probe_value_20260824_000542/P5S0C_PROBE_TELEMETRY/p5s0c_train_t5_r02_s5102_high_mu0.938254_probe_timesteps.csv",
+      "probe_telemetry_sha256": "e795bc283ab5b0e196b339d400662c4b4aa0800553745c139f958c9f50fa7acf",
+      "root_id": "p5s0c_train_t5_root02_s5102",
+      "root_index": 2,
+      "root_seed": 5102,
+      "task": 5
+    },
+    {
+      "context_id": "p5s0c_train_t5_r02_s5102_low_mu0.295394",
+      "continuous_force_samples": [
+        {
+          "requested_force_N": 3.359002609041246,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.4,
+          "stratum_index": 1,
+          "stratum_low_N": 3.0
+        },
+        {
+          "requested_force_N": 3.4949309412787253,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.8,
+          "stratum_index": 2,
+          "stratum_low_N": 3.4
+        },
+        {
+          "requested_force_N": 4.188433381666139,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.2,
+          "stratum_index": 3,
+          "stratum_low_N": 3.8
+        },
+        {
+          "requested_force_N": 4.235094698618203,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.6,
+          "stratum_index": 4,
+          "stratum_low_N": 4.2
+        },
+        {
+          "requested_force_N": 4.631759571926591,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 5.0,
+          "stratum_index": 5,
+          "stratum_low_N": 4.6
+        }
+      ],
+      "friction": 0.2953937543558703,
+      "friction_band": "LOW",
+      "last_hold_step": 190,
+      "opening": 0.0241707079112529,
+      "probe_telemetry": "/home/exouser/Tabero/analysis/results/p5s0c_paired_boundary_probe_value_20260824_000542/P5S0C_PROBE_TELEMETRY/p5s0c_train_t5_r02_s5102_low_mu0.295394_probe_timesteps.csv",
+      "probe_telemetry_sha256": "9081cfb4d87345e28e5677d6ed5ef02fba1bc6411fcd2bc024db9b034938108a",
+      "root_id": "p5s0c_train_t5_root02_s5102",
+      "root_index": 2,
+      "root_seed": 5102,
+      "task": 5
+    },
+    {
+      "context_id": "p5s0c_train_t5_r02_s5102_mid_mu0.569222",
+      "continuous_force_samples": [
+        {
+          "requested_force_N": 3.326982183217865,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.4,
+          "stratum_index": 1,
+          "stratum_low_N": 3.0
+        },
+        {
+          "requested_force_N": 3.7413191163504615,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.8,
+          "stratum_index": 2,
+          "stratum_low_N": 3.4
+        },
+        {
+          "requested_force_N": 3.8358243299075547,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.2,
+          "stratum_index": 3,
+          "stratum_low_N": 3.8
+        },
+        {
+          "requested_force_N": 4.23807261283251,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.6,
+          "stratum_index": 4,
+          "stratum_low_N": 4.2
+        },
+        {
+          "requested_force_N": 4.723629532817161,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 5.0,
+          "stratum_index": 5,
+          "stratum_low_N": 4.6
+        }
+      ],
+      "friction": 0.5692222329044275,
+      "friction_band": "MID",
+      "last_hold_step": 190,
+      "opening": 0.0241892952471971,
+      "probe_telemetry": "/home/exouser/Tabero/analysis/results/p5s0c_paired_boundary_probe_value_20260824_000542/P5S0C_PROBE_TELEMETRY/p5s0c_train_t5_r02_s5102_mid_mu0.569222_probe_timesteps.csv",
+      "probe_telemetry_sha256": "a13031fb7387f33064867754fb32b4f414861db29d5c9c58a54a70de66c7ead3",
+      "root_id": "p5s0c_train_t5_root02_s5102",
+      "root_index": 2,
+      "root_seed": 5102,
+      "task": 5
+    },
+    {
+      "context_id": "p5s0c_train_t5_r03_s5103_high_mu0.971853",
+      "continuous_force_samples": [
+        {
+          "requested_force_N": 3.3608180678243462,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.4,
+          "stratum_index": 1,
+          "stratum_low_N": 3.0
+        },
+        {
+          "requested_force_N": 3.628912388163628,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.8,
+          "stratum_index": 2,
+          "stratum_low_N": 3.4
+        },
+        {
+          "requested_force_N": 4.069949422512093,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.2,
+          "stratum_index": 3,
+          "stratum_low_N": 3.8
+        },
+        {
+          "requested_force_N": 4.288949023293027,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.6,
+          "stratum_index": 4,
+          "stratum_low_N": 4.2
+        },
+        {
+          "requested_force_N": 4.993325242802623,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 5.0,
+          "stratum_index": 5,
+          "stratum_low_N": 4.6
+        }
+      ],
+      "friction": 0.9718526963499343,
+      "friction_band": "HIGH",
+      "last_hold_step": 190,
+      "opening": 0.0241813138127326,
+      "probe_telemetry": "/home/exouser/Tabero/analysis/results/p5s0c_paired_boundary_probe_value_20260824_000542/P5S0C_PROBE_TELEMETRY/p5s0c_train_t5_r03_s5103_high_mu0.971853_probe_timesteps.csv",
+      "probe_telemetry_sha256": "1055b4936d27a39fa0424afb698f86a9b379cd8332c9dd4e8286adac19c5120e",
+      "root_id": "p5s0c_train_t5_root03_s5103",
+      "root_index": 3,
+      "root_seed": 5103,
+      "task": 5
+    },
+    {
+      "context_id": "p5s0c_train_t5_r03_s5103_low_mu0.268456",
+      "continuous_force_samples": [
+        {
+          "requested_force_N": 3.191621406647813,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.4,
+          "stratum_index": 1,
+          "stratum_low_N": 3.0
+        },
+        {
+          "requested_force_N": 3.582666527275574,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.8,
+          "stratum_index": 2,
+          "stratum_low_N": 3.4
+        },
+        {
+          "requested_force_N": 4.195723631415104,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.2,
+          "stratum_index": 3,
+          "stratum_low_N": 3.8
+        },
+        {
+          "requested_force_N": 4.4784256029476115,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.6,
+          "stratum_index": 4,
+          "stratum_low_N": 4.2
+        },
+        {
+          "requested_force_N": 4.953303585022305,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 5.0,
+          "stratum_index": 5,
+          "stratum_low_N": 4.6
+        }
+      ],
+      "friction": 0.2684556388624265,
+      "friction_band": "LOW",
+      "last_hold_step": 190,
+      "opening": 0.0241590123623609,
+      "probe_telemetry": "/home/exouser/Tabero/analysis/results/p5s0c_paired_boundary_probe_value_20260824_000542/P5S0C_PROBE_TELEMETRY/p5s0c_train_t5_r03_s5103_low_mu0.268456_probe_timesteps.csv",
+      "probe_telemetry_sha256": "08627389425a1184f7ad54daf7c4ead7d12be1fde9b797702cac995b8b89fff4",
+      "root_id": "p5s0c_train_t5_root03_s5103",
+      "root_index": 3,
+      "root_seed": 5103,
+      "task": 5
+    },
+    {
+      "context_id": "p5s0c_train_t5_r03_s5103_mid_mu0.579422",
+      "continuous_force_samples": [
+        {
+          "requested_force_N": 3.1599064829314845,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.4,
+          "stratum_index": 1,
+          "stratum_low_N": 3.0
+        },
+        {
+          "requested_force_N": 3.5599629426146815,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.8,
+          "stratum_index": 2,
+          "stratum_low_N": 3.4
+        },
+        {
+          "requested_force_N": 4.162056565246949,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.2,
+          "stratum_index": 3,
+          "stratum_low_N": 3.8
+        },
+        {
+          "requested_force_N": 4.473288854491869,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.6,
+          "stratum_index": 4,
+          "stratum_low_N": 4.2
+        },
+        {
+          "requested_force_N": 4.94203364622491,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 5.0,
+          "stratum_index": 5,
+          "stratum_low_N": 4.6
+        }
+      ],
+      "friction": 0.5794217219847442,
+      "friction_band": "MID",
+      "last_hold_step": 190,
+      "opening": 0.0241441652178764,
+      "probe_telemetry": "/home/exouser/Tabero/analysis/results/p5s0c_paired_boundary_probe_value_20260824_000542/P5S0C_PROBE_TELEMETRY/p5s0c_train_t5_r03_s5103_mid_mu0.579422_probe_timesteps.csv",
+      "probe_telemetry_sha256": "322616b77b730f287dd94e7a33722f4d647ce46135abb4c0624d9639510cf8f4",
+      "root_id": "p5s0c_train_t5_root03_s5103",
+      "root_index": 3,
+      "root_seed": 5103,
+      "task": 5
+    },
+    {
+      "context_id": "p5s0c_train_t5_r04_s5104_high_mu0.927670",
+      "continuous_force_samples": [
+        {
+          "requested_force_N": 3.2394128450123354,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.4,
+          "stratum_index": 1,
+          "stratum_low_N": 3.0
+        },
+        {
+          "requested_force_N": 3.635866699059798,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.8,
+          "stratum_index": 2,
+          "stratum_low_N": 3.4
+        },
+        {
+          "requested_force_N": 3.832764692216405,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.2,
+          "stratum_index": 3,
+          "stratum_low_N": 3.8
+        },
+        {
+          "requested_force_N": 4.317429297815402,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.6,
+          "stratum_index": 4,
+          "stratum_low_N": 4.2
+        },
+        {
+          "requested_force_N": 4.904842284926958,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 5.0,
+          "stratum_index": 5,
+          "stratum_low_N": 4.6
+        }
+      ],
+      "friction": 0.9276696852071153,
+      "friction_band": "HIGH",
+      "last_hold_step": 190,
+      "opening": 0.0242136046290397,
+      "probe_telemetry": "/home/exouser/Tabero/analysis/results/p5s0c_paired_boundary_probe_value_20260824_000542/P5S0C_PROBE_TELEMETRY/p5s0c_train_t5_r04_s5104_high_mu0.927670_probe_timesteps.csv",
+      "probe_telemetry_sha256": "31b085ba64bba945221bda1d58cf6229cf5e5f17a51d887415b03c0263b67988",
+      "root_id": "p5s0c_train_t5_root04_s5104",
+      "root_index": 4,
+      "root_seed": 5104,
+      "task": 5
+    },
+    {
+      "context_id": "p5s0c_train_t5_r04_s5104_low_mu0.296413",
+      "continuous_force_samples": [
+        {
+          "requested_force_N": 3.169424946090528,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.4,
+          "stratum_index": 1,
+          "stratum_low_N": 3.0
+        },
+        {
+          "requested_force_N": 3.6401865135059914,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.8,
+          "stratum_index": 2,
+          "stratum_low_N": 3.4
+        },
+        {
+          "requested_force_N": 4.188006786238083,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.2,
+          "stratum_index": 3,
+          "stratum_low_N": 3.8
+        },
+        {
+          "requested_force_N": 4.213811459672577,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.6,
+          "stratum_index": 4,
+          "stratum_low_N": 4.2
+        },
+        {
+          "requested_force_N": 4.727209230876554,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 5.0,
+          "stratum_index": 5,
+          "stratum_low_N": 4.6
+        }
+      ],
+      "friction": 0.29641327786490484,
+      "friction_band": "LOW",
+      "last_hold_step": 190,
+      "opening": 0.0240997429937124,
+      "probe_telemetry": "/home/exouser/Tabero/analysis/results/p5s0c_paired_boundary_probe_value_20260824_000542/P5S0C_PROBE_TELEMETRY/p5s0c_train_t5_r04_s5104_low_mu0.296413_probe_timesteps.csv",
+      "probe_telemetry_sha256": "11f9971ebbec465733ff0a8e5bb1870f37b05d64302e845e9f5c957b880fafa0",
+      "root_id": "p5s0c_train_t5_root04_s5104",
+      "root_index": 4,
+      "root_seed": 5104,
+      "task": 5
+    },
+    {
+      "context_id": "p5s0c_train_t5_r04_s5104_mid_mu0.479493",
+      "continuous_force_samples": [
+        {
+          "requested_force_N": 3.1973543111219453,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.4,
+          "stratum_index": 1,
+          "stratum_low_N": 3.0
+        },
+        {
+          "requested_force_N": 3.510988756500796,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.8,
+          "stratum_index": 2,
+          "stratum_low_N": 3.4
+        },
+        {
+          "requested_force_N": 3.892898581844683,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.2,
+          "stratum_index": 3,
+          "stratum_low_N": 3.8
+        },
+        {
+          "requested_force_N": 4.209336942106862,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.6,
+          "stratum_index": 4,
+          "stratum_low_N": 4.2
+        },
+        {
+          "requested_force_N": 4.693284169809994,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 5.0,
+          "stratum_index": 5,
+          "stratum_low_N": 4.6
+        }
+      ],
+      "friction": 0.47949311931111244,
+      "friction_band": "MID",
+      "last_hold_step": 190,
+      "opening": 0.0241695214062929,
+      "probe_telemetry": "/home/exouser/Tabero/analysis/results/p5s0c_paired_boundary_probe_value_20260824_000542/P5S0C_PROBE_TELEMETRY/p5s0c_train_t5_r04_s5104_mid_mu0.479493_probe_timesteps.csv",
+      "probe_telemetry_sha256": "c2a7d8f8361a3d30d5f7b9168b21b2dba25eb03129df4e6f86f465ce79289c3c",
+      "root_id": "p5s0c_train_t5_root04_s5104",
+      "root_index": 4,
+      "root_seed": 5104,
+      "task": 5
+    },
+    {
+      "context_id": "p5s0c_train_t5_r05_s5105_high_mu0.955667",
+      "continuous_force_samples": [
+        {
+          "requested_force_N": 3.0062501232194427,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.4,
+          "stratum_index": 1,
+          "stratum_low_N": 3.0
+        },
+        {
+          "requested_force_N": 3.7187522137870594,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.8,
+          "stratum_index": 2,
+          "stratum_low_N": 3.4
+        },
+        {
+          "requested_force_N": 4.1778697985555615,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.2,
+          "stratum_index": 3,
+          "stratum_low_N": 3.8
+        },
+        {
+          "requested_force_N": 4.456360333739941,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.6,
+          "stratum_index": 4,
+          "stratum_low_N": 4.2
+        },
+        {
+          "requested_force_N": 4.635735979216636,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 5.0,
+          "stratum_index": 5,
+          "stratum_low_N": 4.6
+        }
+      ],
+      "friction": 0.9556674783451712,
+      "friction_band": "HIGH",
+      "last_hold_step": 190,
+      "opening": 0.0241991020739078,
+      "probe_telemetry": "/home/exouser/Tabero/analysis/results/p5s0c_paired_boundary_probe_value_20260824_000542/P5S0C_PROBE_TELEMETRY/p5s0c_train_t5_r05_s5105_high_mu0.955667_probe_timesteps.csv",
+      "probe_telemetry_sha256": "940c03cbfc9e13e5ab646f6b9b8b7bc316b2fe67d3d9cfa251c949dbff7ee2e3",
+      "root_id": "p5s0c_train_t5_root05_s5105",
+      "root_index": 5,
+      "root_seed": 5105,
+      "task": 5
+    },
+    {
+      "context_id": "p5s0c_train_t5_r05_s5105_low_mu0.212460",
+      "continuous_force_samples": [
+        {
+          "requested_force_N": 3.204752546533597,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.4,
+          "stratum_index": 1,
+          "stratum_low_N": 3.0
+        },
+        {
+          "requested_force_N": 3.5016832827213094,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.8,
+          "stratum_index": 2,
+          "stratum_low_N": 3.4
+        },
+        {
+          "requested_force_N": 3.8496685003493067,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.2,
+          "stratum_index": 3,
+          "stratum_low_N": 3.8
+        },
+        {
+          "requested_force_N": 4.5381410013675305,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.6,
+          "stratum_index": 4,
+          "stratum_low_N": 4.2
+        },
+        {
+          "requested_force_N": 4.814072737911314,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 5.0,
+          "stratum_index": 5,
+          "stratum_low_N": 4.6
+        }
+      ],
+      "friction": 0.21245989879926902,
+      "friction_band": "LOW",
+      "last_hold_step": 190,
+      "opening": 0.0241521690040826,
+      "probe_telemetry": "/home/exouser/Tabero/analysis/results/p5s0c_paired_boundary_probe_value_20260824_000542/P5S0C_PROBE_TELEMETRY/p5s0c_train_t5_r05_s5105_low_mu0.212460_probe_timesteps.csv",
+      "probe_telemetry_sha256": "89facdd307778fe9b8842be7e88ca7c3f489b1da4ef200c93a1db4177dd1baa0",
+      "root_id": "p5s0c_train_t5_root05_s5105",
+      "root_index": 5,
+      "root_seed": 5105,
+      "task": 5
+    },
+    {
+      "context_id": "p5s0c_train_t5_r05_s5105_mid_mu0.478580",
+      "continuous_force_samples": [
+        {
+          "requested_force_N": 3.3676468721425934,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.4,
+          "stratum_index": 1,
+          "stratum_low_N": 3.0
+        },
+        {
+          "requested_force_N": 3.4036003543621374,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.8,
+          "stratum_index": 2,
+          "stratum_low_N": 3.4
+        },
+        {
+          "requested_force_N": 3.959898972486841,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.2,
+          "stratum_index": 3,
+          "stratum_low_N": 3.8
+        },
+        {
+          "requested_force_N": 4.2547638588195005,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.6,
+          "stratum_index": 4,
+          "stratum_low_N": 4.2
+        },
+        {
+          "requested_force_N": 4.678813412135296,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 5.0,
+          "stratum_index": 5,
+          "stratum_low_N": 4.6
+        }
+      ],
+      "friction": 0.4785796961711498,
+      "friction_band": "MID",
+      "last_hold_step": 190,
+      "opening": 0.024192702025175,
+      "probe_telemetry": "/home/exouser/Tabero/analysis/results/p5s0c_paired_boundary_probe_value_20260824_000542/P5S0C_PROBE_TELEMETRY/p5s0c_train_t5_r05_s5105_mid_mu0.478580_probe_timesteps.csv",
+      "probe_telemetry_sha256": "1b39e886de39e6df06810c0a1ebb0d53c826b4aa125c680f346f68857ea2b9d4",
+      "root_id": "p5s0c_train_t5_root05_s5105",
+      "root_index": 5,
+      "root_seed": 5105,
+      "task": 5
+    },
+    {
+      "context_id": "p5s0c_train_t6_r00_s5100_high_mu0.989348",
+      "continuous_force_samples": [
+        {
+          "requested_force_N": 3.118939854783293,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.2,
+          "stratum_index": 1,
+          "stratum_low_N": 3.0
+        },
+        {
+          "requested_force_N": 3.374536206490053,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.4,
+          "stratum_index": 2,
+          "stratum_low_N": 3.2
+        },
+        {
+          "requested_force_N": 3.420561812221824,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.6,
+          "stratum_index": 3,
+          "stratum_low_N": 3.4
+        },
+        {
+          "requested_force_N": 3.711649944351442,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.8,
+          "stratum_index": 4,
+          "stratum_low_N": 3.6
+        },
+        {
+          "requested_force_N": 3.9020630571708086,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.0,
+          "stratum_index": 5,
+          "stratum_low_N": 3.8
+        }
+      ],
+      "friction": 0.9893482298937868,
+      "friction_band": "HIGH",
+      "last_hold_step": 190,
+      "opening": 0.0126965269446372,
+      "probe_telemetry": "/home/exouser/Tabero/analysis/results/p5s0c_paired_boundary_probe_value_20260824_000542/P5S0C_PROBE_TELEMETRY/p5s0c_train_t6_r00_s5100_high_mu0.989348_probe_timesteps.csv",
+      "probe_telemetry_sha256": "3516bc67f5fd478e25de3544890ec8dd0ac821a102ad0b2ef551f0fcfd7068aa",
+      "root_id": "p5s0c_train_t6_root00_s5100",
+      "root_index": 0,
+      "root_seed": 5100,
+      "task": 6
+    },
+    {
+      "context_id": "p5s0c_train_t6_r00_s5100_low_mu0.257577",
+      "continuous_force_samples": [
+        {
+          "requested_force_N": 3.1086760894420093,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.2,
+          "stratum_index": 1,
+          "stratum_low_N": 3.0
+        },
+        {
+          "requested_force_N": 3.3521898449851313,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.4,
+          "stratum_index": 2,
+          "stratum_low_N": 3.2
+        },
+        {
+          "requested_force_N": 3.53833654766595,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.6,
+          "stratum_index": 3,
+          "stratum_low_N": 3.4
+        },
+        {
+          "requested_force_N": 3.766193618328142,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.8,
+          "stratum_index": 4,
+          "stratum_low_N": 3.6
+        },
+        {
+          "requested_force_N": 3.800200564455172,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.0,
+          "stratum_index": 5,
+          "stratum_low_N": 3.8
+        }
+      ],
+      "friction": 0.2575768733744629,
+      "friction_band": "LOW",
+      "last_hold_step": 190,
+      "opening": 0.0125091467052698,
+      "probe_telemetry": "/home/exouser/Tabero/analysis/results/p5s0c_paired_boundary_probe_value_20260824_000542/P5S0C_PROBE_TELEMETRY/p5s0c_train_t6_r00_s5100_low_mu0.257577_probe_timesteps.csv",
+      "probe_telemetry_sha256": "31278e45464f58fbf4d08df14dcfa6577620183a1ac974f47981e134e3cadfd1",
+      "root_id": "p5s0c_train_t6_root00_s5100",
+      "root_index": 0,
+      "root_seed": 5100,
+      "task": 6
+    },
+    {
+      "context_id": "p5s0c_train_t6_r00_s5100_mid_mu0.558595",
+      "continuous_force_samples": [
+        {
+          "requested_force_N": 3.0321505346765973,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.2,
+          "stratum_index": 1,
+          "stratum_low_N": 3.0
+        },
+        {
+          "requested_force_N": 3.3971765458778984,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.4,
+          "stratum_index": 2,
+          "stratum_low_N": 3.2
+        },
+        {
+          "requested_force_N": 3.5836735770025565,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.6,
+          "stratum_index": 3,
+          "stratum_low_N": 3.4
+        },
+        {
+          "requested_force_N": 3.7820603774361614,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.8,
+          "stratum_index": 4,
+          "stratum_low_N": 3.6
+        },
+        {
+          "requested_force_N": 3.858299889351411,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.0,
+          "stratum_index": 5,
+          "stratum_low_N": 3.8
+        }
+      ],
+      "friction": 0.5585950380614311,
+      "friction_band": "MID",
+      "last_hold_step": 190,
+      "opening": 0.0125728659331798,
+      "probe_telemetry": "/home/exouser/Tabero/analysis/results/p5s0c_paired_boundary_probe_value_20260824_000542/P5S0C_PROBE_TELEMETRY/p5s0c_train_t6_r00_s5100_mid_mu0.558595_probe_timesteps.csv",
+      "probe_telemetry_sha256": "7c6c026e3957a5738c8a4a8546b526874673988eca1130e7aab12ebf6233db01",
+      "root_id": "p5s0c_train_t6_root00_s5100",
+      "root_index": 0,
+      "root_seed": 5100,
+      "task": 6
+    },
+    {
+      "context_id": "p5s0c_train_t6_r01_s5101_high_mu0.910021",
+      "continuous_force_samples": [
+        {
+          "requested_force_N": 3.1352018966897295,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.2,
+          "stratum_index": 1,
+          "stratum_low_N": 3.0
+        },
+        {
+          "requested_force_N": 3.320934098702107,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.4,
+          "stratum_index": 2,
+          "stratum_low_N": 3.2
+        },
+        {
+          "requested_force_N": 3.406110840966014,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.6,
+          "stratum_index": 3,
+          "stratum_low_N": 3.4
+        },
+        {
+          "requested_force_N": 3.761252869981123,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.8,
+          "stratum_index": 4,
+          "stratum_low_N": 3.6
+        },
+        {
+          "requested_force_N": 3.9723290740747146,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.0,
+          "stratum_index": 5,
+          "stratum_low_N": 3.8
+        }
+      ],
+      "friction": 0.9100214165606061,
+      "friction_band": "HIGH",
+      "last_hold_step": 190,
+      "opening": 0.0126361902803182,
+      "probe_telemetry": "/home/exouser/Tabero/analysis/results/p5s0c_paired_boundary_probe_value_20260824_000542/P5S0C_PROBE_TELEMETRY/p5s0c_train_t6_r01_s5101_high_mu0.910021_probe_timesteps.csv",
+      "probe_telemetry_sha256": "01c0394a2b6370f3b206621af3da20631553f69d1ce1e9351195d970fb275328",
+      "root_id": "p5s0c_train_t6_root01_s5101",
+      "root_index": 1,
+      "root_seed": 5101,
+      "task": 6
+    },
+    {
+      "context_id": "p5s0c_train_t6_r01_s5101_low_mu0.216789",
+      "continuous_force_samples": [
+        {
+          "requested_force_N": 3.053677219107241,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.2,
+          "stratum_index": 1,
+          "stratum_low_N": 3.0
+        },
+        {
+          "requested_force_N": 3.2495534878999526,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.4,
+          "stratum_index": 2,
+          "stratum_low_N": 3.2
+        },
+        {
+          "requested_force_N": 3.4829485075187443,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.6,
+          "stratum_index": 3,
+          "stratum_low_N": 3.4
+        },
+        {
+          "requested_force_N": 3.7360964886320245,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.8,
+          "stratum_index": 4,
+          "stratum_low_N": 3.6
+        },
+        {
+          "requested_force_N": 3.864153890652048,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.0,
+          "stratum_index": 5,
+          "stratum_low_N": 3.8
+        }
+      ],
+      "friction": 0.2167888067328618,
+      "friction_band": "LOW",
+      "last_hold_step": 190,
+      "opening": 0.0125088049098849,
+      "probe_telemetry": "/home/exouser/Tabero/analysis/results/p5s0c_paired_boundary_probe_value_20260824_000542/P5S0C_PROBE_TELEMETRY/p5s0c_train_t6_r01_s5101_low_mu0.216789_probe_timesteps.csv",
+      "probe_telemetry_sha256": "ac64e159df50a49d924486451406f4ef76d3454fc1e9ad7f4ba8748b23be2679",
+      "root_id": "p5s0c_train_t6_root01_s5101",
+      "root_index": 1,
+      "root_seed": 5101,
+      "task": 6
+    },
+    {
+      "context_id": "p5s0c_train_t6_r01_s5101_mid_mu0.529103",
+      "continuous_force_samples": [
+        {
+          "requested_force_N": 3.147717881459621,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.2,
+          "stratum_index": 1,
+          "stratum_low_N": 3.0
+        },
+        {
+          "requested_force_N": 3.317226106756872,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.4,
+          "stratum_index": 2,
+          "stratum_low_N": 3.2
+        },
+        {
+          "requested_force_N": 3.475849435215937,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.6,
+          "stratum_index": 3,
+          "stratum_low_N": 3.4
+        },
+        {
+          "requested_force_N": 3.703882838375958,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.8,
+          "stratum_index": 4,
+          "stratum_low_N": 3.6
+        },
+        {
+          "requested_force_N": 3.8748679654118297,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.0,
+          "stratum_index": 5,
+          "stratum_low_N": 3.8
+        }
+      ],
+      "friction": 0.529103149795241,
+      "friction_band": "MID",
+      "last_hold_step": 190,
+      "opening": 0.0125446692109107,
+      "probe_telemetry": "/home/exouser/Tabero/analysis/results/p5s0c_paired_boundary_probe_value_20260824_000542/P5S0C_PROBE_TELEMETRY/p5s0c_train_t6_r01_s5101_mid_mu0.529103_probe_timesteps.csv",
+      "probe_telemetry_sha256": "ac4f82770f24524e6f32044bd7a019e67a3328eb4e3edda9ada2532a86253850",
+      "root_id": "p5s0c_train_t6_root01_s5101",
+      "root_index": 1,
+      "root_seed": 5101,
+      "task": 6
+    },
+    {
+      "context_id": "p5s0c_train_t6_r02_s5102_high_mu0.958858",
+      "continuous_force_samples": [
+        {
+          "requested_force_N": 3.1322779683324327,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.2,
+          "stratum_index": 1,
+          "stratum_low_N": 3.0
+        },
+        {
+          "requested_force_N": 3.3344177055457886,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.4,
+          "stratum_index": 2,
+          "stratum_low_N": 3.2
+        },
+        {
+          "requested_force_N": 3.5304768972057357,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.6,
+          "stratum_index": 3,
+          "stratum_low_N": 3.4
+        },
+        {
+          "requested_force_N": 3.663451026906526,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.8,
+          "stratum_index": 4,
+          "stratum_low_N": 3.6
+        },
+        {
+          "requested_force_N": 3.968070000165838,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.0,
+          "stratum_index": 5,
+          "stratum_low_N": 3.8
+        }
+      ],
+      "friction": 0.9588583617780642,
+      "friction_band": "HIGH",
+      "last_hold_step": 190,
+      "opening": 0.0127158407121896,
+      "probe_telemetry": "/home/exouser/Tabero/analysis/results/p5s0c_paired_boundary_probe_value_20260824_000542/P5S0C_PROBE_TELEMETRY/p5s0c_train_t6_r02_s5102_high_mu0.958858_probe_timesteps.csv",
+      "probe_telemetry_sha256": "c9ecf6d1652a3ab075cb488a5e50a38c4fb250e238af68c023bee38b201ef9d8",
+      "root_id": "p5s0c_train_t6_root02_s5102",
+      "root_index": 2,
+      "root_seed": 5102,
+      "task": 6
+    },
+    {
+      "context_id": "p5s0c_train_t6_r02_s5102_low_mu0.225446",
+      "continuous_force_samples": [
+        {
+          "requested_force_N": 3.1141002378675027,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.2,
+          "stratum_index": 1,
+          "stratum_low_N": 3.0
+        },
+        {
+          "requested_force_N": 3.3622723906185286,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.4,
+          "stratum_index": 2,
+          "stratum_low_N": 3.2
+        },
+        {
+          "requested_force_N": 3.4416504938757186,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.6,
+          "stratum_index": 3,
+          "stratum_low_N": 3.4
+        },
+        {
+          "requested_force_N": 3.6161227155528373,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.8,
+          "stratum_index": 4,
+          "stratum_low_N": 3.6
+        },
+        {
+          "requested_force_N": 3.965051015142602,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.0,
+          "stratum_index": 5,
+          "stratum_low_N": 3.8
+        }
+      ],
+      "friction": 0.22544558844853269,
+      "friction_band": "LOW",
+      "last_hold_step": 190,
+      "opening": 0.0124236540868878,
+      "probe_telemetry": "/home/exouser/Tabero/analysis/results/p5s0c_paired_boundary_probe_value_20260824_000542/P5S0C_PROBE_TELEMETRY/p5s0c_train_t6_r02_s5102_low_mu0.225446_probe_timesteps.csv",
+      "probe_telemetry_sha256": "0123c7a760d8dd5a7b5b8bbae47342116ddc73043f3f3e2e1b513a8209c6bc8a",
+      "root_id": "p5s0c_train_t6_root02_s5102",
+      "root_index": 2,
+      "root_seed": 5102,
+      "task": 6
+    },
+    {
+      "context_id": "p5s0c_train_t6_r02_s5102_mid_mu0.568022",
+      "continuous_force_samples": [
+        {
+          "requested_force_N": 3.001736578401635,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.2,
+          "stratum_index": 1,
+          "stratum_low_N": 3.0
+        },
+        {
+          "requested_force_N": 3.2707290577296604,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.4,
+          "stratum_index": 2,
+          "stratum_low_N": 3.2
+        },
+        {
+          "requested_force_N": 3.599214850723836,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.6,
+          "stratum_index": 3,
+          "stratum_low_N": 3.4
+        },
+        {
+          "requested_force_N": 3.7633015241904815,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.8,
+          "stratum_index": 4,
+          "stratum_low_N": 3.6
+        },
+        {
+          "requested_force_N": 3.8434784681602165,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.0,
+          "stratum_index": 5,
+          "stratum_low_N": 3.8
+        }
+      ],
+      "friction": 0.5680218260664094,
+      "friction_band": "MID",
+      "last_hold_step": 190,
+      "opening": 0.0125661864876747,
+      "probe_telemetry": "/home/exouser/Tabero/analysis/results/p5s0c_paired_boundary_probe_value_20260824_000542/P5S0C_PROBE_TELEMETRY/p5s0c_train_t6_r02_s5102_mid_mu0.568022_probe_timesteps.csv",
+      "probe_telemetry_sha256": "697394e018d099cd3861bbf4ec4e3ad20defd23ff52dbb2f7364eac0f1ef82b0",
+      "root_id": "p5s0c_train_t6_root02_s5102",
+      "root_index": 2,
+      "root_seed": 5102,
+      "task": 6
+    },
+    {
+      "context_id": "p5s0c_train_t6_r03_s5103_high_mu0.989240",
+      "continuous_force_samples": [
+        {
+          "requested_force_N": 3.0687980275930915,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.2,
+          "stratum_index": 1,
+          "stratum_low_N": 3.0
+        },
+        {
+          "requested_force_N": 3.336008588687707,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.4,
+          "stratum_index": 2,
+          "stratum_low_N": 3.2
+        },
+        {
+          "requested_force_N": 3.452773822923704,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.6,
+          "stratum_index": 3,
+          "stratum_low_N": 3.4
+        },
+        {
+          "requested_force_N": 3.7052248045710336,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.8,
+          "stratum_index": 4,
+          "stratum_low_N": 3.6
+        },
+        {
+          "requested_force_N": 3.938422181531021,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.0,
+          "stratum_index": 5,
+          "stratum_low_N": 3.8
+        }
+      ],
+      "friction": 0.9892401623583469,
+      "friction_band": "HIGH",
+      "last_hold_step": 190,
+      "opening": 0.0126932375133037,
+      "probe_telemetry": "/home/exouser/Tabero/analysis/results/p5s0c_paired_boundary_probe_value_20260824_000542/P5S0C_PROBE_TELEMETRY/p5s0c_train_t6_r03_s5103_high_mu0.989240_probe_timesteps.csv",
+      "probe_telemetry_sha256": "b81fcaca34c43fcd23eeb284a70b14c0714cc1b2d451f3544833cb0b86a02674",
+      "root_id": "p5s0c_train_t6_root03_s5103",
+      "root_index": 3,
+      "root_seed": 5103,
+      "task": 6
+    },
+    {
+      "context_id": "p5s0c_train_t6_r03_s5103_low_mu0.298364",
+      "continuous_force_samples": [
+        {
+          "requested_force_N": 3.1487868982222516,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.2,
+          "stratum_index": 1,
+          "stratum_low_N": 3.0
+        },
+        {
+          "requested_force_N": 3.2242706669654955,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.4,
+          "stratum_index": 2,
+          "stratum_low_N": 3.2
+        },
+        {
+          "requested_force_N": 3.5660968664584223,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.6,
+          "stratum_index": 3,
+          "stratum_low_N": 3.4
+        },
+        {
+          "requested_force_N": 3.7768826042110035,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.8,
+          "stratum_index": 4,
+          "stratum_low_N": 3.6
+        },
+        {
+          "requested_force_N": 3.9951533437943336,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.0,
+          "stratum_index": 5,
+          "stratum_low_N": 3.8
+        }
+      ],
+      "friction": 0.2983642867493329,
+      "friction_band": "LOW",
+      "last_hold_step": 190,
+      "opening": 0.0124517139047384,
+      "probe_telemetry": "/home/exouser/Tabero/analysis/results/p5s0c_paired_boundary_probe_value_20260824_000542/P5S0C_PROBE_TELEMETRY/p5s0c_train_t6_r03_s5103_low_mu0.298364_probe_timesteps.csv",
+      "probe_telemetry_sha256": "8ee4cacad0a3a652d833f0c165bcc447f9f826a7d033759f488660ed6bcdf9c9",
+      "root_id": "p5s0c_train_t6_root03_s5103",
+      "root_index": 3,
+      "root_seed": 5103,
+      "task": 6
+    },
+    {
+      "context_id": "p5s0c_train_t6_r03_s5103_mid_mu0.494903",
+      "continuous_force_samples": [
+        {
+          "requested_force_N": 3.159782343208442,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.2,
+          "stratum_index": 1,
+          "stratum_low_N": 3.0
+        },
+        {
+          "requested_force_N": 3.331464113310517,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.4,
+          "stratum_index": 2,
+          "stratum_low_N": 3.2
+        },
+        {
+          "requested_force_N": 3.5712699270630774,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.6,
+          "stratum_index": 3,
+          "stratum_low_N": 3.4
+        },
+        {
+          "requested_force_N": 3.6856352212595014,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.8,
+          "stratum_index": 4,
+          "stratum_low_N": 3.6
+        },
+        {
+          "requested_force_N": 3.8546799375608467,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.0,
+          "stratum_index": 5,
+          "stratum_low_N": 3.8
+        }
+      ],
+      "friction": 0.4949034834883461,
+      "friction_band": "MID",
+      "last_hold_step": 190,
+      "opening": 0.0125741437077522,
+      "probe_telemetry": "/home/exouser/Tabero/analysis/results/p5s0c_paired_boundary_probe_value_20260824_000542/P5S0C_PROBE_TELEMETRY/p5s0c_train_t6_r03_s5103_mid_mu0.494903_probe_timesteps.csv",
+      "probe_telemetry_sha256": "54afeba01e45673ad30ae6b4ee154cacf0d8166783877e24505b7530dc5e34ea",
+      "root_id": "p5s0c_train_t6_root03_s5103",
+      "root_index": 3,
+      "root_seed": 5103,
+      "task": 6
+    },
+    {
+      "context_id": "p5s0c_train_t6_r04_s5104_high_mu0.970401",
+      "continuous_force_samples": [
+        {
+          "requested_force_N": 3.1554725761966145,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.2,
+          "stratum_index": 1,
+          "stratum_low_N": 3.0
+        },
+        {
+          "requested_force_N": 3.3569486788790686,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.4,
+          "stratum_index": 2,
+          "stratum_low_N": 3.2
+        },
+        {
+          "requested_force_N": 3.5914026358373032,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.6,
+          "stratum_index": 3,
+          "stratum_low_N": 3.4
+        },
+        {
+          "requested_force_N": 3.6377325498714517,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.8,
+          "stratum_index": 4,
+          "stratum_low_N": 3.6
+        },
+        {
+          "requested_force_N": 3.8449565248773534,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.0,
+          "stratum_index": 5,
+          "stratum_low_N": 3.8
+        }
+      ],
+      "friction": 0.9704010725401304,
+      "friction_band": "HIGH",
+      "last_hold_step": 190,
+      "opening": 0.0126804681494832,
+      "probe_telemetry": "/home/exouser/Tabero/analysis/results/p5s0c_paired_boundary_probe_value_20260824_000542/P5S0C_PROBE_TELEMETRY/p5s0c_train_t6_r04_s5104_high_mu0.970401_probe_timesteps.csv",
+      "probe_telemetry_sha256": "964710bb0c86b4350a3aca0e123628f62ef6ac742e9699279995825fef6e8627",
+      "root_id": "p5s0c_train_t6_root04_s5104",
+      "root_index": 4,
+      "root_seed": 5104,
+      "task": 6
+    },
+    {
+      "context_id": "p5s0c_train_t6_r04_s5104_low_mu0.226087",
+      "continuous_force_samples": [
+        {
+          "requested_force_N": 3.1289781060547024,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.2,
+          "stratum_index": 1,
+          "stratum_low_N": 3.0
+        },
+        {
+          "requested_force_N": 3.394854844664247,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.4,
+          "stratum_index": 2,
+          "stratum_low_N": 3.2
+        },
+        {
+          "requested_force_N": 3.5236156523102307,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.6,
+          "stratum_index": 3,
+          "stratum_low_N": 3.4
+        },
+        {
+          "requested_force_N": 3.7907748680960176,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.8,
+          "stratum_index": 4,
+          "stratum_low_N": 3.6
+        },
+        {
+          "requested_force_N": 3.9929034368993834,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.0,
+          "stratum_index": 5,
+          "stratum_low_N": 3.8
+        }
+      ],
+      "friction": 0.22608745959925736,
+      "friction_band": "LOW",
+      "last_hold_step": 190,
+      "opening": 0.0125024206936359,
+      "probe_telemetry": "/home/exouser/Tabero/analysis/results/p5s0c_paired_boundary_probe_value_20260824_000542/P5S0C_PROBE_TELEMETRY/p5s0c_train_t6_r04_s5104_low_mu0.226087_probe_timesteps.csv",
+      "probe_telemetry_sha256": "aee29ca890cf50aaab1d6441c55029cefce36f68656711e369dd8b71aab6ae31",
+      "root_id": "p5s0c_train_t6_root04_s5104",
+      "root_index": 4,
+      "root_seed": 5104,
+      "task": 6
+    },
+    {
+      "context_id": "p5s0c_train_t6_r04_s5104_mid_mu0.562603",
+      "continuous_force_samples": [
+        {
+          "requested_force_N": 3.0123294105055067,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.2,
+          "stratum_index": 1,
+          "stratum_low_N": 3.0
+        },
+        {
+          "requested_force_N": 3.2361132964760837,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.4,
+          "stratum_index": 2,
+          "stratum_low_N": 3.2
+        },
+        {
+          "requested_force_N": 3.4289491573863016,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.6,
+          "stratum_index": 3,
+          "stratum_low_N": 3.4
+        },
+        {
+          "requested_force_N": 3.641446703968578,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.8,
+          "stratum_index": 4,
+          "stratum_low_N": 3.6
+        },
+        {
+          "requested_force_N": 3.895231305527638,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.0,
+          "stratum_index": 5,
+          "stratum_low_N": 3.8
+        }
+      ],
+      "friction": 0.5626032637468864,
+      "friction_band": "MID",
+      "last_hold_step": 190,
+      "opening": 0.0125280255451798,
+      "probe_telemetry": "/home/exouser/Tabero/analysis/results/p5s0c_paired_boundary_probe_value_20260824_000542/P5S0C_PROBE_TELEMETRY/p5s0c_train_t6_r04_s5104_mid_mu0.562603_probe_timesteps.csv",
+      "probe_telemetry_sha256": "529c13105dd28f604e2f58fa27334ae56759958d464df752814c9d489d09e1d2",
+      "root_id": "p5s0c_train_t6_root04_s5104",
+      "root_index": 4,
+      "root_seed": 5104,
+      "task": 6
+    },
+    {
+      "context_id": "p5s0c_train_t6_r05_s5105_high_mu0.940404",
+      "continuous_force_samples": [
+        {
+          "requested_force_N": 3.1218934474307294,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.2,
+          "stratum_index": 1,
+          "stratum_low_N": 3.0
+        },
+        {
+          "requested_force_N": 3.248592961686432,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.4,
+          "stratum_index": 2,
+          "stratum_low_N": 3.2
+        },
+        {
+          "requested_force_N": 3.5060716773734875,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.6,
+          "stratum_index": 3,
+          "stratum_low_N": 3.4
+        },
+        {
+          "requested_force_N": 3.761867002075977,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.8,
+          "stratum_index": 4,
+          "stratum_low_N": 3.6
+        },
+        {
+          "requested_force_N": 3.926866038437071,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.0,
+          "stratum_index": 5,
+          "stratum_low_N": 3.8
+        }
+      ],
+      "friction": 0.9404040658568695,
+      "friction_band": "HIGH",
+      "last_hold_step": 190,
+      "opening": 0.0126399127766489,
+      "probe_telemetry": "/home/exouser/Tabero/analysis/results/p5s0c_paired_boundary_probe_value_20260824_000542/P5S0C_PROBE_TELEMETRY/p5s0c_train_t6_r05_s5105_high_mu0.940404_probe_timesteps.csv",
+      "probe_telemetry_sha256": "2e303fd671f67aa31df36572f2b469900f2838d47c1da0b2a91be4416fc60425",
+      "root_id": "p5s0c_train_t6_root05_s5105",
+      "root_index": 5,
+      "root_seed": 5105,
+      "task": 6
+    },
+    {
+      "context_id": "p5s0c_train_t6_r05_s5105_low_mu0.260231",
+      "continuous_force_samples": [
+        {
+          "requested_force_N": 3.111697402792563,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.2,
+          "stratum_index": 1,
+          "stratum_low_N": 3.0
+        },
+        {
+          "requested_force_N": 3.365897423258434,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.4,
+          "stratum_index": 2,
+          "stratum_low_N": 3.2
+        },
+        {
+          "requested_force_N": 3.53559763966456,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.6,
+          "stratum_index": 3,
+          "stratum_low_N": 3.4
+        },
+        {
+          "requested_force_N": 3.7056658418046577,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.8,
+          "stratum_index": 4,
+          "stratum_low_N": 3.6
+        },
+        {
+          "requested_force_N": 3.814558847500338,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.0,
+          "stratum_index": 5,
+          "stratum_low_N": 3.8
+        }
+      ],
+      "friction": 0.26023070335172693,
+      "friction_band": "LOW",
+      "last_hold_step": 190,
+      "opening": 0.0124683491885662,
+      "probe_telemetry": "/home/exouser/Tabero/analysis/results/p5s0c_paired_boundary_probe_value_20260824_000542/P5S0C_PROBE_TELEMETRY/p5s0c_train_t6_r05_s5105_low_mu0.260231_probe_timesteps.csv",
+      "probe_telemetry_sha256": "7f603d39cfff78f1c32718664d2207558e0f36be74c99ac6cc717d4aa623a7c3",
+      "root_id": "p5s0c_train_t6_root05_s5105",
+      "root_index": 5,
+      "root_seed": 5105,
+      "task": 6
+    },
+    {
+      "context_id": "p5s0c_train_t6_r05_s5105_mid_mu0.481964",
+      "continuous_force_samples": [
+        {
+          "requested_force_N": 3.044719578061611,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.2,
+          "stratum_index": 1,
+          "stratum_low_N": 3.0
+        },
+        {
+          "requested_force_N": 3.3578421307455577,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.4,
+          "stratum_index": 2,
+          "stratum_low_N": 3.2
+        },
+        {
+          "requested_force_N": 3.5795497211384655,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.6,
+          "stratum_index": 3,
+          "stratum_low_N": 3.4
+        },
+        {
+          "requested_force_N": 3.650613377744291,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 3.8,
+          "stratum_index": 4,
+          "stratum_low_N": 3.6
+        },
+        {
+          "requested_force_N": 3.909910461061327,
+          "rounded": false,
+          "sample_rng_seed": 2026083031,
+          "stratum_high_N": 4.0,
+          "stratum_index": 5,
+          "stratum_low_N": 3.8
+        }
+      ],
+      "friction": 0.481964315174943,
+      "friction_band": "MID",
+      "last_hold_step": 190,
+      "opening": 0.0124427741393446,
+      "probe_telemetry": "/home/exouser/Tabero/analysis/results/p5s0c_paired_boundary_probe_value_20260824_000542/P5S0C_PROBE_TELEMETRY/p5s0c_train_t6_r05_s5105_mid_mu0.481964_probe_timesteps.csv",
+      "probe_telemetry_sha256": "9f9e91d72ee7633c7c7c0003fa8d6d8d2ad9c90327e38abfd75c76ba9532d021",
+      "root_id": "p5s0c_train_t6_root05_s5105",
+      "root_index": 5,
+      "root_seed": 5105,
+      "task": 6
+    }
+  ],
+  "train_population": {
+    "DEV_outcomes_used": false,
+    "contexts": 72,
+    "new_target_branches": 720,
+    "old_coarse_branches": 288,
+    "original_TEST_loaded": false,
+    "tasks": [
+      0,
+      1,
+      5,
+      6
+    ]
+  },
+  "training": {
+    "architecture_search": false,
+    "batch_size": 64,
+    "early_stopping": false,
+    "epochs": 80,
+    "gradient_clip": 1.0,
+    "lambda_search": false,
+    "lr": 0.0008,
+    "normalization": "same TRAIN-only input normalization for both models; Joint output normalization from corrected-valid new branches",
+    "optimizer": "AdamW",
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "weight_decay": 0.0001
+  }
+}

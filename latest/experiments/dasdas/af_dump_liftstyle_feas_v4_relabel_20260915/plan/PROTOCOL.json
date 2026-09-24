@@ -1,0 +1,201 @@
+{
+  "belief": "not retrained here; frozen dump v4 unused at train BCE (point mu)",
+  "claim_boundary": "controlled-motion auxiliary; hold-chunk features; not pi0; not online AF; not official 18/19",
+  "created_utc": "2026-09-15T10:53:37.905862+00:00",
+  "expansion_note": "v3 VAL seed 200003 was 160/160 success. v4 keeps 200003 in TRAIN, uses 200010 as VAL (v3 TRAIN+TEST mixed labels), TEST seed 200014 (probed stable). Seeds 200004/200006/200012 UnStableError on garbage actors. Same lift-style method; grid [0.25,5].",
+  "force_band_N": [
+    0.25,
+    5.0
+  ],
+  "force_step_N": 0.25,
+  "forces_N": [
+    0.25,
+    0.5,
+    0.75,
+    1.0,
+    1.25,
+    1.5,
+    1.75,
+    2.0,
+    2.25,
+    2.5,
+    2.75,
+    3.0,
+    3.25,
+    3.5,
+    3.75,
+    4.0,
+    4.25,
+    4.5,
+    4.75,
+    5.0
+  ],
+  "grasp_force_N": 12.0,
+  "main_contexts": 32,
+  "main_rollouts": 640,
+  "no_pi0": true,
+  "official_records_untouched": "/media/volume/dasdas/exouser/af_dump_formal_liftclone_eu_fmax5_20260915",
+  "population": [
+    {
+      "friction": 0.3,
+      "seed": 200002
+    },
+    {
+      "friction": 0.3,
+      "seed": 200003
+    },
+    {
+      "friction": 0.3,
+      "seed": 200010
+    },
+    {
+      "friction": 0.3,
+      "seed": 200014
+    },
+    {
+      "friction": 0.35,
+      "seed": 200002
+    },
+    {
+      "friction": 0.35,
+      "seed": 200003
+    },
+    {
+      "friction": 0.35,
+      "seed": 200010
+    },
+    {
+      "friction": 0.35,
+      "seed": 200014
+    },
+    {
+      "friction": 0.425,
+      "seed": 200002
+    },
+    {
+      "friction": 0.425,
+      "seed": 200003
+    },
+    {
+      "friction": 0.425,
+      "seed": 200010
+    },
+    {
+      "friction": 0.425,
+      "seed": 200014
+    },
+    {
+      "friction": 0.5,
+      "seed": 200002
+    },
+    {
+      "friction": 0.5,
+      "seed": 200003
+    },
+    {
+      "friction": 0.5,
+      "seed": 200010
+    },
+    {
+      "friction": 0.5,
+      "seed": 200014
+    },
+    {
+      "friction": 0.575,
+      "seed": 200002
+    },
+    {
+      "friction": 0.575,
+      "seed": 200003
+    },
+    {
+      "friction": 0.575,
+      "seed": 200010
+    },
+    {
+      "friction": 0.575,
+      "seed": 200014
+    },
+    {
+      "friction": 0.7,
+      "seed": 200002
+    },
+    {
+      "friction": 0.7,
+      "seed": 200003
+    },
+    {
+      "friction": 0.7,
+      "seed": 200010
+    },
+    {
+      "friction": 0.7,
+      "seed": 200014
+    },
+    {
+      "friction": 0.75,
+      "seed": 200002
+    },
+    {
+      "friction": 0.75,
+      "seed": 200003
+    },
+    {
+      "friction": 0.75,
+      "seed": 200010
+    },
+    {
+      "friction": 0.75,
+      "seed": 200014
+    },
+    {
+      "friction": 0.85,
+      "seed": 200002
+    },
+    {
+      "friction": 0.85,
+      "seed": 200003
+    },
+    {
+      "friction": 0.85,
+      "seed": 200010
+    },
+    {
+      "friction": 0.85,
+      "seed": 200014
+    }
+  ],
+  "predecessor": "af_dump_liftstyle_feas_v3_fork_20260914",
+  "query_force_N": 4.0,
+  "recipe": "lift V5 snapshot fork: scripted grasp, dump shear query, one 8-step EEF hold chunk, restore physics and force-fork scripted remainder",
+  "seed_split": {
+    "TEST": [
+      200014
+    ],
+    "TRAIN": [
+      200002,
+      200003
+    ],
+    "VAL": [
+      200010
+    ]
+  },
+  "smoke_forces_N": [
+    0.25,
+    2.5,
+    5.0
+  ],
+  "smoke_gate": {
+    "all_completed": true,
+    "force_limits_match_command": true
+  },
+  "snapshot_fork": true,
+  "source_hashes": {
+    "/media/volume/dasdas/exouser/af_dump_liftstyle_feas_v4_relabel_20260915/freeze_liftstyle_plan.py": "990f13ea4783ce83a7685cb9a392ae278c3e2755fc7e9a08db5e37096e6a5ed0",
+    "/media/volume/dasdas/exouser/af_dump_liftstyle_feas_v4_relabel_20260915/run_liftstyle_context.py": "b49c43d6b3ed86257dd287a60c7024129c29d7ec5f2bb26427ebe9ea422d759b",
+    "/media/volume/dasdas/exouser/af_dump_liftstyle_feas_v4_relabel_20260915/run_liftstyle_queue.py": "ba95428441d76a511a17967c7513f35395f3ded166d3312095a098d2c9457b9d"
+  },
+  "storage_root": "/media/volume/dasdas/exouser/af_dump_liftstyle_feas_v4_relabel_20260915",
+  "task": "dump_bin_bigbin",
+  "version": "AF_DUMP_LIFTSTYLE_FEAS_V4_RELABEL"
+}

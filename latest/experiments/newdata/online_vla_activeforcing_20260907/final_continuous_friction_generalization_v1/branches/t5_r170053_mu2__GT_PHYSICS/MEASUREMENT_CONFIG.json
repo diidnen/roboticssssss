@@ -1,0 +1,18 @@
+{
+  "version": "WHOLE_GRASP_SIX_RIGID_BODY_SUM_SIGNED_PATCH_V3",
+  "bodies": [
+    "panda_leftfinger",
+    "panda_rightfinger",
+    "gelsight_mini_case_left",
+    "gelsight_mini_case_right",
+    "gelpad_left",
+    "gelpad_right"
+  ],
+  "target": "tomato_sauce_1",
+  "target_contact_report_enabled": true,
+  "broad_history_length": 1,
+  "broad_update_period": 0.0,
+  "gains_changed": false,
+  "thresholds_changed": false,
+  "force_rescale": false
+}

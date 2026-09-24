@@ -1,0 +1,717 @@
+{
+  "analysis_criteria": {
+    "evaluator_failure": "real and predicted trajectories preserve force ordering but frozen evaluator safe/unsafe decisions do not",
+    "model_collapse": "real separation retained but predicted separation ratio and/or direction is materially compressed/wrong; report continuous ratios",
+    "real_separable": "paired bootstrap 95% CI of D_real and direction/effect consistency; descriptive, no post-hoc cutoff"
+  },
+  "contexts": [
+    "p5s0c_dev_t0_r06_s5106_low_mu0.288234",
+    "p5s0c_dev_t0_r06_s5106_mid_mu0.504922",
+    "p5s0c_dev_t0_r07_s5107_low_mu0.294781",
+    "p5s0c_dev_t0_r07_s5107_mid_mu0.500365",
+    "p5s0c_dev_t1_r06_s5106_low_mu0.262418",
+    "p5s0c_dev_t1_r06_s5106_mid_mu0.515227",
+    "p5s0c_dev_t1_r07_s5107_mid_mu0.500836",
+    "p5s0c_dev_t5_r06_s5106_low_mu0.283428",
+    "p5s0c_dev_t5_r06_s5106_mid_mu0.455479",
+    "p5s0c_dev_t5_r07_s5107_mid_mu0.555512",
+    "p5s0c_dev_t6_r07_s5107_low_mu0.233902",
+    "p5s0c_test_t0_r08_s5108_low_mu0.267482",
+    "p5s0c_test_t0_r08_s5108_mid_mu0.499104",
+    "p5s0c_test_t0_r09_s5109_low_mu0.256125",
+    "p5s0c_test_t0_r09_s5109_mid_mu0.483186",
+    "p5s0c_test_t0_r10_s5110_low_mu0.246922",
+    "p5s0c_test_t0_r10_s5110_mid_mu0.459307",
+    "p5s0c_test_t0_r11_s5111_low_mu0.296027",
+    "p5s0c_test_t0_r11_s5111_mid_mu0.511841",
+    "p5s0c_test_t1_r08_s5108_mid_mu0.507799",
+    "p5s0c_test_t1_r09_s5109_mid_mu0.519816",
+    "p5s0c_test_t1_r10_s5110_low_mu0.276521",
+    "p5s0c_test_t1_r10_s5110_mid_mu0.557307",
+    "p5s0c_test_t1_r11_s5111_mid_mu0.594066",
+    "p5s0c_test_t5_r08_s5108_low_mu0.281022",
+    "p5s0c_test_t5_r08_s5108_mid_mu0.472511",
+    "p5s0c_test_t5_r09_s5109_mid_mu0.511935",
+    "p5s0c_test_t5_r10_s5110_low_mu0.241595",
+    "p5s0c_test_t5_r10_s5110_mid_mu0.558928",
+    "p5s0c_test_t5_r11_s5111_low_mu0.268178",
+    "p5s0c_test_t5_r11_s5111_mid_mu0.515846",
+    "p5s0c_test_t6_r08_s5108_high_mu0.916654",
+    "p5s0c_test_t6_r09_s5109_high_mu0.973763",
+    "p5s0c_test_t6_r11_s5111_high_mu0.906536",
+    "p5s0c_test_t6_r11_s5111_low_mu0.212521",
+    "p5s0c_train_t0_r00_s5100_low_mu0.293710",
+    "p5s0c_train_t0_r00_s5100_mid_mu0.450580",
+    "p5s0c_train_t0_r01_s5101_low_mu0.255969",
+    "p5s0c_train_t0_r01_s5101_mid_mu0.592177",
+    "p5s0c_train_t0_r02_s5102_low_mu0.285139",
+    "p5s0c_train_t0_r02_s5102_mid_mu0.571550",
+    "p5s0c_train_t0_r03_s5103_low_mu0.233498",
+    "p5s0c_train_t0_r03_s5103_mid_mu0.554454",
+    "p5s0c_train_t0_r04_s5104_low_mu0.298968",
+    "p5s0c_train_t0_r04_s5104_mid_mu0.572072",
+    "p5s0c_train_t0_r05_s5105_low_mu0.252358",
+    "p5s0c_train_t0_r05_s5105_mid_mu0.529333",
+    "p5s0c_train_t1_r00_s5100_mid_mu0.467048",
+    "p5s0c_train_t1_r01_s5101_low_mu0.271996",
+    "p5s0c_train_t1_r01_s5101_mid_mu0.506177",
+    "p5s0c_train_t1_r02_s5102_mid_mu0.509876",
+    "p5s0c_train_t1_r04_s5104_mid_mu0.589024",
+    "p5s0c_train_t1_r05_s5105_low_mu0.281471",
+    "p5s0c_train_t1_r05_s5105_mid_mu0.533126",
+    "p5s0c_train_t5_r00_s5100_low_mu0.270805",
+    "p5s0c_train_t5_r00_s5100_mid_mu0.538330",
+    "p5s0c_train_t5_r01_s5101_low_mu0.269928",
+    "p5s0c_train_t5_r01_s5101_mid_mu0.531976",
+    "p5s0c_train_t5_r02_s5102_low_mu0.295394",
+    "p5s0c_train_t5_r02_s5102_mid_mu0.569222",
+    "p5s0c_train_t5_r03_s5103_low_mu0.268456",
+    "p5s0c_train_t5_r03_s5103_mid_mu0.579422",
+    "p5s0c_train_t5_r04_s5104_low_mu0.296413",
+    "p5s0c_train_t5_r04_s5104_mid_mu0.479493",
+    "p5s0c_train_t5_r05_s5105_mid_mu0.478580",
+    "p5s0c_train_t6_r00_s5100_low_mu0.257577",
+    "p5s0c_train_t6_r01_s5101_high_mu0.910021",
+    "p5s0c_train_t6_r01_s5101_low_mu0.216789",
+    "p5s0c_train_t6_r04_s5104_high_mu0.970401",
+    "p5s0c_train_t6_r04_s5104_low_mu0.226087",
+    "p5s0c_train_t6_r05_s5105_high_mu0.940404"
+  ],
+  "created_before_forensic_outcome": true,
+  "distance_metric": "active-phase mean normalized L2 over rel position, rel velocity, and gripper joint state; scales [.005 m,.020 m/s,.1] and release/settle excluded",
+  "evaluator": {
+    "calibration": "authoritative prior DEV freeze; no retuning",
+    "checkpoint": "/home/exouser/Tabero/analysis/results/trajectory_physical_imagination_20260829_065220/OUTCOME_EVALUATOR.pt",
+    "fraction": 1.0,
+    "model": "frozen logistic",
+    "threshold": 0.5
+  },
+  "forbidden": [
+    "training",
+    "model modification",
+    "loss modification",
+    "evaluator modification",
+    "threshold tuning",
+    "estimated friction",
+    "probe comparison",
+    "real E2E",
+    "new frontier search",
+    "simulator rerollout"
+  ],
+  "force_triplets": {
+    "p5s0c_dev_t0_r06_s5106_low_mu0.288234": {
+      "F_next": 5.0,
+      "F_prev": 4.0,
+      "F_star": 4.5
+    },
+    "p5s0c_dev_t0_r06_s5106_mid_mu0.504922": {
+      "F_next": 4.5,
+      "F_prev": 3.0,
+      "F_star": 4.0
+    },
+    "p5s0c_dev_t0_r07_s5107_low_mu0.294781": {
+      "F_next": 5.0,
+      "F_prev": 4.0,
+      "F_star": 4.5
+    },
+    "p5s0c_dev_t0_r07_s5107_mid_mu0.500365": {
+      "F_next": 4.5,
+      "F_prev": 3.0,
+      "F_star": 4.0
+    },
+    "p5s0c_dev_t1_r06_s5106_low_mu0.262418": {
+      "F_next": 6.0,
+      "F_prev": 5.0,
+      "F_star": 5.5
+    },
+    "p5s0c_dev_t1_r06_s5106_mid_mu0.515227": {
+      "F_next": 5.0,
+      "F_prev": 4.0,
+      "F_star": 4.5
+    },
+    "p5s0c_dev_t1_r07_s5107_mid_mu0.500836": {
+      "F_next": 5.0,
+      "F_prev": 4.0,
+      "F_star": 4.5
+    },
+    "p5s0c_dev_t5_r06_s5106_low_mu0.283428": {
+      "F_next": 5.0,
+      "F_prev": 4.0,
+      "F_star": 4.5
+    },
+    "p5s0c_dev_t5_r06_s5106_mid_mu0.455479": {
+      "F_next": 4.5,
+      "F_prev": 3.0,
+      "F_star": 4.0
+    },
+    "p5s0c_dev_t5_r07_s5107_mid_mu0.555512": {
+      "F_next": 4.5,
+      "F_prev": 3.0,
+      "F_star": 4.0
+    },
+    "p5s0c_dev_t6_r07_s5107_low_mu0.233902": {
+      "F_next": 4.0,
+      "F_prev": 3.0,
+      "F_star": 3.5
+    },
+    "p5s0c_test_t0_r08_s5108_low_mu0.267482": {
+      "F_next": 5.0,
+      "F_prev": 4.0,
+      "F_star": 4.5
+    },
+    "p5s0c_test_t0_r08_s5108_mid_mu0.499104": {
+      "F_next": 4.5,
+      "F_prev": 3.0,
+      "F_star": 4.0
+    },
+    "p5s0c_test_t0_r09_s5109_low_mu0.256125": {
+      "F_next": 5.0,
+      "F_prev": 4.0,
+      "F_star": 4.5
+    },
+    "p5s0c_test_t0_r09_s5109_mid_mu0.483186": {
+      "F_next": 4.5,
+      "F_prev": 3.0,
+      "F_star": 4.0
+    },
+    "p5s0c_test_t0_r10_s5110_low_mu0.246922": {
+      "F_next": 5.0,
+      "F_prev": 4.0,
+      "F_star": 4.5
+    },
+    "p5s0c_test_t0_r10_s5110_mid_mu0.459307": {
+      "F_next": 4.5,
+      "F_prev": 3.0,
+      "F_star": 4.0
+    },
+    "p5s0c_test_t0_r11_s5111_low_mu0.296027": {
+      "F_next": 5.0,
+      "F_prev": 4.0,
+      "F_star": 4.5
+    },
+    "p5s0c_test_t0_r11_s5111_mid_mu0.511841": {
+      "F_next": 4.5,
+      "F_prev": 3.0,
+      "F_star": 4.0
+    },
+    "p5s0c_test_t1_r08_s5108_mid_mu0.507799": {
+      "F_next": 5.0,
+      "F_prev": 4.0,
+      "F_star": 4.5
+    },
+    "p5s0c_test_t1_r09_s5109_mid_mu0.519816": {
+      "F_next": 5.0,
+      "F_prev": 4.0,
+      "F_star": 4.5
+    },
+    "p5s0c_test_t1_r10_s5110_low_mu0.276521": {
+      "F_next": 6.0,
+      "F_prev": 5.0,
+      "F_star": 5.5
+    },
+    "p5s0c_test_t1_r10_s5110_mid_mu0.557307": {
+      "F_next": 5.0,
+      "F_prev": 4.0,
+      "F_star": 4.5
+    },
+    "p5s0c_test_t1_r11_s5111_mid_mu0.594066": {
+      "F_next": 5.0,
+      "F_prev": 4.0,
+      "F_star": 4.5
+    },
+    "p5s0c_test_t5_r08_s5108_low_mu0.281022": {
+      "F_next": 5.0,
+      "F_prev": 4.0,
+      "F_star": 4.5
+    },
+    "p5s0c_test_t5_r08_s5108_mid_mu0.472511": {
+      "F_next": 4.5,
+      "F_prev": 3.0,
+      "F_star": 4.0
+    },
+    "p5s0c_test_t5_r09_s5109_mid_mu0.511935": {
+      "F_next": 4.5,
+      "F_prev": 3.0,
+      "F_star": 4.0
+    },
+    "p5s0c_test_t5_r10_s5110_low_mu0.241595": {
+      "F_next": 5.0,
+      "F_prev": 4.0,
+      "F_star": 4.5
+    },
+    "p5s0c_test_t5_r10_s5110_mid_mu0.558928": {
+      "F_next": 4.5,
+      "F_prev": 3.0,
+      "F_star": 4.0
+    },
+    "p5s0c_test_t5_r11_s5111_low_mu0.268178": {
+      "F_next": 5.0,
+      "F_prev": 4.0,
+      "F_star": 4.5
+    },
+    "p5s0c_test_t5_r11_s5111_mid_mu0.515846": {
+      "F_next": 4.5,
+      "F_prev": 3.0,
+      "F_star": 4.0
+    },
+    "p5s0c_test_t6_r08_s5108_high_mu0.916654": {
+      "F_next": 4.0,
+      "F_prev": 3.0,
+      "F_star": 3.5
+    },
+    "p5s0c_test_t6_r09_s5109_high_mu0.973763": {
+      "F_next": 4.0,
+      "F_prev": 3.0,
+      "F_star": 3.5
+    },
+    "p5s0c_test_t6_r11_s5111_high_mu0.906536": {
+      "F_next": 4.0,
+      "F_prev": 3.0,
+      "F_star": 3.5
+    },
+    "p5s0c_test_t6_r11_s5111_low_mu0.212521": {
+      "F_next": 4.0,
+      "F_prev": 3.0,
+      "F_star": 3.5
+    },
+    "p5s0c_train_t0_r00_s5100_low_mu0.293710": {
+      "F_next": 5.0,
+      "F_prev": 4.0,
+      "F_star": 4.5
+    },
+    "p5s0c_train_t0_r00_s5100_mid_mu0.450580": {
+      "F_next": 4.5,
+      "F_prev": 3.0,
+      "F_star": 4.0
+    },
+    "p5s0c_train_t0_r01_s5101_low_mu0.255969": {
+      "F_next": 5.0,
+      "F_prev": 4.0,
+      "F_star": 4.5
+    },
+    "p5s0c_train_t0_r01_s5101_mid_mu0.592177": {
+      "F_next": 4.5,
+      "F_prev": 3.0,
+      "F_star": 4.0
+    },
+    "p5s0c_train_t0_r02_s5102_low_mu0.285139": {
+      "F_next": 5.0,
+      "F_prev": 4.0,
+      "F_star": 4.5
+    },
+    "p5s0c_train_t0_r02_s5102_mid_mu0.571550": {
+      "F_next": 4.5,
+      "F_prev": 3.0,
+      "F_star": 4.0
+    },
+    "p5s0c_train_t0_r03_s5103_low_mu0.233498": {
+      "F_next": 5.0,
+      "F_prev": 4.0,
+      "F_star": 4.5
+    },
+    "p5s0c_train_t0_r03_s5103_mid_mu0.554454": {
+      "F_next": 4.5,
+      "F_prev": 3.0,
+      "F_star": 4.0
+    },
+    "p5s0c_train_t0_r04_s5104_low_mu0.298968": {
+      "F_next": 5.0,
+      "F_prev": 4.0,
+      "F_star": 4.5
+    },
+    "p5s0c_train_t0_r04_s5104_mid_mu0.572072": {
+      "F_next": 4.5,
+      "F_prev": 3.0,
+      "F_star": 4.0
+    },
+    "p5s0c_train_t0_r05_s5105_low_mu0.252358": {
+      "F_next": 5.0,
+      "F_prev": 4.0,
+      "F_star": 4.5
+    },
+    "p5s0c_train_t0_r05_s5105_mid_mu0.529333": {
+      "F_next": 4.5,
+      "F_prev": 3.0,
+      "F_star": 4.0
+    },
+    "p5s0c_train_t1_r00_s5100_mid_mu0.467048": {
+      "F_next": 5.5,
+      "F_prev": 4.5,
+      "F_star": 5.0
+    },
+    "p5s0c_train_t1_r01_s5101_low_mu0.271996": {
+      "F_next": 6.0,
+      "F_prev": 5.0,
+      "F_star": 5.5
+    },
+    "p5s0c_train_t1_r01_s5101_mid_mu0.506177": {
+      "F_next": 5.0,
+      "F_prev": 4.0,
+      "F_star": 4.5
+    },
+    "p5s0c_train_t1_r02_s5102_mid_mu0.509876": {
+      "F_next": 5.0,
+      "F_prev": 4.0,
+      "F_star": 4.5
+    },
+    "p5s0c_train_t1_r04_s5104_mid_mu0.589024": {
+      "F_next": 5.0,
+      "F_prev": 4.0,
+      "F_star": 4.5
+    },
+    "p5s0c_train_t1_r05_s5105_low_mu0.281471": {
+      "F_next": 6.0,
+      "F_prev": 5.0,
+      "F_star": 5.5
+    },
+    "p5s0c_train_t1_r05_s5105_mid_mu0.533126": {
+      "F_next": 5.0,
+      "F_prev": 4.0,
+      "F_star": 4.5
+    },
+    "p5s0c_train_t5_r00_s5100_low_mu0.270805": {
+      "F_next": 5.0,
+      "F_prev": 4.0,
+      "F_star": 4.5
+    },
+    "p5s0c_train_t5_r00_s5100_mid_mu0.538330": {
+      "F_next": 4.5,
+      "F_prev": 3.0,
+      "F_star": 4.0
+    },
+    "p5s0c_train_t5_r01_s5101_low_mu0.269928": {
+      "F_next": 5.0,
+      "F_prev": 4.0,
+      "F_star": 4.5
+    },
+    "p5s0c_train_t5_r01_s5101_mid_mu0.531976": {
+      "F_next": 4.5,
+      "F_prev": 3.0,
+      "F_star": 4.0
+    },
+    "p5s0c_train_t5_r02_s5102_low_mu0.295394": {
+      "F_next": 5.0,
+      "F_prev": 4.0,
+      "F_star": 4.5
+    },
+    "p5s0c_train_t5_r02_s5102_mid_mu0.569222": {
+      "F_next": 4.5,
+      "F_prev": 3.0,
+      "F_star": 4.0
+    },
+    "p5s0c_train_t5_r03_s5103_low_mu0.268456": {
+      "F_next": 5.0,
+      "F_prev": 4.0,
+      "F_star": 4.5
+    },
+    "p5s0c_train_t5_r03_s5103_mid_mu0.579422": {
+      "F_next": 4.5,
+      "F_prev": 3.0,
+      "F_star": 4.0
+    },
+    "p5s0c_train_t5_r04_s5104_low_mu0.296413": {
+      "F_next": 5.0,
+      "F_prev": 4.0,
+      "F_star": 4.5
+    },
+    "p5s0c_train_t5_r04_s5104_mid_mu0.479493": {
+      "F_next": 4.5,
+      "F_prev": 3.0,
+      "F_star": 4.0
+    },
+    "p5s0c_train_t5_r05_s5105_mid_mu0.478580": {
+      "F_next": 4.5,
+      "F_prev": 3.0,
+      "F_star": 4.0
+    },
+    "p5s0c_train_t6_r00_s5100_low_mu0.257577": {
+      "F_next": 4.0,
+      "F_prev": 3.0,
+      "F_star": 3.5
+    },
+    "p5s0c_train_t6_r01_s5101_high_mu0.910021": {
+      "F_next": 4.0,
+      "F_prev": 3.0,
+      "F_star": 3.5
+    },
+    "p5s0c_train_t6_r01_s5101_low_mu0.216789": {
+      "F_next": 4.0,
+      "F_prev": 3.0,
+      "F_star": 3.5
+    },
+    "p5s0c_train_t6_r04_s5104_high_mu0.970401": {
+      "F_next": 4.0,
+      "F_prev": 3.0,
+      "F_star": 3.5
+    },
+    "p5s0c_train_t6_r04_s5104_low_mu0.226087": {
+      "F_next": 4.0,
+      "F_prev": 3.0,
+      "F_star": 3.5
+    },
+    "p5s0c_train_t6_r05_s5105_high_mu0.940404": {
+      "F_next": 4.0,
+      "F_prev": 3.0,
+      "F_star": 3.5
+    }
+  },
+  "friction_bands": [
+    "HIGH",
+    "LOW",
+    "MID"
+  ],
+  "friction_values": {
+    "p5s0c_dev_t0_r06_s5106_low_mu0.288234": 0.2882343327859944,
+    "p5s0c_dev_t0_r06_s5106_mid_mu0.504922": 0.5049219883120787,
+    "p5s0c_dev_t0_r07_s5107_low_mu0.294781": 0.2947813460786453,
+    "p5s0c_dev_t0_r07_s5107_mid_mu0.500365": 0.5003653963090192,
+    "p5s0c_dev_t1_r06_s5106_low_mu0.262418": 0.2624184362235552,
+    "p5s0c_dev_t1_r06_s5106_mid_mu0.515227": 0.5152267522480724,
+    "p5s0c_dev_t1_r07_s5107_mid_mu0.500836": 0.500835695412869,
+    "p5s0c_dev_t5_r06_s5106_low_mu0.283428": 0.2834278244355604,
+    "p5s0c_dev_t5_r06_s5106_mid_mu0.455479": 0.4554788210846013,
+    "p5s0c_dev_t5_r07_s5107_mid_mu0.555512": 0.5555123454255387,
+    "p5s0c_dev_t6_r07_s5107_low_mu0.233902": 0.2339024543861059,
+    "p5s0c_test_t0_r08_s5108_low_mu0.267482": 0.2674822115103529,
+    "p5s0c_test_t0_r08_s5108_mid_mu0.499104": 0.4991042120886148,
+    "p5s0c_test_t0_r09_s5109_low_mu0.256125": 0.2561249693238189,
+    "p5s0c_test_t0_r09_s5109_mid_mu0.483186": 0.4831864837456221,
+    "p5s0c_test_t0_r10_s5110_low_mu0.246922": 0.2469216254159692,
+    "p5s0c_test_t0_r10_s5110_mid_mu0.459307": 0.4593074511620376,
+    "p5s0c_test_t0_r11_s5111_low_mu0.296027": 0.2960273891943319,
+    "p5s0c_test_t0_r11_s5111_mid_mu0.511841": 0.5118406297435366,
+    "p5s0c_test_t1_r08_s5108_mid_mu0.507799": 0.5077986605848918,
+    "p5s0c_test_t1_r09_s5109_mid_mu0.519816": 0.5198161355632988,
+    "p5s0c_test_t1_r10_s5110_low_mu0.276521": 0.2765211847843557,
+    "p5s0c_test_t1_r10_s5110_mid_mu0.557307": 0.5573074412236266,
+    "p5s0c_test_t1_r11_s5111_mid_mu0.594066": 0.5940658783003948,
+    "p5s0c_test_t5_r08_s5108_low_mu0.281022": 0.2810223546644395,
+    "p5s0c_test_t5_r08_s5108_mid_mu0.472511": 0.4725107627202033,
+    "p5s0c_test_t5_r09_s5109_mid_mu0.511935": 0.5119353501425179,
+    "p5s0c_test_t5_r10_s5110_low_mu0.241595": 0.2415946392644449,
+    "p5s0c_test_t5_r10_s5110_mid_mu0.558928": 0.5589278760538872,
+    "p5s0c_test_t5_r11_s5111_low_mu0.268178": 0.268177933747641,
+    "p5s0c_test_t5_r11_s5111_mid_mu0.515846": 0.515846448574493,
+    "p5s0c_test_t6_r08_s5108_high_mu0.916654": 0.9166536478590028,
+    "p5s0c_test_t6_r09_s5109_high_mu0.973763": 0.9737629202847972,
+    "p5s0c_test_t6_r11_s5111_high_mu0.906536": 0.9065357212447386,
+    "p5s0c_test_t6_r11_s5111_low_mu0.212521": 0.212521463342134,
+    "p5s0c_train_t0_r00_s5100_low_mu0.293710": 0.2937102019159983,
+    "p5s0c_train_t0_r00_s5100_mid_mu0.450580": 0.4505801238823336,
+    "p5s0c_train_t0_r01_s5101_low_mu0.255969": 0.2559692046181955,
+    "p5s0c_train_t0_r01_s5101_mid_mu0.592177": 0.5921771020907431,
+    "p5s0c_train_t0_r02_s5102_low_mu0.285139": 0.2851387636485543,
+    "p5s0c_train_t0_r02_s5102_mid_mu0.571550": 0.5715496239149224,
+    "p5s0c_train_t0_r03_s5103_low_mu0.233498": 0.2334976939575435,
+    "p5s0c_train_t0_r03_s5103_mid_mu0.554454": 0.5544542093115656,
+    "p5s0c_train_t0_r04_s5104_low_mu0.298968": 0.2989681415686305,
+    "p5s0c_train_t0_r04_s5104_mid_mu0.572072": 0.5720723245328282,
+    "p5s0c_train_t0_r05_s5105_low_mu0.252358": 0.2523584006618226,
+    "p5s0c_train_t0_r05_s5105_mid_mu0.529333": 0.5293331885497402,
+    "p5s0c_train_t1_r00_s5100_mid_mu0.467048": 0.4670478243968788,
+    "p5s0c_train_t1_r01_s5101_low_mu0.271996": 0.2719961745269844,
+    "p5s0c_train_t1_r01_s5101_mid_mu0.506177": 0.5061774499381578,
+    "p5s0c_train_t1_r02_s5102_mid_mu0.509876": 0.509875894662746,
+    "p5s0c_train_t1_r04_s5104_mid_mu0.589024": 0.5890240876672719,
+    "p5s0c_train_t1_r05_s5105_low_mu0.281471": 0.2814708484330954,
+    "p5s0c_train_t1_r05_s5105_mid_mu0.533126": 0.5331259916067848,
+    "p5s0c_train_t5_r00_s5100_low_mu0.270805": 0.2708052527683458,
+    "p5s0c_train_t5_r00_s5100_mid_mu0.538330": 0.538330484944251,
+    "p5s0c_train_t5_r01_s5101_low_mu0.269928": 0.2699280391435209,
+    "p5s0c_train_t5_r01_s5101_mid_mu0.531976": 0.5319764380853421,
+    "p5s0c_train_t5_r02_s5102_low_mu0.295394": 0.2953937543558703,
+    "p5s0c_train_t5_r02_s5102_mid_mu0.569222": 0.5692222329044275,
+    "p5s0c_train_t5_r03_s5103_low_mu0.268456": 0.2684556388624265,
+    "p5s0c_train_t5_r03_s5103_mid_mu0.579422": 0.5794217219847442,
+    "p5s0c_train_t5_r04_s5104_low_mu0.296413": 0.2964132778649048,
+    "p5s0c_train_t5_r04_s5104_mid_mu0.479493": 0.4794931193111124,
+    "p5s0c_train_t5_r05_s5105_mid_mu0.478580": 0.4785796961711498,
+    "p5s0c_train_t6_r00_s5100_low_mu0.257577": 0.2575768733744629,
+    "p5s0c_train_t6_r01_s5101_high_mu0.910021": 0.910021416560606,
+    "p5s0c_train_t6_r01_s5101_low_mu0.216789": 0.2167888067328618,
+    "p5s0c_train_t6_r04_s5104_high_mu0.970401": 0.9704010725401304,
+    "p5s0c_train_t6_r04_s5104_low_mu0.226087": 0.2260874595992573,
+    "p5s0c_train_t6_r05_s5105_high_mu0.940404": 0.9404040658568696
+  },
+  "horizons": [
+    1,
+    2,
+    4,
+    8
+  ],
+  "model_checkpoint": {
+    "H": 8,
+    "hidden": 64,
+    "path": "/home/exouser/Tabero/analysis/results/trajectory_physical_imagination_20260829_065220/PHYSICS_TRAJECTORY_GRU.pt",
+    "sha256": "8d5158310eeb6de924ec27f2fe1a4fe661b89b73502a855bbe276edd304eac45"
+  },
+  "not_predicted_by_frozen_checkpoint": [
+    "left_normal_N",
+    "right_normal_N",
+    "left_tangent_N",
+    "right_tangent_N",
+    "tangent_velocity_proxy_mps"
+  ],
+  "optional_H16": {
+    "reason": "exact frozen authoritative checkpoint is H=8; no H=16 Physics-GRU checkpoint may be trained or substituted",
+    "status": "NOT_ANALYZED"
+  },
+  "physical_variables": [
+    "rel_dx_m",
+    "rel_dy_m",
+    "rel_dz_m",
+    "rel_vx_mps",
+    "rel_vy_mps",
+    "rel_vz_mps",
+    "left_normal_N",
+    "right_normal_N",
+    "left_tangent_N",
+    "right_tangent_N",
+    "tangent_velocity_proxy_mps",
+    "joint_left",
+    "joint_right"
+  ],
+  "protocol_content_sha256": "5b78ecd1165ddf1284e88c4fa152bf63da7072ac5966f608317b831acc187b1e",
+  "purpose": "forensic-only causal isolation of real separability vs frozen Physics-GRU force sensitivity vs frozen evaluator",
+  "reliable_model_variables": [
+    "rel_dx_m",
+    "rel_dy_m",
+    "rel_dz_m",
+    "rel_vx_mps",
+    "rel_vy_mps",
+    "rel_vz_mps",
+    "joint_left",
+    "joint_right"
+  ],
+  "roots": [
+    "p5s0c_dev_t0_root06_s5106",
+    "p5s0c_dev_t0_root07_s5107",
+    "p5s0c_dev_t1_root06_s5106",
+    "p5s0c_dev_t1_root07_s5107",
+    "p5s0c_dev_t5_root06_s5106",
+    "p5s0c_dev_t5_root07_s5107",
+    "p5s0c_dev_t6_root07_s5107",
+    "p5s0c_test_t0_root08_s5108",
+    "p5s0c_test_t0_root09_s5109",
+    "p5s0c_test_t0_root10_s5110",
+    "p5s0c_test_t0_root11_s5111",
+    "p5s0c_test_t1_root08_s5108",
+    "p5s0c_test_t1_root09_s5109",
+    "p5s0c_test_t1_root10_s5110",
+    "p5s0c_test_t1_root11_s5111",
+    "p5s0c_test_t5_root08_s5108",
+    "p5s0c_test_t5_root09_s5109",
+    "p5s0c_test_t5_root10_s5110",
+    "p5s0c_test_t5_root11_s5111",
+    "p5s0c_test_t6_root08_s5108",
+    "p5s0c_test_t6_root09_s5109",
+    "p5s0c_test_t6_root11_s5111",
+    "p5s0c_train_t0_root00_s5100",
+    "p5s0c_train_t0_root01_s5101",
+    "p5s0c_train_t0_root02_s5102",
+    "p5s0c_train_t0_root03_s5103",
+    "p5s0c_train_t0_root04_s5104",
+    "p5s0c_train_t0_root05_s5105",
+    "p5s0c_train_t1_root00_s5100",
+    "p5s0c_train_t1_root01_s5101",
+    "p5s0c_train_t1_root02_s5102",
+    "p5s0c_train_t1_root04_s5104",
+    "p5s0c_train_t1_root05_s5105",
+    "p5s0c_train_t5_root00_s5100",
+    "p5s0c_train_t5_root01_s5101",
+    "p5s0c_train_t5_root02_s5102",
+    "p5s0c_train_t5_root03_s5103",
+    "p5s0c_train_t5_root04_s5104",
+    "p5s0c_train_t5_root05_s5105",
+    "p5s0c_train_t6_root00_s5100",
+    "p5s0c_train_t6_root01_s5101",
+    "p5s0c_train_t6_root04_s5104",
+    "p5s0c_train_t6_root05_s5105"
+  ],
+  "splits": {
+    "DEV": [
+      "p5s0c_dev_t0_r06_s5106_low_mu0.288234",
+      "p5s0c_dev_t0_r06_s5106_mid_mu0.504922",
+      "p5s0c_dev_t0_r07_s5107_low_mu0.294781",
+      "p5s0c_dev_t0_r07_s5107_mid_mu0.500365",
+      "p5s0c_dev_t1_r06_s5106_low_mu0.262418",
+      "p5s0c_dev_t1_r06_s5106_mid_mu0.515227",
+      "p5s0c_dev_t1_r07_s5107_mid_mu0.500836",
+      "p5s0c_dev_t5_r06_s5106_low_mu0.283428",
+      "p5s0c_dev_t5_r06_s5106_mid_mu0.455479",
+      "p5s0c_dev_t5_r07_s5107_mid_mu0.555512",
+      "p5s0c_dev_t6_r07_s5107_low_mu0.233902"
+    ],
+    "TEST": [
+      "p5s0c_test_t0_r08_s5108_low_mu0.267482",
+      "p5s0c_test_t0_r08_s5108_mid_mu0.499104",
+      "p5s0c_test_t0_r09_s5109_low_mu0.256125",
+      "p5s0c_test_t0_r09_s5109_mid_mu0.483186",
+      "p5s0c_test_t0_r10_s5110_low_mu0.246922",
+      "p5s0c_test_t0_r10_s5110_mid_mu0.459307",
+      "p5s0c_test_t0_r11_s5111_low_mu0.296027",
+      "p5s0c_test_t0_r11_s5111_mid_mu0.511841",
+      "p5s0c_test_t1_r08_s5108_mid_mu0.507799",
+      "p5s0c_test_t1_r09_s5109_mid_mu0.519816",
+      "p5s0c_test_t1_r10_s5110_low_mu0.276521",
+      "p5s0c_test_t1_r10_s5110_mid_mu0.557307",
+      "p5s0c_test_t1_r11_s5111_mid_mu0.594066",
+      "p5s0c_test_t5_r08_s5108_low_mu0.281022",
+      "p5s0c_test_t5_r08_s5108_mid_mu0.472511",
+      "p5s0c_test_t5_r09_s5109_mid_mu0.511935",
+      "p5s0c_test_t5_r10_s5110_low_mu0.241595",
+      "p5s0c_test_t5_r10_s5110_mid_mu0.558928",
+      "p5s0c_test_t5_r11_s5111_low_mu0.268178",
+      "p5s0c_test_t5_r11_s5111_mid_mu0.515846",
+      "p5s0c_test_t6_r08_s5108_high_mu0.916654",
+      "p5s0c_test_t6_r09_s5109_high_mu0.973763",
+      "p5s0c_test_t6_r11_s5111_high_mu0.906536",
+      "p5s0c_test_t6_r11_s5111_low_mu0.212521"
+    ],
+    "TRAIN": [
+      "p5s0c_train_t0_r00_s5100_low_mu0.293710",
+      "p5s0c_train_t0_r00_s5100_mid_mu0.450580",
+      "p5s0c_train_t0_r01_s5101_low_mu0.255969",
+      "p5s0c_train_t0_r01_s5101_mid_mu0.592177",
+      "p5s0c_train_t0_r02_s5102_low_mu0.285139",
+      "p5s0c_train_t0_r02_s5102_mid_mu0.571550",
+      "p5s0c_train_t0_r03_s5103_low_mu0.233498",
+      "p5s0c_train_t0_r03_s5103_mid_mu0.554454",
+      "p5s0c_train_t0_r04_s5104_low_mu0.298968",
+      "p5s0c_train_t0_r04_s5104_mid_mu0.572072",
+      "p5s0c_train_t0_r05_s5105_low_mu0.252358",
+      "p5s0c_train_t0_r05_s5105_mid_mu0.529333",
+      "p5s0c_train_t1_r00_s5100_mid_mu0.467048",
+      "p5s0c_train_t1_r01_s5101_low_mu0.271996",
+      "p5s0c_train_t1_r01_s5101_mid_mu0.506177",
+      "p5s0c_train_t1_r02_s5102_mid_mu0.509876",
+      "p5s0c_train_t1_r04_s5104_mid_mu0.589024",
+      "p5s0c_train_t1_r05_s5105_low_mu0.281471",
+      "p5s0c_train_t1_r05_s5105_mid_mu0.533126",
+      "p5s0c_train_t5_r00_s5100_low_mu0.270805",
+      "p5s0c_train_t5_r00_s5100_mid_mu0.538330",
+      "p5s0c_train_t5_r01_s5101_low_mu0.269928",
+      "p5s0c_train_t5_r01_s5101_mid_mu0.531976",
+      "p5s0c_train_t5_r02_s5102_low_mu0.295394",
+      "p5s0c_train_t5_r02_s5102_mid_mu0.569222",
+      "p5s0c_train_t5_r03_s5103_low_mu0.268456",
+      "p5s0c_train_t5_r03_s5103_mid_mu0.579422",
+      "p5s0c_train_t5_r04_s5104_low_mu0.296413",
+      "p5s0c_train_t5_r04_s5104_mid_mu0.479493",
+      "p5s0c_train_t5_r05_s5105_mid_mu0.478580",
+      "p5s0c_train_t6_r00_s5100_low_mu0.257577",
+      "p5s0c_train_t6_r01_s5101_high_mu0.910021",
+      "p5s0c_train_t6_r01_s5101_low_mu0.216789",
+      "p5s0c_train_t6_r04_s5104_high_mu0.970401",
+      "p5s0c_train_t6_r04_s5104_low_mu0.226087",
+      "p5s0c_train_t6_r05_s5105_high_mu0.940404"
+    ]
+  },
+  "tasks": [
+    0,
+    1,
+    5,
+    6
+  ],
+  "variable_metric": "active-phase mean absolute per-channel difference; contact/force variables remain NOT_PREDICTED for model comparisons when historical mask is absent"
+}

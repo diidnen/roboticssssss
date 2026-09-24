@@ -1,0 +1,80 @@
+{
+  "claim_boundary": "scripted 1-4N 0.25-step auxiliary labels; not online AF; not pi0 chunks",
+  "created_utc": "2026-09-14T15:14:57.862002+00:00",
+  "force_convention": "RoboTwin AF single-finger gripper drive limit N on both arms",
+  "forces_N": [
+    1.0,
+    1.25,
+    1.5,
+    1.75,
+    2.0,
+    2.25,
+    2.5,
+    2.75,
+    3.0,
+    3.25,
+    3.5,
+    3.75,
+    4.0
+  ],
+  "grid_step_N": 0.25,
+  "main_contexts": 9,
+  "main_rollouts": 117,
+  "motion_mode": "scripted_play_once_full_task",
+  "no_pi0": true,
+  "population": [
+    {
+      "friction": 0.425,
+      "seed": 200002
+    },
+    {
+      "friction": 0.425,
+      "seed": 200003
+    },
+    {
+      "friction": 0.425,
+      "seed": 200004
+    },
+    {
+      "friction": 0.575,
+      "seed": 200002
+    },
+    {
+      "friction": 0.575,
+      "seed": 200003
+    },
+    {
+      "friction": 0.575,
+      "seed": 200004
+    },
+    {
+      "friction": 0.85,
+      "seed": 200002
+    },
+    {
+      "friction": 0.85,
+      "seed": 200003
+    },
+    {
+      "friction": 0.85,
+      "seed": 200010
+    }
+  ],
+  "smoke_forces_N": [
+    1.0,
+    2.5,
+    4.0
+  ],
+  "smoke_gate": {
+    "all_completed": true,
+    "force_limits_match_command": true
+  },
+  "source_hashes": {
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_scripted_finegrid_1_4_20260914/freeze_scripted_plan.py": "6defac7315b8d7d1fbb5d2d6ba681e436511796390b92b4f5141976fb9077d0c",
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_scripted_finegrid_1_4_20260914/run_scripted_context.py": "61ad1b5ea325c71e0ca42718b5af16db2247671491d64bff3c6eb80328ca1698",
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_scripted_finegrid_1_4_20260914/run_scripted_queue.py": "16d56db71a3295c23a7c51a8d9124b56f9c1921094544bfe37dea41b54da7962"
+  },
+  "storage_root": "/media/volume/dasdas/exouser/af_dump_scripted_finegrid_1_4_20260914",
+  "task": "dump_bin_bigbin",
+  "version": "AF_DUMP_SCRIPTED_FINEGRID_1_4_V1"
+}

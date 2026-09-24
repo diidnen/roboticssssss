@@ -1,0 +1,53 @@
+{
+  "activeforcing_starts_after_valid_vla_grasp": true,
+  "activeforcing_starts_before_grasp": false,
+  "branches_per_context": 4,
+  "candidate_generator": "fallback permitted by protocol; deterministic posterior center offsets",
+  "contexts_per_task_target": 60,
+  "controller": {
+    "CUSTOM_PROTOTYPE_ACTIVE": "NO",
+    "LEGACY_GRIPPER_ACTION_ACTIVE": "NO",
+    "TABERO_FORCE_POSITION_ACTION_ACTIVE": "YES",
+    "native": "ForcePositionAction",
+    "squeeze_ff_k_load_z": 0.0,
+    "target_effective_equals_desired": true
+  },
+  "dataset_version": "continuous_physical_force_v2",
+  "final_scope": "POST_GRASP_FORCE_ADAPTATION",
+  "force_asymmetry_hard_gate": false,
+  "formal_tasks_from_frozen_manifest": [
+    0,
+    1,
+    5,
+    6
+  ],
+  "friction_estimator": {
+    "checkpoint_count": 9,
+    "checkpoints": [
+      "/home/exouser/FORTE/activeforcing_probe_conditioned_wm_20260901_064627/probe/probe_fold0_seed0.pt",
+      "/home/exouser/FORTE/activeforcing_probe_conditioned_wm_20260901_064627/probe/probe_fold0_seed1.pt",
+      "/home/exouser/FORTE/activeforcing_probe_conditioned_wm_20260901_064627/probe/probe_fold0_seed2.pt",
+      "/home/exouser/FORTE/activeforcing_probe_conditioned_wm_20260901_064627/probe/probe_fold1_seed0.pt",
+      "/home/exouser/FORTE/activeforcing_probe_conditioned_wm_20260901_064627/probe/probe_fold1_seed1.pt",
+      "/home/exouser/FORTE/activeforcing_probe_conditioned_wm_20260901_064627/probe/probe_fold1_seed2.pt",
+      "/home/exouser/FORTE/activeforcing_probe_conditioned_wm_20260901_064627/probe/probe_fold2_seed0.pt",
+      "/home/exouser/FORTE/activeforcing_probe_conditioned_wm_20260901_064627/probe/probe_fold2_seed1.pt",
+      "/home/exouser/FORTE/activeforcing_probe_conditioned_wm_20260901_064627/probe/probe_fold2_seed2.pt"
+    ],
+    "input": "probe-derived only; GT excluded",
+    "root": "/home/exouser/FORTE/activeforcing_probe_conditioned_wm_20260901_064627"
+  },
+  "grasp_centering_hard_gate": false,
+  "handoff_condition": "left target-object contact AND right target-object contact, after grasp establishment and before formal lift; centering/asymmetry/opposition are diagnostics only",
+  "handoff_definition": "first rollout-dependent semantic post-grasp/pre-lift event after frozen-VLA grasp establishment with bilateral target-object contact",
+  "probe": {
+    "duration_and_sequence": "P4-B authoritative probe motion, extracted only after handoff",
+    "path": "/home/exouser/Tabero/analysis/results/p4_contact_conditioned_probe_20260822_184213/scripts/p4_collect_probe.py",
+    "required_location": "post-grasp, pre-lift",
+    "reused": true,
+    "sha256": "a1566334f9f79ad9d8491612f10d086386049295314f6d1fd62512be1867bca9"
+  },
+  "split_manifest": "FINAL_V2_ROOT_LEVEL_SPLIT",
+  "training_label": "remaining_task_success",
+  "valid_post_grasp_contexts": true
+}

@@ -1,0 +1,144 @@
+{
+  "authoritative_hashes": {
+    "/home/exouser/Tabero/analysis/loto_feasibility_generalization.py": "b91ee78945292f4bfdb0457c2dc567d6392e63f25287a1d0f73e8cfd37b25112",
+    "/home/exouser/Tabero/analysis/p5s0c_paired_boundary_probe_value.py": "0c029e02544e7d22fbba6f253e29584db6cf796dfabf471e66f157ac66b283b2",
+    "/home/exouser/Tabero/analysis/results/full_task_feasibility_20260830_012830/FEASIBILITY_MODEL_COMPARISON.csv": "9f9455fcccc73133713984e145d102b89d2a88711acb39552bfe1035ae156302",
+    "/home/exouser/Tabero/analysis/results/full_task_feasibility_20260830_012830/FINAL_REPORT.md": "f63524f8a64e5023aec61dae8805cb735e6a966ab856b509d85ef56ae50d94e5",
+    "/home/exouser/Tabero/analysis/results/full_task_feasibility_20260830_012830/FULL_TASK_FEASIBILITY_PROTOCOL.json": "63ba2e0756d4945a3da27a4510957111b2cfe15610577e12b68637a201bc8b1e",
+    "/home/exouser/Tabero/analysis/results/full_task_feasibility_20260830_012830/IE_RETENTION_AUDIT.csv": "cf5bd5e9363fec365e3bb2ec17804e9d6ded0e4669b5dce9ca6f9b7f20c98857",
+    "/home/exouser/Tabero/analysis/results/loto_feasibility_generalization_20260830_022058/FINAL_REPORT.md": "a7909624426eb0e1389f00d33f89e97e602d3ad929204b869e00abca63ff9e05",
+    "/home/exouser/Tabero/analysis/results/loto_feasibility_generalization_20260830_022058/LOTO_FEASIBILITY_GENERALIZATION_PROTOCOL.json": "aa5c4089706d5a5bb799fe63b169b93cff7629cfbd49c6fbd996b8948a09a234",
+    "/home/exouser/Tabero/analysis/results/loto_feasibility_generalization_20260830_022058/LOTO_MODEL_COMPARISON.csv": "9e4e50552a2cb0fce84440ffe23981e12495014e03a112ecef042ff4882c5d32",
+    "/home/exouser/Tabero/analysis/results/loto_feasibility_generalization_20260830_022058/LOTO_TASK_METRICS.csv": "3f951436adce258665eb8a06af1981886b6d611c330083fd84436109122aa45a",
+    "/home/exouser/Tabero/analysis/results/p4_contact_conditioned_probe_20260822_184213/scripts/p4_collect_probe.py": "a1566334f9f79ad9d8491612f10d086386049295314f6d1fd62512be1867bca9",
+    "/home/exouser/Tabero/analysis/results/p5s0c_paired_boundary_probe_value_20260824_000542/P5S0C_BRANCH_MANIFEST.csv": "778190f29b9414c7590141c6b07ba1bf29e625a8fd8ccea20559d466480c778a",
+    "/home/exouser/Tabero/analysis/results/p5s0c_paired_boundary_probe_value_20260824_000542/P5S0C_FORCE_MANIFEST.json": "d2a4bd82685f7dcce3c1adb089f8766c4d3d4f81fca06de624e77ac16c7e8f3d",
+    "/home/exouser/Tabero/analysis/results/p5s0c_paired_boundary_probe_value_20260824_000542/P5S0C_SPLIT_MANIFEST.json": "bd1da97d866bea5651dad2a76a75e2a92902b14ad8d5b46163c93d194e9ffa7f",
+    "/home/exouser/Tabero/analysis/trajectory_physical_imagination.py": "429761e395e5d6c4f658326e4f5642629eeaaf6498c2217f8f4829695340c2ff"
+  },
+  "authoritative_old_loto": "/home/exouser/Tabero/analysis/results/loto_feasibility_generalization_20260830_022058",
+  "authoritative_old_protocol_sha256": "aa5c4089706d5a5bb799fe63b169b93cff7629cfbd49c6fbd996b8948a09a234",
+  "calibration": "isotonic fit on seen-task TRAIN only; threshold 0.5",
+  "comparison_rules": {
+    "T1_OOD": "descriptor OOD ratio >2.0, frozen before outcomes",
+    "composite": "mean(boundary ranking, 1-fprev false-safe, frontier exact, 1-under-force)",
+    "not_worse_than_no_motion": "candidate composite >= old Joint No-Motion on >=3/4 tasks",
+    "strong_joint_advantage": "Joint macro composite > Feas macro by >=0.05, not worse on >=3/4 tasks, and one key macro metric improves by >=0.05",
+    "task_demand_improvement": "macro composite >= matched old raw-H8 + 0.05 and candidate not worse on >=3/4 task composites"
+  },
+  "descriptor_spec_sha256": "ac6fa7f89a891a63e088edd021a0b0559ab35224b3c0a32eeb61a92b0853aa57",
+  "folds": {
+    "T0": {
+      "heldout": 0,
+      "seen": [
+        1,
+        5,
+        6
+      ]
+    },
+    "T1": {
+      "heldout": 1,
+      "seen": [
+        0,
+        5,
+        6
+      ]
+    },
+    "T5": {
+      "heldout": 5,
+      "seen": [
+        0,
+        1,
+        6
+      ]
+    },
+    "T6": {
+      "heldout": 6,
+      "seen": [
+        0,
+        1,
+        5
+      ]
+    }
+  },
+  "forbidden": [
+    "original TEST outcomes/telemetry",
+    "Probe",
+    "Q2F",
+    "continuous force",
+    "simulator collection",
+    "E2E",
+    "task ID",
+    "heldout-task tuning",
+    "new IE/event/contact loss",
+    "larger model/horizon/Transformer"
+  ],
+  "go_gate": {
+    "clear_macro_composite_improvement_min": 0.05,
+    "macro_frontier_exact_min": 0.75,
+    "macro_under_force_max": 0.15,
+    "t1_boundary_ranking_min": 0.75,
+    "tasks_not_worse_than_old_no_motion_min": 3
+  },
+  "heldout": "unseen-task DEV roots loaded only after fold selection artifact is frozen",
+  "lambda_IE": 1.0,
+  "lambda_feas_candidates_joint": [
+    0.1,
+    0.3,
+    1.0
+  ],
+  "metrics": [
+    "AUROC",
+    "AUPRC",
+    "F_prev false-safe",
+    "boundary ranking",
+    "boundary exact",
+    "frontier exact",
+    "within-one",
+    "under-force",
+    "over-force"
+  ],
+  "models": {
+    "FEAS_TASK_DEMAND": {
+      "inputs": [
+        "branch-start physical condition",
+        "GT friction",
+        "candidate force",
+        "common phase",
+        "42D task-demand descriptor"
+      ],
+      "loss": "BCEWithLogits"
+    },
+    "JOINT_TASK_DEMAND": {
+      "inputs": [
+        "branch-start physical condition",
+        "GT friction",
+        "candidate force",
+        "common phase",
+        "raw H8 Cartesian commands",
+        "42D task-demand descriptor"
+      ],
+      "loss": "L_traj + 1.0 L_IE + lambda_feas L_feas"
+    }
+  },
+  "normalization": "raw physical and descriptor statistics from seen-task TRAIN only per fold",
+  "original_TEST": "metadata not retained; outcome/telemetry never loaded",
+  "original_test_manifest_rows_skipped": 192,
+  "scientific_goal": "test whether explicit nominal task-demand features repair unseen-task generalization and whether physics auxiliary adds independent value",
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "selection": "seen-task DEV only; F_prev false-safe, boundary ranking, boundary exact, AUROC, under-force, IE error",
+  "status": "FROZEN_BEFORE_NEW_TRAINING_OR_HELDOUT_TASK_OUTCOME_EVALUATION",
+  "task_id_input": false,
+  "training": {
+    "batch": 64,
+    "epochs": 80,
+    "gradient_clip": 1.0,
+    "lr": 0.0008,
+    "optimizer": "AdamW",
+    "weight_decay": 0.0001
+  }
+}

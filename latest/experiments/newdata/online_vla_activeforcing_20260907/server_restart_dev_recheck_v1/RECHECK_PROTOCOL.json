@@ -1,0 +1,19 @@
+{
+  "branches": 12,
+  "contexts": [
+    "t0_r5100_low",
+    "t1_r5100_mid",
+    "t5_r5100_low",
+    "t6_r5100_low"
+  ],
+  "final_fresh_roots_used": false,
+  "methods": [
+    "FIXED_3",
+    "FIXED_5",
+    "ACTIVEFORCING"
+  ],
+  "new_full_task_label_role": "DEV_SERVER_RESTART_REQUALIFICATION",
+  "no_model_tuning": true,
+  "no_outcome_retry": true,
+  "source_qualification": "/media/volume/newdata/exouser/online_vla_activeforcing_20260907/dev_v4_phasefree"
+}

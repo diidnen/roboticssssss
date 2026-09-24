@@ -1,0 +1,31 @@
+{
+  "query": "P4-B frozen contact-conditioned shear",
+  "mass_bands_kg": {
+    "LOW": 0.05,
+    "MID": 0.1,
+    "HIGH": 0.2
+  },
+  "development_roots": [
+    6100,
+    6101,
+    6102,
+    6103,
+    6104,
+    6105
+  ],
+  "heldout_roots": [
+    6200,
+    6201
+  ],
+  "fixed_friction": 0.5,
+  "estimator": "StandardScaler + Ridge(alpha=1e-3), fit only on DEV roots",
+  "usability_gate": {
+    "mass_mae_kg_max": 0.04,
+    "pairwise_ranking_accuracy_min": 0.8,
+    "mass_band_accuracy_min": 0.8
+  },
+  "best_feature_group": "all_history",
+  "status": "P4B_USABLE_FOR_MASS",
+  "downstream_outcomes_read": false,
+  "source_sha256": "b288bf257bc97c52af1de5881f0b146e5ef6eaddda75fd7b16067610186b6640"
+}

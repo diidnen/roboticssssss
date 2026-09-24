@@ -1,0 +1,15 @@
+{
+  "contexts": 81,
+  "created_utc": "2026-08-31T01:07:07.744663+00:00",
+  "dev_branches": 385,
+  "dev_contexts": 9,
+  "dev_force_cells": 77,
+  "global_train_force_rng_seed": 2026083102,
+  "source_runner": "/home/exouser/Tabero/analysis/p5s0c_paired_boundary_probe_value.py",
+  "source_runner_sha256": "0c029e02544e7d22fbba6f253e29584db6cf796dfabf471e66f157ac66b283b2",
+  "status": "FROZEN_BEFORE_OUTCOMES",
+  "test_roots_included": false,
+  "train_branches": 720,
+  "train_contexts": 72,
+  "train_force_cells": 360
+}

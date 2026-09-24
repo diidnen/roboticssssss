@@ -1,0 +1,62 @@
+{
+  "claim_boundary": "feasibility-VAL motion/friction policy sanity only",
+  "created_utc": "2026-09-14T03:48:18.617843+00:00",
+  "existing_feasibility_labels": 192,
+  "frozen_models": "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_maxf8_20260913/models_v4",
+  "method_order_rule": "left rotation by context-index modulo 3",
+  "no_new_roots": true,
+  "no_retraining_or_reselection": true,
+  "physical_root": 200002,
+  "runtime_manifest": "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_maxf8_20260913/additional_data_v1/RUNTIME_MANIFEST.json",
+  "runtime_manifest_sha256": "01d0289b14b812a4a12455e826a0b213ef4bf4fcdb27717892289b7e137b5034",
+  "smoke_rollouts": 1,
+  "source_hashes": {
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_maxf8_20260913/infer_v4.py": "fc3220aef222d5e495dffbee6a57abf02b9554f7c324abff300b49391929b32f",
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_maxf8_20260913/max_force_utility.py": "de94e01c2727d4edfa3e6dae241e5c142370a5fb23917a71c8f69e67c9ddf168",
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_maxf8_20260913/maxf8_runtime.py": "d966a24dee1304cfcd78488c0243379e5ce465019f2023788d0c35395131ed56",
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_original_restore_20260912/native_original_force_controller.py": "d6e27fcd83f2bc9415a86632e37025f707a2ec22424bf120dae6af84ba229518",
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_original_restore_20260912/qualify_original_online_forks.py": "da2c673047569bf88359e09cbedb440f43bd497b4f23dc1683369a00482cf264",
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_val_policy_sanity_20260914/EXPERIMENT_CARD.md": "2bedf69818f2e272a0146c3d79bc8f4e44f7daf7983364891d37caa1e69ebd81",
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_val_policy_sanity_20260914/audit_formal_results.py": "a7ff260ff9ed536ab35c81e4f5e56214c29d86233281e19d90c2ce960d4d51af",
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_val_policy_sanity_20260914/freeze_val_plan.py": "3e4c91fa667a68fe2fcb86ff3230a981e3ee3892275ad4fe565b4dda5c39ed0e",
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_val_policy_sanity_20260914/infer_val_context.py": "b43d3fd27a56bc443ed53d076c3e2818ee6e9a2912fd29f490a35dc6719e6573",
+    "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_val_policy_sanity_20260914/run_val_queue.py": "0bd19e0932acd0cb32e2cd1242f849f8ddd2a3d5a3c00a7dfdf2d9a449630f0e"
+  },
+  "storage_root": "/media/volume/dasdas/exouser/af_dump_val_policy_sanity_20260914",
+  "task": "dump_bin_bigbin",
+  "training_complete_sha256": "f99f76022919440bc8a05d561996cebd63e332240e161cbf0c9d645a54d6a44a",
+  "val_contexts": 6,
+  "val_methods": [
+    "Nominal Frozen VLA",
+    "Fixed-Strong 8N",
+    "ActiveForcing"
+  ],
+  "val_population": [
+    {
+      "friction": 0.325,
+      "policy_seed": 30200002
+    },
+    {
+      "friction": 0.475,
+      "policy_seed": 30200002
+    },
+    {
+      "friction": 0.625,
+      "policy_seed": 30200002
+    },
+    {
+      "friction": 0.775,
+      "policy_seed": 30200002
+    },
+    {
+      "friction": 0.475,
+      "policy_seed": 40200002
+    },
+    {
+      "friction": 0.775,
+      "policy_seed": 40200002
+    }
+  ],
+  "val_rollouts": 18,
+  "version": "AF_DUMP_VAL_POLICY_SANITY_V1"
+}

@@ -1,0 +1,21 @@
+{
+  "claim_boundary": "scripted remainder labels clipped to [0.25,5]; not pi0; not online AF",
+  "created_utc": "2026-09-14T18:01:54.625215+00:00",
+  "filter": "existing v3 snapshot-fork rows with 0.25 <= F <= 5",
+  "force_norm": 8.0,
+  "force_step_N": 0.25,
+  "force_support_N": [
+    0.25,
+    5.0
+  ],
+  "n_rows": 480,
+  "no_new_rollouts": true,
+  "source": "/media/volume/data/exouser/activeforcing_robotwin_taskforms_20260911/experiments/af_dump_liftstyle_feas_v3_fork_20260914",
+  "source_version": "AF_DUMP_LIFTSTYLE_FEAS_V3",
+  "split_by_seed": {
+    "200002": "TRAIN",
+    "200003": "VAL",
+    "200010": "TEST"
+  },
+  "version": "AF_DUMP_LIFTSTYLE_FEAS_V3_FMAX5"
+}

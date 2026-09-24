@@ -1,0 +1,80 @@
+{
+  "automatic_expansion": false,
+  "belief_recipe": {
+    "architecture": "three independent GRU heteroscedastic members; 58D deployable sequence",
+    "checkpoint_rule": "minimum VAL Gaussian NLL per seed; no heldout access before lock",
+    "epochs": 80,
+    "positive_support": "deployment posterior is Gaussian mixture truncated at mass>0",
+    "qualification": {
+      "HELDOUT_90_coverage_min": 0.75,
+      "HELDOUT_MAE_kg_max": 0.04,
+      "HELDOUT_SPEARMAN_min": 0.75,
+      "HELDOUT_pairwise_ranking_accuracy_min": 0.75,
+      "VAL_and_HELDOUT_MAE_better_than_train_prior": true,
+      "probe_admission_fraction_min": 0.9
+    },
+    "seeds": [
+      0,
+      1,
+      2
+    ]
+  },
+  "context_plan_sha256": "c25fe591923dea44135fc38f2c36b6533d2b3897cfea0dc980b093ed954329a7",
+  "created_utc": "2026-09-10T03:27:35.262534+00:00",
+  "feasibility_recipe": {
+    "architecture": "current phase-free GRU(10,64)+MLP(54,64)+head",
+    "checkpoint_rule": "minimum VAL raw NLL per seed; no heldout access before lock",
+    "epochs": 80,
+    "force_grid_N": [
+      3.0,
+      5.0,
+      0.05
+    ],
+    "label": "complete current terminal evaluator y_full",
+    "posterior_integration": "deterministic positive-support mass mixture quadrature",
+    "qualification": {
+      "HELDOUT_AUROC_min_if_defined": 0.6,
+      "VAL_and_HELDOUT_NLL_better_than_split_prevalence": true,
+      "known_label_fraction": 1.0,
+      "mean_predicted_p5_minus_p3_min": 0.0
+    },
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "utility": "p*(5-F)/5 + (1-p)*(-1), lower-force tie break"
+  },
+  "old_mass_data_role": "belief provenance/control only; not pooled into primary current model",
+  "ordering": [
+    "collect all 72 query references",
+    "fit/qualify belief without feasibility or final outcomes",
+    "only after PASS collect 648 matched force branches",
+    "fit/qualify phase-free full-task feasibility",
+    "development-only online qualification",
+    "freeze final protocol"
+  ],
+  "outcome_driven_tuning": false,
+  "root_collision_audit": {
+    "collisions": [],
+    "exact_json_field_pattern": true,
+    "proposed_roots": [
+      181000,
+      181001,
+      181002,
+      181003,
+      181010,
+      181011,
+      181020,
+      181100,
+      181101
+    ],
+    "searched_roots": [
+      "/home/exouser/FORTE",
+      "/home/exouser/Tabero",
+      "/media/volume/newdata/exouser/online_vla_activeforcing_20260907"
+    ]
+  },
+  "runtime_manifest_sha256": "eaff67a010fd8a90fc85599068c993a67809b17b67634bb79edc7ee6acd814f6",
+  "version": "MASS_TRAINING_FREEZE_V1"
+}

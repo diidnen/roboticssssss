@@ -1,0 +1,31 @@
+{
+  "minimum_additional_boundary_pairs": {
+    "DEV": 5,
+    "TRAIN": 14
+  },
+  "minimum_additional_event_valid_groups": {
+    "DEV": 9,
+    "TRAIN": 29
+  },
+  "minimum_additional_matched_branch_traces": 76,
+  "phases": [
+    "lift",
+    "over_basket",
+    "place",
+    "transit"
+  ],
+  "reason": "available collector cannot enforce this exact frozen group list without broadening the scientific population; no non-minimal simulator rollout was launched",
+  "release_settling_excluded": true,
+  "required_labels": [
+    "left_contact",
+    "right_contact",
+    "bilateral_contact",
+    "contact_loss"
+  ],
+  "required_lineage": "corrected direct logger; no double rotation; Fn=abs(local z); Ft=sqrt(local x^2+local y^2)",
+  "retrain_estimators": false,
+  "reuse_rule": "select existing CFWM valid boundary groups, preserve same state/mu/task/root/Pi0 motion, collect corrected telemetry for F_prev and F_star only",
+  "slip": "do not label from provisional proxy; collect only if authoritative slip definition is added in a later frozen protocol",
+  "status": "MINIMUM_CORRECTED_COLLECTION_REQUIRED_NOT_EXECUTED",
+  "test_used": false
+}

@@ -1,0 +1,22 @@
+{
+  "calibration": "DEV only",
+  "forbidden": [
+    "GT friction",
+    "candidate force",
+    "F_star",
+    "root identity",
+    "terminal success bit",
+    "branch status enum"
+  ],
+  "input": "physical trajectory summaries + task one-hot",
+  "models": [
+    "logistic regression",
+    "MLP(32)"
+  ],
+  "prefixes": [
+    0.33,
+    0.66,
+    1.0
+  ],
+  "uses_success_labels": true
+}

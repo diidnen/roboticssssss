@@ -1,0 +1,12 @@
+{
+  "frozen_utc": "2026-09-10T10:45:00Z",
+  "task": {"suite":"libero_goal","task_id":5,"language":"push the plate to the front of the stove","init_indices":[0,1,2,3,4]},
+  "checkpoint": {"policy_config":"pi0_libero","path":"/media/volume/newdata/exouser/pi0_libero_activeforcing_20260910/pi0_libero","tree_sha256":"92b4ac0c5ed929c81677b750fd13b93aa1d30d1fed50fef06a3143dfda9df103","mode":"online websocket only; no training, tuning, scripted action, replay, fallback, pi0.5, pi0_base, or Tabero LoRA"},
+  "intervention": {"property":"model.geom_friction[table_collision][0]","full_vector":"model.geom_friction[table_collision]","sliding_levels":[0.6,1.2,2.0],"fixed_components":[0.005,0.0001],"only_edited_property":true},
+  "execution": {"grid_cells":15,"reused_cells":[{"init_index":0,"sliding_friction":0.6,"receipt":"/home/exouser/Tabero/analysis/results/pi0_nontransport_20260910/rollouts/task5_init0_native_pi0_libero/receipt.json"},{"init_index":0,"sliding_friction":2.0,"receipt":"/media/volume/data/exouser/pi0_nontransport_20260910/rollouts/task5_init0_geom_intervention/receipt.json"}],"new_cells":13,"sequential":true,"horizon":300,"stabilization_steps":10,"replan_steps":5,"seed":7,"launch_deadline_utc":"2026-09-10T15:00:00Z"},
+  "metrics": ["native success","completion steps","plate planar displacement/progress if reconstructable","plate/table contact duration/count","inference request count/latency","failure mode video/state"],
+  "hypothesis":"S(0.6) >= S(1.2) >= S(2.0)",
+  "falsifier":"No monotonic success-rate decrease, or baseline competency too poor across fresh roots.",
+  "stops": ["invalid property readback","wrong task/init/checkpoint","server identity mismatch","repeated infrastructure failure","launch deadline"],
+  "claim_boundary":"Five roots are a pilot. Report counts and uncertainty only; no force adaptation, unvalidated contact-force mechanism, or population-level reliability claim."
+}

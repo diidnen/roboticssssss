@@ -1,0 +1,22 @@
+{
+  "estimator_checkpoint": "/home/exouser/Tabero/analysis/results/active_friction_imagination_20260828_211106/FRICTION_GRU.pt",
+  "force_grid_N": [
+    3.0,
+    4.0,
+    4.5,
+    5.0
+  ],
+  "friction_only": true,
+  "hypotheses": "mu_hat and clipped mu_hat +/- 1.645 sigma",
+  "name": "Active friction imagination v1 fresh pilot",
+  "no_pi0_in_imagination": true,
+  "real_branches": [
+    "GT_SELECTED_REAL",
+    "EST_SELECTED_REAL",
+    "NO_PHYSICS_FIXED_REAL"
+  ],
+  "root_seed": 8100,
+  "selection": "minimum force with simulated success mean >= 0.9",
+  "semantic_context": "frozen Pi0Config task instruction; deterministic downstream skeleton after standardized post-query state",
+  "task": 0
+}
